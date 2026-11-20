@@ -247,3 +247,107 @@ AI Assistant disediakan sebagai fitur pada website dengan antarmuka percakapan y
 - Mengajukan pertanyaan lanjutan dalam percakapan yang sama.
 
 Antarmuka AI Assistant harus mengikuti desain visual dan responsivitas website yang telah ditentukan dalam PRD.
+
+## Tambahan: UI/UX Design Reference and Visual Direction
+
+### 1. Design Inspiration
+
+Desain website Mortal Kombat Knowledge Nexus menggunakan kombinasi inspirasi dari beberapa website berikut:
+
+- **Mortal Kombat Wiki (Fandom):** menjadi referensi struktur ensiklopedia, navigasi kategori, halaman artikel, dan penyajian informasi yang terorganisasi.
+  https://mortalkombat.fandom.com/wiki/Mortal_Kombat_Wiki
+
+- **Official Mortal Kombat Website:** menjadi referensi visual sinematik, penggunaan artwork karakter berukuran besar, hero section, tipografi tegas, serta identitas visual Mortal Kombat.
+  https://www.mortalkombat.com/en-us
+
+- **Mortal Kombat Warehouse:** menjadi referensi katalog konten berdasarkan game, karakter, cerita, arena, screenshot, dan galeri.
+  https://www.mortalkombatwarehouse.com/
+
+Desain akhir tidak menyalin tampilan website referensi secara langsung, tetapi mengadaptasi elemen yang sesuai dengan kebutuhan Knowledge Base dan Semantic Web.
+
+### 2. Visual Design Direction
+
+Website menggunakan konsep **Dark Cinematic Encyclopedia**, yaitu kombinasi tampilan ensiklopedia modern dengan atmosfer gelap dan visual khas Mortal Kombat.
+
+Ketentuan desain:
+- Menggunakan dark theme sebagai tampilan utama.
+- Menggunakan warna hitam, charcoal, dan abu-abu gelap sebagai warna dasar.
+- Menggunakan merah gelap sebagai warna aksen utama.
+- Menggunakan warna emas atau bronze sebagai aksen sekunder secara terbatas.
+- Menggunakan artwork, ilustrasi, dan gambar karakter sebagai elemen visual utama.
+- Menggunakan tipografi tegas dan modern dengan hierarki judul yang jelas.
+- Menggunakan efek hover, transisi, dan animasi ringan tanpa mengganggu keterbacaan.
+- Menyediakan tampilan responsif untuk desktop, tablet, dan perangkat mobile.
+
+### 3. Layout dan Navigasi
+
+Struktur layout website mengadaptasi pola navigasi ensiklopedia dengan sentuhan visual modern.
+
+- **Navbar:** berisi logo, Home, Characters, Games, Abilities, Story, Knowledge Graph, dan AI Assistant. Navigasi harus mudah diakses dan konsisten di seluruh halaman.
+- **Hero Section:** menampilkan artwork Mortal Kombat, judul website, deskripsi singkat, dan akses menuju fitur pencarian.
+- **Main Content:** menggunakan layout terstruktur dengan area konten utama dan sidebar atau panel informasi apabila diperlukan.
+- **Footer:** menampilkan informasi website, navigasi tambahan, dan sumber referensi.
+
+### 4. Desain Halaman Utama
+
+Halaman utama menggunakan pendekatan landing page sinematik yang tetap berfungsi sebagai pintu masuk menuju ensiklopedia.
+
+Komponen:
+- Hero banner dengan artwork Mortal Kombat dan judul utama.
+- Search bar sebagai akses utama pencarian informasi.
+- Featured Characters untuk menampilkan karakter pilihan.
+- Game Collection untuk menjelajahi daftar game Mortal Kombat.
+- Explore the Lore untuk mengakses informasi cerita dan timeline.
+- Knowledge Graph Preview untuk memperlihatkan hubungan antar entitas.
+- AI Assistant Preview untuk mengakses fitur tanya jawab berbasis pengetahuan.
+
+### 5. Desain Halaman Ensiklopedia
+
+Halaman karakter, game, ability, dan informasi lainnya menggunakan pola halaman ensiklopedia yang konsisten.
+
+**Character Detail:**
+- Gambar atau artwork karakter.
+- Nama dan identitas karakter.
+- Biografi dan deskripsi.
+- Asal atau afiliasi karakter jika tersedia.
+- Kemampuan dan jurus.
+- Hubungan dengan karakter lain.
+- Riwayat kemunculan dalam game.
+- Informasi timeline dan cerita.
+- Referensi sumber informasi.
+
+**Game Detail:**
+- Cover atau artwork game.
+- Judul dan informasi dasar game.
+- Tahun rilis dan platform jika tersedia.
+- Ringkasan cerita.
+- Daftar karakter yang muncul.
+- Informasi konten dan relasi terkait.
+- Referensi sumber informasi.
+
+**Knowledge Graph:**
+- Menampilkan hubungan antar entitas dalam bentuk visualisasi graf interaktif.
+- Menyediakan informasi detail ketika pengguna memilih sebuah node.
+- Menggunakan warna atau bentuk berbeda untuk membedakan tipe entitas dan relasi.
+
+### 6. Desain AI Assistant
+
+AI Assistant menggunakan antarmuka percakapan modern yang terintegrasi dengan identitas visual website.
+
+Komponen:
+- Area percakapan antara pengguna dan AI.
+- Input untuk mengirim pertanyaan.
+- Tampilan jawaban yang mudah dibaca.
+- Referensi sumber informasi pada jawaban.
+- Indikator proses ketika AI sedang mencari dan menyusun jawaban.
+- Riwayat percakapan selama sesi berlangsung.
+
+### 7. Konsistensi dan Usability
+
+- Seluruh halaman harus menggunakan sistem warna, tipografi, spacing, dan komponen UI yang konsisten.
+- Informasi harus menjadi fokus utama dan tidak tertutup oleh dekorasi visual.
+- Gambar karakter dan game harus memiliki ukuran serta rasio yang sesuai.
+- Navigasi, pencarian, dan perpindahan antarhalaman harus mudah dipahami.
+- Efek visual tidak boleh mengurangi performa dan aksesibilitas.
+- Website harus tetap nyaman digunakan pada layar kecil.
+- Tampilan harus mengutamakan keterbacaan informasi ensiklopedia dibandingkan elemen dekoratif.
