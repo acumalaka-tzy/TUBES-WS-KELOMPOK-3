@@ -1,0 +1,252 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix mk: <https://example.org/mk/> .
+
+# ========================================================
+# Mortal Kombat Knowledge Nexus - Core Ontology (v1.5)
+# ========================================================
+
+<https://example.org/mk/ontology>
+    a owl:Ontology ;
+    rdfs:label "Mortal Kombat Knowledge Nexus Ontology"@en ;
+    rdfs:comment "Ontology for the Mortal Kombat semantic knowledge graph and search engine"@en ;
+    owl:versionInfo "1.5" .
+
+# ========================================================
+# Classes
+# ========================================================
+
+mk:Entity a owl:Class ;
+    rdfs:label "Entity"@en ;
+    rdfs:comment "Root entity of the Mortal Kombat universe"@en .
+
+mk:Character a owl:Class ;
+    rdfs:subClassOf mk:Entity ;
+    rdfs:label "Character"@en ;
+    rdfs:comment "Franchise-level canonical character"@en .
+
+mk:CharacterVersion a owl:Class ;
+    rdfs:subClassOf mk:Entity ;
+    rdfs:label "Character Version"@en ;
+    rdfs:comment "A specific contextual appearance or timeline incarnation of a character"@en .
+
+mk:Game a owl:Class ;
+    rdfs:subClassOf mk:Entity ;
+    rdfs:label "Game"@en ;
+    rdfs:comment "A standalone Mortal Kombat game title"@en .
+
+mk:Timeline a owl:Class ;
+    rdfs:subClassOf mk:Entity ;
+    rdfs:label "Timeline"@en ;
+    rdfs:comment "A narrative continuity or timeline (e.g., Original, Reboot, New Era)"@en .
+
+mk:Ability a owl:Class ;
+    rdfs:subClassOf mk:Entity ;
+    rdfs:label "Ability"@en ;
+    rdfs:comment "Supernatural or martial capability"@en .
+
+mk:Element a owl:Class ;
+    rdfs:subClassOf mk:Entity ;
+    rdfs:label "Element"@en ;
+    rdfs:comment "Elemental attribute (Fire, Ice, Lightning, Shadow, etc.)"@en .
+
+mk:Move a owl:Class ;
+    rdfs:subClassOf mk:Entity ;
+    rdfs:label "Move"@en ;
+    rdfs:comment "Special move, Fatality, or Brutality"@en .
+
+mk:Weapon a owl:Class ;
+    rdfs:subClassOf mk:Entity ;
+    rdfs:label "Weapon"@en ;
+    rdfs:comment "Weapon or combat gear used by fighters"@en .
+
+mk:Organization a owl:Class ;
+    rdfs:subClassOf mk:Entity ;
+    rdfs:label "Organization"@en ;
+    rdfs:comment "A clan, syndicate, or military organization"@en .
+
+mk:Clan a owl:Class ;
+    rdfs:subClassOf mk:Organization ;
+    rdfs:label "Clan"@en .
+
+mk:Faction a owl:Class ;
+    rdfs:subClassOf mk:Organization ;
+    rdfs:label "Faction"@en .
+
+mk:Location a owl:Class ;
+    rdfs:subClassOf mk:Entity ;
+    rdfs:label "Location"@en ;
+    rdfs:comment "Arena, region, or landmark"@en .
+
+mk:Realm a owl:Class ;
+    rdfs:subClassOf mk:Location ;
+    rdfs:label "Realm"@en ;
+    rdfs:comment "Dimensional plane (Earthrealm, Outworld, Netherrealm, Edenia, etc.)"@en .
+
+mk:Species a owl:Class ;
+    rdfs:subClassOf mk:Entity ;
+    rdfs:label "Species"@en ;
+    rdfs:comment "Biological or mythical species (Human, Cryomancer, Edenian, God, etc.)"@en .
+
+mk:Event a owl:Class ;
+    rdfs:subClassOf mk:Entity ;
+    rdfs:label "Story Event"@en ;
+    rdfs:comment "A narrative event occurring in the Mortal Kombat story"@en .
+
+mk:StoryArc a owl:Class ;
+    rdfs:subClassOf mk:Entity ;
+    rdfs:label "Story Arc"@en ;
+    rdfs:comment "A sequence of connected events"@en .
+
+mk:StoryClaim a owl:Class ;
+    rdfs:subClassOf mk:Entity ;
+    rdfs:label "Story Claim"@en ;
+    rdfs:comment "A narrative claim with provenance and context"@en .
+
+mk:Source a owl:Class ;
+    rdfs:subClassOf mk:Entity ;
+    rdfs:label "Source"@en ;
+    rdfs:comment "Documented source reference or page provenance"@en .
+
+# ========================================================
+# Object Properties
+# ========================================================
+
+mk:hasVersion a owl:ObjectProperty ;
+    rdfs:domain mk:Character ;
+    rdfs:range mk:CharacterVersion ;
+    owl:inverseOf mk:versionOf .
+
+mk:versionOf a owl:ObjectProperty ;
+    rdfs:domain mk:CharacterVersion ;
+    rdfs:range mk:Character .
+
+mk:appearsIn a owl:ObjectProperty ;
+    rdfs:domain mk:CharacterVersion ;
+    rdfs:range mk:Game .
+
+mk:existsInTimeline a owl:ObjectProperty ;
+    rdfs:domain mk:CharacterVersion ;
+    rdfs:range mk:Timeline .
+
+mk:hasAbility a owl:ObjectProperty ;
+    rdfs:domain mk:CharacterVersion ;
+    rdfs:range mk:Ability .
+
+mk:hasElement a owl:ObjectProperty ;
+    rdfs:domain mk:Ability ;
+    rdfs:range mk:Element .
+
+mk:usesWeapon a owl:ObjectProperty ;
+    rdfs:domain mk:CharacterVersion ;
+    rdfs:range mk:Weapon .
+
+mk:performsMove a owl:ObjectProperty ;
+    rdfs:domain mk:CharacterVersion ;
+    rdfs:range mk:Move .
+
+mk:memberOf a owl:ObjectProperty ;
+    rdfs:domain mk:CharacterVersion ;
+    rdfs:range mk:Organization .
+
+mk:originatesFrom a owl:ObjectProperty ;
+    rdfs:domain mk:CharacterVersion ;
+    rdfs:range mk:Location .
+
+mk:hasSpecies a owl:ObjectProperty ;
+    rdfs:domain mk:CharacterVersion ;
+    rdfs:range mk:Species .
+
+mk:alliedWith a owl:ObjectProperty , owl:SymmetricProperty ;
+    rdfs:domain mk:CharacterVersion ;
+    rdfs:range mk:CharacterVersion .
+
+mk:enemyOf a owl:ObjectProperty , owl:SymmetricProperty ;
+    rdfs:domain mk:CharacterVersion ;
+    rdfs:range mk:CharacterVersion .
+
+mk:relatedTo a owl:ObjectProperty ;
+    rdfs:domain mk:CharacterVersion ;
+    rdfs:range mk:CharacterVersion .
+
+mk:involvesCharacter a owl:ObjectProperty ;
+    rdfs:domain mk:Event ;
+    rdfs:range mk:CharacterVersion .
+
+mk:occursIn a owl:ObjectProperty ;
+    rdfs:domain mk:Event ;
+    rdfs:range mk:Timeline .
+
+mk:causedBy a owl:ObjectProperty ;
+    rdfs:domain mk:Event ;
+    rdfs:range mk:Entity .
+
+mk:precedes a owl:ObjectProperty , owl:TransitiveProperty ;
+    rdfs:domain mk:Event ;
+    rdfs:range mk:Event .
+
+mk:partOfArc a owl:ObjectProperty ;
+    rdfs:domain mk:Event ;
+    rdfs:range mk:StoryArc .
+
+mk:supportedBy a owl:ObjectProperty ;
+    rdfs:domain mk:StoryClaim ;
+    rdfs:range mk:Source .
+
+mk:hasSource a owl:ObjectProperty ;
+    rdfs:domain mk:Entity ;
+    rdfs:range mk:Source .
+
+# ========================================================
+# Datatype Properties
+# ========================================================
+
+mk:name a owl:DatatypeProperty ;
+    rdfs:domain mk:Entity ;
+    rdfs:range xsd:string .
+
+mk:description a owl:DatatypeProperty ;
+    rdfs:domain mk:Entity ;
+    rdfs:range xsd:string .
+
+mk:alternateName a owl:DatatypeProperty ;
+    rdfs:domain mk:Entity ;
+    rdfs:range xsd:string .
+
+mk:releaseDate a owl:DatatypeProperty ;
+    rdfs:domain mk:Game ;
+    rdfs:range xsd:date .
+
+mk:firstAppearanceYear a owl:DatatypeProperty ;
+    rdfs:domain mk:Character ;
+    rdfs:range xsd:gYear .
+
+mk:imageURL a owl:DatatypeProperty ;
+    rdfs:domain mk:Entity ;
+    rdfs:range xsd:anyURI .
+
+mk:sourceURL a owl:DatatypeProperty ;
+    rdfs:domain mk:Source ;
+    rdfs:range xsd:anyURI .
+
+mk:verificationStatus a owl:DatatypeProperty ;
+    rdfs:domain mk:Entity ;
+    rdfs:range xsd:string .
+
+mk:eventTitle a owl:DatatypeProperty ;
+    rdfs:domain mk:Event ;
+    rdfs:range xsd:string .
+
+mk:eventSummary a owl:DatatypeProperty ;
+    rdfs:domain mk:Event ;
+    rdfs:range xsd:string .
+
+mk:narrativeText a owl:DatatypeProperty ;
+    rdfs:domain mk:Event ;
+    rdfs:range xsd:string .
+
+mk:canonStatus a owl:DatatypeProperty ;
+    rdfs:domain mk:Entity ;
+    rdfs:range xsd:string .

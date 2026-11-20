@@ -1,0 +1,69 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix mk: <https://example.org/mk/> .
+
+# ========================================================
+# SHACL Validation Shapes for Mortal Kombat Knowledge Base
+# ========================================================
+
+mk:CharacterShape a sh:NodeShape ;
+    sh:targetClass mk:Character ;
+    sh:property [
+        sh:path mk:name ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "A character must have exactly one primary name." ;
+    ] ;
+    sh:property [
+        sh:path mk:hasVersion ;
+        sh:class mk:CharacterVersion ;
+        sh:minCount 1 ;
+        sh:message "A character must have at least one CharacterVersion associated." ;
+    ] .
+
+mk:CharacterVersionShape a sh:NodeShape ;
+    sh:targetClass mk:CharacterVersion ;
+    sh:property [
+        sh:path mk:versionOf ;
+        sh:class mk:Character ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "CharacterVersion must link to exactly one parent Character." ;
+    ] ;
+    sh:property [
+        sh:path mk:appearsIn ;
+        sh:class mk:Game ;
+        sh:minCount 1 ;
+        sh:message "CharacterVersion must appear in at least one Game." ;
+    ] ;
+    sh:property [
+        sh:path mk:existsInTimeline ;
+        sh:class mk:Timeline ;
+        sh:minCount 1 ;
+        sh:message "CharacterVersion must belong to at least one Timeline." ;
+    ] .
+
+mk:GameShape a sh:NodeShape ;
+    sh:targetClass mk:Game ;
+    sh:property [
+        sh:path mk:name ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:message "Game must have a title." ;
+    ] .
+
+mk:EventShape a sh:NodeShape ;
+    sh:targetClass mk:Event ;
+    sh:property [
+        sh:path mk:eventTitle ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:message "Event must have a title." ;
+    ] ;
+    sh:property [
+        sh:path mk:occursIn ;
+        sh:class mk:Timeline ;
+        sh:minCount 1 ;
+        sh:message "Event must occur in a defined Timeline." ;
+    ] .
