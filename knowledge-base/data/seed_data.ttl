@@ -1,0 +1,203 @@
+@prefix mk: <https://example.org/mk/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# ========================================================
+# Seed Data - Mortal Kombat Knowledge Nexus
+# Verified Starter Dataset (Standalone Non-DLC)
+# ========================================================
+
+# --- Sources ---
+mk:source_fandom_scorpion a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Scorpion" ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Scorpion"^^xsd:anyURI ;
+    mk:verificationStatus "verified" .
+
+mk:source_official_mk11 a mk:Source ;
+    mk:name "Mortal Kombat 11 Official Roster" ;
+    mk:sourceURL "https://www.mortalkombat.com/en-us"^^xsd:anyURI ;
+    mk:verificationStatus "verified" .
+
+# --- Timelines ---
+mk:timeline_original a mk:Timeline ;
+    mk:name "Original Timeline" ;
+    mk:description "The original canon spanning from Mortal Kombat (1992) to Mortal Kombat: Armageddon." .
+
+mk:timeline_reboot a mk:Timeline ;
+    mk:name "Reboot Timeline" ;
+    mk:description "The alternate timeline initiated by Raiden in MK9, through MKX and MK11." .
+
+mk:timeline_new_era a mk:Timeline ;
+    mk:name "New Era" ;
+    mk:description "Fire God Liu Kang's reset universe introduced in Mortal Kombat 1 (2023)." .
+
+# --- Realms ---
+mk:realm_earthrealm a mk:Realm ;
+    mk:name "Earthrealm" ;
+    mk:description "Home to humanity, guarded by the Thunder God Raiden." .
+
+mk:realm_netherrealm a mk:Realm ;
+    mk:name "Netherrealm" ;
+    mk:description "A fiery underworld realm of torment, sorcery, and demons." .
+
+mk:realm_outworld a mk:Realm ;
+    mk:name "Outworld" ;
+    mk:description "A vast imperial realm composed of conquered and merged worlds." .
+
+# --- Elements ---
+mk:element_fire a mk:Element ;
+    mk:name "Fire" ;
+    mk:description "Supernatural hellfire and flame." .
+
+mk:element_ice a mk:Element ;
+    mk:name "Ice" ;
+    mk:description "Cryomantic freezing and sub-zero temperature control." .
+
+mk:element_lightning a mk:Element ;
+    mk:name "Lightning" ;
+    mk:description "Divine thunder and electrical energy." .
+
+# --- Abilities ---
+mk:ability_hellfire a mk:Ability ;
+    mk:name "Hellfire Manipulation" ;
+    mk:description "The ability to summon and control netherrealm flames." ;
+    mk:hasElement mk:element_fire .
+
+mk:ability_teleportation a mk:Ability ;
+    mk:name "Teleportation" ;
+    mk:description "Instant spatial traversal across short distances." .
+
+mk:ability_cryomancy a mk:Ability ;
+    mk:name "Cryomancy" ;
+    mk:description "The ability to freeze moisture into ice weapons and shields." ;
+    mk:hasElement mk:element_ice .
+
+mk:ability_thunder a mk:Ability ;
+    mk:name "Thunder Mastery" ;
+    mk:description "Command of lightning bolts, storms, and ethereal flight." ;
+    mk:hasElement mk:element_lightning .
+
+# --- Weapons ---
+mk:weapon_kunai a mk:Weapon ;
+    mk:name "Kunai Rope Spear" ;
+    mk:description "Scorpion's signature chained spear weapon used to pull opponents." .
+
+mk:weapon_kori_blade a mk:Weapon ;
+    mk:name "Kori Blade" ;
+    mk:description "A deadly sword forged instantly from compressed ice." .
+
+# --- Organizations / Clans ---
+mk:clan_shirai_ryu a mk:Clan ;
+    mk:name "Shirai Ryu" ;
+    mk:description "A renegade Japanese ninja clan founded by Takeda after breaking away from the Lin Kuei." .
+
+mk:clan_lin_kuei a mk:Clan ;
+    mk:name "Lin Kuei" ;
+    mk:description "An ancient Chinese clan of stealth assassins and cryomancers." .
+
+# --- Species ---
+mk:species_human a mk:Species ;
+    mk:name "Human" .
+
+mk:species_spectre a mk:Species ;
+    mk:name "Spectre" ;
+    mk:description "Undead vengeful spirit resurrected by necromancy." .
+
+mk:species_cryomancer a mk:Species ;
+    mk:name "Cryomancer" ;
+    mk:description "Descendants of Outworld beings with inherent sub-zero elemental mastery." .
+
+mk:species_god a mk:Species ;
+    mk:name "God" ;
+    mk:description "Immortal deities and protectors of realms." .
+
+# --- Games (Standalone Base Games) ---
+mk:game_mk11 a mk:Game ;
+    mk:name "Mortal Kombat 11" ;
+    mk:description "Standalone 2019 fighting game concluding the Reboot Timeline." ;
+    mk:releaseDate "2019-04-23"^^xsd:date .
+
+mk:game_mk1_2023 a mk:Game ;
+    mk:name "Mortal Kombat 1" ;
+    mk:description "Standalone 2023 fighting game introducing the New Era universe." ;
+    mk:releaseDate "2023-09-19"^^xsd:date .
+
+# --- Characters & Character Versions ---
+# 1. Scorpion
+mk:char_scorpion a mk:Character ;
+    mk:name "Scorpion" ;
+    mk:alternateName "Hanzo Hasashi" ;
+    mk:firstAppearanceYear "1992"^^xsd:gYear ;
+    mk:description "The resurrected ninja assassin seeking vengeance for the destruction of his family and clan." ;
+    mk:hasVersion mk:version_scorpion_mk11 .
+
+mk:version_scorpion_mk11 a mk:CharacterVersion ;
+    mk:name "Scorpion (MK11 / Reboot Timeline)" ;
+    mk:versionOf mk:char_scorpion ;
+    mk:appearsIn mk:game_mk11 ;
+    mk:existsInTimeline mk:timeline_reboot ;
+    mk:originatesFrom mk:realm_earthrealm ;
+    mk:hasSpecies mk:species_spectre ;
+    mk:memberOf mk:clan_shirai_ryu ;
+    mk:hasAbility mk:ability_hellfire , mk:ability_teleportation ;
+    mk:usesWeapon mk:weapon_kunai ;
+    mk:enemyOf mk:version_subzero_mk11 ;
+    mk:verificationStatus "verified" ;
+    mk:hasSource mk:source_official_mk11 .
+
+# 2. Sub-Zero
+mk:char_subzero a mk:Character ;
+    mk:name "Sub-Zero" ;
+    mk:alternateName "Kuai Liang" ;
+    mk:firstAppearanceYear "1993"^^xsd:gYear ;
+    mk:description "Grandmaster of the Lin Kuei clan, wielding lethal cryomantic abilities." ;
+    mk:hasVersion mk:version_subzero_mk11 .
+
+mk:version_subzero_mk11 a mk:CharacterVersion ;
+    mk:name "Sub-Zero (MK11 / Reboot Timeline)" ;
+    mk:versionOf mk:char_subzero ;
+    mk:appearsIn mk:game_mk11 ;
+    mk:existsInTimeline mk:timeline_reboot ;
+    mk:originatesFrom mk:realm_earthrealm ;
+    mk:hasSpecies mk:species_cryomancer ;
+    mk:memberOf mk:clan_lin_kuei ;
+    mk:hasAbility mk:ability_cryomancy ;
+    mk:usesWeapon mk:weapon_kori_blade ;
+    mk:enemyOf mk:version_scorpion_mk11 ;
+    mk:verificationStatus "verified" ;
+    mk:hasSource mk:source_official_mk11 .
+
+# 3. Raiden
+mk:char_raiden a mk:Character ;
+    mk:name "Raiden" ;
+    mk:firstAppearanceYear "1992"^^xsd:gYear ;
+    mk:description "The eternal God of Thunder and protector of Earthrealm." ;
+    mk:hasVersion mk:version_raiden_mk11 .
+
+mk:version_raiden_mk11 a mk:CharacterVersion ;
+    mk:name "Raiden (MK11 / Reboot Timeline)" ;
+    mk:versionOf mk:char_raiden ;
+    mk:appearsIn mk:game_mk11 ;
+    mk:existsInTimeline mk:timeline_reboot ;
+    mk:originatesFrom mk:realm_earthrealm ;
+    mk:hasSpecies mk:species_god ;
+    mk:hasAbility mk:ability_thunder , mk:ability_teleportation ;
+    mk:alliedWith mk:version_subzero_mk11 ;
+    mk:verificationStatus "verified" ;
+    mk:hasSource mk:source_official_mk11 .
+
+# --- Story Events ---
+mk:event_shirai_ryu_massacre a mk:Event ;
+    mk:eventTitle "Destruction of the Shirai Ryu" ;
+    mk:eventSummary "The deceitful massacre of Hanzo Hasashi's clan orchestrated by the sorcerer Quan Chi disguised as Lin Kuei." ;
+    mk:occursIn mk:timeline_original ;
+    mk:involvesCharacter mk:version_scorpion_mk11 ;
+    mk:verificationStatus "verified" ;
+    mk:hasSource mk:source_fandom_scorpion .
+
+mk:event_fire_and_ice_alliance a mk:Event ;
+    mk:eventTitle "Pact of Fire and Ice" ;
+    mk:eventSummary "Scorpion and Sub-Zero uncover Quan Chi's deception, forging peace between Shirai Ryu and Lin Kuei." ;
+    mk:occursIn mk:timeline_reboot ;
+    mk:involvesCharacter mk:version_scorpion_mk11 , mk:version_subzero_mk11 ;
+    mk:verificationStatus "verified" ;
+    mk:hasSource mk:source_official_mk11 .

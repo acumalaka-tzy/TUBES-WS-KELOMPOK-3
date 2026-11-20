@@ -1,0 +1,7 @@
+requests>=2.31.0
+beautifulsoup4>=4.12.3
+rdflib>=7.1.1
+pyshacl>=0.28.0
+pydantic>=2.10.0
+python-dotenv>=1.0.1
+rich>=13.9.0

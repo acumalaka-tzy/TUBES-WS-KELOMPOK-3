@@ -1,0 +1,64 @@
+# ========================================================
+# Sample SPARQL Queries for Mortal Kombat Knowledge Nexus
+# ========================================================
+
+PREFIX mk: <https://example.org/mk/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+### 1. Find all characters and their versions
+SELECT ?character ?name ?versionName ?gameTitle
+WHERE {
+  ?character a mk:Character ;
+             mk:name ?name ;
+             mk:hasVersion ?version .
+  ?version mk:name ?versionName ;
+           mk:appearsIn ?game .
+  ?game mk:name ?gameTitle .
+}
+ORDER BY ?name
+
+### 2. Find characters with Fire ability
+SELECT ?charName ?abilityName ?elementName
+WHERE {
+  ?version a mk:CharacterVersion ;
+           mk:name ?charName ;
+           mk:hasAbility ?ability .
+  ?ability mk:name ?abilityName ;
+           mk:hasElement ?element .
+  ?element mk:name ?elementName .
+  FILTER(regex(?elementName, "Fire", "i"))
+}
+
+### 3. Find Lin Kuei clan members
+SELECT ?charName ?clanName
+WHERE {
+  ?version a mk:CharacterVersion ;
+           mk:name ?charName ;
+           mk:memberOf ?clan .
+  ?clan mk:name ?clanName .
+  FILTER(regex(?clanName, "Lin Kuei", "i"))
+}
+
+### 4. Find rivalries / enemies of Scorpion
+SELECT ?scorpionName ?enemyName
+WHERE {
+  ?scorpion a mk:CharacterVersion ;
+            mk:name ?scorpionName ;
+            mk:enemyOf ?enemy .
+  ?enemy mk:name ?enemyName .
+  FILTER(regex(?scorpionName, "Scorpion", "i"))
+}
+
+### 5. Story Events involving Sub-Zero in the Reboot Timeline
+SELECT ?event ?title ?summary
+WHERE {
+  ?event a mk:Event ;
+         mk:eventTitle ?title ;
+         mk:eventSummary ?summary ;
+         mk:involvesCharacter ?version ;
+         mk:occursIn ?timeline .
+  ?version mk:name ?charName .
+  ?timeline mk:name ?timelineName .
+  FILTER(regex(?charName, "Sub-Zero", "i"))
+  FILTER(regex(?timelineName, "Reboot", "i"))
+}

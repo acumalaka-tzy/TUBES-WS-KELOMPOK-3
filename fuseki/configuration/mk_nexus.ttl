@@ -1,0 +1,29 @@
+PREFIX :        <http://base/#>
+PREFIX fuseki:  <http://jena.apache.org/fuseki#>
+PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX tdb2:    <http://jena.apache.org/2016/tdb#>
+PREFIX ja:      <http://jena.hpl.hp.com/2005/11/Assembler#>
+
+# ========================================================
+# Fuseki Service for Mortal Kombat Knowledge Nexus (mk_nexus)
+# ========================================================
+:service_mk_nexus rdf:type fuseki:Service ;
+    rdfs:label                      "Mortal Kombat Knowledge Nexus SPARQL Service" ;
+    fuseki:name                     "mk_nexus" ;
+    fuseki:serviceQuery             "query" , "sparql" ;
+    fuseki:serviceUpdate            "update" ;
+    fuseki:serviceUpload            "upload" ;
+    fuseki:serviceReadWriteGraphStore "data" ;
+    fuseki:serviceReadGraphStore    "get" ;
+    fuseki:dataset                  :dataset_tdb2 .
+
+# ========================================================
+# TDB2 Dataset Specification with Persistent Local Storage
+# ========================================================
+:dataset_tdb2 rdf:type tdb2:DatasetTDB2 ;
+    tdb2:location "../databases/mk_nexus" ;
+    ## Query timeout in milliseconds (e.g., 5000ms = 5s)
+    ja:context [ ja:cxtName "arq:queryTimeout" ;  ja:cxtValue "5000,10000" ] ;
+    ## Make the default graph the union of all named graphs (helpful for cross-graph queries)
+    tdb2:unionDefaultGraph true .

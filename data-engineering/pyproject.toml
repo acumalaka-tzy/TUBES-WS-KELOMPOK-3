@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mk-knowledge-nexus-data-engineering"
+version = "0.1.0"
+description = "Multi-source scraping, entity resolution, and RDF generation pipeline for Mortal Kombat Knowledge Nexus"
+authors = [{ name = "Mortal Kombat Knowledge Nexus Team" }]
+dependencies = [
+    "requests>=2.31.0",
+    "beautifulsoup4>=4.12.3",
+    "rdflib>=7.1.1",
+    "pyshacl>=0.28.0",
+    "pydantic>=2.10.0",
+    "python-dotenv>=1.0.1",
+    "rich>=13.9.0"
+]
+requires-python = ">=3.10"

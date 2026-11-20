@@ -1,0 +1,40 @@
+{
+  "sources": [
+    {
+      "sourceId": "fandom-wiki",
+      "sourceName": "Mortal Kombat Fandom Wiki",
+      "baseURL": "https://mortalkombat.fandom.com",
+      "sourceType": "community_wiki",
+      "accessMethod": "mediawiki_api",
+      "adapterName": "FandomAdapter",
+      "enabled": true,
+      "allowedCategories": ["Characters", "Games", "Abilities", "Clans", "Realms"],
+      "requestDelay": 1.0,
+      "notes": "MediaWiki Action API endpoint. Community leads requiring canonical validation."
+    },
+    {
+      "sourceId": "mk-official",
+      "sourceName": "Mortal Kombat Official Website",
+      "baseURL": "https://www.mortalkombat.com/en-us",
+      "sourceType": "official",
+      "accessMethod": "permitted_html",
+      "adapterName": "OfficialAdapter",
+      "enabled": true,
+      "allowedCategories": ["Roster", "Games", "Lore"],
+      "requestDelay": 2.0,
+      "notes": "Official franchise announcements, release dates, and roster data."
+    },
+    {
+      "sourceId": "wb-games",
+      "sourceName": "Warner Bros. Games Pressroom",
+      "baseURL": "https://press.wbd.com/us/brands/warner-bros-games",
+      "sourceType": "publisher",
+      "accessMethod": "permitted_html",
+      "adapterName": "WBGamesAdapter",
+      "enabled": true,
+      "allowedCategories": ["PressReleases", "ReleaseDates", "Platforms"],
+      "requestDelay": 2.0,
+      "notes": "Official publisher metadata and launch platform announcements."
+    }
+  ]
+}
