@@ -1,6 +1,6 @@
 {
-  "scrapeRunId": "run-20261122072316",
-  "timestamp": "2026-11-22T07:24:03.265616+00:00",
+  "scrapeRunId": "run-20261122074513",
+  "timestamp": "2026-11-22T07:48:18.497449+00:00",
   "totalRawRecordsCollected": 42,
   "sources": {
     "fandom-wiki": {
@@ -21,7 +21,7 @@
   },
   "archiveLocations": {
     "latest": "data-engineering\\storage\\raw\\raw_pages.json",
-    "historical": "data-engineering\\storage\\raw\\history\\raw_pages_run-20261122072316.json"
+    "historical": "data-engineering\\storage\\raw\\history\\raw_pages_run-20261122074513.json"
   },
   "status": "SUCCESS"
 }

@@ -1,23 +1,26 @@
 {
-  "masterReportId": "master-pipeline-20261122072403",
-  "generatedAt": "2026-11-22T07:24:03.895873+00:00",
+  "masterReportId": "master-pipeline-20261122074819",
+  "generatedAt": "2026-11-22T07:48:19.177011+00:00",
   "pipelineStatus": "ALL_STAGES_COMPLETED_SUCCESSFULLY",
   "summary": {
     "totalRawPagesCollected": 42,
-    "totalCleanedRecords": 42,
-    "totalEntitiesExtracted": 276,
+    "totalCleanedRecords": 25,
+    "totalEntitiesExtracted": 272,
+    "totalCharacterVersions": 121,
     "totalRelationships": 31,
     "totalImageAssets": 83,
-    "approvedImageAssets": 68,
+    "approvedImageAssets": 35,
+    "pendingReviewImageAssets": 48,
+    "mediaScopeExcluded": 5,
     "validationPassed": true,
-    "totalRDFTriples": 2888,
+    "totalRDFTriples": 2851,
     "totalRDFClasses": 13,
     "totalRDFProperties": 31
   },
   "stageReports": {
     "source_discovery_report": {
-      "reportId": "source-discovery-20261122072316",
-      "generatedAt": "2026-11-22T07:23:16.167212+00:00",
+      "reportId": "source-discovery-20261122074513",
+      "generatedAt": "2026-11-22T07:45:13.045602+00:00",
       "totalCandidates": 4,
       "approvedCount": 2,
       "pendingCount": 1,
@@ -86,8 +89,8 @@
       ]
     },
     "scrape_report": {
-      "scrapeRunId": "run-20261122072316",
-      "timestamp": "2026-11-22T07:24:03.265616+00:00",
+      "scrapeRunId": "run-20261122074513",
+      "timestamp": "2026-11-22T07:48:18.497449+00:00",
       "totalRawRecordsCollected": 42,
       "sources": {
         "fandom-wiki": {
@@ -108,17 +111,17 @@
       },
       "archiveLocations": {
         "latest": "data-engineering\\storage\\raw\\raw_pages.json",
-        "historical": "data-engineering\\storage\\raw\\history\\raw_pages_run-20261122072316.json"
+        "historical": "data-engineering\\storage\\raw\\history\\raw_pages_run-20261122074513.json"
       },
       "status": "SUCCESS"
     },
     "cleaning_report": {
-      "reportId": "cleaning-report-20261122072403",
-      "generatedAt": "2026-11-22T07:24:03.298789+00:00",
+      "reportId": "cleaning-report-20261122074818",
+      "generatedAt": "2026-11-22T07:48:18.551828+00:00",
       "totalRawRecords": 42,
-      "cleanedUniqueRecords": 42,
-      "duplicateRecordsDetected": 0,
-      "emptyOrShortRecords": 0,
+      "cleanedUniqueRecords": 25,
+      "duplicateRecordsDetected": 17,
+      "emptyOrShortRecords": 18,
       "cleaningRulesApplied": [
         "NFC Unicode Normalization",
         "HTML Tag Stripping",
@@ -127,17 +130,19 @@
       ]
     },
     "extraction_report": {
-      "reportId": "extraction-report-20261122072403",
-      "generatedAt": "2026-11-22T07:24:03.320408+00:00",
+      "reportId": "extraction-report-20261122074818",
+      "generatedAt": "2026-11-22T07:48:18.585454+00:00",
       "pipelineLineage": {
         "sourceCleanedFile": "data-engineering\\storage\\cleaned\\cleaned_pages.json",
-        "totalCleanedRecordsRead": 42,
-        "scrapedCandidatesProcessed": 34,
-        "entitiesEnrichedFromScraping": 26,
-        "newEntitiesMerged": 5
+        "totalCleanedRecordsRead": 25,
+        "scrapedCandidatesProcessed": 17,
+        "entitiesEnrichedFromScraping": 18,
+        "newEntitiesMerged": 1,
+        "mediaScopeExcluded": 5
       },
       "extractedEntityCounts": {
-        "characters": 65,
+        "characters": 61,
+        "characterVersions": 121,
         "games": 23,
         "timelines": 3,
         "realms": 7,
@@ -150,33 +155,79 @@
         "relationships": 31
       },
       "dlcExclusionAudit": {
-        "totalExcludedCandidates": 21,
+        "totalExcludedCandidates": 26,
         "dlcContaminationInBaseDataset": 0,
         "auditStatus": "PASSED - Zero DLC items in standalone dataset"
       }
     },
+    "media_scope_exclusion_report": {
+      "reportId": "media-scope-exclusion-audit",
+      "policy": "PRD Section 5.2 & 6.1 (Standalone Video Games Only)",
+      "totalEntitiesExcluded": 5,
+      "excludedEntities": [
+        {
+          "candidateName": "Aavi",
+          "entityType": "character",
+          "sourceURL": "https://mortalkombat.fandom.com/wiki/Aavi",
+          "reason": "TV Series: Mortal Kombat: Conquest exclusive character",
+          "status": "excluded_from_standalone_dataset"
+        },
+        {
+          "candidateName": "Abacus",
+          "entityType": "character",
+          "sourceURL": "https://mortalkombat.fandom.com/wiki/Abacus",
+          "reason": "Comic: Malibu Comics exclusive character",
+          "status": "excluded_from_standalone_dataset"
+        },
+        {
+          "candidateName": "Allison Young",
+          "entityType": "character",
+          "sourceURL": "https://mortalkombat.fandom.com/wiki/Allison_Young",
+          "reason": "Film: Mortal Kombat (1995) novelization exclusive character",
+          "status": "excluded_from_standalone_dataset"
+        },
+        {
+          "candidateName": "Art Lean",
+          "entityType": "character",
+          "sourceURL": "https://mortalkombat.fandom.com/wiki/Art_Lean",
+          "reason": "Film: Mortal Kombat (1995) movie exclusive martial artist",
+          "status": "excluded_from_standalone_dataset"
+        },
+        {
+          "candidateName": "Baphomet",
+          "entityType": "character",
+          "sourceURL": "https://mortalkombat.fandom.com/wiki/Baphomet",
+          "reason": "Comic: Malibu Comics exclusive demon lord",
+          "status": "excluded_from_standalone_dataset"
+        }
+      ]
+    },
     "image_asset_report": {
-      "reportId": "image-asset-report-20261122072403",
-      "generatedAt": "2026-11-22T07:24:03.320408+00:00",
+      "reportId": "image-asset-report-20261122074818",
+      "generatedAt": "2026-11-22T07:48:18.585454+00:00",
       "totalAssets": 83,
-      "approvedAssets": 68,
-      "pendingReviewAssets": 15,
+      "approvedAssets": 35,
+      "pendingReviewAssets": 48,
       "rejectedAssets": 0,
-      "policyEnforcement": "Only approved rightsStatus assets are permitted for frontend display per PRD Section 29.5",
+      "policyEnforcement": "Only approved rightsStatus assets with verified accessible URLs are permitted for frontend display per PRD Section 29.5",
       "assetTypes": {
         "character_portrait": 60,
-        "game_cover": 23,
-        "game_key_art": 0
+        "game_cover": 23
+      },
+      "rightsBreakdown": {
+        "approvedOfficialMedia": 35,
+        "pendingCommunityReview": 48
       }
     },
     "validation_report": {
-      "reportId": "validation-report-20261122072403",
-      "generatedAt": "2026-11-22T07:24:03.414710+00:00",
+      "reportId": "validation-report-20261122074818",
+      "generatedAt": "2026-11-22T07:48:18.683926+00:00",
       "validationPassed": true,
       "statistics": {
-        "totalEntities": 276,
+        "totalEntities": 272,
         "totalRelationships": 31,
-        "totalUniqueIDs": 276,
+        "totalCharacterVersions": 121,
+        "totalUniqueIDs": 272,
         "validationErrors": 0,
         "validationWarnings": 0,
         "missingProvenanceCount": 0,
@@ -187,8 +238,10 @@
         "schemaIntegrity": "PASSED",
         "idUniqueness": "PASSED",
         "referentialIntegrity": "PASSED",
+        "characterVersionsIntegrity": "PASSED",
         "mandatoryProvenance": "PASSED",
         "dlcExclusionGate": "PASSED (Zero DLC contamination detected)",
+        "mediaScopeFilterGate": "PASSED (Standalone Video Game Media Scope Enforced)",
         "timelineConsistency": "PASSED",
         "elementsAndLocationsVerified": "PASSED (Elements and Locations validated)"
       },
@@ -196,25 +249,25 @@
       "warnings": []
     },
     "rdf_export_report": {
-      "reportId": "rdf-export-20261122072403",
-      "generatedAt": "2026-11-22T07:24:03.778509+00:00",
-      "totalTriples": 2888,
+      "reportId": "rdf-export-20261122074819",
+      "generatedAt": "2026-11-22T07:48:19.031048+00:00",
+      "totalTriples": 2851,
       "totalClasses": 13,
       "totalProperties": 31,
       "classInstanceCounts": {
-        "mk:Location": 14,
-        "mk:Move": 89,
-        "mk:CharacterVersion": 121,
-        "mk:Character": 65,
-        "mk:Weapon": 20,
-        "mk:Element": 8,
-        "mk:Event": 25,
-        "mk:Game": 23,
-        "mk:Clan": 2,
-        "mk:Realm": 7,
-        "mk:Ability": 12,
         "mk:Organization": 8,
-        "mk:Timeline": 3
+        "mk:Move": 89,
+        "mk:Weapon": 20,
+        "mk:CharacterVersion": 121,
+        "mk:Ability": 12,
+        "mk:Game": 23,
+        "mk:Event": 25,
+        "mk:Character": 61,
+        "mk:Location": 14,
+        "mk:Realm": 7,
+        "mk:Element": 8,
+        "mk:Timeline": 3,
+        "mk:Clan": 2
       },
       "serializedOutputs": {
         "exportsTurtle": "data-engineering\\storage\\exports\\mortal_kombat.ttl",

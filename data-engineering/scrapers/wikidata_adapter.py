@@ -1,8 +1,8 @@
 """
 Wikidata SPARQL Scraping & Query Adapter
 Implements PRD v1.5 FR-24 & Section 28.3:
-Queries Wikidata SPARQL endpoint for structured Mortal Kombat entities,
-external QIDs, release dates, developer metadata, and publisher information.
+Queries Wikidata SPARQL endpoint for structured Mortal Kombat entities.
+Explicitly distinguishes actual live SPARQL results from fallback datasets.
 """
 
 from typing import Dict, Any, List, Optional
@@ -31,10 +31,10 @@ class WikidataAdapter(BaseAdapter):
         res = self.fetch_url(self.base_url, params={"query": test_query, "format": "json"}, is_json=True)
         return res["success"] and res["status_code"] == 200
 
-    def query_games(self) -> List[Dict[str, Any]]:
+    def query_games(self) -> Dict[str, Any]:
         """
         SPARQL query fetching Mortal Kombat video games, release dates, and platforms.
-        Mortal Kombat franchise QID: Q150294.
+        Returns tuple of (games_list, is_live_result).
         """
         sparql = """
         SELECT DISTINCT ?game ?gameLabel ?pubDate ?developerLabel WHERE {
@@ -65,30 +65,30 @@ class WikidataAdapter(BaseAdapter):
                         "releaseDate": pub_date[:10] if pub_date else "",
                         "developer": dev
                     })
+            if games:
+                return {"games": games, "isLive": True, "error": None}
 
-        # Curated canonical structured records as reliable fallback
-        if not games:
-            games = [
-                {"qid": "Q248177", "title": "Mortal Kombat (1992)", "wikidataURI": "https://www.wikidata.org/wiki/Q248177", "releaseDate": "1992-10-08", "developer": "Midway Games"},
-                {"qid": "Q631980", "title": "Mortal Kombat II", "wikidataURI": "https://www.wikidata.org/wiki/Q631980", "releaseDate": "1993-04-01", "developer": "Midway Games"},
-                {"qid": "Q850207", "title": "Mortal Kombat 3", "wikidataURI": "https://www.wikidata.org/wiki/Q850207", "releaseDate": "1995-04-15", "developer": "Midway Games"},
-                {"qid": "Q1192807", "title": "Mortal Kombat 4", "wikidataURI": "https://www.wikidata.org/wiki/Q1192807", "releaseDate": "1997-10-15", "developer": "Midway Games"},
-                {"qid": "Q1654157", "title": "Mortal Kombat: Deadly Alliance", "wikidataURI": "https://www.wikidata.org/wiki/Q1654157", "releaseDate": "2002-11-16", "developer": "Midway Games"},
-                {"qid": "Q1654165", "title": "Mortal Kombat: Deception", "wikidataURI": "https://www.wikidata.org/wiki/Q1654165", "releaseDate": "2004-10-04", "developer": "Midway Games"},
-                {"qid": "Q631976", "title": "Mortal Kombat: Armageddon", "wikidataURI": "https://www.wikidata.org/wiki/Q631976", "releaseDate": "2006-10-11", "developer": "Midway Games"},
-                {"qid": "Q908861", "title": "Mortal Kombat (2011)", "wikidataURI": "https://www.wikidata.org/wiki/Q908861", "releaseDate": "2011-04-19", "developer": "NetherRealm Studios"},
-                {"qid": "Q17112443", "title": "Mortal Kombat X", "wikidataURI": "https://www.wikidata.org/wiki/Q17112443", "releaseDate": "2015-04-14", "developer": "NetherRealm Studios"},
-                {"qid": "Q59530438", "title": "Mortal Kombat 11", "wikidataURI": "https://www.wikidata.org/wiki/Q59530438", "releaseDate": "2019-04-23", "developer": "NetherRealm Studios"},
-                {"qid": "Q118464670", "title": "Mortal Kombat 1", "wikidataURI": "https://www.wikidata.org/wiki/Q118464670", "releaseDate": "2023-09-19", "developer": "NetherRealm Studios"}
-            ]
+        # Offline fallback clearly flagged
+        fallback_games = [
+            {"qid": "Q248177", "title": "Mortal Kombat (1992)", "wikidataURI": "https://www.wikidata.org/wiki/Q248177", "releaseDate": "1992-10-08", "developer": "Midway Games"},
+            {"qid": "Q631980", "title": "Mortal Kombat II", "wikidataURI": "https://www.wikidata.org/wiki/Q631980", "releaseDate": "1993-04-01", "developer": "Midway Games"},
+            {"qid": "Q850207", "title": "Mortal Kombat 3", "wikidataURI": "https://www.wikidata.org/wiki/Q850207", "releaseDate": "1995-04-15", "developer": "Midway Games"},
+            {"qid": "Q1192807", "title": "Mortal Kombat 4", "wikidataURI": "https://www.wikidata.org/wiki/Q1192807", "releaseDate": "1997-10-15", "developer": "Midway Games"},
+            {"qid": "Q1654157", "title": "Mortal Kombat: Deadly Alliance", "wikidataURI": "https://www.wikidata.org/wiki/Q1654157", "releaseDate": "2002-11-16", "developer": "Midway Games"},
+            {"qid": "Q1654165", "title": "Mortal Kombat: Deception", "wikidataURI": "https://www.wikidata.org/wiki/Q1654165", "releaseDate": "2004-10-04", "developer": "Midway Games"},
+            {"qid": "Q631976", "title": "Mortal Kombat: Armageddon", "wikidataURI": "https://www.wikidata.org/wiki/Q631976", "releaseDate": "2006-10-11", "developer": "Midway Games"},
+            {"qid": "Q908861", "title": "Mortal Kombat (2011)", "wikidataURI": "https://www.wikidata.org/wiki/Q908861", "releaseDate": "2011-04-19", "developer": "NetherRealm Studios"},
+            {"qid": "Q17112443", "title": "Mortal Kombat X", "wikidataURI": "https://www.wikidata.org/wiki/Q17112443", "releaseDate": "2015-04-14", "developer": "NetherRealm Studios"},
+            {"qid": "Q59530438", "title": "Mortal Kombat 11", "wikidataURI": "https://www.wikidata.org/wiki/Q59530438", "releaseDate": "2019-04-23", "developer": "NetherRealm Studios"},
+            {"qid": "Q118464670", "title": "Mortal Kombat 1", "wikidataURI": "https://www.wikidata.org/wiki/Q118464670", "releaseDate": "2023-09-19", "developer": "NetherRealm Studios"}
+        ]
+        return {"games": fallback_games, "isLive": False, "error": res.get("error") or "SPARQL unreachable"}
 
-        return games
-
-    def discover_pages(self, limit: int = 20) -> List[Dict[str, Any]]:
+    def discover_pages(self, limit: int = 15) -> List[Dict[str, Any]]:
         """Discovers standalone games and main entity entries."""
-        games = self.query_games()
+        query_res = self.query_games()
         discovered = []
-        for g in games[:limit]:
+        for g in query_res["games"][:limit]:
             discovered.append({
                 "pageId": f"wikidata-{g['qid']}",
                 "pageTitle": g["title"],
@@ -98,8 +98,11 @@ class WikidataAdapter(BaseAdapter):
         return discovered
 
     def fetch_page(self, page_id: str, scrape_run_id: str = "run-default") -> Optional[Dict[str, Any]]:
-        """Constructs raw snapshot for a Wikidata entity record."""
-        games = self.query_games()
+        """Constructs raw snapshot for a Wikidata entity record with transparent acquisition attribution."""
+        query_res = self.query_games()
+        games = query_res["games"]
+        is_live = query_res["isLive"]
+
         target = None
         for g in games:
             if f"wikidata-{g['qid']}" == page_id or g["title"] == page_id:
@@ -111,18 +114,24 @@ class WikidataAdapter(BaseAdapter):
 
         if target:
             content_json = json.dumps(target, indent=2)
+            method = "live_http_api" if is_live else "fallback_seed"
             return self.build_raw_record(
                 page_id=f"wikidata-{target['qid']}",
                 page_title=f"Wikidata: {target['title']}",
                 source_url=target["wikidataURI"],
                 content=content_json,
-                http_status=200,
+                http_status=200 if is_live else 0,
                 canonical_url=target["wikidataURI"],
                 scrape_run_id=scrape_run_id,
                 metadata={
                     "qid": target["qid"],
                     "sourceAuthority": "Secondary Structured Open Data",
-                    "license": "CC0 1.0 Universal Public Domain Dedication"
-                }
+                    "license": "CC0 1.0 Universal Public Domain Dedication",
+                    "isLiveSPARQL": is_live
+                },
+                acquisition_method=method,
+                is_fallback=not is_live,
+                fetch_status="success" if is_live else "fallback",
+                failure_reason=query_res.get("error") if not is_live else None
             )
         return None

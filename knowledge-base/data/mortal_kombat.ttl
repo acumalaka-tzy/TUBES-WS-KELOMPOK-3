@@ -13,49 +13,13 @@ mk:ability-ice-clone a mk:Ability ;
     mk:moveCategory "Defense"^^xsd:string ;
     mk:name "Ice Clone"^^xsd:string .
 
-mk:character-aavi a mk:Character ;
-    mk:description "'''Aavi''' was a minor character who appeared in ''Mortal Kombat: Conquest'' series in the episode entitled “''The Serpent And The Ice.\"'' ==History== Aavi was a villager of Zhu Zin who lost her mind many years before the events of ''Conquest'', after her child was kidnapped, presumably by the Lin Kuei, and her husband was killed while he attempted to protect their child. Category:Mortal Kombat: Conquest Characters Category:Non-Canon Characters Category:Characters Category:Female Characters Category:Earthrealm Characters Category:Minor Characters"^^xsd:string ;
+mk:character-scorpion-fetch-failed a mk:Character ;
+    mk:description "Official franchise profile for Scorpion (Fetch Failed)."^^xsd:string ;
     mk:firstAppearanceYear "Unknown"^^xsd:gYear ;
     mk:hasSpecies "Human"^^xsd:string ;
-    mk:name "Aavi"^^xsd:string ;
+    mk:name "Scorpion (Fetch Failed)"^^xsd:string ;
     mk:originatesFrom mk:realm-earthrealm ;
-    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Aavi"^^xsd:anyURI ;
-    mk:verificationStatus "partially_verified"^^xsd:string .
-
-mk:character-abacus a mk:Character ;
-    mk:description "Lord '''Abacus''' was the God of Order in the ''Mortal Kombat'' comics published by [http://en.wikipedia.org/wiki/Malibu_Comics Malibu Comics]. ==Overview== Residing in the Library of Order, Abacus witnessed the chaotic schemes of his fellow god, Zaggot unfold. Despite this being the case, he refused to respond physically as he feared that if he did, it would result in even more chaos to feed Zaggot. However, Abacus changes his mind and meets with Goro, whereupon he presents the Shokan with a weapon forged of order. After this chain of events, Abacus is seen fighting against his brother Zaggot"^^xsd:string ;
-    mk:firstAppearanceYear "Unknown"^^xsd:gYear ;
-    mk:hasSpecies "God"^^xsd:string ;
-    mk:name "Abacus"^^xsd:string ;
-    mk:originatesFrom mk:realm-orderrealm ;
-    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Abacus"^^xsd:anyURI ;
-    mk:verificationStatus "partially_verified"^^xsd:string .
-
-mk:character-allison-young a mk:Character ;
-    mk:description "'''Allison Young''' is a character in the 2021 film ''Mortal Kombat''. Allison is the wife of Cole Young. ==Profile== Allison Young is the wife of Cole Young, a struggling MMA fighter and the mother of Emily Young. Allison is smart, protective and a devoted mother, but no longer watches Cole's fights, unable to bear watching him taking such pain. For his part, Cole loves Allison deeply, but fears that he is letting her down, that he is not and never will be good enough for her or their child. ==Biography== Allison Young was present as her husband, Cole Young, prepared to fight a man named Rami"^^xsd:string ;
-    mk:firstAppearanceYear "Unknown"^^xsd:gYear ;
-    mk:hasSpecies "Human"^^xsd:string ;
-    mk:name "Allison Young"^^xsd:string ;
-    mk:originatesFrom mk:realm-earthrealm ;
-    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Allison_Young"^^xsd:anyURI ;
-    mk:verificationStatus "partially_verified"^^xsd:string .
-
-mk:character-art-lean a mk:Character ;
-    mk:description "'''Art Lean''' is a character in the 1995 film ''Mortal Kombat''. Lean is an Earthrealm fighter who participated the tenth tournament. == History == Art Lean meets Johnny Cage on the docks while he and the other Earthrealm warriors wait to board the boat ''Dragon Wing'' to the tournament held on an island. Lean is one of the few people who believe the authenticity of Johnny's martial arts as Cage mentions seeing Lean fight in London and being impressed by his skills, Lean replies \"''I saw a couple of your films. Listen, you can't fake those moves.''\" Cage, smirking, mentions that he should tel"^^xsd:string ;
-    mk:firstAppearanceYear "Unknown"^^xsd:gYear ;
-    mk:hasSpecies "Human"^^xsd:string ;
-    mk:name "Art Lean"^^xsd:string ;
-    mk:originatesFrom mk:realm-earthrealm ;
-    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Art_Lean"^^xsd:anyURI ;
-    mk:verificationStatus "partially_verified"^^xsd:string .
-
-mk:character-baphomet a mk:Character ;
-    mk:description "An Elder Demon from the Netherrealm, '''Baphomet''' was one of the many characters, alongside his race of fellow Elder Demons, who did not make the final cut in ''Mortal Kombat: Deadly Alliance''. Baphomet's concept sketch was an unlockable in Koffin BG and costs 217 Sapphire Koins within the Krypt of ''Mortal Kombat: Deadly Alliance.'' ==Trivia== *This Elder Demon is named after the actual Baphomet whose legend and legacy spread through all demonic cults. *\"Baphomet\" is also a description of the goat's head/pentagram image that was connected to the Knights Templar by the Catholic Church of th"^^xsd:string ;
-    mk:firstAppearanceYear "Unknown"^^xsd:gYear ;
-    mk:hasSpecies "Elder Demon"^^xsd:string ;
-    mk:name "Baphomet"^^xsd:string ;
-    mk:originatesFrom mk:realm-netherrealm ;
-    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Baphomet"^^xsd:anyURI ;
+    mk:sourceURL "https://www.mortalkombat.com/en-us/roster/scorpion"^^xsd:anyURI ;
     mk:verificationStatus "partially_verified"^^xsd:string .
 
 mk:event-battle-for-the-hourglass a mk:Event ;
@@ -407,7 +371,6 @@ mk:game-mkt-1996 a mk:Game ;
     mk:supportedPlatform "Nintendo 64"^^xsd:string,
         "PC"^^xsd:string,
         "PlayStation"^^xsd:string,
-        "Saturn"^^xsd:string,
         "Sega Saturn"^^xsd:string ;
     mk:verificationStatus "verified"^^xsd:string .
 
@@ -2322,6 +2285,10 @@ mk:realm-chaosrealm a mk:Realm ;
     mk:description "An anarchic realm of shifting structures and freedom where chaos is worshiped as supreme truth, home to Cleric Havik."^^xsd:string ;
     mk:name "Chaosrealm"^^xsd:string .
 
+mk:realm-orderrealm a mk:Realm ;
+    mk:description "A rigid geometric realm governed strictly by law, hierarchy, and absolute order, policed by Hotaru and the Seidan Guard."^^xsd:string ;
+    mk:name "Orderrealm (Seido)"^^xsd:string .
+
 mk:weapon-bo-staff a mk:Weapon ;
     mk:description "Jade's glowing triboluminescent steel bo staff delivering long-reach pole vault strikes."^^xsd:string ;
     mk:name "Imperial Bo Staff"^^xsd:string .
@@ -2626,10 +2593,6 @@ mk:org-osh-tekk a mk:Organization ;
 mk:org-red-dragon a mk:Organization ;
     mk:description "Ancient secret criminal syndicate founded by the Edenian demigod Daegon, sworn mortal enemies of the Black Dragon."^^xsd:string ;
     mk:name "Red Dragon"^^xsd:string .
-
-mk:realm-orderrealm a mk:Realm ;
-    mk:description "A rigid geometric realm governed strictly by law, hierarchy, and absolute order, policed by Hotaru and the Seidan Guard."^^xsd:string ;
-    mk:name "Orderrealm (Seido)"^^xsd:string .
 
 mk:weapon-kunai-spear a mk:Weapon ;
     mk:description "Scorpion's signature rope dart / chained kunai hurled into opponents."^^xsd:string ;
@@ -3015,6 +2978,10 @@ mk:org-brotherhood-of-shadow a mk:Organization ;
     mk:description "Fanatical Netherrealm religious cult serving the fallen Elder God Shinnok and sorcerer Quan Chi."^^xsd:string ;
     mk:name "Brotherhood of Shadow"^^xsd:string .
 
+mk:realm-netherrealm a mk:Realm ;
+    mk:description "The fiery subterranean plane of eternal torment, demons, revenants, and dark necromancy, ruled by Shinnok and Quan Chi."^^xsd:string ;
+    mk:name "Netherrealm"^^xsd:string .
+
 mk:character-mileena a mk:Character ;
     mk:alternateName "Empress Mileena"^^xsd:string ;
     mk:description "A savage genetic clone created in Shang Tsung's Flesh Pits combining Edenian royal DNA with ferocious Tarkatan physiology."^^xsd:string ;
@@ -3031,10 +2998,6 @@ mk:character-mileena a mk:Character ;
 mk:realm-edenia a mk:Realm ;
     mk:description "A lush paradise realm of beauty, peace, and longevity, merged with Outworld for millennia before its restoration."^^xsd:string ;
     mk:name "Edenia"^^xsd:string .
-
-mk:realm-netherrealm a mk:Realm ;
-    mk:description "The fiery subterranean plane of eternal torment, demons, revenants, and dark necromancy, ruled by Shinnok and Quan Chi."^^xsd:string ;
-    mk:name "Netherrealm"^^xsd:string .
 
 mk:character-shaokahn a mk:Character ;
     mk:alternateName "Emperor of Outworld / General Shao"^^xsd:string ;
@@ -3089,7 +3052,6 @@ mk:game-mk2-1993 a mk:Game ;
     mk:releaseDate "1993-04-01"^^xsd:date ;
     mk:sourceURL "https://mortalkombat.fandom.com/wiki/Mortal_Kombat_II"^^xsd:anyURI ;
     mk:supportedPlatform "Arcade"^^xsd:string,
-        "Genesis"^^xsd:string,
         "PlayStation"^^xsd:string,
         "SNES"^^xsd:string,
         "Sega Genesis"^^xsd:string ;
@@ -3125,10 +3087,8 @@ mk:game-mk3-1995 a mk:Game ;
     mk:releaseDate "1995-04-15"^^xsd:date ;
     mk:sourceURL "https://mortalkombat.fandom.com/wiki/Mortal_Kombat_3"^^xsd:anyURI ;
     mk:supportedPlatform "Arcade"^^xsd:string,
-        "Genesis"^^xsd:string,
         "PlayStation"^^xsd:string,
         "SNES"^^xsd:string,
-        "Saturn"^^xsd:string,
         "Sega Genesis"^^xsd:string ;
     mk:verificationStatus "verified"^^xsd:string .
 
@@ -3156,7 +3116,6 @@ mk:game-mk1-1992 a mk:Game ;
     mk:sourceURL "https://mortalkombat.fandom.com/wiki/Mortal_Kombat_(1992_video_game)"^^xsd:anyURI ;
     mk:supportedPlatform "Arcade"^^xsd:string,
         "Game Boy"^^xsd:string,
-        "Genesis"^^xsd:string,
         "SNES"^^xsd:string,
         "Sega Genesis"^^xsd:string ;
     mk:verificationStatus "verified"^^xsd:string .

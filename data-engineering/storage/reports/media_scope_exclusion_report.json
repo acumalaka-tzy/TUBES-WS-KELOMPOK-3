@@ -1,0 +1,42 @@
+{
+  "reportId": "media-scope-exclusion-audit",
+  "policy": "PRD Section 5.2 & 6.1 (Standalone Video Games Only)",
+  "totalEntitiesExcluded": 5,
+  "excludedEntities": [
+    {
+      "candidateName": "Aavi",
+      "entityType": "character",
+      "sourceURL": "https://mortalkombat.fandom.com/wiki/Aavi",
+      "reason": "TV Series: Mortal Kombat: Conquest exclusive character",
+      "status": "excluded_from_standalone_dataset"
+    },
+    {
+      "candidateName": "Abacus",
+      "entityType": "character",
+      "sourceURL": "https://mortalkombat.fandom.com/wiki/Abacus",
+      "reason": "Comic: Malibu Comics exclusive character",
+      "status": "excluded_from_standalone_dataset"
+    },
+    {
+      "candidateName": "Allison Young",
+      "entityType": "character",
+      "sourceURL": "https://mortalkombat.fandom.com/wiki/Allison_Young",
+      "reason": "Film: Mortal Kombat (1995) novelization exclusive character",
+      "status": "excluded_from_standalone_dataset"
+    },
+    {
+      "candidateName": "Art Lean",
+      "entityType": "character",
+      "sourceURL": "https://mortalkombat.fandom.com/wiki/Art_Lean",
+      "reason": "Film: Mortal Kombat (1995) movie exclusive martial artist",
+      "status": "excluded_from_standalone_dataset"
+    },
+    {
+      "candidateName": "Baphomet",
+      "entityType": "character",
+      "sourceURL": "https://mortalkombat.fandom.com/wiki/Baphomet",
+      "reason": "Comic: Malibu Comics exclusive demon lord",
+      "status": "excluded_from_standalone_dataset"
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 """
 Base Scraping Adapter for Mortal Kombat Knowledge Nexus
 Defines common interface, HTTP client with retries, exponential backoff,
-provenance metadata, and content hashing per PRD v1.5 FR-24.
+provenance metadata, acquisition method differentiation, and content hashing per PRD v1.5 FR-24.
 """
 
 from abc import ABC, abstractmethod
@@ -135,12 +135,17 @@ class BaseAdapter(ABC):
         http_status: int = 200,
         canonical_url: Optional[str] = None,
         scrape_run_id: str = "run-default",
-        metadata: Optional[Dict[str, Any]] = None
+        metadata: Optional[Dict[str, Any]] = None,
+        acquisition_method: str = "live_http_api",
+        is_fallback: bool = False,
+        fetch_status: str = "success",
+        failure_reason: Optional[str] = None
     ) -> Dict[str, Any]:
         """
-        Creates a raw page record conforming to PRD Section 28.4 Schema.
+        Creates a raw page record conforming to PRD Section 28.4 Schema,
+        rigorously tracking provenance, acquisition method, and fallback indicators.
         """
-        content_hash = self.compute_hash(content)
+        content_hash = self.compute_hash(content) if content else ""
         raw_id = f"raw-{self.source_id}-{hashlib.md5(page_id.encode()).hexdigest()[:8]}"
         return {
             "rawRecordId": raw_id,
@@ -152,11 +157,15 @@ class BaseAdapter(ABC):
             "canonicalURL": canonical_url or source_url,
             "retrievedAt": datetime.now(timezone.utc).isoformat(),
             "httpStatus": http_status,
-            "contentHash": f"sha256:{content_hash}",
+            "contentHash": f"sha256:{content_hash}" if content_hash else "",
             "adapterName": self.__class__.__name__,
             "adapterVersion": self.adapter_version,
             "rawContent": content,
             "scrapeRunId": scrape_run_id,
+            "acquisitionMethod": acquisition_method,  # "live_http_api", "snapshot", "cache", "fallback_seed"
+            "isFallback": is_fallback,
+            "fetchStatus": fetch_status,  # "success", "failed"
+            "failureReason": failure_reason,
             "metadata": metadata or {}
         }
 

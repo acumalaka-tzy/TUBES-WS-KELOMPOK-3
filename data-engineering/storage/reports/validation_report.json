@@ -1,11 +1,12 @@
 {
-  "reportId": "validation-report-20261122072414",
-  "generatedAt": "2026-11-22T07:24:14.386363+00:00",
+  "reportId": "validation-report-20261122074818",
+  "generatedAt": "2026-11-22T07:48:18.683926+00:00",
   "validationPassed": true,
   "statistics": {
-    "totalEntities": 276,
+    "totalEntities": 272,
     "totalRelationships": 31,
-    "totalUniqueIDs": 276,
+    "totalCharacterVersions": 121,
+    "totalUniqueIDs": 272,
     "validationErrors": 0,
     "validationWarnings": 0,
     "missingProvenanceCount": 0,
@@ -16,8 +17,10 @@
     "schemaIntegrity": "PASSED",
     "idUniqueness": "PASSED",
     "referentialIntegrity": "PASSED",
+    "characterVersionsIntegrity": "PASSED",
     "mandatoryProvenance": "PASSED",
     "dlcExclusionGate": "PASSED (Zero DLC contamination detected)",
+    "mediaScopeFilterGate": "PASSED (Standalone Video Game Media Scope Enforced)",
     "timelineConsistency": "PASSED",
     "elementsAndLocationsVerified": "PASSED (Elements and Locations validated)"
   },

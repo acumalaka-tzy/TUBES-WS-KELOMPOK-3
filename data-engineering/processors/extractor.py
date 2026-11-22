@@ -12,6 +12,7 @@ import re
 from datetime import datetime, timezone
 from pathlib import Path
 from .entity_resolver import EntityResolver
+from .media_scope_filter import MediaScopeFilter
 from .data_store import (
     GAMES, TIMELINES, REALMS, LOCATIONS, CLANS, ELEMENTS,
     WEAPONS, ABILITIES, CHARACTERS, STORY_EVENTS, RELATIONSHIPS
@@ -22,6 +23,7 @@ class EntityExtractor:
 
     def __init__(self, resolver: Optional[EntityResolver] = None):
         self.resolver = resolver or EntityResolver()
+        self.media_filter = MediaScopeFilter()
 
         # Strict DLC Exclusion Registry per PRD Section 6 & 28.12:
         # Characters or add-ons that exist ONLY as DLC / Kombat Pack / Expansion Packs are excluded.
@@ -172,11 +174,13 @@ class EntityExtractor:
         scraped_candidates_processed = 0
         new_candidates_added = 0
         entities_enriched = 0
+        excluded_candidates: List[Dict[str, Any]] = []
 
         # Process cleaned records if provided
         if cleaned_records:
             for rec in cleaned_records:
                 candidates = self.parse_cleaned_record(rec)
+                categories = rec.get("metadata", {}).get("categories", [])
                 for cand in candidates:
                     scraped_candidates_processed += 1
                     etype = cand.get("entityType")
@@ -184,7 +188,18 @@ class EntityExtractor:
                     # Handle Character Candidates
                     if etype == "character":
                         raw_name = cand.get("rawName", "")
-                        if self.is_dlc_excluded(raw_name):
+                        # 1. Scope filter check (media scope & DLC exclusion)
+                        is_allowed, reason = self.media_filter.evaluate_entity(
+                            raw_name, categories=categories, content=cand.get("description", "")
+                        )
+                        if not is_allowed or self.is_dlc_excluded(raw_name):
+                            excluded_candidates.append({
+                                "candidateName": raw_name,
+                                "entityType": "character",
+                                "sourceURL": cand.get("sourceURL"),
+                                "reason": reason or "Prohibited DLC item per PRD Section 6",
+                                "status": "excluded_from_standalone_dataset"
+                            })
                             continue
 
                         # Resolve canonical ID with contextual disambiguation
@@ -217,7 +232,17 @@ class EntityExtractor:
                     # Handle Game Candidates
                     elif etype == "game":
                         raw_title = cand.get("rawTitle", "")
-                        if self.is_dlc_excluded(raw_title):
+                        is_allowed, reason = self.media_filter.evaluate_entity(
+                            raw_title, categories=categories, content=cand.get("description", "")
+                        )
+                        if not is_allowed or self.is_dlc_excluded(raw_title):
+                            excluded_candidates.append({
+                                "candidateName": raw_title,
+                                "entityType": "game",
+                                "sourceURL": cand.get("sourceURL"),
+                                "reason": reason or "Prohibited non-game / DLC title per PRD Section 6",
+                                "status": "excluded_from_standalone_dataset"
+                            })
                             continue
 
                         gid = self.resolver.resolve_canonical_id(raw_title, category="game")
@@ -233,6 +258,7 @@ class EntityExtractor:
                             if cand.get("platforms"):
                                 cur_plats = games_map[matched_id].get("platforms", [])
                                 games_map[matched_id]["platforms"] = list(dict.fromkeys(cur_plats + cand["platforms"]))
+                            entities_enriched += 1
                             entities_enriched += 1
 
                     # Handle Extracted Relationships
@@ -260,6 +286,9 @@ class EntityExtractor:
         # Check for potential duplicates
         duplicates = self.resolver.find_potential_duplicates(list(characters_map.values()))
 
+        # Calculate character versions dynamically
+        total_character_versions = sum(len(c.get("versions", [])) for c in characters_map.values())
+
         # Assemble unified dataset
         final_dataset = {
             "characters": list(characters_map.values()),
@@ -273,11 +302,14 @@ class EntityExtractor:
             "weapons": list(weapons_map.values()),
             "events": story_events_list,
             "relationships": relationships_list,
+            "excludedCandidates": excluded_candidates,
             "extractionMetrics": {
                 "scrapedCandidatesProcessed": scraped_candidates_processed,
                 "entitiesEnriched": entities_enriched,
                 "newCandidatesAdded": new_candidates_added,
-                "potentialDuplicates": len(duplicates)
+                "totalCharacterVersions": total_character_versions,
+                "potentialDuplicates": len(duplicates),
+                "excludedMediaScopeCandidates": len(excluded_candidates)
             }
         }
 
@@ -290,7 +322,7 @@ class EntityExtractor:
     ) -> Dict[str, Any]:
         """
         Loads cleaned_pages.json, runs extraction and canonical merging,
-        saves separate category JSON files, and generates audit report.
+        saves separate category JSON files, exports media scope audit, and generates extraction report.
         """
         out_path = Path(output_dir)
         out_path.mkdir(parents=True, exist_ok=True)
@@ -303,7 +335,13 @@ class EntityExtractor:
 
         data = self.extract_and_merge(cleaned_records)
 
-        # Audit DLC exclusions
+        # Audit DLC exclusions and save media scope exclusion report
+        excluded_candidates = data.get("excludedCandidates", [])
+        self.media_filter.export_exclusion_report(
+            excluded_candidates,
+            "data-engineering/storage/reports/media_scope_exclusion_report.json"
+        )
+
         dlc_excluded_detected = [
             {"candidateName": d, "reason": "Excluded: DLC / Kombat Pack prohibited per PRD Section 6", "status": "excluded"}
             for d in sorted(self.dlc_exclusion_set)
@@ -330,6 +368,8 @@ class EntityExtractor:
 
         # Generate extraction report
         metrics = data.get("extractionMetrics", {})
+        total_versions = metrics.get("totalCharacterVersions", sum(len(c.get("versions", [])) for c in data["characters"]))
+
         report = {
             "reportId": f"extraction-report-{datetime.now(timezone.utc).strftime('%Y%m%d%H%M%S')}",
             "generatedAt": datetime.now(timezone.utc).isoformat(),
@@ -338,10 +378,12 @@ class EntityExtractor:
                 "totalCleanedRecordsRead": len(cleaned_records),
                 "scrapedCandidatesProcessed": metrics.get("scrapedCandidatesProcessed", 0),
                 "entitiesEnrichedFromScraping": metrics.get("entitiesEnriched", 0),
-                "newEntitiesMerged": metrics.get("newCandidatesAdded", 0)
+                "newEntitiesMerged": metrics.get("newCandidatesAdded", 0),
+                "mediaScopeExcluded": metrics.get("excludedMediaScopeCandidates", 0)
             },
             "extractedEntityCounts": {
                 "characters": len(data["characters"]),
+                "characterVersions": total_versions,
                 "games": len(data["games"]),
                 "timelines": len(data["timelines"]),
                 "realms": len(data["realms"]),
@@ -354,7 +396,7 @@ class EntityExtractor:
                 "relationships": len(data["relationships"])
             },
             "dlcExclusionAudit": {
-                "totalExcludedCandidates": len(dlc_excluded_detected),
+                "totalExcludedCandidates": len(dlc_excluded_detected) + len(excluded_candidates),
                 "dlcContaminationInBaseDataset": 0,
                 "auditStatus": "PASSED - Zero DLC items in standalone dataset"
             }

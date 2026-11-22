@@ -11,6 +11,7 @@ import json
 import re
 from datetime import datetime, timezone
 from pathlib import Path
+from .media_scope_filter import MediaScopeFilter
 
 class DataValidator:
     """Validates schema, entity integrity, and provenance before RDF generation."""
@@ -18,6 +19,7 @@ class DataValidator:
     def __init__(self):
         self.errors: List[str] = []
         self.warnings: List[str] = []
+        self.media_filter = MediaScopeFilter()
         self.dlc_prohibited_terms = {
             "spawn", "terminator", "robocop", "joker", "the joker", "homelander", "peacemaker",
             "omni-man", "conan", "ghostface", "t-1000", "leatherface", "alien", "predator",
@@ -136,6 +138,9 @@ class DataValidator:
         for g in dataset.get("games", []):
             check_id_unique(g.get("id"), "Game")
             check_dlc(g.get("name", ""), "Game")
+            is_allowed, scope_reason = self.media_filter.evaluate_entity(g.get("name", ""))
+            if not is_allowed:
+                self.errors.append(f"[MediaScope] Prohibited non-standalone game entity: '{g.get('name')}' ({scope_reason})")
             if not g.get("name") or not g.get("releaseDate"):
                 self.errors.append(f"[Game] Missing name or releaseDate: {g}")
             if not g.get("isStandalone") or g.get("isDLC"):
@@ -145,9 +150,13 @@ class DataValidator:
                 missing_provenance_count += 1
 
         # 9. Validate Characters & CharacterVersions
+        total_character_versions = sum(len(ch.get("versions", [])) for ch in dataset.get("characters", []))
         for ch in dataset.get("characters", []):
             check_id_unique(ch.get("id"), "Character")
             check_dlc(ch.get("name", ""), "Character")
+            is_allowed, scope_reason = self.media_filter.evaluate_entity(ch.get("name", ""))
+            if not is_allowed:
+                self.errors.append(f"[MediaScope] Prohibited non-game media character: '{ch.get('name')}' ({scope_reason})")
             if not ch.get("name") or not ch.get("species"):
                 self.errors.append(f"[Character] Missing name or species: {ch}")
             if not ch.get("sourceURL"):
@@ -235,6 +244,7 @@ class DataValidator:
             "statistics": {
                 "totalEntities": total_entities,
                 "totalRelationships": len(dataset.get("relationships", [])),
+                "totalCharacterVersions": total_character_versions,
                 "totalUniqueIDs": len(all_ids),
                 "validationErrors": len(self.errors),
                 "validationWarnings": len(self.warnings),
@@ -246,8 +256,10 @@ class DataValidator:
                 "schemaIntegrity": "PASSED" if not self.errors else "FAILED",
                 "idUniqueness": "PASSED" if not any("Duplicate ID" in e for e in self.errors) else "FAILED",
                 "referentialIntegrity": "PASSED" if not any("unknown" in e for e in self.errors) else "FAILED",
+                "characterVersionsIntegrity": "PASSED" if total_character_versions > 0 and not any("[Version]" in e for e in self.errors) else "FAILED",
                 "mandatoryProvenance": "PASSED" if missing_provenance_count == 0 else "FAILED",
                 "dlcExclusionGate": "PASSED (Zero DLC contamination detected)" if dlc_violations == 0 else "FAILED",
+                "mediaScopeFilterGate": "PASSED (Standalone Video Game Media Scope Enforced)" if not any("[MediaScope]" in e for e in self.errors) else "FAILED",
                 "timelineConsistency": "PASSED",
                 "elementsAndLocationsVerified": "PASSED (Elements and Locations validated)"
             },

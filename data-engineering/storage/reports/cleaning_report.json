@@ -1,10 +1,10 @@
 {
-  "reportId": "cleaning-report-20261122072403",
-  "generatedAt": "2026-11-22T07:24:03.298789+00:00",
+  "reportId": "cleaning-report-20261122074818",
+  "generatedAt": "2026-11-22T07:48:18.551828+00:00",
   "totalRawRecords": 42,
-  "cleanedUniqueRecords": 42,
-  "duplicateRecordsDetected": 0,
-  "emptyOrShortRecords": 0,
+  "cleanedUniqueRecords": 25,
+  "duplicateRecordsDetected": 17,
+  "emptyOrShortRecords": 18,
   "cleaningRulesApplied": [
     "NFC Unicode Normalization",
     "HTML Tag Stripping",

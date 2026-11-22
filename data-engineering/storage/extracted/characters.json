@@ -50,21 +50,6 @@
         ],
         "clan": "org-lin-kuei"
       }
-    ],
-    "alternateNames": [
-      "Hanzo Hasashi"
-    ],
-    "provenanceTrail": [
-      {
-        "sourceURL": "https://mortalkombat.fandom.com/wiki/Scorpion",
-        "retrievedAt": "2026-11-20T10:00:00Z",
-        "authority": "verified"
-      },
-      {
-        "sourceURL": "https://www.mortalkombat.com/en-us/roster/scorpion",
-        "retrievedAt": "2026-11-22T07:23:40.356182+00:00",
-        "authority": "partially_verified"
-      }
     ]
   },
   {
@@ -118,21 +103,6 @@
         ],
         "clan": "org-lin-kuei"
       }
-    ],
-    "alternateNames": [
-      "Kuai Liang / Bi-Han"
-    ],
-    "provenanceTrail": [
-      {
-        "sourceURL": "https://mortalkombat.fandom.com/wiki/Sub-Zero",
-        "retrievedAt": "2026-11-20T10:00:00Z",
-        "authority": "verified"
-      },
-      {
-        "sourceURL": "https://www.mortalkombat.com/en-us/roster/sub-zero",
-        "retrievedAt": "2026-11-22T07:23:42.264136+00:00",
-        "authority": "partially_verified"
-      }
     ]
   },
   {
@@ -177,21 +147,6 @@
         ],
         "weapons": [],
         "clan": "org-white-lotus"
-      }
-    ],
-    "alternateNames": [
-      "God of Thunder"
-    ],
-    "provenanceTrail": [
-      {
-        "sourceURL": "https://mortalkombat.fandom.com/wiki/Raiden",
-        "retrievedAt": "2026-11-20T10:00:00Z",
-        "authority": "verified"
-      },
-      {
-        "sourceURL": "https://www.mortalkombat.com/en-us/roster/raiden",
-        "retrievedAt": "2026-11-22T07:23:46.509413+00:00",
-        "authority": "partially_verified"
       }
     ]
   },
@@ -240,21 +195,6 @@
         "weapons": [],
         "clan": "org-white-lotus"
       }
-    ],
-    "alternateNames": [
-      "Fire God Liu Kang"
-    ],
-    "provenanceTrail": [
-      {
-        "sourceURL": "https://mortalkombat.fandom.com/wiki/Liu_Kang",
-        "retrievedAt": "2026-11-20T10:00:00Z",
-        "authority": "verified"
-      },
-      {
-        "sourceURL": "https://www.mortalkombat.com/en-us/roster/liu-kang",
-        "retrievedAt": "2026-11-22T07:23:44.194774+00:00",
-        "authority": "partially_verified"
-      }
     ]
   },
   {
@@ -293,21 +233,6 @@
           "weapon-steel-fans"
         ],
         "clan": null
-      }
-    ],
-    "alternateNames": [
-      "Kitana Kahn"
-    ],
-    "provenanceTrail": [
-      {
-        "sourceURL": "https://mortalkombat.fandom.com/wiki/Kitana",
-        "retrievedAt": "2026-11-20T10:00:00Z",
-        "authority": "verified"
-      },
-      {
-        "sourceURL": "https://www.mortalkombat.com/en-us/roster/kitana",
-        "retrievedAt": "2026-11-22T07:23:48.384202+00:00",
-        "authority": "partially_verified"
       }
     ]
   },
@@ -357,21 +282,6 @@
         ],
         "clan": null
       }
-    ],
-    "alternateNames": [
-      "Empress Mileena"
-    ],
-    "provenanceTrail": [
-      {
-        "sourceURL": "https://mortalkombat.fandom.com/wiki/Mileena",
-        "retrievedAt": "2026-11-20T10:00:00Z",
-        "authority": "verified"
-      },
-      {
-        "sourceURL": "https://www.mortalkombat.com/en-us/roster/mileena",
-        "retrievedAt": "2026-11-22T07:23:50.377409+00:00",
-        "authority": "partially_verified"
-      }
     ]
   },
   {
@@ -405,21 +315,6 @@
         ],
         "weapons": [],
         "clan": "org-special-forces"
-      }
-    ],
-    "alternateNames": [
-      "John Carlton"
-    ],
-    "provenanceTrail": [
-      {
-        "sourceURL": "https://mortalkombat.fandom.com/wiki/Johnny_Cage",
-        "retrievedAt": "2026-11-20T10:00:00Z",
-        "authority": "verified"
-      },
-      {
-        "sourceURL": "https://www.mortalkombat.com/en-us/roster/johnny-cage",
-        "retrievedAt": "2026-11-22T07:23:52.424026+00:00",
-        "authority": "partially_verified"
       }
     ]
   },
@@ -750,21 +645,6 @@
           "weapon-sento"
         ],
         "clan": "org-shirai-ryu"
-      }
-    ],
-    "alternateNames": [
-      "Kenshi Takahashi"
-    ],
-    "provenanceTrail": [
-      {
-        "sourceURL": "https://mortalkombat.fandom.com/wiki/Kenshi",
-        "retrievedAt": "2026-11-20T10:00:00Z",
-        "authority": "verified"
-      },
-      {
-        "sourceURL": "https://www.mortalkombat.com/en-us/roster/kenshi",
-        "retrievedAt": "2026-11-22T07:23:54.180949+00:00",
-        "authority": "partially_verified"
       }
     ]
   },
@@ -2210,62 +2090,14 @@
     ]
   },
   {
-    "id": "character-aavi",
-    "name": "Aavi",
+    "id": "character-scorpion-fetch-failed",
+    "name": "Scorpion (Fetch Failed)",
     "alternateName": null,
     "firstAppearanceYear": "Unknown",
-    "description": "'''Aavi''' was a minor character who appeared in ''Mortal Kombat: Conquest'' series in the episode entitled \u201c''The Serpent And The Ice.\"'' ==History== Aavi was a villager of Zhu Zin who lost her mind many years before the events of ''Conquest'', after her child was kidnapped, presumably by the Lin Kuei, and her husband was killed while he attempted to protect their child. Category:Mortal Kombat: Conquest Characters Category:Non-Canon Characters Category:Characters Category:Female Characters Category:Earthrealm Characters Category:Minor Characters",
+    "description": "Official franchise profile for Scorpion (Fetch Failed).",
     "species": "Human",
     "originRealm": "realm-earthrealm",
-    "sourceURL": "https://mortalkombat.fandom.com/wiki/Aavi",
-    "verificationStatus": "partially_verified",
-    "versions": []
-  },
-  {
-    "id": "character-abacus",
-    "name": "Abacus",
-    "alternateName": null,
-    "firstAppearanceYear": "Unknown",
-    "description": "Lord '''Abacus''' was the God of Order in the ''Mortal Kombat'' comics published by [http://en.wikipedia.org/wiki/Malibu_Comics Malibu Comics]. ==Overview== Residing in the Library of Order, Abacus witnessed the chaotic schemes of his fellow god, Zaggot unfold. Despite this being the case, he refused to respond physically as he feared that if he did, it would result in even more chaos to feed Zaggot. However, Abacus changes his mind and meets with Goro, whereupon he presents the Shokan with a weapon forged of order. After this chain of events, Abacus is seen fighting against his brother Zaggot",
-    "species": "God",
-    "originRealm": "realm-orderrealm",
-    "sourceURL": "https://mortalkombat.fandom.com/wiki/Abacus",
-    "verificationStatus": "partially_verified",
-    "versions": []
-  },
-  {
-    "id": "character-allison-young",
-    "name": "Allison Young",
-    "alternateName": null,
-    "firstAppearanceYear": "Unknown",
-    "description": "'''Allison Young''' is a character in the 2021 film ''Mortal Kombat''. Allison is the wife of Cole Young. ==Profile== Allison Young is the wife of Cole Young, a struggling MMA fighter and the mother of Emily Young. Allison is smart, protective and a devoted mother, but no longer watches Cole's fights, unable to bear watching him taking such pain. For his part, Cole loves Allison deeply, but fears that he is letting her down, that he is not and never will be good enough for her or their child. ==Biography== Allison Young was present as her husband, Cole Young, prepared to fight a man named Rami",
-    "species": "Human",
-    "originRealm": "realm-earthrealm",
-    "sourceURL": "https://mortalkombat.fandom.com/wiki/Allison_Young",
-    "verificationStatus": "partially_verified",
-    "versions": []
-  },
-  {
-    "id": "character-art-lean",
-    "name": "Art Lean",
-    "alternateName": null,
-    "firstAppearanceYear": "Unknown",
-    "description": "'''Art Lean''' is a character in the 1995 film ''Mortal Kombat''. Lean is an Earthrealm fighter who participated the tenth tournament. == History == Art Lean meets Johnny Cage on the docks while he and the other Earthrealm warriors wait to board the boat ''Dragon Wing'' to the tournament held on an island. Lean is one of the few people who believe the authenticity of Johnny's martial arts as Cage mentions seeing Lean fight in London and being impressed by his skills, Lean replies \"''I saw a couple of your films. Listen, you can't fake those moves.''\" Cage, smirking, mentions that he should tel",
-    "species": "Human",
-    "originRealm": "realm-earthrealm",
-    "sourceURL": "https://mortalkombat.fandom.com/wiki/Art_Lean",
-    "verificationStatus": "partially_verified",
-    "versions": []
-  },
-  {
-    "id": "character-baphomet",
-    "name": "Baphomet",
-    "alternateName": null,
-    "firstAppearanceYear": "Unknown",
-    "description": "An Elder Demon from the Netherrealm, '''Baphomet''' was one of the many characters, alongside his race of fellow Elder Demons, who did not make the final cut in ''Mortal Kombat: Deadly Alliance''. Baphomet's concept sketch was an unlockable in Koffin BG and costs 217 Sapphire Koins within the Krypt of ''Mortal Kombat: Deadly Alliance.'' ==Trivia== *This Elder Demon is named after the actual Baphomet whose legend and legacy spread through all demonic cults. *\"Baphomet\" is also a description of the goat's head/pentagram image that was connected to the Knights Templar by the Catholic Church of th",
-    "species": "Elder Demon",
-    "originRealm": "realm-netherrealm",
-    "sourceURL": "https://mortalkombat.fandom.com/wiki/Baphomet",
+    "sourceURL": "https://www.mortalkombat.com/en-us/roster/scorpion",
     "verificationStatus": "partially_verified",
     "versions": []
   }

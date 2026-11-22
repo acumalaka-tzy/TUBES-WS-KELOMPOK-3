@@ -310,7 +310,8 @@ class DataPipelineOrchestrator:
         print("\n[STAGE 12] COMPREHENSIVE MASTER REPORTING")
         reports = {}
         for r_name in ["source_discovery_report.json", "scrape_report.json", "cleaning_report.json",
-                      "extraction_report.json", "image_asset_report.json", "validation_report.json", "rdf_export_report.json"]:
+                      "extraction_report.json", "media_scope_exclusion_report.json", "image_asset_report.json",
+                      "validation_report.json", "rdf_export_report.json"]:
             r_path = self.reports_dir / r_name
             if r_path.exists():
                 with open(r_path, "r", encoding="utf-8") as f:
@@ -324,9 +325,12 @@ class DataPipelineOrchestrator:
                 "totalRawPagesCollected": reports.get("scrape_report", {}).get("totalRawRecordsCollected", 0),
                 "totalCleanedRecords": reports.get("cleaning_report", {}).get("cleanedUniqueRecords", 0),
                 "totalEntitiesExtracted": reports.get("validation_report", {}).get("statistics", {}).get("totalEntities", 0),
+                "totalCharacterVersions": reports.get("validation_report", {}).get("statistics", {}).get("totalCharacterVersions", 0),
                 "totalRelationships": reports.get("validation_report", {}).get("statistics", {}).get("totalRelationships", 0),
                 "totalImageAssets": reports.get("image_asset_report", {}).get("totalAssets", 0),
                 "approvedImageAssets": reports.get("image_asset_report", {}).get("approvedAssets", 0),
+                "pendingReviewImageAssets": reports.get("image_asset_report", {}).get("pendingReviewAssets", 0),
+                "mediaScopeExcluded": reports.get("media_scope_exclusion_report", {}).get("totalEntitiesExcluded", 0),
                 "validationPassed": reports.get("validation_report", {}).get("validationPassed", False),
                 "totalRDFTriples": reports.get("rdf_export_report", {}).get("totalTriples", 0),
                 "totalRDFClasses": reports.get("rdf_export_report", {}).get("totalClasses", 0),
