@@ -209,7 +209,7 @@ export default function AssistantPage() {
             ))}
 
             {loading && (
-              <div className="flex items-center gap-2 rounded-sm border border-mk-border bg-mk-bg p-3 text-xs text-mk-muted max-w-[50%]">
+              <div className="flex items-center gap-2 rounded-sm border border-mk-border bg-mk-bg p-3 text-xs text-mk-muted max-w-[90%] sm:max-w-[70%] lg:max-w-[50%]">
                 <span className="inline-block h-3 w-3 animate-spin rounded-full border-2 border-mk-red border-t-transparent" />
                 <span>AI sedang menelusuri Knowledge Graph dan menyusun jawaban...</span>
               </div>
@@ -251,7 +251,7 @@ export default function AssistantPage() {
               onChange={(e) => setInput(e.target.value)}
               placeholder="Ketik pertanyaan seputar Mortal Kombat..."
               disabled={loading}
-              className="flex-1 rounded-sm border border-mk-border bg-mk-bg2 px-4 py-2.5 text-sm text-mk-text placeholder-mk-muted focus:border-mk-red focus:outline-none"
+              className="flex-1 rounded-sm border border-mk-border bg-mk-bg2 px-4 py-2.5 text-sm text-mk-text placeholder:text-mk-muted focus:border-mk-red focus:outline-none"
             />
             <button
               type="submit"

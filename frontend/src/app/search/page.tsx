@@ -134,7 +134,7 @@ function SearchContent() {
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div className="flex flex-wrap items-center gap-2">
               <span className="text-xs font-semibold uppercase tracking-wider text-mk-muted">Mode Pencarian:</span>
-              <div className="flex rounded-sm border border-mk-border bg-mk-bg p-0.5">
+              <div className="flex flex-wrap sm:flex-nowrap rounded-sm border border-mk-border bg-mk-bg p-0.5">
                 {MODES.map((m) => (
                   <button
                     key={m.id}
@@ -445,7 +445,7 @@ function SearchResultCard({
                   <p className="font-semibold text-mk-text">Jalur Relasi Graph (RDF Traversal):</p>
                   <div className="flex flex-wrap items-center gap-1.5 font-mono text-[11px]">
                     {result.graphPath.map((step, idx) => (
-                      <span key={idx} className="flex items-center gap-1.5">
+                      <span key={idx} className="flex items-center gap-1.5 break-all">
                         <span
                           className={`rounded px-1.5 py-0.5 ${
                             idx % 2 === 0 ? "bg-mk-card text-mk-gold" : "bg-mk-red-deep/40 text-red-300"

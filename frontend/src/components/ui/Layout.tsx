@@ -82,9 +82,9 @@ export function Section({
 }) {
   return (
     <section id={id} className={`scroll-mt-32 ${className}`}>
-      <div className="mb-5 flex items-end justify-between gap-4">
+      <div className="mb-5 flex flex-wrap items-end justify-between gap-4">
         <h2 className="flex items-center gap-3 font-heading text-xl font-bold tracking-wide sm:text-2xl">
-          <span className="h-6 w-1 bg-mk-red" aria-hidden="true" />
+          <span className="h-6 w-1 shrink-0 bg-mk-red" aria-hidden="true" />
           {title}
         </h2>
         {action}

@@ -50,12 +50,12 @@ export function SelectFilter({
   options: { value: string; label: string }[];
 }) {
   return (
-    <label className="flex items-center gap-2 text-xs text-mk-muted">
+    <label className="flex w-full sm:w-auto items-center justify-between sm:justify-start gap-2 text-xs text-mk-muted">
       <span className="uppercase tracking-widest">{label}</span>
       <select
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="rounded-sm border border-mk-border bg-mk-bg px-3 py-2 text-sm text-mk-text focus:border-mk-red focus:outline-none"
+        className="w-full sm:w-auto rounded-sm border border-mk-border bg-mk-bg px-3 py-2 text-sm text-mk-text focus:border-mk-red focus:outline-none"
       >
         {options.map((o) => (
           <option key={o.value} value={o.value}>
