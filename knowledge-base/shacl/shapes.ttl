@@ -1,10 +1,38 @@
-@prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix mk: <https://example.org/mk/> .
+@prefix sh:   <http://www.w3.org/ns/shacl#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix mk:   <https://example.org/mk/> .
 
-# ========================================================
-# SHACL Validation Shapes for Mortal Kombat Knowledge Base
-# ========================================================
+# ==============================================================================
+# SHACL Validation Shapes - Mortal Kombat Knowledge Nexus (v2.0)
+#
+# Validasi dijalankan terhadap graph gabungan (ontology + data + story layer):
+#     python knowledge-base/scripts/kb_tools.py validate
+#
+# Severity
+#   sh:Violation (default) : data salah secara struktur / referensi
+#   sh:Warning             : kelengkapan data (deskripsi, sumber) atau konflik
+#                            yang mungkin sah karena beda timeline
+#
+# Daftar shape
+#   Character, CharacterVersion, Game, Timeline, Ability, Move, Element, Weapon,
+#   Organization, Location, Realm, Species, Event, StoryTimeline, StoryClaim,
+#   Source, CharacterRelation (enemyOf/alliedWith)
+# ==============================================================================
+
+<https://example.org/mk/shapes>
+    a owl:Ontology ;
+    rdfs:label "Mortal Kombat Knowledge Nexus SHACL Shapes"@en ;
+    owl:versionInfo "2.0" ;
+    sh:declare [ sh:prefix "mk" ; sh:namespace "https://example.org/mk/"^^xsd:anyURI ] ,
+               [ sh:prefix "rdf" ; sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ] ,
+               [ sh:prefix "xsd" ; sh:namespace "http://www.w3.org/2001/XMLSchema#"^^xsd:anyURI ] .
+
+# ------------------------------------------------------------------------------
+# Character
+# ------------------------------------------------------------------------------
 
 mk:CharacterShape a sh:NodeShape ;
     sh:targetClass mk:Character ;
@@ -13,17 +41,65 @@ mk:CharacterShape a sh:NodeShape ;
         sh:datatype xsd:string ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
-        sh:message "A character must have exactly one primary name." ;
+        sh:message "A character must have exactly one primary name (xsd:string)." ;
     ] ;
     sh:property [
         sh:path mk:hasVersion ;
         sh:class mk:CharacterVersion ;
         sh:minCount 1 ;
-        sh:message "A character must have at least one CharacterVersion associated." ;
+        sh:message "A character must have at least one CharacterVersion (a resolvable game + timeline appearance)." ;
+    ] ;
+    sh:property [
+        sh:path mk:firstAppearanceYear ;
+        sh:datatype xsd:gYear ;
+        sh:pattern "^[0-9]{4}$" ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "firstAppearanceYear must be exactly one valid xsd:gYear (four digits, e.g. \"1992\")." ;
+    ] ;
+    sh:property [
+        sh:path mk:originatesFrom ;
+        sh:class mk:Location ;
+        sh:maxCount 1 ;
+        sh:message "A character originates from at most one Location/Realm." ;
+    ] ;
+    sh:property [
+        sh:path mk:ofSpecies ;
+        sh:class mk:Species ;
+        sh:message "mk:ofSpecies must point to a mk:Species individual." ;
+    ] ;
+    sh:property [
+        sh:path mk:verificationStatus ;
+        sh:in ( "verified"^^xsd:string "partially_verified"^^xsd:string "unverified"^^xsd:string ) ;
+        sh:maxCount 1 ;
+        sh:message "verificationStatus must be verified, partially_verified, or unverified." ;
+    ] ;
+    sh:property [
+        sh:path mk:description ;
+        sh:minCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "A character should have a description." ;
+    ] ;
+    sh:property [
+        sh:path mk:sourceURL ;
+        sh:datatype xsd:anyURI ;
+        sh:minCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "A character should cite a sourceURL." ;
     ] .
+
+# ------------------------------------------------------------------------------
+# CharacterVersion  (the unit that separates games and timelines)
+# ------------------------------------------------------------------------------
 
 mk:CharacterVersionShape a sh:NodeShape ;
     sh:targetClass mk:CharacterVersion ;
+    sh:property [
+        sh:path mk:name ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:message "A CharacterVersion must have a name." ;
+    ] ;
     sh:property [
         sh:path mk:versionOf ;
         sh:class mk:Character ;
@@ -41,8 +117,54 @@ mk:CharacterVersionShape a sh:NodeShape ;
         sh:path mk:existsInTimeline ;
         sh:class mk:Timeline ;
         sh:minCount 1 ;
-        sh:message "CharacterVersion must belong to at least one Timeline." ;
+        sh:maxCount 1 ;
+        sh:message "CharacterVersion must belong to exactly one Timeline." ;
+    ] ;
+    sh:property [
+        sh:path mk:hasAbility ;
+        sh:class mk:Ability ;
+        sh:message "mk:hasAbility must point to a mk:Ability (or Move)." ;
+    ] ;
+    sh:property [
+        sh:path mk:usesWeapon ;
+        sh:class mk:Weapon ;
+        sh:message "mk:usesWeapon must point to a mk:Weapon." ;
+    ] ;
+    sh:property [
+        sh:path mk:memberOf ;
+        sh:class mk:Organization ;
+        sh:message "mk:memberOf must point to a mk:Organization (Clan/Faction)." ;
+    ] ;
+    sh:property [
+        sh:path mk:versionLabel ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:message "A CharacterVersion has at most one versionLabel." ;
+    ] ;
+    sh:property [
+        sh:path mk:versionSequence ;
+        sh:datatype xsd:integer ;
+        sh:minInclusive 1 ;
+        sh:maxCount 1 ;
+        sh:message "versionSequence must be a single positive integer." ;
+    ] ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "Two CharacterVersions of the same Character share the same Game and Timeline; versions must be distinguishable." ;
+        sh:prefixes <https://example.org/mk/shapes> ;
+        sh:select """
+            SELECT $this ?other
+            WHERE {
+                $this mk:versionOf ?c ; mk:appearsIn ?g ; mk:existsInTimeline ?t .
+                ?other mk:versionOf ?c ; mk:appearsIn ?g ; mk:existsInTimeline ?t .
+                FILTER ($this != ?other)
+            }
+        """ ;
     ] .
+
+# ------------------------------------------------------------------------------
+# Game / Timeline
+# ------------------------------------------------------------------------------
 
 mk:GameShape a sh:NodeShape ;
     sh:targetClass mk:Game ;
@@ -51,7 +173,142 @@ mk:GameShape a sh:NodeShape ;
         sh:datatype xsd:string ;
         sh:minCount 1 ;
         sh:message "Game must have a title." ;
+    ] ;
+    sh:property [
+        sh:path mk:releaseDate ;
+        sh:datatype xsd:date ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Game must have exactly one valid xsd:date releaseDate." ;
+    ] ;
+    sh:property [
+        sh:path mk:gameEra ;
+        sh:minCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "Game should declare its era." ;
     ] .
+
+mk:TimelineShape a sh:NodeShape ;
+    sh:targetClass mk:Timeline ;
+    sh:property [
+        sh:path mk:name ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:message "Timeline must have a name." ;
+    ] ;
+    sh:property [
+        sh:path mk:chronologicalPeriod ;
+        sh:minCount 1 ;
+        sh:message "Timeline must define its chronologicalPeriod." ;
+    ] ;
+    sh:property [
+        sh:path mk:timelineOrder ;
+        sh:datatype xsd:integer ;
+        sh:maxCount 1 ;
+        sh:message "timelineOrder must be a single integer." ;
+    ] ;
+    sh:property [
+        sh:path mk:description ;
+        sh:minCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "Timeline should have a description." ;
+    ] .
+
+# ------------------------------------------------------------------------------
+# Ability / Move / Element / Weapon
+# ------------------------------------------------------------------------------
+
+mk:AbilityShape a sh:NodeShape ;
+    sh:targetClass mk:Ability ;
+    sh:property [
+        sh:path mk:name ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:message "Ability/Move must have a name." ;
+    ] ;
+    sh:property [
+        sh:path mk:hasElement ;
+        sh:class mk:Element ;
+        sh:message "mk:hasElement must point to a mk:Element." ;
+    ] ;
+    sh:property [
+        sh:path mk:moveCategory ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:message "Ability/Move must declare a moveCategory." ;
+    ] .
+
+mk:ElementShape a sh:NodeShape ;
+    sh:targetClass mk:Element ;
+    sh:property [
+        sh:path mk:name ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:message "Element must have a name." ;
+    ] .
+
+mk:WeaponShape a sh:NodeShape ;
+    sh:targetClass mk:Weapon ;
+    sh:property [
+        sh:path mk:name ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:message "Weapon must have a name." ;
+    ] ;
+    sh:property [
+        sh:path mk:description ;
+        sh:minCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "Weapon should have a description." ;
+    ] .
+
+# ------------------------------------------------------------------------------
+# Organization / Location / Species
+# ------------------------------------------------------------------------------
+
+mk:OrganizationShape a sh:NodeShape ;
+    sh:targetClass mk:Organization ;
+    sh:property [
+        sh:path mk:name ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:message "Organization/Clan must have a name." ;
+    ] ;
+    sh:property [
+        sh:path mk:description ;
+        sh:minCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "Organization should have a description." ;
+    ] .
+
+mk:LocationShape a sh:NodeShape ;
+    sh:targetClass mk:Location ;
+    sh:property [
+        sh:path mk:name ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:message "Location must have a name." ;
+    ] ;
+    sh:property [
+        sh:path mk:locatedInRealm ;
+        sh:class mk:Realm ;
+        sh:maxCount 1 ;
+        sh:message "A location lies in at most one Realm." ;
+    ] .
+
+mk:SpeciesShape a sh:NodeShape ;
+    sh:targetClass mk:Species ;
+    sh:property [
+        sh:path mk:name ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Species must have exactly one name." ;
+    ] .
+
+# ------------------------------------------------------------------------------
+# Story Event
+# ------------------------------------------------------------------------------
 
 mk:EventShape a sh:NodeShape ;
     sh:targetClass mk:Event ;
@@ -59,11 +316,261 @@ mk:EventShape a sh:NodeShape ;
         sh:path mk:eventTitle ;
         sh:datatype xsd:string ;
         sh:minCount 1 ;
-        sh:message "Event must have a title." ;
+        sh:maxCount 1 ;
+        sh:message "Event must have exactly one title." ;
     ] ;
     sh:property [
-        sh:path mk:occursIn ;
+        sh:path mk:eventSummary ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:message "Event must have a summary." ;
+    ] ;
+    sh:property [
+        sh:path [ sh:alternativePath ( mk:occursIn mk:occursInTimeline ) ] ;
         sh:class mk:Timeline ;
         sh:minCount 1 ;
-        sh:message "Event must occur in a defined Timeline." ;
+        sh:maxCount 1 ;
+        sh:message "Event must occur in exactly one defined Timeline." ;
+    ] ;
+    sh:property [
+        sh:path mk:chronologicalOrder ;
+        sh:datatype xsd:integer ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Event must have exactly one integer chronologicalOrder." ;
+    ] ;
+    sh:property [
+        sh:path mk:featuresInGame ;
+        sh:class mk:Game ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Event must be tied to exactly one Game." ;
+    ] ;
+    sh:property [
+        sh:path mk:involvesCharacter ;
+        sh:class mk:Character ;
+        sh:minCount 1 ;
+        sh:message "Event must involve at least one Character." ;
+    ] ;
+    sh:property [
+        sh:path mk:involvesVersion ;
+        sh:class mk:CharacterVersion ;
+        sh:message "mk:involvesVersion must point to a mk:CharacterVersion." ;
+    ] ;
+    sh:property [
+        sh:path mk:sourceURL ;
+        sh:datatype xsd:anyURI ;
+        sh:minCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "Event should cite a sourceURL." ;
+    ] ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "Two Story Events share the same chronologicalOrder." ;
+        sh:prefixes <https://example.org/mk/shapes> ;
+        sh:select """
+            SELECT $this ?other
+            WHERE {
+                $this mk:chronologicalOrder ?o .
+                ?other a mk:Event ; mk:chronologicalOrder ?o .
+                FILTER ($this != ?other)
+            }
+        """ ;
+    ] ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "Event involves a CharacterVersion that belongs to a different Timeline than the event." ;
+        sh:prefixes <https://example.org/mk/shapes> ;
+        sh:select """
+            SELECT $this ?value
+            WHERE {
+                $this mk:occursIn ?t ; mk:involvesVersion ?value .
+                ?value mk:existsInTimeline ?vt .
+                FILTER (?vt != ?t)
+            }
+        """ ;
+    ] .
+
+# ------------------------------------------------------------------------------
+# Story Timeline
+# ------------------------------------------------------------------------------
+
+mk:StoryTimelineShape a sh:NodeShape ;
+    sh:targetClass mk:StoryTimeline ;
+    sh:property [
+        sh:path mk:name ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:message "StoryTimeline must have a name." ;
+    ] ;
+    sh:property [
+        sh:path mk:describesTimeline ;
+        sh:class mk:Timeline ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "StoryTimeline must describe exactly one Timeline." ;
+    ] ;
+    sh:property [
+        sh:path mk:hasStoryEvent ;
+        sh:class mk:Event ;
+        sh:minCount 1 ;
+        sh:message "StoryTimeline must contain at least one Story Event." ;
+    ] ;
+    sh:property [
+        sh:path mk:eventCount ;
+        sh:datatype xsd:integer ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "StoryTimeline must declare exactly one integer eventCount." ;
+    ] ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "StoryTimeline contains an event that occurs in a different Timeline." ;
+        sh:prefixes <https://example.org/mk/shapes> ;
+        sh:select """
+            SELECT $this ?value
+            WHERE {
+                $this mk:describesTimeline ?t ; mk:hasStoryEvent ?value .
+                ?value mk:occursIn ?et .
+                FILTER (?et != ?t)
+            }
+        """ ;
+    ] .
+
+# ------------------------------------------------------------------------------
+# Story Claim
+# ------------------------------------------------------------------------------
+
+mk:StoryClaimShape a sh:NodeShape ;
+    sh:targetClass mk:StoryClaim ;
+    sh:property [
+        sh:path mk:claimText ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "StoryClaim must have exactly one claimText." ;
+    ] ;
+    sh:property [
+        sh:path mk:claimInTimeline ;
+        sh:class mk:Timeline ;
+        sh:minCount 1 ;
+        sh:message "StoryClaim must be bound to at least one Timeline." ;
+    ] ;
+    sh:property [
+        sh:path mk:supportedBy ;
+        sh:class mk:Source ;
+        sh:minCount 1 ;
+        sh:message "StoryClaim must be supported by at least one Source (provenance)." ;
+    ] ;
+    sh:property [
+        sh:path mk:verificationStatus ;
+        sh:in ( "verified"^^xsd:string "partially_verified"^^xsd:string "unverified"^^xsd:string ) ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "StoryClaim must carry one verificationStatus (verified, partially_verified, unverified)." ;
+    ] ;
+    sh:property [
+        sh:path mk:claimSubject ;
+        sh:class mk:Character ;
+        sh:maxCount 1 ;
+        sh:message "claimSubject must be a single Character." ;
+    ] ;
+    sh:property [
+        sh:path mk:claimObject ;
+        sh:class mk:Character ;
+        sh:maxCount 1 ;
+        sh:message "claimObject must be a single Character." ;
+    ] ;
+    sh:or (
+        [ sh:path mk:aboutEvent ; sh:class mk:Event ; sh:minCount 1 ]
+        [ sh:path mk:claimSubject ; sh:minCount 1 ]
+    ) .
+
+# Soft check: a relationship claim should be backed by a CharacterVersion that exists
+# in the claim's timeline (otherwise the claim cannot be traced to a concrete version).
+mk:StoryClaimCoverageShape a sh:NodeShape ;
+    sh:targetClass mk:StoryClaim ;
+    sh:severity sh:Warning ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "Claim subject has no CharacterVersion in one of the claim's timelines." ;
+        sh:prefixes <https://example.org/mk/shapes> ;
+        sh:select """
+            SELECT $this ?value
+            WHERE {
+                $this mk:claimSubject ?c ; mk:claimInTimeline ?value .
+                FILTER NOT EXISTS {
+                    ?c mk:hasVersion ?v .
+                    ?v mk:existsInTimeline ?value .
+                }
+            }
+        """ ;
+    ] .
+
+# ------------------------------------------------------------------------------
+# Source
+# ------------------------------------------------------------------------------
+
+mk:SourceShape a sh:NodeShape ;
+    sh:targetClass mk:Source ;
+    sh:property [
+        sh:path mk:name ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:message "Source must have a name." ;
+    ] ;
+    sh:property [
+        sh:path mk:sourceURL ;
+        sh:datatype xsd:anyURI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Source must have exactly one xsd:anyURI sourceURL." ;
+    ] ;
+    sh:property [
+        sh:path mk:sourceType ;
+        sh:in ( "official-site"^^xsd:string "fandom-wiki"^^xsd:string "other"^^xsd:string ) ;
+        sh:message "sourceType must be official-site, fandom-wiki, or other." ;
+    ] .
+
+# ------------------------------------------------------------------------------
+# Character relations (enemyOf / alliedWith)
+# ------------------------------------------------------------------------------
+
+mk:EnemyRelationShape a sh:NodeShape ;
+    sh:targetSubjectsOf mk:enemyOf ;
+    sh:property [
+        sh:path mk:enemyOf ;
+        sh:class mk:Character ;
+        sh:message "mk:enemyOf must connect two Characters." ;
+    ] ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "A character cannot be its own enemy." ;
+        sh:prefixes <https://example.org/mk/shapes> ;
+        sh:select """
+            SELECT $this
+            WHERE { $this mk:enemyOf $this . }
+        """ ;
+    ] .
+
+# Soft check: enemy + ally at the same time is legitimate only across timelines.
+mk:RelationConflictShape a sh:NodeShape ;
+    sh:targetSubjectsOf mk:enemyOf ;
+    sh:severity sh:Warning ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "Pair is both enemyOf and alliedWith; this is only valid when the StoryClaims sit in different timelines." ;
+        sh:prefixes <https://example.org/mk/shapes> ;
+        sh:select """
+            SELECT $this ?value
+            WHERE { $this mk:enemyOf ?value ; mk:alliedWith ?value . }
+        """ ;
+    ] .
+
+mk:AllyRelationShape a sh:NodeShape ;
+    sh:targetSubjectsOf mk:alliedWith ;
+    sh:property [
+        sh:path mk:alliedWith ;
+        sh:class mk:Character ;
+        sh:message "mk:alliedWith must connect two Characters." ;
     ] .
