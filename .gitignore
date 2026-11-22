@@ -76,12 +76,6 @@ data-engineering/storage/raw/*
 !data-engineering/storage/raw/.gitkeep
 data-engineering/storage/cleaned/*
 !data-engineering/storage/cleaned/.gitkeep
-data-engineering/storage/extracted/*
-!data-engineering/storage/extracted/.gitkeep
-data-engineering/storage/validated/*
-!data-engineering/storage/validated/.gitkeep
-data-engineering/storage/assets/*
-!data-engineering/storage/assets/.gitkeep
 
 # Apache Jena Fuseki Standalone Runtime
 fuseki/apache-jena-fuseki-*/
