@@ -1,0 +1,14 @@
+{
+  "reportId": "cleaning-report-20261122080725",
+  "generatedAt": "2026-11-22T08:07:25.361003+00:00",
+  "totalRawRecords": 42,
+  "cleanedUniqueRecords": 25,
+  "duplicateRecordsDetected": 17,
+  "emptyOrShortRecords": 18,
+  "cleaningRulesApplied": [
+    "NFC Unicode Normalization",
+    "HTML Tag Stripping",
+    "MediaWiki Citation & Template Removal",
+    "Canonical URL & Content Hash Deduplication"
+  ]
+}

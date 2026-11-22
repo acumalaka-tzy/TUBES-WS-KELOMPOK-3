@@ -1,0 +1,871 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="https://example.org/mk/follows">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="https://example.org/mk/Event"/>
+    <rdfs:domain rdf:resource="https://example.org/mk/Event"/>
+    <rdfs:label xml:lang="en">follows</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/eventCount">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">event count</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:domain rdf:resource="https://example.org/mk/StoryTimeline"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/StoryArc">
+    <rdfs:subClassOf rdf:resource="https://example.org/mk/Entity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">A sequence of connected events</rdfs:comment>
+    <rdfs:label xml:lang="en">Story Arc</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/versionSequence">
+    <rdfs:domain rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <rdfs:label xml:lang="en">version sequence</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:comment xml:lang="en">1-based position of this version among all versions of the same character (by release date)</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/Event">
+    <rdfs:comment xml:lang="en">A narrative event occurring in the Mortal Kombat story (Story Event)</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://example.org/mk/Entity"/>
+    <rdfs:label xml:lang="en">Story Event</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/relatedTo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb20"/>
+    <rdfs:label xml:lang="en">related to</rdfs:label>
+    <rdfs:range rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb23"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/allyOf">
+    <owl:equivalentProperty rdf:resource="https://example.org/mk/alliedWith"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb32"/>
+    <rdfs:subPropertyOf rdf:resource="https://example.org/mk/alliedWith"/>
+    <rdfs:range rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb35"/>
+    <rdfs:label xml:lang="en">ally of</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/evidenceText">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">evidence text</rdfs:label>
+    <rdfs:domain rdf:resource="https://example.org/mk/StoryClaim"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/occursIn">
+    <rdfs:range rdf:resource="https://example.org/mk/Timeline"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">occurs in</rdfs:label>
+    <rdfs:domain rdf:resource="https://example.org/mk/Event"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/versionOf">
+    <rdfs:domain rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <rdfs:label xml:lang="en">version of</rdfs:label>
+    <rdfs:range rdf:resource="https://example.org/mk/Character"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:comment xml:lang="en">Every CharacterVersion belongs to exactly one Character</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/rivalOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <rdfs:subPropertyOf rdf:resource="https://example.org/mk/enemyOf"/>
+    <rdfs:domain rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb44"/>
+    <rdfs:range rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb47"/>
+    <rdfs:label xml:lang="en">rival of</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/StoryTimeline">
+    <rdfs:subClassOf rdf:resource="https://example.org/mk/Entity"/>
+    <rdfs:label xml:lang="en">Story Timeline</rdfs:label>
+    <rdfs:comment xml:lang="en">The chronologically ordered sequence of Story Events that belong to exactly one Timeline</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/lastEvent">
+    <rdfs:subPropertyOf rdf:resource="https://example.org/mk/hasStoryEvent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://example.org/mk/StoryTimeline"/>
+    <rdfs:range rdf:resource="https://example.org/mk/Event"/>
+    <rdfs:label xml:lang="en">last event</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/locatedIn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdfs:label xml:lang="en">located in</rdfs:label>
+    <rdfs:domain rdf:resource="https://example.org/mk/Location"/>
+    <rdfs:range rdf:resource="https://example.org/mk/Location"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/versionYear">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#gYear"/>
+    <rdfs:label xml:lang="en">version year</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb17">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb18"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/CharacterVersion">
+    <rdfs:label xml:lang="en">Character Version</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://example.org/mk/Entity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">A specific incarnation of a Character in exactly one Game and one Timeline. Carries clan, abilities and weapons of that context</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb7">
+    <rdf:rest rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb8"/>
+    <rdf:first rdf:resource="https://example.org/mk/Ability"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/name">
+    <rdfs:domain rdf:resource="https://example.org/mk/Entity"/>
+    <rdfs:label xml:lang="en">name</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/existsInTimeline">
+    <rdfs:domain rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <rdfs:label xml:lang="en">exists in timeline</rdfs:label>
+    <owl:inverseOf rdf:resource="https://example.org/mk/hasTimelineVersion"/>
+    <rdfs:comment xml:lang="en">A CharacterVersion belongs to exactly one Timeline; this is what separates one incarnation from another across continuities</rdfs:comment>
+    <rdfs:range rdf:resource="https://example.org/mk/Timeline"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/sourceURL">
+    <rdfs:domain rdf:resource="https://example.org/mk/Entity"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">source URL</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb47">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb48"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/Organization">
+    <rdfs:subClassOf rdf:resource="https://example.org/mk/Entity"/>
+    <rdfs:comment xml:lang="en">A clan, syndicate, or military organization</rdfs:comment>
+    <rdfs:label xml:lang="en">Organization</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb8">
+    <rdf:rest rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb9"/>
+    <rdf:first rdf:resource="https://example.org/mk/Element"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/firstAppearanceYear">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#gYear"/>
+    <rdfs:label xml:lang="en">first appearance year</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="https://example.org/mk/Character"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/Realm">
+    <rdfs:label xml:lang="en">Realm</rdfs:label>
+    <rdfs:comment xml:lang="en">Dimensional plane (Earthrealm, Outworld, Netherrealm, Edenia, etc.)</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://example.org/mk/Location"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/usesWeapon">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <rdfs:label xml:lang="en">uses weapon</rdfs:label>
+    <rdfs:range rdf:resource="https://example.org/mk/Weapon"/>
+    <owl:inverseOf rdf:resource="https://example.org/mk/usedBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/releaseDate">
+    <rdfs:label xml:lang="en">release date</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:domain rdf:resource="https://example.org/mk/Game"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/involvesVersion">
+    <rdfs:comment xml:lang="en">The CharacterVersion (of the event's timeline) that took part in the event</rdfs:comment>
+    <rdfs:range rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">involves version</rdfs:label>
+    <rdfs:domain rdf:resource="https://example.org/mk/Event"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb25">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="https://example.org/mk/CharacterVersion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/chronologicalPeriod">
+    <rdfs:label xml:lang="en">chronological period</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="https://example.org/mk/Timeline"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/partOfArc">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://example.org/mk/Event"/>
+    <rdfs:label xml:lang="en">part of arc</rdfs:label>
+    <rdfs:range rdf:resource="https://example.org/mk/StoryArc"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/precedes">
+    <owl:inverseOf rdf:resource="https://example.org/mk/follows"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdfs:domain rdf:resource="https://example.org/mk/Event"/>
+    <rdfs:range rdf:resource="https://example.org/mk/Event"/>
+    <rdfs:label xml:lang="en">precedes</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/alliedWith">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb26"/>
+    <rdfs:label xml:lang="en">allied with</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="https://example.org/mk/relatedTo"/>
+    <rdfs:range rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb29"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb10">
+    <rdf:first rdf:resource="https://example.org/mk/Organization"/>
+    <rdf:rest rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb11"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/hasAbility">
+    <rdfs:range rdf:resource="https://example.org/mk/Ability"/>
+    <rdfs:domain rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <rdfs:label xml:lang="en">has ability</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/Weapon">
+    <rdfs:subClassOf rdf:resource="https://example.org/mk/Entity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Weapon or combat gear used by fighters</rdfs:comment>
+    <rdfs:label xml:lang="en">Weapon</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/Species">
+    <rdfs:label xml:lang="en">Species</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://example.org/mk/Entity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Biological or mythical species (Human, Cryomancer, Edenian, God, etc.)</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/gameEra">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="https://example.org/mk/Game"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">game era</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb15">
+    <rdf:rest rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb16"/>
+    <rdf:first rdf:resource="https://example.org/mk/StoryClaim"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/hasElement">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://example.org/mk/Ability"/>
+    <rdfs:label xml:lang="en">has element</rdfs:label>
+    <rdfs:range rdf:resource="https://example.org/mk/Element"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/featuresInGame">
+    <rdfs:range rdf:resource="https://example.org/mk/Game"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://example.org/mk/Event"/>
+    <rdfs:label xml:lang="en">features in game</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/nextVersion">
+    <rdfs:label xml:lang="en">next version</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <owl:inverseOf rdf:resource="https://example.org/mk/previousVersion"/>
+    <rdfs:range rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <rdfs:domain rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <rdfs:comment xml:lang="en">Next incarnation of the same character ordered by game release date</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/originatesFrom">
+    <rdfs:label xml:lang="en">originates from</rdfs:label>
+    <rdfs:domain rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb17"/>
+    <rdfs:range rdf:resource="https://example.org/mk/Location"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/alternateName">
+    <rdfs:domain rdf:resource="https://example.org/mk/Entity"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">alternate name</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/Location">
+    <rdfs:label xml:lang="en">Location</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Arena, region, or landmark</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://example.org/mk/Entity"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb39">
+    <rdf:rest rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb40"/>
+    <rdf:first rdf:resource="https://example.org/mk/Character"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/versionLabel">
+    <rdfs:comment xml:lang="en">Human readable label combining character, game and timeline</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <rdfs:label xml:lang="en">version label</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb34">
+    <rdf:first rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/Entity">
+    <rdfs:label xml:lang="en">Entity</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Root entity of the Mortal Kombat universe</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/eventSummary">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">event summary</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="https://example.org/mk/Event"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/Ability">
+    <rdfs:label xml:lang="en">Ability</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://example.org/mk/Entity"/>
+    <rdfs:comment xml:lang="en">Supernatural or martial capability</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb38">
+    <owl:unionOf rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb39"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/sourceType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">One of: official-site, fandom-wiki, other</rdfs:comment>
+    <rdfs:domain rdf:resource="https://example.org/mk/Source"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">source type</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/causedBy">
+    <rdfs:domain rdf:resource="https://example.org/mk/Event"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">caused by</rdfs:label>
+    <rdfs:range rdf:resource="https://example.org/mk/Entity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/description">
+    <rdfs:domain rdf:resource="https://example.org/mk/Entity"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">description</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/Timeline">
+    <rdfs:label xml:lang="en">Timeline</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">A narrative continuity (e.g., Original, Reboot, New Era)</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://example.org/mk/Entity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/claimInTimeline">
+    <rdfs:domain rdf:resource="https://example.org/mk/StoryClaim"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">claim in timeline</rdfs:label>
+    <rdfs:comment xml:lang="en">Timeline(s) in which the claim is valid</rdfs:comment>
+    <rdfs:range rdf:resource="https://example.org/mk/Timeline"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/ofSpecies">
+    <rdfs:domain rdf:resource="https://example.org/mk/Character"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="https://example.org/mk/Species"/>
+    <rdfs:label xml:lang="en">of species</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/describesTimeline">
+    <rdfs:domain rdf:resource="https://example.org/mk/StoryTimeline"/>
+    <rdfs:range rdf:resource="https://example.org/mk/Timeline"/>
+    <rdfs:label xml:lang="en">describes timeline</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="https://example.org/mk/hasStoryTimeline"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb12">
+    <rdf:rest rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb13"/>
+    <rdf:first rdf:resource="https://example.org/mk/Species"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/inStoryTimeline">
+    <rdfs:domain rdf:resource="https://example.org/mk/Event"/>
+    <rdfs:label xml:lang="en">in story timeline</rdfs:label>
+    <rdfs:range rdf:resource="https://example.org/mk/StoryTimeline"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/moveCategory">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="https://example.org/mk/Ability"/>
+    <rdfs:label xml:lang="en">move category</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/involvesCharacter">
+    <rdfs:range rdf:resource="https://example.org/mk/Character"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://example.org/mk/Event"/>
+    <rdfs:label xml:lang="en">involves character</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/occursInTimeline">
+    <rdfs:range rdf:resource="https://example.org/mk/Timeline"/>
+    <rdfs:label xml:lang="en">occurs in timeline</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://example.org/mk/Event"/>
+    <rdfs:subPropertyOf rdf:resource="https://example.org/mk/occursIn"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/Faction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Faction</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://example.org/mk/Organization"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/claimText">
+    <rdfs:domain rdf:resource="https://example.org/mk/StoryClaim"/>
+    <rdfs:label xml:lang="en">claim text</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb42">
+    <rdf:first rdf:resource="https://example.org/mk/Character"/>
+    <rdf:rest rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb43"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/firstEvent">
+    <rdfs:label xml:lang="en">first event</rdfs:label>
+    <rdfs:range rdf:resource="https://example.org/mk/Event"/>
+    <rdfs:subPropertyOf rdf:resource="https://example.org/mk/hasStoryEvent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://example.org/mk/StoryTimeline"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb40">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="https://example.org/mk/CharacterVersion"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb9">
+    <rdf:rest rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb10"/>
+    <rdf:first rdf:resource="https://example.org/mk/Weapon"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/previousVersion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">previous version</rdfs:label>
+    <rdfs:range rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <rdfs:domain rdf:resource="https://example.org/mk/CharacterVersion"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb2">
+    <rdf:first rdf:resource="https://example.org/mk/Character"/>
+    <rdf:rest rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb3"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb41">
+    <owl:unionOf rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb42"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/Fatality">
+    <rdfs:subClassOf rdf:resource="https://example.org/mk/Move"/>
+    <rdfs:comment xml:lang="en">Finishing move performed at the end of a match</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Fatality</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb29">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb30"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb19">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="https://example.org/mk/CharacterVersion"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb46">
+    <rdf:first rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb44">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb45"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/claimContext">
+    <rdfs:domain rdf:resource="https://example.org/mk/StoryClaim"/>
+    <rdfs:comment xml:lang="en">Original textual context label from the source (e.g. 'Reboot Timeline (MK11)')</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">claim context</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/nextTimeline">
+    <rdfs:domain rdf:resource="https://example.org/mk/Timeline"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:comment xml:lang="en">The continuity that chronologically follows this one</rdfs:comment>
+    <rdfs:label xml:lang="en">next timeline</rdfs:label>
+    <rdfs:range rdf:resource="https://example.org/mk/Timeline"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/enemyOf">
+    <rdfs:domain rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb38"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    <rdfs:subPropertyOf rdf:resource="https://example.org/mk/relatedTo"/>
+    <rdfs:label xml:lang="en">enemy of</rdfs:label>
+    <rdfs:range rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb41"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/supportedPlatform">
+    <rdfs:domain rdf:resource="https://example.org/mk/Game"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">supported platform</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+    <owl:members rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb2"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb26">
+    <owl:unionOf rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb27"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/chronologicalOrder">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:comment xml:lang="en">Position of the event in the in-universe chronology</rdfs:comment>
+    <rdfs:label xml:lang="en">chronological order</rdfs:label>
+    <rdfs:domain rdf:resource="https://example.org/mk/Event"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/Clan">
+    <rdfs:subClassOf rdf:resource="https://example.org/mk/Organization"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Clan</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/claimSubject">
+    <rdfs:domain rdf:resource="https://example.org/mk/StoryClaim"/>
+    <rdfs:range rdf:resource="https://example.org/mk/Character"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">claim subject</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/hasVersion">
+    <rdfs:label xml:lang="en">has version</rdfs:label>
+    <rdfs:domain rdf:resource="https://example.org/mk/Character"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <owl:inverseOf rdf:resource="https://example.org/mk/versionOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/eventTitle">
+    <rdfs:label xml:lang="en">event title</rdfs:label>
+    <rdfs:domain rdf:resource="https://example.org/mk/Event"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/claimPredicate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="https://example.org/mk/StoryClaim"/>
+    <rdfs:label xml:lang="en">claim predicate</rdfs:label>
+    <rdfs:comment xml:lang="en">Local name of the relation asserted by the claim (enemyOf, alliedWith, occursIn)</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/hasStoryTimeline">
+    <rdfs:range rdf:resource="https://example.org/mk/StoryTimeline"/>
+    <rdfs:label xml:lang="en">has story timeline</rdfs:label>
+    <rdfs:domain rdf:resource="https://example.org/mk/Timeline"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/Brutality">
+    <rdfs:label xml:lang="en">Brutality</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://example.org/mk/Move"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb14">
+    <rdf:first rdf:resource="https://example.org/mk/StoryArc"/>
+    <rdf:rest rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb15"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/Character">
+    <rdfs:label xml:lang="en">Character</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://example.org/mk/Entity"/>
+    <rdfs:comment xml:lang="en">Franchise-level canonical character (identity independent of any single game or timeline)</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/aboutEvent">
+    <rdfs:range rdf:resource="https://example.org/mk/Event"/>
+    <rdfs:label xml:lang="en">about event</rdfs:label>
+    <rdfs:domain rdf:resource="https://example.org/mk/StoryClaim"/>
+    <owl:inverseOf rdf:resource="https://example.org/mk/hasClaim"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb4">
+    <rdf:rest rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb5"/>
+    <rdf:first rdf:resource="https://example.org/mk/Game"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb36">
+    <rdf:first rdf:resource="https://example.org/mk/Character"/>
+    <rdf:rest rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb37"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb24">
+    <rdf:first rdf:resource="https://example.org/mk/Character"/>
+    <rdf:rest rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb25"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/memberOf">
+    <rdfs:range rdf:resource="https://example.org/mk/Organization"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="https://example.org/mk/hasMember"/>
+    <rdfs:domain rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <rdfs:label xml:lang="en">member of</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/appearsIn">
+    <rdfs:label xml:lang="en">appears in</rdfs:label>
+    <rdfs:domain rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <rdfs:range rdf:resource="https://example.org/mk/Game"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="https://example.org/mk/featuresVersion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/hasMember">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://example.org/mk/Organization"/>
+    <rdfs:range rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <rdfs:label xml:lang="en">has member</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb27">
+    <rdf:first rdf:resource="https://example.org/mk/Character"/>
+    <rdf:rest rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb28"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb31">
+    <rdf:first rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/featuresVersion">
+    <rdfs:label xml:lang="en">features version</rdfs:label>
+    <rdfs:domain rdf:resource="https://example.org/mk/Game"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="https://example.org/mk/CharacterVersion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/hasStoryEvent">
+    <rdfs:label xml:lang="en">has story event</rdfs:label>
+    <rdfs:domain rdf:resource="https://example.org/mk/StoryTimeline"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="https://example.org/mk/Event"/>
+    <owl:inverseOf rdf:resource="https://example.org/mk/inStoryTimeline"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/takesPlaceAt">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://example.org/mk/Event"/>
+    <rdfs:range rdf:resource="https://example.org/mk/Location"/>
+    <rdfs:label xml:lang="en">takes place at</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/usedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <rdfs:label xml:lang="en">used by</rdfs:label>
+    <rdfs:domain rdf:resource="https://example.org/mk/Weapon"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/hasSpecies">
+    <rdfs:label xml:lang="en">species label</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment xml:lang="en">Free-text species label as extracted from the source; resolved to mk:Species individuals through mk:ofSpecies</rdfs:comment>
+    <rdfs:domain rdf:resource="https://example.org/mk/Character"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/timelineOrder">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="https://example.org/mk/Timeline"/>
+    <rdfs:label xml:lang="en">timeline order</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/canonStatus">
+    <rdfs:label xml:lang="en">canon status</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="https://example.org/mk/Entity"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb20">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb21"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/supportedBy">
+    <rdfs:range rdf:resource="https://example.org/mk/Source"/>
+    <rdfs:label xml:lang="en">supported by</rdfs:label>
+    <rdfs:domain rdf:resource="https://example.org/mk/StoryClaim"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="https://example.org/mk/hasSource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/Source">
+    <rdfs:label xml:lang="en">Source</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://example.org/mk/Entity"/>
+    <rdfs:comment xml:lang="en">Documented source reference or page provenance</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/performsMove">
+    <rdfs:subPropertyOf rdf:resource="https://example.org/mk/hasAbility"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="https://example.org/mk/Move"/>
+    <rdfs:domain rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <rdfs:label xml:lang="en">performs move</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb32">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb33"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/verificationStatus">
+    <rdfs:domain rdf:resource="https://example.org/mk/Entity"/>
+    <rdfs:comment xml:lang="en">One of: verified, partially_verified, unverified</rdfs:comment>
+    <rdfs:label xml:lang="en">verification status</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/narrativeText">
+    <rdfs:domain rdf:resource="https://example.org/mk/Event"/>
+    <rdfs:label xml:lang="en">narrative text</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb30">
+    <rdf:first rdf:resource="https://example.org/mk/Character"/>
+    <rdf:rest rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb31"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/hasClaim">
+    <rdfs:range rdf:resource="https://example.org/mk/StoryClaim"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">has claim</rdfs:label>
+    <rdfs:domain rdf:resource="https://example.org/mk/Event"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/Element">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://example.org/mk/Entity"/>
+    <rdfs:comment xml:lang="en">Elemental attribute (Fire, Ice, Lightning, Shadow, etc.)</rdfs:comment>
+    <rdfs:label xml:lang="en">Element</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb37">
+    <rdf:first rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/ontology">
+    <rdfs:comment xml:lang="en">Ontology for the Mortal Kombat semantic knowledge graph and search engine</rdfs:comment>
+    <rdfs:label xml:lang="en">Mortal Kombat Knowledge Nexus Ontology</rdfs:label>
+    <owl:versionInfo>2.0</owl:versionInfo>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb16">
+    <rdf:first rdf:resource="https://example.org/mk/Source"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/hasSource">
+    <rdfs:label xml:lang="en">has source</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://example.org/mk/Entity"/>
+    <rdfs:range rdf:resource="https://example.org/mk/Source"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/Game">
+    <rdfs:comment xml:lang="en">A standalone Mortal Kombat game title</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://example.org/mk/Entity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Game</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb13">
+    <rdf:first rdf:resource="https://example.org/mk/Event"/>
+    <rdf:rest rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb14"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/hasTimelineVersion">
+    <rdfs:domain rdf:resource="https://example.org/mk/Timeline"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <rdfs:label xml:lang="en">has timeline version</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb23">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb24"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb49">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="https://example.org/mk/CharacterVersion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/locatedInRealm">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">located in realm</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="https://example.org/mk/locatedIn"/>
+    <rdfs:range rdf:resource="https://example.org/mk/Realm"/>
+    <rdfs:domain rdf:resource="https://example.org/mk/Location"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/imageURL">
+    <rdfs:label xml:lang="en">image URL</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="https://example.org/mk/Entity"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/StoryClaim">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Story Claim</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://example.org/mk/Entity"/>
+    <rdfs:comment xml:lang="en">A narrative statement (about an event or a relationship between characters) bound to one or more timelines and backed by a Source. Keeps contradicting lore from different timelines apart</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb6">
+    <rdf:first rdf:resource="https://example.org/mk/StoryTimeline"/>
+    <rdf:rest rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb7"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/Move">
+    <rdfs:subClassOf rdf:resource="https://example.org/mk/Ability"/>
+    <rdfs:comment xml:lang="en">A concrete executable move. Moves are a kind of Ability so they can be attached to a CharacterVersion with mk:hasAbility</rdfs:comment>
+    <rdfs:label xml:lang="en">Move</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/Arena">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://example.org/mk/Location"/>
+    <rdfs:comment xml:lang="en">Fighting stage or battle venue</rdfs:comment>
+    <rdfs:label xml:lang="en">Arena</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/claimObject">
+    <rdfs:domain rdf:resource="https://example.org/mk/StoryClaim"/>
+    <rdfs:range rdf:resource="https://example.org/mk/Character"/>
+    <rdfs:label xml:lang="en">claim object</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/SpecialMove">
+    <rdfs:label xml:lang="en">Special Move</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://example.org/mk/Move"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb21">
+    <rdf:first rdf:resource="https://example.org/mk/Character"/>
+    <rdf:rest rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb22"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb28">
+    <rdf:first rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb22">
+    <rdf:first rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb5">
+    <rdf:rest rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb6"/>
+    <rdf:first rdf:resource="https://example.org/mk/Timeline"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb35">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb36"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb43">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="https://example.org/mk/CharacterVersion"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb3">
+    <rdf:rest rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb4"/>
+    <rdf:first rdf:resource="https://example.org/mk/CharacterVersion"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb18">
+    <rdf:first rdf:resource="https://example.org/mk/Character"/>
+    <rdf:rest rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb19"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb33">
+    <rdf:rest rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb34"/>
+    <rdf:first rdf:resource="https://example.org/mk/Character"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb45">
+    <rdf:rest rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb46"/>
+    <rdf:first rdf:resource="https://example.org/mk/Character"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb48">
+    <rdf:first rdf:resource="https://example.org/mk/Character"/>
+    <rdf:rest rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb49"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb11">
+    <rdf:first rdf:resource="https://example.org/mk/Location"/>
+    <rdf:rest rdf:nodeID="n3abda64add404e7c9e2ebaeec1659e1bb12"/>
+  </rdf:Description>
+</rdf:RDF>

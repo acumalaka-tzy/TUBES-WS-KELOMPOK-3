@@ -1,0 +1,26 @@
+[
+  {
+    "id": "timeline-original",
+    "name": "Original Timeline",
+    "order": 1,
+    "period": "1992\u20132006",
+    "description": "The initial continuity spanning Mortal Kombat 1 through Mortal Kombat: Armageddon, culminating in the battle at the Pyramid of Argus.",
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Original_Timeline"
+  },
+  {
+    "id": "timeline-reboot",
+    "name": "Reboot Timeline",
+    "order": 2,
+    "period": "2011\u20132019",
+    "description": "Created when Raiden sent a psychic message to his past self during Armageddon ('He must win'), altering events from MK9 through MK11.",
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Current_Timeline"
+  },
+  {
+    "id": "timeline-new-era",
+    "name": "New Era",
+    "order": 3,
+    "period": "2023\u2013present",
+    "description": "The peace-focused universe engineered by Fire God Liu Kang using the Hourglass, where origins and rivalries were fundamentally rewritten.",
+    "sourceURL": "https://www.mortalkombat.com/en-us"
+  }
+]

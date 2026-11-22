@@ -1,0 +1,59 @@
+{
+  "generatedAt": "2026-11-22T12:26:09.344019+00:00",
+  "conformsStrict": false,
+  "conformsWithoutViolations": true,
+  "dataTriples": 6789,
+  "resultsBySeverity": {
+    "Warning": 6
+  },
+  "results": [
+    {
+      "severity": "Warning",
+      "focusNode": "character-scorpion",
+      "value": "character-subzero",
+      "path": null,
+      "message": "Pair is both enemyOf and alliedWith; this is only valid when the StoryClaims sit in different timelines.",
+      "sourceShape": "RelationConflictShape"
+    },
+    {
+      "severity": "Warning",
+      "focusNode": "character-subzero",
+      "value": "character-scorpion",
+      "path": null,
+      "message": "Pair is both enemyOf and alliedWith; this is only valid when the StoryClaims sit in different timelines.",
+      "sourceShape": "RelationConflictShape"
+    },
+    {
+      "severity": "Warning",
+      "focusNode": "claim-rel-jade-alliedwith-kitana",
+      "value": "timeline-new-era",
+      "path": null,
+      "message": "Claim subject has no CharacterVersion in one of the claim's timelines.",
+      "sourceShape": "StoryClaimCoverageShape"
+    },
+    {
+      "severity": "Warning",
+      "focusNode": "claim-rel-nightwolf-alliedwith-raiden",
+      "value": "timeline-new-era",
+      "path": null,
+      "message": "Claim subject has no CharacterVersion in one of the claim's timelines.",
+      "sourceShape": "StoryClaimCoverageShape"
+    },
+    {
+      "severity": "Warning",
+      "focusNode": "claim-rel-sonyablade-enemyof-kano",
+      "value": "timeline-new-era",
+      "path": null,
+      "message": "Claim subject has no CharacterVersion in one of the claim's timelines.",
+      "sourceShape": "StoryClaimCoverageShape"
+    },
+    {
+      "severity": "Warning",
+      "focusNode": "claim-rel-tanya-alliedwith-mileena",
+      "value": "timeline-reboot",
+      "path": null,
+      "message": "Claim subject has no CharacterVersion in one of the claim's timelines.",
+      "sourceShape": "StoryClaimCoverageShape"
+    }
+  ]
+}

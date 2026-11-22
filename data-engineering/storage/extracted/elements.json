@@ -1,0 +1,42 @@
+[
+  {
+    "id": "element-fire",
+    "name": "Fire",
+    "description": "Netherrealm hellfire, spiritual chi flame, and supernatural combustion."
+  },
+  {
+    "id": "element-ice",
+    "name": "Ice",
+    "description": "Sub-zero freezing, moisture condensation, and cryogenic weapon forging."
+  },
+  {
+    "id": "element-lightning",
+    "name": "Lightning",
+    "description": "Divine thunder, plasma arcs, and atmospheric electrical manipulation."
+  },
+  {
+    "id": "element-shadow",
+    "name": "Shadow",
+    "description": "Dark dimensional shadows, portals, and shadowy clone constructs."
+  },
+  {
+    "id": "element-blood",
+    "name": "Blood",
+    "description": "Hekatean blood magic, hemomantic spikes, and lifeforce draining."
+  },
+  {
+    "id": "element-wind",
+    "name": "Wind",
+    "description": "Tornadoes, gale force blasts, atmospheric pressure, and levitation."
+  },
+  {
+    "id": "element-soul",
+    "name": "Soul / Spirit",
+    "description": "Necromancy, soul absorption, and ancestral spiritual manifestation."
+  },
+  {
+    "id": "element-energy",
+    "name": "Kinetic Energy",
+    "description": "Ancient Mediterranean green glow energy, bionics, and sheer physical power."
+  }
+]

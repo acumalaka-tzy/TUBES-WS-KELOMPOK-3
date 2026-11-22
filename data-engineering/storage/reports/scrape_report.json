@@ -1,0 +1,27 @@
+{
+  "scrapeRunId": "run-20261122080419",
+  "timestamp": "2026-11-22T08:07:25.334486+00:00",
+  "totalRawRecordsCollected": 42,
+  "sources": {
+    "fandom-wiki": {
+      "collected": 18
+    },
+    "mk-official": {
+      "collected": 8
+    },
+    "wb-games": {
+      "collected": 4
+    },
+    "wikidata-sparql": {
+      "collected": 6
+    },
+    "mobygames-catalog": {
+      "collected": 6
+    }
+  },
+  "archiveLocations": {
+    "latest": "data-engineering\\storage\\raw\\raw_pages.json",
+    "historical": "data-engineering\\storage\\raw\\history\\raw_pages_run-20261122080419.json"
+  },
+  "status": "SUCCESS"
+}

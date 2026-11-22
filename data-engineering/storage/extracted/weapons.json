@@ -1,0 +1,102 @@
+[
+  {
+    "id": "weapon-kunai-spear",
+    "name": "Kunai Spear",
+    "description": "Scorpion's signature rope dart / chained kunai hurled into opponents."
+  },
+  {
+    "id": "weapon-kori-blade",
+    "name": "K\u014dri Blade",
+    "description": "Sub-Zero's flash-frozen cryogenic sword forged from thin air."
+  },
+  {
+    "id": "weapon-war-hammer",
+    "name": "Wrath Hammer",
+    "description": "Shao Kahn's devastating monolithic maul that crushes armor and bone."
+  },
+  {
+    "id": "weapon-sento",
+    "name": "Sento",
+    "description": "Ancestral katana housing the souls of the Takahashi clan's warrior ancestors."
+  },
+  {
+    "id": "weapon-hookswords",
+    "name": "Dual Hookswords",
+    "description": "Twin curved Chinese hook swords wielded with lethal acrobatics by Kabal and Mavado."
+  },
+  {
+    "id": "weapon-steel-fans",
+    "name": "Steel War Fans",
+    "description": "Princess Kitana's razor-edged folding steel fans used for slicing and air control."
+  },
+  {
+    "id": "weapon-cybernetic-arms",
+    "name": "Bionic Cyber Arms",
+    "description": "Jax Briggs' titanium cybernetic prosthetics delivering earthquake punches."
+  },
+  {
+    "id": "weapon-dual-revolvers",
+    "name": "Dual Revolvers",
+    "description": "Erron Black's custom Outworld six-shooter revolvers loaded with hollow-point lead."
+  },
+  {
+    "id": "weapon-bo-staff",
+    "name": "Imperial Bo Staff",
+    "description": "Jade's glowing triboluminescent steel bo staff delivering long-reach pole vault strikes."
+  },
+  {
+    "id": "weapon-sai-daggers",
+    "name": "Twin Sai Daggers",
+    "description": "Mileena's pair of three-pronged sai daggers used for rapid stabbing and teleport throws."
+  },
+  {
+    "id": "weapon-nightsticks",
+    "name": "Police Nightsticks",
+    "description": "Kurtis Stryker's reinforced side-handle PR-24 police batons for crowd control takedowns."
+  },
+  {
+    "id": "weapon-spirit-tomahawks",
+    "name": "Ethereal Tomahawks",
+    "description": "Nightwolf's twin glowing spirit axes manifested through Matoka shamanic communion."
+  },
+  {
+    "id": "weapon-ovipositors",
+    "name": "Kytinn Ovipositors",
+    "description": "D'Vorah's four serrated insectoid appendages emerging from her back to impale prey."
+  },
+  {
+    "id": "weapon-bladed-whips",
+    "name": "Plasma Bladed Whips",
+    "description": "Takeda Takahashi's retractable dual cyber-whips laced with high-frequency heated blades."
+  },
+  {
+    "id": "weapon-combat-bow",
+    "name": "Shaolin Combat Bow",
+    "description": "Kung Jin's collapsible recurve bow functioning as a bludgeon, bo staff, and trick arrow launcher."
+  },
+  {
+    "id": "weapon-kriss-dagger",
+    "name": "Kriss Purification Dagger",
+    "description": "Ashrah's holy sword 'Datusha' that cleanses the demonic soul of its wielder with each demon slain."
+  },
+  {
+    "id": "weapon-spiked-club",
+    "name": "Spiked War Mace",
+    "description": "General Reiko's heavy spiked Outworld bludgeon designed to crush skull helmets."
+  },
+  {
+    "id": "weapon-shokan-cleavers",
+    "name": "Dual Shokan Cleavers",
+    "description": "Sheeva's twin broad cleaver blades forged from Outworld furnace steel."
+  },
+  {
+    "id": "weapon-daggers-of-denial",
+    "name": "Kobu Jutsu Tonfa Daggers",
+    "description": "Tanya's agile Kobu Jutsu batons and dual stiletto daggers."
+  },
+  {
+    "id": "weapon-dragon-blade",
+    "name": "Kamidogu Dragon Blade",
+    "description": "Ancient ceremonial blade housing the cosmic essence of the realms."
+  }
+]

@@ -75,12 +75,12 @@ function StoryTimelineContent() {
           <p className="text-center text-sm text-mk-muted">Belum ada peristiwa pada timeline ini.</p>
         ) : (
           /* Chronological Vertical Timeline (PRD 25.5 Story Timeline) */
-          <div className="relative border-l-2 border-mk-border pl-6 ml-3 sm:ml-6 space-y-8">
+          <div className="relative border-l-2 border-mk-border pl-6 sm:pl-8 ml-4 sm:ml-8 space-y-8">
             {events.map((ev, idx) => (
               <div key={ev.id} className="relative group">
                 {/* Node dot on the timeline track */}
                 <span
-                  className="absolute -left-[31px] top-1.5 h-4 w-4 rounded-full border-2 border-mk-red bg-mk-bg group-hover:bg-mk-gold transition"
+                  className="absolute -left-[33px] sm:-left-[41px] top-1.5 h-4 w-4 rounded-full border-2 border-mk-red bg-mk-bg group-hover:bg-mk-gold transition"
                   aria-hidden="true"
                 />
 

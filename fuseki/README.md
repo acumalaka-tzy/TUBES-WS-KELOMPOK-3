@@ -12,8 +12,9 @@ fuseki/
 ├── configuration/
 │   └── mk_nexus.ttl       # Fuseki TDB2 Dataset Assembler (:mk_nexus)
 ├── databases/             # Local TDB2 persistent storage (di-ignore git)
-├── shiro.ini              # Konfigurasi keamanan / user shiro
+├── shiro.ini              # Konfigurasi keamanan / user shiro & localhostFilter
 ├── setup-fuseki.ps1       # Script PowerShell untuk download & ekstrak Fuseki otomatis
+├── import-data.ps1        # Script PowerShell untuk impor knowledge_graph.ttl & uji 22 SPARQL query
 ├── run-fuseki.bat         # Script runner untuk Windows
 ├── run-fuseki.sh          # Script runner untuk Linux / macOS
 └── README.md
@@ -30,12 +31,10 @@ fuseki/
    ```cmd
    .\run-fuseki.bat
    ```
-
-### Cara Manual:
-1. Unduh **Apache Jena Fuseki** (format `.zip` atau `.tar.gz`) dari situs resmi:
-   [https://jena.apache.org/download/](https://jena.apache.org/download/)
-2. Ekstrak isi arsip ke dalam folder `fuseki/` sehingga terdapat folder `apache-jena-fuseki-x.x.x`.
-3. Jalankan `run-fuseki.bat` (Windows) atau `run-fuseki.sh` (Linux/macOS).
+3. Impor Knowledge Graph lengkap (`knowledge-base/data/knowledge_graph.ttl` — 6.789 triples: ontologi OWL + data + story layer + provenance) dan jalankan 22 pengujian SPARQL:
+   ```powershell
+   .\import-data.ps1
+   ```
 
 ## 4. Endpoint Fuseki Standalone
 Setelah Fuseki berjalan, layanan dapat diakses di:
@@ -44,10 +43,14 @@ Setelah Fuseki berjalan, layanan dapat diakses di:
 - **SPARQL Update Endpoint:** `http://localhost:3030/mk_nexus/update`
 - **Graph Store Data Endpoint:** `http://localhost:3030/mk_nexus/data`
 
-## 5. Mengimpor Data Awal
-Dataset awal yang berada di `knowledge-base/data/seed_data.ttl` dapat diimpor langsung melalui:
-1. Web UI Fuseki (`http://localhost:3030` -> Dataset `mk_nexus` -> *upload data*), ATAU
-2. Menggunakan curl / HTTP POST ke Graph Store endpoint:
+## 5. Mengimpor Data RDF/OWL ke Fuseki
+Gunakan salah satu cara berikut:
+1. **Otomatis + Verifikasi SPARQL (Direkomendasikan):**
+   ```powershell
+   python knowledge-base/scripts/kb_tools.py fuseki-load
+   python knowledge-base/scripts/kb_tools.py fuseki-test
+   ```
+2. **Melalui HTTP PUT/POST ke Graph Store Endpoint:**
    ```bash
-   curl -X POST --data-binary @../knowledge-base/data/seed_data.ttl -H "Content-Type: text/turtle" http://localhost:3030/mk_nexus/data?default
+   curl -X PUT --data-binary @knowledge-base/data/knowledge_graph.ttl -H "Content-Type: text/turtle; charset=UTF-8" http://localhost:3030/mk_nexus/data?default
    ```

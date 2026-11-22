@@ -1,0 +1,62 @@
+[
+  {
+    "id": "org-shirai-ryu",
+    "name": "Shirai Ryu",
+    "type": "clan",
+    "description": "Renegade ninja clan of Japan founded by Takeda, historically led by Grandmaster Hanzo Hasashi."
+  },
+  {
+    "id": "org-lin-kuei",
+    "name": "Lin Kuei",
+    "type": "clan",
+    "description": "Ancient Chinese stealth clan of assassins and cryomancers, historically pledged to protect Earthrealm."
+  },
+  {
+    "id": "org-special-forces",
+    "name": "Special Forces",
+    "type": "military",
+    "description": "Earthrealm military division led by Sonya Blade and Jax Briggs tasked with countering otherworldly threats."
+  },
+  {
+    "id": "org-black-dragon",
+    "name": "Black Dragon",
+    "type": "syndicate",
+    "description": "Ruthless international mercenary syndicate led by the criminal Kano dealing in illicit weapons and extortion."
+  },
+  {
+    "id": "org-white-lotus",
+    "name": "White Lotus Society",
+    "type": "order",
+    "description": "Secret society of martial artists founded by Raiden to defend Earthrealm in Mortal Kombat tournaments."
+  },
+  {
+    "id": "org-brotherhood-of-shadow",
+    "name": "Brotherhood of Shadow",
+    "type": "cult",
+    "description": "Fanatical Netherrealm religious cult serving the fallen Elder God Shinnok and sorcerer Quan Chi."
+  },
+  {
+    "id": "org-red-dragon",
+    "name": "Red Dragon",
+    "type": "syndicate",
+    "description": "Ancient secret criminal syndicate founded by the Edenian demigod Daegon, sworn mortal enemies of the Black Dragon."
+  },
+  {
+    "id": "org-umgadi",
+    "name": "The Umgadi",
+    "type": "order",
+    "description": "Elite warrior priestesses selected from Outworld first-born daughters sworn to protect the royal family and emperor."
+  },
+  {
+    "id": "org-osh-tekk",
+    "name": "Osh-Tekk Tribe",
+    "type": "order",
+    "description": "Sun-worshipping warrior civilization of Outworld historically ruled by Kotal K'atz and Emperor Kotal Kahn."
+  },
+  {
+    "id": "org-seidan-guard",
+    "name": "Seidan Guard",
+    "type": "military",
+    "description": "The disciplined, authoritarian military defense force of Orderrealm commanded by Hotaru."
+  }
+]

@@ -5,6 +5,7 @@
 import { abilities, characters, games, organizations, storyEvents, timelines, weapons } from "./mock-data";
 import { entityHref } from "./routes";
 import type { EntityType, SearchMode, SearchResponse, SearchResult, Suggestion } from "./types";
+import { processNaturalLanguageQuery } from "./search/nlp/entity-recognizer";
 
 interface Doc {
   id: string;
@@ -200,14 +201,25 @@ export function mockSearch(query: string, mode: SearchMode, type?: EntityType | 
 
   // Contoh deteksi ambiguitas: "sub-zero" merujuk ke dua orang (Bi-Han & Kuai Liang)
   const ambiguous = q === "sub zero" || q === "sub-zero";
+  const intent = processNaturalLanguageQuery(query);
+
   return {
     query,
     mode,
     total: results.length,
     results,
     status: ambiguous ? "ambiguous" : "ok",
-    message: ambiguous ? "\"Sub-Zero\" dapat merujuk ke Bi-Han atau Kuai Liang. Pilih versi karakter di halaman detail untuk konteks yang tepat." : undefined,
+    message: ambiguous
+      ? "\"Sub-Zero\" dapat merujuk ke Bi-Han atau Kuai Liang. Pilih versi karakter di halaman detail untuk konteks yang tepat."
+      : undefined,
     suggestions: results.length ? undefined : ["Scorpion", "Lin Kuei", "Karakter yang menggunakan api", "Mortal Kombat 11"],
+    generatedSparql: intent.generatedSparql,
+    parsedIntent: {
+      intentType: intent.intentType,
+      targetType: intent.targetType,
+      extractedAttributes: intent.extractedAttributes,
+      confidence: intent.confidence,
+    },
   };
 }
 

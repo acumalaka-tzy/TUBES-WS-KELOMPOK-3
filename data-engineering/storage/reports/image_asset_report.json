@@ -1,0 +1,17 @@
+{
+  "reportId": "image-asset-report-20261122080725",
+  "generatedAt": "2026-11-22T08:07:25.386021+00:00",
+  "totalAssets": 83,
+  "approvedAssets": 35,
+  "pendingReviewAssets": 48,
+  "rejectedAssets": 0,
+  "policyEnforcement": "Only approved rightsStatus assets with verified accessible URLs are permitted for frontend display per PRD Section 29.5",
+  "assetTypes": {
+    "character_portrait": 60,
+    "game_cover": 23
+  },
+  "rightsBreakdown": {
+    "approvedOfficialMedia": 35,
+    "pendingCommunityReview": 48
+  }
+}

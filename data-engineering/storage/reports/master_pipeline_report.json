@@ -1,0 +1,335 @@
+{
+  "masterReportId": "master-pipeline-20261122080726",
+  "generatedAt": "2026-11-22T08:07:26.025416+00:00",
+  "pipelineStatus": "ALL_STAGES_COMPLETED_SUCCESSFULLY",
+  "summary": {
+    "totalRawPagesCollected": 42,
+    "totalCleanedRecords": 25,
+    "totalEntitiesExtracted": 272,
+    "totalCharacterVersions": 121,
+    "totalRelationships": 31,
+    "totalImageAssets": 83,
+    "approvedImageAssets": 35,
+    "pendingReviewImageAssets": 48,
+    "mediaScopeExcluded": 5,
+    "validationPassed": true,
+    "totalRDFTriples": 2851,
+    "totalRDFClasses": 13,
+    "totalRDFProperties": 31
+  },
+  "stageReports": {
+    "source_discovery_report": {
+      "reportId": "source-discovery-20261122080419",
+      "generatedAt": "2026-11-22T08:04:19.298586+00:00",
+      "totalCandidates": 4,
+      "approvedCount": 2,
+      "pendingCount": 1,
+      "rejectedCount": 1,
+      "evaluationCriteria": [
+        "relevance",
+        "authority",
+        "evidence_traceability",
+        "access_policy",
+        "dlc_exclusion_compliance"
+      ],
+      "candidates": [
+        {
+          "sourceId": "mobygames-mk",
+          "sourceName": "MobyGames \u2013 Mortal Kombat Franchise",
+          "baseURL": "https://www.mobygames.com/group/87/mortal-kombat-franchise/",
+          "sourceType": "secondary_database",
+          "intendedUse": "Cross-check standalone game catalogue, platforms, and release metadata.",
+          "policyNotes": "Manual cross-check or permitted endpoints only. Filter DLC/add-ons.",
+          "relevanceScore": 0.95,
+          "authorityScore": 0.85,
+          "evidenceScore": 0.9,
+          "accessPolicy": "permitted_inspection",
+          "status": "approved"
+        },
+        {
+          "sourceId": "wikidata-mk",
+          "sourceName": "Wikidata \u2013 Mortal Kombat (Q150294)",
+          "baseURL": "https://www.wikidata.org/wiki/Q150294",
+          "sourceType": "structured_open_data",
+          "intendedUse": "Structured external entity identifiers (QIDs) and release dates.",
+          "policyNotes": "CC0 Public Domain structured data. SPARQL endpoint accessible.",
+          "relevanceScore": 0.9,
+          "authorityScore": 0.8,
+          "evidenceScore": 0.85,
+          "accessPolicy": "open_sparql_api",
+          "status": "approved"
+        },
+        {
+          "sourceId": "mk-official-media",
+          "sourceName": "Mortal Kombat Official Media Gallery",
+          "baseURL": "https://www.mortalkombat.com/en-us/media",
+          "sourceType": "official_media",
+          "intendedUse": "Promotional artwork & key art discovery subject to asset-by-asset rights review.",
+          "policyNotes": "Asset-level rights review required before public display.",
+          "relevanceScore": 0.98,
+          "authorityScore": 0.95,
+          "evidenceScore": 0.95,
+          "accessPolicy": "press_media_review",
+          "status": "pending-review"
+        },
+        {
+          "sourceId": "random-fan-blog",
+          "sourceName": "Unverified Community Fan Lore Blog",
+          "baseURL": "https://unverified-fan-lore.example.org",
+          "sourceType": "fan_blog",
+          "intendedUse": "Speculative fan theories and combat tier lists.",
+          "policyNotes": "Rejected due to lack of verifiable canon provenance and speculative content.",
+          "relevanceScore": 0.4,
+          "authorityScore": 0.2,
+          "evidenceScore": 0.15,
+          "accessPolicy": "unverified",
+          "status": "rejected",
+          "rejectionReason": "Non-canonical fan speculation without primary citations."
+        }
+      ]
+    },
+    "scrape_report": {
+      "scrapeRunId": "run-20261122080419",
+      "timestamp": "2026-11-22T08:07:25.334486+00:00",
+      "totalRawRecordsCollected": 42,
+      "sources": {
+        "fandom-wiki": {
+          "collected": 18
+        },
+        "mk-official": {
+          "collected": 8
+        },
+        "wb-games": {
+          "collected": 4
+        },
+        "wikidata-sparql": {
+          "collected": 6
+        },
+        "mobygames-catalog": {
+          "collected": 6
+        }
+      },
+      "archiveLocations": {
+        "latest": "data-engineering\\storage\\raw\\raw_pages.json",
+        "historical": "data-engineering\\storage\\raw\\history\\raw_pages_run-20261122080419.json"
+      },
+      "status": "SUCCESS"
+    },
+    "cleaning_report": {
+      "reportId": "cleaning-report-20261122080725",
+      "generatedAt": "2026-11-22T08:07:25.361003+00:00",
+      "totalRawRecords": 42,
+      "cleanedUniqueRecords": 25,
+      "duplicateRecordsDetected": 17,
+      "emptyOrShortRecords": 18,
+      "cleaningRulesApplied": [
+        "NFC Unicode Normalization",
+        "HTML Tag Stripping",
+        "MediaWiki Citation & Template Removal",
+        "Canonical URL & Content Hash Deduplication"
+      ]
+    },
+    "extraction_report": {
+      "reportId": "extraction-report-20261122080725",
+      "generatedAt": "2026-11-22T08:07:25.386021+00:00",
+      "pipelineLineage": {
+        "sourceCleanedFile": "data-engineering\\storage\\cleaned\\cleaned_pages.json",
+        "totalCleanedRecordsRead": 25,
+        "scrapedCandidatesProcessed": 17,
+        "entitiesEnrichedFromScraping": 18,
+        "newEntitiesMerged": 1,
+        "mediaScopeExcluded": 5
+      },
+      "extractedEntityCounts": {
+        "characters": 61,
+        "characterVersions": 121,
+        "games": 23,
+        "timelines": 3,
+        "realms": 7,
+        "locations": 14,
+        "clans": 10,
+        "elements": 8,
+        "abilities": 101,
+        "weapons": 20,
+        "storyEvents": 25,
+        "relationships": 31
+      },
+      "dlcExclusionAudit": {
+        "totalExcludedCandidates": 26,
+        "dlcContaminationInBaseDataset": 0,
+        "auditStatus": "PASSED - Zero DLC items in standalone dataset"
+      }
+    },
+    "media_scope_exclusion_report": {
+      "reportId": "media-scope-exclusion-audit",
+      "policy": "PRD Section 5.2 & 6.1 (Standalone Video Games Only)",
+      "totalEntitiesExcluded": 5,
+      "excludedEntities": [
+        {
+          "candidateName": "Aavi",
+          "entityType": "character",
+          "sourceURL": "https://mortalkombat.fandom.com/wiki/Aavi",
+          "reason": "TV Series: Mortal Kombat: Conquest exclusive character",
+          "status": "excluded_from_standalone_dataset"
+        },
+        {
+          "candidateName": "Abacus",
+          "entityType": "character",
+          "sourceURL": "https://mortalkombat.fandom.com/wiki/Abacus",
+          "reason": "Comic: Malibu Comics exclusive character",
+          "status": "excluded_from_standalone_dataset"
+        },
+        {
+          "candidateName": "Allison Young",
+          "entityType": "character",
+          "sourceURL": "https://mortalkombat.fandom.com/wiki/Allison_Young",
+          "reason": "Film: Mortal Kombat (1995) novelization exclusive character",
+          "status": "excluded_from_standalone_dataset"
+        },
+        {
+          "candidateName": "Art Lean",
+          "entityType": "character",
+          "sourceURL": "https://mortalkombat.fandom.com/wiki/Art_Lean",
+          "reason": "Film: Mortal Kombat (1995) movie exclusive martial artist",
+          "status": "excluded_from_standalone_dataset"
+        },
+        {
+          "candidateName": "Baphomet",
+          "entityType": "character",
+          "sourceURL": "https://mortalkombat.fandom.com/wiki/Baphomet",
+          "reason": "Comic: Malibu Comics exclusive demon lord",
+          "status": "excluded_from_standalone_dataset"
+        }
+      ]
+    },
+    "image_asset_report": {
+      "reportId": "image-asset-report-20261122080725",
+      "generatedAt": "2026-11-22T08:07:25.386021+00:00",
+      "totalAssets": 83,
+      "approvedAssets": 35,
+      "pendingReviewAssets": 48,
+      "rejectedAssets": 0,
+      "policyEnforcement": "Only approved rightsStatus assets with verified accessible URLs are permitted for frontend display per PRD Section 29.5",
+      "assetTypes": {
+        "character_portrait": 60,
+        "game_cover": 23
+      },
+      "rightsBreakdown": {
+        "approvedOfficialMedia": 35,
+        "pendingCommunityReview": 48
+      }
+    },
+    "validation_report": {
+      "reportId": "validation-report-20261122080725",
+      "generatedAt": "2026-11-22T08:07:25.511726+00:00",
+      "validationPassed": true,
+      "statistics": {
+        "totalEntities": 272,
+        "totalRelationships": 31,
+        "totalCharacterVersions": 121,
+        "totalUniqueIDs": 272,
+        "validationErrors": 0,
+        "validationWarnings": 0,
+        "missingProvenanceCount": 0,
+        "unverifiedClaims": 0,
+        "dlcViolationsDetected": 0,
+        "invalidSourceURLs": 0,
+        "invalidImageAssets": 0
+      },
+      "qualityGates": {
+        "schemaIntegrity": "PASSED",
+        "idUniqueness": "PASSED",
+        "referentialIntegrity": "PASSED",
+        "characterVersionsIntegrity": "PASSED",
+        "mandatoryProvenance": "PASSED",
+        "sourceURLAvailability": "PASSED",
+        "dlcExclusionGate": "PASSED (Zero DLC contamination detected)",
+        "mediaScopeFilterGate": "PASSED (Standalone Video Game Media Scope Enforced)",
+        "imageURLAvailability": "PASSED",
+        "imageRightsVerification": "PASSED (Strict copyright policy enforced: zero unvetted assets approved)",
+        "timelineConsistency": "PASSED",
+        "elementsAndLocationsVerified": "PASSED (Elements and Locations validated)",
+        "datasetReportingConsistency": "PASSED (100% synchronized across entities, versions, and relationships)"
+      },
+      "errors": [],
+      "warnings": []
+    },
+    "rdf_export_report": {
+      "reportId": "rdf-export-20261122080725",
+      "generatedAt": "2026-11-22T08:07:25.906146+00:00",
+      "totalTriples": 2851,
+      "totalClasses": 13,
+      "totalProperties": 31,
+      "classInstanceCounts": {
+        "mk:CharacterVersion": 121,
+        "mk:Move": 89,
+        "mk:Character": 61,
+        "mk:Weapon": 20,
+        "mk:Location": 14,
+        "mk:Ability": 12,
+        "mk:Timeline": 3,
+        "mk:Clan": 2,
+        "mk:Element": 8,
+        "mk:Event": 25,
+        "mk:Realm": 7,
+        "mk:Organization": 8,
+        "mk:Game": 23
+      },
+      "serializedOutputs": {
+        "exportsTurtle": "data-engineering\\storage\\exports\\mortal_kombat.ttl",
+        "exportsRDFXML": "data-engineering\\storage\\exports\\mortal_kombat.rdf",
+        "knowledgeBaseTurtle": "knowledge-base\\data\\mortal_kombat.ttl",
+        "knowledgeBaseRDFXML": "knowledge-base\\data\\mortal_kombat.rdf"
+      },
+      "classes": [
+        "mk:Ability",
+        "mk:Character",
+        "mk:CharacterVersion",
+        "mk:Clan",
+        "mk:Element",
+        "mk:Event",
+        "mk:Game",
+        "mk:Location",
+        "mk:Move",
+        "mk:Organization",
+        "mk:Realm",
+        "mk:Timeline",
+        "mk:Weapon"
+      ],
+      "properties": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+        "mk:alliedWith",
+        "mk:alternateName",
+        "mk:appearsIn",
+        "mk:chronologicalOrder",
+        "mk:chronologicalPeriod",
+        "mk:description",
+        "mk:enemyOf",
+        "mk:eventSummary",
+        "mk:eventTitle",
+        "mk:existsInTimeline",
+        "mk:featuresInGame",
+        "mk:firstAppearanceYear",
+        "mk:gameEra",
+        "mk:hasAbility",
+        "mk:hasElement",
+        "mk:hasSpecies",
+        "mk:hasVersion",
+        "mk:involvesCharacter",
+        "mk:locatedInRealm",
+        "mk:memberOf",
+        "mk:moveCategory",
+        "mk:name",
+        "mk:occursInTimeline",
+        "mk:originatesFrom",
+        "mk:releaseDate",
+        "mk:sourceURL",
+        "mk:supportedPlatform",
+        "mk:usesWeapon",
+        "mk:verificationStatus",
+        "mk:versionOf"
+      ],
+      "serializationCheck": "PASSED (Syntactically verified Turtle and RDF/XML outputs)"
+    }
+  }
+}
