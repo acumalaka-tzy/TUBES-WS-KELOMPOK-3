@@ -1,6 +1,6 @@
 {
-  "masterReportId": "master-pipeline-20261122074819",
-  "generatedAt": "2026-11-22T07:48:19.177011+00:00",
+  "masterReportId": "master-pipeline-20261122080726",
+  "generatedAt": "2026-11-22T08:07:26.025416+00:00",
   "pipelineStatus": "ALL_STAGES_COMPLETED_SUCCESSFULLY",
   "summary": {
     "totalRawPagesCollected": 42,
@@ -19,8 +19,8 @@
   },
   "stageReports": {
     "source_discovery_report": {
-      "reportId": "source-discovery-20261122074513",
-      "generatedAt": "2026-11-22T07:45:13.045602+00:00",
+      "reportId": "source-discovery-20261122080419",
+      "generatedAt": "2026-11-22T08:04:19.298586+00:00",
       "totalCandidates": 4,
       "approvedCount": 2,
       "pendingCount": 1,
@@ -89,8 +89,8 @@
       ]
     },
     "scrape_report": {
-      "scrapeRunId": "run-20261122074513",
-      "timestamp": "2026-11-22T07:48:18.497449+00:00",
+      "scrapeRunId": "run-20261122080419",
+      "timestamp": "2026-11-22T08:07:25.334486+00:00",
       "totalRawRecordsCollected": 42,
       "sources": {
         "fandom-wiki": {
@@ -111,13 +111,13 @@
       },
       "archiveLocations": {
         "latest": "data-engineering\\storage\\raw\\raw_pages.json",
-        "historical": "data-engineering\\storage\\raw\\history\\raw_pages_run-20261122074513.json"
+        "historical": "data-engineering\\storage\\raw\\history\\raw_pages_run-20261122080419.json"
       },
       "status": "SUCCESS"
     },
     "cleaning_report": {
-      "reportId": "cleaning-report-20261122074818",
-      "generatedAt": "2026-11-22T07:48:18.551828+00:00",
+      "reportId": "cleaning-report-20261122080725",
+      "generatedAt": "2026-11-22T08:07:25.361003+00:00",
       "totalRawRecords": 42,
       "cleanedUniqueRecords": 25,
       "duplicateRecordsDetected": 17,
@@ -130,8 +130,8 @@
       ]
     },
     "extraction_report": {
-      "reportId": "extraction-report-20261122074818",
-      "generatedAt": "2026-11-22T07:48:18.585454+00:00",
+      "reportId": "extraction-report-20261122080725",
+      "generatedAt": "2026-11-22T08:07:25.386021+00:00",
       "pipelineLineage": {
         "sourceCleanedFile": "data-engineering\\storage\\cleaned\\cleaned_pages.json",
         "totalCleanedRecordsRead": 25,
@@ -203,8 +203,8 @@
       ]
     },
     "image_asset_report": {
-      "reportId": "image-asset-report-20261122074818",
-      "generatedAt": "2026-11-22T07:48:18.585454+00:00",
+      "reportId": "image-asset-report-20261122080725",
+      "generatedAt": "2026-11-22T08:07:25.386021+00:00",
       "totalAssets": 83,
       "approvedAssets": 35,
       "pendingReviewAssets": 48,
@@ -220,8 +220,8 @@
       }
     },
     "validation_report": {
-      "reportId": "validation-report-20261122074818",
-      "generatedAt": "2026-11-22T07:48:18.683926+00:00",
+      "reportId": "validation-report-20261122080725",
+      "generatedAt": "2026-11-22T08:07:25.511726+00:00",
       "validationPassed": true,
       "statistics": {
         "totalEntities": 272,
@@ -232,7 +232,9 @@
         "validationWarnings": 0,
         "missingProvenanceCount": 0,
         "unverifiedClaims": 0,
-        "dlcViolationsDetected": 0
+        "dlcViolationsDetected": 0,
+        "invalidSourceURLs": 0,
+        "invalidImageAssets": 0
       },
       "qualityGates": {
         "schemaIntegrity": "PASSED",
@@ -240,34 +242,38 @@
         "referentialIntegrity": "PASSED",
         "characterVersionsIntegrity": "PASSED",
         "mandatoryProvenance": "PASSED",
+        "sourceURLAvailability": "PASSED",
         "dlcExclusionGate": "PASSED (Zero DLC contamination detected)",
         "mediaScopeFilterGate": "PASSED (Standalone Video Game Media Scope Enforced)",
+        "imageURLAvailability": "PASSED",
+        "imageRightsVerification": "PASSED (Strict copyright policy enforced: zero unvetted assets approved)",
         "timelineConsistency": "PASSED",
-        "elementsAndLocationsVerified": "PASSED (Elements and Locations validated)"
+        "elementsAndLocationsVerified": "PASSED (Elements and Locations validated)",
+        "datasetReportingConsistency": "PASSED (100% synchronized across entities, versions, and relationships)"
       },
       "errors": [],
       "warnings": []
     },
     "rdf_export_report": {
-      "reportId": "rdf-export-20261122074819",
-      "generatedAt": "2026-11-22T07:48:19.031048+00:00",
+      "reportId": "rdf-export-20261122080725",
+      "generatedAt": "2026-11-22T08:07:25.906146+00:00",
       "totalTriples": 2851,
       "totalClasses": 13,
       "totalProperties": 31,
       "classInstanceCounts": {
-        "mk:Organization": 8,
-        "mk:Move": 89,
-        "mk:Weapon": 20,
         "mk:CharacterVersion": 121,
-        "mk:Ability": 12,
-        "mk:Game": 23,
-        "mk:Event": 25,
+        "mk:Move": 89,
         "mk:Character": 61,
+        "mk:Weapon": 20,
         "mk:Location": 14,
-        "mk:Realm": 7,
-        "mk:Element": 8,
+        "mk:Ability": 12,
         "mk:Timeline": 3,
-        "mk:Clan": 2
+        "mk:Clan": 2,
+        "mk:Element": 8,
+        "mk:Event": 25,
+        "mk:Realm": 7,
+        "mk:Organization": 8,
+        "mk:Game": 23
       },
       "serializedOutputs": {
         "exportsTurtle": "data-engineering\\storage\\exports\\mortal_kombat.ttl",

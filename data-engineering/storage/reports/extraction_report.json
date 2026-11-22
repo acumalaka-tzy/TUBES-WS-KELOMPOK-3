@@ -1,6 +1,6 @@
 {
-  "reportId": "extraction-report-20261122074818",
-  "generatedAt": "2026-11-22T07:48:18.585454+00:00",
+  "reportId": "extraction-report-20261122080725",
+  "generatedAt": "2026-11-22T08:07:25.386021+00:00",
   "pipelineLineage": {
     "sourceCleanedFile": "data-engineering\\storage\\cleaned\\cleaned_pages.json",
     "totalCleanedRecordsRead": 25,

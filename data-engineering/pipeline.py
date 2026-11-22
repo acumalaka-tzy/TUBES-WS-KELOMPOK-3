@@ -371,8 +371,8 @@ class DataPipelineOrchestrator:
 def main():
     parser = argparse.ArgumentParser(description="Mortal Kombat Knowledge Nexus Master Data Pipeline CLI")
     parser.add_argument("command", choices=[
-        "all", "discover", "scrape", "clean", "extract",
-        "assets", "validate", "export-rdf", "report"
+        "all", "discover", "discover-sources", "scrape", "clean", "extract",
+        "assets", "manage-assets", "validate", "export-rdf", "report"
     ], default="all", nargs="?", help="Pipeline command to execute")
 
     args = parser.parse_args()
@@ -380,7 +380,7 @@ def main():
 
     if args.command == "all":
         orchestrator.run_all()
-    elif args.command == "discover":
+    elif args.command in ["discover", "discover-sources"]:
         orchestrator.stage_source_discovery()
     elif args.command == "scrape":
         orchestrator.stage_multi_source_scrape()
@@ -388,7 +388,7 @@ def main():
         orchestrator.stage_clean()
     elif args.command == "extract":
         orchestrator.stage_extract_and_resolve()
-    elif args.command == "assets":
+    elif args.command in ["assets", "manage-assets"]:
         orchestrator.stage_manage_assets()
     elif args.command == "validate":
         orchestrator.stage_validate()

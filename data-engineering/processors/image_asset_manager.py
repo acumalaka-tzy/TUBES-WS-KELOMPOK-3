@@ -8,6 +8,7 @@ licensing provenance, and ensures unvetted community assets are held in pending-
 from typing import Dict, Any, List, Optional
 import json
 import urllib.parse
+import hashlib
 from datetime import datetime, timezone
 from pathlib import Path
 from .data_store import CHARACTERS, GAMES
@@ -18,12 +19,17 @@ class ImageAssetManager:
     def __init__(self, registry_path: str = "data-engineering/storage/assets/image_asset_registry.json"):
         self.registry_path = Path(registry_path)
         self.assets: List[Dict[str, Any]] = []
+        self.source_names = {
+            "wb-games": "Warner Bros. Games Pressroom",
+            "mk-official": "Mortal Kombat Official Roster",
+            "fandom-wiki": "Mortal Kombat Fandom Wiki"
+        }
 
     def validate_asset_url(self, url: str) -> bool:
         """Validates that asset URL is a well-formed HTTP/HTTPS URL with image extension or valid media path."""
         try:
             parsed = urllib.parse.urlparse(url)
-            if not parsed.scheme or not parsed.netloc:
+            if parsed.scheme.lower() not in ["http", "https"] or not parsed.netloc:
                 return False
             valid_exts = [".png", ".jpg", ".jpeg", ".webp", ".svg"]
             has_ext = any(parsed.path.lower().endswith(ext) for ext in valid_exts) or "images" in parsed.path.lower()
@@ -48,11 +54,12 @@ class ImageAssetManager:
         mime_type: str = "image/webp",
         dimensions: str = "1200x1600"
     ) -> Dict[str, Any]:
-        """Creates an image asset record conforming to PRD Section 29.4 schema."""
+        """Creates an image asset record conforming to PRD Section 29.4 & Master Prompt Section 3 schema."""
         is_url_valid = self.validate_asset_url(asset_url)
 
         # Enforce strict policy: only explicitly vetted official press materials with valid URLs can be approved
         is_approved = (rights_status == "approved") and is_url_valid and (source_id in ["wb-games", "mk-official"])
+        file_hash = hashlib.sha256(f"{asset_id}:{asset_url}".encode("utf-8")).hexdigest()
 
         record = {
             "assetId": asset_id,
@@ -60,16 +67,18 @@ class ImageAssetManager:
             "gameId": game_id,
             "characterVersionId": character_version_id,
             "assetType": asset_type,
-            "sourceId": source_id,
-            "sourcePageURL": source_page_url,
             "assetURL": asset_url,
-            "verifiedAccessible": is_url_valid,
-            "license": license_name,
+            "sourceURL": source_page_url,
+            "sourceId": source_id,
+            "sourceName": self.source_names.get(source_id, source_id),
             "attribution": attribution,
+            "license": license_name,
             "rightsStatus": "approved" if is_approved else "pending-review",
             "verificationStatus": "verified" if is_approved else "pending-review",
             "isApprovedForDisplay": is_approved,
-            "mimeType": mime_type,
+            "contentType": mime_type,
+            "fileHash": file_hash,
+            "verifiedAccessible": is_url_valid,
             "dimensions": dimensions,
             "alt": alt_text or f"Artwork for {entity_id}",
             "retrievedAt": datetime.now(timezone.utc).isoformat(),
