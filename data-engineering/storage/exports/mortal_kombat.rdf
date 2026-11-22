@@ -1,0 +1,1479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:mk="https://example.org/mk/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <rdf:Description rdf:about="https://example.org/mk/character-scorpion">
+    <rdf:type rdf:resource="https://example.org/mk/Character"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scorpion</mk:name>
+    <mk:alternateName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hanzo Hasashi</mk:alternateName>
+    <mk:firstAppearanceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1992</mk:firstAppearanceYear>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Resurrected Shirai Ryu ninja seeking vengeance for his family and clan.</mk:description>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Scorpion</mk:sourceURL>
+    <mk:verificationStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verified</mk:verificationStatus>
+    <mk:hasVersion rdf:resource="https://example.org/mk/version-scorpion-classic"/>
+    <mk:hasVersion rdf:resource="https://example.org/mk/version-scorpion-mk11"/>
+    <mk:hasVersion rdf:resource="https://example.org/mk/version-scorpion-mk1-2023"/>
+    <mk:enemyOf rdf:resource="https://example.org/mk/character-subzero"/>
+    <mk:enemyOf rdf:resource="https://example.org/mk/character-quanchi"/>
+    <mk:alliedWith rdf:resource="https://example.org/mk/character-subzero"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/version-kunglao-mk11">
+    <rdf:type rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kung Lao (mk11-2019)</mk:name>
+    <mk:versionOf rdf:resource="https://example.org/mk/character-kunglao"/>
+    <mk:appearsIn rdf:resource="https://example.org/mk/game-mk11-2019"/>
+    <mk:existsInTimeline rdf:resource="https://example.org/mk/timeline-reboot"/>
+    <mk:memberOf rdf:resource="https://example.org/mk/org-white-lotus"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/move-hat-throw"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/ability-teleportation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/version-sonyablade-mk11">
+    <rdf:type rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sonya Blade (mk11-2019)</mk:name>
+    <mk:versionOf rdf:resource="https://example.org/mk/character-sonyablade"/>
+    <mk:appearsIn rdf:resource="https://example.org/mk/game-mk11-2019"/>
+    <mk:existsInTimeline rdf:resource="https://example.org/mk/timeline-reboot"/>
+    <mk:memberOf rdf:resource="https://example.org/mk/org-special-forces"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/move-bicycle-kick">
+    <rdf:type rdf:resource="https://example.org/mk/Move"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bicycle Kick</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Defying gravity with rapid aerial bicycle kicks propelled by chi.</mk:description>
+    <mk:hasElement rdf:resource="https://example.org/mk/element-energy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/game-mk-shaolin-monks-2005">
+    <rdf:type rdf:resource="https://example.org/mk/Game"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mortal Kombat: Shaolin Monks</mk:name>
+    <mk:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2005-09-16</mk:releaseDate>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Co-op action-adventure following Liu Kang and Kung Lao through the events of MKII.</mk:description>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Mortal_Kombat:_Shaolin_Monks</mk:sourceURL>
+    <mk:verificationStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verified</mk:verificationStatus>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/ability-flame-aura">
+    <rdf:type rdf:resource="https://example.org/mk/Ability"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flame Aura</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Surrounding the body in intense heat that incinerates nearby foes.</mk:description>
+    <mk:hasElement rdf:resource="https://example.org/mk/element-fire"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/character-shaokahn">
+    <rdf:type rdf:resource="https://example.org/mk/Character"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shao Kahn</mk:name>
+    <mk:alternateName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Emperor of Outworld</mk:alternateName>
+    <mk:firstAppearanceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1993</mk:firstAppearanceYear>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ruthless tyrannical conqueror and Emperor of Outworld wielding the massive Wrath Hammer.</mk:description>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Shao_Kahn</mk:sourceURL>
+    <mk:verificationStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verified</mk:verificationStatus>
+    <mk:hasVersion rdf:resource="https://example.org/mk/version-shaokahn-mk11"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/event-shirai-ryu-massacre">
+    <rdf:type rdf:resource="https://example.org/mk/Event"/>
+    <mk:eventTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Massacre of the Shirai Ryu</mk:eventTitle>
+    <mk:eventSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The treacherous annihilation of Hanzo Hasashi's clan and family, orchestrated by Quan Chi.</mk:eventSummary>
+    <mk:occursIn rdf:resource="https://example.org/mk/timeline-original"/>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Shirai_Ryu</mk:sourceURL>
+    <mk:involvesCharacter rdf:resource="https://example.org/mk/character-scorpion"/>
+    <mk:involvesCharacter rdf:resource="https://example.org/mk/character-quanchi"/>
+    <mk:involvesCharacter rdf:resource="https://example.org/mk/character-subzero"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/move-cyber-trap">
+    <rdf:type rdf:resource="https://example.org/mk/Move"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cryo Floor Trap</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Frost releases a cryogenic ground mine that flash-freezes unobservant opponents.</mk:description>
+    <mk:hasElement rdf:resource="https://example.org/mk/element-ice"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/character-shangtsung">
+    <rdf:type rdf:resource="https://example.org/mk/Character"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shang Tsung</mk:name>
+    <mk:alternateName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grand Sorcerer</mk:alternateName>
+    <mk:firstAppearanceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1992</mk:firstAppearanceYear>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deceptive soul-stealing sorcerer host of the original Mortal Kombat tournaments.</mk:description>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Shang_Tsung</mk:sourceURL>
+    <mk:verificationStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verified</mk:verificationStatus>
+    <mk:hasVersion rdf:resource="https://example.org/mk/version-shangtsung-mk11"/>
+    <mk:alliedWith rdf:resource="https://example.org/mk/character-quanchi"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/character-sonyablade">
+    <rdf:type rdf:resource="https://example.org/mk/Character"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sonya Blade</mk:name>
+    <mk:alternateName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">General Blade</mk:alternateName>
+    <mk:firstAppearanceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1992</mk:firstAppearanceYear>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Decorated officer of Earthrealm's Special Forces fighting against extradimensional threats.</mk:description>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Sonya_Blade</mk:sourceURL>
+    <mk:verificationStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verified</mk:verificationStatus>
+    <mk:hasVersion rdf:resource="https://example.org/mk/version-sonyablade-mk11"/>
+    <mk:enemyOf rdf:resource="https://example.org/mk/character-kano"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/character-havik">
+    <rdf:type rdf:resource="https://example.org/mk/Character"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Havik</mk:name>
+    <mk:alternateName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cleric of Chaos</mk:alternateName>
+    <mk:firstAppearanceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2004</mk:firstAppearanceYear>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anarchist from Chaosrealm who can twist and contort his bones without suffering damage.</mk:description>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Havik</mk:sourceURL>
+    <mk:verificationStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verified</mk:verificationStatus>
+    <mk:hasVersion rdf:resource="https://example.org/mk/version-havik-mk1-2023"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/version-kotalkahn-mk11">
+    <rdf:type rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kotal Kahn (mk11-2019)</mk:name>
+    <mk:versionOf rdf:resource="https://example.org/mk/character-kotalkahn"/>
+    <mk:appearsIn rdf:resource="https://example.org/mk/game-mk11-2019"/>
+    <mk:existsInTimeline rdf:resource="https://example.org/mk/timeline-reboot"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/move-sun-ray"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/version-sektor-mk11">
+    <rdf:type rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sektor (mk11-2019)</mk:name>
+    <mk:versionOf rdf:resource="https://example.org/mk/character-sektor"/>
+    <mk:appearsIn rdf:resource="https://example.org/mk/game-mk11-2019"/>
+    <mk:existsInTimeline rdf:resource="https://example.org/mk/timeline-reboot"/>
+    <mk:memberOf rdf:resource="https://example.org/mk/org-lin-kuei"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/ability-flame-aura"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/ability-teleportation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/move-ground-pound">
+    <rdf:type rdf:resource="https://example.org/mk/Move"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ground Pound</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Striking the ground with cybernetic arms to cause localized seismic shockwaves.</mk:description>
+    <mk:hasElement rdf:resource="https://example.org/mk/element-energy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/move-flying-kick">
+    <rdf:type rdf:resource="https://example.org/mk/Move"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flying Dragon Kick</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Liu Kang's signature horizontal flight across the screen backed by flaming chi.</mk:description>
+    <mk:hasElement rdf:resource="https://example.org/mk/element-fire"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/event-time-merger">
+    <rdf:type rdf:resource="https://example.org/mk/Event"/>
+    <mk:eventTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kronika's Temporal Convergence</mk:eventTitle>
+    <mk:eventSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kronika collapses time, bringing younger past versions of warriors into the present era.</mk:eventSummary>
+    <mk:occursIn rdf:resource="https://example.org/mk/timeline-reboot"/>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Mortal_Kombat_11</mk:sourceURL>
+    <mk:involvesCharacter rdf:resource="https://example.org/mk/character-kronika"/>
+    <mk:involvesCharacter rdf:resource="https://example.org/mk/character-raiden"/>
+    <mk:involvesCharacter rdf:resource="https://example.org/mk/character-scorpion"/>
+    <mk:involvesCharacter rdf:resource="https://example.org/mk/character-geras"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/character-geras">
+    <rdf:type rdf:resource="https://example.org/mk/Character"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geras</mk:name>
+    <mk:alternateName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guardian of the Hourglass</mk:alternateName>
+    <mk:firstAppearanceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2019</mk:firstAppearanceYear>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fixed point in time who regenerates infinitely, serving the Keeper of Time.</mk:description>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Geras</mk:sourceURL>
+    <mk:verificationStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verified</mk:verificationStatus>
+    <mk:hasVersion rdf:resource="https://example.org/mk/version-geras-mk11"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/version-goro-classic">
+    <rdf:type rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Goro (mk1-1992)</mk:name>
+    <mk:versionOf rdf:resource="https://example.org/mk/character-goro"/>
+    <mk:appearsIn rdf:resource="https://example.org/mk/game-mk1-1992"/>
+    <mk:existsInTimeline rdf:resource="https://example.org/mk/timeline-original"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/move-shokan-stomp"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/fatality-shokan-tear"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/character-smoke">
+    <rdf:type rdf:resource="https://example.org/mk/Character"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Smoke</mk:name>
+    <mk:alternateName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tomas Vrbada</mk:alternateName>
+    <mk:firstAppearanceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1993</mk:firstAppearanceYear>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lin Kuei assassin endowed with supernatural smoke and vapour powers.</mk:description>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Smoke</mk:sourceURL>
+    <mk:verificationStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verified</mk:verificationStatus>
+    <mk:hasVersion rdf:resource="https://example.org/mk/version-smoke-mk9"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/ability-ice-slide">
+    <rdf:type rdf:resource="https://example.org/mk/Ability"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ice Slide</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Coating the ground with ice to slide swiftly beneath enemy defenses.</mk:description>
+    <mk:hasElement rdf:resource="https://example.org/mk/element-ice"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/character-kano">
+    <rdf:type rdf:resource="https://example.org/mk/Character"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kano</mk:name>
+    <mk:alternateName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Black Dragon Leader</mk:alternateName>
+    <mk:firstAppearanceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1992</mk:firstAppearanceYear>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cybernetically modified Australian mercenary and ruthless boss of the Black Dragon.</mk:description>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Kano</mk:sourceURL>
+    <mk:verificationStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verified</mk:verificationStatus>
+    <mk:hasVersion rdf:resource="https://example.org/mk/version-kano-mk11"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/game-mk4-1997">
+    <rdf:type rdf:resource="https://example.org/mk/Game"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mortal Kombat 4</mk:name>
+    <mk:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1997-10-15</mk:releaseDate>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The first 3D installment focusing on the fallen Elder God Shinnok's war.</mk:description>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Mortal_Kombat_4</mk:sourceURL>
+    <mk:verificationStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verified</mk:verificationStatus>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/character-raiden">
+    <rdf:type rdf:resource="https://example.org/mk/Character"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Raiden</mk:name>
+    <mk:alternateName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lord Raiden</mk:alternateName>
+    <mk:firstAppearanceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1992</mk:firstAppearanceYear>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eternal God of Thunder and ancient guardian of Earthrealm.</mk:description>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Raiden</mk:sourceURL>
+    <mk:verificationStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verified</mk:verificationStatus>
+    <mk:hasVersion rdf:resource="https://example.org/mk/version-raiden-mk11"/>
+    <mk:alliedWith rdf:resource="https://example.org/mk/character-liukang"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/ability-necromancy">
+    <rdf:type rdf:resource="https://example.org/mk/Ability"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Necromancy</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reanimating the dead as loyal Netherrealm revenants.</mk:description>
+    <mk:hasElement rdf:resource="https://example.org/mk/element-soul"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/ability-fireball-dragon">
+    <rdf:type rdf:resource="https://example.org/mk/Ability"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dragon Fireball</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Concentrated chi energy manifested as a searing dragon of flame.</mk:description>
+    <mk:hasElement rdf:resource="https://example.org/mk/element-fire"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/version-quanchi-mkx">
+    <rdf:type rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quan Chi (mkx-2015)</mk:name>
+    <mk:versionOf rdf:resource="https://example.org/mk/character-quanchi"/>
+    <mk:appearsIn rdf:resource="https://example.org/mk/game-mkx-2015"/>
+    <mk:existsInTimeline rdf:resource="https://example.org/mk/timeline-reboot"/>
+    <mk:memberOf rdf:resource="https://example.org/mk/org-brotherhood-of-shadow"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/ability-necromancy"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/ability-shadow-magic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/element-energy">
+    <rdf:type rdf:resource="https://example.org/mk/Element"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kinetic Energy</mk:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/weapon-sento">
+    <rdf:type rdf:resource="https://example.org/mk/Weapon"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sento Katana</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ancient samurai katana housing the trapped ancestral souls of the Takahashi clan.</mk:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/weapon-hookswords">
+    <rdf:type rdf:resource="https://example.org/mk/Weapon"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tiger Hookswords</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kabal and Mavado's traditional curved hookswords used for trapping weapons and swinging opponents.</mk:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/org-special-forces">
+    <rdf:type rdf:resource="https://example.org/mk/Organization"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Special Forces</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Earthrealm military division led by Sonya Blade and Jax Briggs tasked with countering otherworldly threats.</mk:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/event-outworld-tournament">
+    <rdf:type rdf:resource="https://example.org/mk/Event"/>
+    <mk:eventTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tournament in Outworld</mk:eventTitle>
+    <mk:eventSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Earthrealm warriors travel to Outworld after Shao Kahn lures them into a secondary tournament.</mk:eventSummary>
+    <mk:occursIn rdf:resource="https://example.org/mk/timeline-original"/>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Mortal_Kombat_II</mk:sourceURL>
+    <mk:involvesCharacter rdf:resource="https://example.org/mk/character-liukang"/>
+    <mk:involvesCharacter rdf:resource="https://example.org/mk/character-shaokahn"/>
+    <mk:involvesCharacter rdf:resource="https://example.org/mk/character-kitana"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/move-shadow-slide">
+    <rdf:type rdf:resource="https://example.org/mk/Move"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shadow Slide</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Noob Saibot dispatches his shadow clone sliding forward to trip the enemy.</mk:description>
+    <mk:hasElement rdf:resource="https://example.org/mk/element-shadow"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/character-kitana">
+    <rdf:type rdf:resource="https://example.org/mk/Character"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kitana</mk:name>
+    <mk:alternateName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Princess Kitana</mk:alternateName>
+    <mk:firstAppearanceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1993</mk:firstAppearanceYear>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Edenian royal and skilled warrior assassin who turned against her adoptive father Shao Kahn.</mk:description>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Kitana</mk:sourceURL>
+    <mk:verificationStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verified</mk:verificationStatus>
+    <mk:hasVersion rdf:resource="https://example.org/mk/version-kitana-mk11"/>
+    <mk:enemyOf rdf:resource="https://example.org/mk/character-shaokahn"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/version-scorpion-mk11">
+    <rdf:type rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scorpion (mk11-2019)</mk:name>
+    <mk:versionOf rdf:resource="https://example.org/mk/character-scorpion"/>
+    <mk:appearsIn rdf:resource="https://example.org/mk/game-mk11-2019"/>
+    <mk:existsInTimeline rdf:resource="https://example.org/mk/timeline-reboot"/>
+    <mk:memberOf rdf:resource="https://example.org/mk/org-shirai-ryu"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/ability-hellfire"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/ability-teleportation"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/move-spear"/>
+    <mk:usesWeapon rdf:resource="https://example.org/mk/weapon-kunai"/>
+    <mk:usesWeapon rdf:resource="https://example.org/mk/weapon-mugai-ryu"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/version-limei-mk1-2023">
+    <rdf:type rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Li Mei (mk1-2023)</mk:name>
+    <mk:versionOf rdf:resource="https://example.org/mk/character-limei"/>
+    <mk:appearsIn rdf:resource="https://example.org/mk/game-mk1-2023"/>
+    <mk:existsInTimeline rdf:resource="https://example.org/mk/timeline-new-era"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/move-flying-kick"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/version-subzero-mk11">
+    <rdf:type rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sub-Zero (mk11-2019)</mk:name>
+    <mk:versionOf rdf:resource="https://example.org/mk/character-subzero"/>
+    <mk:appearsIn rdf:resource="https://example.org/mk/game-mk11-2019"/>
+    <mk:existsInTimeline rdf:resource="https://example.org/mk/timeline-reboot"/>
+    <mk:memberOf rdf:resource="https://example.org/mk/org-lin-kuei"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/ability-cryomancy"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/ability-ice-slide"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/ability-ice-clone"/>
+    <mk:usesWeapon rdf:resource="https://example.org/mk/weapon-kori-blade"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/version-kenshi-mkx">
+    <rdf:type rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kenshi (mkx-2015)</mk:name>
+    <mk:versionOf rdf:resource="https://example.org/mk/character-kenshi"/>
+    <mk:appearsIn rdf:resource="https://example.org/mk/game-mkx-2015"/>
+    <mk:existsInTimeline rdf:resource="https://example.org/mk/timeline-reboot"/>
+    <mk:memberOf rdf:resource="https://example.org/mk/org-special-forces"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/ability-teleportation"/>
+    <mk:usesWeapon rdf:resource="https://example.org/mk/weapon-sento"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/version-geras-mk11">
+    <rdf:type rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geras (mk11-2019)</mk:name>
+    <mk:versionOf rdf:resource="https://example.org/mk/character-geras"/>
+    <mk:appearsIn rdf:resource="https://example.org/mk/game-mk11-2019"/>
+    <mk:existsInTimeline rdf:resource="https://example.org/mk/timeline-reboot"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/ability-teleportation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/version-liukang-mk1-2023">
+    <rdf:type rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Liu Kang (mk1-2023)</mk:name>
+    <mk:versionOf rdf:resource="https://example.org/mk/character-liukang"/>
+    <mk:appearsIn rdf:resource="https://example.org/mk/game-mk1-2023"/>
+    <mk:existsInTimeline rdf:resource="https://example.org/mk/timeline-new-era"/>
+    <mk:memberOf rdf:resource="https://example.org/mk/org-white-lotus"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/ability-fireball-dragon"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/ability-thunder-mastery"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/version-fujin-mk11">
+    <rdf:type rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fujin (mk11-2019)</mk:name>
+    <mk:versionOf rdf:resource="https://example.org/mk/character-fujin"/>
+    <mk:appearsIn rdf:resource="https://example.org/mk/game-mk11-2019"/>
+    <mk:existsInTimeline rdf:resource="https://example.org/mk/timeline-reboot"/>
+    <mk:memberOf rdf:resource="https://example.org/mk/org-white-lotus"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/move-wind-tornado"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/move-fan-lift">
+    <rdf:type rdf:resource="https://example.org/mk/Move"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fan Lift</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Waving bladed war fans to create an updraft that suspends opponents helplessly in mid-air.</mk:description>
+    <mk:hasElement rdf:resource="https://example.org/mk/element-wind"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/character-kenshi">
+    <rdf:type rdf:resource="https://example.org/mk/Character"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kenshi</mk:name>
+    <mk:alternateName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kenshi Takahashi</mk:alternateName>
+    <mk:firstAppearanceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2002</mk:firstAppearanceYear>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blind telekinetic swordsman guided by the spirits of his warrior ancestors.</mk:description>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Kenshi</mk:sourceURL>
+    <mk:verificationStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verified</mk:verificationStatus>
+    <mk:hasVersion rdf:resource="https://example.org/mk/version-kenshi-mkx"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/move-wind-kick">
+    <rdf:type rdf:resource="https://example.org/mk/Move"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tornado Gale Kick</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fujin spins horizontally on a cushion of wind, striking repeatedly.</mk:description>
+    <mk:hasElement rdf:resource="https://example.org/mk/element-wind"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/event-battle-for-the-hourglass">
+    <rdf:type rdf:resource="https://example.org/mk/Event"/>
+    <mk:eventTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Battle for the Keep of Time</mk:eventTitle>
+    <mk:eventSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Combined allied armies storm Kronika's fortress to seize control of the Hourglass and prevent temporal extinction.</mk:eventSummary>
+    <mk:occursIn rdf:resource="https://example.org/mk/timeline-reboot"/>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Hourglass</mk:sourceURL>
+    <mk:involvesCharacter rdf:resource="https://example.org/mk/character-kronika"/>
+    <mk:involvesCharacter rdf:resource="https://example.org/mk/character-liukang"/>
+    <mk:involvesCharacter rdf:resource="https://example.org/mk/character-raiden"/>
+    <mk:involvesCharacter rdf:resource="https://example.org/mk/character-kitana"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/ability-shadow-magic">
+    <rdf:type rdf:resource="https://example.org/mk/Ability"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shadow Magic</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Summoning shadow wraiths and dark portals.</mk:description>
+    <mk:hasElement rdf:resource="https://example.org/mk/element-shadow"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/version-jax-mk11">
+    <rdf:type rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jax Briggs (mk11-2019)</mk:name>
+    <mk:versionOf rdf:resource="https://example.org/mk/character-jax"/>
+    <mk:appearsIn rdf:resource="https://example.org/mk/game-mk11-2019"/>
+    <mk:existsInTimeline rdf:resource="https://example.org/mk/timeline-reboot"/>
+    <mk:memberOf rdf:resource="https://example.org/mk/org-special-forces"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/move-ground-pound"/>
+    <mk:usesWeapon rdf:resource="https://example.org/mk/weapon-bionic-arms"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/version-sindel-mk11">
+    <rdf:type rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sindel (mk11-2019)</mk:name>
+    <mk:versionOf rdf:resource="https://example.org/mk/character-sindel"/>
+    <mk:appearsIn rdf:resource="https://example.org/mk/game-mk11-2019"/>
+    <mk:existsInTimeline rdf:resource="https://example.org/mk/timeline-reboot"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/move-sonic-scream"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/game-mk1-1992">
+    <rdf:type rdf:resource="https://example.org/mk/Game"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mortal Kombat (1992)</mk:name>
+    <mk:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1992-10-08</mk:releaseDate>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The landmark tournament fighting game created by Ed Boon and John Tobias.</mk:description>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Mortal_Kombat_(1992_video_game)</mk:sourceURL>
+    <mk:verificationStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verified</mk:verificationStatus>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/ability-cryomancy">
+    <rdf:type rdf:resource="https://example.org/mk/Ability"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cryomancy</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Instant freezing of atmospheric moisture into ice shields and projectiles.</mk:description>
+    <mk:hasElement rdf:resource="https://example.org/mk/element-ice"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/game-mk-deception-2004">
+    <rdf:type rdf:resource="https://example.org/mk/Game"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mortal Kombat: Deception</mk:name>
+    <mk:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2004-10-04</mk:releaseDate>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Features the return of the Dragon King Onaga and the Konquest adventure mode.</mk:description>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Mortal_Kombat:_Deception</mk:sourceURL>
+    <mk:verificationStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verified</mk:verificationStatus>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/event-lin-kuei-cyber-initiative">
+    <rdf:type rdf:resource="https://example.org/mk/Event"/>
+    <mk:eventTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Cyber Initiative</mk:eventTitle>
+    <mk:eventSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Lin Kuei converts its assassins into emotionless cybernetic units, targeting Smoke and Sub-Zero.</mk:eventSummary>
+    <mk:occursIn rdf:resource="https://example.org/mk/timeline-reboot"/>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Cyber_Initiative</mk:sourceURL>
+    <mk:involvesCharacter rdf:resource="https://example.org/mk/character-subzero"/>
+    <mk:involvesCharacter rdf:resource="https://example.org/mk/character-cyrax"/>
+    <mk:involvesCharacter rdf:resource="https://example.org/mk/character-sektor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/version-kitana-mk11">
+    <rdf:type rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kitana (mk11-2019)</mk:name>
+    <mk:versionOf rdf:resource="https://example.org/mk/character-kitana"/>
+    <mk:appearsIn rdf:resource="https://example.org/mk/game-mk11-2019"/>
+    <mk:existsInTimeline rdf:resource="https://example.org/mk/timeline-reboot"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/move-fan-lift"/>
+    <mk:usesWeapon rdf:resource="https://example.org/mk/weapon-steel-fans"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/event-creation-of-new-era">
+    <rdf:type rdf:resource="https://example.org/mk/Event"/>
+    <mk:eventTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Birth of the New Era</mk:eventTitle>
+    <mk:eventSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fire God Liu Kang uses the Hourglass to reset the universe, giving Kombatants second chances.</mk:eventSummary>
+    <mk:occursIn rdf:resource="https://example.org/mk/timeline-new-era"/>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.mortalkombat.com/en-us</mk:sourceURL>
+    <mk:involvesCharacter rdf:resource="https://example.org/mk/character-liukang"/>
+    <mk:involvesCharacter rdf:resource="https://example.org/mk/character-geras"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/version-erronblack-mk11">
+    <rdf:type rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Erron Black (mk11-2019)</mk:name>
+    <mk:versionOf rdf:resource="https://example.org/mk/character-erronblack"/>
+    <mk:appearsIn rdf:resource="https://example.org/mk/game-mk11-2019"/>
+    <mk:existsInTimeline rdf:resource="https://example.org/mk/timeline-reboot"/>
+    <mk:memberOf rdf:resource="https://example.org/mk/org-black-dragon"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/move-revolver-quickdraw"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/fatality-spine-rip">
+    <rdf:type rdf:resource="https://example.org/mk/Move"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fatality: Spine Rip</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grabbing the victim's neck and cleanly ripping out their head and spine.</mk:description>
+    <mk:hasElement rdf:resource="https://example.org/mk/element-ice"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/character-cassiecage">
+    <rdf:type rdf:resource="https://example.org/mk/Character"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cassie Cage</mk:name>
+    <mk:alternateName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sergeant Cassandra Cage</mk:alternateName>
+    <mk:firstAppearanceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2015</mk:firstAppearanceYear>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Daughter of Johnny Cage and Sonya Blade combining military discipline with inherited green shadow power.</mk:description>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Cassie_Cage</mk:sourceURL>
+    <mk:verificationStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verified</mk:verificationStatus>
+    <mk:hasVersion rdf:resource="https://example.org/mk/version-cassiecage-mk11"/>
+    <mk:alliedWith rdf:resource="https://example.org/mk/character-sonyablade"/>
+    <mk:enemyOf rdf:resource="https://example.org/mk/character-shinnok"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/ability-ice-clone">
+    <rdf:type rdf:resource="https://example.org/mk/Ability"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ice Clone</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Leaving behind a flash-frozen decoy that freezes whoever touches it.</mk:description>
+    <mk:hasElement rdf:resource="https://example.org/mk/element-ice"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/realm-orderrealm">
+    <rdf:type rdf:resource="https://example.org/mk/Realm"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Orderrealm (Seido)</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A rigid geometric realm governed strictly by law, hierarchy, and absolute order.</mk:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/version-baraka-mk11">
+    <rdf:type rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Baraka (mk11-2019)</mk:name>
+    <mk:versionOf rdf:resource="https://example.org/mk/character-baraka"/>
+    <mk:appearsIn rdf:resource="https://example.org/mk/game-mk11-2019"/>
+    <mk:existsInTimeline rdf:resource="https://example.org/mk/timeline-reboot"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/move-blood-tentacles">
+    <rdf:type rdf:resource="https://example.org/mk/Move"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blood Tentacles</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conjuring whipping tendrils of coagulated blood to lash opponents.</mk:description>
+    <mk:hasElement rdf:resource="https://example.org/mk/element-blood"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/character-johnnycage">
+    <rdf:type rdf:resource="https://example.org/mk/Character"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Johnny Cage</mk:name>
+    <mk:alternateName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">John Carlton</mk:alternateName>
+    <mk:firstAppearanceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1992</mk:firstAppearanceYear>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hollywood action film star endowed with ancient Mediterranean green energy.</mk:description>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Johnny_Cage</mk:sourceURL>
+    <mk:verificationStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verified</mk:verificationStatus>
+    <mk:hasVersion rdf:resource="https://example.org/mk/version-johnnycage-mk11"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/move-shokan-stomp">
+    <rdf:type rdf:resource="https://example.org/mk/Move"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Telestomp</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Leaping off-screen and crashing down with the immense weight of four arms.</mk:description>
+    <mk:hasElement rdf:resource="https://example.org/mk/element-energy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/move-drunken-fist">
+    <rdf:type rdf:resource="https://example.org/mk/Move"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drunken Fist Roll</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unpredictable tumbling footwork baffling enemy guard.</mk:description>
+    <mk:hasElement rdf:resource="https://example.org/mk/element-energy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/move-telekinesis-slam">
+    <rdf:type rdf:resource="https://example.org/mk/Move"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Telekinetic Slam</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lifting enemies telepathically and slamming them forcefully against the arena floor.</mk:description>
+    <mk:hasElement rdf:resource="https://example.org/mk/element-energy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/version-noobsaibot-mk11">
+    <rdf:type rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Noob Saibot (mk11-2019)</mk:name>
+    <mk:versionOf rdf:resource="https://example.org/mk/character-noobsaibot"/>
+    <mk:appearsIn rdf:resource="https://example.org/mk/game-mk11-2019"/>
+    <mk:existsInTimeline rdf:resource="https://example.org/mk/timeline-reboot"/>
+    <mk:memberOf rdf:resource="https://example.org/mk/org-brotherhood-of-shadow"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/ability-shadow-magic"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/ability-teleportation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/character-quanchi">
+    <rdf:type rdf:resource="https://example.org/mk/Character"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quan Chi</mk:name>
+    <mk:alternateName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arch-Sorcerer</mk:alternateName>
+    <mk:firstAppearanceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1997</mk:firstAppearanceYear>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Malevolent Netherrealm necromancer responsible for resurrecting Scorpion and framing the Lin Kuei.</mk:description>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Quan_Chi</mk:sourceURL>
+    <mk:verificationStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verified</mk:verificationStatus>
+    <mk:hasVersion rdf:resource="https://example.org/mk/version-quanchi-mkx"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/realm-chaosrealm">
+    <rdf:type rdf:resource="https://example.org/mk/Realm"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chaosrealm</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An anarchic realm of shifting structures and freedom where chaos is worshiped as supreme truth.</mk:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/move-ice-freeze">
+    <rdf:type rdf:resource="https://example.org/mk/Move"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deep Freeze</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blasting a blast of liquid nitrogen vapor that freezes the target solid.</mk:description>
+    <mk:hasElement rdf:resource="https://example.org/mk/element-ice"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/move-hat-throw">
+    <rdf:type rdf:resource="https://example.org/mk/Move"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Razor Rim Hat Toss</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Throwing a circular razor-rimmed hat with boomerang-like trajectory.</mk:description>
+    <mk:hasElement rdf:resource="https://example.org/mk/element-energy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/event-cassie-defeats-shinnok">
+    <rdf:type rdf:resource="https://example.org/mk/Event"/>
+    <mk:eventTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fall of Corrupted Shinnok</mk:eventTitle>
+    <mk:eventSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cassie Cage awakens her ancient green shadow halo energy to defeat Corrupted Shinnok and purify the Earthrealm Jinsei.</mk:eventSummary>
+    <mk:occursIn rdf:resource="https://example.org/mk/timeline-reboot"/>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Mortal_Kombat_X</mk:sourceURL>
+    <mk:involvesCharacter rdf:resource="https://example.org/mk/character-cassiecage"/>
+    <mk:involvesCharacter rdf:resource="https://example.org/mk/character-shinnok"/>
+    <mk:involvesCharacter rdf:resource="https://example.org/mk/character-johnnycage"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/move-spear">
+    <rdf:type rdf:resource="https://example.org/mk/Move"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kunai Spear (Get Over Here!)</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hurling a rope or chain spear into the enemy and pulling them in with extreme force.</mk:description>
+    <mk:hasElement rdf:resource="https://example.org/mk/element-fire"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/event-first-mk-tournament">
+    <rdf:type rdf:resource="https://example.org/mk/Event"/>
+    <mk:eventTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tenth Mortal Kombat Tournament</mk:eventTitle>
+    <mk:eventSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Liu Kang defeats Goro and Shang Tsung to prevent Outworld from conquering Earthrealm.</mk:eventSummary>
+    <mk:occursIn rdf:resource="https://example.org/mk/timeline-original"/>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Mortal_Kombat_Tournament</mk:sourceURL>
+    <mk:involvesCharacter rdf:resource="https://example.org/mk/character-liukang"/>
+    <mk:involvesCharacter rdf:resource="https://example.org/mk/character-shangtsung"/>
+    <mk:involvesCharacter rdf:resource="https://example.org/mk/character-raiden"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/version-reptile-mkx">
+    <rdf:type rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reptile (mkx-2015)</mk:name>
+    <mk:versionOf rdf:resource="https://example.org/mk/character-reptile"/>
+    <mk:appearsIn rdf:resource="https://example.org/mk/game-mkx-2015"/>
+    <mk:existsInTimeline rdf:resource="https://example.org/mk/timeline-reboot"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/version-shinnok-mkx">
+    <rdf:type rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shinnok (mkx-2015)</mk:name>
+    <mk:versionOf rdf:resource="https://example.org/mk/character-shinnok"/>
+    <mk:appearsIn rdf:resource="https://example.org/mk/game-mkx-2015"/>
+    <mk:existsInTimeline rdf:resource="https://example.org/mk/timeline-reboot"/>
+    <mk:memberOf rdf:resource="https://example.org/mk/org-brotherhood-of-shadow"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/ability-shadow-magic"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/ability-necromancy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/game-mk3-1995">
+    <rdf:type rdf:resource="https://example.org/mk/Game"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mortal Kombat 3</mk:name>
+    <mk:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1995-04-15</mk:releaseDate>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chronicles Shao Kahn's invasion of Earthrealm, introducing Cyber Ninjas.</mk:description>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Mortal_Kombat_3</mk:sourceURL>
+    <mk:verificationStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verified</mk:verificationStatus>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/event-deadly-alliance-formed">
+    <rdf:type rdf:resource="https://example.org/mk/Event"/>
+    <mk:eventTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Formation of the Deadly Alliance</mk:eventTitle>
+    <mk:eventSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shang Tsung and Quan Chi join forces, assassinating Shao Kahn and Liu Kang to resurrect the Dragon King's army.</mk:eventSummary>
+    <mk:occursIn rdf:resource="https://example.org/mk/timeline-original"/>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Deadly_Alliance</mk:sourceURL>
+    <mk:involvesCharacter rdf:resource="https://example.org/mk/character-shangtsung"/>
+    <mk:involvesCharacter rdf:resource="https://example.org/mk/character-quanchi"/>
+    <mk:involvesCharacter rdf:resource="https://example.org/mk/character-liukang"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/ability-soul-stealing">
+    <rdf:type rdf:resource="https://example.org/mk/Ability"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Soul Steal</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Draining an opponent's soul to heal and assume their appearance and abilities.</mk:description>
+    <mk:hasElement rdf:resource="https://example.org/mk/element-soul"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/version-cassiecage-mk11">
+    <rdf:type rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cassie Cage (mk11-2019)</mk:name>
+    <mk:versionOf rdf:resource="https://example.org/mk/character-cassiecage"/>
+    <mk:appearsIn rdf:resource="https://example.org/mk/game-mk11-2019"/>
+    <mk:existsInTimeline rdf:resource="https://example.org/mk/timeline-reboot"/>
+    <mk:memberOf rdf:resource="https://example.org/mk/org-special-forces"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/move-shadow-kick"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/move-nut-punch"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/character-baraka">
+    <rdf:type rdf:resource="https://example.org/mk/Character"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Baraka</mk:name>
+    <mk:alternateName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tarkatan War Chief</mk:alternateName>
+    <mk:firstAppearanceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1993</mk:firstAppearanceYear>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ferocious warlord of the nomadic Tarkatan tribe with retractable arm blades.</mk:description>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Baraka</mk:sourceURL>
+    <mk:verificationStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verified</mk:verificationStatus>
+    <mk:hasVersion rdf:resource="https://example.org/mk/version-baraka-mk11"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/character-subzero">
+    <rdf:type rdf:resource="https://example.org/mk/Character"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sub-Zero</mk:name>
+    <mk:alternateName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kuai Liang</mk:alternateName>
+    <mk:firstAppearanceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1993</mk:firstAppearanceYear>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grandmaster of the Lin Kuei clan wielding lethal cryomantic freezing power.</mk:description>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Sub-Zero</mk:sourceURL>
+    <mk:verificationStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verified</mk:verificationStatus>
+    <mk:hasVersion rdf:resource="https://example.org/mk/version-subzero-classic"/>
+    <mk:hasVersion rdf:resource="https://example.org/mk/version-subzero-mk11"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/version-liukang-mk11">
+    <rdf:type rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Liu Kang (mk11-2019)</mk:name>
+    <mk:versionOf rdf:resource="https://example.org/mk/character-liukang"/>
+    <mk:appearsIn rdf:resource="https://example.org/mk/game-mk11-2019"/>
+    <mk:existsInTimeline rdf:resource="https://example.org/mk/timeline-reboot"/>
+    <mk:memberOf rdf:resource="https://example.org/mk/org-white-lotus"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/ability-fireball-dragon"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/move-bicycle-kick"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/fatality-dragon-bite"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/version-havik-mk1-2023">
+    <rdf:type rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Havik (mk1-2023)</mk:name>
+    <mk:versionOf rdf:resource="https://example.org/mk/character-havik"/>
+    <mk:appearsIn rdf:resource="https://example.org/mk/game-mk1-2023"/>
+    <mk:existsInTimeline rdf:resource="https://example.org/mk/timeline-new-era"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/move-blood-tentacles"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/event-resurrection-of-onaga">
+    <rdf:type rdf:resource="https://example.org/mk/Event"/>
+    <mk:eventTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Return of the Dragon King</mk:eventTitle>
+    <mk:eventSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Onaga returns from the dead to reclaim Outworld's throne, breaking the Deadly Alliance and forcing Raiden to sacrifice himself.</mk:eventSummary>
+    <mk:occursIn rdf:resource="https://example.org/mk/timeline-original"/>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Onaga</mk:sourceURL>
+    <mk:involvesCharacter rdf:resource="https://example.org/mk/character-raiden"/>
+    <mk:involvesCharacter rdf:resource="https://example.org/mk/character-shangtsung"/>
+    <mk:involvesCharacter rdf:resource="https://example.org/mk/character-quanchi"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/move-acid-spit">
+    <rdf:type rdf:resource="https://example.org/mk/Move"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corrosive Acid Spit</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ejecting caustic digestive acid that melts armor and flesh on contact.</mk:description>
+    <mk:hasElement rdf:resource="https://example.org/mk/element-energy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/move-soul-ball">
+    <rdf:type rdf:resource="https://example.org/mk/Move"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Green Soul Burst</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harnessing stolen souls into an explosive sphere of spiritual energy.</mk:description>
+    <mk:hasElement rdf:resource="https://example.org/mk/element-soul"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/version-scorpion-classic">
+    <rdf:type rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scorpion (mk1-1992)</mk:name>
+    <mk:versionOf rdf:resource="https://example.org/mk/character-scorpion"/>
+    <mk:appearsIn rdf:resource="https://example.org/mk/game-mk1-1992"/>
+    <mk:existsInTimeline rdf:resource="https://example.org/mk/timeline-original"/>
+    <mk:memberOf rdf:resource="https://example.org/mk/org-shirai-ryu"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/ability-hellfire"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/move-spear"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/fatality-toasty"/>
+    <mk:usesWeapon rdf:resource="https://example.org/mk/weapon-kunai"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/version-boraicho-mkx">
+    <rdf:type rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bo' Rai Cho (mkx-2015)</mk:name>
+    <mk:versionOf rdf:resource="https://example.org/mk/character-boraicho"/>
+    <mk:appearsIn rdf:resource="https://example.org/mk/game-mkx-2015"/>
+    <mk:existsInTimeline rdf:resource="https://example.org/mk/timeline-reboot"/>
+    <mk:memberOf rdf:resource="https://example.org/mk/org-white-lotus"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/move-drunken-fist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/element-shadow">
+    <rdf:type rdf:resource="https://example.org/mk/Element"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shadow</mk:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/character-tanya">
+    <rdf:type rdf:resource="https://example.org/mk/Character"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tanya</mk:name>
+    <mk:alternateName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Umgadi Guardian</mk:alternateName>
+    <mk:firstAppearanceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1997</mk:firstAppearanceYear>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Edenian diplomat turned Umgadi warrior sworn to protect Outworld's royal family.</mk:description>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Tanya</mk:sourceURL>
+    <mk:verificationStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verified</mk:verificationStatus>
+    <mk:hasVersion rdf:resource="https://example.org/mk/version-tanya-mk1-2023"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/game-mk-deadly-alliance-2002">
+    <rdf:type rdf:resource="https://example.org/mk/Game"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mortal Kombat: Deadly Alliance</mk:name>
+    <mk:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2002-11-16</mk:releaseDate>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reinvented combat mechanics with three fighting styles per fighter and the alliance of Shang Tsung and Quan Chi.</mk:description>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Mortal_Kombat:_Deadly_Alliance</mk:sourceURL>
+    <mk:verificationStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verified</mk:verificationStatus>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/org-white-lotus">
+    <rdf:type rdf:resource="https://example.org/mk/Organization"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">White Lotus Society</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Secret society of martial artists founded by Raiden to defend Earthrealm.</mk:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/event-earthrealm-invasion">
+    <rdf:type rdf:resource="https://example.org/mk/Event"/>
+    <mk:eventTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shao Kahn's Invasion of Earthrealm</mk:eventTitle>
+    <mk:eventSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shao Kahn resurrects Queen Sindel on Earth, merging Outworld with Earthrealm by force.</mk:eventSummary>
+    <mk:occursIn rdf:resource="https://example.org/mk/timeline-original"/>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Mortal_Kombat_3</mk:sourceURL>
+    <mk:involvesCharacter rdf:resource="https://example.org/mk/character-shaokahn"/>
+    <mk:involvesCharacter rdf:resource="https://example.org/mk/character-raiden"/>
+    <mk:involvesCharacter rdf:resource="https://example.org/mk/character-sonyablade"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/version-subzero-classic">
+    <rdf:type rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sub-Zero (mk2-1993)</mk:name>
+    <mk:versionOf rdf:resource="https://example.org/mk/character-subzero"/>
+    <mk:appearsIn rdf:resource="https://example.org/mk/game-mk2-1993"/>
+    <mk:existsInTimeline rdf:resource="https://example.org/mk/timeline-original"/>
+    <mk:memberOf rdf:resource="https://example.org/mk/org-lin-kuei"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/ability-cryomancy"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/move-ice-freeze"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/fatality-spine-rip"/>
+    <mk:usesWeapon rdf:resource="https://example.org/mk/weapon-kori-blade"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/version-kintaro-classic">
+    <rdf:type rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kintaro (mk2-1993)</mk:name>
+    <mk:versionOf rdf:resource="https://example.org/mk/character-kintaro"/>
+    <mk:appearsIn rdf:resource="https://example.org/mk/game-mk2-1993"/>
+    <mk:existsInTimeline rdf:resource="https://example.org/mk/timeline-original"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/move-shokan-stomp"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/move-nut-punch">
+    <rdf:type rdf:resource="https://example.org/mk/Move"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nut Punch</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Splits on the ground delivering an unexpected disabling low strike.</mk:description>
+    <mk:hasElement rdf:resource="https://example.org/mk/element-energy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/game-mkx-2015">
+    <rdf:type rdf:resource="https://example.org/mk/Game"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mortal Kombat X</mk:name>
+    <mk:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-04-14</mk:releaseDate>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Set 25 years after MK9, introducing the next generation of Kombatants.</mk:description>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Mortal_Kombat_X</mk:sourceURL>
+    <mk:verificationStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verified</mk:verificationStatus>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/move-bone-twist">
+    <rdf:type rdf:resource="https://example.org/mk/Move"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">360 Torso Contortion</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Havik twists his own torso a full 360 degrees to strike backward unpredictably.</mk:description>
+    <mk:hasElement rdf:resource="https://example.org/mk/element-energy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/character-jax">
+    <rdf:type rdf:resource="https://example.org/mk/Character"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jax Briggs</mk:name>
+    <mk:alternateName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Major Jackson Briggs</mk:alternateName>
+    <mk:firstAppearanceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1993</mk:firstAppearanceYear>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">U.S. Special Forces leader with bionic titanium cybernetic arms.</mk:description>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Jax_Briggs</mk:sourceURL>
+    <mk:verificationStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verified</mk:verificationStatus>
+    <mk:hasVersion rdf:resource="https://example.org/mk/version-jax-mk11"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/character-mileena">
+    <rdf:type rdf:resource="https://example.org/mk/Character"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mileena</mk:name>
+    <mk:alternateName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Empress Mileena</mk:alternateName>
+    <mk:firstAppearanceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1993</mk:firstAppearanceYear>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Genetic clone combining Edenian elegance and vicious Tarkatan ferocity.</mk:description>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Mileena</mk:sourceURL>
+    <mk:verificationStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verified</mk:verificationStatus>
+    <mk:hasVersion rdf:resource="https://example.org/mk/version-mileena-mk11"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/fatality-shokan-tear">
+    <rdf:type rdf:resource="https://example.org/mk/Move"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fatality: Limb Disassembly</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Goro grabs both arms and legs, tearing the opponent into four separate pieces.</mk:description>
+    <mk:hasElement rdf:resource="https://example.org/mk/element-energy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/move-shadow-kick">
+    <rdf:type rdf:resource="https://example.org/mk/Move"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shadow Kick</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A dashing high-impact kick trailing green kinetic shadow energy.</mk:description>
+    <mk:hasElement rdf:resource="https://example.org/mk/element-energy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/ability-teleportation">
+    <rdf:type rdf:resource="https://example.org/mk/Ability"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dimensional Teleportation</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Instant spatial traversal across short or long distances.</mk:description>
+    <mk:hasElement rdf:resource="https://example.org/mk/element-energy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/character-kronika">
+    <rdf:type rdf:resource="https://example.org/mk/Character"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kronika</mk:name>
+    <mk:alternateName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Keeper of Time</mk:alternateName>
+    <mk:firstAppearanceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2019</mk:firstAppearanceYear>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Titan of Time and mother of Shinnok and Cetrion seeking to reset the timeline to erase Raiden.</mk:description>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Kronika</mk:sourceURL>
+    <mk:verificationStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verified</mk:verificationStatus>
+    <mk:hasVersion rdf:resource="https://example.org/mk/version-kronika-mk11"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/realm-netherrealm">
+    <rdf:type rdf:resource="https://example.org/mk/Realm"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Netherrealm</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The fiery subterranean plane of eternal torment, demons, revenants, and dark necromancy.</mk:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/character-kintaro">
+    <rdf:type rdf:resource="https://example.org/mk/Character"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kintaro</mk:name>
+    <mk:alternateName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tigrar Shokan</mk:alternateName>
+    <mk:firstAppearanceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1993</mk:firstAppearanceYear>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ferocious tiger-striped four-armed Shokan general serving as Shao Kahn's vanguard.</mk:description>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Kintaro</mk:sourceURL>
+    <mk:verificationStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verified</mk:verificationStatus>
+    <mk:hasVersion rdf:resource="https://example.org/mk/version-kintaro-classic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/character-goro">
+    <rdf:type rdf:resource="https://example.org/mk/Character"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Goro</mk:name>
+    <mk:alternateName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prince Goro</mk:alternateName>
+    <mk:firstAppearanceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1992</mk:firstAppearanceYear>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Four-armed Shokan prince and 500-year undefeated champion of the Mortal Kombat tournament.</mk:description>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Goro</mk:sourceURL>
+    <mk:verificationStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verified</mk:verificationStatus>
+    <mk:hasVersion rdf:resource="https://example.org/mk/version-goro-classic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/character-sektor">
+    <rdf:type rdf:resource="https://example.org/mk/Character"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sektor</mk:name>
+    <mk:alternateName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unit LK-9T9</mk:alternateName>
+    <mk:firstAppearanceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1995</mk:firstAppearanceYear>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grandmaster's son who willingly embraced cybernetization, armed with flamethrowers and heat-seeking missiles.</mk:description>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Sektor</mk:sourceURL>
+    <mk:verificationStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verified</mk:verificationStatus>
+    <mk:hasVersion rdf:resource="https://example.org/mk/version-sektor-mk11"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/game-mk2-1993">
+    <rdf:type rdf:resource="https://example.org/mk/Game"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mortal Kombat II</mk:name>
+    <mk:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1993-04-01</mk:releaseDate>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sequel set in Outworld with expanded roster, Fatalities, Babalities, and Friendships.</mk:description>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Mortal_Kombat_II</mk:sourceURL>
+    <mk:verificationStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verified</mk:verificationStatus>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/weapon-mugai-ryu">
+    <rdf:type rdf:resource="https://example.org/mk/Weapon"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mugai Ryu Dual Katanas</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Twin razor-honed Japanese katanas carried on the back.</mk:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/move-net-tangle">
+    <rdf:type rdf:resource="https://example.org/mk/Move"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Energy Net</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Firing an electrified green plasma net that immobilizes targets.</mk:description>
+    <mk:hasElement rdf:resource="https://example.org/mk/element-energy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/event-raiden-vision-reset">
+    <rdf:type rdf:resource="https://example.org/mk/Event"/>
+    <mk:eventTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Raiden's Temporal Message (He Must Win)</mk:eventTitle>
+    <mk:eventSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Raiden alters history during the first tournament upon receiving visions from the future.</mk:eventSummary>
+    <mk:occursIn rdf:resource="https://example.org/mk/timeline-reboot"/>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Mortal_Kombat_(2011_video_game)</mk:sourceURL>
+    <mk:involvesCharacter rdf:resource="https://example.org/mk/character-raiden"/>
+    <mk:involvesCharacter rdf:resource="https://example.org/mk/character-liukang"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/version-shaokahn-mk11">
+    <rdf:type rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shao Kahn (mk11-2019)</mk:name>
+    <mk:versionOf rdf:resource="https://example.org/mk/character-shaokahn"/>
+    <mk:appearsIn rdf:resource="https://example.org/mk/game-mk11-2019"/>
+    <mk:existsInTimeline rdf:resource="https://example.org/mk/timeline-reboot"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/ability-energy"/>
+    <mk:usesWeapon rdf:resource="https://example.org/mk/weapon-war-hammer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/game-mk-mythologies-1997">
+    <rdf:type rdf:resource="https://example.org/mk/Game"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mortal Kombat Mythologies: Sub-Zero</mk:name>
+    <mk:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1997-10-01</mk:releaseDate>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Action-adventure prequel following Bi-Han acquiring Shinnok's amulet for Quan Chi.</mk:description>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Mortal_Kombat_Mythologies:_Sub-Zero</mk:sourceURL>
+    <mk:verificationStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verified</mk:verificationStatus>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/character-shinnok">
+    <rdf:type rdf:resource="https://example.org/mk/Character"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shinnok</mk:name>
+    <mk:alternateName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fallen Elder God</mk:alternateName>
+    <mk:firstAppearanceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1997</mk:firstAppearanceYear>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fallen Elder God of death and darkness ruler of the Netherrealm wielding his sacred amulet.</mk:description>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Shinnok</mk:sourceURL>
+    <mk:verificationStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verified</mk:verificationStatus>
+    <mk:hasVersion rdf:resource="https://example.org/mk/version-shinnok-mkx"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/character-liukang">
+    <rdf:type rdf:resource="https://example.org/mk/Character"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Liu Kang</mk:name>
+    <mk:alternateName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fire God Liu Kang</mk:alternateName>
+    <mk:firstAppearanceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1992</mk:firstAppearanceYear>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shaolin monk, multi-time Mortal Kombat champion, and ultimate architect of the New Era.</mk:description>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Liu_Kang</mk:sourceURL>
+    <mk:verificationStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verified</mk:verificationStatus>
+    <mk:hasVersion rdf:resource="https://example.org/mk/version-liukang-mk11"/>
+    <mk:hasVersion rdf:resource="https://example.org/mk/version-liukang-mk1-2023"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/character-kotalkahn">
+    <rdf:type rdf:resource="https://example.org/mk/Character"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kotal Kahn</mk:name>
+    <mk:alternateName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ko'atal (Sun God)</mk:alternateName>
+    <mk:firstAppearanceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2015</mk:firstAppearanceYear>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Noble Osh-Tekk warrior who deposed Mileena to become Emperor of Outworld.</mk:description>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Kotal_Kahn</mk:sourceURL>
+    <mk:verificationStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verified</mk:verificationStatus>
+    <mk:hasVersion rdf:resource="https://example.org/mk/version-kotalkahn-mk11"/>
+    <mk:enemyOf rdf:resource="https://example.org/mk/character-mileena"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/game-mk9-2011">
+    <rdf:type rdf:resource="https://example.org/mk/Game"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mortal Kombat (2011)</mk:name>
+    <mk:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2011-04-19</mk:releaseDate>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Timeline reset orchestrated by Raiden rewinding the events of MK1 through MK3.</mk:description>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Mortal_Kombat_(2011_video_game)</mk:sourceURL>
+    <mk:verificationStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verified</mk:verificationStatus>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/game-mkt-1996">
+    <rdf:type rdf:resource="https://example.org/mk/Game"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mortal Kombat Trilogy</mk:name>
+    <mk:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1996-10-10</mk:releaseDate>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Standalone anthology featuring almost every fighter from the first three games.</mk:description>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Mortal_Kombat_Trilogy</mk:sourceURL>
+    <mk:verificationStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verified</mk:verificationStatus>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/event-shinnok-invasion">
+    <rdf:type rdf:resource="https://example.org/mk/Event"/>
+    <mk:eventTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Netherrealm War Against Earthrealm</mk:eventTitle>
+    <mk:eventSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fallen Elder God Shinnok leads Netherrealm revenants in an assault on the Jinsei Chamber before being trapped inside his own amulet.</mk:eventSummary>
+    <mk:occursIn rdf:resource="https://example.org/mk/timeline-reboot"/>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Netherrealm_War</mk:sourceURL>
+    <mk:involvesCharacter rdf:resource="https://example.org/mk/character-shinnok"/>
+    <mk:involvesCharacter rdf:resource="https://example.org/mk/character-raiden"/>
+    <mk:involvesCharacter rdf:resource="https://example.org/mk/character-quanchi"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/move-square-wave">
+    <rdf:type rdf:resource="https://example.org/mk/Move"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Square Wave Flight</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mid-air dive propelled by acrobatic Edenian momentum.</mk:description>
+    <mk:hasElement rdf:resource="https://example.org/mk/element-energy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/character-boraicho">
+    <rdf:type rdf:resource="https://example.org/mk/Character"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bo' Rai Cho</mk:name>
+    <mk:alternateName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Master of the Drunken Fist</mk:alternateName>
+    <mk:firstAppearanceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2002</mk:firstAppearanceYear>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Outworld martial arts master who trained legendary champions Liu Kang and Kung Lao.</mk:description>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Bo%27_Rai_Cho</mk:sourceURL>
+    <mk:verificationStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verified</mk:verificationStatus>
+    <mk:hasVersion rdf:resource="https://example.org/mk/version-boraicho-mkx"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/character-erronblack">
+    <rdf:type rdf:resource="https://example.org/mk/Character"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Erron Black</mk:name>
+    <mk:alternateName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Outworld Gunslinger</mk:alternateName>
+    <mk:firstAppearanceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2015</mk:firstAppearanceYear>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19th-century Earthrealm gunfighter granted prolonged life by Shang Tsung, working as an Outworld mercenary.</mk:description>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Erron_Black</mk:sourceURL>
+    <mk:verificationStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verified</mk:verificationStatus>
+    <mk:hasVersion rdf:resource="https://example.org/mk/version-erronblack-mk11"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/character-noobsaibot">
+    <rdf:type rdf:resource="https://example.org/mk/Character"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Noob Saibot</mk:name>
+    <mk:alternateName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bi-Han (Revenant)</mk:alternateName>
+    <mk:firstAppearanceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1993</mk:firstAppearanceYear>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The resurrected wraith of the original Sub-Zero Bi-Han, consumed by darkness and shadow.</mk:description>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Noob_Saibot</mk:sourceURL>
+    <mk:verificationStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verified</mk:verificationStatus>
+    <mk:hasVersion rdf:resource="https://example.org/mk/version-noobsaibot-mk11"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/character-sindel">
+    <rdf:type rdf:resource="https://example.org/mk/Character"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sindel</mk:name>
+    <mk:alternateName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Queen Sindel</mk:alternateName>
+    <mk:firstAppearanceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1995</mk:firstAppearanceYear>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Queen of Edenia and mother of Kitana possessing lethal sonic screams and prehensile hair.</mk:description>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Sindel</mk:sourceURL>
+    <mk:verificationStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verified</mk:verificationStatus>
+    <mk:hasVersion rdf:resource="https://example.org/mk/version-sindel-mk11"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/element-lightning">
+    <rdf:type rdf:resource="https://example.org/mk/Element"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lightning</mk:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/version-frost-mk11">
+    <rdf:type rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Frost (mk11-2019)</mk:name>
+    <mk:versionOf rdf:resource="https://example.org/mk/character-frost"/>
+    <mk:appearsIn rdf:resource="https://example.org/mk/game-mk11-2019"/>
+    <mk:existsInTimeline rdf:resource="https://example.org/mk/timeline-reboot"/>
+    <mk:memberOf rdf:resource="https://example.org/mk/org-lin-kuei"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/ability-cryomancy"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/move-ice-freeze"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/version-shangtsung-mk11">
+    <rdf:type rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shang Tsung (mk11-2019)</mk:name>
+    <mk:versionOf rdf:resource="https://example.org/mk/character-shangtsung"/>
+    <mk:appearsIn rdf:resource="https://example.org/mk/game-mk11-2019"/>
+    <mk:existsInTimeline rdf:resource="https://example.org/mk/timeline-reboot"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/ability-soul-stealing"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/ability-fireball-dragon"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/character-frost">
+    <rdf:type rdf:resource="https://example.org/mk/Character"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Frost</mk:name>
+    <mk:alternateName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cyber Frost</mk:alternateName>
+    <mk:firstAppearanceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2002</mk:firstAppearanceYear>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ambitious Lin Kuei cryomancer prodigy who rebelled against Sub-Zero and embraced cybernetization.</mk:description>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Frost</mk:sourceURL>
+    <mk:verificationStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verified</mk:verificationStatus>
+    <mk:hasVersion rdf:resource="https://example.org/mk/version-frost-mk11"/>
+    <mk:enemyOf rdf:resource="https://example.org/mk/character-subzero"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/version-mileena-mk11">
+    <rdf:type rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mileena (mk11-2019)</mk:name>
+    <mk:versionOf rdf:resource="https://example.org/mk/character-mileena"/>
+    <mk:appearsIn rdf:resource="https://example.org/mk/game-mk11-2019"/>
+    <mk:existsInTimeline rdf:resource="https://example.org/mk/timeline-reboot"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/ability-teleportation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/version-raiden-mk11">
+    <rdf:type rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Raiden (mk11-2019)</mk:name>
+    <mk:versionOf rdf:resource="https://example.org/mk/character-raiden"/>
+    <mk:appearsIn rdf:resource="https://example.org/mk/game-mk11-2019"/>
+    <mk:existsInTimeline rdf:resource="https://example.org/mk/timeline-reboot"/>
+    <mk:memberOf rdf:resource="https://example.org/mk/org-white-lotus"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/ability-thunder-mastery"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/ability-electric-fly"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/ability-teleportation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/version-scorpion-mk1-2023">
+    <rdf:type rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scorpion (mk1-2023)</mk:name>
+    <mk:versionOf rdf:resource="https://example.org/mk/character-scorpion"/>
+    <mk:appearsIn rdf:resource="https://example.org/mk/game-mk1-2023"/>
+    <mk:existsInTimeline rdf:resource="https://example.org/mk/timeline-new-era"/>
+    <mk:memberOf rdf:resource="https://example.org/mk/org-lin-kuei"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/ability-hellfire"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/move-spear"/>
+    <mk:usesWeapon rdf:resource="https://example.org/mk/weapon-kunai"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/move-ring-toss">
+    <rdf:type rdf:resource="https://example.org/mk/Move"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Energy Ring Toss</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wrist-blaster concentric sonic rings that slice through incoming projectiles.</mk:description>
+    <mk:hasElement rdf:resource="https://example.org/mk/element-energy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/move-tele-flurry">
+    <rdf:type rdf:resource="https://example.org/mk/Move"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tele-Flurry</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kenshi telepathically projects a warrior spirit to slash the opponent from afar.</mk:description>
+    <mk:hasElement rdf:resource="https://example.org/mk/element-energy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/fatality-kiss-of-death">
+    <rdf:type rdf:resource="https://example.org/mk/Move"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fatality: Kiss of Death</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blowing a glowing kiss of energy that causes the opponent to violently detonate.</mk:description>
+    <mk:hasElement rdf:resource="https://example.org/mk/element-energy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/ability-thunder-mastery">
+    <rdf:type rdf:resource="https://example.org/mk/Ability"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thunder Mastery</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Summoning divine lightning bolts from storm clouds.</mk:description>
+    <mk:hasElement rdf:resource="https://example.org/mk/element-lightning"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/game-umk3-1995">
+    <rdf:type rdf:resource="https://example.org/mk/Game"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ultimate Mortal Kombat 3</mk:name>
+    <mk:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1995-10-06</mk:releaseDate>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Standalone arcade update bringing back Scorpion, Kitana, and classic ninjas.</mk:description>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Ultimate_Mortal_Kombat_3</mk:sourceURL>
+    <mk:verificationStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verified</mk:verificationStatus>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/version-kano-mk11">
+    <rdf:type rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kano (mk11-2019)</mk:name>
+    <mk:versionOf rdf:resource="https://example.org/mk/character-kano"/>
+    <mk:appearsIn rdf:resource="https://example.org/mk/game-mk11-2019"/>
+    <mk:existsInTimeline rdf:resource="https://example.org/mk/timeline-reboot"/>
+    <mk:memberOf rdf:resource="https://example.org/mk/org-black-dragon"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/move-cannonball"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/timeline-new-era">
+    <rdf:type rdf:resource="https://example.org/mk/Timeline"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New Era</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The peace-focused universe engineered by Fire God Liu Kang using the Hourglass, where origins and rivalries were fundamentally rewritten.</mk:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/move-revolver-quickdraw">
+    <rdf:type rdf:resource="https://example.org/mk/Move"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sand Slam &amp; Quickdraw</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rapid six-shooter revolver barrage accompanied by blinding Netherrealm sand.</mk:description>
+    <mk:hasElement rdf:resource="https://example.org/mk/element-energy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/version-johnnycage-mk11">
+    <rdf:type rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Johnny Cage (mk11-2019)</mk:name>
+    <mk:versionOf rdf:resource="https://example.org/mk/character-johnnycage"/>
+    <mk:appearsIn rdf:resource="https://example.org/mk/game-mk11-2019"/>
+    <mk:existsInTimeline rdf:resource="https://example.org/mk/timeline-reboot"/>
+    <mk:memberOf rdf:resource="https://example.org/mk/org-special-forces"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/move-shadow-kick"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/game-mk-armageddon-2006">
+    <rdf:type rdf:resource="https://example.org/mk/Game"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mortal Kombat: Armageddon</mk:name>
+    <mk:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-10-11</mk:releaseDate>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Climax of the original continuity featuring all 62 fighters competing at the Pyramid of Argus.</mk:description>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Mortal_Kombat:_Armageddon</mk:sourceURL>
+    <mk:verificationStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verified</mk:verificationStatus>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/element-soul">
+    <rdf:type rdf:resource="https://example.org/mk/Element"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Soul / Spirit</mk:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/version-kronika-mk11">
+    <rdf:type rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kronika (mk11-2019)</mk:name>
+    <mk:versionOf rdf:resource="https://example.org/mk/character-kronika"/>
+    <mk:appearsIn rdf:resource="https://example.org/mk/game-mk11-2019"/>
+    <mk:existsInTimeline rdf:resource="https://example.org/mk/timeline-reboot"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/ability-teleportation"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/ability-energy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/move-missile-salvo">
+    <rdf:type rdf:resource="https://example.org/mk/Move"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Homing Missile</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chest-mounted rocket targeting enemy coordinates with thermal tracking.</mk:description>
+    <mk:hasElement rdf:resource="https://example.org/mk/element-fire"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/character-kunglao">
+    <rdf:type rdf:resource="https://example.org/mk/Character"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kung Lao</mk:name>
+    <mk:alternateName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shaolin Monk</mk:alternateName>
+    <mk:firstAppearanceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1993</mk:firstAppearanceYear>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shaolin monk descendant of the Great Kung Lao, master of the razor-rimmed hat.</mk:description>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Kung_Lao</mk:sourceURL>
+    <mk:verificationStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verified</mk:verificationStatus>
+    <mk:hasVersion rdf:resource="https://example.org/mk/version-kunglao-mk11"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/character-reptile">
+    <rdf:type rdf:resource="https://example.org/mk/Character"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reptile</mk:name>
+    <mk:alternateName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Syzoth</mk:alternateName>
+    <mk:firstAppearanceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1992</mk:firstAppearanceYear>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zaterran humanoid reptile assassin fighting to restore his extinct reptilian race.</mk:description>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Reptile</mk:sourceURL>
+    <mk:verificationStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verified</mk:verificationStatus>
+    <mk:hasVersion rdf:resource="https://example.org/mk/version-reptile-mkx"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/event-pact-of-fire-and-ice">
+    <rdf:type rdf:resource="https://example.org/mk/Event"/>
+    <mk:eventTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pact of Fire and Ice</mk:eventTitle>
+    <mk:eventSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kuai Liang reveals Quan Chi's deceit to Hanzo Hasashi, establishing peace between Shirai Ryu and Lin Kuei.</mk:eventSummary>
+    <mk:occursIn rdf:resource="https://example.org/mk/timeline-reboot"/>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Mortal_Kombat_X</mk:sourceURL>
+    <mk:involvesCharacter rdf:resource="https://example.org/mk/character-scorpion"/>
+    <mk:involvesCharacter rdf:resource="https://example.org/mk/character-subzero"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/version-tanya-mk1-2023">
+    <rdf:type rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tanya (mk1-2023)</mk:name>
+    <mk:versionOf rdf:resource="https://example.org/mk/character-tanya"/>
+    <mk:appearsIn rdf:resource="https://example.org/mk/game-mk1-2023"/>
+    <mk:existsInTimeline rdf:resource="https://example.org/mk/timeline-new-era"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/ability-teleportation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/character-limei">
+    <rdf:type rdf:resource="https://example.org/mk/Character"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Li Mei</mk:name>
+    <mk:alternateName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Constable of Sun Do</mk:alternateName>
+    <mk:firstAppearanceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2002</mk:firstAppearanceYear>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fierce Outworld martial artist who champions the common people of Sun Do.</mk:description>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Li_Mei</mk:sourceURL>
+    <mk:verificationStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verified</mk:verificationStatus>
+    <mk:hasVersion rdf:resource="https://example.org/mk/version-limei-mk1-2023"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/realm-edenia">
+    <rdf:type rdf:resource="https://example.org/mk/Realm"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Edenia</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A lush paradise realm of beauty and longevity, merged with Outworld for millennia before its restoration.</mk:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/ability-hellfire">
+    <rdf:type rdf:resource="https://example.org/mk/Ability"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hellfire Manipulation</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Summoning and projecting demonic fire from the Netherrealm.</mk:description>
+    <mk:hasElement rdf:resource="https://example.org/mk/element-fire"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/move-tarkatan-chop">
+    <rdf:type rdf:resource="https://example.org/mk/Move"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blade Fury</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rapid succession of vicious slashes from forearm arm blades.</mk:description>
+    <mk:hasElement rdf:resource="https://example.org/mk/element-energy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/realm-outworld">
+    <rdf:type rdf:resource="https://example.org/mk/Realm"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Outworld</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A harsh, majestic imperial realm forged by conquering and merging neighboring worlds.</mk:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/fatality-toasty">
+    <rdf:type rdf:resource="https://example.org/mk/Move"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fatality: Toasty!</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Removing the mask to reveal a flaming skull and incinerating the opponent to ashes.</mk:description>
+    <mk:hasElement rdf:resource="https://example.org/mk/element-fire"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/timeline-original">
+    <rdf:type rdf:resource="https://example.org/mk/Timeline"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Original Timeline</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The initial continuity spanning Mortal Kombat 1 through Mortal Kombat: Armageddon, culminating in the battle at the Pyramid of Argus.</mk:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/version-cyrax-mk11">
+    <rdf:type rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cyrax (mk11-2019)</mk:name>
+    <mk:versionOf rdf:resource="https://example.org/mk/character-cyrax"/>
+    <mk:appearsIn rdf:resource="https://example.org/mk/game-mk11-2019"/>
+    <mk:existsInTimeline rdf:resource="https://example.org/mk/timeline-reboot"/>
+    <mk:memberOf rdf:resource="https://example.org/mk/org-lin-kuei"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/ability-teleportation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/move-energy-spark">
+    <rdf:type rdf:resource="https://example.org/mk/Move"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Luminescent Spark Burst</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Li Mei unleashes purple festive chi sparks that juggle airborne targets.</mk:description>
+    <mk:hasElement rdf:resource="https://example.org/mk/element-energy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/move-sun-ray">
+    <rdf:type rdf:resource="https://example.org/mk/Move"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sun God's Ray</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Summoning a focused beam of sunlight that burns enemies while healing allies.</mk:description>
+    <mk:hasElement rdf:resource="https://example.org/mk/element-fire"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/weapon-bionic-arms">
+    <rdf:type rdf:resource="https://example.org/mk/Weapon"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cybernetic Bionic Arms</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Titanium bionic arm enhancements worn by Major Jackson 'Jax' Briggs.</mk:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/move-puke-puddle">
+    <rdf:type rdf:resource="https://example.org/mk/Move"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hazardous Fluid Puddle</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bo' Rai Cho coats the arena floor causing approaching enemies to lose their balance.</mk:description>
+    <mk:hasElement rdf:resource="https://example.org/mk/element-energy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/fatality-fan-decapitation">
+    <rdf:type rdf:resource="https://example.org/mk/Move"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fatality: Decapitating Fans</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Slicing off the opponent's head with a swift flick of dual steel war fans.</mk:description>
+    <mk:hasElement rdf:resource="https://example.org/mk/element-wind"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/org-brotherhood-of-shadow">
+    <rdf:type rdf:resource="https://example.org/mk/Organization"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brotherhood of Shadow</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fanatical Netherrealm religious cult serving the fallen Elder God Shinnok and sorcerer Quan Chi.</mk:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/ability-electric-fly">
+    <rdf:type rdf:resource="https://example.org/mk/Ability"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electric Fly (Superman)</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Propelling oneself horizontally through the air enveloped in electrical power.</mk:description>
+    <mk:hasElement rdf:resource="https://example.org/mk/element-lightning"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/move-wind-tornado">
+    <rdf:type rdf:resource="https://example.org/mk/Move"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wind Tornado Vortex</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spinning into a cyclone that lifts and disorients nearby foes.</mk:description>
+    <mk:hasElement rdf:resource="https://example.org/mk/element-wind"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/fatality-dragon-bite">
+    <rdf:type rdf:resource="https://example.org/mk/Move"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fatality: Dragon Feast</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Morphing into a massive dragon that bites the opponent's torso in half.</mk:description>
+    <mk:hasElement rdf:resource="https://example.org/mk/element-fire"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/weapon-kori-blade">
+    <rdf:type rdf:resource="https://example.org/mk/Weapon"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kori Blade</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A deadly sharp broadsword conjured directly from condensed cryogenic ice.</mk:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/move-sonic-scream">
+    <rdf:type rdf:resource="https://example.org/mk/Move"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Banshee Sonic Scream</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">High-decibel vocal resonance that stuns and strips the skin from targets.</mk:description>
+    <mk:hasElement rdf:resource="https://example.org/mk/element-energy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/weapon-war-hammer">
+    <rdf:type rdf:resource="https://example.org/mk/Weapon"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wrath Hammer</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shao Kahn's colossal war hammer capable of shattering stone and skulls.</mk:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/character-fujin">
+    <rdf:type rdf:resource="https://example.org/mk/Character"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fujin</mk:name>
+    <mk:alternateName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">God of Wind</mk:alternateName>
+    <mk:firstAppearanceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1997</mk:firstAppearanceYear>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Raiden's divine brother and God of Wind dedicated to defending humanity.</mk:description>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Fujin</mk:sourceURL>
+    <mk:verificationStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verified</mk:verificationStatus>
+    <mk:hasVersion rdf:resource="https://example.org/mk/version-fujin-mk11"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/event-battle-of-armageddon">
+    <rdf:type rdf:resource="https://example.org/mk/Event"/>
+    <mk:eventTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Battle of the Pyramid of Argus</mk:eventTitle>
+    <mk:eventSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">All warriors clash in Edenia. Shao Kahn emerges victorious, forcing Raiden to send a psychic warning into the past.</mk:eventSummary>
+    <mk:occursIn rdf:resource="https://example.org/mk/timeline-original"/>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Battle_of_Armageddon</mk:sourceURL>
+    <mk:involvesCharacter rdf:resource="https://example.org/mk/character-raiden"/>
+    <mk:involvesCharacter rdf:resource="https://example.org/mk/character-shaokahn"/>
+    <mk:involvesCharacter rdf:resource="https://example.org/mk/character-scorpion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/timeline-reboot">
+    <rdf:type rdf:resource="https://example.org/mk/Timeline"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reboot Timeline</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Created when Raiden sent a psychic message to his past self during Armageddon ('He must win'), altering events from MK9 to MK11.</mk:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/character-cyrax">
+    <rdf:type rdf:resource="https://example.org/mk/Character"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cyrax</mk:name>
+    <mk:alternateName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unit LK-4D4</mk:alternateName>
+    <mk:firstAppearanceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1995</mk:firstAppearanceYear>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lin Kuei warrior cybernetically converted into a high-tech robotic assassin with green energy nets.</mk:description>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Cyrax</mk:sourceURL>
+    <mk:verificationStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verified</mk:verificationStatus>
+    <mk:hasVersion rdf:resource="https://example.org/mk/version-cyrax-mk11"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/move-cannonball">
+    <rdf:type rdf:resource="https://example.org/mk/Move"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cannonball Roll</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Curling into a tightly wound ball and launching forward like a deadly sphere.</mk:description>
+    <mk:hasElement rdf:resource="https://example.org/mk/element-energy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/game-mk1-2023">
+    <rdf:type rdf:resource="https://example.org/mk/Game"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mortal Kombat 1 (2023)</mk:name>
+    <mk:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-09-19</mk:releaseDate>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A reborn Mortal Kombat universe crafted by Fire God Liu Kang featuring reimagined character origins.</mk:description>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.mortalkombat.com/en-us</mk:sourceURL>
+    <mk:verificationStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verified</mk:verificationStatus>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/version-smoke-mk9">
+    <rdf:type rdf:resource="https://example.org/mk/CharacterVersion"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Smoke (mk9-2011)</mk:name>
+    <mk:versionOf rdf:resource="https://example.org/mk/character-smoke"/>
+    <mk:appearsIn rdf:resource="https://example.org/mk/game-mk9-2011"/>
+    <mk:existsInTimeline rdf:resource="https://example.org/mk/timeline-reboot"/>
+    <mk:memberOf rdf:resource="https://example.org/mk/org-lin-kuei"/>
+    <mk:hasAbility rdf:resource="https://example.org/mk/ability-teleportation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/org-lin-kuei">
+    <rdf:type rdf:resource="https://example.org/mk/Clan"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lin Kuei</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ancient Chinese stealth clan of assassins and cryomancers, pledged to protect Earthrealm.</mk:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/org-black-dragon">
+    <rdf:type rdf:resource="https://example.org/mk/Organization"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Black Dragon</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ruthless international mercenary syndicate led by the criminal Kano.</mk:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/move-air-throw">
+    <rdf:type rdf:resource="https://example.org/mk/Move"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aerial Combat Throw</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jax grabs the opponent out of mid-air and violently slams them to the turf.</mk:description>
+    <mk:hasElement rdf:resource="https://example.org/mk/element-energy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/realm-earthrealm">
+    <rdf:type rdf:resource="https://example.org/mk/Realm"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Earthrealm</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Home realm of mortal humanity, protected historically by the Thunder God Raiden and now Fire God Liu Kang.</mk:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/element-ice">
+    <rdf:type rdf:resource="https://example.org/mk/Element"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ice</mk:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/weapon-steel-fans">
+    <rdf:type rdf:resource="https://example.org/mk/Weapon"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Steel Bladed War Fans</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Folding metallic fans edged with razor blades used for slashing and wind manipulation.</mk:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/weapon-kunai">
+    <rdf:type rdf:resource="https://example.org/mk/Weapon"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kunai Rope Spear</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Signature barbed spearhead attached to a rope or metal chain.</mk:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/org-shirai-ryu">
+    <rdf:type rdf:resource="https://example.org/mk/Clan"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shirai Ryu</mk:name>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Renegade ninja clan of Japan founded by Takeda, historically led by Grandmaster Hanzo Hasashi.</mk:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/element-fire">
+    <rdf:type rdf:resource="https://example.org/mk/Element"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fire</mk:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/game-mk11-2019">
+    <rdf:type rdf:resource="https://example.org/mk/Game"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mortal Kombat 11</mk:name>
+    <mk:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-04-23</mk:releaseDate>
+    <mk:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Time-bending conflict against Kronika merging past and present warriors.</mk:description>
+    <mk:sourceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mortalkombat.fandom.com/wiki/Mortal_Kombat_11</mk:sourceURL>
+    <mk:verificationStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verified</mk:verificationStatus>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/element-wind">
+    <rdf:type rdf:resource="https://example.org/mk/Element"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wind</mk:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/mk/element-blood">
+    <rdf:type rdf:resource="https://example.org/mk/Element"/>
+    <mk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blood</mk:name>
+  </rdf:Description>
+</rdf:RDF>

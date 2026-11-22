@@ -1,0 +1,32 @@
+[
+  {
+    "id": "realm-earthrealm",
+    "name": "Earthrealm",
+    "description": "Home realm of mortal humanity, protected historically by the Thunder God Raiden and now Fire God Liu Kang."
+  },
+  {
+    "id": "realm-outworld",
+    "name": "Outworld",
+    "description": "A harsh, majestic imperial realm forged by conquering and merging neighboring worlds."
+  },
+  {
+    "id": "realm-netherrealm",
+    "name": "Netherrealm",
+    "description": "The fiery subterranean plane of eternal torment, demons, revenants, and dark necromancy."
+  },
+  {
+    "id": "realm-edenia",
+    "name": "Edenia",
+    "description": "A lush paradise realm of beauty and longevity, merged with Outworld for millennia before its restoration."
+  },
+  {
+    "id": "realm-orderrealm",
+    "name": "Orderrealm (Seido)",
+    "description": "A rigid geometric realm governed strictly by law, hierarchy, and absolute order."
+  },
+  {
+    "id": "realm-chaosrealm",
+    "name": "Chaosrealm",
+    "description": "An anarchic realm of shifting structures and freedom where chaos is worshiped as supreme truth."
+  }
+]

@@ -1,0 +1,211 @@
+[
+  {
+    "id": "event-shirai-ryu-massacre",
+    "eventTitle": "Massacre of the Shirai Ryu",
+    "eventSummary": "The treacherous annihilation of Hanzo Hasashi's clan and family, orchestrated by Quan Chi.",
+    "timelineId": "timeline-original",
+    "gameId": "game-mk1-1992",
+    "chronology": 1,
+    "participants": [
+      "character-scorpion",
+      "character-quanchi",
+      "character-subzero"
+    ],
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Shirai_Ryu"
+  },
+  {
+    "id": "event-first-mk-tournament",
+    "eventTitle": "Tenth Mortal Kombat Tournament",
+    "eventSummary": "Liu Kang defeats Goro and Shang Tsung to prevent Outworld from conquering Earthrealm.",
+    "timelineId": "timeline-original",
+    "gameId": "game-mk1-1992",
+    "chronology": 2,
+    "participants": [
+      "character-liukang",
+      "character-shangtsung",
+      "character-raiden"
+    ],
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Mortal_Kombat_Tournament"
+  },
+  {
+    "id": "event-outworld-tournament",
+    "eventTitle": "Tournament in Outworld",
+    "eventSummary": "Earthrealm warriors travel to Outworld after Shao Kahn lures them into a secondary tournament.",
+    "timelineId": "timeline-original",
+    "gameId": "game-mk2-1993",
+    "chronology": 3,
+    "participants": [
+      "character-liukang",
+      "character-shaokahn",
+      "character-kitana"
+    ],
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Mortal_Kombat_II"
+  },
+  {
+    "id": "event-earthrealm-invasion",
+    "eventTitle": "Shao Kahn's Invasion of Earthrealm",
+    "eventSummary": "Shao Kahn resurrects Queen Sindel on Earth, merging Outworld with Earthrealm by force.",
+    "timelineId": "timeline-original",
+    "gameId": "game-mk3-1995",
+    "chronology": 4,
+    "participants": [
+      "character-shaokahn",
+      "character-raiden",
+      "character-sonyablade"
+    ],
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Mortal_Kombat_3"
+  },
+  {
+    "id": "event-deadly-alliance-formed",
+    "eventTitle": "Formation of the Deadly Alliance",
+    "eventSummary": "Shang Tsung and Quan Chi join forces, assassinating Shao Kahn and Liu Kang to resurrect the Dragon King's army.",
+    "timelineId": "timeline-original",
+    "gameId": "game-mk-deadly-alliance-2002",
+    "chronology": 5,
+    "participants": [
+      "character-shangtsung",
+      "character-quanchi",
+      "character-liukang"
+    ],
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Deadly_Alliance"
+  },
+  {
+    "id": "event-battle-of-armageddon",
+    "eventTitle": "The Battle of the Pyramid of Argus",
+    "eventSummary": "All warriors clash in Edenia. Shao Kahn emerges victorious, forcing Raiden to send a psychic warning into the past.",
+    "timelineId": "timeline-original",
+    "gameId": "game-mk-armageddon-2006",
+    "chronology": 6,
+    "participants": [
+      "character-raiden",
+      "character-shaokahn",
+      "character-scorpion"
+    ],
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Battle_of_Armageddon"
+  },
+  {
+    "id": "event-raiden-vision-reset",
+    "eventTitle": "Raiden's Temporal Message (He Must Win)",
+    "eventSummary": "Raiden alters history during the first tournament upon receiving visions from the future.",
+    "timelineId": "timeline-reboot",
+    "gameId": "game-mk9-2011",
+    "chronology": 7,
+    "participants": [
+      "character-raiden",
+      "character-liukang"
+    ],
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Mortal_Kombat_(2011_video_game)"
+  },
+  {
+    "id": "event-lin-kuei-cyber-initiative",
+    "eventTitle": "The Cyber Initiative",
+    "eventSummary": "The Lin Kuei converts its assassins into emotionless cybernetic units, targeting Smoke and Sub-Zero.",
+    "timelineId": "timeline-reboot",
+    "gameId": "game-mk9-2011",
+    "chronology": 8,
+    "participants": [
+      "character-subzero",
+      "character-cyrax",
+      "character-sektor"
+    ],
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Cyber_Initiative"
+  },
+  {
+    "id": "event-pact-of-fire-and-ice",
+    "eventTitle": "Pact of Fire and Ice",
+    "eventSummary": "Kuai Liang reveals Quan Chi's deceit to Hanzo Hasashi, establishing peace between Shirai Ryu and Lin Kuei.",
+    "timelineId": "timeline-reboot",
+    "gameId": "game-mkx-2015",
+    "chronology": 9,
+    "participants": [
+      "character-scorpion",
+      "character-subzero"
+    ],
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Mortal_Kombat_X"
+  },
+  {
+    "id": "event-time-merger",
+    "eventTitle": "Kronika's Temporal Convergence",
+    "eventSummary": "Kronika collapses time, bringing younger past versions of warriors into the present era.",
+    "timelineId": "timeline-reboot",
+    "gameId": "game-mk11-2019",
+    "chronology": 10,
+    "participants": [
+      "character-kronika",
+      "character-raiden",
+      "character-scorpion",
+      "character-geras"
+    ],
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Mortal_Kombat_11"
+  },
+  {
+    "id": "event-creation-of-new-era",
+    "eventTitle": "Birth of the New Era",
+    "eventSummary": "Fire God Liu Kang uses the Hourglass to reset the universe, giving Kombatants second chances.",
+    "timelineId": "timeline-new-era",
+    "gameId": "game-mk1-2023",
+    "chronology": 11,
+    "participants": [
+      "character-liukang",
+      "character-geras"
+    ],
+    "sourceURL": "https://www.mortalkombat.com/en-us"
+  },
+  {
+    "id": "event-shinnok-invasion",
+    "eventTitle": "Netherrealm War Against Earthrealm",
+    "eventSummary": "Fallen Elder God Shinnok leads Netherrealm revenants in an assault on the Jinsei Chamber before being trapped inside his own amulet.",
+    "timelineId": "timeline-reboot",
+    "gameId": "game-mkx-2015",
+    "chronology": 12,
+    "participants": [
+      "character-shinnok",
+      "character-raiden",
+      "character-quanchi"
+    ],
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Netherrealm_War"
+  },
+  {
+    "id": "event-cassie-defeats-shinnok",
+    "eventTitle": "Fall of Corrupted Shinnok",
+    "eventSummary": "Cassie Cage awakens her ancient green shadow halo energy to defeat Corrupted Shinnok and purify the Earthrealm Jinsei.",
+    "timelineId": "timeline-reboot",
+    "gameId": "game-mkx-2015",
+    "chronology": 13,
+    "participants": [
+      "character-cassiecage",
+      "character-shinnok",
+      "character-johnnycage"
+    ],
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Mortal_Kombat_X"
+  },
+  {
+    "id": "event-resurrection-of-onaga",
+    "eventTitle": "Return of the Dragon King",
+    "eventSummary": "Onaga returns from the dead to reclaim Outworld's throne, breaking the Deadly Alliance and forcing Raiden to sacrifice himself.",
+    "timelineId": "timeline-original",
+    "gameId": "game-mk-deception-2004",
+    "chronology": 14,
+    "participants": [
+      "character-raiden",
+      "character-shangtsung",
+      "character-quanchi"
+    ],
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Onaga"
+  },
+  {
+    "id": "event-battle-for-the-hourglass",
+    "eventTitle": "Battle for the Keep of Time",
+    "eventSummary": "Combined allied armies storm Kronika's fortress to seize control of the Hourglass and prevent temporal extinction.",
+    "timelineId": "timeline-reboot",
+    "gameId": "game-mk11-2019",
+    "chronology": 15,
+    "participants": [
+      "character-kronika",
+      "character-liukang",
+      "character-raiden",
+      "character-kitana"
+    ],
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Hourglass"
+  }
+]

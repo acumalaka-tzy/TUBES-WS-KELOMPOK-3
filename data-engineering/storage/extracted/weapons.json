@@ -1,0 +1,50 @@
+[
+  {
+    "id": "weapon-kunai",
+    "name": "Kunai Rope Spear",
+    "category": "Chained Weapon",
+    "description": "Signature barbed spearhead attached to a rope or metal chain."
+  },
+  {
+    "id": "weapon-kori-blade",
+    "name": "Kori Blade",
+    "category": "Bladed Sword",
+    "description": "A deadly sharp broadsword conjured directly from condensed cryogenic ice."
+  },
+  {
+    "id": "weapon-mugai-ryu",
+    "name": "Mugai Ryu Dual Katanas",
+    "category": "Katana",
+    "description": "Twin razor-honed Japanese katanas carried on the back."
+  },
+  {
+    "id": "weapon-steel-fans",
+    "name": "Steel Bladed War Fans",
+    "category": "War Fans",
+    "description": "Folding metallic fans edged with razor blades used for slashing and wind manipulation."
+  },
+  {
+    "id": "weapon-war-hammer",
+    "name": "Wrath Hammer",
+    "category": "Two-Handed Hammer",
+    "description": "Shao Kahn's colossal war hammer capable of shattering stone and skulls."
+  },
+  {
+    "id": "weapon-hookswords",
+    "name": "Tiger Hookswords",
+    "category": "Twin Swords",
+    "description": "Kabal and Mavado's traditional curved hookswords used for trapping weapons and swinging opponents."
+  },
+  {
+    "id": "weapon-sento",
+    "name": "Sento Katana",
+    "category": "Ancestral Sword",
+    "description": "Ancient samurai katana housing the trapped ancestral souls of the Takahashi clan."
+  },
+  {
+    "id": "weapon-bionic-arms",
+    "name": "Cybernetic Bionic Arms",
+    "category": "Bionics",
+    "description": "Titanium bionic arm enhancements worn by Major Jackson 'Jax' Briggs."
+  }
+]

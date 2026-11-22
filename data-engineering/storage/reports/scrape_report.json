@@ -1,0 +1,21 @@
+{
+  "scrapeRunId": "run-20261122061101",
+  "timestamp": "2026-11-22T06:11:32.550862+00:00",
+  "totalRawRecordsCollected": 23,
+  "sources": {
+    "fandom-wiki": {
+      "discovered": 7,
+      "collected": 7
+    },
+    "mk-official": {
+      "discovered": 12,
+      "collected": 12
+    },
+    "wb-games": {
+      "discovered": 4,
+      "collected": 4
+    }
+  },
+  "archiveLocation": "data-engineering\\storage\\raw\\raw_pages.json",
+  "status": "SUCCESS"
+}

@@ -1,0 +1,359 @@
+[
+  {
+    "id": "ability-hellfire",
+    "name": "Hellfire Manipulation",
+    "elementId": "element-fire",
+    "category": "Magic",
+    "description": "Summoning and projecting demonic fire from the Netherrealm."
+  },
+  {
+    "id": "ability-flame-aura",
+    "name": "Flame Aura",
+    "elementId": "element-fire",
+    "category": "Magic",
+    "description": "Surrounding the body in intense heat that incinerates nearby foes."
+  },
+  {
+    "id": "ability-fireball-dragon",
+    "name": "Dragon Fireball",
+    "elementId": "element-fire",
+    "category": "Martial",
+    "description": "Concentrated chi energy manifested as a searing dragon of flame."
+  },
+  {
+    "id": "ability-cryomancy",
+    "name": "Cryomancy",
+    "elementId": "element-ice",
+    "category": "Elemental",
+    "description": "Instant freezing of atmospheric moisture into ice shields and projectiles."
+  },
+  {
+    "id": "ability-ice-slide",
+    "name": "Ice Slide",
+    "elementId": "element-ice",
+    "category": "Mobility",
+    "description": "Coating the ground with ice to slide swiftly beneath enemy defenses."
+  },
+  {
+    "id": "ability-ice-clone",
+    "name": "Ice Clone",
+    "elementId": "element-ice",
+    "category": "Defense",
+    "description": "Leaving behind a flash-frozen decoy that freezes whoever touches it."
+  },
+  {
+    "id": "ability-thunder-mastery",
+    "name": "Thunder Mastery",
+    "elementId": "element-lightning",
+    "category": "Divine",
+    "description": "Summoning divine lightning bolts from storm clouds."
+  },
+  {
+    "id": "ability-electric-fly",
+    "name": "Electric Fly (Superman)",
+    "elementId": "element-lightning",
+    "category": "Mobility",
+    "description": "Propelling oneself horizontally through the air enveloped in electrical power."
+  },
+  {
+    "id": "ability-teleportation",
+    "name": "Dimensional Teleportation",
+    "elementId": "element-energy",
+    "category": "Spatial",
+    "description": "Instant spatial traversal across short or long distances."
+  },
+  {
+    "id": "ability-shadow-magic",
+    "name": "Shadow Magic",
+    "elementId": "element-shadow",
+    "category": "Dark Magic",
+    "description": "Summoning shadow wraiths and dark portals."
+  },
+  {
+    "id": "ability-soul-stealing",
+    "name": "Soul Steal",
+    "elementId": "element-soul",
+    "category": "Sorcery",
+    "description": "Draining an opponent's soul to heal and assume their appearance and abilities."
+  },
+  {
+    "id": "ability-necromancy",
+    "name": "Necromancy",
+    "elementId": "element-soul",
+    "category": "Sorcery",
+    "description": "Reanimating the dead as loyal Netherrealm revenants."
+  },
+  {
+    "id": "move-spear",
+    "name": "Kunai Spear (Get Over Here!)",
+    "elementId": "element-fire",
+    "category": "Special Move",
+    "description": "Hurling a rope or chain spear into the enemy and pulling them in with extreme force."
+  },
+  {
+    "id": "move-ice-freeze",
+    "name": "Deep Freeze",
+    "elementId": "element-ice",
+    "category": "Special Move",
+    "description": "Blasting a blast of liquid nitrogen vapor that freezes the target solid."
+  },
+  {
+    "id": "move-bicycle-kick",
+    "name": "Bicycle Kick",
+    "elementId": "element-energy",
+    "category": "Special Move",
+    "description": "Defying gravity with rapid aerial bicycle kicks propelled by chi."
+  },
+  {
+    "id": "move-shadow-kick",
+    "name": "Shadow Kick",
+    "elementId": "element-energy",
+    "category": "Special Move",
+    "description": "A dashing high-impact kick trailing green kinetic shadow energy."
+  },
+  {
+    "id": "move-hat-throw",
+    "name": "Razor Rim Hat Toss",
+    "elementId": "element-energy",
+    "category": "Special Move",
+    "description": "Throwing a circular razor-rimmed hat with boomerang-like trajectory."
+  },
+  {
+    "id": "move-fan-lift",
+    "name": "Fan Lift",
+    "elementId": "element-wind",
+    "category": "Special Move",
+    "description": "Waving bladed war fans to create an updraft that suspends opponents helplessly in mid-air."
+  },
+  {
+    "id": "move-ground-pound",
+    "name": "Ground Pound",
+    "elementId": "element-energy",
+    "category": "Special Move",
+    "description": "Striking the ground with cybernetic arms to cause localized seismic shockwaves."
+  },
+  {
+    "id": "move-cannonball",
+    "name": "Cannonball Roll",
+    "elementId": "element-energy",
+    "category": "Special Move",
+    "description": "Curling into a tightly wound ball and launching forward like a deadly sphere."
+  },
+  {
+    "id": "move-wind-tornado",
+    "name": "Wind Tornado Vortex",
+    "elementId": "element-wind",
+    "category": "Special Move",
+    "description": "Spinning into a cyclone that lifts and disorients nearby foes."
+  },
+  {
+    "id": "move-sonic-scream",
+    "name": "Banshee Sonic Scream",
+    "elementId": "element-energy",
+    "category": "Special Move",
+    "description": "High-decibel vocal resonance that stuns and strips the skin from targets."
+  },
+  {
+    "id": "move-shokan-stomp",
+    "name": "Telestomp",
+    "elementId": "element-energy",
+    "category": "Special Move",
+    "description": "Leaping off-screen and crashing down with the immense weight of four arms."
+  },
+  {
+    "id": "move-blood-tentacles",
+    "name": "Blood Tentacles",
+    "elementId": "element-blood",
+    "category": "Special Move",
+    "description": "Conjuring whipping tendrils of coagulated blood to lash opponents."
+  },
+  {
+    "id": "move-acid-spit",
+    "name": "Corrosive Acid Spit",
+    "elementId": "element-energy",
+    "category": "Special Move",
+    "description": "Ejecting caustic digestive acid that melts armor and flesh on contact."
+  },
+  {
+    "id": "move-soul-ball",
+    "name": "Green Soul Burst",
+    "elementId": "element-soul",
+    "category": "Special Move",
+    "description": "Harnessing stolen souls into an explosive sphere of spiritual energy."
+  },
+  {
+    "id": "move-telekinesis-slam",
+    "name": "Telekinetic Slam",
+    "elementId": "element-energy",
+    "category": "Special Move",
+    "description": "Lifting enemies telepathically and slamming them forcefully against the arena floor."
+  },
+  {
+    "id": "move-tarkatan-chop",
+    "name": "Blade Fury",
+    "elementId": "element-energy",
+    "category": "Special Move",
+    "description": "Rapid succession of vicious slashes from forearm arm blades."
+  },
+  {
+    "id": "move-net-tangle",
+    "name": "Energy Net",
+    "elementId": "element-energy",
+    "category": "Special Move",
+    "description": "Firing an electrified green plasma net that immobilizes targets."
+  },
+  {
+    "id": "move-missile-salvo",
+    "name": "Homing Missile",
+    "elementId": "element-fire",
+    "category": "Special Move",
+    "description": "Chest-mounted rocket targeting enemy coordinates with thermal tracking."
+  },
+  {
+    "id": "move-sun-ray",
+    "name": "Sun God's Ray",
+    "elementId": "element-fire",
+    "category": "Special Move",
+    "description": "Summoning a focused beam of sunlight that burns enemies while healing allies."
+  },
+  {
+    "id": "move-revolver-quickdraw",
+    "name": "Sand Slam & Quickdraw",
+    "elementId": "element-energy",
+    "category": "Special Move",
+    "description": "Rapid six-shooter revolver barrage accompanied by blinding Netherrealm sand."
+  },
+  {
+    "id": "move-drunken-fist",
+    "name": "Drunken Fist Roll",
+    "elementId": "element-energy",
+    "category": "Special Move",
+    "description": "Unpredictable tumbling footwork baffling enemy guard."
+  },
+  {
+    "id": "move-flying-kick",
+    "name": "Flying Dragon Kick",
+    "elementId": "element-fire",
+    "category": "Special Move",
+    "description": "Liu Kang's signature horizontal flight across the screen backed by flaming chi."
+  },
+  {
+    "id": "move-square-wave",
+    "name": "Square Wave Flight",
+    "elementId": "element-energy",
+    "category": "Special Move",
+    "description": "Mid-air dive propelled by acrobatic Edenian momentum."
+  },
+  {
+    "id": "move-nut-punch",
+    "name": "Nut Punch",
+    "elementId": "element-energy",
+    "category": "Special Move",
+    "description": "Splits on the ground delivering an unexpected disabling low strike."
+  },
+  {
+    "id": "move-ring-toss",
+    "name": "Energy Ring Toss",
+    "elementId": "element-energy",
+    "category": "Special Move",
+    "description": "Wrist-blaster concentric sonic rings that slice through incoming projectiles."
+  },
+  {
+    "id": "move-tele-flurry",
+    "name": "Tele-Flurry",
+    "elementId": "element-energy",
+    "category": "Special Move",
+    "description": "Kenshi telepathically projects a warrior spirit to slash the opponent from afar."
+  },
+  {
+    "id": "move-shadow-slide",
+    "name": "Shadow Slide",
+    "elementId": "element-shadow",
+    "category": "Special Move",
+    "description": "Noob Saibot dispatches his shadow clone sliding forward to trip the enemy."
+  },
+  {
+    "id": "move-air-throw",
+    "name": "Aerial Combat Throw",
+    "elementId": "element-energy",
+    "category": "Special Move",
+    "description": "Jax grabs the opponent out of mid-air and violently slams them to the turf."
+  },
+  {
+    "id": "move-wind-kick",
+    "name": "Tornado Gale Kick",
+    "elementId": "element-wind",
+    "category": "Special Move",
+    "description": "Fujin spins horizontally on a cushion of wind, striking repeatedly."
+  },
+  {
+    "id": "move-cyber-trap",
+    "name": "Cryo Floor Trap",
+    "elementId": "element-ice",
+    "category": "Special Move",
+    "description": "Frost releases a cryogenic ground mine that flash-freezes unobservant opponents."
+  },
+  {
+    "id": "move-puke-puddle",
+    "name": "Hazardous Fluid Puddle",
+    "elementId": "element-energy",
+    "category": "Special Move",
+    "description": "Bo' Rai Cho coats the arena floor causing approaching enemies to lose their balance."
+  },
+  {
+    "id": "move-energy-spark",
+    "name": "Luminescent Spark Burst",
+    "elementId": "element-energy",
+    "category": "Special Move",
+    "description": "Li Mei unleashes purple festive chi sparks that juggle airborne targets."
+  },
+  {
+    "id": "move-bone-twist",
+    "name": "360 Torso Contortion",
+    "elementId": "element-energy",
+    "category": "Special Move",
+    "description": "Havik twists his own torso a full 360 degrees to strike backward unpredictably."
+  },
+  {
+    "id": "fatality-toasty",
+    "name": "Fatality: Toasty!",
+    "elementId": "element-fire",
+    "category": "Fatality",
+    "description": "Removing the mask to reveal a flaming skull and incinerating the opponent to ashes."
+  },
+  {
+    "id": "fatality-spine-rip",
+    "name": "Fatality: Spine Rip",
+    "elementId": "element-ice",
+    "category": "Fatality",
+    "description": "Grabbing the victim's neck and cleanly ripping out their head and spine."
+  },
+  {
+    "id": "fatality-dragon-bite",
+    "name": "Fatality: Dragon Feast",
+    "elementId": "element-fire",
+    "category": "Fatality",
+    "description": "Morphing into a massive dragon that bites the opponent's torso in half."
+  },
+  {
+    "id": "fatality-fan-decapitation",
+    "name": "Fatality: Decapitating Fans",
+    "elementId": "element-wind",
+    "category": "Fatality",
+    "description": "Slicing off the opponent's head with a swift flick of dual steel war fans."
+  },
+  {
+    "id": "fatality-kiss-of-death",
+    "name": "Fatality: Kiss of Death",
+    "elementId": "element-energy",
+    "category": "Fatality",
+    "description": "Blowing a glowing kiss of energy that causes the opponent to violently detonate."
+  },
+  {
+    "id": "fatality-shokan-tear",
+    "name": "Fatality: Limb Disassembly",
+    "elementId": "element-energy",
+    "category": "Fatality",
+    "description": "Goro grabs both arms and legs, tearing the opponent into four separate pieces."
+  }
+]

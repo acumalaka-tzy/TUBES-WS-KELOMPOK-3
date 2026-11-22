@@ -1,0 +1,871 @@
+[
+  {
+    "id": "character-scorpion",
+    "name": "Scorpion",
+    "alternateName": "Hanzo Hasashi",
+    "firstAppearanceYear": "1992",
+    "description": "Resurrected Shirai Ryu ninja seeking vengeance for his family and clan.",
+    "species": "Spectre",
+    "originRealm": "realm-earthrealm",
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Scorpion",
+    "versions": [
+      {
+        "versionId": "version-scorpion-classic",
+        "gameId": "game-mk1-1992",
+        "timelineId": "timeline-original",
+        "abilities": [
+          "ability-hellfire",
+          "move-spear",
+          "fatality-toasty"
+        ],
+        "weapons": [
+          "weapon-kunai"
+        ],
+        "clan": "org-shirai-ryu"
+      },
+      {
+        "versionId": "version-scorpion-mk11",
+        "gameId": "game-mk11-2019",
+        "timelineId": "timeline-reboot",
+        "abilities": [
+          "ability-hellfire",
+          "ability-teleportation",
+          "move-spear"
+        ],
+        "weapons": [
+          "weapon-kunai",
+          "weapon-mugai-ryu"
+        ],
+        "clan": "org-shirai-ryu"
+      },
+      {
+        "versionId": "version-scorpion-mk1-2023",
+        "gameId": "game-mk1-2023",
+        "timelineId": "timeline-new-era",
+        "abilities": [
+          "ability-hellfire",
+          "move-spear"
+        ],
+        "weapons": [
+          "weapon-kunai"
+        ],
+        "clan": "org-lin-kuei"
+      }
+    ]
+  },
+  {
+    "id": "character-subzero",
+    "name": "Sub-Zero",
+    "alternateName": "Kuai Liang",
+    "firstAppearanceYear": "1993",
+    "description": "Grandmaster of the Lin Kuei clan wielding lethal cryomantic freezing power.",
+    "species": "Cryomancer",
+    "originRealm": "realm-earthrealm",
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Sub-Zero",
+    "versions": [
+      {
+        "versionId": "version-subzero-classic",
+        "gameId": "game-mk2-1993",
+        "timelineId": "timeline-original",
+        "abilities": [
+          "ability-cryomancy",
+          "move-ice-freeze",
+          "fatality-spine-rip"
+        ],
+        "weapons": [
+          "weapon-kori-blade"
+        ],
+        "clan": "org-lin-kuei"
+      },
+      {
+        "versionId": "version-subzero-mk11",
+        "gameId": "game-mk11-2019",
+        "timelineId": "timeline-reboot",
+        "abilities": [
+          "ability-cryomancy",
+          "ability-ice-slide",
+          "ability-ice-clone"
+        ],
+        "weapons": [
+          "weapon-kori-blade"
+        ],
+        "clan": "org-lin-kuei"
+      }
+    ]
+  },
+  {
+    "id": "character-raiden",
+    "name": "Raiden",
+    "alternateName": "Lord Raiden",
+    "firstAppearanceYear": "1992",
+    "description": "Eternal God of Thunder and ancient guardian of Earthrealm.",
+    "species": "God",
+    "originRealm": "realm-earthrealm",
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Raiden",
+    "versions": [
+      {
+        "versionId": "version-raiden-mk11",
+        "gameId": "game-mk11-2019",
+        "timelineId": "timeline-reboot",
+        "abilities": [
+          "ability-thunder-mastery",
+          "ability-electric-fly",
+          "ability-teleportation"
+        ],
+        "weapons": [],
+        "clan": "org-white-lotus"
+      }
+    ]
+  },
+  {
+    "id": "character-liukang",
+    "name": "Liu Kang",
+    "alternateName": "Fire God Liu Kang",
+    "firstAppearanceYear": "1992",
+    "description": "Shaolin monk, multi-time Mortal Kombat champion, and ultimate architect of the New Era.",
+    "species": "Human",
+    "originRealm": "realm-earthrealm",
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Liu_Kang",
+    "versions": [
+      {
+        "versionId": "version-liukang-mk11",
+        "gameId": "game-mk11-2019",
+        "timelineId": "timeline-reboot",
+        "abilities": [
+          "ability-fireball-dragon",
+          "move-bicycle-kick",
+          "fatality-dragon-bite"
+        ],
+        "weapons": [],
+        "clan": "org-white-lotus"
+      },
+      {
+        "versionId": "version-liukang-mk1-2023",
+        "gameId": "game-mk1-2023",
+        "timelineId": "timeline-new-era",
+        "abilities": [
+          "ability-fireball-dragon",
+          "ability-thunder-mastery"
+        ],
+        "weapons": [],
+        "clan": "org-white-lotus"
+      }
+    ]
+  },
+  {
+    "id": "character-kitana",
+    "name": "Kitana",
+    "alternateName": "Princess Kitana",
+    "firstAppearanceYear": "1993",
+    "description": "Edenian royal and skilled warrior assassin who turned against her adoptive father Shao Kahn.",
+    "species": "Edenian",
+    "originRealm": "realm-edenia",
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Kitana",
+    "versions": [
+      {
+        "versionId": "version-kitana-mk11",
+        "gameId": "game-mk11-2019",
+        "timelineId": "timeline-reboot",
+        "abilities": [
+          "move-fan-lift"
+        ],
+        "weapons": [
+          "weapon-steel-fans"
+        ],
+        "clan": null
+      }
+    ]
+  },
+  {
+    "id": "character-mileena",
+    "name": "Mileena",
+    "alternateName": "Empress Mileena",
+    "firstAppearanceYear": "1993",
+    "description": "Genetic clone combining Edenian elegance and vicious Tarkatan ferocity.",
+    "species": "Edenian-Tarkatan Clone",
+    "originRealm": "realm-outworld",
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Mileena",
+    "versions": [
+      {
+        "versionId": "version-mileena-mk11",
+        "gameId": "game-mk11-2019",
+        "timelineId": "timeline-reboot",
+        "abilities": [
+          "ability-teleportation"
+        ],
+        "weapons": [],
+        "clan": null
+      }
+    ]
+  },
+  {
+    "id": "character-johnnycage",
+    "name": "Johnny Cage",
+    "alternateName": "John Carlton",
+    "firstAppearanceYear": "1992",
+    "description": "Hollywood action film star endowed with ancient Mediterranean green energy.",
+    "species": "Human",
+    "originRealm": "realm-earthrealm",
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Johnny_Cage",
+    "versions": [
+      {
+        "versionId": "version-johnnycage-mk11",
+        "gameId": "game-mk11-2019",
+        "timelineId": "timeline-reboot",
+        "abilities": [
+          "move-shadow-kick"
+        ],
+        "weapons": [],
+        "clan": "org-special-forces"
+      }
+    ]
+  },
+  {
+    "id": "character-sonyablade",
+    "name": "Sonya Blade",
+    "alternateName": "General Blade",
+    "firstAppearanceYear": "1992",
+    "description": "Decorated officer of Earthrealm's Special Forces fighting against extradimensional threats.",
+    "species": "Human",
+    "originRealm": "realm-earthrealm",
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Sonya_Blade",
+    "versions": [
+      {
+        "versionId": "version-sonyablade-mk11",
+        "gameId": "game-mk11-2019",
+        "timelineId": "timeline-reboot",
+        "abilities": [],
+        "weapons": [],
+        "clan": "org-special-forces"
+      }
+    ]
+  },
+  {
+    "id": "character-jax",
+    "name": "Jax Briggs",
+    "alternateName": "Major Jackson Briggs",
+    "firstAppearanceYear": "1993",
+    "description": "U.S. Special Forces leader with bionic titanium cybernetic arms.",
+    "species": "Human",
+    "originRealm": "realm-earthrealm",
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Jax_Briggs",
+    "versions": [
+      {
+        "versionId": "version-jax-mk11",
+        "gameId": "game-mk11-2019",
+        "timelineId": "timeline-reboot",
+        "abilities": [
+          "move-ground-pound"
+        ],
+        "weapons": [
+          "weapon-bionic-arms"
+        ],
+        "clan": "org-special-forces"
+      }
+    ]
+  },
+  {
+    "id": "character-kunglao",
+    "name": "Kung Lao",
+    "alternateName": "Shaolin Monk",
+    "firstAppearanceYear": "1993",
+    "description": "Shaolin monk descendant of the Great Kung Lao, master of the razor-rimmed hat.",
+    "species": "Human",
+    "originRealm": "realm-earthrealm",
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Kung_Lao",
+    "versions": [
+      {
+        "versionId": "version-kunglao-mk11",
+        "gameId": "game-mk11-2019",
+        "timelineId": "timeline-reboot",
+        "abilities": [
+          "move-hat-throw",
+          "ability-teleportation"
+        ],
+        "weapons": [],
+        "clan": "org-white-lotus"
+      }
+    ]
+  },
+  {
+    "id": "character-shangtsung",
+    "name": "Shang Tsung",
+    "alternateName": "Grand Sorcerer",
+    "firstAppearanceYear": "1992",
+    "description": "Deceptive soul-stealing sorcerer host of the original Mortal Kombat tournaments.",
+    "species": "Human Sorcerer",
+    "originRealm": "realm-earthrealm",
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Shang_Tsung",
+    "versions": [
+      {
+        "versionId": "version-shangtsung-mk11",
+        "gameId": "game-mk11-2019",
+        "timelineId": "timeline-reboot",
+        "abilities": [
+          "ability-soul-stealing",
+          "ability-fireball-dragon"
+        ],
+        "weapons": [],
+        "clan": null
+      }
+    ]
+  },
+  {
+    "id": "character-quanchi",
+    "name": "Quan Chi",
+    "alternateName": "Arch-Sorcerer",
+    "firstAppearanceYear": "1997",
+    "description": "Malevolent Netherrealm necromancer responsible for resurrecting Scorpion and framing the Lin Kuei.",
+    "species": "Demon Sorcerer",
+    "originRealm": "realm-netherrealm",
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Quan_Chi",
+    "versions": [
+      {
+        "versionId": "version-quanchi-mkx",
+        "gameId": "game-mkx-2015",
+        "timelineId": "timeline-reboot",
+        "abilities": [
+          "ability-necromancy",
+          "ability-shadow-magic"
+        ],
+        "weapons": [],
+        "clan": "org-brotherhood-of-shadow"
+      }
+    ]
+  },
+  {
+    "id": "character-shaokahn",
+    "name": "Shao Kahn",
+    "alternateName": "Emperor of Outworld",
+    "firstAppearanceYear": "1993",
+    "description": "Ruthless tyrannical conqueror and Emperor of Outworld wielding the massive Wrath Hammer.",
+    "species": "Outworlder Godlike",
+    "originRealm": "realm-outworld",
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Shao_Kahn",
+    "versions": [
+      {
+        "versionId": "version-shaokahn-mk11",
+        "gameId": "game-mk11-2019",
+        "timelineId": "timeline-reboot",
+        "abilities": [
+          "ability-energy"
+        ],
+        "weapons": [
+          "weapon-war-hammer"
+        ],
+        "clan": null
+      }
+    ]
+  },
+  {
+    "id": "character-kano",
+    "name": "Kano",
+    "alternateName": "Black Dragon Leader",
+    "firstAppearanceYear": "1992",
+    "description": "Cybernetically modified Australian mercenary and ruthless boss of the Black Dragon.",
+    "species": "Human Cyborg",
+    "originRealm": "realm-earthrealm",
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Kano",
+    "versions": [
+      {
+        "versionId": "version-kano-mk11",
+        "gameId": "game-mk11-2019",
+        "timelineId": "timeline-reboot",
+        "abilities": [
+          "move-cannonball"
+        ],
+        "weapons": [],
+        "clan": "org-black-dragon"
+      }
+    ]
+  },
+  {
+    "id": "character-baraka",
+    "name": "Baraka",
+    "alternateName": "Tarkatan War Chief",
+    "firstAppearanceYear": "1993",
+    "description": "Ferocious warlord of the nomadic Tarkatan tribe with retractable arm blades.",
+    "species": "Tarkatan",
+    "originRealm": "realm-outworld",
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Baraka",
+    "versions": [
+      {
+        "versionId": "version-baraka-mk11",
+        "gameId": "game-mk11-2019",
+        "timelineId": "timeline-reboot",
+        "abilities": [],
+        "weapons": [],
+        "clan": null
+      }
+    ]
+  },
+  {
+    "id": "character-kenshi",
+    "name": "Kenshi",
+    "alternateName": "Kenshi Takahashi",
+    "firstAppearanceYear": "2002",
+    "description": "Blind telekinetic swordsman guided by the spirits of his warrior ancestors.",
+    "species": "Human",
+    "originRealm": "realm-earthrealm",
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Kenshi",
+    "versions": [
+      {
+        "versionId": "version-kenshi-mkx",
+        "gameId": "game-mkx-2015",
+        "timelineId": "timeline-reboot",
+        "abilities": [
+          "ability-teleportation"
+        ],
+        "weapons": [
+          "weapon-sento"
+        ],
+        "clan": "org-special-forces"
+      }
+    ]
+  },
+  {
+    "id": "character-noobsaibot",
+    "name": "Noob Saibot",
+    "alternateName": "Bi-Han (Revenant)",
+    "firstAppearanceYear": "1993",
+    "description": "The resurrected wraith of the original Sub-Zero Bi-Han, consumed by darkness and shadow.",
+    "species": "Wraith",
+    "originRealm": "realm-netherrealm",
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Noob_Saibot",
+    "versions": [
+      {
+        "versionId": "version-noobsaibot-mk11",
+        "gameId": "game-mk11-2019",
+        "timelineId": "timeline-reboot",
+        "abilities": [
+          "ability-shadow-magic",
+          "ability-teleportation"
+        ],
+        "weapons": [],
+        "clan": "org-brotherhood-of-shadow"
+      }
+    ]
+  },
+  {
+    "id": "character-smoke",
+    "name": "Smoke",
+    "alternateName": "Tomas Vrbada",
+    "firstAppearanceYear": "1993",
+    "description": "Lin Kuei assassin endowed with supernatural smoke and vapour powers.",
+    "species": "Enenra Demon / Human",
+    "originRealm": "realm-earthrealm",
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Smoke",
+    "versions": [
+      {
+        "versionId": "version-smoke-mk9",
+        "gameId": "game-mk9-2011",
+        "timelineId": "timeline-reboot",
+        "abilities": [
+          "ability-teleportation"
+        ],
+        "weapons": [],
+        "clan": "org-lin-kuei"
+      }
+    ]
+  },
+  {
+    "id": "character-cyrax",
+    "name": "Cyrax",
+    "alternateName": "Unit LK-4D4",
+    "firstAppearanceYear": "1995",
+    "description": "Lin Kuei warrior cybernetically converted into a high-tech robotic assassin with green energy nets.",
+    "species": "Cyborg",
+    "originRealm": "realm-earthrealm",
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Cyrax",
+    "versions": [
+      {
+        "versionId": "version-cyrax-mk11",
+        "gameId": "game-mk11-2019",
+        "timelineId": "timeline-reboot",
+        "abilities": [
+          "ability-teleportation"
+        ],
+        "weapons": [],
+        "clan": "org-lin-kuei"
+      }
+    ]
+  },
+  {
+    "id": "character-sektor",
+    "name": "Sektor",
+    "alternateName": "Unit LK-9T9",
+    "firstAppearanceYear": "1995",
+    "description": "Grandmaster's son who willingly embraced cybernetization, armed with flamethrowers and heat-seeking missiles.",
+    "species": "Cyborg",
+    "originRealm": "realm-earthrealm",
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Sektor",
+    "versions": [
+      {
+        "versionId": "version-sektor-mk11",
+        "gameId": "game-mk11-2019",
+        "timelineId": "timeline-reboot",
+        "abilities": [
+          "ability-flame-aura",
+          "ability-teleportation"
+        ],
+        "weapons": [],
+        "clan": "org-lin-kuei"
+      }
+    ]
+  },
+  {
+    "id": "character-reptile",
+    "name": "Reptile",
+    "alternateName": "Syzoth",
+    "firstAppearanceYear": "1992",
+    "description": "Zaterran humanoid reptile assassin fighting to restore his extinct reptilian race.",
+    "species": "Saurian (Zaterran)",
+    "originRealm": "realm-outworld",
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Reptile",
+    "versions": [
+      {
+        "versionId": "version-reptile-mkx",
+        "gameId": "game-mkx-2015",
+        "timelineId": "timeline-reboot",
+        "abilities": [],
+        "weapons": [],
+        "clan": null
+      }
+    ]
+  },
+  {
+    "id": "character-geras",
+    "name": "Geras",
+    "alternateName": "Guardian of the Hourglass",
+    "firstAppearanceYear": "2019",
+    "description": "Fixed point in time who regenerates infinitely, serving the Keeper of Time.",
+    "species": "Artificial Construct",
+    "originRealm": "realm-earthrealm",
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Geras",
+    "versions": [
+      {
+        "versionId": "version-geras-mk11",
+        "gameId": "game-mk11-2019",
+        "timelineId": "timeline-reboot",
+        "abilities": [
+          "ability-teleportation"
+        ],
+        "weapons": [],
+        "clan": null
+      }
+    ]
+  },
+  {
+    "id": "character-kronika",
+    "name": "Kronika",
+    "alternateName": "Keeper of Time",
+    "firstAppearanceYear": "2019",
+    "description": "Titan of Time and mother of Shinnok and Cetrion seeking to reset the timeline to erase Raiden.",
+    "species": "Titan",
+    "originRealm": "realm-earthrealm",
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Kronika",
+    "versions": [
+      {
+        "versionId": "version-kronika-mk11",
+        "gameId": "game-mk11-2019",
+        "timelineId": "timeline-reboot",
+        "abilities": [
+          "ability-teleportation",
+          "ability-energy"
+        ],
+        "weapons": [],
+        "clan": null
+      }
+    ]
+  },
+  {
+    "id": "character-sindel",
+    "name": "Sindel",
+    "alternateName": "Queen Sindel",
+    "firstAppearanceYear": "1995",
+    "description": "Queen of Edenia and mother of Kitana possessing lethal sonic screams and prehensile hair.",
+    "species": "Edenian",
+    "originRealm": "realm-edenia",
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Sindel",
+    "versions": [
+      {
+        "versionId": "version-sindel-mk11",
+        "gameId": "game-mk11-2019",
+        "timelineId": "timeline-reboot",
+        "abilities": [
+          "move-sonic-scream"
+        ],
+        "weapons": [],
+        "clan": null
+      }
+    ]
+  },
+  {
+    "id": "character-goro",
+    "name": "Goro",
+    "alternateName": "Prince Goro",
+    "firstAppearanceYear": "1992",
+    "description": "Four-armed Shokan prince and 500-year undefeated champion of the Mortal Kombat tournament.",
+    "species": "Shokan",
+    "originRealm": "realm-outworld",
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Goro",
+    "versions": [
+      {
+        "versionId": "version-goro-classic",
+        "gameId": "game-mk1-1992",
+        "timelineId": "timeline-original",
+        "abilities": [
+          "move-shokan-stomp",
+          "fatality-shokan-tear"
+        ],
+        "weapons": [],
+        "clan": null
+      }
+    ]
+  },
+  {
+    "id": "character-kintaro",
+    "name": "Kintaro",
+    "alternateName": "Tigrar Shokan",
+    "firstAppearanceYear": "1993",
+    "description": "Ferocious tiger-striped four-armed Shokan general serving as Shao Kahn's vanguard.",
+    "species": "Shokan (Tigrar)",
+    "originRealm": "realm-outworld",
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Kintaro",
+    "versions": [
+      {
+        "versionId": "version-kintaro-classic",
+        "gameId": "game-mk2-1993",
+        "timelineId": "timeline-original",
+        "abilities": [
+          "move-shokan-stomp"
+        ],
+        "weapons": [],
+        "clan": null
+      }
+    ]
+  },
+  {
+    "id": "character-shinnok",
+    "name": "Shinnok",
+    "alternateName": "Fallen Elder God",
+    "firstAppearanceYear": "1997",
+    "description": "Fallen Elder God of death and darkness ruler of the Netherrealm wielding his sacred amulet.",
+    "species": "Elder God (Fallen)",
+    "originRealm": "realm-netherrealm",
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Shinnok",
+    "versions": [
+      {
+        "versionId": "version-shinnok-mkx",
+        "gameId": "game-mkx-2015",
+        "timelineId": "timeline-reboot",
+        "abilities": [
+          "ability-shadow-magic",
+          "ability-necromancy"
+        ],
+        "weapons": [],
+        "clan": "org-brotherhood-of-shadow"
+      }
+    ]
+  },
+  {
+    "id": "character-fujin",
+    "name": "Fujin",
+    "alternateName": "God of Wind",
+    "firstAppearanceYear": "1997",
+    "description": "Raiden's divine brother and God of Wind dedicated to defending humanity.",
+    "species": "God",
+    "originRealm": "realm-earthrealm",
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Fujin",
+    "versions": [
+      {
+        "versionId": "version-fujin-mk11",
+        "gameId": "game-mk11-2019",
+        "timelineId": "timeline-reboot",
+        "abilities": [
+          "move-wind-tornado"
+        ],
+        "weapons": [],
+        "clan": "org-white-lotus"
+      }
+    ]
+  },
+  {
+    "id": "character-frost",
+    "name": "Frost",
+    "alternateName": "Cyber Frost",
+    "firstAppearanceYear": "2002",
+    "description": "Ambitious Lin Kuei cryomancer prodigy who rebelled against Sub-Zero and embraced cybernetization.",
+    "species": "Cyborg Cryomancer",
+    "originRealm": "realm-earthrealm",
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Frost",
+    "versions": [
+      {
+        "versionId": "version-frost-mk11",
+        "gameId": "game-mk11-2019",
+        "timelineId": "timeline-reboot",
+        "abilities": [
+          "ability-cryomancy",
+          "move-ice-freeze"
+        ],
+        "weapons": [],
+        "clan": "org-lin-kuei"
+      }
+    ]
+  },
+  {
+    "id": "character-boraicho",
+    "name": "Bo' Rai Cho",
+    "alternateName": "Master of the Drunken Fist",
+    "firstAppearanceYear": "2002",
+    "description": "Outworld martial arts master who trained legendary champions Liu Kang and Kung Lao.",
+    "species": "Outworlder",
+    "originRealm": "realm-outworld",
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Bo%27_Rai_Cho",
+    "versions": [
+      {
+        "versionId": "version-boraicho-mkx",
+        "gameId": "game-mkx-2015",
+        "timelineId": "timeline-reboot",
+        "abilities": [
+          "move-drunken-fist"
+        ],
+        "weapons": [],
+        "clan": "org-white-lotus"
+      }
+    ]
+  },
+  {
+    "id": "character-limei",
+    "name": "Li Mei",
+    "alternateName": "Constable of Sun Do",
+    "firstAppearanceYear": "2002",
+    "description": "Fierce Outworld martial artist who champions the common people of Sun Do.",
+    "species": "Outworlder",
+    "originRealm": "realm-outworld",
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Li_Mei",
+    "versions": [
+      {
+        "versionId": "version-limei-mk1-2023",
+        "gameId": "game-mk1-2023",
+        "timelineId": "timeline-new-era",
+        "abilities": [
+          "move-flying-kick"
+        ],
+        "weapons": [],
+        "clan": null
+      }
+    ]
+  },
+  {
+    "id": "character-tanya",
+    "name": "Tanya",
+    "alternateName": "Umgadi Guardian",
+    "firstAppearanceYear": "1997",
+    "description": "Edenian diplomat turned Umgadi warrior sworn to protect Outworld's royal family.",
+    "species": "Edenian",
+    "originRealm": "realm-edenia",
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Tanya",
+    "versions": [
+      {
+        "versionId": "version-tanya-mk1-2023",
+        "gameId": "game-mk1-2023",
+        "timelineId": "timeline-new-era",
+        "abilities": [
+          "ability-teleportation"
+        ],
+        "weapons": [],
+        "clan": null
+      }
+    ]
+  },
+  {
+    "id": "character-havik",
+    "name": "Havik",
+    "alternateName": "Cleric of Chaos",
+    "firstAppearanceYear": "2004",
+    "description": "Anarchist from Chaosrealm who can twist and contort his bones without suffering damage.",
+    "species": "Chaosrealmer",
+    "originRealm": "realm-chaosrealm",
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Havik",
+    "versions": [
+      {
+        "versionId": "version-havik-mk1-2023",
+        "gameId": "game-mk1-2023",
+        "timelineId": "timeline-new-era",
+        "abilities": [
+          "move-blood-tentacles"
+        ],
+        "weapons": [],
+        "clan": null
+      }
+    ]
+  },
+  {
+    "id": "character-cassiecage",
+    "name": "Cassie Cage",
+    "alternateName": "Sergeant Cassandra Cage",
+    "firstAppearanceYear": "2015",
+    "description": "Daughter of Johnny Cage and Sonya Blade combining military discipline with inherited green shadow power.",
+    "species": "Human",
+    "originRealm": "realm-earthrealm",
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Cassie_Cage",
+    "versions": [
+      {
+        "versionId": "version-cassiecage-mk11",
+        "gameId": "game-mk11-2019",
+        "timelineId": "timeline-reboot",
+        "abilities": [
+          "move-shadow-kick",
+          "move-nut-punch"
+        ],
+        "weapons": [],
+        "clan": "org-special-forces"
+      }
+    ]
+  },
+  {
+    "id": "character-kotalkahn",
+    "name": "Kotal Kahn",
+    "alternateName": "Ko'atal (Sun God)",
+    "firstAppearanceYear": "2015",
+    "description": "Noble Osh-Tekk warrior who deposed Mileena to become Emperor of Outworld.",
+    "species": "Osh-Tekk",
+    "originRealm": "realm-outworld",
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Kotal_Kahn",
+    "versions": [
+      {
+        "versionId": "version-kotalkahn-mk11",
+        "gameId": "game-mk11-2019",
+        "timelineId": "timeline-reboot",
+        "abilities": [
+          "move-sun-ray"
+        ],
+        "weapons": [],
+        "clan": null
+      }
+    ]
+  },
+  {
+    "id": "character-erronblack",
+    "name": "Erron Black",
+    "alternateName": "Outworld Gunslinger",
+    "firstAppearanceYear": "2015",
+    "description": "19th-century Earthrealm gunfighter granted prolonged life by Shang Tsung, working as an Outworld mercenary.",
+    "species": "Human (Long-Lived)",
+    "originRealm": "realm-earthrealm",
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Erron_Black",
+    "versions": [
+      {
+        "versionId": "version-erronblack-mk11",
+        "gameId": "game-mk11-2019",
+        "timelineId": "timeline-reboot",
+        "abilities": [
+          "move-revolver-quickdraw"
+        ],
+        "weapons": [],
+        "clan": "org-black-dragon"
+      }
+    ]
+  }
+]

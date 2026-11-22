@@ -1,0 +1,38 @@
+{
+  "reportId": "rdf-export-20261122061201",
+  "generatedAt": "2026-11-22T06:12:01.890199+00:00",
+  "totalTriples": 1097,
+  "serializedFormats": {
+    "turtle": "data-engineering\\storage\\exports\\mortal_kombat.ttl",
+    "rdfxml": "data-engineering\\storage\\exports\\mortal_kombat.rdf",
+    "knowledgeBaseTurtle": "knowledge-base\\data\\mortal_kombat.ttl"
+  },
+  "serializationCheck": "PASSED (Valid RDF/XML and Turtle syntax)",
+  "graphStatistics": {
+    "classes": [
+      "Character",
+      "CharacterVersion",
+      "Game",
+      "Timeline",
+      "Realm",
+      "Clan",
+      "Ability",
+      "Move",
+      "Weapon",
+      "Event"
+    ],
+    "properties": [
+      "hasVersion",
+      "versionOf",
+      "appearsIn",
+      "existsInTimeline",
+      "hasAbility",
+      "usesWeapon",
+      "memberOf",
+      "involvesCharacter",
+      "occursIn",
+      "enemyOf",
+      "alliedWith"
+    ]
+  }
+}

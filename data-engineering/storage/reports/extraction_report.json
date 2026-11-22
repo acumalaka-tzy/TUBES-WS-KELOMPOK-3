@@ -1,0 +1,20 @@
+{
+  "reportId": "extraction-report-20261122061159",
+  "generatedAt": "2026-11-22T06:11:59.751748+00:00",
+  "extractedEntityCounts": {
+    "characters": 36,
+    "games": 15,
+    "timelines": 3,
+    "realms": 6,
+    "clans": 6,
+    "abilities": 51,
+    "weapons": 8,
+    "storyEvents": 15,
+    "relationships": 11
+  },
+  "dlcExclusionAudit": {
+    "totalExcludedCandidates": 18,
+    "dlcContaminationInBaseDataset": 0,
+    "auditStatus": "PASSED - Zero DLC items in standalone dataset"
+  }
+}

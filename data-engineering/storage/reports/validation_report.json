@@ -1,0 +1,18 @@
+{
+  "reportId": "validation-report-20261122061201",
+  "generatedAt": "2026-11-22T06:12:01.023768+00:00",
+  "validationPassed": true,
+  "totalErrors": 0,
+  "totalWarnings": 2,
+  "errors": [],
+  "warnings": [
+    "Version 'version-shaokahn-mk11' references unindexed ability: 'ability-energy'",
+    "Version 'version-kronika-mk11' references unindexed ability: 'ability-energy'"
+  ],
+  "qualityGates": {
+    "schemaIntegrity": "PASSED",
+    "referentialIntegrity": "PASSED",
+    "mandatoryProvenance": "PASSED",
+    "dlcExclusionGate": "PASSED (Zero DLC entities detected)"
+  }
+}

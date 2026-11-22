@@ -1,0 +1,79 @@
+[
+  {
+    "subjectId": "character-scorpion",
+    "predicate": "enemyOf",
+    "objectId": "character-subzero",
+    "context": "Original Timeline & Early Reboot",
+    "evidence": "Scorpion blamed Sub-Zero for the demise of Shirai Ryu."
+  },
+  {
+    "subjectId": "character-scorpion",
+    "predicate": "alliedWith",
+    "objectId": "character-subzero",
+    "context": "Reboot Timeline (MKX & MK11)",
+    "evidence": "Sub-Zero and Scorpion reconciled at the Shirai Ryu Fire Garden."
+  },
+  {
+    "subjectId": "character-scorpion",
+    "predicate": "enemyOf",
+    "objectId": "character-quanchi",
+    "context": "All Timelines",
+    "evidence": "Quan Chi was unmasked as the true architect of the Shirai Ryu slaughter."
+  },
+  {
+    "subjectId": "character-raiden",
+    "predicate": "alliedWith",
+    "objectId": "character-liukang",
+    "context": "Original & Reboot Timelines",
+    "evidence": "Raiden mentored Liu Kang as Earthrealm's champion."
+  },
+  {
+    "subjectId": "character-kitana",
+    "predicate": "enemyOf",
+    "objectId": "character-shaokahn",
+    "context": "Reboot Timeline",
+    "evidence": "Kitana led the Outworld rebellion and defeated Shao Kahn to become Kitana Kahn."
+  },
+  {
+    "subjectId": "character-sonyablade",
+    "predicate": "enemyOf",
+    "objectId": "character-kano",
+    "context": "All Timelines",
+    "evidence": "Sonya relentlessly pursued Kano for the murder of her Special Forces partner."
+  },
+  {
+    "subjectId": "character-shangtsung",
+    "predicate": "alliedWith",
+    "objectId": "character-quanchi",
+    "context": "Original Timeline (Deadly Alliance)",
+    "evidence": "United sorcerers formed the Deadly Alliance to overpower the Thunder God."
+  },
+  {
+    "subjectId": "character-cassiecage",
+    "predicate": "alliedWith",
+    "objectId": "character-sonyablade",
+    "context": "Reboot Timeline",
+    "evidence": "Mother and daughter serving together in Earthrealm's Special Forces."
+  },
+  {
+    "subjectId": "character-cassiecage",
+    "predicate": "enemyOf",
+    "objectId": "character-shinnok",
+    "context": "Reboot Timeline (MKX)",
+    "evidence": "Cassie defeated Corrupted Shinnok to save her father Johnny Cage."
+  },
+  {
+    "subjectId": "character-frost",
+    "predicate": "enemyOf",
+    "objectId": "character-subzero",
+    "context": "Reboot Timeline",
+    "evidence": "Frost rebelled against Sub-Zero's leadership and allied with Kronika."
+  },
+  {
+    "subjectId": "character-kotalkahn",
+    "predicate": "enemyOf",
+    "objectId": "character-mileena",
+    "context": "Reboot Timeline (Outworld Civil War)",
+    "evidence": "Kotal Kahn led the coup d'\u00e9tat overthrowing Mileena from the Outworld throne."
+  }
+]
