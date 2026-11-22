@@ -1,0 +1,3080 @@
+@prefix mk: <https://example.org/mk/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mk:character-baraka mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-baraka ;
+    mk:ofSpecies mk:species-tarkatan .
+
+mk:character-blaze mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-blaze ;
+    mk:ofSpecies mk:species-fire-elemental .
+
+mk:character-cyrax mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-cyrax ;
+    mk:ofSpecies mk:species-cyborg,
+        mk:species-human .
+
+mk:character-daegon mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-daegon ;
+    mk:ofSpecies mk:species-edenian-demigod .
+
+mk:character-erronblack mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-erron-black ;
+    mk:ofSpecies mk:species-human .
+
+mk:character-ferratorr mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-ferra-26-torr ;
+    mk:ofSpecies mk:species-outworld-symbiotes .
+
+mk:character-fujin mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-fujin ;
+    mk:ofSpecies mk:species-god .
+
+mk:character-goro mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-goro ;
+    mk:ofSpecies mk:species-shokan .
+
+mk:character-jax mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-jax-briggs ;
+    mk:ofSpecies mk:species-human-cyborg .
+
+mk:character-johnnycage mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-johnny-cage ;
+    mk:ofSpecies mk:species-human .
+
+mk:character-kintaro mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-kintaro ;
+    mk:ofSpecies mk:species-shokan-tigrar .
+
+mk:character-kollector mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-kollector ;
+    mk:ofSpecies mk:species-naknada .
+
+mk:character-limei mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-li-mei ;
+    mk:ofSpecies mk:species-outworlder .
+
+mk:character-motaro mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-motaro ;
+    mk:ofSpecies mk:species-centaurian .
+
+mk:character-nitara mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-nitara ;
+    mk:ofSpecies mk:species-vampire .
+
+mk:character-noobsaibot mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-noob-saibot ;
+    mk:ofSpecies mk:species-wraith .
+
+mk:character-reiko mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-reiko ;
+    mk:ofSpecies mk:species-outworlder .
+
+mk:character-reptile mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-reptile ;
+    mk:ofSpecies mk:species-saurian-zaterran .
+
+mk:character-sektor mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-sektor ;
+    mk:ofSpecies mk:species-cyborg,
+        mk:species-human .
+
+mk:character-smoke mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-smoke ;
+    mk:ofSpecies mk:species-enenra,
+        mk:species-human .
+
+mk:character-taven mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-taven ;
+    mk:ofSpecies mk:species-edenian-demigod .
+
+mk:claim-event-battle-for-the-hourglass a mk:StoryClaim ;
+    mk:aboutEvent mk:event-battle-for-the-hourglass ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:claimInTimeline mk:timeline-reboot ;
+    mk:claimPredicate "occursIn"^^xsd:string ;
+    mk:claimText "Combined allied armies storm Kronika's fortress; Fire God Liu Kang defeats Kronika to seize control of the Hourglass."^^xsd:string ;
+    mk:name "Claim: Battle for the Keep of Time"^^xsd:string ;
+    mk:supportedBy mk:source-mortalkombat-fandom-com-wiki-hourglass ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:claim-event-battle-of-armageddon a mk:StoryClaim ;
+    mk:aboutEvent mk:event-battle-of-armageddon ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:claimInTimeline mk:timeline-original ;
+    mk:claimPredicate "occursIn"^^xsd:string ;
+    mk:claimText "All 62 warriors clash in Edenia around the Pyramid of Argus to claim Blaze's power. Shao Kahn emerges victorious, forcing Raiden to send a psychic warning into the past."^^xsd:string ;
+    mk:name "Claim: The Battle of the Pyramid of Argus"^^xsd:string ;
+    mk:supportedBy mk:source-mortalkombat-fandom-com-wiki-battle-of-armageddon ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:claim-event-cassie-defeats-shinnok a mk:StoryClaim ;
+    mk:aboutEvent mk:event-cassie-defeats-shinnok ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:claimInTimeline mk:timeline-reboot ;
+    mk:claimPredicate "occursIn"^^xsd:string ;
+    mk:claimText "Cassie Cage awakens her ancient green shadow halo energy to defeat Corrupted Shinnok and purify the Earthrealm Jinsei."^^xsd:string ;
+    mk:name "Claim: Fall of Corrupted Shinnok"^^xsd:string ;
+    mk:supportedBy mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-x ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:claim-event-creation-of-new-era a mk:StoryClaim ;
+    mk:aboutEvent mk:event-creation-of-new-era ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:claimInTimeline mk:timeline-new-era ;
+    mk:claimPredicate "occursIn"^^xsd:string ;
+    mk:claimText "Fire God Liu Kang uses the Hourglass to reset the universe, creating a new cycle where Kombatants receive new destinies."^^xsd:string ;
+    mk:name "Claim: Birth of the New Era"^^xsd:string ;
+    mk:supportedBy mk:source-www-mortalkombat-com-en-us ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:claim-event-deadly-alliance-formed a mk:StoryClaim ;
+    mk:aboutEvent mk:event-deadly-alliance-formed ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:claimInTimeline mk:timeline-original ;
+    mk:claimPredicate "occursIn"^^xsd:string ;
+    mk:claimText "Shang Tsung and Quan Chi join forces, assassinating Shao Kahn and Liu Kang to resurrect the Dragon King's mummified undefeatable army."^^xsd:string ;
+    mk:name "Claim: Formation of the Deadly Alliance"^^xsd:string ;
+    mk:supportedBy mk:source-mortalkombat-fandom-com-wiki-deadly-alliance ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:claim-event-dvorah-poisons-hanzo a mk:StoryClaim ;
+    mk:aboutEvent mk:event-dvorah-poisons-hanzo ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:claimInTimeline mk:timeline-reboot ;
+    mk:claimPredicate "occursIn"^^xsd:string ;
+    mk:claimText "D'Vorah mortally poisons Grandmaster Hanzo Hasashi; dying in the arms of his past specter self, Hanzo convinces him to choose honor."^^xsd:string ;
+    mk:name "Claim: Assassination of Grandmaster Hanzo Hasashi"^^xsd:string ;
+    mk:supportedBy mk:source-mortalkombat-fandom-com-wiki-hanzo-hasashi ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:claim-event-earthrealm-invasion a mk:StoryClaim ;
+    mk:aboutEvent mk:event-earthrealm-invasion ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:claimInTimeline mk:timeline-original ;
+    mk:claimPredicate "occursIn"^^xsd:string ;
+    mk:claimText "Shao Kahn resurrects Queen Sindel on Earth to bypass tournament rules, merging the realms until Earth's defenders force him to retreat."^^xsd:string ;
+    mk:name "Claim: Invasion of Earthrealm & Cyber Initiative"^^xsd:string ;
+    mk:supportedBy mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-3 ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:claim-event-first-tournament a mk:StoryClaim ;
+    mk:aboutEvent mk:event-first-tournament ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:claimInTimeline mk:timeline-original ;
+    mk:claimPredicate "occursIn"^^xsd:string ;
+    mk:claimText "Liu Kang defeats Prince Goro and Sorcerer Shang Tsung, preventing Outworld from claiming its tenth consecutive tournament victory."^^xsd:string ;
+    mk:name "Claim: Tenth Mortal Kombat Tournament"^^xsd:string ;
+    mk:supportedBy mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-1992-video-game ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:claim-event-lin-kuei-cyber-initiative a mk:StoryClaim ;
+    mk:aboutEvent mk:event-lin-kuei-cyber-initiative ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:claimInTimeline mk:timeline-reboot ;
+    mk:claimPredicate "occursIn"^^xsd:string ;
+    mk:claimText "The Lin Kuei converts its assassins into emotionless cybernetic units; Kuai Liang is captured and automated as Cyber Sub-Zero while Smoke escapes."^^xsd:string ;
+    mk:name "Claim: The Cyber Initiative in the Reboot"^^xsd:string ;
+    mk:supportedBy mk:source-mortalkombat-fandom-com-wiki-cyber-initiative ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:claim-event-mythologies-quest a mk:StoryClaim ;
+    mk:aboutEvent mk:event-mythologies-quest ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:claimInTimeline mk:timeline-original ;
+    mk:claimPredicate "occursIn"^^xsd:string ;
+    mk:claimText "Sub-Zero (Bi-Han) retrieves Shinnok's sacred amulet for Quan Chi, defeating the elemental gods before realizing he aided Netherrealm darkness."^^xsd:string ;
+    mk:name "Claim: Bi-Han's Netherrealm Quest"^^xsd:string ;
+    mk:supportedBy mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-mythologies-sub-zero ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:claim-event-onslaught-mobilization a mk:StoryClaim ;
+    mk:aboutEvent mk:event-onslaught-mobilization ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:claimInTimeline mk:timeline-new-era ;
+    mk:claimPredicate "occursIn"^^xsd:string ;
+    mk:claimText "Strike squads of Earthrealm and Outworld champions assemble across dimensions to intercept Shinnok's resurging dark talismans."^^xsd:string ;
+    mk:name "Claim: The Shinnok Relic Onslaught"^^xsd:string ;
+    mk:supportedBy mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-onslaught ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:claim-event-outworld-civil-war a mk:StoryClaim ;
+    mk:aboutEvent mk:event-outworld-civil-war ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:claimInTimeline mk:timeline-reboot ;
+    mk:claimPredicate "occursIn"^^xsd:string ;
+    mk:claimText "Kotal Kahn overthrows Mileena's chaotic reign; Cassie Cage's team negotiates an alliance while D'Vorah executes Mileena."^^xsd:string ;
+    mk:name "Claim: The Outworld Civil War"^^xsd:string ;
+    mk:supportedBy mk:source-mortalkombat-fandom-com-wiki-outworld-civil-war ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:claim-event-outworld-tournament a mk:StoryClaim ;
+    mk:aboutEvent mk:event-outworld-tournament ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:claimInTimeline mk:timeline-original ;
+    mk:claimPredicate "occursIn"^^xsd:string ;
+    mk:claimText "Shao Kahn entices Earthrealm's defenders into Outworld; Liu Kang triumphs over Shao Kahn, while Kitana discovers her clone Mileena."^^xsd:string ;
+    mk:name "Claim: Outworld Tournament Lure"^^xsd:string ;
+    mk:supportedBy mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-ii ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:claim-event-pact-of-fire-and-ice a mk:StoryClaim ;
+    mk:aboutEvent mk:event-pact-of-fire-and-ice ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:claimInTimeline mk:timeline-reboot ;
+    mk:claimPredicate "occursIn"^^xsd:string ;
+    mk:claimText "Kuai Liang reveals Quan Chi's deceit to Hanzo Hasashi at the Shirai Ryu Fire Garden, establishing peace between the clans."^^xsd:string ;
+    mk:name "Claim: Pact of Fire and Ice"^^xsd:string ;
+    mk:supportedBy mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-x ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:claim-event-raiden-vision-reset a mk:StoryClaim ;
+    mk:aboutEvent mk:event-raiden-vision-reset ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:claimInTimeline mk:timeline-reboot ;
+    mk:claimPredicate "occursIn"^^xsd:string ;
+    mk:claimText "Raiden alters history during the first tournament upon receiving visions from his future dying self during the Armageddon climax."^^xsd:string ;
+    mk:name "Claim: Raiden's Temporal Message (He Must Win)"^^xsd:string ;
+    mk:supportedBy mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-2011-video-game ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:claim-event-resurrection-of-onaga a mk:StoryClaim ;
+    mk:aboutEvent mk:event-resurrection-of-onaga ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:claimInTimeline mk:timeline-original ;
+    mk:claimPredicate "occursIn"^^xsd:string ;
+    mk:claimText "Onaga returns from the dead to reclaim Outworld's throne, breaking the Deadly Alliance and forcing Raiden to self-destruct in a desperate futile blast."^^xsd:string ;
+    mk:name "Claim: Return of the Dragon King"^^xsd:string ;
+    mk:supportedBy mk:source-mortalkombat-fandom-com-wiki-onaga ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:claim-event-shaolin-monks-crusade a mk:StoryClaim ;
+    mk:aboutEvent mk:event-shaolin-monks-crusade ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:claimInTimeline mk:timeline-original ;
+    mk:claimPredicate "occursIn"^^xsd:string ;
+    mk:claimText "Liu Kang and Kung Lao battle Baraka, Goro, and Shang Tsung across Outworld wastelands following the destruction of the Shaolin Temple."^^xsd:string ;
+    mk:name "Claim: Shaolin Crusade Across Outworld"^^xsd:string ;
+    mk:supportedBy mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-shaolin-monks ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:claim-event-shinnok-invasion-mk4 a mk:StoryClaim ;
+    mk:aboutEvent mk:event-shinnok-invasion-mk4 ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:claimInTimeline mk:timeline-original ;
+    mk:claimPredicate "occursIn"^^xsd:string ;
+    mk:claimText "Aided by the traitor Tanya, Shinnok escapes the Netherrealm, conquering Edenia and assaulting the Heavens before Raiden and Liu Kang repel him."^^xsd:string ;
+    mk:name "Claim: Shinnok's War Against Edenia and Heaven"^^xsd:string ;
+    mk:supportedBy mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-4 ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:claim-event-shinnok-netherrealm-war a mk:StoryClaim ;
+    mk:aboutEvent mk:event-shinnok-netherrealm-war ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:claimInTimeline mk:timeline-reboot ;
+    mk:claimPredicate "occursIn"^^xsd:string ;
+    mk:claimText "Fallen Elder God Shinnok leads Netherrealm revenants in an assault on the Jinsei Chamber before being trapped inside his own amulet by Johnny Cage."^^xsd:string ;
+    mk:name "Claim: Netherrealm War Against Earthrealm"^^xsd:string ;
+    mk:supportedBy mk:source-mortalkombat-fandom-com-wiki-netherrealm-war ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:claim-event-shujinko-deception a mk:StoryClaim ;
+    mk:aboutEvent mk:event-shujinko-deception ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:claimInTimeline mk:timeline-original ;
+    mk:claimPredicate "occursIn"^^xsd:string ;
+    mk:claimText "Believing he serves the Elder Gods through avatar Damashi, Shujinko spends a lifetime assembling the six Kamidogu, inadvertently resurrecting Onaga."^^xsd:string ;
+    mk:name "Claim: The Deception of Shujinko"^^xsd:string ;
+    mk:supportedBy mk:source-mortalkombat-fandom-com-wiki-shujinko ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:claim-event-sindel-massacre a mk:StoryClaim ;
+    mk:aboutEvent mk:event-sindel-massacre ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:claimInTimeline mk:timeline-reboot ;
+    mk:claimPredicate "occursIn"^^xsd:string ;
+    mk:claimText "Empowered by Shang Tsung's soul, resurrected Queen Sindel massacres the Earthrealm defenders, leading to their resurrection as Netherrealm revenants."^^xsd:string ;
+    mk:name "Claim: The Slaughter of Earthrealm's Champions"^^xsd:string ;
+    mk:supportedBy mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-2011-video-game ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:claim-event-special-forces-chase a mk:StoryClaim ;
+    mk:aboutEvent mk:event-special-forces-chase ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:claimInTimeline mk:timeline-original ;
+    mk:claimPredicate "occursIn"^^xsd:string ;
+    mk:claimText "Major Jax Briggs pursues Kano and his lieutenants across hidden military complexes, preventing Kano from weaponizing the Eye of Chitian."^^xsd:string ;
+    mk:name "Claim: Black Dragon Containment Operation"^^xsd:string ;
+    mk:supportedBy mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-special-forces ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:claim-event-time-merger a mk:StoryClaim ;
+    mk:aboutEvent mk:event-time-merger ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:claimInTimeline mk:timeline-reboot ;
+    mk:claimPredicate "occursIn"^^xsd:string ;
+    mk:claimText "Kronika collapses time, bringing younger past versions of warriors into the present era to rewrite history without Raiden."^^xsd:string ;
+    mk:name "Claim: Kronika's Temporal Convergence"^^xsd:string ;
+    mk:supportedBy mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-11 ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:claim-event-unmasking-of-titan-shang a mk:StoryClaim ;
+    mk:aboutEvent mk:event-unmasking-of-titan-shang ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:claimInTimeline mk:timeline-new-era ;
+    mk:claimPredicate "occursIn"^^xsd:string ;
+    mk:claimText "Liu Kang discovers that his timeline victory also generated an alternate timeline where Titan Shang Tsung reigns supreme, igniting a multiversal war."^^xsd:string ;
+    mk:name "Claim: Crisis of the Alternate Timelines"^^xsd:string ;
+    mk:supportedBy mk:source-www-mortalkombat-com-en-us ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:claim-event-worlds-collide-crisis a mk:StoryClaim ;
+    mk:aboutEvent mk:event-worlds-collide-crisis ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:claimInTimeline mk:timeline-original ;
+    mk:claimPredicate "occursIn"^^xsd:string ;
+    mk:claimText "Darkseid and Shao Kahn merge into Dark Kahn, triggering the combat rage that drives champions from both universes into mutual conflict."^^xsd:string ;
+    mk:name "Claim: Worlds Collide Dimensional Merger"^^xsd:string ;
+    mk:supportedBy mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-vs-dc-universe ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:claim-rel-ashrah-enemyof-quanchi a mk:StoryClaim ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:claimContext "Original & New Era Timelines"^^xsd:string ;
+    mk:claimInTimeline mk:timeline-new-era,
+        mk:timeline-original ;
+    mk:claimObject mk:character-quanchi ;
+    mk:claimPredicate "enemyOf"^^xsd:string ;
+    mk:claimSubject mk:character-ashrah ;
+    mk:claimText "Ashrah renounced Netherrealm evil and hunts Quan Chi's demons to cleanse her spirit."^^xsd:string ;
+    mk:evidenceText "Ashrah renounced Netherrealm evil and hunts Quan Chi's demons to cleanse her spirit."^^xsd:string ;
+    mk:name "Ashrah enemyOf Quan Chi"^^xsd:string ;
+    mk:supportedBy mk:source-mortalkombat-fandom-com-wiki-ashrah ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:claim-rel-boraicho-alliedwith-liukang a mk:StoryClaim ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:claimContext "Original & Reboot Timelines"^^xsd:string ;
+    mk:claimInTimeline mk:timeline-original,
+        mk:timeline-reboot ;
+    mk:claimObject mk:character-liukang ;
+    mk:claimPredicate "alliedWith"^^xsd:string ;
+    mk:claimSubject mk:character-boraicho ;
+    mk:claimText "Master Bo' Rai Cho instructed Liu Kang in the Flying Kick and Shaolin chi focus."^^xsd:string ;
+    mk:evidenceText "Master Bo' Rai Cho instructed Liu Kang in the Flying Kick and Shaolin chi focus."^^xsd:string ;
+    mk:name "Bo' Rai Cho alliedWith Liu Kang"^^xsd:string ;
+    mk:supportedBy mk:source-mortalkombat-fandom-com-wiki-bo-27-rai-cho ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:claim-rel-cassiecage-alliedwith-sonyablade a mk:StoryClaim ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:claimContext "Reboot Timeline"^^xsd:string ;
+    mk:claimInTimeline mk:timeline-reboot ;
+    mk:claimObject mk:character-sonyablade ;
+    mk:claimPredicate "alliedWith"^^xsd:string ;
+    mk:claimSubject mk:character-cassiecage ;
+    mk:claimText "Mother and daughter serving together in Earthrealm's Special Forces command."^^xsd:string ;
+    mk:evidenceText "Mother and daughter serving together in Earthrealm's Special Forces command."^^xsd:string ;
+    mk:name "Cassie Cage alliedWith Sonya Blade"^^xsd:string ;
+    mk:supportedBy mk:source-mortalkombat-fandom-com-wiki-cassie-cage ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:claim-rel-cassiecage-enemyof-shinnok a mk:StoryClaim ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:claimContext "Reboot Timeline (MKX)"^^xsd:string ;
+    mk:claimInTimeline mk:timeline-reboot ;
+    mk:claimObject mk:character-shinnok ;
+    mk:claimPredicate "enemyOf"^^xsd:string ;
+    mk:claimSubject mk:character-cassiecage ;
+    mk:claimText "Cassie defeated Corrupted Shinnok to save her father Johnny Cage."^^xsd:string ;
+    mk:evidenceText "Cassie defeated Corrupted Shinnok to save her father Johnny Cage."^^xsd:string ;
+    mk:name "Cassie Cage enemyOf Shinnok"^^xsd:string ;
+    mk:supportedBy mk:source-mortalkombat-fandom-com-wiki-cassie-cage ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:claim-rel-cetrion-alliedwith-kronika a mk:StoryClaim ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:claimContext "Reboot Timeline (MK11)"^^xsd:string ;
+    mk:claimInTimeline mk:timeline-reboot ;
+    mk:claimObject mk:character-kronika ;
+    mk:claimPredicate "alliedWith"^^xsd:string ;
+    mk:claimSubject mk:character-cetrion ;
+    mk:claimText "Cetrion sacrificed her Elder God essence to empower her mother Kronika's Hourglass."^^xsd:string ;
+    mk:evidenceText "Cetrion sacrificed her Elder God essence to empower her mother Kronika's Hourglass."^^xsd:string ;
+    mk:name "Cetrion alliedWith Kronika"^^xsd:string ;
+    mk:supportedBy mk:source-mortalkombat-fandom-com-wiki-cetrion ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:claim-rel-dvorah-enemyof-mileena a mk:StoryClaim ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:claimContext "Reboot Timeline (MKX)"^^xsd:string ;
+    mk:claimInTimeline mk:timeline-reboot ;
+    mk:claimObject mk:character-mileena ;
+    mk:claimPredicate "enemyOf"^^xsd:string ;
+    mk:claimSubject mk:character-dvorah ;
+    mk:claimText "D'Vorah executed Mileena via toxic flesh-eating parasite kiss on Kotal Kahn's order."^^xsd:string ;
+    mk:evidenceText "D'Vorah executed Mileena via toxic flesh-eating parasite kiss on Kotal Kahn's order."^^xsd:string ;
+    mk:name "D'Vorah enemyOf Mileena"^^xsd:string ;
+    mk:supportedBy mk:source-mortalkombat-fandom-com-wiki-d-27vorah ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:claim-rel-dvorah-enemyof-scorpion a mk:StoryClaim ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:claimContext "Reboot Timeline (MK11)"^^xsd:string ;
+    mk:claimInTimeline mk:timeline-reboot ;
+    mk:claimObject mk:character-scorpion ;
+    mk:claimPredicate "enemyOf"^^xsd:string ;
+    mk:claimSubject mk:character-dvorah ;
+    mk:claimText "D'Vorah fatally stung Grandmaster Hanzo Hasashi at the Sea of Blood."^^xsd:string ;
+    mk:evidenceText "D'Vorah fatally stung Grandmaster Hanzo Hasashi at the Sea of Blood."^^xsd:string ;
+    mk:name "D'Vorah enemyOf Scorpion"^^xsd:string ;
+    mk:supportedBy mk:source-mortalkombat-fandom-com-wiki-d-27vorah ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:claim-rel-frost-enemyof-subzero a mk:StoryClaim ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:claimContext "Reboot Timeline"^^xsd:string ;
+    mk:claimInTimeline mk:timeline-reboot ;
+    mk:claimObject mk:character-subzero ;
+    mk:claimPredicate "enemyOf"^^xsd:string ;
+    mk:claimSubject mk:character-frost ;
+    mk:claimText "Frost rebelled against Sub-Zero's leadership and allied with Kronika."^^xsd:string ;
+    mk:evidenceText "Frost rebelled against Sub-Zero's leadership and allied with Kronika."^^xsd:string ;
+    mk:name "Frost enemyOf Sub-Zero"^^xsd:string ;
+    mk:supportedBy mk:source-mortalkombat-fandom-com-wiki-frost ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:claim-rel-geras-alliedwith-liukang a mk:StoryClaim ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:claimContext "New Era Timeline"^^xsd:string ;
+    mk:claimInTimeline mk:timeline-new-era ;
+    mk:claimObject mk:character-liukang ;
+    mk:claimPredicate "alliedWith"^^xsd:string ;
+    mk:claimSubject mk:character-geras ;
+    mk:claimText "Geras serves Fire God Liu Kang as the eternal steward of the Hourglass."^^xsd:string ;
+    mk:evidenceText "Geras serves Fire God Liu Kang as the eternal steward of the Hourglass."^^xsd:string ;
+    mk:name "Geras alliedWith Liu Kang"^^xsd:string ;
+    mk:supportedBy mk:source-mortalkombat-fandom-com-wiki-geras ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:claim-rel-hotaru-enemyof-havik a mk:StoryClaim ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:claimContext "Original Timeline (MK Deception)"^^xsd:string ;
+    mk:claimInTimeline mk:timeline-original ;
+    mk:claimObject mk:character-havik ;
+    mk:claimPredicate "enemyOf"^^xsd:string ;
+    mk:claimSubject mk:character-hotaru ;
+    mk:claimText "Commander Hotaru upholds strict Seidan order while Cleric Havik sows perpetual chaos."^^xsd:string ;
+    mk:evidenceText "Commander Hotaru upholds strict Seidan order while Cleric Havik sows perpetual chaos."^^xsd:string ;
+    mk:name "Hotaru enemyOf Havik"^^xsd:string ;
+    mk:supportedBy mk:source-mortalkombat-fandom-com-wiki-hotaru ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:claim-rel-jacqui-alliedwith-cassiecage a mk:StoryClaim ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:claimContext "Reboot Timeline"^^xsd:string ;
+    mk:claimInTimeline mk:timeline-reboot ;
+    mk:claimObject mk:character-cassiecage ;
+    mk:claimPredicate "alliedWith"^^xsd:string ;
+    mk:claimSubject mk:character-jacqui ;
+    mk:claimText "Jacqui Briggs serves as Cassie Cage's second-in-command and closest friend."^^xsd:string ;
+    mk:evidenceText "Jacqui Briggs serves as Cassie Cage's second-in-command and closest friend."^^xsd:string ;
+    mk:name "Jacqui Briggs alliedWith Cassie Cage"^^xsd:string ;
+    mk:supportedBy mk:source-mortalkombat-fandom-com-wiki-jacqui-briggs ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:claim-rel-jade-alliedwith-kitana a mk:StoryClaim ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:claimContext "All Timelines"^^xsd:string ;
+    mk:claimInTimeline mk:timeline-new-era,
+        mk:timeline-original,
+        mk:timeline-reboot ;
+    mk:claimObject mk:character-kitana ;
+    mk:claimPredicate "alliedWith"^^xsd:string ;
+    mk:claimSubject mk:character-jade ;
+    mk:claimText "Jade served as Kitana's most loyal bodyguard and trusted confidante."^^xsd:string ;
+    mk:evidenceText "Jade served as Kitana's most loyal bodyguard and trusted confidante."^^xsd:string ;
+    mk:name "Jade alliedWith Kitana"^^xsd:string ;
+    mk:supportedBy mk:source-mortalkombat-fandom-com-wiki-jade ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:claim-rel-kabal-alliedwith-stryker a mk:StoryClaim ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:claimContext "Reboot Timeline (MK9)"^^xsd:string ;
+    mk:claimInTimeline mk:timeline-reboot ;
+    mk:claimObject mk:character-stryker ;
+    mk:claimPredicate "alliedWith"^^xsd:string ;
+    mk:claimSubject mk:character-kabal ;
+    mk:claimText "Stryker and Kabal were NYPD partners defending New York City against Outworld forces."^^xsd:string ;
+    mk:evidenceText "Stryker and Kabal were NYPD partners defending New York City against Outworld forces."^^xsd:string ;
+    mk:name "Kabal alliedWith Kurtis Stryker"^^xsd:string ;
+    mk:supportedBy mk:source-mortalkombat-fandom-com-wiki-kabal ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:claim-rel-kitana-enemyof-shaokahn a mk:StoryClaim ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:claimContext "Reboot Timeline"^^xsd:string ;
+    mk:claimInTimeline mk:timeline-reboot ;
+    mk:claimObject mk:character-shaokahn ;
+    mk:claimPredicate "enemyOf"^^xsd:string ;
+    mk:claimSubject mk:character-kitana ;
+    mk:claimText "Kitana led the Outworld rebellion and defeated Shao Kahn to become Kitana Kahn."^^xsd:string ;
+    mk:evidenceText "Kitana led the Outworld rebellion and defeated Shao Kahn to become Kitana Kahn."^^xsd:string ;
+    mk:name "Kitana enemyOf Shao Kahn"^^xsd:string ;
+    mk:supportedBy mk:source-mortalkombat-fandom-com-wiki-kitana ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:claim-rel-kotalkahn-enemyof-mileena a mk:StoryClaim ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:claimContext "Reboot Timeline (Outworld Civil War)"^^xsd:string ;
+    mk:claimInTimeline mk:timeline-reboot ;
+    mk:claimObject mk:character-mileena ;
+    mk:claimPredicate "enemyOf"^^xsd:string ;
+    mk:claimSubject mk:character-kotalkahn ;
+    mk:claimText "Kotal Kahn led the coup d'état overthrowing Mileena from the Outworld throne."^^xsd:string ;
+    mk:evidenceText "Kotal Kahn led the coup d'état overthrowing Mileena from the Outworld throne."^^xsd:string ;
+    mk:name "Kotal Kahn enemyOf Mileena"^^xsd:string ;
+    mk:supportedBy mk:source-mortalkombat-fandom-com-wiki-kotal-kahn ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:claim-rel-kungjin-alliedwith-kunglao a mk:StoryClaim ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:claimContext "Reboot Timeline"^^xsd:string ;
+    mk:claimInTimeline mk:timeline-reboot ;
+    mk:claimObject mk:character-kunglao ;
+    mk:claimPredicate "alliedWith"^^xsd:string ;
+    mk:claimSubject mk:character-kungjin ;
+    mk:claimText "Kung Jin honors his cousin Kung Lao's legacy as a proud Shaolin warrior."^^xsd:string ;
+    mk:evidenceText "Kung Jin honors his cousin Kung Lao's legacy as a proud Shaolin warrior."^^xsd:string ;
+    mk:name "Kung Jin alliedWith Kung Lao"^^xsd:string ;
+    mk:supportedBy mk:source-mortalkombat-fandom-com-wiki-kung-jin ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:claim-rel-mavado-enemyof-kano a mk:StoryClaim ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:claimContext "Original Timeline"^^xsd:string ;
+    mk:claimInTimeline mk:timeline-original ;
+    mk:claimObject mk:character-kano ;
+    mk:claimPredicate "enemyOf"^^xsd:string ;
+    mk:claimSubject mk:character-mavado ;
+    mk:claimText "Mavado's Red Dragon sought the systematic extermination of Kano's Black Dragon."^^xsd:string ;
+    mk:evidenceText "Mavado's Red Dragon sought the systematic extermination of Kano's Black Dragon."^^xsd:string ;
+    mk:name "Mavado enemyOf Kano"^^xsd:string ;
+    mk:supportedBy mk:source-mortalkombat-fandom-com-wiki-mavado ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:claim-rel-nightwolf-alliedwith-raiden a mk:StoryClaim ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:claimContext "All Timelines"^^xsd:string ;
+    mk:claimInTimeline mk:timeline-new-era,
+        mk:timeline-original,
+        mk:timeline-reboot ;
+    mk:claimObject mk:character-raiden ;
+    mk:claimPredicate "alliedWith"^^xsd:string ;
+    mk:claimSubject mk:character-nightwolf ;
+    mk:claimText "Nightwolf joined Raiden's circle of chosen Earthrealm champions to ward off Outworld."^^xsd:string ;
+    mk:evidenceText "Nightwolf joined Raiden's circle of chosen Earthrealm champions to ward off Outworld."^^xsd:string ;
+    mk:name "Nightwolf alliedWith Raiden"^^xsd:string ;
+    mk:supportedBy mk:source-mortalkombat-fandom-com-wiki-nightwolf ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:claim-rel-onaga-enemyof-shaokahn a mk:StoryClaim ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:claimContext "Original Timeline"^^xsd:string ;
+    mk:claimInTimeline mk:timeline-original ;
+    mk:claimObject mk:character-shaokahn ;
+    mk:claimPredicate "enemyOf"^^xsd:string ;
+    mk:claimSubject mk:character-onaga ;
+    mk:claimText "Shao Kahn was Onaga's trusted advisor who poisoned him to steal the throne of Outworld."^^xsd:string ;
+    mk:evidenceText "Shao Kahn was Onaga's trusted advisor who poisoned him to steal the throne of Outworld."^^xsd:string ;
+    mk:name "Onaga enemyOf Shao Kahn"^^xsd:string ;
+    mk:supportedBy mk:source-mortalkombat-fandom-com-wiki-onaga ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:claim-rel-raiden-alliedwith-liukang a mk:StoryClaim ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:claimContext "Original & Reboot Timelines"^^xsd:string ;
+    mk:claimInTimeline mk:timeline-original,
+        mk:timeline-reboot ;
+    mk:claimObject mk:character-liukang ;
+    mk:claimPredicate "alliedWith"^^xsd:string ;
+    mk:claimSubject mk:character-raiden ;
+    mk:claimText "Raiden mentored Liu Kang as Earthrealm's supreme champion in the tournaments."^^xsd:string ;
+    mk:evidenceText "Raiden mentored Liu Kang as Earthrealm's supreme champion in the tournaments."^^xsd:string ;
+    mk:name "Raiden alliedWith Liu Kang"^^xsd:string ;
+    mk:supportedBy mk:source-mortalkombat-fandom-com-wiki-raiden ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:claim-rel-raiden-enemyof-shinnok a mk:StoryClaim ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:claimContext "All Timelines"^^xsd:string ;
+    mk:claimInTimeline mk:timeline-new-era,
+        mk:timeline-original,
+        mk:timeline-reboot ;
+    mk:claimObject mk:character-shinnok ;
+    mk:claimPredicate "enemyOf"^^xsd:string ;
+    mk:claimSubject mk:character-raiden ;
+    mk:claimText "Raiden stripped Shinnok of Elder God status and defended Earthrealm from his invasions."^^xsd:string ;
+    mk:evidenceText "Raiden stripped Shinnok of Elder God status and defended Earthrealm from his invasions."^^xsd:string ;
+    mk:name "Raiden enemyOf Shinnok"^^xsd:string ;
+    mk:supportedBy mk:source-mortalkombat-fandom-com-wiki-raiden ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:claim-rel-sareena-alliedwith-subzero a mk:StoryClaim ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:claimContext "Original Timeline"^^xsd:string ;
+    mk:claimInTimeline mk:timeline-original ;
+    mk:claimObject mk:character-subzero ;
+    mk:claimPredicate "alliedWith"^^xsd:string ;
+    mk:claimSubject mk:character-sareena ;
+    mk:claimText "Sareena turned against Quan Chi to help Sub-Zero escape the Netherrealm."^^xsd:string ;
+    mk:evidenceText "Sareena turned against Quan Chi to help Sub-Zero escape the Netherrealm."^^xsd:string ;
+    mk:name "Sareena alliedWith Sub-Zero"^^xsd:string ;
+    mk:supportedBy mk:source-mortalkombat-fandom-com-wiki-sareena ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:claim-rel-scorpion-alliedwith-subzero a mk:StoryClaim ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:claimContext "Reboot Timeline (MKX & MK11)"^^xsd:string ;
+    mk:claimInTimeline mk:timeline-reboot ;
+    mk:claimObject mk:character-subzero ;
+    mk:claimPredicate "alliedWith"^^xsd:string ;
+    mk:claimSubject mk:character-scorpion ;
+    mk:claimText "Sub-Zero and Scorpion reconciled at the Shirai Ryu Fire Garden over tea."^^xsd:string ;
+    mk:evidenceText "Sub-Zero and Scorpion reconciled at the Shirai Ryu Fire Garden over tea."^^xsd:string ;
+    mk:name "Scorpion alliedWith Sub-Zero"^^xsd:string ;
+    mk:supportedBy mk:source-mortalkombat-fandom-com-wiki-scorpion ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:claim-rel-scorpion-enemyof-quanchi a mk:StoryClaim ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:claimContext "All Timelines"^^xsd:string ;
+    mk:claimInTimeline mk:timeline-new-era,
+        mk:timeline-original,
+        mk:timeline-reboot ;
+    mk:claimObject mk:character-quanchi ;
+    mk:claimPredicate "enemyOf"^^xsd:string ;
+    mk:claimSubject mk:character-scorpion ;
+    mk:claimText "Quan Chi was unmasked as the true architect of the Shirai Ryu massacre."^^xsd:string ;
+    mk:evidenceText "Quan Chi was unmasked as the true architect of the Shirai Ryu massacre."^^xsd:string ;
+    mk:name "Scorpion enemyOf Quan Chi"^^xsd:string ;
+    mk:supportedBy mk:source-mortalkombat-fandom-com-wiki-scorpion ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:claim-rel-scorpion-enemyof-subzero a mk:StoryClaim ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:claimContext "Original Timeline & Early Reboot"^^xsd:string ;
+    mk:claimInTimeline mk:timeline-original,
+        mk:timeline-reboot ;
+    mk:claimObject mk:character-subzero ;
+    mk:claimPredicate "enemyOf"^^xsd:string ;
+    mk:claimSubject mk:character-scorpion ;
+    mk:claimText "Scorpion blamed Sub-Zero for the demise of Shirai Ryu until truth was revealed."^^xsd:string ;
+    mk:evidenceText "Scorpion blamed Sub-Zero for the demise of Shirai Ryu until truth was revealed."^^xsd:string ;
+    mk:name "Scorpion enemyOf Sub-Zero"^^xsd:string ;
+    mk:supportedBy mk:source-mortalkombat-fandom-com-wiki-scorpion ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:claim-rel-shangtsung-alliedwith-quanchi a mk:StoryClaim ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:claimContext "Original Timeline (Deadly Alliance)"^^xsd:string ;
+    mk:claimInTimeline mk:timeline-original ;
+    mk:claimObject mk:character-quanchi ;
+    mk:claimPredicate "alliedWith"^^xsd:string ;
+    mk:claimSubject mk:character-shangtsung ;
+    mk:claimText "United sorcerers formed the Deadly Alliance to overpower the Thunder God."^^xsd:string ;
+    mk:evidenceText "United sorcerers formed the Deadly Alliance to overpower the Thunder God."^^xsd:string ;
+    mk:name "Shang Tsung alliedWith Quan Chi"^^xsd:string ;
+    mk:supportedBy mk:source-mortalkombat-fandom-com-wiki-shang-tsung ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:claim-rel-sheeva-alliedwith-sindel a mk:StoryClaim ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:claimContext "Classic & Reboot Timelines"^^xsd:string ;
+    mk:claimInTimeline mk:timeline-original,
+        mk:timeline-reboot ;
+    mk:claimObject mk:character-sindel ;
+    mk:claimPredicate "alliedWith"^^xsd:string ;
+    mk:claimSubject mk:character-sheeva ;
+    mk:claimText "Sheeva was chosen by Shao Kahn to serve as Queen Sindel's personal protector."^^xsd:string ;
+    mk:evidenceText "Sheeva was chosen by Shao Kahn to serve as Queen Sindel's personal protector."^^xsd:string ;
+    mk:name "Sheeva alliedWith Sindel"^^xsd:string ;
+    mk:supportedBy mk:source-mortalkombat-fandom-com-wiki-sheeva ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:claim-rel-shujinko-enemyof-onaga a mk:StoryClaim ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:claimContext "Original Timeline (MK Deception)"^^xsd:string ;
+    mk:claimInTimeline mk:timeline-original ;
+    mk:claimObject mk:character-onaga ;
+    mk:claimPredicate "enemyOf"^^xsd:string ;
+    mk:claimSubject mk:character-shujinko ;
+    mk:claimText "Shujinko shattered the Kamidogu to avenge being deceived by Onaga's avatar Damashi."^^xsd:string ;
+    mk:evidenceText "Shujinko shattered the Kamidogu to avenge being deceived by Onaga's avatar Damashi."^^xsd:string ;
+    mk:name "Shujinko enemyOf Onaga"^^xsd:string ;
+    mk:supportedBy mk:source-mortalkombat-fandom-com-wiki-shujinko ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:claim-rel-sonyablade-enemyof-kano a mk:StoryClaim ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:claimContext "All Timelines"^^xsd:string ;
+    mk:claimInTimeline mk:timeline-new-era,
+        mk:timeline-original,
+        mk:timeline-reboot ;
+    mk:claimObject mk:character-kano ;
+    mk:claimPredicate "enemyOf"^^xsd:string ;
+    mk:claimSubject mk:character-sonyablade ;
+    mk:claimText "Sonya relentlessly pursued Kano for the murder of her Special Forces partner."^^xsd:string ;
+    mk:evidenceText "Sonya relentlessly pursued Kano for the murder of her Special Forces partner."^^xsd:string ;
+    mk:name "Sonya Blade enemyOf Kano"^^xsd:string ;
+    mk:supportedBy mk:source-mortalkombat-fandom-com-wiki-sonya-blade ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:claim-rel-takeda-alliedwith-kenshi a mk:StoryClaim ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:claimContext "Reboot Timeline"^^xsd:string ;
+    mk:claimInTimeline mk:timeline-reboot ;
+    mk:claimObject mk:character-kenshi ;
+    mk:claimPredicate "alliedWith"^^xsd:string ;
+    mk:claimSubject mk:character-takeda ;
+    mk:claimText "Takeda reconciles with his father Kenshi after training under Scorpion."^^xsd:string ;
+    mk:evidenceText "Takeda reconciles with his father Kenshi after training under Scorpion."^^xsd:string ;
+    mk:name "Takeda Takahashi alliedWith Kenshi"^^xsd:string ;
+    mk:supportedBy mk:source-mortalkombat-fandom-com-wiki-takeda-takahashi ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:claim-rel-tanya-alliedwith-mileena a mk:StoryClaim ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:claimContext "Reboot & New Era Timelines"^^xsd:string ;
+    mk:claimInTimeline mk:timeline-new-era,
+        mk:timeline-reboot ;
+    mk:claimObject mk:character-mileena ;
+    mk:claimPredicate "alliedWith"^^xsd:string ;
+    mk:claimSubject mk:character-tanya ;
+    mk:claimText "Tanya protected Mileena as lover and royal guard against Outworld conspirators."^^xsd:string ;
+    mk:evidenceText "Tanya protected Mileena as lover and royal guard against Outworld conspirators."^^xsd:string ;
+    mk:name "Tanya alliedWith Mileena"^^xsd:string ;
+    mk:supportedBy mk:source-mortalkombat-fandom-com-wiki-tanya ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:game-mk-arcade-kollection-2011 mk:hasSource mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-arcade-kollection .
+
+mk:game-mk-armageddon-2006 mk:hasSource mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-armageddon .
+
+mk:game-mk-deadly-alliance-2002 mk:hasSource mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-deadly-alliance .
+
+mk:game-mk-deception-2004 mk:hasSource mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-deception .
+
+mk:game-mk-gold-1999 mk:hasSource mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-gold .
+
+mk:game-mk-mobile-2015 mk:hasSource mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-mobile .
+
+mk:game-mk-mythologies-1997 mk:hasSource mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-mythologies-sub-zero .
+
+mk:game-mk-onslaught-2023 mk:hasSource mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-onslaught .
+
+mk:game-mk-shaolin-monks-2005 mk:hasSource mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-shaolin-monks .
+
+mk:game-mk-special-forces-2000 mk:hasSource mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-special-forces .
+
+mk:game-mk-tournament-edition-2003 mk:hasSource mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-tournament-edition .
+
+mk:game-mk-unchained-2006 mk:hasSource mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-unchained .
+
+mk:game-mk-vs-dc-2008 mk:hasSource mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-vs-dc-universe .
+
+mk:game-mk1-1992 mk:hasSource mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-1992-video-game .
+
+mk:game-mk1-2023 mk:hasSource mk:source-www-mortalkombat-com-en-us .
+
+mk:game-mk11-2019 mk:hasSource mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-11 .
+
+mk:game-mk2-1993 mk:hasSource mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-ii .
+
+mk:game-mk3-1995 mk:hasSource mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-3 .
+
+mk:game-mk4-1997 mk:hasSource mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-4 .
+
+mk:game-mk9-2011 mk:hasSource mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-2011-video-game .
+
+mk:game-mkt-1996 mk:hasSource mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-trilogy .
+
+mk:game-mkx-2015 mk:hasSource mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-x .
+
+mk:game-umk3-1995 mk:hasSource mk:source-mortalkombat-fandom-com-wiki-ultimate-mortal-kombat-3 .
+
+mk:location-chaos-palace mk:hasSource mk:source-mortalkombat-fandom-com-wiki-chaosrealm .
+
+mk:location-dead-pool mk:hasSource mk:source-mortalkombat-fandom-com-wiki-dead-pool .
+
+mk:location-fire-gardens mk:hasSource mk:source-mortalkombat-fandom-com-wiki-fire-gardens .
+
+mk:location-jinsei-chamber mk:hasSource mk:source-mortalkombat-fandom-com-wiki-jinsei-chamber .
+
+mk:location-lin-kuei-temple mk:hasSource mk:source-mortalkombat-fandom-com-wiki-arctika .
+
+mk:location-netherrealm-spire mk:hasSource mk:source-mortalkombat-fandom-com-wiki-netherrealm .
+
+mk:location-pyramid-of-argus mk:hasSource mk:source-mortalkombat-fandom-com-wiki-pyramid-of-argus .
+
+mk:location-sea-of-blood mk:hasSource mk:source-mortalkombat-fandom-com-wiki-sea-of-blood .
+
+mk:location-seido-capital mk:hasSource mk:source-mortalkombat-fandom-com-wiki-orderrealm .
+
+mk:location-shang-tsung-island mk:hasSource mk:source-mortalkombat-fandom-com-wiki-shang-tsung-27s-island .
+
+mk:location-shao-kahn-throne mk:hasSource mk:source-mortalkombat-fandom-com-wiki-kahn-27s-arena .
+
+mk:location-shaolin-temple mk:hasSource mk:source-mortalkombat-fandom-com-wiki-wu-shi-academy .
+
+mk:location-the-hourglass mk:hasSource mk:source-mortalkombat-fandom-com-wiki-hourglass .
+
+mk:location-the-pit mk:hasSource mk:source-mortalkombat-fandom-com-wiki-the-pit .
+
+mk:move-flying-kick a mk:SpecialMove .
+
+mk:move-sonic-scream a mk:SpecialMove .
+
+mk:storytimeline-new-era a mk:StoryTimeline ;
+    mk:describesTimeline mk:timeline-new-era ;
+    mk:description "Chronologically ordered Story Events of the New Era (3 events)."^^xsd:string ;
+    mk:eventCount 3 ;
+    mk:firstEvent mk:event-creation-of-new-era ;
+    mk:hasStoryEvent mk:event-creation-of-new-era,
+        mk:event-onslaught-mobilization,
+        mk:event-unmasking-of-titan-shang ;
+    mk:lastEvent mk:event-onslaught-mobilization ;
+    mk:name "New Era - Story Timeline"^^xsd:string .
+
+mk:storytimeline-original a mk:StoryTimeline ;
+    mk:describesTimeline mk:timeline-original ;
+    mk:description "Chronologically ordered Story Events of the Original Timeline (12 events)."^^xsd:string ;
+    mk:eventCount 12 ;
+    mk:firstEvent mk:event-mythologies-quest ;
+    mk:hasStoryEvent mk:event-battle-of-armageddon,
+        mk:event-deadly-alliance-formed,
+        mk:event-earthrealm-invasion,
+        mk:event-first-tournament,
+        mk:event-mythologies-quest,
+        mk:event-outworld-tournament,
+        mk:event-resurrection-of-onaga,
+        mk:event-shaolin-monks-crusade,
+        mk:event-shinnok-invasion-mk4,
+        mk:event-shujinko-deception,
+        mk:event-special-forces-chase,
+        mk:event-worlds-collide-crisis ;
+    mk:lastEvent mk:event-worlds-collide-crisis ;
+    mk:name "Original Timeline - Story Timeline"^^xsd:string .
+
+mk:storytimeline-reboot a mk:StoryTimeline ;
+    mk:describesTimeline mk:timeline-reboot ;
+    mk:description "Chronologically ordered Story Events of the Reboot Timeline (10 events)."^^xsd:string ;
+    mk:eventCount 10 ;
+    mk:firstEvent mk:event-raiden-vision-reset ;
+    mk:hasStoryEvent mk:event-battle-for-the-hourglass,
+        mk:event-cassie-defeats-shinnok,
+        mk:event-dvorah-poisons-hanzo,
+        mk:event-lin-kuei-cyber-initiative,
+        mk:event-outworld-civil-war,
+        mk:event-pact-of-fire-and-ice,
+        mk:event-raiden-vision-reset,
+        mk:event-shinnok-netherrealm-war,
+        mk:event-sindel-massacre,
+        mk:event-time-merger ;
+    mk:lastEvent mk:event-battle-for-the-hourglass ;
+    mk:name "Reboot Timeline - Story Timeline"^^xsd:string .
+
+mk:version-ashrah-mk-deception-2004 mk:canonStatus "canonical"^^xsd:string ;
+    mk:enemyOf mk:version-quanchi-mk4 ;
+    mk:nextVersion mk:version-ashrah-mk1-2023 ;
+    mk:performsMove mk:fatality-divine-purification,
+        mk:move-heavenly-light ;
+    mk:versionLabel "Ashrah - Mortal Kombat: Deception - Original Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "2004"^^xsd:gYear .
+
+mk:version-blaze-mk-deadly-alliance-2002 mk:canonStatus "canonical"^^xsd:string ;
+    mk:nextVersion mk:version-blaze-mk-armageddon-2006 ;
+    mk:performsMove mk:move-fire-fist ;
+    mk:versionLabel "Blaze - Mortal Kombat: Deadly Alliance - Original Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "2002"^^xsd:gYear .
+
+mk:version-ferratorr-mkx mk:canonStatus "canonical"^^xsd:string ;
+    mk:versionLabel "Ferra & Torr - Mortal Kombat X - Reboot Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "2015"^^xsd:gYear .
+
+mk:version-jade-umk3 mk:alliedWith mk:version-kitana-mk2 ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:nextVersion mk:version-jade-mk11 ;
+    mk:performsMove mk:fatality-bow-before-me,
+        mk:move-blazing-nitro-kick,
+        mk:move-tribomerang ;
+    mk:versionLabel "Jade - Ultimate Mortal Kombat 3 - Original Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "1995"^^xsd:gYear .
+
+mk:version-johnnycage-mk1 mk:canonStatus "canonical"^^xsd:string ;
+    mk:nextVersion mk:version-johnnycage-mk11 ;
+    mk:performsMove mk:move-nut-punch,
+        mk:move-shadow-kick ;
+    mk:versionLabel "Johnny Cage - Mortal Kombat (1992) - Original Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "1992"^^xsd:gYear .
+
+mk:version-kintaro-mk2 mk:canonStatus "canonical"^^xsd:string ;
+    mk:performsMove mk:move-shokan-stomp ;
+    mk:versionLabel "Kintaro - Mortal Kombat II - Original Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "1993"^^xsd:gYear .
+
+mk:version-kollector-mk11 mk:canonStatus "canonical"^^xsd:string ;
+    mk:performsMove mk:fatality-for-the-kollection,
+        mk:move-demonic-mace,
+        mk:move-shotel-strike ;
+    mk:versionLabel "Kollector - Mortal Kombat 11 - Reboot Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "2019"^^xsd:gYear .
+
+mk:version-limei-mk-deadly-alliance-2002 mk:canonStatus "canonical"^^xsd:string ;
+    mk:nextVersion mk:version-limei-mk1-2023 ;
+    mk:performsMove mk:move-energy-spark ;
+    mk:versionLabel "Li Mei - Mortal Kombat: Deadly Alliance - Original Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "2002"^^xsd:gYear .
+
+mk:version-mavado-mk-deadly-alliance-2002 mk:canonStatus "canonical"^^xsd:string ;
+    mk:enemyOf mk:version-kano-mk1 ;
+    mk:nextVersion mk:version-mavado-mk-tournament-edition-2003 ;
+    mk:performsMove mk:move-grapple-hook-kick ;
+    mk:versionLabel "Mavado - Mortal Kombat: Deadly Alliance - Original Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "2002"^^xsd:gYear .
+
+mk:version-motaro-mk3 mk:canonStatus "canonical"^^xsd:string ;
+    mk:nextVersion mk:version-motaro-mk-armageddon-2006 ;
+    mk:performsMove mk:move-centaur-charge ;
+    mk:versionLabel "Motaro - Mortal Kombat 3 - Original Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "1995"^^xsd:gYear .
+
+mk:version-nightwolf-mk3 mk:alliedWith mk:version-raiden-mk1 ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:nextVersion mk:version-nightwolf-mk9 ;
+    mk:performsMove mk:fatality-war-dance,
+        mk:move-rhino-charge,
+        mk:move-spirit-arrow ;
+    mk:versionLabel "Nightwolf - Mortal Kombat 3 - Original Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "1995"^^xsd:gYear .
+
+mk:version-nitara-mk-deadly-alliance-2002 mk:canonStatus "canonical"^^xsd:string ;
+    mk:nextVersion mk:version-nitara-mk1-2023 ;
+    mk:performsMove mk:fatality-vaeternus-drain,
+        mk:move-blood-spit ;
+    mk:versionLabel "Nitara - Mortal Kombat: Deadly Alliance - Original Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "2002"^^xsd:gYear .
+
+mk:version-noobsaibot-mk2 mk:canonStatus "canonical"^^xsd:string ;
+    mk:nextVersion mk:version-noobsaibot-mk11 ;
+    mk:performsMove mk:move-shadow-slide ;
+    mk:versionLabel "Noob Saibot - Mortal Kombat II - Original Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "1993"^^xsd:gYear .
+
+mk:version-reptile-mk1 mk:canonStatus "canonical"^^xsd:string ;
+    mk:nextVersion mk:version-reptile-mkx ;
+    mk:performsMove mk:move-acid-spit ;
+    mk:versionLabel "Reptile - Mortal Kombat (1992) - Original Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "1992"^^xsd:gYear .
+
+mk:version-sheeva-mk3 mk:alliedWith mk:version-sindel-mk3 ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:nextVersion mk:version-sheeva-mk9 ;
+    mk:performsMove mk:fatality-spine-ripper,
+        mk:move-teleport-stomp,
+        mk:move-untranslatable-rage ;
+    mk:versionLabel "Sheeva - Mortal Kombat 3 - Original Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "1995"^^xsd:gYear .
+
+mk:version-smoke-mk3 mk:canonStatus "canonical"^^xsd:string ;
+    mk:nextVersion mk:version-smoke-mk9 ;
+    mk:versionLabel "Smoke - Mortal Kombat 3 - Original Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "1995"^^xsd:gYear .
+
+mk:version-sonyablade-mk1 mk:canonStatus "canonical"^^xsd:string ;
+    mk:enemyOf mk:version-kano-mk1 ;
+    mk:nextVersion mk:version-sonyablade-mk11 ;
+    mk:performsMove mk:fatality-kiss-of-death,
+        mk:move-ring-toss ;
+    mk:versionLabel "Sonya Blade - Mortal Kombat (1992) - Original Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "1992"^^xsd:gYear .
+
+mk:character-ashrah mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-ashrah ;
+    mk:ofSpecies mk:species-demon-purified .
+
+mk:character-boraicho mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-bo-27-rai-cho ;
+    mk:ofSpecies mk:species-outworlder .
+
+mk:character-cetrion mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-cetrion ;
+    mk:ofSpecies mk:species-elder-goddess .
+
+mk:character-frost mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-frost ;
+    mk:ofSpecies mk:species-cryomancer,
+        mk:species-cyborg .
+
+mk:character-geras mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-geras ;
+    mk:ofSpecies mk:species-temporal-golem .
+
+mk:character-havik mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-havik ;
+    mk:ofSpecies mk:species-chaosrealmer .
+
+mk:character-hotaru mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-hotaru ;
+    mk:ofSpecies mk:species-seidan .
+
+mk:character-jacqui mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-jacqui-briggs ;
+    mk:ofSpecies mk:species-human .
+
+mk:character-jade mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-jade ;
+    mk:ofSpecies mk:species-edenian .
+
+mk:character-kabal mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-kabal ;
+    mk:ofSpecies mk:species-human-respirator .
+
+mk:character-kenshi mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-kenshi ;
+    mk:ofSpecies mk:species-human .
+
+mk:character-kotalkahn mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-kotal-kahn ;
+    mk:ofSpecies mk:species-osh-tekk .
+
+mk:character-kronika mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-kronika ;
+    mk:ofSpecies mk:species-titan .
+
+mk:character-kungjin mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-kung-jin ;
+    mk:ofSpecies mk:species-human .
+
+mk:character-kunglao mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-kung-lao ;
+    mk:ofSpecies mk:species-human .
+
+mk:character-mavado mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-mavado ;
+    mk:ofSpecies mk:species-human .
+
+mk:character-nightwolf mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-nightwolf ;
+    mk:ofSpecies mk:species-human-shaman .
+
+mk:character-sareena mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-sareena ;
+    mk:ofSpecies mk:species-demon .
+
+mk:character-shangtsung mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-shang-tsung ;
+    mk:ofSpecies mk:species-human-sorcerer .
+
+mk:character-sheeva mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-sheeva ;
+    mk:ofSpecies mk:species-shokan-draco .
+
+mk:character-shujinko mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-shujinko ;
+    mk:ofSpecies mk:species-human .
+
+mk:character-sindel mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-sindel ;
+    mk:ofSpecies mk:species-edenian .
+
+mk:character-stryker mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-kurtis-stryker ;
+    mk:ofSpecies mk:species-human .
+
+mk:character-takeda mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-takeda-takahashi ;
+    mk:ofSpecies mk:species-human .
+
+mk:character-tanya mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-tanya ;
+    mk:ofSpecies mk:species-edenian .
+
+mk:fatality-bow-before-me a mk:Fatality .
+
+mk:fatality-divine-purification a mk:Fatality .
+
+mk:fatality-dragon-bite a mk:Fatality .
+
+mk:fatality-face-crusher a mk:Fatality .
+
+mk:fatality-for-the-kollection a mk:Fatality .
+
+mk:fatality-good-and-evil a mk:Fatality .
+
+mk:fatality-infestation a mk:Fatality .
+
+mk:fatality-road-rash a mk:Fatality .
+
+mk:fatality-scream-queen a mk:Fatality .
+
+mk:fatality-shokan-tear a mk:Fatality .
+
+mk:fatality-spider-mines a mk:Fatality .
+
+mk:fatality-spine-rip a mk:Fatality .
+
+mk:fatality-spine-ripper a mk:Fatality .
+
+mk:fatality-target-practice a mk:Fatality .
+
+mk:fatality-time-served a mk:Fatality .
+
+mk:fatality-vaeternus-drain a mk:Fatality .
+
+mk:fatality-war-dance a mk:Fatality .
+
+mk:fatality-whip-it-good a mk:Fatality .
+
+mk:move-blood-tentacles a mk:SpecialMove .
+
+mk:move-boulder-bash a mk:SpecialMove .
+
+mk:move-demonic-mace a mk:SpecialMove .
+
+mk:move-dragon-slam a mk:SpecialMove .
+
+mk:move-hells-wrath a mk:SpecialMove .
+
+mk:move-lunge-kick a mk:SpecialMove .
+
+mk:move-puke-puddle a mk:SpecialMove .
+
+mk:move-shirai-ryu-phase a mk:SpecialMove .
+
+mk:move-shotel-strike a mk:SpecialMove .
+
+mk:move-soul-ball a mk:SpecialMove .
+
+mk:move-square-wave a mk:SpecialMove .
+
+mk:move-straight-shot a mk:SpecialMove .
+
+mk:move-untranslatable-rage a mk:SpecialMove .
+
+mk:move-whip-strike a mk:SpecialMove .
+
+mk:move-wind-kick a mk:SpecialMove .
+
+mk:source-mortalkombat-fandom-com-wiki-arctika a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Arctika"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Arctika"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-baraka a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Baraka"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Baraka"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-blaze a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Blaze"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Blaze"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-chaosrealm a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Chaosrealm"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Chaosrealm"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-cyrax a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Cyrax"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Cyrax"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-daegon a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Daegon"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Daegon"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-dead-pool a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Dead Pool"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Dead_Pool"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-erron-black a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Erron Black"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Erron_Black"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-ferra-26-torr a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Ferra & Torr"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Ferra_%26_Torr"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-fire-gardens a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Fire Gardens"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Fire_Gardens"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-fujin a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Fujin"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Fujin"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-goro a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Goro"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Goro"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-havik a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Havik"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Havik"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-jax-briggs a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Jax Briggs"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Jax_Briggs"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-jinsei-chamber a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Jinsei Chamber"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Jinsei_Chamber"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-johnny-cage a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Johnny Cage"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Johnny_Cage"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-kahn-27s-arena a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Kahn's Arena"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Kahn%27s_Arena"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-kano a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Kano"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Kano"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-kenshi a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Kenshi"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Kenshi"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-kintaro a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Kintaro"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Kintaro"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-kollector a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Kollector"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Kollector"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-kronika a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Kronika"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Kronika"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-kung-lao a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Kung Lao"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Kung_Lao"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-kurtis-stryker a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Kurtis Stryker"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Kurtis_Stryker"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-li-mei a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Li Mei"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Li_Mei"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-liu-kang a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Liu Kang"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Liu_Kang"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-mileena a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Mileena"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Mileena"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-arcade-kollection a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Mortal Kombat Arcade Kollection"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Mortal_Kombat_Arcade_Kollection"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-armageddon a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Mortal Kombat: Armageddon"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Mortal_Kombat:_Armageddon"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-deadly-alliance a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Mortal Kombat: Deadly Alliance"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Mortal_Kombat:_Deadly_Alliance"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-deception a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Mortal Kombat: Deception"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Mortal_Kombat:_Deception"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-gold a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Mortal Kombat Gold"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Mortal_Kombat_Gold"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-mobile a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Mortal Kombat Mobile"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Mortal_Kombat_Mobile"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-tournament-edition a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Mortal Kombat: Tournament Edition"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Mortal_Kombat:_Tournament_Edition"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-trilogy a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Mortal Kombat Trilogy"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Mortal_Kombat_Trilogy"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-unchained a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Mortal Kombat: Unchained"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Mortal_Kombat:_Unchained"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-motaro a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Motaro"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Motaro"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-netherrealm a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Netherrealm"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Netherrealm"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-nitara a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Nitara"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Nitara"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-noob-saibot a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Noob Saibot"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Noob_Saibot"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-orderrealm a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Orderrealm"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Orderrealm"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-pyramid-of-argus a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Pyramid of Argus"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Pyramid_of_Argus"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-quan-chi a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Quan Chi"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Quan_Chi"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-reiko a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Reiko"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Reiko"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-reptile a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Reptile"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Reptile"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-sea-of-blood a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Sea of Blood"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Sea_of_Blood"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-sektor a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Sektor"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Sektor"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-shang-tsung-27s-island a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Shang Tsung's Island"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Shang_Tsung%27s_Island"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-shao-kahn a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Shao Kahn"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Shao_Kahn"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-shinnok a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Shinnok"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Shinnok"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-sindel a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Sindel"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Sindel"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-smoke a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Smoke"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Smoke"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-sub-zero a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Sub-Zero"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Sub-Zero"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-taven a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Taven"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Taven"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-the-pit a mk:Source ;
+    mk:name "Mortal Kombat Wiki - The Pit"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/The_Pit"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-ultimate-mortal-kombat-3 a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Ultimate Mortal Kombat 3"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Ultimate_Mortal_Kombat_3"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-wu-shi-academy a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Wu Shi Academy"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Wu_Shi_Academy"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:species-centaurian a mk:Species ;
+    mk:name "Centaurian"^^xsd:string .
+
+mk:species-chaosrealmer a mk:Species ;
+    mk:name "Chaosrealmer"^^xsd:string .
+
+mk:species-demon a mk:Species ;
+    mk:name "Demon"^^xsd:string .
+
+mk:species-demon-purified a mk:Species ;
+    mk:name "Demon (Purified)"^^xsd:string .
+
+mk:species-demon-sorcerer a mk:Species ;
+    mk:name "Demon Sorcerer"^^xsd:string .
+
+mk:species-dragon a mk:Species ;
+    mk:name "Dragon"^^xsd:string .
+
+mk:species-elder-god-fallen a mk:Species ;
+    mk:name "Elder God (Fallen)"^^xsd:string .
+
+mk:species-elder-goddess a mk:Species ;
+    mk:name "Elder Goddess"^^xsd:string .
+
+mk:species-enenra a mk:Species ;
+    mk:name "Enenra"^^xsd:string .
+
+mk:species-fire-elemental a mk:Species ;
+    mk:name "Fire Elemental"^^xsd:string .
+
+mk:species-human-respirator a mk:Species ;
+    mk:name "Human (Respirator)"^^xsd:string .
+
+mk:species-human-shaman a mk:Species ;
+    mk:name "Human Shaman"^^xsd:string .
+
+mk:species-human-sorcerer a mk:Species ;
+    mk:name "Human Sorcerer"^^xsd:string .
+
+mk:species-kytinn a mk:Species ;
+    mk:name "Kytinn"^^xsd:string .
+
+mk:species-naknada a mk:Species ;
+    mk:name "Naknada"^^xsd:string .
+
+mk:species-osh-tekk a mk:Species ;
+    mk:name "Osh-Tekk"^^xsd:string .
+
+mk:species-outworld-symbiotes a mk:Species ;
+    mk:name "Outworld Symbiotes"^^xsd:string .
+
+mk:species-saurian-zaterran a mk:Species ;
+    mk:name "Saurian (Zaterran)"^^xsd:string .
+
+mk:species-seidan a mk:Species ;
+    mk:name "Seidan"^^xsd:string .
+
+mk:species-shokan a mk:Species ;
+    mk:name "Shokan"^^xsd:string .
+
+mk:species-shokan-draco a mk:Species ;
+    mk:name "Shokan (Draco)"^^xsd:string .
+
+mk:species-shokan-tigrar a mk:Species ;
+    mk:name "Shokan (Tigrar)"^^xsd:string .
+
+mk:species-specter a mk:Species ;
+    mk:name "Specter"^^xsd:string .
+
+mk:species-tarkatan a mk:Species ;
+    mk:name "Tarkatan"^^xsd:string .
+
+mk:species-tarkatan-hybrid a mk:Species ;
+    mk:name "Tarkatan Hybrid"^^xsd:string .
+
+mk:species-temporal-golem a mk:Species ;
+    mk:name "Temporal Golem"^^xsd:string .
+
+mk:species-titan a mk:Species ;
+    mk:name "Titan"^^xsd:string .
+
+mk:species-vampire a mk:Species ;
+    mk:name "Vampire"^^xsd:string .
+
+mk:species-wraith a mk:Species ;
+    mk:name "Wraith"^^xsd:string .
+
+mk:version-ashrah-mk1-2023 mk:canonStatus "canonical"^^xsd:string ;
+    mk:performsMove mk:move-heavenly-light ;
+    mk:versionLabel "Ashrah - Mortal Kombat 1 (2023) - New Era"^^xsd:string ;
+    mk:versionSequence 2 ;
+    mk:versionYear "2023"^^xsd:gYear .
+
+mk:version-baraka-mk11 mk:canonStatus "canonical"^^xsd:string ;
+    mk:performsMove mk:move-tarkatan-chop ;
+    mk:versionLabel "Baraka - Mortal Kombat 11 - Reboot Timeline"^^xsd:string ;
+    mk:versionSequence 2 ;
+    mk:versionYear "2019"^^xsd:gYear .
+
+mk:version-baraka-mk2 mk:canonStatus "canonical"^^xsd:string ;
+    mk:nextVersion mk:version-baraka-mk11 ;
+    mk:performsMove mk:move-tarkatan-chop ;
+    mk:versionLabel "Baraka - Mortal Kombat II - Original Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "1993"^^xsd:gYear .
+
+mk:version-boraicho-mk-deadly-alliance-2002 mk:alliedWith mk:version-liukang-mk1 ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:nextVersion mk:version-boraicho-mkx ;
+    mk:performsMove mk:move-drunken-fist,
+        mk:move-puke-puddle ;
+    mk:versionLabel "Bo' Rai Cho - Mortal Kombat: Deadly Alliance - Original Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "2002"^^xsd:gYear .
+
+mk:version-boraicho-mkx mk:alliedWith mk:version-liukang-mk11 ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:performsMove mk:move-drunken-fist ;
+    mk:versionLabel "Bo' Rai Cho - Mortal Kombat X - Reboot Timeline"^^xsd:string ;
+    mk:versionSequence 2 ;
+    mk:versionYear "2015"^^xsd:gYear .
+
+mk:version-cetrion-mk11 mk:alliedWith mk:version-kronika-mk11 ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:performsMove mk:fatality-good-and-evil,
+        mk:move-boulder-bash,
+        mk:move-hells-wrath ;
+    mk:versionLabel "Cetrion - Mortal Kombat 11 - Reboot Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "2019"^^xsd:gYear .
+
+mk:version-cyrax-mk3 mk:canonStatus "canonical"^^xsd:string ;
+    mk:nextVersion mk:version-cyrax-mk9 ;
+    mk:performsMove mk:move-net-tangle ;
+    mk:versionLabel "Cyrax - Mortal Kombat 3 - Original Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "1995"^^xsd:gYear .
+
+mk:version-daegon-mk-armageddon-2006 mk:canonStatus "canonical"^^xsd:string ;
+    mk:versionLabel "Daegon - Mortal Kombat: Armageddon - Original Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "2006"^^xsd:gYear .
+
+mk:version-dvorah-mkx mk:canonStatus "canonical"^^xsd:string ;
+    mk:enemyOf mk:version-mileena-mkx,
+        mk:version-scorpion-mk11 ;
+    mk:nextVersion mk:version-dvorah-mk11 ;
+    mk:performsMove mk:fatality-infestation,
+        mk:move-bug-spray,
+        mk:move-ovipositor-rush ;
+    mk:versionLabel "D'Vorah - Mortal Kombat X - Reboot Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "2015"^^xsd:gYear .
+
+mk:version-erronblack-mk11 mk:canonStatus "canonical"^^xsd:string ;
+    mk:performsMove mk:move-revolver-quickdraw ;
+    mk:versionLabel "Erron Black - Mortal Kombat 11 - Reboot Timeline"^^xsd:string ;
+    mk:versionSequence 2 ;
+    mk:versionYear "2019"^^xsd:gYear .
+
+mk:version-erronblack-mkx mk:canonStatus "canonical"^^xsd:string ;
+    mk:nextVersion mk:version-erronblack-mk11 ;
+    mk:performsMove mk:move-revolver-quickdraw ;
+    mk:versionLabel "Erron Black - Mortal Kombat X - Reboot Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "2015"^^xsd:gYear .
+
+mk:version-frost-mk-deadly-alliance-2002 mk:canonStatus "canonical"^^xsd:string ;
+    mk:nextVersion mk:version-frost-mk11 ;
+    mk:performsMove mk:move-cyber-trap ;
+    mk:versionLabel "Frost - Mortal Kombat: Deadly Alliance - Original Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "2002"^^xsd:gYear .
+
+mk:version-frost-mk11 mk:canonStatus "canonical"^^xsd:string ;
+    mk:enemyOf mk:version-subzero-mk11 ;
+    mk:performsMove mk:move-cyber-trap ;
+    mk:versionLabel "Frost - Mortal Kombat 11 - Reboot Timeline"^^xsd:string ;
+    mk:versionSequence 2 ;
+    mk:versionYear "2019"^^xsd:gYear .
+
+mk:version-fujin-mk-armageddon-2006 mk:canonStatus "canonical"^^xsd:string ;
+    mk:performsMove mk:move-wind-tornado ;
+    mk:versionLabel "Fujin - Mortal Kombat: Armageddon - Original Timeline"^^xsd:string ;
+    mk:versionSequence 2 ;
+    mk:versionYear "2006"^^xsd:gYear .
+
+mk:version-fujin-mk4 mk:canonStatus "canonical"^^xsd:string ;
+    mk:nextVersion mk:version-fujin-mk-armageddon-2006 ;
+    mk:performsMove mk:move-wind-kick,
+        mk:move-wind-tornado ;
+    mk:versionLabel "Fujin - Mortal Kombat 4 - Original Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "1997"^^xsd:gYear .
+
+mk:version-goro-mkx mk:canonStatus "canonical"^^xsd:string ;
+    mk:performsMove mk:move-shokan-stomp ;
+    mk:versionLabel "Goro - Mortal Kombat X - Reboot Timeline"^^xsd:string ;
+    mk:versionSequence 2 ;
+    mk:versionYear "2015"^^xsd:gYear .
+
+mk:version-havik-mk1-2023 mk:canonStatus "canonical"^^xsd:string ;
+    mk:performsMove mk:move-bone-twist ;
+    mk:versionLabel "Havik - Mortal Kombat 1 (2023) - New Era"^^xsd:string ;
+    mk:versionSequence 2 ;
+    mk:versionYear "2023"^^xsd:gYear .
+
+mk:version-hotaru-mk-armageddon-2006 mk:canonStatus "canonical"^^xsd:string ;
+    mk:enemyOf mk:version-havik-mk-deception-2004 ;
+    mk:performsMove mk:move-lava-burst ;
+    mk:versionLabel "Hotaru - Mortal Kombat: Armageddon - Original Timeline"^^xsd:string ;
+    mk:versionSequence 2 ;
+    mk:versionYear "2006"^^xsd:gYear .
+
+mk:version-hotaru-mk-deception-2004 mk:canonStatus "canonical"^^xsd:string ;
+    mk:enemyOf mk:version-havik-mk-deception-2004 ;
+    mk:nextVersion mk:version-hotaru-mk-armageddon-2006 ;
+    mk:performsMove mk:move-lava-burst ;
+    mk:versionLabel "Hotaru - Mortal Kombat: Deception - Original Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "2004"^^xsd:gYear .
+
+mk:version-jacqui-mk11 mk:alliedWith mk:version-cassiecage-mk11,
+        mk:version-cassiecage-mkx ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:performsMove mk:move-bionic-dash,
+        mk:move-shotgun-blast ;
+    mk:versionLabel "Jacqui Briggs - Mortal Kombat 11 - Reboot Timeline"^^xsd:string ;
+    mk:versionSequence 2 ;
+    mk:versionYear "2019"^^xsd:gYear .
+
+mk:version-jacqui-mkx mk:alliedWith mk:version-cassiecage-mk11,
+        mk:version-cassiecage-mkx ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:nextVersion mk:version-jacqui-mk11 ;
+    mk:performsMove mk:fatality-spider-mines,
+        mk:move-bionic-dash,
+        mk:move-shotgun-blast ;
+    mk:versionLabel "Jacqui Briggs - Mortal Kombat X - Reboot Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "2015"^^xsd:gYear .
+
+mk:version-kabal-mk3 mk:canonStatus "canonical"^^xsd:string ;
+    mk:nextVersion mk:version-kabal-mk11 ;
+    mk:performsMove mk:fatality-road-rash,
+        mk:move-buzzsaw,
+        mk:move-nomad-dash ;
+    mk:versionLabel "Kabal - Mortal Kombat 3 - Original Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "1995"^^xsd:gYear .
+
+mk:version-kenshi-mk-deadly-alliance-2002 mk:canonStatus "canonical"^^xsd:string ;
+    mk:nextVersion mk:version-kenshi-mkx ;
+    mk:performsMove mk:move-tele-flurry,
+        mk:move-telekinesis-slam ;
+    mk:versionLabel "Kenshi - Mortal Kombat: Deadly Alliance - Original Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "2002"^^xsd:gYear .
+
+mk:version-kenshi-mk1-2023 mk:canonStatus "canonical"^^xsd:string ;
+    mk:performsMove mk:move-tele-flurry ;
+    mk:versionLabel "Kenshi - Mortal Kombat 1 (2023) - New Era"^^xsd:string ;
+    mk:versionSequence 3 ;
+    mk:versionYear "2023"^^xsd:gYear .
+
+mk:version-kotalkahn-mk11 mk:canonStatus "canonical"^^xsd:string ;
+    mk:enemyOf mk:version-mileena-mkx ;
+    mk:performsMove mk:move-sun-ray ;
+    mk:versionLabel "Kotal Kahn - Mortal Kombat 11 - Reboot Timeline"^^xsd:string ;
+    mk:versionSequence 2 ;
+    mk:versionYear "2019"^^xsd:gYear .
+
+mk:version-kotalkahn-mkx mk:canonStatus "canonical"^^xsd:string ;
+    mk:enemyOf mk:version-mileena-mkx ;
+    mk:nextVersion mk:version-kotalkahn-mk11 ;
+    mk:performsMove mk:move-blood-tentacles,
+        mk:move-sun-ray ;
+    mk:versionLabel "Kotal Kahn - Mortal Kombat X - Reboot Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "2015"^^xsd:gYear .
+
+mk:version-kungjin-mkx mk:alliedWith mk:version-kunglao-mk11 ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:performsMove mk:fatality-target-practice,
+        mk:move-lunge-kick,
+        mk:move-straight-shot ;
+    mk:versionLabel "Kung Jin - Mortal Kombat X - Reboot Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "2015"^^xsd:gYear .
+
+mk:version-kunglao-mk2 mk:canonStatus "canonical"^^xsd:string ;
+    mk:nextVersion mk:version-kunglao-mk11 ;
+    mk:performsMove mk:move-hat-throw,
+        mk:move-wind-tornado ;
+    mk:versionLabel "Kung Lao - Mortal Kombat II - Original Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "1993"^^xsd:gYear .
+
+mk:version-limei-mk1-2023 mk:canonStatus "canonical"^^xsd:string ;
+    mk:performsMove mk:move-energy-spark ;
+    mk:versionLabel "Li Mei - Mortal Kombat 1 (2023) - New Era"^^xsd:string ;
+    mk:versionSequence 2 ;
+    mk:versionYear "2023"^^xsd:gYear .
+
+mk:version-mavado-mk-tournament-edition-2003 mk:canonStatus "canonical"^^xsd:string ;
+    mk:enemyOf mk:version-kano-mk1 ;
+    mk:performsMove mk:move-grapple-hook-kick ;
+    mk:versionLabel "Mavado - Mortal Kombat: Tournament Edition - Original Timeline"^^xsd:string ;
+    mk:versionSequence 2 ;
+    mk:versionYear "2003"^^xsd:gYear .
+
+mk:version-mileena-mk2 mk:canonStatus "canonical"^^xsd:string ;
+    mk:nextVersion mk:version-mileena-mkx ;
+    mk:versionLabel "Mileena - Mortal Kombat II - Original Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "1993"^^xsd:gYear .
+
+mk:version-motaro-mk-armageddon-2006 mk:canonStatus "canonical"^^xsd:string ;
+    mk:performsMove mk:move-centaur-charge ;
+    mk:versionLabel "Motaro - Mortal Kombat: Armageddon - Original Timeline"^^xsd:string ;
+    mk:versionSequence 2 ;
+    mk:versionYear "2006"^^xsd:gYear .
+
+mk:version-nitara-mk1-2023 mk:canonStatus "canonical"^^xsd:string ;
+    mk:performsMove mk:move-blood-spit ;
+    mk:versionLabel "Nitara - Mortal Kombat 1 (2023) - New Era"^^xsd:string ;
+    mk:versionSequence 2 ;
+    mk:versionYear "2023"^^xsd:gYear .
+
+mk:version-noobsaibot-mk11 mk:canonStatus "canonical"^^xsd:string ;
+    mk:performsMove mk:move-shadow-slide ;
+    mk:versionLabel "Noob Saibot - Mortal Kombat 11 - Reboot Timeline"^^xsd:string ;
+    mk:versionSequence 2 ;
+    mk:versionYear "2019"^^xsd:gYear .
+
+mk:version-reiko-mk-gold-1999 mk:canonStatus "canonical"^^xsd:string ;
+    mk:nextVersion mk:version-reiko-mk1-2023 ;
+    mk:performsMove mk:move-charging-spear ;
+    mk:versionLabel "Reiko - Mortal Kombat Gold - Original Timeline"^^xsd:string ;
+    mk:versionSequence 2 ;
+    mk:versionYear "1999"^^xsd:gYear .
+
+mk:version-reiko-mk1-2023 mk:canonStatus "canonical"^^xsd:string ;
+    mk:performsMove mk:move-charging-spear ;
+    mk:versionLabel "Reiko - Mortal Kombat 1 (2023) - New Era"^^xsd:string ;
+    mk:versionSequence 3 ;
+    mk:versionYear "2023"^^xsd:gYear .
+
+mk:version-reiko-mk4 mk:canonStatus "canonical"^^xsd:string ;
+    mk:nextVersion mk:version-reiko-mk-gold-1999 ;
+    mk:performsMove mk:move-charging-spear ;
+    mk:versionLabel "Reiko - Mortal Kombat 4 - Original Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "1997"^^xsd:gYear .
+
+mk:version-reptile-mk1-2023 mk:canonStatus "canonical"^^xsd:string ;
+    mk:performsMove mk:move-acid-spit ;
+    mk:versionLabel "Reptile - Mortal Kombat 1 (2023) - New Era"^^xsd:string ;
+    mk:versionSequence 3 ;
+    mk:versionYear "2023"^^xsd:gYear .
+
+mk:version-reptile-mkx mk:canonStatus "canonical"^^xsd:string ;
+    mk:nextVersion mk:version-reptile-mk1-2023 ;
+    mk:performsMove mk:move-acid-spit ;
+    mk:versionLabel "Reptile - Mortal Kombat X - Reboot Timeline"^^xsd:string ;
+    mk:versionSequence 2 ;
+    mk:versionYear "2015"^^xsd:gYear .
+
+mk:version-sareena-mk-mythologies-1997 mk:alliedWith mk:version-subzero-mk1 ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:nextVersion mk:version-sareena-mk-tournament-edition-2003 ;
+    mk:performsMove mk:move-skull-daggers ;
+    mk:versionLabel "Sareena - Mortal Kombat Mythologies: Sub-Zero - Original Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "1997"^^xsd:gYear .
+
+mk:version-sareena-mk-tournament-edition-2003 mk:alliedWith mk:version-subzero-mk1 ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:performsMove mk:move-skull-daggers ;
+    mk:versionLabel "Sareena - Mortal Kombat: Tournament Edition - Original Timeline"^^xsd:string ;
+    mk:versionSequence 2 ;
+    mk:versionYear "2003"^^xsd:gYear .
+
+mk:version-sektor-mk3 mk:canonStatus "canonical"^^xsd:string ;
+    mk:nextVersion mk:version-sektor-mk9 ;
+    mk:performsMove mk:move-missile-salvo ;
+    mk:versionLabel "Sektor - Mortal Kombat 3 - Original Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "1995"^^xsd:gYear .
+
+mk:version-shangtsung-mk1 mk:alliedWith mk:version-quanchi-mk4 ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:nextVersion mk:version-shangtsung-mk-deadly-alliance-2002 ;
+    mk:performsMove mk:move-soul-ball ;
+    mk:versionLabel "Shang Tsung - Mortal Kombat (1992) - Original Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "1992"^^xsd:gYear .
+
+mk:version-sheeva-mk9 mk:canonStatus "canonical"^^xsd:string ;
+    mk:performsMove mk:move-teleport-stomp ;
+    mk:versionLabel "Sheeva - Mortal Kombat (2011) - Reboot Timeline"^^xsd:string ;
+    mk:versionSequence 2 ;
+    mk:versionYear "2011"^^xsd:gYear .
+
+mk:version-shujinko-mk-armageddon-2006 mk:canonStatus "canonical"^^xsd:string ;
+    mk:enemyOf mk:version-onaga-mk-armageddon-2006,
+        mk:version-onaga-mk-deception-2004 ;
+    mk:performsMove mk:move-mimic-mastery ;
+    mk:versionLabel "Shujinko - Mortal Kombat: Armageddon - Original Timeline"^^xsd:string ;
+    mk:versionSequence 2 ;
+    mk:versionYear "2006"^^xsd:gYear .
+
+mk:version-shujinko-mk-deception-2004 mk:canonStatus "canonical"^^xsd:string ;
+    mk:enemyOf mk:version-onaga-mk-armageddon-2006,
+        mk:version-onaga-mk-deception-2004 ;
+    mk:nextVersion mk:version-shujinko-mk-armageddon-2006 ;
+    mk:performsMove mk:fatality-face-crusher,
+        mk:move-mimic-mastery ;
+    mk:versionLabel "Shujinko - Mortal Kombat: Deception - Original Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "2004"^^xsd:gYear .
+
+mk:version-sindel-mk1-2023 mk:canonStatus "canonical"^^xsd:string ;
+    mk:performsMove mk:move-banshee-scream,
+        mk:move-hair-whip ;
+    mk:versionLabel "Sindel - Mortal Kombat 1 (2023) - New Era"^^xsd:string ;
+    mk:versionSequence 2 ;
+    mk:versionYear "2023"^^xsd:gYear .
+
+mk:version-smoke-mk1-2023 mk:canonStatus "canonical"^^xsd:string ;
+    mk:versionLabel "Smoke - Mortal Kombat 1 (2023) - New Era"^^xsd:string ;
+    mk:versionSequence 3 ;
+    mk:versionYear "2023"^^xsd:gYear .
+
+mk:version-stryker-mk3 mk:canonStatus "canonical"^^xsd:string ;
+    mk:nextVersion mk:version-stryker-mk9 ;
+    mk:performsMove mk:fatality-time-served,
+        mk:move-baton-trip,
+        mk:move-grenade-toss ;
+    mk:versionLabel "Kurtis Stryker - Mortal Kombat 3 - Original Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "1995"^^xsd:gYear .
+
+mk:version-takeda-mkx mk:alliedWith mk:version-kenshi-mkx ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:performsMove mk:fatality-whip-it-good,
+        mk:move-shirai-ryu-phase,
+        mk:move-whip-strike ;
+    mk:versionLabel "Takeda Takahashi - Mortal Kombat X - Reboot Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "2015"^^xsd:gYear .
+
+mk:version-tanya-mk1-2023 mk:alliedWith mk:version-mileena-mk1-2023 ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:versionLabel "Tanya - Mortal Kombat 1 (2023) - New Era"^^xsd:string ;
+    mk:versionSequence 2 ;
+    mk:versionYear "2023"^^xsd:gYear .
+
+mk:version-tanya-mk4 mk:canonStatus "canonical"^^xsd:string ;
+    mk:nextVersion mk:version-tanya-mk1-2023 ;
+    mk:versionLabel "Tanya - Mortal Kombat 4 - Original Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "1997"^^xsd:gYear .
+
+mk:version-taven-mk-armageddon-2006 mk:canonStatus "canonical"^^xsd:string ;
+    mk:versionLabel "Taven - Mortal Kombat: Armageddon - Original Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "2006"^^xsd:gYear .
+
+mk:character-dvorah mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-d-27vorah ;
+    mk:ofSpecies mk:species-kytinn .
+
+mk:character-kano mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-kano ;
+    mk:ofSpecies mk:species-human-cyborg .
+
+mk:character-kitana mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-kitana ;
+    mk:ofSpecies mk:species-edenian .
+
+mk:character-onaga mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-onaga ;
+    mk:ofSpecies mk:species-dragon .
+
+mk:character-shaokahn mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-shao-kahn ;
+    mk:ofSpecies mk:species-god,
+        mk:species-outworlder .
+
+mk:character-shinnok mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-shinnok ;
+    mk:ofSpecies mk:species-elder-god-fallen .
+
+mk:character-sonyablade mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-sonya-blade ;
+    mk:ofSpecies mk:species-human .
+
+mk:fatality-fan-decapitation a mk:Fatality .
+
+mk:fatality-kiss-of-death a mk:Fatality .
+
+mk:fatality-toasty a mk:Fatality .
+
+mk:move-air-throw a mk:SpecialMove .
+
+mk:move-banshee-scream a mk:SpecialMove .
+
+mk:move-baton-trip a mk:SpecialMove .
+
+mk:move-bicycle-kick a mk:SpecialMove .
+
+mk:move-bionic-dash a mk:SpecialMove .
+
+mk:move-blazing-nitro-kick a mk:SpecialMove .
+
+mk:move-blood-spit a mk:SpecialMove .
+
+mk:move-bone-twist a mk:SpecialMove .
+
+mk:move-bug-spray a mk:SpecialMove .
+
+mk:move-buzzsaw a mk:SpecialMove .
+
+mk:move-cannonball a mk:SpecialMove .
+
+mk:move-centaur-charge a mk:SpecialMove .
+
+mk:move-cyber-trap a mk:SpecialMove .
+
+mk:move-dragon-breath a mk:SpecialMove .
+
+mk:move-drunken-fist a mk:SpecialMove .
+
+mk:move-energy-spark a mk:SpecialMove .
+
+mk:move-fan-lift a mk:SpecialMove .
+
+mk:move-fire-fist a mk:SpecialMove .
+
+mk:move-grapple-hook-kick a mk:SpecialMove .
+
+mk:move-grenade-toss a mk:SpecialMove .
+
+mk:move-ground-pound a mk:SpecialMove .
+
+mk:move-hair-whip a mk:SpecialMove .
+
+mk:move-hat-throw a mk:SpecialMove .
+
+mk:move-heavenly-light a mk:SpecialMove .
+
+mk:move-lava-burst a mk:SpecialMove .
+
+mk:move-mimic-mastery a mk:SpecialMove .
+
+mk:move-missile-salvo a mk:SpecialMove .
+
+mk:move-net-tangle a mk:SpecialMove .
+
+mk:move-nomad-dash a mk:SpecialMove .
+
+mk:move-ovipositor-rush a mk:SpecialMove .
+
+mk:move-revolver-quickdraw a mk:SpecialMove .
+
+mk:move-rhino-charge a mk:SpecialMove .
+
+mk:move-ring-toss a mk:SpecialMove .
+
+mk:move-shadow-slide a mk:SpecialMove .
+
+mk:move-shotgun-blast a mk:SpecialMove .
+
+mk:move-skull-daggers a mk:SpecialMove .
+
+mk:move-spirit-arrow a mk:SpecialMove .
+
+mk:move-sun-ray a mk:SpecialMove .
+
+mk:move-tarkatan-chop a mk:SpecialMove .
+
+mk:move-telekinesis-slam a mk:SpecialMove .
+
+mk:move-teleport-stomp a mk:SpecialMove .
+
+mk:move-tribomerang a mk:SpecialMove .
+
+mk:source-mortalkombat-fandom-com-wiki-ashrah a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Ashrah"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Ashrah"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-battle-of-armageddon a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Battle of Armageddon"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Battle_of_Armageddon"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-bo-27-rai-cho a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Bo' Rai Cho"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Bo%27_Rai_Cho"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-cetrion a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Cetrion"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Cetrion"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-cyber-initiative a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Cyber Initiative"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Cyber_Initiative"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-deadly-alliance a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Deadly Alliance"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Deadly_Alliance"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-frost a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Frost"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Frost"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-geras a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Geras"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Geras"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-hanzo-hasashi a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Hanzo Hasashi"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Hanzo_Hasashi"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-hotaru a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Hotaru"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Hotaru"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-jacqui-briggs a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Jacqui Briggs"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Jacqui_Briggs"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-jade a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Jade"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Jade"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-kabal a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Kabal"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Kabal"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-kitana a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Kitana"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Kitana"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-kotal-kahn a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Kotal Kahn"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Kotal_Kahn"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-kung-jin a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Kung Jin"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Kung_Jin"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-mavado a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Mavado"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Mavado"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-netherrealm-war a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Netherrealm War"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Netherrealm_War"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-nightwolf a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Nightwolf"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Nightwolf"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-outworld-civil-war a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Outworld Civil War"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Outworld_Civil_War"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-sareena a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Sareena"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Sareena"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-shang-tsung a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Shang Tsung"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Shang_Tsung"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-sheeva a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Sheeva"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Sheeva"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-sonya-blade a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Sonya Blade"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Sonya_Blade"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-takeda-takahashi a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Takeda Takahashi"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Takeda_Takahashi"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-tanya a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Tanya"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Tanya"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:species-cryomancer a mk:Species ;
+    mk:name "Cryomancer"^^xsd:string .
+
+mk:species-edenian-demigod a mk:Species ;
+    mk:name "Edenian Demigod"^^xsd:string .
+
+mk:species-human-cyborg a mk:Species ;
+    mk:name "Human Cyborg"^^xsd:string .
+
+mk:version-blaze-mk-armageddon-2006 mk:canonStatus "canonical"^^xsd:string ;
+    mk:performsMove mk:move-fire-fist ;
+    mk:versionLabel "Blaze - Mortal Kombat: Armageddon - Original Timeline"^^xsd:string ;
+    mk:versionSequence 2 ;
+    mk:versionYear "2006"^^xsd:gYear .
+
+mk:version-cyrax-mk9 mk:canonStatus "canonical"^^xsd:string ;
+    mk:performsMove mk:move-net-tangle ;
+    mk:versionLabel "Cyrax - Mortal Kombat (2011) - Reboot Timeline"^^xsd:string ;
+    mk:versionSequence 2 ;
+    mk:versionYear "2011"^^xsd:gYear .
+
+mk:version-dvorah-mk11 mk:canonStatus "canonical"^^xsd:string ;
+    mk:enemyOf mk:version-mileena-mkx,
+        mk:version-scorpion-mk11 ;
+    mk:performsMove mk:move-bug-spray,
+        mk:move-ovipositor-rush ;
+    mk:versionLabel "D'Vorah - Mortal Kombat 11 - Reboot Timeline"^^xsd:string ;
+    mk:versionSequence 2 ;
+    mk:versionYear "2019"^^xsd:gYear .
+
+mk:version-geras-mk1-2023 mk:alliedWith mk:version-liukang-mk1-2023 ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:versionLabel "Geras - Mortal Kombat 1 (2023) - New Era"^^xsd:string ;
+    mk:versionSequence 2 ;
+    mk:versionYear "2023"^^xsd:gYear .
+
+mk:version-geras-mk11 mk:canonStatus "canonical"^^xsd:string ;
+    mk:nextVersion mk:version-geras-mk1-2023 ;
+    mk:versionLabel "Geras - Mortal Kombat 11 - Reboot Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "2019"^^xsd:gYear .
+
+mk:version-goro-mk1 mk:canonStatus "canonical"^^xsd:string ;
+    mk:nextVersion mk:version-goro-mkx ;
+    mk:performsMove mk:fatality-shokan-tear,
+        mk:move-shokan-stomp ;
+    mk:versionLabel "Goro - Mortal Kombat (1992) - Original Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "1992"^^xsd:gYear .
+
+mk:version-jade-mk11 mk:alliedWith mk:version-kitana-mk11 ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:performsMove mk:move-blazing-nitro-kick,
+        mk:move-tribomerang ;
+    mk:versionLabel "Jade - Mortal Kombat 11 - Reboot Timeline"^^xsd:string ;
+    mk:versionSequence 2 ;
+    mk:versionYear "2019"^^xsd:gYear .
+
+mk:version-jax-mk11 mk:canonStatus "canonical"^^xsd:string ;
+    mk:performsMove mk:move-air-throw,
+        mk:move-ground-pound ;
+    mk:versionLabel "Jax Briggs - Mortal Kombat 11 - Reboot Timeline"^^xsd:string ;
+    mk:versionSequence 2 ;
+    mk:versionYear "2019"^^xsd:gYear .
+
+mk:version-jax-mk2 mk:canonStatus "canonical"^^xsd:string ;
+    mk:nextVersion mk:version-jax-mk11 ;
+    mk:performsMove mk:move-air-throw,
+        mk:move-ground-pound ;
+    mk:versionLabel "Jax Briggs - Mortal Kombat II - Original Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "1993"^^xsd:gYear .
+
+mk:version-kabal-mk11 mk:alliedWith mk:version-stryker-mk9 ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:performsMove mk:move-buzzsaw,
+        mk:move-nomad-dash ;
+    mk:versionLabel "Kabal - Mortal Kombat 11 - Reboot Timeline"^^xsd:string ;
+    mk:versionSequence 2 ;
+    mk:versionYear "2019"^^xsd:gYear .
+
+mk:version-kano-mk11 mk:canonStatus "canonical"^^xsd:string ;
+    mk:performsMove mk:move-cannonball ;
+    mk:versionLabel "Kano - Mortal Kombat 11 - Reboot Timeline"^^xsd:string ;
+    mk:versionSequence 2 ;
+    mk:versionYear "2019"^^xsd:gYear .
+
+mk:version-kenshi-mkx mk:canonStatus "canonical"^^xsd:string ;
+    mk:nextVersion mk:version-kenshi-mk1-2023 ;
+    mk:performsMove mk:move-tele-flurry,
+        mk:move-telekinesis-slam ;
+    mk:versionLabel "Kenshi - Mortal Kombat X - Reboot Timeline"^^xsd:string ;
+    mk:versionSequence 2 ;
+    mk:versionYear "2015"^^xsd:gYear .
+
+mk:version-kitana-mk2 mk:canonStatus "canonical"^^xsd:string ;
+    mk:nextVersion mk:version-kitana-mk11 ;
+    mk:performsMove mk:fatality-fan-decapitation,
+        mk:move-fan-lift,
+        mk:move-square-wave ;
+    mk:versionLabel "Kitana - Mortal Kombat II - Original Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "1993"^^xsd:gYear .
+
+mk:version-kunglao-mk11 mk:canonStatus "canonical"^^xsd:string ;
+    mk:performsMove mk:move-hat-throw,
+        mk:move-wind-tornado ;
+    mk:versionLabel "Kung Lao - Mortal Kombat 11 - Reboot Timeline"^^xsd:string ;
+    mk:versionSequence 2 ;
+    mk:versionYear "2019"^^xsd:gYear .
+
+mk:version-mileena-mk1-2023 mk:canonStatus "canonical"^^xsd:string ;
+    mk:versionLabel "Mileena - Mortal Kombat 1 (2023) - New Era"^^xsd:string ;
+    mk:versionSequence 3 ;
+    mk:versionYear "2023"^^xsd:gYear .
+
+mk:version-nightwolf-mk9 mk:alliedWith mk:version-raiden-mk11 ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:performsMove mk:move-rhino-charge,
+        mk:move-spirit-arrow ;
+    mk:versionLabel "Nightwolf - Mortal Kombat (2011) - Reboot Timeline"^^xsd:string ;
+    mk:versionSequence 2 ;
+    mk:versionYear "2011"^^xsd:gYear .
+
+mk:version-scorpion-mk1 mk:canonStatus "canonical"^^xsd:string ;
+    mk:enemyOf mk:version-quanchi-mk4,
+        mk:version-subzero-mk1 ;
+    mk:nextVersion mk:version-scorpion-mk11 ;
+    mk:performsMove mk:fatality-toasty,
+        mk:move-spear ;
+    mk:versionLabel "Scorpion - Mortal Kombat (1992) - Original Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "1992"^^xsd:gYear .
+
+mk:version-sektor-mk9 mk:canonStatus "canonical"^^xsd:string ;
+    mk:performsMove mk:move-missile-salvo ;
+    mk:versionLabel "Sektor - Mortal Kombat (2011) - Reboot Timeline"^^xsd:string ;
+    mk:versionSequence 2 ;
+    mk:versionYear "2011"^^xsd:gYear .
+
+mk:version-shangtsung-mk1-2023 mk:canonStatus "canonical"^^xsd:string ;
+    mk:versionLabel "Shang Tsung - Mortal Kombat 1 (2023) - New Era"^^xsd:string ;
+    mk:versionSequence 3 ;
+    mk:versionYear "2023"^^xsd:gYear .
+
+mk:version-sindel-mk3 mk:canonStatus "canonical"^^xsd:string ;
+    mk:nextVersion mk:version-sindel-mk1-2023 ;
+    mk:performsMove mk:fatality-scream-queen,
+        mk:move-banshee-scream,
+        mk:move-hair-whip ;
+    mk:versionLabel "Sindel - Mortal Kombat 3 - Original Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "1995"^^xsd:gYear .
+
+mk:version-smoke-mk9 mk:canonStatus "canonical"^^xsd:string ;
+    mk:nextVersion mk:version-smoke-mk1-2023 ;
+    mk:versionLabel "Smoke - Mortal Kombat (2011) - Reboot Timeline"^^xsd:string ;
+    mk:versionSequence 2 ;
+    mk:versionYear "2011"^^xsd:gYear .
+
+mk:arc-new-era a mk:StoryArc ;
+    mk:description "Reset of the Hourglass by Fire God Liu Kang and the new destiny of the realms in Mortal Kombat 1 (2023)."^^xsd:string ;
+    mk:name "Fire God Liu Kang's New Era Arc"^^xsd:string .
+
+mk:character-cassiecage mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-cassie-cage ;
+    mk:ofSpecies mk:species-human .
+
+mk:character-liukang mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-liu-kang ;
+    mk:ofSpecies mk:species-god,
+        mk:species-human .
+
+mk:character-mileena mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-mileena ;
+    mk:ofSpecies mk:species-edenian,
+        mk:species-tarkatan-hybrid .
+
+mk:character-quanchi mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-quan-chi ;
+    mk:ofSpecies mk:species-demon-sorcerer .
+
+mk:character-raiden mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-raiden ;
+    mk:ofSpecies mk:species-god .
+
+mk:event-battle-of-armageddon mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-battle-of-armageddon ;
+    mk:involvesVersion mk:version-blaze-mk-armageddon-2006,
+        mk:version-daegon-mk-armageddon-2006,
+        mk:version-raiden-mk1,
+        mk:version-shaokahn-mk2,
+        mk:version-taven-mk-armageddon-2006 ;
+    mk:partOfArc mk:arc-3d-era-alliance-armageddon ;
+    mk:precedes mk:event-worlds-collide-crisis .
+
+mk:event-cassie-defeats-shinnok mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-x ;
+    mk:involvesVersion mk:version-cassiecage-mkx,
+        mk:version-jacqui-mkx,
+        mk:version-johnnycage-mk11,
+        mk:version-kungjin-mkx,
+        mk:version-shinnok-mkx,
+        mk:version-takeda-mkx ;
+    mk:partOfArc mk:arc-reboot-trilogy ;
+    mk:precedes mk:event-time-merger .
+
+mk:event-deadly-alliance-formed mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-deadly-alliance ;
+    mk:involvesVersion mk:version-frost-mk-deadly-alliance-2002,
+        mk:version-kenshi-mk-deadly-alliance-2002,
+        mk:version-liukang-mk1,
+        mk:version-quanchi-mk4,
+        mk:version-raiden-mk1,
+        mk:version-shangtsung-mk-deadly-alliance-2002 ;
+    mk:partOfArc mk:arc-3d-era-alliance-armageddon ;
+    mk:precedes mk:event-shujinko-deception .
+
+mk:event-dvorah-poisons-hanzo mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-hanzo-hasashi ;
+    mk:involvesVersion mk:version-dvorah-mk11,
+        mk:version-scorpion-mk11 ;
+    mk:partOfArc mk:arc-reboot-trilogy ;
+    mk:precedes mk:event-battle-for-the-hourglass .
+
+mk:event-earthrealm-invasion mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-3 ;
+    mk:involvesVersion mk:version-cyrax-mk3,
+        mk:version-kabal-mk3,
+        mk:version-sektor-mk3,
+        mk:version-shaokahn-mk2,
+        mk:version-sindel-mk3,
+        mk:version-stryker-mk3 ;
+    mk:partOfArc mk:arc-original-tournaments ;
+    mk:precedes mk:event-shinnok-invasion-mk4 .
+
+mk:event-first-tournament mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-1992-video-game ;
+    mk:involvesVersion mk:version-goro-mk1,
+        mk:version-liukang-mk1,
+        mk:version-raiden-mk1,
+        mk:version-scorpion-mk1,
+        mk:version-shangtsung-mk1 ;
+    mk:partOfArc mk:arc-original-tournaments ;
+    mk:precedes mk:event-outworld-tournament .
+
+mk:event-lin-kuei-cyber-initiative mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-cyber-initiative ;
+    mk:involvesVersion mk:version-cyrax-mk9,
+        mk:version-sektor-mk9,
+        mk:version-smoke-mk9,
+        mk:version-subzero-mk11 ;
+    mk:partOfArc mk:arc-reboot-trilogy ;
+    mk:precedes mk:event-sindel-massacre .
+
+mk:event-mythologies-quest mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-mythologies-sub-zero ;
+    mk:involvesVersion mk:version-quanchi-mk4,
+        mk:version-sareena-mk-mythologies-1997,
+        mk:version-shinnok-mk4,
+        mk:version-subzero-mk1 ;
+    mk:partOfArc mk:arc-original-tournaments ;
+    mk:precedes mk:event-first-tournament .
+
+mk:event-outworld-civil-war mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-outworld-civil-war ;
+    mk:involvesVersion mk:version-cassiecage-mkx,
+        mk:version-dvorah-mkx,
+        mk:version-erronblack-mkx,
+        mk:version-kotalkahn-mkx,
+        mk:version-mileena-mkx ;
+    mk:partOfArc mk:arc-reboot-trilogy ;
+    mk:precedes mk:event-pact-of-fire-and-ice .
+
+mk:event-outworld-tournament mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-ii ;
+    mk:involvesVersion mk:version-jax-mk2,
+        mk:version-kitana-mk2,
+        mk:version-liukang-mk1,
+        mk:version-mileena-mk2,
+        mk:version-shaokahn-mk2 ;
+    mk:partOfArc mk:arc-original-tournaments ;
+    mk:precedes mk:event-earthrealm-invasion .
+
+mk:event-pact-of-fire-and-ice mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-x ;
+    mk:involvesVersion mk:version-scorpion-mk11,
+        mk:version-subzero-mk11 ;
+    mk:partOfArc mk:arc-reboot-trilogy ;
+    mk:precedes mk:event-cassie-defeats-shinnok .
+
+mk:event-resurrection-of-onaga mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-onaga ;
+    mk:involvesVersion mk:version-havik-mk-deception-2004,
+        mk:version-hotaru-mk-deception-2004,
+        mk:version-onaga-mk-deception-2004,
+        mk:version-quanchi-mk4,
+        mk:version-raiden-mk1,
+        mk:version-shangtsung-mk-deadly-alliance-2002 ;
+    mk:partOfArc mk:arc-3d-era-alliance-armageddon ;
+    mk:precedes mk:event-shaolin-monks-crusade .
+
+mk:event-shaolin-monks-crusade mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-shaolin-monks ;
+    mk:involvesVersion mk:version-baraka-mk2,
+        mk:version-goro-mk1,
+        mk:version-kunglao-mk2,
+        mk:version-liukang-mk1 ;
+    mk:partOfArc mk:arc-3d-era-alliance-armageddon ;
+    mk:precedes mk:event-battle-of-armageddon .
+
+mk:event-shinnok-invasion-mk4 mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-4 ;
+    mk:involvesVersion mk:version-fujin-mk4,
+        mk:version-quanchi-mk4,
+        mk:version-raiden-mk1,
+        mk:version-reiko-mk4,
+        mk:version-shinnok-mk4,
+        mk:version-tanya-mk4 ;
+    mk:partOfArc mk:arc-original-tournaments ;
+    mk:precedes mk:event-special-forces-chase .
+
+mk:event-shinnok-netherrealm-war mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-netherrealm-war ;
+    mk:involvesVersion mk:version-johnnycage-mk11,
+        mk:version-quanchi-mkx,
+        mk:version-raiden-mk11,
+        mk:version-shinnok-mkx,
+        mk:version-sonyablade-mk11 ;
+    mk:partOfArc mk:arc-reboot-trilogy ;
+    mk:precedes mk:event-outworld-civil-war .
+
+mk:event-shujinko-deception mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-shujinko ;
+    mk:involvesVersion mk:version-boraicho-mk-deadly-alliance-2002,
+        mk:version-onaga-mk-deception-2004,
+        mk:version-shujinko-mk-deception-2004 ;
+    mk:partOfArc mk:arc-3d-era-alliance-armageddon ;
+    mk:precedes mk:event-resurrection-of-onaga .
+
+mk:event-sindel-massacre mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-2011-video-game ;
+    mk:involvesVersion mk:version-jade-mk11,
+        mk:version-jax-mk11,
+        mk:version-kabal-mk11,
+        mk:version-nightwolf-mk9,
+        mk:version-stryker-mk9 ;
+    mk:partOfArc mk:arc-reboot-trilogy ;
+    mk:precedes mk:event-shinnok-netherrealm-war .
+
+mk:event-special-forces-chase mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-special-forces ;
+    mk:involvesVersion mk:version-jax-mk2,
+        mk:version-kano-mk1 ;
+    mk:partOfArc mk:arc-original-tournaments ;
+    mk:precedes mk:event-deadly-alliance-formed .
+
+mk:event-time-merger mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-11 ;
+    mk:involvesVersion mk:version-cetrion-mk11,
+        mk:version-geras-mk11,
+        mk:version-kronika-mk11,
+        mk:version-raiden-mk11,
+        mk:version-scorpion-mk11 ;
+    mk:partOfArc mk:arc-reboot-trilogy ;
+    mk:precedes mk:event-dvorah-poisons-hanzo .
+
+mk:event-unmasking-of-titan-shang mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-www-mortalkombat-com-en-us ;
+    mk:involvesVersion mk:version-liukang-mk1-2023,
+        mk:version-scorpion-mk1-2023,
+        mk:version-shangtsung-mk1-2023,
+        mk:version-subzero-mk1-2023 ;
+    mk:partOfArc mk:arc-new-era ;
+    mk:precedes mk:event-onslaught-mobilization .
+
+mk:move-acid-spit a mk:SpecialMove .
+
+mk:move-charging-spear a mk:SpecialMove .
+
+mk:move-ice-freeze a mk:SpecialMove .
+
+mk:move-shokan-stomp a mk:SpecialMove .
+
+mk:move-spear a mk:SpecialMove .
+
+mk:move-tele-flurry a mk:SpecialMove .
+
+mk:source-mortalkombat-fandom-com-wiki-cassie-cage a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Cassie Cage"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Cassie_Cage"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-d-27vorah a mk:Source ;
+    mk:name "Mortal Kombat Wiki - D'Vorah"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/D%27Vorah"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-hourglass a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Hourglass"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Hourglass"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-11 a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Mortal Kombat 11"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Mortal_Kombat_11"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-1992-video-game a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Mortal Kombat (1992 video game)"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Mortal_Kombat_(1992_video_game)"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-3 a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Mortal Kombat 3"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Mortal_Kombat_3"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-4 a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Mortal Kombat 4"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Mortal_Kombat_4"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-ii a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Mortal Kombat II"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Mortal_Kombat_II"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-mythologies-sub-zero a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Mortal Kombat Mythologies: Sub-Zero"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Mortal_Kombat_Mythologies:_Sub-Zero"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-onslaught a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Mortal Kombat: Onslaught"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Mortal_Kombat:_Onslaught"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-shaolin-monks a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Mortal Kombat: Shaolin Monks"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Mortal_Kombat:_Shaolin_Monks"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-special-forces a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Mortal Kombat: Special Forces"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Mortal_Kombat:_Special_Forces"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-vs-dc-universe a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Mortal Kombat vs. DC Universe"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Mortal_Kombat_vs._DC_Universe"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-raiden a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Raiden"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Raiden"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:species-cyborg a mk:Species ;
+    mk:name "Cyborg"^^xsd:string .
+
+mk:version-cassiecage-mk11 mk:alliedWith mk:version-sonyablade-mk11 ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:enemyOf mk:version-shinnok-mkx ;
+    mk:performsMove mk:move-nut-punch,
+        mk:move-shadow-kick ;
+    mk:versionLabel "Cassie Cage - Mortal Kombat 11 - Reboot Timeline"^^xsd:string ;
+    mk:versionSequence 2 ;
+    mk:versionYear "2019"^^xsd:gYear .
+
+mk:version-havik-mk-deception-2004 mk:canonStatus "canonical"^^xsd:string ;
+    mk:nextVersion mk:version-havik-mk1-2023 ;
+    mk:performsMove mk:move-bone-twist ;
+    mk:versionLabel "Havik - Mortal Kombat: Deception - Original Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "2004"^^xsd:gYear .
+
+mk:version-johnnycage-mk11 mk:canonStatus "canonical"^^xsd:string ;
+    mk:performsMove mk:move-nut-punch,
+        mk:move-shadow-kick ;
+    mk:versionLabel "Johnny Cage - Mortal Kombat 11 - Reboot Timeline"^^xsd:string ;
+    mk:versionSequence 2 ;
+    mk:versionYear "2019"^^xsd:gYear .
+
+mk:version-kitana-mk11 mk:canonStatus "canonical"^^xsd:string ;
+    mk:enemyOf mk:version-shaokahn-mk11 ;
+    mk:performsMove mk:fatality-fan-decapitation,
+        mk:move-fan-lift ;
+    mk:versionLabel "Kitana - Mortal Kombat 11 - Reboot Timeline"^^xsd:string ;
+    mk:versionSequence 2 ;
+    mk:versionYear "2019"^^xsd:gYear .
+
+mk:version-kronika-mk11 mk:canonStatus "canonical"^^xsd:string ;
+    mk:versionLabel "Kronika - Mortal Kombat 11 - Reboot Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "2019"^^xsd:gYear .
+
+mk:version-onaga-mk-armageddon-2006 mk:canonStatus "canonical"^^xsd:string ;
+    mk:enemyOf mk:version-shaokahn-mk2 ;
+    mk:performsMove mk:move-dragon-breath ;
+    mk:versionLabel "Onaga - Mortal Kombat: Armageddon - Original Timeline"^^xsd:string ;
+    mk:versionSequence 2 ;
+    mk:versionYear "2006"^^xsd:gYear .
+
+mk:version-quanchi-mkx mk:canonStatus "canonical"^^xsd:string ;
+    mk:versionLabel "Quan Chi - Mortal Kombat X - Reboot Timeline"^^xsd:string ;
+    mk:versionSequence 2 ;
+    mk:versionYear "2015"^^xsd:gYear .
+
+mk:version-raiden-mk1-2023 mk:canonStatus "canonical"^^xsd:string ;
+    mk:versionLabel "Raiden - Mortal Kombat 1 (2023) - New Era"^^xsd:string ;
+    mk:versionSequence 3 ;
+    mk:versionYear "2023"^^xsd:gYear .
+
+mk:version-scorpion-mk1-2023 mk:canonStatus "canonical"^^xsd:string ;
+    mk:performsMove mk:move-spear ;
+    mk:versionLabel "Scorpion - Mortal Kombat 1 (2023) - New Era"^^xsd:string ;
+    mk:versionSequence 3 ;
+    mk:versionYear "2023"^^xsd:gYear .
+
+mk:version-shangtsung-mk-deadly-alliance-2002 mk:alliedWith mk:version-quanchi-mk4 ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:nextVersion mk:version-shangtsung-mk1-2023 ;
+    mk:versionLabel "Shang Tsung - Mortal Kombat: Deadly Alliance - Original Timeline"^^xsd:string ;
+    mk:versionSequence 2 ;
+    mk:versionYear "2002"^^xsd:gYear .
+
+mk:version-shaokahn-mk11 mk:canonStatus "canonical"^^xsd:string ;
+    mk:versionLabel "Shao Kahn - Mortal Kombat 11 - Reboot Timeline"^^xsd:string ;
+    mk:versionSequence 2 ;
+    mk:versionYear "2019"^^xsd:gYear .
+
+mk:version-shinnok-mk4 mk:canonStatus "canonical"^^xsd:string ;
+    mk:nextVersion mk:version-shinnok-mkx ;
+    mk:versionLabel "Shinnok - Mortal Kombat 4 - Original Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "1997"^^xsd:gYear .
+
+mk:version-stryker-mk9 mk:canonStatus "canonical"^^xsd:string ;
+    mk:performsMove mk:move-baton-trip,
+        mk:move-grenade-toss ;
+    mk:versionLabel "Kurtis Stryker - Mortal Kombat (2011) - Reboot Timeline"^^xsd:string ;
+    mk:versionSequence 2 ;
+    mk:versionYear "2011"^^xsd:gYear .
+
+mk:version-subzero-mk1-2023 mk:canonStatus "canonical"^^xsd:string ;
+    mk:performsMove mk:move-ice-freeze ;
+    mk:versionLabel "Sub-Zero - Mortal Kombat 1 (2023) - New Era"^^xsd:string ;
+    mk:versionSequence 3 ;
+    mk:versionYear "2023"^^xsd:gYear .
+
+mk:character-scorpion mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-scorpion ;
+    mk:ofSpecies mk:species-human,
+        mk:species-specter .
+
+mk:character-subzero mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-sub-zero ;
+    mk:ofSpecies mk:species-cryomancer .
+
+mk:event-battle-for-the-hourglass mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-hourglass ;
+    mk:involvesVersion mk:version-geras-mk11,
+        mk:version-kitana-mk11,
+        mk:version-kronika-mk11,
+        mk:version-liukang-mk11,
+        mk:version-raiden-mk11 ;
+    mk:partOfArc mk:arc-reboot-trilogy ;
+    mk:precedes mk:event-creation-of-new-era .
+
+mk:event-creation-of-new-era mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-www-mortalkombat-com-en-us ;
+    mk:involvesVersion mk:version-geras-mk1-2023,
+        mk:version-liukang-mk1-2023,
+        mk:version-raiden-mk1-2023 ;
+    mk:partOfArc mk:arc-new-era ;
+    mk:precedes mk:event-unmasking-of-titan-shang .
+
+mk:event-onslaught-mobilization mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-onslaught ;
+    mk:involvesVersion mk:version-raiden-mk1-2023,
+        mk:version-scorpion-mk1-2023,
+        mk:version-subzero-mk1-2023 ;
+    mk:partOfArc mk:arc-new-era .
+
+mk:event-raiden-vision-reset mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-2011-video-game ;
+    mk:involvesVersion mk:version-liukang-mk11,
+        mk:version-raiden-mk11,
+        mk:version-shaokahn-mk11 ;
+    mk:partOfArc mk:arc-reboot-trilogy ;
+    mk:precedes mk:event-lin-kuei-cyber-initiative .
+
+mk:event-worlds-collide-crisis mk:canonStatus "canonical"^^xsd:string ;
+    mk:hasSource mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-vs-dc-universe ;
+    mk:involvesVersion mk:version-raiden-mk1,
+        mk:version-scorpion-mk1,
+        mk:version-shaokahn-mk2,
+        mk:version-subzero-mk1 ;
+    mk:partOfArc mk:arc-reboot-trilogy ;
+    mk:precedes mk:event-raiden-vision-reset .
+
+mk:move-nut-punch a mk:SpecialMove .
+
+mk:move-shadow-kick a mk:SpecialMove .
+
+mk:move-wind-tornado a mk:SpecialMove .
+
+mk:source-mortalkombat-fandom-com-wiki-onaga a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Onaga"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Onaga"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-scorpion a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Scorpion"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Scorpion"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-shujinko a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Shujinko"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Shujinko"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:species-god a mk:Species ;
+    mk:name "God"^^xsd:string .
+
+mk:species-outworlder a mk:Species ;
+    mk:name "Outworlder"^^xsd:string .
+
+mk:version-cassiecage-mkx mk:alliedWith mk:version-sonyablade-mk11 ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:enemyOf mk:version-shinnok-mkx ;
+    mk:nextVersion mk:version-cassiecage-mk11 ;
+    mk:performsMove mk:move-nut-punch,
+        mk:move-shadow-kick ;
+    mk:versionLabel "Cassie Cage - Mortal Kombat X - Reboot Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "2015"^^xsd:gYear .
+
+mk:version-kano-mk1 mk:canonStatus "canonical"^^xsd:string ;
+    mk:nextVersion mk:version-kano-mk11 ;
+    mk:performsMove mk:move-cannonball ;
+    mk:versionLabel "Kano - Mortal Kombat (1992) - Original Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "1992"^^xsd:gYear .
+
+mk:version-liukang-mk1-2023 mk:canonStatus "canonical"^^xsd:string ;
+    mk:versionLabel "Liu Kang - Mortal Kombat 1 (2023) - New Era"^^xsd:string ;
+    mk:versionSequence 3 ;
+    mk:versionYear "2023"^^xsd:gYear .
+
+mk:version-onaga-mk-deception-2004 mk:canonStatus "canonical"^^xsd:string ;
+    mk:enemyOf mk:version-shaokahn-mk2 ;
+    mk:nextVersion mk:version-onaga-mk-armageddon-2006 ;
+    mk:performsMove mk:move-dragon-breath,
+        mk:move-dragon-slam ;
+    mk:versionLabel "Onaga - Mortal Kombat: Deception - Original Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "2004"^^xsd:gYear .
+
+mk:version-sonyablade-mk11 mk:canonStatus "canonical"^^xsd:string ;
+    mk:enemyOf mk:version-kano-mk11 ;
+    mk:performsMove mk:fatality-kiss-of-death,
+        mk:move-ring-toss ;
+    mk:versionLabel "Sonya Blade - Mortal Kombat 11 - Reboot Timeline"^^xsd:string ;
+    mk:versionSequence 2 ;
+    mk:versionYear "2019"^^xsd:gYear .
+
+mk:arc-3d-era-alliance-armageddon a mk:StoryArc ;
+    mk:description "Rise of the Deadly Alliance, Return of Onaga the Dragon King, and the Battle of Armageddon."^^xsd:string ;
+    mk:name "Deadly Alliance, Deception & Armageddon Arc"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-2011-video-game a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Mortal Kombat (2011 video game)"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Mortal_Kombat_(2011_video_game)"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-mortalkombat-fandom-com-wiki-mortal-kombat-x a mk:Source ;
+    mk:name "Mortal Kombat Wiki - Mortal Kombat X"^^xsd:string ;
+    mk:sourceType "fandom-wiki"^^xsd:string ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Mortal_Kombat_X"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:source-www-mortalkombat-com-en-us a mk:Source ;
+    mk:name "Official Mortal Kombat Website"^^xsd:string ;
+    mk:sourceType "official-site"^^xsd:string ;
+    mk:sourceURL "https://www.mortalkombat.com/en-us"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:species-edenian a mk:Species ;
+    mk:name "Edenian"^^xsd:string .
+
+mk:version-liukang-mk11 mk:canonStatus "canonical"^^xsd:string ;
+    mk:nextVersion mk:version-liukang-mk1-2023 ;
+    mk:performsMove mk:move-bicycle-kick ;
+    mk:versionLabel "Liu Kang - Mortal Kombat 11 - Reboot Timeline"^^xsd:string ;
+    mk:versionSequence 2 ;
+    mk:versionYear "2019"^^xsd:gYear .
+
+mk:version-subzero-mk1 mk:canonStatus "canonical"^^xsd:string ;
+    mk:nextVersion mk:version-subzero-mk11 ;
+    mk:performsMove mk:fatality-spine-rip,
+        mk:move-ice-freeze ;
+    mk:versionLabel "Sub-Zero - Mortal Kombat (1992) - Original Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "1992"^^xsd:gYear .
+
+mk:arc-original-tournaments a mk:StoryArc ;
+    mk:description "Tenth Mortal Kombat Tournament, Outworld Lure, Earthrealm Invasion, and Shinnok's First War."^^xsd:string ;
+    mk:name "Original Tournaments & Invasion Arc"^^xsd:string .
+
+mk:version-liukang-mk1 mk:canonStatus "canonical"^^xsd:string ;
+    mk:nextVersion mk:version-liukang-mk11 ;
+    mk:performsMove mk:fatality-dragon-bite,
+        mk:move-bicycle-kick ;
+    mk:versionLabel "Liu Kang - Mortal Kombat (1992) - Original Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "1992"^^xsd:gYear .
+
+mk:version-mileena-mkx mk:canonStatus "canonical"^^xsd:string ;
+    mk:nextVersion mk:version-mileena-mk1-2023 ;
+    mk:versionLabel "Mileena - Mortal Kombat X - Reboot Timeline"^^xsd:string ;
+    mk:versionSequence 2 ;
+    mk:versionYear "2015"^^xsd:gYear .
+
+mk:version-raiden-mk11 mk:alliedWith mk:version-liukang-mk11 ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:enemyOf mk:version-shinnok-mkx ;
+    mk:nextVersion mk:version-raiden-mk1-2023 ;
+    mk:versionLabel "Raiden - Mortal Kombat 11 - Reboot Timeline"^^xsd:string ;
+    mk:versionSequence 2 ;
+    mk:versionYear "2019"^^xsd:gYear .
+
+mk:version-scorpion-mk11 mk:alliedWith mk:version-subzero-mk11 ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:enemyOf mk:version-quanchi-mkx,
+        mk:version-subzero-mk11 ;
+    mk:nextVersion mk:version-scorpion-mk1-2023 ;
+    mk:performsMove mk:fatality-toasty,
+        mk:move-spear ;
+    mk:versionLabel "Scorpion - Mortal Kombat 11 - Reboot Timeline"^^xsd:string ;
+    mk:versionSequence 2 ;
+    mk:versionYear "2019"^^xsd:gYear .
+
+mk:version-shaokahn-mk2 mk:canonStatus "canonical"^^xsd:string ;
+    mk:nextVersion mk:version-shaokahn-mk11 ;
+    mk:versionLabel "Shao Kahn - Mortal Kombat II - Original Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "1993"^^xsd:gYear .
+
+mk:version-shinnok-mkx mk:canonStatus "canonical"^^xsd:string ;
+    mk:versionLabel "Shinnok - Mortal Kombat X - Reboot Timeline"^^xsd:string ;
+    mk:versionSequence 2 ;
+    mk:versionYear "2015"^^xsd:gYear .
+
+mk:version-subzero-mk11 mk:canonStatus "canonical"^^xsd:string ;
+    mk:nextVersion mk:version-subzero-mk1-2023 ;
+    mk:performsMove mk:move-ice-freeze ;
+    mk:versionLabel "Sub-Zero - Mortal Kombat 11 - Reboot Timeline"^^xsd:string ;
+    mk:versionSequence 2 ;
+    mk:versionYear "2019"^^xsd:gYear .
+
+mk:version-raiden-mk1 mk:alliedWith mk:version-liukang-mk1 ;
+    mk:canonStatus "canonical"^^xsd:string ;
+    mk:enemyOf mk:version-shinnok-mk4 ;
+    mk:nextVersion mk:version-raiden-mk11 ;
+    mk:versionLabel "Raiden - Mortal Kombat (1992) - Original Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "1992"^^xsd:gYear .
+
+mk:version-quanchi-mk4 mk:canonStatus "canonical"^^xsd:string ;
+    mk:nextVersion mk:version-quanchi-mkx ;
+    mk:versionLabel "Quan Chi - Mortal Kombat 4 - Original Timeline"^^xsd:string ;
+    mk:versionSequence 1 ;
+    mk:versionYear "1997"^^xsd:gYear .
+
+mk:arc-reboot-trilogy a mk:StoryArc ;
+    mk:description "Raiden's altered history (MK9), Outworld Civil War & Shinnok's return (MKX), and Kronika's Hourglass War (MK11)."^^xsd:string ;
+    mk:name "Reboot Timeline & Elder Gods Crisis Arc"^^xsd:string .
+
+mk:timeline-new-era mk:timelineOrder 3 .
+
+mk:species-human a mk:Species ;
+    mk:name "Human"^^xsd:string .
+
+mk:timeline-original mk:nextTimeline mk:timeline-reboot ;
+    mk:timelineOrder 1 .
+
+mk:timeline-reboot mk:nextTimeline mk:timeline-new-era ;
+    mk:timelineOrder 2 .
+

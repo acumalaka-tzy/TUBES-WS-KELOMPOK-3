@@ -1,5 +1,7 @@
 # ========================================================
 # Sample SPARQL Queries for Mortal Kombat Knowledge Nexus
+# Jalankan terhadap data/knowledge_graph.ttl (dataset Fuseki: mk_nexus)
+# Setiap query diawali baris "### <nomor>. <judul>"
 # ========================================================
 
 PREFIX mk: <https://example.org/mk/>
@@ -39,14 +41,14 @@ WHERE {
   FILTER(regex(?clanName, "Lin Kuei", "i"))
 }
 
-### 4. Find rivalries / enemies of Scorpion
+### 4. Find rivalries / enemies of Scorpion (character level, symmetric)
 SELECT ?scorpionName ?enemyName
 WHERE {
-  ?scorpion a mk:CharacterVersion ;
+  ?scorpion a mk:Character ;
             mk:name ?scorpionName ;
             mk:enemyOf ?enemy .
   ?enemy mk:name ?enemyName .
-  FILTER(regex(?scorpionName, "Scorpion", "i"))
+  FILTER(regex(?scorpionName, "^Scorpion$", "i"))
 }
 
 ### 5. Story Events involving Sub-Zero in the Reboot Timeline
@@ -55,10 +57,158 @@ WHERE {
   ?event a mk:Event ;
          mk:eventTitle ?title ;
          mk:eventSummary ?summary ;
-         mk:involvesCharacter ?version ;
+         mk:involvesCharacter ?character ;
          mk:occursIn ?timeline .
-  ?version mk:name ?charName .
+  ?character mk:name ?charName .
   ?timeline mk:name ?timelineName .
   FILTER(regex(?charName, "Sub-Zero", "i"))
   FILTER(regex(?timelineName, "Reboot", "i"))
 }
+
+### 6. Compare Scorpion across games and timelines (CharacterVersion)
+SELECT ?seq ?gameTitle ?timelineName ?clanName
+WHERE {
+  ?character mk:name ?cn ;
+             mk:hasVersion ?version .
+  FILTER(STR(?cn) = "Scorpion")
+  ?version mk:versionSequence ?seq ;
+           mk:appearsIn ?game ;
+           mk:existsInTimeline ?timeline .
+  ?game mk:name ?gameTitle .
+  ?timeline mk:name ?timelineName .
+  OPTIONAL { ?version mk:memberOf ?clan . ?clan mk:name ?clanName }
+}
+ORDER BY ?seq
+
+### 7. Characters whose clan/organization differs between versions
+SELECT ?charName (GROUP_CONCAT(DISTINCT ?clanName; separator=", ") AS ?clans) (COUNT(DISTINCT ?clan) AS ?clanCount)
+WHERE {
+  ?character a mk:Character ;
+             mk:name ?charName ;
+             mk:hasVersion ?version .
+  ?version mk:memberOf ?clan .
+  ?clan mk:name ?clanName .
+}
+GROUP BY ?charName
+HAVING (COUNT(DISTINCT ?clan) > 1)
+ORDER BY ?charName
+
+### 8. Story Timeline of the Reboot Timeline (ordered Story Events)
+SELECT ?order ?title ?gameTitle
+WHERE {
+  ?storyTimeline a mk:StoryTimeline ;
+                 mk:describesTimeline ?timeline ;
+                 mk:hasStoryEvent ?event .
+  ?timeline mk:name ?tn .
+  FILTER(STR(?tn) = "Reboot Timeline")
+  ?event mk:chronologicalOrder ?order ;
+         mk:eventTitle ?title ;
+         mk:featuresInGame ?game .
+  ?game mk:name ?gameTitle .
+}
+ORDER BY ?order
+
+### 9. Story Claims about Kitana with timeline and provenance
+SELECT ?claimText ?timelineName ?sourceName ?status
+WHERE {
+  ?claim a mk:StoryClaim ;
+         mk:claimSubject ?subject ;
+         mk:claimText ?claimText ;
+         mk:claimInTimeline ?timeline ;
+         mk:supportedBy ?source ;
+         mk:verificationStatus ?status .
+  ?subject mk:name ?sn .
+  FILTER(STR(?sn) = "Kitana")
+  ?timeline mk:name ?timelineName .
+  ?source mk:name ?sourceName .
+}
+ORDER BY ?timelineName
+
+### 10. Characters that exist in all three timelines
+SELECT ?charName
+WHERE {
+  ?character a mk:Character ;
+             mk:name ?charName ;
+             mk:hasVersion ?version .
+  ?version mk:existsInTimeline ?timeline .
+}
+GROUP BY ?charName
+HAVING (COUNT(DISTINCT ?timeline) = 3)
+ORDER BY ?charName
+
+### 11. Species of every character (resolved mk:Species individuals)
+SELECT ?charName ?speciesName
+WHERE {
+  ?character a mk:Character ;
+             mk:name ?charName ;
+             mk:ofSpecies ?species .
+  ?species mk:name ?speciesName .
+}
+ORDER BY ?charName ?speciesName
+
+### 12. Version chain of a character (previous -> next)
+SELECT ?fromLabel ?toLabel
+WHERE {
+  ?from mk:nextVersion ?to ;
+        mk:versionLabel ?fromLabel ;
+        mk:versionOf ?character .
+  ?to mk:versionLabel ?toLabel .
+  ?character mk:name ?cn .
+  FILTER(STR(?cn) = "Sub-Zero")
+}
+
+### 13. Fatalities of each character version
+SELECT ?versionName ?fatalityName
+WHERE {
+  ?version a mk:CharacterVersion ;
+           mk:name ?versionName ;
+           mk:performsMove ?move .
+  ?move a mk:Fatality ;
+        mk:name ?fatalityName .
+}
+ORDER BY ?versionName
+
+### 14. Weapons used per timeline
+SELECT ?timelineName ?weaponName (COUNT(?version) AS ?users)
+WHERE {
+  ?version a mk:CharacterVersion ;
+           mk:existsInTimeline ?timeline ;
+           mk:usesWeapon ?weapon .
+  ?timeline mk:name ?timelineName .
+  ?weapon mk:name ?weaponName .
+}
+GROUP BY ?timelineName ?weaponName
+ORDER BY ?timelineName DESC(?users)
+
+### 15. Everything that happens after the first tournament (transitive precedes)
+SELECT ?title ?order
+WHERE {
+  ?first mk:eventTitle ?ft .
+  FILTER(STR(?ft) = "Tenth Mortal Kombat Tournament")
+  ?first mk:precedes+ ?event .
+  ?event mk:eventTitle ?title ;
+         mk:chronologicalOrder ?order .
+}
+ORDER BY ?order
+
+### 16. Provenance: sources behind the claims of each timeline
+SELECT ?timelineName ?sourceName (COUNT(?claim) AS ?claims)
+WHERE {
+  ?claim a mk:StoryClaim ;
+         mk:claimInTimeline ?timeline ;
+         mk:supportedBy ?source .
+  ?timeline mk:name ?timelineName .
+  ?source mk:name ?sourceName .
+}
+GROUP BY ?timelineName ?sourceName
+ORDER BY ?timelineName DESC(?claims)
+
+### 17. Locations and the realm they belong to
+SELECT ?locationName ?realmName
+WHERE {
+  ?location a mk:Location ;
+            mk:name ?locationName ;
+            mk:locatedInRealm ?realm .
+  ?realm mk:name ?realmName .
+}
+ORDER BY ?realmName ?locationName
