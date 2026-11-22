@@ -1,0 +1,100 @@
+[
+  {
+    "id": "location-shang-tsung-island",
+    "name": "Shang Tsung's Island",
+    "realmId": "realm-earthrealm",
+    "description": "Mystical uncharted island in the Lost Sea between Earthrealm and Outworld, hosting the 10th tournament.",
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Shang_Tsung%27s_Island"
+  },
+  {
+    "id": "location-the-pit",
+    "name": "The Pit",
+    "realmId": "realm-earthrealm",
+    "description": "Narrow stone bridge suspended over razor-sharp steel spikes, birthplace of the environmental Stage Fatality.",
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/The_Pit"
+  },
+  {
+    "id": "location-shaolin-temple",
+    "name": "Wu Shi Academy & Shaolin Temple",
+    "realmId": "realm-earthrealm",
+    "description": "Sacred training sanctuary of the White Lotus Society where Liu Kang and Kung Lao mastered martial arts.",
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Wu_Shi_Academy"
+  },
+  {
+    "id": "location-jinsei-chamber",
+    "name": "Jinsei Chamber",
+    "realmId": "realm-earthrealm",
+    "description": "The subterranean heart of Earthrealm containing the luminous life force protected by Raiden.",
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Jinsei_Chamber"
+  },
+  {
+    "id": "location-pyramid-of-argus",
+    "name": "Pyramid of Argus",
+    "realmId": "realm-edenia",
+    "description": "Colossal monolith in Edenia created by Lord Argus where all warriors converged during Armageddon.",
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Pyramid_of_Argus"
+  },
+  {
+    "id": "location-the-hourglass",
+    "name": "The Keep of Time / The Hourglass",
+    "realmId": "realm-earthrealm",
+    "description": "Cosmic nexus beyond realms where Titan Kronika and later Fire God Liu Kang steer time streams.",
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Hourglass"
+  },
+  {
+    "id": "location-shao-kahn-throne",
+    "name": "Shao Kahn's Throne Room",
+    "realmId": "realm-outworld",
+    "description": "Imperial palace in Outworld where Emperor Shao Kahn observes gladiatorial combat and issues imperial decrees.",
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Kahn%27s_Arena"
+  },
+  {
+    "id": "location-dead-pool",
+    "name": "The Dead Pool",
+    "realmId": "realm-outworld",
+    "description": "Outworld execution chamber filled with bubbling green acid suspended above iron grates.",
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Dead_Pool"
+  },
+  {
+    "id": "location-lin-kuei-temple",
+    "name": "Lin Kuei Temple (Arctika)",
+    "realmId": "realm-earthrealm",
+    "description": "Fortress tucked within the frozen snow peaks of Arctika, ancestral home of the Lin Kuei cryomancers.",
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Arctika"
+  },
+  {
+    "id": "location-fire-gardens",
+    "name": "Shirai Ryu Fire Gardens",
+    "realmId": "realm-earthrealm",
+    "description": "Peaceful Japanese estate established by Grandmaster Hanzo Hasashi where Shirai Ryu and Lin Kuei made peace.",
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Fire_Gardens"
+  },
+  {
+    "id": "location-sea-of-blood",
+    "name": "Sea of Blood",
+    "realmId": "realm-netherrealm",
+    "description": "Bottomless ocean of crimson ichor in the Netherrealm steered by ferryman Kharon.",
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Sea_of_Blood"
+  },
+  {
+    "id": "location-netherrealm-spire",
+    "name": "Shinnok's Spire",
+    "realmId": "realm-netherrealm",
+    "description": "Tower of bone and black iron where fallen Elder God Shinnok and Quan Chi rule the demonic hordes.",
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Netherrealm"
+  },
+  {
+    "id": "location-seido-capital",
+    "name": "Capital of Seido",
+    "realmId": "realm-orderrealm",
+    "description": "Geometric crystal citadel of Orderrealm governed under the rigid martial law of the Seidan Guard.",
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Orderrealm"
+  },
+  {
+    "id": "location-chaos-palace",
+    "name": "Palace of Chaos",
+    "realmId": "realm-chaosrealm",
+    "description": "Shifting architectural labyrinth in Chaosrealm with molten rivers where Cleric Havik holds court.",
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Chaosrealm"
+  }
+]

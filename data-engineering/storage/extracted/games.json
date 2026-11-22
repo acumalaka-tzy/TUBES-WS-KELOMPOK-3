@@ -8,7 +8,8 @@
       "Arcade",
       "SNES",
       "Sega Genesis",
-      "Game Boy"
+      "Game Boy",
+      "Genesis"
     ],
     "description": "The landmark tournament fighting game created by Ed Boon and John Tobias that introduced digital sprites, Fatalities, and legendary martial lore.",
     "isStandalone": true,
@@ -24,7 +25,8 @@
       "Arcade",
       "SNES",
       "Sega Genesis",
-      "PlayStation"
+      "PlayStation",
+      "Genesis"
     ],
     "description": "Sequel set in Outworld with expanded roster, Babalities, Friendships, and the introduction of Shao Kahn, Kitana, and Mileena.",
     "isStandalone": true,
@@ -40,7 +42,9 @@
       "Arcade",
       "SNES",
       "Sega Genesis",
-      "PlayStation"
+      "PlayStation",
+      "Genesis",
+      "Saturn"
     ],
     "description": "Chronicles Shao Kahn's invasion of Earthrealm through Sindel's resurrection, introducing Cyber Ninjas (Cyrax, Sektor, Smoke) and Kabal.",
     "isStandalone": true,
@@ -72,7 +76,8 @@
       "PlayStation",
       "Nintendo 64",
       "Sega Saturn",
-      "PC"
+      "PC",
+      "Saturn"
     ],
     "description": "Standalone anthology fighting release featuring almost every character and background from the first three games plus the Aggressor bar.",
     "isStandalone": true,

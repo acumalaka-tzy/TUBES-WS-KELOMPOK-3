@@ -1,8 +1,8 @@
 {
-  "reportId": "cleaning-report-20261122063422",
-  "generatedAt": "2026-11-22T06:34:22.917361+00:00",
-  "totalRawRecords": 23,
-  "cleanedUniqueRecords": 23,
+  "reportId": "cleaning-report-20261122072403",
+  "generatedAt": "2026-11-22T07:24:03.298789+00:00",
+  "totalRawRecords": 42,
+  "cleanedUniqueRecords": 42,
   "duplicateRecordsDetected": 0,
   "emptyOrShortRecords": 0,
   "cleaningRulesApplied": [

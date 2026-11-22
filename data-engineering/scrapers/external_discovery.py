@@ -104,3 +104,6 @@ class ExternalReferenceDiscovery:
         with open(path, "w", encoding="utf-8") as f:
             json.dump(report, f, indent=2)
         return report
+
+    def evaluate_and_save_report(self, output_report: str = "data-engineering/storage/reports/source_discovery_report.json"):
+        return self.save_report(output_report)

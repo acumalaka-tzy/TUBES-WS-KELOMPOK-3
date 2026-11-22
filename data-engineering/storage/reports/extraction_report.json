@@ -1,19 +1,28 @@
 {
-  "reportId": "extraction-report-20261122063422",
-  "generatedAt": "2026-11-22T06:34:22.939709+00:00",
+  "reportId": "extraction-report-20261122072414",
+  "generatedAt": "2026-11-22T07:24:14.252358+00:00",
+  "pipelineLineage": {
+    "sourceCleanedFile": "data-engineering\\storage\\cleaned\\cleaned_pages.json",
+    "totalCleanedRecordsRead": 42,
+    "scrapedCandidatesProcessed": 34,
+    "entitiesEnrichedFromScraping": 26,
+    "newEntitiesMerged": 5
+  },
   "extractedEntityCounts": {
-    "characters": 60,
+    "characters": 65,
     "games": 23,
     "timelines": 3,
     "realms": 7,
+    "locations": 14,
     "clans": 10,
+    "elements": 8,
     "abilities": 101,
     "weapons": 20,
     "storyEvents": 25,
     "relationships": 31
   },
   "dlcExclusionAudit": {
-    "totalExcludedCandidates": 18,
+    "totalExcludedCandidates": 21,
     "dlcContaminationInBaseDataset": 0,
     "auditStatus": "PASSED - Zero DLC items in standalone dataset"
   }

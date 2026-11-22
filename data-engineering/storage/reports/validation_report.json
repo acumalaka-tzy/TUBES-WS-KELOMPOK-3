@@ -1,15 +1,26 @@
 {
-  "reportId": "validation-report-20261122063422",
-  "generatedAt": "2026-11-22T06:34:22.947592+00:00",
+  "reportId": "validation-report-20261122072414",
+  "generatedAt": "2026-11-22T07:24:14.386363+00:00",
   "validationPassed": true,
-  "totalErrors": 0,
-  "totalWarnings": 0,
-  "errors": [],
-  "warnings": [],
+  "statistics": {
+    "totalEntities": 276,
+    "totalRelationships": 31,
+    "totalUniqueIDs": 276,
+    "validationErrors": 0,
+    "validationWarnings": 0,
+    "missingProvenanceCount": 0,
+    "unverifiedClaims": 0,
+    "dlcViolationsDetected": 0
+  },
   "qualityGates": {
     "schemaIntegrity": "PASSED",
+    "idUniqueness": "PASSED",
     "referentialIntegrity": "PASSED",
     "mandatoryProvenance": "PASSED",
-    "dlcExclusionGate": "PASSED (Zero DLC entities detected)"
-  }
+    "dlcExclusionGate": "PASSED (Zero DLC contamination detected)",
+    "timelineConsistency": "PASSED",
+    "elementsAndLocationsVerified": "PASSED (Elements and Locations validated)"
+  },
+  "errors": [],
+  "warnings": []
 }
