@@ -111,5 +111,12 @@ export async function executeSearch(options: GlobalSearchOptions): Promise<Searc
     status: total > 0 ? "ok" : "ambiguous",
     message: summary,
     suggestions,
+    generatedSparql: intent.generatedSparql,
+    parsedIntent: {
+      intentType: intent.intentType,
+      targetType: intent.targetType,
+      extractedAttributes: intent.extractedAttributes,
+      confidence: intent.confidence,
+    },
   };
 }

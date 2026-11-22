@@ -207,6 +207,13 @@ export interface SearchResponse {
   status: "ok" | "ambiguous" | "unsupported";
   message?: string;
   suggestions?: string[];
+  generatedSparql?: string;
+  parsedIntent?: {
+    intentType: string;
+    targetType?: string;
+    extractedAttributes?: Record<string, string | undefined>;
+    confidence?: number;
+  };
 }
 
 export interface Suggestion {
