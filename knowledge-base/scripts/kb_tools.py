@@ -4,25 +4,32 @@ Knowledge Base tooling - Mortal Kombat Knowledge Nexus (Anggota 3)
 
 Sub-commands
 ------------
-build     Derive the story/version layer from the pipeline data, materialize
-          simple OWL inferences (subPropertyOf, inverseOf, SymmetricProperty)
-          and export the merged knowledge graph (Turtle + RDF/XML) and the
-          Protege-friendly ontology (core.owl).
-validate  Validate the merged graph against shacl/shapes.ttl (pySHACL).
-docs      Regenerate docs/ONTOLOGY.md from ontology/core.ttl.
-all       build + validate + docs.
-
-Only knowledge-base/ files are touched; the pipeline output
-(data/mortal_kombat.ttl) is read-only input, so re-running the data
-engineering pipeline and then `kb_tools.py all` is always safe.
+build        Derive the story/version/provenance layer from the pipeline data,
+             sanitize scrape-failed placeholder records, materialize OWL
+             inferences (subPropertyOf, inverseOf, SymmetricProperty) and export
+             the merged knowledge graph (Turtle + RDF/XML) and the Protege
+             ontology (core.owl).
+validate     Validate the merged graph against shacl/shapes.ttl (pySHACL).
+docs         Regenerate docs/ONTOLOGY.md from ontology/core.ttl.
+fuseki-load  Upload data/knowledge_graph.ttl to running Apache Jena Fuseki
+             (http://localhost:3030/mk_nexus/data?default).
+fuseki-test  Execute all sample & frontend preset SPARQL queries against live
+             Apache Jena Fuseki (http://localhost:3030/mk_nexus/query) and write
+             reports/fuseki_sparql_report.json.
+all          build + validate + docs.
 """
 
 from __future__ import annotations
 
 import argparse
+import base64
 import json
+import os
 import re
 import sys
+import urllib.error
+import urllib.parse
+import urllib.request
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
@@ -46,11 +53,18 @@ BASE_DATA_TTL = KB_ROOT / "data" / "mortal_kombat.ttl"
 STORY_LAYER_TTL = KB_ROOT / "data" / "story_layer.ttl"
 GRAPH_TTL = KB_ROOT / "data" / "knowledge_graph.ttl"
 GRAPH_RDF = KB_ROOT / "data" / "knowledge_graph.rdf"
+SAMPLE_QUERIES_SPARQL = KB_ROOT / "queries" / "sample_queries.sparql"
 RELATIONSHIPS_JSON = REPO_ROOT / "data-engineering" / "storage" / "extracted" / "relationships.json"
 REPORT_DIR = KB_ROOT / "reports"
 BUILD_REPORT = REPORT_DIR / "kb_build_report.json"
 SHACL_REPORT = REPORT_DIR / "shacl_report.json"
+FUSEKI_REPORT = REPORT_DIR / "fuseki_sparql_report.json"
 DOCS_MD = KB_ROOT / "docs" / "ONTOLOGY.md"
+
+FUSEKI_BASE_URL = os.environ.get("FUSEKI_BASE_URL", "http://localhost:3030")
+FUSEKI_DATASET = os.environ.get("FUSEKI_DATASET", "mk_nexus")
+FUSEKI_USER = os.environ.get("FUSEKI_USER", "admin")
+FUSEKI_PASSWORD = os.environ.get("FUSEKI_PASSWORD", "adminpassword")
 
 
 # ------------------------------------------------------------------------------
@@ -119,12 +133,49 @@ def context_to_timelines(context: str) -> List[str]:
     return [t for t, words in TIMELINE_KEYWORDS if any(w in text for w in words)]
 
 
+def sanitize_base_graph(raw_base: Graph) -> Tuple[Graph, List[str]]:
+    """
+    Filter out broken scrape-failed placeholder subjects (e.g. character-scorpion-fetch-failed
+    with invalid xsd:gYear "Unknown" and 0 versions) without mutating mortal_kombat.ttl on disk.
+    """
+    excluded_subjects = set()
+    for ch in raw_base.subjects(RDF.type, MK.Character):
+        year_val = str(first(raw_base, ch, MK.firstAppearanceYear) or "")
+        has_ver = first(raw_base, ch, MK.hasVersion) is not None
+        if "fetch-failed" in str(ch) or not re.fullmatch(r"\d{4}", year_val) or not has_ver:
+            excluded_subjects.add(ch)
+
+    clean = Graph()
+    bind_prefixes(clean)
+    for s, p, o in raw_base:
+        if s in excluded_subjects or o in excluded_subjects:
+            continue
+        clean.add((s, p, o))
+    return clean, sorted(local(s) for s in excluded_subjects)
+
+
 # ------------------------------------------------------------------------------
-# Story / version layer derivation
+# Story / version / provenance layer derivation
 # ------------------------------------------------------------------------------
 
+STORY_ARCS_SPEC = [
+    ("arc-original-tournaments", "Original Tournaments & Invasion Arc",
+     "Tenth Mortal Kombat Tournament, Outworld Lure, Earthrealm Invasion, and Shinnok's First War.",
+     range(1, 7)),
+    ("arc-3d-era-alliance-armageddon", "Deadly Alliance, Deception & Armageddon Arc",
+     "Rise of the Deadly Alliance, Return of Onaga the Dragon King, and the Battle of Armageddon.",
+     range(7, 12)),
+    ("arc-reboot-trilogy", "Reboot Timeline & Elder Gods Crisis Arc",
+     "Raiden's altered history (MK9), Outworld Civil War & Shinnok's return (MKX), and Kronika's Hourglass War (MK11).",
+     range(12, 23)),
+    ("arc-new-era", "Fire God Liu Kang's New Era Arc",
+     "Reset of the Hourglass by Fire God Liu Kang and the new destiny of the realms in Mortal Kombat 1 (2023).",
+     range(23, 100)),
+]
+
+
 def derive_story_layer(base: Graph, relationships: List[Dict[str, Any]]) -> Tuple[Graph, Dict[str, Any]]:
-    """Derive Species, Source, CharacterVersion context, Story Timeline and Story Claim triples."""
+    """Derive Species, Source, CharacterVersion context, StoryArc, StoryTimeline and StoryClaim triples."""
     layer = Graph()
     bind_prefixes(layer)
     stats: Dict[str, Any] = {"skippedRelationships": []}
@@ -132,6 +183,7 @@ def derive_story_layer(base: Graph, relationships: List[Dict[str, Any]]) -> Tupl
     # --- Species (resolve free-text mk:hasSpecies into mk:Species individuals) ----
     species_nodes = set()
     for ch in base.subjects(RDF.type, MK.Character):
+        layer.add((ch, MK.canonStatus, lit_str("canonical")))
         for lit in base.objects(ch, MK.hasSpecies):
             for label in re.split(r"\s*(?:/|,|&)\s*", str(lit)):
                 label = label.strip()
@@ -189,6 +241,8 @@ def derive_story_layer(base: Graph, relationships: List[Dict[str, Any]]) -> Tupl
     # --- CharacterVersion context (label, year, sequence, previous/next) --------
     release: Dict[URIRef, str] = {g: str(first(base, g, MK.releaseDate) or "") for g in base.subjects(RDF.type, MK.Game)}
     versions_by_char: Dict[URIRef, List[Tuple[str, str, URIRef]]] = defaultdict(list)
+    versions_by_char_tl: Dict[Tuple[URIRef, URIRef], List[URIRef]] = defaultdict(list)
+
     for v in base.subjects(RDF.type, MK.CharacterVersion):
         char = first(base, v, MK.versionOf)
         game = first(base, v, MK.appearsIn)
@@ -198,12 +252,16 @@ def derive_story_layer(base: Graph, relationships: List[Dict[str, Any]]) -> Tupl
         year = release.get(game, "")[:4]
         label = f"{name_of(base, char)} - {name_of(base, game) if game else '?'} - {name_of(base, tl) if tl else '?'}"
         layer.add((v, MK.versionLabel, lit_str(label)))
+        layer.add((v, MK.canonStatus, lit_str("canonical")))
         if re.fullmatch(r"\d{4}", year):
             layer.add((v, MK.versionYear, Literal(year, datatype=XSD.gYear)))
         versions_by_char[char].append((release.get(game, ""), str(v), v))
+        if tl is not None:
+            versions_by_char_tl[(char, tl)].append(v)
         for ab in base.objects(v, MK.hasAbility):
             if ab in moves:
                 layer.add((v, MK.performsMove, ab))
+
     for char, items in versions_by_char.items():
         items.sort()
         for idx, (_, _, v) in enumerate(items, start=1):
@@ -212,14 +270,28 @@ def derive_story_layer(base: Graph, relationships: List[Dict[str, Any]]) -> Tupl
                 layer.add((v, MK.nextVersion, items[idx][2]))
     stats["characterVersions"] = sum(len(i) for i in versions_by_char.values())
 
-    # --- Story events: StoryTimeline, precedes, involvesVersion ------------------
+    # --- Story Arcs -------------------------------------------------------------
+    for arc_id, arc_name, arc_desc, _ in STORY_ARCS_SPEC:
+        arc_uri = MK[arc_id]
+        layer.add((arc_uri, RDF.type, MK.StoryArc))
+        layer.add((arc_uri, MK.name, lit_str(arc_name)))
+        layer.add((arc_uri, MK.description, lit_str(arc_desc)))
+    stats["storyArcs"] = len(STORY_ARCS_SPEC)
+
+    # --- Story events: StoryTimeline, precedes, partOfArc, involvesVersion ------
     def event_timeline(e: URIRef) -> Optional[URIRef]:
         return first(base, e, MK.occursIn) or first(base, e, MK.occursInTimeline)
 
     events = []
     for e in base.subjects(RDF.type, MK.Event):
         order = first(base, e, MK.chronologicalOrder)
-        events.append((int(order) if order is not None else 10**6, str(e), e))
+        order_int = int(order) if order is not None else 10**6
+        events.append((order_int, str(e), e))
+        layer.add((e, MK.canonStatus, lit_str("canonical")))
+        for arc_id, _, _, order_range in STORY_ARCS_SPEC:
+            if order_int in order_range:
+                layer.add((e, MK.partOfArc, MK[arc_id]))
+                break
     events.sort()
     for (_, _, a), (_, _, b) in zip(events, events[1:]):
         layer.add((a, MK.precedes, b))
@@ -268,8 +340,9 @@ def derive_story_layer(base: Graph, relationships: List[Dict[str, Any]]) -> Tupl
                 involves_version += 1
     stats["involvesVersion"] = involves_version
 
-    # --- Story claims -----------------------------------------------------------
+    # --- Story claims & version-scoped relationships ----------------------------
     claims = 0
+    version_rel_triples = 0
     for _, _, e in events:
         title = str(first(base, e, MK.eventTitle) or local(e))
         summary = first(base, e, MK.eventSummary)
@@ -281,6 +354,7 @@ def derive_story_layer(base: Graph, relationships: List[Dict[str, Any]]) -> Tupl
         layer.add((claim, MK.claimText, lit_str(str(summary) if summary is not None else title)))
         layer.add((claim, MK.claimPredicate, lit_str("occursIn")))
         layer.add((claim, MK.aboutEvent, e))
+        layer.add((claim, MK.canonStatus, lit_str("canonical")))
         if t is not None:
             layer.add((claim, MK.claimInTimeline, t))
         if url is not None:
@@ -311,8 +385,19 @@ def derive_story_layer(base: Graph, relationships: List[Dict[str, Any]]) -> Tupl
         layer.add((claim, MK.claimSubject, subj))
         layer.add((claim, MK.claimObject, obj))
         layer.add((claim, MK.claimContext, lit_str(context)))
-        for tid in context_to_timelines(context):
-            layer.add((claim, MK.claimInTimeline, MK[tid]))
+        layer.add((claim, MK.canonStatus, lit_str("canonical")))
+        tl_ids = context_to_timelines(context)
+        for tid in tl_ids:
+            tl_uri = MK[tid]
+            layer.add((claim, MK.claimInTimeline, tl_uri))
+            # Also link timeline-matching CharacterVersions so version-level SPARQL queries work
+            pred_uri = getattr(MK, pred, None)
+            if pred_uri is not None and subj != obj:
+                for sv in versions_by_char_tl.get((subj, tl_uri), []):
+                    for ov in versions_by_char_tl.get((obj, tl_uri), []):
+                        if (sv, pred_uri, ov) not in layer:
+                            layer.add((sv, pred_uri, ov))
+                            version_rel_triples += 1
         url = first(base, subj, MK.sourceURL)
         if url is not None:
             layer.add((claim, MK.supportedBy, source_uri(str(url))))
@@ -321,6 +406,7 @@ def derive_story_layer(base: Graph, relationships: List[Dict[str, Any]]) -> Tupl
             layer.add((claim, MK.verificationStatus, lit_str("unverified")))
         claims += 1
     stats["storyClaims"] = claims
+    stats["versionRelationshipTriples"] = version_rel_triples
     return layer, stats
 
 
@@ -372,8 +458,10 @@ def load_relationships() -> List[Dict[str, Any]]:
 def assemble() -> Tuple[Graph, Graph, Graph, Graph, Dict[str, Any], int]:
     """Return (merged, ontology, base, layer, derive_stats, materialized_count)."""
     onto = Graph().parse(ONTOLOGY_TTL, format="turtle")
-    base = Graph().parse(BASE_DATA_TTL, format="turtle")
+    raw_base = Graph().parse(BASE_DATA_TTL, format="turtle")
+    base, excluded = sanitize_base_graph(raw_base)
     layer, stats = derive_story_layer(base, load_relationships())
+    stats["excludedScrapePlaceholders"] = excluded
     merged = Graph()
     bind_prefixes(merged)
     for part in (onto, base, layer):
@@ -418,8 +506,9 @@ def cmd_build() -> Dict[str, Any]:
     print(f"[build] ontology={len(onto)} base={len(base)} layer={len(layer)} "
           f"materialized={added} merged={len(merged)} triples")
     print(f"[build] species={stats['species']} sources={stats['sources']} "
-          f"storyTimelines={stats['storyTimelines']} storyClaims={stats['storyClaims']} "
-          f"involvesVersion={stats['involvesVersion']}")
+          f"storyArcs={stats['storyArcs']} storyTimelines={stats['storyTimelines']} "
+          f"storyClaims={stats['storyClaims']} involvesVersion={stats['involvesVersion']} "
+          f"excluded={stats['excludedScrapePlaceholders']}")
     if stats["skippedRelationships"]:
         print(f"[build] skipped relationships: {stats['skippedRelationships']}")
     return report
@@ -469,6 +558,168 @@ def cmd_validate() -> Dict[str, Any]:
         print(f"  - [{item['severity']}] {item['focusNode']} ({item['path']}): {item['message']}")
     if len(report["results"]) > 25:
         print(f"  ... {len(report['results']) - 25} more in {SHACL_REPORT.relative_to(REPO_ROOT)}")
+    return report
+
+
+# ------------------------------------------------------------------------------
+# Apache Jena Fuseki Loader & Live SPARQL Query Tester
+# ------------------------------------------------------------------------------
+
+def _fuseki_auth_header() -> str:
+    token = base64.b64encode(f"{FUSEKI_USER}:{FUSEKI_PASSWORD}".encode("utf-8")).decode("ascii")
+    return f"Basic {token}"
+
+
+def fuseki_sparql_query(query: str, endpoint: Optional[str] = None) -> Dict[str, Any]:
+    url = endpoint or f"{FUSEKI_BASE_URL}/{FUSEKI_DATASET}/query"
+    data = urllib.parse.urlencode({"query": query}).encode("utf-8")
+    req = urllib.request.Request(
+        url,
+        data=data,
+        method="POST",
+        headers={
+            "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+            "Accept": "application/sparql-results+json",
+        },
+    )
+    with urllib.request.urlopen(req, timeout=10) as resp:
+        return json.loads(resp.read().decode("utf-8"))
+
+
+def cmd_fuseki_load() -> Dict[str, Any]:
+    """Upload data/knowledge_graph.ttl to the running Apache Jena Fuseki dataset."""
+    if not GRAPH_TTL.exists():
+        cmd_build()
+    payload = GRAPH_TTL.read_bytes()
+    data_url = f"{FUSEKI_BASE_URL}/{FUSEKI_DATASET}/data?default"
+    req = urllib.request.Request(
+        data_url,
+        data=payload,
+        method="PUT",
+        headers={
+            "Content-Type": "text/turtle; charset=UTF-8",
+            "Authorization": _fuseki_auth_header(),
+        },
+    )
+    with urllib.request.urlopen(req, timeout=30) as resp:
+        status_code = resp.status
+
+    count_res = fuseki_sparql_query("SELECT (COUNT(*) AS ?count) WHERE { ?s ?p ?o }")
+    bindings = count_res.get("results", {}).get("bindings", [])
+    triple_count = int(bindings[0]["count"]["value"]) if bindings else 0
+    print(f"[fuseki-load] PUT {data_url} -> HTTP {status_code} | total triples in Fuseki: {triple_count}")
+    return {"endpoint": data_url, "httpStatus": status_code, "triplesInFuseki": triple_count}
+
+
+def parse_sample_queries() -> List[Tuple[str, str]]:
+    text = SAMPLE_QUERIES_SPARQL.read_text(encoding="utf-8")
+    header, *blocks = re.split(r"^### ", text, flags=re.M)
+    prefixes = "\n".join(l for l in header.splitlines() if l.startswith("PREFIX"))
+    out: List[Tuple[str, str]] = []
+    for block in blocks:
+        title, _, body = block.partition("\n")
+        out.append((title.strip(), prefixes + "\n" + body.strip()))
+    return out
+
+
+FRONTEND_PRESET_QUERIES: List[Tuple[str, str]] = [
+    ("FE-1. Karakter dan Versi Game (hasVersion & appearsIn)", """
+PREFIX mk: <https://example.org/mk/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?character ?name ?versionName ?gameTitle
+WHERE {
+  ?character a mk:Character ;
+             mk:name ?name ;
+             mk:hasVersion ?version .
+  ?version mk:name ?versionName ;
+           mk:appearsIn ?game .
+  ?game mk:name ?gameTitle .
+}
+ORDER BY ?name
+LIMIT 20"""),
+    ("FE-2. Karakter dengan Kemampuan Elemen Api (hasAbility -> hasElement)", """
+PREFIX mk: <https://example.org/mk/>
+SELECT ?charName ?abilityName ?elementName
+WHERE {
+  ?version a mk:CharacterVersion ;
+           mk:name ?charName ;
+           mk:hasAbility ?ability .
+  ?ability mk:name ?abilityName ;
+           mk:hasElement ?element .
+  ?element mk:name ?elementName .
+  FILTER(regex(?elementName, "Fire", "i"))
+}
+LIMIT 20"""),
+    ("FE-3. Anggota Klan Lin Kuei (memberOf)", """
+PREFIX mk: <https://example.org/mk/>
+SELECT ?charName ?clanName
+WHERE {
+  ?version a mk:CharacterVersion ;
+           mk:name ?charName ;
+           mk:memberOf ?clan .
+  ?clan mk:name ?clanName .
+  FILTER(regex(?clanName, "Lin Kuei", "i"))
+}
+LIMIT 20"""),
+    ("FE-4. Musuh & Rivalitas Scorpion (enemyOf / rivalOf)", """
+PREFIX mk: <https://example.org/mk/>
+SELECT ?scorpionName ?enemyName
+WHERE {
+  ?scorpion a mk:CharacterVersion ;
+            mk:name ?scorpionName ;
+            mk:enemyOf ?enemy .
+  ?enemy mk:name ?enemyName .
+  FILTER(regex(?scorpionName, "Scorpion", "i"))
+}
+LIMIT 20"""),
+    ("FE-5. Peristiwa Cerita Melibatkan Sub-Zero di Reboot Timeline", """
+PREFIX mk: <https://example.org/mk/>
+SELECT ?title ?summary ?timelineName
+WHERE {
+  ?event a mk:Event ;
+         mk:eventTitle ?title ;
+         mk:eventSummary ?summary ;
+         mk:involvesCharacter ?version ;
+         mk:occursIn ?timeline .
+  ?version mk:name ?charName .
+  ?timeline mk:name ?timelineName .
+  FILTER(regex(?charName, "Sub-Zero", "i"))
+  FILTER(regex(?timelineName, "Reboot", "i"))
+}
+LIMIT 20"""),
+]
+
+
+def cmd_fuseki_test() -> Dict[str, Any]:
+    """Execute all 17 sample queries + 5 frontend preset queries against live Fuseki."""
+    queries = parse_sample_queries() + FRONTEND_PRESET_QUERIES
+    results_summary = []
+    all_ok = True
+    for title, q in queries:
+        res = fuseki_sparql_query(q.strip())
+        rows = res.get("results", {}).get("bindings", [])
+        vars_list = res.get("head", {}).get("vars", [])
+        ok = len(rows) > 0
+        if not ok:
+            all_ok = False
+        results_summary.append({
+            "title": title,
+            "rowCount": len(rows),
+            "vars": vars_list,
+            "sampleRow": {k: v.get("value") for k, v in rows[0].items()} if rows else None,
+            "status": "PASSED" if ok else "EMPTY",
+        })
+        print(f"[fuseki-test] {title}: {len(rows)} rows ({'PASSED' if ok else 'EMPTY'})")
+
+    report = {
+        "generatedAt": datetime.now(timezone.utc).isoformat(),
+        "fusekiEndpoint": f"{FUSEKI_BASE_URL}/{FUSEKI_DATASET}/query",
+        "totalQueries": len(queries),
+        "allPassed": all_ok,
+        "queries": results_summary,
+    }
+    REPORT_DIR.mkdir(parents=True, exist_ok=True)
+    FUSEKI_REPORT.write_text(json.dumps(report, indent=2, ensure_ascii=False), encoding="utf-8")
     return report
 
 
@@ -540,8 +791,8 @@ def cmd_docs() -> None:
 
     key_props = ["hasVersion", "appearsIn", "existsInTimeline", "hasAbility", "hasElement", "usesWeapon",
                  "memberOf", "originatesFrom", "ofSpecies", "locatedInRealm", "involvesCharacter",
-                 "involvesVersion", "occursIn", "featuresInGame", "hasStoryEvent", "describesTimeline",
-                 "aboutEvent", "claimSubject", "claimInTimeline", "supportedBy"]
+                 "involvesVersion", "occursIn", "featuresInGame", "partOfArc", "hasStoryEvent",
+                 "describesTimeline", "aboutEvent", "claimSubject", "claimInTimeline", "supportedBy"]
     lines += ["", "## 4. Diagram Relasi Utama", "", "```mermaid", "flowchart LR"]
     for p in key_props:
         dom, rng = first(g, MK[p], RDFS.domain), first(g, MK[p], RDFS.range)
@@ -550,10 +801,10 @@ def cmd_docs() -> None:
     lines += ["```", "", "## 5. Pembeda Game dan Timeline (CharacterVersion)", "",
               "- `mk:Character` hanya menyimpan identitas franchise (nama, spesies, asal, tahun muncul pertama).",
               "- Setiap `mk:CharacterVersion` memiliki tepat satu `mk:versionOf`, satu `mk:existsInTimeline`, dan "
-              "`mk:appearsIn` (game). Klan, kemampuan, dan senjata dilekatkan pada versi, bukan karakter.",
+              "`mk:appearsIn` (game). Klan, kemampuan, senjata, dan relasi spesifik-timeline dilekatkan pada versi.",
               "- Versi diurutkan per karakter dengan `mk:versionSequence`, `mk:nextVersion`, dan `mk:previousVersion`.",
-              "- Hubungan antar-karakter (`enemyOf`, `alliedWith`) bersifat franchise-level; konteks timeline-nya disimpan "
-              "pada `mk:StoryClaim` melalui `mk:claimInTimeline`.", ""]
+              "- Hubungan antar-karakter (`enemyOf`, `rivalOf`, `alliedWith`, `allyOf`) tersedia baik di tingkat "
+              "`mk:Character` maupun `mk:CharacterVersion`; bukti dan konteks timeline-nya disimpan pada `mk:StoryClaim`.", ""]
     DOCS_MD.parent.mkdir(parents=True, exist_ok=True)
     DOCS_MD.write_text("\n".join(lines), encoding="utf-8")
     print(f"[docs] wrote {DOCS_MD.relative_to(REPO_ROOT)}")
@@ -561,7 +812,7 @@ def cmd_docs() -> None:
 
 def main(argv: Optional[List[str]] = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("command", choices=["build", "validate", "docs", "all"])
+    parser.add_argument("command", choices=["build", "validate", "docs", "fuseki-load", "fuseki-test", "all"])
     args = parser.parse_args(argv)
     exit_code = 0
     if args.command in ("build", "all"):
@@ -572,6 +823,12 @@ def main(argv: Optional[List[str]] = None) -> int:
             exit_code = 1
     if args.command in ("docs", "all"):
         cmd_docs()
+    if args.command == "fuseki-load":
+        cmd_fuseki_load()
+    if args.command == "fuseki-test":
+        rep = cmd_fuseki_test()
+        if not rep["allPassed"]:
+            exit_code = 1
     return exit_code
 
 

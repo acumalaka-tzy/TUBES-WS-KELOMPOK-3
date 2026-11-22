@@ -82,5 +82,8 @@ fuseki/apache-jena-fuseki-*/
 fuseki/run/
 fuseki/databases/
 fuseki/backups/
+fuseki/system/
+fuseki/logs/
+fuseki/config.ttl
 fuseki/*.log
 fuseki/*.pid

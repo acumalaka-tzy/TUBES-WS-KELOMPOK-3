@@ -1,29 +1,12 @@
 {
-  "generatedAt": "2026-11-22T12:04:22.633058+00:00",
+  "generatedAt": "2026-11-22T12:26:09.344019+00:00",
   "conformsStrict": false,
-  "conformsWithoutViolations": false,
-  "dataTriples": 6249,
+  "conformsWithoutViolations": true,
+  "dataTriples": 6789,
   "resultsBySeverity": {
-    "Violation": 2,
     "Warning": 6
   },
   "results": [
-    {
-      "severity": "Violation",
-      "focusNode": "character-scorpion-fetch-failed",
-      "value": null,
-      "path": "hasVersion",
-      "message": "A character must have at least one CharacterVersion (a resolvable game + timeline appearance).",
-      "sourceShape": "(inline)"
-    },
-    {
-      "severity": "Violation",
-      "focusNode": "character-scorpion-fetch-failed",
-      "value": "Unknown",
-      "path": "firstAppearanceYear",
-      "message": "firstAppearanceYear must be exactly one valid xsd:gYear (four digits, e.g. \"1992\").",
-      "sourceShape": "(inline)"
-    },
     {
       "severity": "Warning",
       "focusNode": "character-scorpion",

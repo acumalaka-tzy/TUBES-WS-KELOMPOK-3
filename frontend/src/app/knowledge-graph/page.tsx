@@ -100,6 +100,82 @@ WHERE {
 }
 LIMIT 20`,
   },
+  {
+    label: "6. Perbandingan CharacterVersion Lintas Game & Timeline (versionSequence)",
+    query: `PREFIX mk: <https://example.org/mk/>
+
+SELECT ?charName ?seq ?gameTitle ?timelineName ?clanName
+WHERE {
+  ?character a mk:Character ;
+             mk:name ?charName ;
+             mk:hasVersion ?version .
+  ?version mk:versionSequence ?seq ;
+           mk:appearsIn ?game ;
+           mk:existsInTimeline ?timeline .
+  ?game mk:name ?gameTitle .
+  ?timeline mk:name ?timelineName .
+  OPTIONAL { ?version mk:memberOf ?clan . ?clan mk:name ?clanName }
+  FILTER(regex(?charName, "^(Scorpion|Sub-Zero|Raiden|Liu Kang)$", "i"))
+}
+ORDER BY ?charName ?seq`,
+  },
+  {
+    label: "7. Relationship Explorer & Provenance Klaim Cerita (FR-15 & StoryClaim)",
+    query: `PREFIX mk: <https://example.org/mk/>
+
+SELECT ?subjectName ?predicate ?objectName ?context ?timelineName ?sourceName ?status
+WHERE {
+  ?claim a mk:StoryClaim ;
+         mk:claimSubject ?subj ;
+         mk:claimPredicate ?predicate ;
+         mk:claimObject ?obj ;
+         mk:claimContext ?context ;
+         mk:claimInTimeline ?timeline ;
+         mk:supportedBy ?source ;
+         mk:verificationStatus ?status .
+  ?subj mk:name ?subjectName .
+  ?obj mk:name ?objectName .
+  ?timeline mk:name ?timelineName .
+  ?source mk:name ?sourceName .
+}
+ORDER BY ?subjectName ?timelineName
+LIMIT 25`,
+  },
+  {
+    label: "8. Story Timeline & Story Arc Kronologis (Bagian 26 & StoryTimeline)",
+    query: `PREFIX mk: <https://example.org/mk/>
+
+SELECT ?order ?eventTitle ?timelineName ?arcName ?gameTitle ?sourceURL
+WHERE {
+  ?storyTimeline a mk:StoryTimeline ;
+                 mk:describesTimeline ?timeline ;
+                 mk:hasStoryEvent ?event .
+  ?timeline mk:name ?timelineName .
+  ?event mk:chronologicalOrder ?order ;
+         mk:eventTitle ?eventTitle ;
+         mk:featuresInGame ?game .
+  ?game mk:name ?gameTitle .
+  OPTIONAL { ?event mk:partOfArc ?arc . ?arc mk:name ?arcName }
+  OPTIONAL { ?event mk:sourceURL ?sourceURL }
+}
+ORDER BY ?order`,
+  },
+  {
+    label: "9. Ringkasan Kelas Ontologi OWL & Populasi RDF (FR-20 & FR-21)",
+    query: `PREFIX mk: <https://example.org/mk/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?class ?label (COUNT(?instance) AS ?totalInstances)
+WHERE {
+  ?class a owl:Class .
+  FILTER(STRSTARTS(STR(?class), "https://example.org/mk/"))
+  OPTIONAL { ?class rdfs:label ?label }
+  OPTIONAL { ?instance a ?class }
+}
+GROUP BY ?class ?label
+ORDER BY DESC(?totalInstances) ?class`,
+  },
 ];
 
 const NODES = [

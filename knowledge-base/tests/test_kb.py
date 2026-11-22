@@ -58,6 +58,8 @@ class OntologyTests(KBTestCase):
     def test_move_is_ability_and_alias_properties(self):
         self.assertIn((MK.Move, RDFS.subClassOf, MK.Ability), self.onto)
         self.assertIn((MK.occursInTimeline, RDFS.subPropertyOf, MK.occursIn), self.onto)
+        self.assertIn((MK.rivalOf, RDFS.subPropertyOf, MK.enemyOf), self.onto)
+        self.assertIn((MK.allyOf, RDFS.subPropertyOf, MK.alliedWith), self.onto)
 
 
 class StoryLayerTests(KBTestCase):
@@ -98,6 +100,7 @@ class StoryLayerTests(KBTestCase):
         for e in events:
             self.assertIsNotNone(self.merged.value(e, MK.occursIn), e)
             self.assertEqual(self.merged.value(e, MK.occursIn), self.merged.value(e, MK.occursInTimeline))
+            self.assertIsNotNone(self.merged.value(e, MK.partOfArc), e)
             for v in self.merged.objects(e, MK.involvesVersion):
                 self.assertEqual(self.merged.value(v, MK.existsInTimeline), self.merged.value(e, MK.occursIn))
 
@@ -128,8 +131,8 @@ class ShaclTests(KBTestCase):
     def test_merged_graph_has_no_unexpected_violations(self):
         report = kb.run_shacl(self.merged)
         violations = [r for r in report["results"] if r["severity"] == "Violation"]
-        unexpected = [r for r in violations if r["focusNode"] not in KNOWN_BAD_NODES]
-        self.assertEqual([], unexpected)
+        self.assertEqual([], violations)
+        self.assertTrue(report["conformsWithoutViolations"])
 
     def _validate_with(self, extra):
         g = Graph()

@@ -304,9 +304,22 @@ mk:alliedWith a owl:ObjectProperty , owl:SymmetricProperty ;
     rdfs:domain [ a owl:Class ; owl:unionOf ( mk:Character mk:CharacterVersion ) ] ;
     rdfs:range  [ a owl:Class ; owl:unionOf ( mk:Character mk:CharacterVersion ) ] .
 
+mk:allyOf a owl:ObjectProperty , owl:SymmetricProperty ;
+    rdfs:label "ally of"@en ;
+    rdfs:subPropertyOf mk:alliedWith ;
+    owl:equivalentProperty mk:alliedWith ;
+    rdfs:domain [ a owl:Class ; owl:unionOf ( mk:Character mk:CharacterVersion ) ] ;
+    rdfs:range  [ a owl:Class ; owl:unionOf ( mk:Character mk:CharacterVersion ) ] .
+
 mk:enemyOf a owl:ObjectProperty , owl:SymmetricProperty , owl:IrreflexiveProperty ;
     rdfs:label "enemy of"@en ;
     rdfs:subPropertyOf mk:relatedTo ;
+    rdfs:domain [ a owl:Class ; owl:unionOf ( mk:Character mk:CharacterVersion ) ] ;
+    rdfs:range  [ a owl:Class ; owl:unionOf ( mk:Character mk:CharacterVersion ) ] .
+
+mk:rivalOf a owl:ObjectProperty , owl:SymmetricProperty , owl:IrreflexiveProperty ;
+    rdfs:label "rival of"@en ;
+    rdfs:subPropertyOf mk:enemyOf ;
     rdfs:domain [ a owl:Class ; owl:unionOf ( mk:Character mk:CharacterVersion ) ] ;
     rdfs:range  [ a owl:Class ; owl:unionOf ( mk:Character mk:CharacterVersion ) ] .
 

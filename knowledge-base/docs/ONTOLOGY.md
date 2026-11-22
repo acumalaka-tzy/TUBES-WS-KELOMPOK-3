@@ -31,7 +31,7 @@ mk:Entity  (Entity)
   mk:Weapon  (Weapon)
 ```
 
-Total: **24 class**, **46 object property**, **28 datatype property**.
+Total: **24 class**, **48 object property**, **28 datatype property**.
 
 ## 2. Object Properties
 
@@ -39,6 +39,7 @@ Total: **24 class**, **46 object property**, **28 datatype property**.
 |---|---|---|---|
 | `mk:aboutEvent` | `mk:StoryClaim` | `mk:Event` | inverse: `mk:hasClaim` |
 | `mk:alliedWith` | `mk:Character` ∪ `mk:CharacterVersion` | `mk:Character` ∪ `mk:CharacterVersion` | Symmetric; sub-property of `mk:relatedTo` |
+| `mk:allyOf` | `mk:Character` ∪ `mk:CharacterVersion` | `mk:Character` ∪ `mk:CharacterVersion` | Symmetric; sub-property of `mk:alliedWith` |
 | `mk:appearsIn` | `mk:CharacterVersion` | `mk:Game` | inverse: `mk:featuresVersion` |
 | `mk:causedBy` | `mk:Event` | `mk:Entity` |  |
 | `mk:claimInTimeline` | `mk:StoryClaim` | `mk:Timeline` |  - Timeline(s) in which the claim is valid |
@@ -78,6 +79,7 @@ Total: **24 class**, **46 object property**, **28 datatype property**.
 | `mk:precedes` | `mk:Event` | `mk:Event` | Transitive; inverse: `mk:follows` |
 | `mk:previousVersion` | `mk:CharacterVersion` | `mk:CharacterVersion` | Functional; InverseFunctional |
 | `mk:relatedTo` | `mk:Character` ∪ `mk:CharacterVersion` | `mk:Character` ∪ `mk:CharacterVersion` | Symmetric |
+| `mk:rivalOf` | `mk:Character` ∪ `mk:CharacterVersion` | `mk:Character` ∪ `mk:CharacterVersion` | Symmetric; Irreflexive; sub-property of `mk:enemyOf` |
 | `mk:supportedBy` | `mk:StoryClaim` | `mk:Source` | sub-property of `mk:hasSource` |
 | `mk:takesPlaceAt` | `mk:Event` | `mk:Location` |  |
 | `mk:usedBy` | `mk:Weapon` | `mk:CharacterVersion` |  |
@@ -134,6 +136,7 @@ flowchart LR
     Event -->|involvesVersion| CharacterVersion
     Event -->|occursIn| Timeline
     Event -->|featuresInGame| Game
+    Event -->|partOfArc| StoryArc
     StoryTimeline -->|hasStoryEvent| Event
     StoryTimeline -->|describesTimeline| Timeline
     StoryClaim -->|aboutEvent| Event
@@ -145,6 +148,6 @@ flowchart LR
 ## 5. Pembeda Game dan Timeline (CharacterVersion)
 
 - `mk:Character` hanya menyimpan identitas franchise (nama, spesies, asal, tahun muncul pertama).
-- Setiap `mk:CharacterVersion` memiliki tepat satu `mk:versionOf`, satu `mk:existsInTimeline`, dan `mk:appearsIn` (game). Klan, kemampuan, dan senjata dilekatkan pada versi, bukan karakter.
+- Setiap `mk:CharacterVersion` memiliki tepat satu `mk:versionOf`, satu `mk:existsInTimeline`, dan `mk:appearsIn` (game). Klan, kemampuan, senjata, dan relasi spesifik-timeline dilekatkan pada versi.
 - Versi diurutkan per karakter dengan `mk:versionSequence`, `mk:nextVersion`, dan `mk:previousVersion`.
-- Hubungan antar-karakter (`enemyOf`, `alliedWith`) bersifat franchise-level; konteks timeline-nya disimpan pada `mk:StoryClaim` melalui `mk:claimInTimeline`.
+- Hubungan antar-karakter (`enemyOf`, `rivalOf`, `alliedWith`, `allyOf`) tersedia baik di tingkat `mk:Character` maupun `mk:CharacterVersion`; bukti dan konteks timeline-nya disimpan pada `mk:StoryClaim`.

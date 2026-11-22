@@ -1,0 +1,324 @@
+{
+  "generatedAt": "2026-11-22T12:29:15.921881+00:00",
+  "fusekiEndpoint": "http://localhost:3030/mk_nexus/query",
+  "totalQueries": 22,
+  "allPassed": true,
+  "queries": [
+    {
+      "title": "1. Find all characters and their versions",
+      "rowCount": 121,
+      "vars": [
+        "character",
+        "name",
+        "versionName",
+        "gameTitle"
+      ],
+      "sampleRow": {
+        "character": "https://example.org/mk/character-ashrah",
+        "name": "Ashrah",
+        "versionName": "Ashrah (mk-deception-2004)",
+        "gameTitle": "Mortal Kombat: Deception"
+      },
+      "status": "PASSED"
+    },
+    {
+      "title": "2. Find characters with Fire ability",
+      "rowCount": 25,
+      "vars": [
+        "charName",
+        "abilityName",
+        "elementName"
+      ],
+      "sampleRow": {
+        "charName": "Hotaru (mk-armageddon-2006)",
+        "abilityName": "Order Lava Eruption",
+        "elementName": "Fire"
+      },
+      "status": "PASSED"
+    },
+    {
+      "title": "3. Find Lin Kuei clan members",
+      "rowCount": 14,
+      "vars": [
+        "charName",
+        "clanName"
+      ],
+      "sampleRow": {
+        "charName": "Sareena (mk-tournament-edition-2003)",
+        "clanName": "Lin Kuei"
+      },
+      "status": "PASSED"
+    },
+    {
+      "title": "4. Find rivalries / enemies of Scorpion (character level, symmetric)",
+      "rowCount": 3,
+      "vars": [
+        "scorpionName",
+        "enemyName"
+      ],
+      "sampleRow": {
+        "scorpionName": "Scorpion",
+        "enemyName": "Quan Chi"
+      },
+      "status": "PASSED"
+    },
+    {
+      "title": "5. Story Events involving Sub-Zero in the Reboot Timeline",
+      "rowCount": 2,
+      "vars": [
+        "event",
+        "title",
+        "summary"
+      ],
+      "sampleRow": {
+        "event": "https://example.org/mk/event-lin-kuei-cyber-initiative",
+        "title": "The Cyber Initiative in the Reboot",
+        "summary": "The Lin Kuei converts its assassins into emotionless cybernetic units; Kuai Liang is captured and automated as Cyber Sub-Zero while Smoke escapes."
+      },
+      "status": "PASSED"
+    },
+    {
+      "title": "6. Compare Scorpion across games and timelines (CharacterVersion)",
+      "rowCount": 3,
+      "vars": [
+        "seq",
+        "gameTitle",
+        "timelineName",
+        "clanName"
+      ],
+      "sampleRow": {
+        "seq": "1",
+        "gameTitle": "Mortal Kombat (1992)",
+        "timelineName": "Original Timeline",
+        "clanName": "Shirai Ryu"
+      },
+      "status": "PASSED"
+    },
+    {
+      "title": "7. Characters whose clan/organization differs between versions",
+      "rowCount": 3,
+      "vars": [
+        "charName",
+        "clans",
+        "clanCount"
+      ],
+      "sampleRow": {
+        "charName": "Kenshi",
+        "clans": "Special Forces, Shirai Ryu",
+        "clanCount": "2"
+      },
+      "status": "PASSED"
+    },
+    {
+      "title": "8. Story Timeline of the Reboot Timeline (ordered Story Events)",
+      "rowCount": 10,
+      "vars": [
+        "order",
+        "title",
+        "gameTitle"
+      ],
+      "sampleRow": {
+        "order": "13",
+        "title": "Raiden's Temporal Message (He Must Win)",
+        "gameTitle": "Mortal Kombat (2011)"
+      },
+      "status": "PASSED"
+    },
+    {
+      "title": "9. Story Claims about Kitana with timeline and provenance",
+      "rowCount": 1,
+      "vars": [
+        "claimText",
+        "timelineName",
+        "sourceName",
+        "status"
+      ],
+      "sampleRow": {
+        "claimText": "Kitana led the Outworld rebellion and defeated Shao Kahn to become Kitana Kahn.",
+        "timelineName": "Reboot Timeline",
+        "sourceName": "Mortal Kombat Wiki - Kitana",
+        "status": "verified"
+      },
+      "status": "PASSED"
+    },
+    {
+      "title": "10. Characters that exist in all three timelines",
+      "rowCount": 8,
+      "vars": [
+        "charName"
+      ],
+      "sampleRow": {
+        "charName": "Kenshi"
+      },
+      "status": "PASSED"
+    },
+    {
+      "title": "11. Species of every character (resolved mk:Species individuals)",
+      "rowCount": 68,
+      "vars": [
+        "charName",
+        "speciesName"
+      ],
+      "sampleRow": {
+        "charName": "Ashrah",
+        "speciesName": "Demon (Purified)"
+      },
+      "status": "PASSED"
+    },
+    {
+      "title": "12. Version chain of a character (previous -> next)",
+      "rowCount": 2,
+      "vars": [
+        "fromLabel",
+        "toLabel"
+      ],
+      "sampleRow": {
+        "fromLabel": "Sub-Zero - Mortal Kombat (1992) - Original Timeline",
+        "toLabel": "Sub-Zero - Mortal Kombat 11 - Reboot Timeline"
+      },
+      "status": "PASSED"
+    },
+    {
+      "title": "13. Fatalities of each character version",
+      "rowCount": 24,
+      "vars": [
+        "versionName",
+        "fatalityName"
+      ],
+      "sampleRow": {
+        "versionName": "Ashrah (mk-deception-2004)",
+        "fatalityName": "Fatality: Heavenly Cleansing"
+      },
+      "status": "PASSED"
+    },
+    {
+      "title": "14. Weapons used per timeline",
+      "rowCount": 38,
+      "vars": [
+        "timelineName",
+        "weaponName",
+        "users"
+      ],
+      "sampleRow": {
+        "timelineName": "New Era",
+        "weaponName": "Kobu Jutsu Tonfa Daggers",
+        "users": "1"
+      },
+      "status": "PASSED"
+    },
+    {
+      "title": "15. Everything that happens after the first tournament (transitive precedes)",
+      "rowCount": 23,
+      "vars": [
+        "title",
+        "order"
+      ],
+      "sampleRow": {
+        "title": "Outworld Tournament Lure",
+        "order": "3"
+      },
+      "status": "PASSED"
+    },
+    {
+      "title": "16. Provenance: sources behind the claims of each timeline",
+      "rowCount": 60,
+      "vars": [
+        "timelineName",
+        "sourceName",
+        "claims"
+      ],
+      "sampleRow": {
+        "timelineName": "New Era",
+        "sourceName": "Official Mortal Kombat Website",
+        "claims": "2"
+      },
+      "status": "PASSED"
+    },
+    {
+      "title": "17. Locations and the realm they belong to",
+      "rowCount": 14,
+      "vars": [
+        "locationName",
+        "realmName"
+      ],
+      "sampleRow": {
+        "locationName": "Palace of Chaos",
+        "realmName": "Chaosrealm"
+      },
+      "status": "PASSED"
+    },
+    {
+      "title": "FE-1. Karakter dan Versi Game (hasVersion & appearsIn)",
+      "rowCount": 20,
+      "vars": [
+        "character",
+        "name",
+        "versionName",
+        "gameTitle"
+      ],
+      "sampleRow": {
+        "character": "https://example.org/mk/character-ashrah",
+        "name": "Ashrah",
+        "versionName": "Ashrah (mk-deception-2004)",
+        "gameTitle": "Mortal Kombat: Deception"
+      },
+      "status": "PASSED"
+    },
+    {
+      "title": "FE-2. Karakter dengan Kemampuan Elemen Api (hasAbility -> hasElement)",
+      "rowCount": 20,
+      "vars": [
+        "charName",
+        "abilityName",
+        "elementName"
+      ],
+      "sampleRow": {
+        "charName": "Hotaru (mk-armageddon-2006)",
+        "abilityName": "Order Lava Eruption",
+        "elementName": "Fire"
+      },
+      "status": "PASSED"
+    },
+    {
+      "title": "FE-3. Anggota Klan Lin Kuei (memberOf)",
+      "rowCount": 14,
+      "vars": [
+        "charName",
+        "clanName"
+      ],
+      "sampleRow": {
+        "charName": "Sareena (mk-tournament-edition-2003)",
+        "clanName": "Lin Kuei"
+      },
+      "status": "PASSED"
+    },
+    {
+      "title": "FE-4. Musuh & Rivalitas Scorpion (enemyOf / rivalOf)",
+      "rowCount": 6,
+      "vars": [
+        "scorpionName",
+        "enemyName"
+      ],
+      "sampleRow": {
+        "scorpionName": "Scorpion (mk1-1992)",
+        "enemyName": "Quan Chi (mk4-1997)"
+      },
+      "status": "PASSED"
+    },
+    {
+      "title": "FE-5. Peristiwa Cerita Melibatkan Sub-Zero di Reboot Timeline",
+      "rowCount": 2,
+      "vars": [
+        "title",
+        "summary",
+        "timelineName"
+      ],
+      "sampleRow": {
+        "title": "The Cyber Initiative in the Reboot",
+        "summary": "The Lin Kuei converts its assassins into emotionless cybernetic units; Kuai Liang is captured and automated as Cyber Sub-Zero while Smoke escapes.",
+        "timelineName": "Reboot Timeline"
+      },
+      "status": "PASSED"
+    }
+  ]
+}
