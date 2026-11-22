@@ -186,6 +186,24 @@ export default function Home() {
             </div>
           </Section>
         </div>
+
+        {/* AI Knowledge Assistant Preview (PRD 25.4) */}
+        <Section title="AI Knowledge Assistant (RAG &amp; LLM)">
+          <div className="panel flex flex-col md:flex-row items-center justify-between gap-6 rounded-sm p-6 bg-gradient-to-r from-mk-bg2 via-mk-card to-mk-bg2 border border-mk-border hover:border-mk-red/70 transition">
+            <div className="space-y-2 max-w-2xl">
+              <div className="flex items-center gap-2 text-mk-gold">
+                <span className="text-xl">🤖</span>
+                <span className="font-heading font-bold text-lg text-mk-text">Tanya Jawab Berbasis Pengetahuan Terverifikasi</span>
+              </div>
+              <p className="text-sm text-mk-muted leading-relaxed">
+                Tanyakan pertanyaan bahasa alami seputar karakter, alur cerita, dan garis waktu Mortal Kombat. Jawaban dihasilkan melalui pipa Retrieval-Augmented Generation (RAG) yang tergrounding langsung pada relasi Knowledge Graph dan SPARQL tanpa halusinasi.
+              </p>
+            </div>
+            <Link href="/assistant" className="btn-primary whitespace-nowrap shrink-0 !py-3 !px-6">
+              Mulai Percakapan AI →
+            </Link>
+          </div>
+        </Section>
       </Container>
     </>
   );
