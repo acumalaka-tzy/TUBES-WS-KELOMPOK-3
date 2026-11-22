@@ -186,6 +186,11 @@ class RDFGraphBuilder:
         r_file.parent.mkdir(parents=True, exist_ok=True)
         g.serialize(destination=str(r_file), format="xml")
 
+        # Also copy to knowledge-base/data/mortal_kombat.rdf
+        kb_rdf = Path("knowledge-base/data/mortal_kombat.rdf")
+        kb_rdf.parent.mkdir(parents=True, exist_ok=True)
+        g.serialize(destination=str(kb_rdf), format="xml")
+
         # 3. Export Report
         triple_count = len(g)
         report = {

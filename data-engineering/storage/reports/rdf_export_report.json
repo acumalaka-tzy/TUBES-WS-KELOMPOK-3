@@ -1,7 +1,7 @@
 {
-  "reportId": "rdf-export-20261122061201",
-  "generatedAt": "2026-11-22T06:12:01.890199+00:00",
-  "totalTriples": 1097,
+  "reportId": "rdf-export-20261122063423",
+  "generatedAt": "2026-11-22T06:34:23.340153+00:00",
+  "totalTriples": 2404,
   "serializedFormats": {
     "turtle": "data-engineering\\storage\\exports\\mortal_kombat.ttl",
     "rdfxml": "data-engineering\\storage\\exports\\mortal_kombat.rdf",

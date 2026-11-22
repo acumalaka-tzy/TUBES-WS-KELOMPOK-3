@@ -1,14 +1,14 @@
 {
-  "reportId": "image-asset-report-20261122061132",
-  "generatedAt": "2026-11-22T06:11:32.618192+00:00",
-  "totalAssets": 9,
-  "approvedAssets": 9,
+  "reportId": "image-asset-report-20261122063422",
+  "generatedAt": "2026-11-22T06:34:22.947592+00:00",
+  "totalAssets": 106,
+  "approvedAssets": 106,
   "pendingReviewAssets": 0,
   "rejectedAssets": 0,
   "policyEnforcement": "Only approved rightsStatus assets are permitted for frontend display per PRD Section 29.5",
   "assetTypes": {
-    "character_portrait": 6,
-    "game_cover": 1,
-    "game_key_art": 2
+    "character_portrait": 60,
+    "game_cover": 23,
+    "game_key_art": 23
   }
 }

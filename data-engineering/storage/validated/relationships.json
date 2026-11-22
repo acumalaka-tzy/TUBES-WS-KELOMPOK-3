@@ -4,28 +4,14 @@
     "predicate": "enemyOf",
     "objectId": "character-subzero",
     "context": "Original Timeline & Early Reboot",
-    "evidence": "Scorpion blamed Sub-Zero for the demise of Shirai Ryu."
-  },
-  {
-    "subjectId": "character-scorpion",
-    "predicate": "alliedWith",
-    "objectId": "character-subzero",
-    "context": "Reboot Timeline (MKX & MK11)",
-    "evidence": "Sub-Zero and Scorpion reconciled at the Shirai Ryu Fire Garden."
+    "evidence": "Scorpion blamed Sub-Zero for the demise of Shirai Ryu until truth was revealed."
   },
   {
     "subjectId": "character-scorpion",
     "predicate": "enemyOf",
     "objectId": "character-quanchi",
     "context": "All Timelines",
-    "evidence": "Quan Chi was unmasked as the true architect of the Shirai Ryu slaughter."
-  },
-  {
-    "subjectId": "character-raiden",
-    "predicate": "alliedWith",
-    "objectId": "character-liukang",
-    "context": "Original & Reboot Timelines",
-    "evidence": "Raiden mentored Liu Kang as Earthrealm's champion."
+    "evidence": "Quan Chi was unmasked as the true architect of the Shirai Ryu massacre."
   },
   {
     "subjectId": "character-kitana",
@@ -40,20 +26,6 @@
     "objectId": "character-kano",
     "context": "All Timelines",
     "evidence": "Sonya relentlessly pursued Kano for the murder of her Special Forces partner."
-  },
-  {
-    "subjectId": "character-shangtsung",
-    "predicate": "alliedWith",
-    "objectId": "character-quanchi",
-    "context": "Original Timeline (Deadly Alliance)",
-    "evidence": "United sorcerers formed the Deadly Alliance to overpower the Thunder God."
-  },
-  {
-    "subjectId": "character-cassiecage",
-    "predicate": "alliedWith",
-    "objectId": "character-sonyablade",
-    "context": "Reboot Timeline",
-    "evidence": "Mother and daughter serving together in Earthrealm's Special Forces."
   },
   {
     "subjectId": "character-cassiecage",
@@ -75,5 +47,173 @@
     "objectId": "character-mileena",
     "context": "Reboot Timeline (Outworld Civil War)",
     "evidence": "Kotal Kahn led the coup d'\u00e9tat overthrowing Mileena from the Outworld throne."
+  },
+  {
+    "subjectId": "character-dvorah",
+    "predicate": "enemyOf",
+    "objectId": "character-mileena",
+    "context": "Reboot Timeline (MKX)",
+    "evidence": "D'Vorah executed Mileena via toxic flesh-eating parasite kiss on Kotal Kahn's order."
+  },
+  {
+    "subjectId": "character-dvorah",
+    "predicate": "enemyOf",
+    "objectId": "character-scorpion",
+    "context": "Reboot Timeline (MK11)",
+    "evidence": "D'Vorah fatally stung Grandmaster Hanzo Hasashi at the Sea of Blood."
+  },
+  {
+    "subjectId": "character-hotaru",
+    "predicate": "enemyOf",
+    "objectId": "character-havik",
+    "context": "Original Timeline (MK Deception)",
+    "evidence": "Commander Hotaru upholds strict Seidan order while Cleric Havik sows perpetual chaos."
+  },
+  {
+    "subjectId": "character-ashrah",
+    "predicate": "enemyOf",
+    "objectId": "character-quanchi",
+    "context": "Original & New Era Timelines",
+    "evidence": "Ashrah renounced Netherrealm evil and hunts Quan Chi's demons to cleanse her spirit."
+  },
+  {
+    "subjectId": "character-mavado",
+    "predicate": "enemyOf",
+    "objectId": "character-kano",
+    "context": "Original Timeline",
+    "evidence": "Mavado's Red Dragon sought the systematic extermination of Kano's Black Dragon."
+  },
+  {
+    "subjectId": "character-onaga",
+    "predicate": "enemyOf",
+    "objectId": "character-shaokahn",
+    "context": "Original Timeline",
+    "evidence": "Shao Kahn was Onaga's trusted advisor who poisoned him to steal the throne of Outworld."
+  },
+  {
+    "subjectId": "character-shujinko",
+    "predicate": "enemyOf",
+    "objectId": "character-onaga",
+    "context": "Original Timeline (MK Deception)",
+    "evidence": "Shujinko shattered the Kamidogu to avenge being deceived by Onaga's avatar Damashi."
+  },
+  {
+    "subjectId": "character-raiden",
+    "predicate": "enemyOf",
+    "objectId": "character-shinnok",
+    "context": "All Timelines",
+    "evidence": "Raiden stripped Shinnok of Elder God status and defended Earthrealm from his invasions."
+  },
+  {
+    "subjectId": "character-scorpion",
+    "predicate": "alliedWith",
+    "objectId": "character-subzero",
+    "context": "Reboot Timeline (MKX & MK11)",
+    "evidence": "Sub-Zero and Scorpion reconciled at the Shirai Ryu Fire Garden over tea."
+  },
+  {
+    "subjectId": "character-raiden",
+    "predicate": "alliedWith",
+    "objectId": "character-liukang",
+    "context": "Original & Reboot Timelines",
+    "evidence": "Raiden mentored Liu Kang as Earthrealm's supreme champion in the tournaments."
+  },
+  {
+    "subjectId": "character-shangtsung",
+    "predicate": "alliedWith",
+    "objectId": "character-quanchi",
+    "context": "Original Timeline (Deadly Alliance)",
+    "evidence": "United sorcerers formed the Deadly Alliance to overpower the Thunder God."
+  },
+  {
+    "subjectId": "character-cassiecage",
+    "predicate": "alliedWith",
+    "objectId": "character-sonyablade",
+    "context": "Reboot Timeline",
+    "evidence": "Mother and daughter serving together in Earthrealm's Special Forces command."
+  },
+  {
+    "subjectId": "character-jade",
+    "predicate": "alliedWith",
+    "objectId": "character-kitana",
+    "context": "All Timelines",
+    "evidence": "Jade served as Kitana's most loyal bodyguard and trusted confidante."
+  },
+  {
+    "subjectId": "character-sheeva",
+    "predicate": "alliedWith",
+    "objectId": "character-sindel",
+    "context": "Classic & Reboot Timelines",
+    "evidence": "Sheeva was chosen by Shao Kahn to serve as Queen Sindel's personal protector."
+  },
+  {
+    "subjectId": "character-nightwolf",
+    "predicate": "alliedWith",
+    "objectId": "character-raiden",
+    "context": "All Timelines",
+    "evidence": "Nightwolf joined Raiden's circle of chosen Earthrealm champions to ward off Outworld."
+  },
+  {
+    "subjectId": "character-kabal",
+    "predicate": "alliedWith",
+    "objectId": "character-stryker",
+    "context": "Reboot Timeline (MK9)",
+    "evidence": "Stryker and Kabal were NYPD partners defending New York City against Outworld forces."
+  },
+  {
+    "subjectId": "character-jacqui",
+    "predicate": "alliedWith",
+    "objectId": "character-cassiecage",
+    "context": "Reboot Timeline",
+    "evidence": "Jacqui Briggs serves as Cassie Cage's second-in-command and closest friend."
+  },
+  {
+    "subjectId": "character-takeda",
+    "predicate": "alliedWith",
+    "objectId": "character-kenshi",
+    "context": "Reboot Timeline",
+    "evidence": "Takeda reconciles with his father Kenshi after training under Scorpion."
+  },
+  {
+    "subjectId": "character-kungjin",
+    "predicate": "alliedWith",
+    "objectId": "character-kunglao",
+    "context": "Reboot Timeline",
+    "evidence": "Kung Jin honors his cousin Kung Lao's legacy as a proud Shaolin warrior."
+  },
+  {
+    "subjectId": "character-geras",
+    "predicate": "alliedWith",
+    "objectId": "character-liukang",
+    "context": "New Era Timeline",
+    "evidence": "Geras serves Fire God Liu Kang as the eternal steward of the Hourglass."
+  },
+  {
+    "subjectId": "character-cetrion",
+    "predicate": "alliedWith",
+    "objectId": "character-kronika",
+    "context": "Reboot Timeline (MK11)",
+    "evidence": "Cetrion sacrificed her Elder God essence to empower her mother Kronika's Hourglass."
+  },
+  {
+    "subjectId": "character-tanya",
+    "predicate": "alliedWith",
+    "objectId": "character-mileena",
+    "context": "Reboot & New Era Timelines",
+    "evidence": "Tanya protected Mileena as lover and royal guard against Outworld conspirators."
+  },
+  {
+    "subjectId": "character-sareena",
+    "predicate": "alliedWith",
+    "objectId": "character-subzero",
+    "context": "Original Timeline",
+    "evidence": "Sareena turned against Quan Chi to help Sub-Zero escape the Netherrealm."
+  },
+  {
+    "subjectId": "character-boraicho",
+    "predicate": "alliedWith",
+    "objectId": "character-liukang",
+    "context": "Original & Reboot Timelines",
+    "evidence": "Master Bo' Rai Cho instructed Liu Kang in the Flying Kick and Shaolin chi focus."
   }
 ]

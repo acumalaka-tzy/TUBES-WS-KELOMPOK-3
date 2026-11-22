@@ -10,7 +10,7 @@
       "Sega Genesis",
       "Game Boy"
     ],
-    "description": "The landmark tournament fighting game created by Ed Boon and John Tobias.",
+    "description": "The landmark tournament fighting game created by Ed Boon and John Tobias that introduced digital sprites, Fatalities, and legendary martial lore.",
     "isStandalone": true,
     "isDLC": false,
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Mortal_Kombat_(1992_video_game)"
@@ -26,7 +26,7 @@
       "Sega Genesis",
       "PlayStation"
     ],
-    "description": "Sequel set in Outworld with expanded roster, Fatalities, Babalities, and Friendships.",
+    "description": "Sequel set in Outworld with expanded roster, Babalities, Friendships, and the introduction of Shao Kahn, Kitana, and Mileena.",
     "isStandalone": true,
     "isDLC": false,
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Mortal_Kombat_II"
@@ -42,7 +42,7 @@
       "Sega Genesis",
       "PlayStation"
     ],
-    "description": "Chronicles Shao Kahn's invasion of Earthrealm, introducing Cyber Ninjas.",
+    "description": "Chronicles Shao Kahn's invasion of Earthrealm through Sindel's resurrection, introducing Cyber Ninjas (Cyrax, Sektor, Smoke) and Kabal.",
     "isStandalone": true,
     "isDLC": false,
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Mortal_Kombat_3"
@@ -55,9 +55,10 @@
     "platforms": [
       "Arcade",
       "Sega Saturn",
-      "SNES"
+      "SNES",
+      "Sega Genesis"
     ],
-    "description": "Standalone arcade update bringing back Scorpion, Kitana, and classic ninjas.",
+    "description": "Standalone arcade update bringing back Scorpion, Kitana, Jade, and classic masked ninjas with refined combo mechanics.",
     "isStandalone": true,
     "isDLC": false,
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Ultimate_Mortal_Kombat_3"
@@ -70,9 +71,10 @@
     "platforms": [
       "PlayStation",
       "Nintendo 64",
-      "Sega Saturn"
+      "Sega Saturn",
+      "PC"
     ],
-    "description": "Standalone anthology featuring almost every fighter from the first three games.",
+    "description": "Standalone anthology fighting release featuring almost every character and background from the first three games plus the Aggressor bar.",
     "isStandalone": true,
     "isDLC": false,
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Mortal_Kombat_Trilogy"
@@ -85,12 +87,26 @@
     "platforms": [
       "Arcade",
       "PlayStation",
-      "Nintendo 64"
+      "Nintendo 64",
+      "PC"
     ],
-    "description": "The first 3D installment focusing on the fallen Elder God Shinnok's war.",
+    "description": "The first 3D installment focusing on the fallen Elder God Shinnok's war, introducing real-time 3D environments and drawn weapon combat.",
     "isStandalone": true,
     "isDLC": false,
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Mortal_Kombat_4"
+  },
+  {
+    "id": "game-mk-gold-1999",
+    "name": "Mortal Kombat Gold",
+    "releaseDate": "1999-09-09",
+    "era": "3D Era",
+    "platforms": [
+      "Sega Dreamcast"
+    ],
+    "description": "Standalone enhanced 3D release of MK4 for Dreamcast adding Kitana, Mileena, Cyrax, Kung Lao, and Baraka to the Shinnok conflict.",
+    "isStandalone": true,
+    "isDLC": false,
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Mortal_Kombat_Gold"
   },
   {
     "id": "game-mk-deadly-alliance-2002",
@@ -102,10 +118,23 @@
       "Xbox",
       "GameCube"
     ],
-    "description": "Reinvented combat mechanics with three fighting styles per fighter and the alliance of Shang Tsung and Quan Chi.",
+    "description": "Reinvented combat mechanics with three unique fighting styles per warrior and the dark alliance between sorcerers Shang Tsung and Quan Chi.",
     "isStandalone": true,
     "isDLC": false,
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Mortal_Kombat:_Deadly_Alliance"
+  },
+  {
+    "id": "game-mk-tournament-edition-2003",
+    "name": "Mortal Kombat: Tournament Edition",
+    "releaseDate": "2003-08-25",
+    "era": "3D Era",
+    "platforms": [
+      "Game Boy Advance"
+    ],
+    "description": "Standalone handheld sister release to Deadly Alliance introducing Sareena, Mavado, and Bo' Rai Cho in dedicated mobile 3D combat.",
+    "isStandalone": true,
+    "isDLC": false,
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Mortal_Kombat:_Tournament_Edition"
   },
   {
     "id": "game-mk-deception-2004",
@@ -117,10 +146,23 @@
       "Xbox",
       "GameCube"
     ],
-    "description": "Features the return of the Dragon King Onaga and the Konquest adventure mode.",
+    "description": "Features the return of the Dragon King Onaga, death traps, Puzzle/Chess Kombat, and the open-world RPG Konquest adventure mode.",
     "isStandalone": true,
     "isDLC": false,
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Mortal_Kombat:_Deception"
+  },
+  {
+    "id": "game-mk-unchained-2006",
+    "name": "Mortal Kombat: Unchained",
+    "releaseDate": "2006-11-13",
+    "era": "3D Era",
+    "platforms": [
+      "PlayStation Portable"
+    ],
+    "description": "Standalone handheld adaptation of Deception for PSP featuring exclusive access to Kitana, Jax, Frost, and Blaze in base roster.",
+    "isStandalone": true,
+    "isDLC": false,
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Mortal_Kombat:_Unchained"
   },
   {
     "id": "game-mk-armageddon-2006",
@@ -132,7 +174,7 @@
       "Xbox",
       "Wii"
     ],
-    "description": "Climax of the original continuity featuring all 62 fighters competing at the Pyramid of Argus.",
+    "description": "Climax of the original continuity featuring all 62 fighters competing at the Pyramid of Argus, Kreate-A-Fighter, and Motor Kombat.",
     "isStandalone": true,
     "isDLC": false,
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Mortal_Kombat:_Armageddon"
@@ -146,10 +188,23 @@
       "PlayStation",
       "Nintendo 64"
     ],
-    "description": "Action-adventure prequel following Bi-Han acquiring Shinnok's amulet for Quan Chi.",
+    "description": "Side-scrolling action-adventure prequel following Bi-Han retrieving Shinnok's sacred amulet across Earthrealm and the Netherrealm.",
     "isStandalone": true,
     "isDLC": false,
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Mortal_Kombat_Mythologies:_Sub-Zero"
+  },
+  {
+    "id": "game-mk-special-forces-2000",
+    "name": "Mortal Kombat: Special Forces",
+    "releaseDate": "2000-06-29",
+    "era": "Spin-off",
+    "platforms": [
+      "PlayStation"
+    ],
+    "description": "Third-person action spin-off chronicling Major Jackson 'Jax' Briggs pursuing Kano and the Black Dragon syndicate across urban strongholds.",
+    "isStandalone": true,
+    "isDLC": false,
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Mortal_Kombat:_Special_Forces"
   },
   {
     "id": "game-mk-shaolin-monks-2005",
@@ -160,10 +215,39 @@
       "PlayStation 2",
       "Xbox"
     ],
-    "description": "Co-op action-adventure following Liu Kang and Kung Lao through the events of MKII.",
+    "description": "Co-op beat-'em-up action adventure following Liu Kang and Kung Lao through the demonic hazards of Outworld during the MKII tournament.",
     "isStandalone": true,
     "isDLC": false,
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Mortal_Kombat:_Shaolin_Monks"
+  },
+  {
+    "id": "game-mk-vs-dc-2008",
+    "name": "Mortal Kombat vs. DC Universe",
+    "releaseDate": "2008-11-16",
+    "era": "Spin-off",
+    "platforms": [
+      "PlayStation 3",
+      "Xbox 360"
+    ],
+    "description": "Standalone crossover fighting game where cataclysmic world-merger pits Kombatants against DC Comics superheroes and villains.",
+    "isStandalone": true,
+    "isDLC": false,
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Mortal_Kombat_vs._DC_Universe"
+  },
+  {
+    "id": "game-mk-arcade-kollection-2011",
+    "name": "Mortal Kombat Arcade Kollection",
+    "releaseDate": "2011-08-31",
+    "era": "Spin-off",
+    "platforms": [
+      "PlayStation 3",
+      "Xbox 360",
+      "PC"
+    ],
+    "description": "Standalone arcade anthology package uniting pristine arcade emulations of MK1, MK2, and Ultimate Mortal Kombat 3 with online matchmaking.",
+    "isStandalone": true,
+    "isDLC": false,
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Mortal_Kombat_Arcade_Kollection"
   },
   {
     "id": "game-mk9-2011",
@@ -175,7 +259,7 @@
       "Xbox 360",
       "PC"
     ],
-    "description": "Timeline reset orchestrated by Raiden rewinding the events of MK1 through MK3.",
+    "description": "Timeline reset orchestrated by Raiden rewinding the events of MK1 through MK3, introducing the super meter and cinematic Story Mode.",
     "isStandalone": true,
     "isDLC": false,
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Mortal_Kombat_(2011_video_game)"
@@ -190,10 +274,24 @@
       "Xbox One",
       "PC"
     ],
-    "description": "Set 25 years after MK9, introducing the next generation of Kombatants.",
+    "description": "Set 25 years after MK9, introducing three distinct character combat variations and the next generation of Earthrealm Kombatants.",
     "isStandalone": true,
     "isDLC": false,
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Mortal_Kombat_X"
+  },
+  {
+    "id": "game-mk-mobile-2015",
+    "name": "Mortal Kombat Mobile",
+    "releaseDate": "2015-04-08",
+    "era": "Reboot Era",
+    "platforms": [
+      "iOS",
+      "Android"
+    ],
+    "description": "Standalone free-to-play mobile collectible card fighter and battle team game with touch-based gestures and persistent cross-game events.",
+    "isStandalone": true,
+    "isDLC": false,
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Mortal_Kombat_Mobile"
   },
   {
     "id": "game-mk11-2019",
@@ -206,7 +304,7 @@
       "Nintendo Switch",
       "PC"
     ],
-    "description": "Time-bending conflict against Kronika merging past and present warriors.",
+    "description": "Time-bending conflict against Keeper of Time Kronika, introducing Krushing Blows, Fatal Blows, and deep cosmetic gear customization.",
     "isStandalone": true,
     "isDLC": false,
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Mortal_Kombat_11"
@@ -222,9 +320,23 @@
       "Nintendo Switch",
       "PC"
     ],
-    "description": "A reborn Mortal Kombat universe crafted by Fire God Liu Kang featuring reimagined character origins.",
+    "description": "A reborn Mortal Kombat universe crafted by Fire God Liu Kang featuring reimagined character origins and Kameo Fighter assist combat.",
     "isStandalone": true,
     "isDLC": false,
     "sourceURL": "https://www.mortalkombat.com/en-us"
+  },
+  {
+    "id": "game-mk-onslaught-2023",
+    "name": "Mortal Kombat: Onslaught",
+    "releaseDate": "2023-10-17",
+    "era": "New Era",
+    "platforms": [
+      "iOS",
+      "Android"
+    ],
+    "description": "Standalone real-time strategic team RPG mobile release where players assemble strike squads of Kombatants across a brand-new cinematic campaign.",
+    "isStandalone": true,
+    "isDLC": false,
+    "sourceURL": "https://mortalkombat.fandom.com/wiki/Mortal_Kombat:_Onslaught"
   }
 ]

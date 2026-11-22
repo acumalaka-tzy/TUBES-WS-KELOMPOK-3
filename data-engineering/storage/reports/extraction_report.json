@@ -1,16 +1,16 @@
 {
-  "reportId": "extraction-report-20261122061159",
-  "generatedAt": "2026-11-22T06:11:59.751748+00:00",
+  "reportId": "extraction-report-20261122063422",
+  "generatedAt": "2026-11-22T06:34:22.939709+00:00",
   "extractedEntityCounts": {
-    "characters": 36,
-    "games": 15,
+    "characters": 60,
+    "games": 23,
     "timelines": 3,
-    "realms": 6,
-    "clans": 6,
-    "abilities": 51,
-    "weapons": 8,
-    "storyEvents": 15,
-    "relationships": 11
+    "realms": 7,
+    "clans": 10,
+    "abilities": 101,
+    "weapons": 20,
+    "storyEvents": 25,
+    "relationships": 31
   },
   "dlcExclusionAudit": {
     "totalExcludedCandidates": 18,

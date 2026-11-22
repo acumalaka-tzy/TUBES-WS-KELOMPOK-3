@@ -2,7 +2,7 @@
   {
     "id": "element-fire",
     "name": "Fire",
-    "description": "Netherrealm hellfire and supernatural combustion."
+    "description": "Netherrealm hellfire, spiritual chi flame, and supernatural combustion."
   },
   {
     "id": "element-ice",
@@ -17,26 +17,26 @@
   {
     "id": "element-shadow",
     "name": "Shadow",
-    "description": "Dark dimensional shadows, portals, and shadowy clones."
+    "description": "Dark dimensional shadows, portals, and shadowy clone constructs."
   },
   {
     "id": "element-blood",
     "name": "Blood",
-    "description": "Hekatean blood magic and hemomantic spikes."
+    "description": "Hekatean blood magic, hemomantic spikes, and lifeforce draining."
   },
   {
     "id": "element-wind",
     "name": "Wind",
-    "description": "Tornadoes, gale force blasts, and levitation."
+    "description": "Tornadoes, gale force blasts, atmospheric pressure, and levitation."
   },
   {
     "id": "element-soul",
     "name": "Soul / Spirit",
-    "description": "Necromancy, soul absorption, and ancestral spiritual energy."
+    "description": "Necromancy, soul absorption, and ancestral spiritual manifestation."
   },
   {
     "id": "element-energy",
     "name": "Kinetic Energy",
-    "description": "Ancient Mediterranean green glow energy and bionic sonic blasts."
+    "description": "Ancient Mediterranean green glow energy, bionics, and sheer physical power."
   }
 ]

@@ -7,26 +7,31 @@
   {
     "id": "realm-outworld",
     "name": "Outworld",
-    "description": "A harsh, majestic imperial realm forged by conquering and merging neighboring worlds."
+    "description": "A harsh, majestic imperial realm forged by conquering and merging neighboring worlds, formerly ruled by Shao Kahn and now Empress Sindel."
   },
   {
     "id": "realm-netherrealm",
     "name": "Netherrealm",
-    "description": "The fiery subterranean plane of eternal torment, demons, revenants, and dark necromancy."
+    "description": "The fiery subterranean plane of eternal torment, demons, revenants, and dark necromancy, ruled by Shinnok and Quan Chi."
   },
   {
     "id": "realm-edenia",
     "name": "Edenia",
-    "description": "A lush paradise realm of beauty and longevity, merged with Outworld for millennia before its restoration."
+    "description": "A lush paradise realm of beauty, peace, and longevity, merged with Outworld for millennia before its restoration."
   },
   {
     "id": "realm-orderrealm",
     "name": "Orderrealm (Seido)",
-    "description": "A rigid geometric realm governed strictly by law, hierarchy, and absolute order."
+    "description": "A rigid geometric realm governed strictly by law, hierarchy, and absolute order, policed by Hotaru and the Seidan Guard."
   },
   {
     "id": "realm-chaosrealm",
     "name": "Chaosrealm",
-    "description": "An anarchic realm of shifting structures and freedom where chaos is worshiped as supreme truth."
+    "description": "An anarchic realm of shifting structures and freedom where chaos is worshiped as supreme truth, home to Cleric Havik."
+  },
+  {
+    "id": "realm-vaeternus",
+    "name": "Vaeternus",
+    "description": "The shadowy realm of vampires, severed from Outworld through the efforts of the vampire warrior Nitara."
   }
 ]
