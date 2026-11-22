@@ -44,6 +44,7 @@ export const MAIN_NAV: NavItem[] = [
   { label: "Games", href: "/games" },
   { label: "Story", href: "/story" },
   { label: "Knowledge Graph", href: "/knowledge-graph" },
+  { label: "AI Assistant", href: "/assistant" },
   { label: "About", href: "/about" },
 ];
 
@@ -57,4 +58,5 @@ export const CATEGORIES = [
   { label: "Timeline", href: "/timelines", desc: "Original, Timeline Baru, dan New Era.", icon: "⏳" },
   { label: "Story Explorer", href: "/story", desc: "Telusuri peristiwa & alur cerita.", icon: "📜" },
   { label: "Story Timeline", href: "/story/timeline", desc: "Urutan kronologis peristiwa per timeline.", icon: "🧭" },
+  { label: "AI Knowledge Assistant", href: "/assistant", desc: "Tanya jawab cerdas berbasis Knowledge Graph & LLM RAG.", icon: "🤖" },
 ];
