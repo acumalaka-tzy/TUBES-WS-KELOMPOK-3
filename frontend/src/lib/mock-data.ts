@@ -46,12 +46,12 @@ export const characters: Character[] = [
     "popular": true,
     "image": {
       "assetId": "asset-scorpion-portrait",
-      "assetURL": "https://www.mortalkombat.com/assets/roster/scorpion_render.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/a/ab/Scorpion.png/revision/latest?cb=20130603185450",
       "assetType": "character_portrait",
       "entityId": "scorpion",
       "rightsStatus": "approved",
-      "attribution": "Mortal Kombat \u00a9 Warner Bros. Entertainment Inc. / NetherRealm Studios",
-      "alt": "Scorpion official roster render"
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Scorpion"
     },
     "versions": [
       {
@@ -92,6 +92,15 @@ export const characters: Character[] = [
             "name": "Shirai Ryu"
           }
         ],
+        "image": {
+          "assetId": "asset-scorpion-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/a/ab/Scorpion.png/revision/latest?cb=20130603185450",
+          "assetType": "character_portrait",
+          "entityId": "scorpion",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Scorpion"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -132,6 +141,15 @@ export const characters: Character[] = [
             "name": "Shirai Ryu"
           }
         ],
+        "image": {
+          "assetId": "asset-scorpion-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/a/ab/Scorpion.png/revision/latest?cb=20130603185450",
+          "assetType": "character_portrait",
+          "entityId": "scorpion",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Scorpion"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -167,6 +185,15 @@ export const characters: Character[] = [
             "name": "Lin Kuei"
           }
         ],
+        "image": {
+          "assetId": "asset-scorpion-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/a/ab/Scorpion.png/revision/latest?cb=20130603185450",
+          "assetType": "character_portrait",
+          "entityId": "scorpion",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Scorpion"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -255,12 +282,12 @@ export const characters: Character[] = [
     "popular": true,
     "image": {
       "assetId": "asset-subzero-portrait",
-      "assetURL": "https://www.mortalkombat.com/assets/roster/subzero_render.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/8/81/Sub-Zero.png/revision/latest?cb=20110129183905",
       "assetType": "character_portrait",
       "entityId": "sub-zero",
       "rightsStatus": "approved",
-      "attribution": "Mortal Kombat \u00a9 Warner Bros. Entertainment Inc. / NetherRealm Studios",
-      "alt": "Sub-Zero official roster render"
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Sub-Zero"
     },
     "versions": [
       {
@@ -301,6 +328,15 @@ export const characters: Character[] = [
             "name": "Lin Kuei"
           }
         ],
+        "image": {
+          "assetId": "asset-subzero-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/8/81/Sub-Zero.png/revision/latest?cb=20110129183905",
+          "assetType": "character_portrait",
+          "entityId": "sub-zero",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Sub-Zero"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -341,6 +377,15 @@ export const characters: Character[] = [
             "name": "Lin Kuei"
           }
         ],
+        "image": {
+          "assetId": "asset-subzero-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/8/81/Sub-Zero.png/revision/latest?cb=20110129183905",
+          "assetType": "character_portrait",
+          "entityId": "sub-zero",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Sub-Zero"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -376,6 +421,15 @@ export const characters: Character[] = [
             "name": "Lin Kuei"
           }
         ],
+        "image": {
+          "assetId": "asset-subzero-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/8/81/Sub-Zero.png/revision/latest?cb=20110129183905",
+          "assetType": "character_portrait",
+          "entityId": "sub-zero",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Sub-Zero"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -419,12 +473,12 @@ export const characters: Character[] = [
     "popular": true,
     "image": {
       "assetId": "asset-raiden-portrait",
-      "assetURL": "https://www.mortalkombat.com/assets/roster/raiden_render.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/c/cd/Raiden_%28MK1%29_Render.png/revision/latest?cb=20240517202601",
       "assetType": "character_portrait",
       "entityId": "raiden",
       "rightsStatus": "approved",
-      "attribution": "Mortal Kombat \u00a9 Warner Bros. Entertainment Inc. / NetherRealm Studios",
-      "alt": "Raiden official roster render"
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Raiden"
     },
     "versions": [
       {
@@ -459,6 +513,15 @@ export const characters: Character[] = [
             "name": "White Lotus Society"
           }
         ],
+        "image": {
+          "assetId": "asset-raiden-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/c/cd/Raiden_%28MK1%29_Render.png/revision/latest?cb=20240517202601",
+          "assetType": "character_portrait",
+          "entityId": "raiden",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Raiden"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -488,6 +551,15 @@ export const characters: Character[] = [
             "name": "White Lotus Society"
           }
         ],
+        "image": {
+          "assetId": "asset-raiden-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/c/cd/Raiden_%28MK1%29_Render.png/revision/latest?cb=20240517202601",
+          "assetType": "character_portrait",
+          "entityId": "raiden",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Raiden"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -512,6 +584,15 @@ export const characters: Character[] = [
             "name": "White Lotus Society"
           }
         ],
+        "image": {
+          "assetId": "asset-raiden-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/c/cd/Raiden_%28MK1%29_Render.png/revision/latest?cb=20240517202601",
+          "assetType": "character_portrait",
+          "entityId": "raiden",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Raiden"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -589,12 +670,12 @@ export const characters: Character[] = [
     "popular": true,
     "image": {
       "assetId": "asset-liukang-portrait",
-      "assetURL": "https://www.mortalkombat.com/assets/roster/liukang_render.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/e/e9/Liu_Kang_Render_%28MK1%29.png/revision/latest?cb=20250319165938",
       "assetType": "character_portrait",
       "entityId": "liu-kang",
       "rightsStatus": "approved",
-      "attribution": "Mortal Kombat \u00a9 Warner Bros. Entertainment Inc. / NetherRealm Studios",
-      "alt": "Liu Kang official roster render"
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Liu Kang"
     },
     "versions": [
       {
@@ -629,6 +710,15 @@ export const characters: Character[] = [
             "name": "White Lotus Society"
           }
         ],
+        "image": {
+          "assetId": "asset-liukang-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/e/e9/Liu_Kang_Render_%28MK1%29.png/revision/latest?cb=20250319165938",
+          "assetType": "character_portrait",
+          "entityId": "liu-kang",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Liu Kang"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -663,6 +753,15 @@ export const characters: Character[] = [
             "name": "White Lotus Society"
           }
         ],
+        "image": {
+          "assetId": "asset-liukang-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/e/e9/Liu_Kang_Render_%28MK1%29.png/revision/latest?cb=20250319165938",
+          "assetType": "character_portrait",
+          "entityId": "liu-kang",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Liu Kang"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -692,6 +791,15 @@ export const characters: Character[] = [
             "name": "White Lotus Society"
           }
         ],
+        "image": {
+          "assetId": "asset-liukang-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/e/e9/Liu_Kang_Render_%28MK1%29.png/revision/latest?cb=20250319165938",
+          "assetType": "character_portrait",
+          "entityId": "liu-kang",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Liu Kang"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -735,12 +843,12 @@ export const characters: Character[] = [
     "popular": true,
     "image": {
       "assetId": "asset-kitana-portrait",
-      "assetURL": "https://www.mortalkombat.com/assets/roster/kitana_render.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/5/51/Kitana_MK1_render.webp/revision/latest?cb=20250317155722",
       "assetType": "character_portrait",
       "entityId": "kitana",
       "rightsStatus": "approved",
-      "attribution": "Mortal Kombat \u00a9 Warner Bros. Entertainment Inc. / NetherRealm Studios",
-      "alt": "Kitana official roster render"
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Kitana"
     },
     "versions": [
       {
@@ -775,6 +883,15 @@ export const characters: Character[] = [
           }
         ],
         "organizations": [],
+        "image": {
+          "assetId": "asset-kitana-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/5/51/Kitana_MK1_render.webp/revision/latest?cb=20250317155722",
+          "assetType": "character_portrait",
+          "entityId": "kitana",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Kitana"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -804,6 +921,15 @@ export const characters: Character[] = [
           }
         ],
         "organizations": [],
+        "image": {
+          "assetId": "asset-kitana-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/5/51/Kitana_MK1_render.webp/revision/latest?cb=20250317155722",
+          "assetType": "character_portrait",
+          "entityId": "kitana",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Kitana"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -865,12 +991,12 @@ export const characters: Character[] = [
     "popular": true,
     "image": {
       "assetId": "asset-mileena-portrait",
-      "assetURL": "https://www.mortalkombat.com/assets/roster/mileena_render.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/2/22/Mileena_MK1_render.webp/revision/latest?cb=20250712090157",
       "assetType": "character_portrait",
       "entityId": "mileena",
       "rightsStatus": "approved",
-      "attribution": "Mortal Kombat \u00a9 Warner Bros. Entertainment Inc. / NetherRealm Studios",
-      "alt": "Mileena official roster render"
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Mileena"
     },
     "versions": [
       {
@@ -895,6 +1021,15 @@ export const characters: Character[] = [
           }
         ],
         "organizations": [],
+        "image": {
+          "assetId": "asset-mileena-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/2/22/Mileena_MK1_render.webp/revision/latest?cb=20250712090157",
+          "assetType": "character_portrait",
+          "entityId": "mileena",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Mileena"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -919,6 +1054,15 @@ export const characters: Character[] = [
           }
         ],
         "organizations": [],
+        "image": {
+          "assetId": "asset-mileena-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/2/22/Mileena_MK1_render.webp/revision/latest?cb=20250712090157",
+          "assetType": "character_portrait",
+          "entityId": "mileena",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Mileena"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -943,6 +1087,15 @@ export const characters: Character[] = [
           }
         ],
         "organizations": [],
+        "image": {
+          "assetId": "asset-mileena-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/2/22/Mileena_MK1_render.webp/revision/latest?cb=20250712090157",
+          "assetType": "character_portrait",
+          "entityId": "mileena",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Mileena"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -986,12 +1139,12 @@ export const characters: Character[] = [
     "popular": true,
     "image": {
       "assetId": "asset-johnnycage-portrait",
-      "assetURL": "https://www.mortalkombat.com/assets/roster/johnnycage_render.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/c/c0/JohnnyCage_MK1_render.webp/revision/latest?cb=20250409201914",
       "assetType": "character_portrait",
       "entityId": "johnny-cage",
       "rightsStatus": "approved",
-      "attribution": "Mortal Kombat \u00a9 Warner Bros. Entertainment Inc. / NetherRealm Studios",
-      "alt": "Johnny Cage official roster render"
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Johnny Cage"
     },
     "versions": [
       {
@@ -1021,6 +1174,15 @@ export const characters: Character[] = [
             "name": "Special Forces"
           }
         ],
+        "image": {
+          "assetId": "asset-johnnycage-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/c/c0/JohnnyCage_MK1_render.webp/revision/latest?cb=20250409201914",
+          "assetType": "character_portrait",
+          "entityId": "johnny-cage",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Johnny Cage"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -1050,6 +1212,15 @@ export const characters: Character[] = [
             "name": "Special Forces"
           }
         ],
+        "image": {
+          "assetId": "asset-johnnycage-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/c/c0/JohnnyCage_MK1_render.webp/revision/latest?cb=20250409201914",
+          "assetType": "character_portrait",
+          "entityId": "johnny-cage",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Johnny Cage"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -1093,12 +1264,12 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-sonyablade-portrait",
-      "assetURL": "https://www.mortalkombat.com/assets/roster/sonyablade_render.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/b/b1/Sonya_MK1_Render.png/revision/latest?cb=20231215102112",
       "assetType": "character_portrait",
       "entityId": "sonya-blade",
       "rightsStatus": "approved",
-      "attribution": "Mortal Kombat \u00a9 Warner Bros. Entertainment Inc. / NetherRealm Studios",
-      "alt": "Sonya Blade official roster render"
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Sonya Blade"
     },
     "versions": [
       {
@@ -1128,6 +1299,15 @@ export const characters: Character[] = [
             "name": "Special Forces"
           }
         ],
+        "image": {
+          "assetId": "asset-sonyablade-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/b/b1/Sonya_MK1_Render.png/revision/latest?cb=20231215102112",
+          "assetType": "character_portrait",
+          "entityId": "sonya-blade",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Sonya Blade"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -1157,6 +1337,15 @@ export const characters: Character[] = [
             "name": "Special Forces"
           }
         ],
+        "image": {
+          "assetId": "asset-sonyablade-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/b/b1/Sonya_MK1_Render.png/revision/latest?cb=20231215102112",
+          "assetType": "character_portrait",
+          "entityId": "sonya-blade",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Sonya Blade"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -1218,12 +1407,12 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-jax-portrait",
-      "assetURL": "https://www.mortalkombat.com/assets/roster/jax_render.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/a/a1/Jax_MK1_Render.png/revision/latest?cb=20231215100652",
       "assetType": "character_portrait",
       "entityId": "jax",
       "rightsStatus": "approved",
-      "attribution": "Mortal Kombat \u00a9 Warner Bros. Entertainment Inc. / NetherRealm Studios",
-      "alt": "Jax Briggs official roster render"
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Jax Briggs"
     },
     "versions": [
       {
@@ -1259,6 +1448,15 @@ export const characters: Character[] = [
             "name": "Special Forces"
           }
         ],
+        "image": {
+          "assetId": "asset-jax-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/a/a1/Jax_MK1_Render.png/revision/latest?cb=20231215100652",
+          "assetType": "character_portrait",
+          "entityId": "jax",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Jax Briggs"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -1294,6 +1492,15 @@ export const characters: Character[] = [
             "name": "Special Forces"
           }
         ],
+        "image": {
+          "assetId": "asset-jax-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/a/a1/Jax_MK1_Render.png/revision/latest?cb=20231215100652",
+          "assetType": "character_portrait",
+          "entityId": "jax",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Jax Briggs"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -1337,12 +1544,12 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-kunglao-portrait",
-      "assetURL": "https://www.mortalkombat.com/assets/roster/kunglao_render.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/4/49/KungLao_MK1_render.webp/revision/latest?cb=20250512010110",
       "assetType": "character_portrait",
       "entityId": "kung-lao",
       "rightsStatus": "approved",
-      "attribution": "Mortal Kombat \u00a9 Warner Bros. Entertainment Inc. / NetherRealm Studios",
-      "alt": "Kung Lao official roster render"
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Kung Lao"
     },
     "versions": [
       {
@@ -1377,6 +1584,15 @@ export const characters: Character[] = [
             "name": "White Lotus Society"
           }
         ],
+        "image": {
+          "assetId": "asset-kunglao-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/4/49/KungLao_MK1_render.webp/revision/latest?cb=20250512010110",
+          "assetType": "character_portrait",
+          "entityId": "kung-lao",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Kung Lao"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -1406,6 +1622,15 @@ export const characters: Character[] = [
             "name": "White Lotus Society"
           }
         ],
+        "image": {
+          "assetId": "asset-kunglao-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/4/49/KungLao_MK1_render.webp/revision/latest?cb=20250512010110",
+          "assetType": "character_portrait",
+          "entityId": "kung-lao",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Kung Lao"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -1449,12 +1674,12 @@ export const characters: Character[] = [
     "popular": true,
     "image": {
       "assetId": "asset-shangtsung-portrait",
-      "assetURL": "https://www.mortalkombat.com/assets/roster/shangtsung_render.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/e/ef/ShangTsung_MK1_render.webp/revision/latest?cb=20250407001935",
       "assetType": "character_portrait",
       "entityId": "shangtsung",
       "rightsStatus": "approved",
-      "attribution": "Mortal Kombat \u00a9 Warner Bros. Entertainment Inc. / NetherRealm Studios",
-      "alt": "Shang Tsung official roster render"
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Shang Tsung"
     },
     "versions": [
       {
@@ -1478,6 +1703,15 @@ export const characters: Character[] = [
         ],
         "weapons": [],
         "organizations": [],
+        "image": {
+          "assetId": "asset-shangtsung-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/e/ef/ShangTsung_MK1_render.webp/revision/latest?cb=20250407001935",
+          "assetType": "character_portrait",
+          "entityId": "shangtsung",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Shang Tsung"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -1496,6 +1730,15 @@ export const characters: Character[] = [
         ],
         "weapons": [],
         "organizations": [],
+        "image": {
+          "assetId": "asset-shangtsung-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/e/ef/ShangTsung_MK1_render.webp/revision/latest?cb=20250407001935",
+          "assetType": "character_portrait",
+          "entityId": "shangtsung",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Shang Tsung"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -1514,6 +1757,15 @@ export const characters: Character[] = [
         ],
         "weapons": [],
         "organizations": [],
+        "image": {
+          "assetId": "asset-shangtsung-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/e/ef/ShangTsung_MK1_render.webp/revision/latest?cb=20250407001935",
+          "assetType": "character_portrait",
+          "entityId": "shangtsung",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Shang Tsung"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -1575,12 +1827,12 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-quanchi-portrait",
-      "assetURL": "https://www.mortalkombat.com/assets/roster/quanchi_render.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/7/7d/QuanChi_MK1_render.webp/revision/latest?cb=20250325061111",
       "assetType": "character_portrait",
       "entityId": "quanchi",
       "rightsStatus": "approved",
-      "attribution": "Mortal Kombat \u00a9 Warner Bros. Entertainment Inc. / NetherRealm Studios",
-      "alt": "Quan Chi official roster render"
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Quan Chi"
     },
     "versions": [
       {
@@ -1610,6 +1862,15 @@ export const characters: Character[] = [
             "name": "Brotherhood of Shadow"
           }
         ],
+        "image": {
+          "assetId": "asset-quanchi-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/7/7d/QuanChi_MK1_render.webp/revision/latest?cb=20250325061111",
+          "assetType": "character_portrait",
+          "entityId": "quanchi",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Quan Chi"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -1639,6 +1900,15 @@ export const characters: Character[] = [
             "name": "Brotherhood of Shadow"
           }
         ],
+        "image": {
+          "assetId": "asset-quanchi-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/7/7d/QuanChi_MK1_render.webp/revision/latest?cb=20250325061111",
+          "assetType": "character_portrait",
+          "entityId": "quanchi",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Quan Chi"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -1682,12 +1952,12 @@ export const characters: Character[] = [
     "popular": true,
     "image": {
       "assetId": "asset-shaokahn-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mortalkombat/images/shaokahn_portrait.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/f/fe/Shao_render.png/revision/latest?cb=20231122223307",
       "assetType": "character_portrait",
       "entityId": "shao-kahn",
-      "rightsStatus": "pending-review",
-      "attribution": "Mortal Kombat franchise \u00a9 Warner Bros. Entertainment Inc.",
-      "alt": "Shao Kahn community reference render"
+      "rightsStatus": "approved",
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Shao Kahn"
     },
     "versions": [
       {
@@ -1706,6 +1976,15 @@ export const characters: Character[] = [
           }
         ],
         "organizations": [],
+        "image": {
+          "assetId": "asset-shaokahn-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/f/fe/Shao_render.png/revision/latest?cb=20231122223307",
+          "assetType": "character_portrait",
+          "entityId": "shao-kahn",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Shao Kahn"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -1724,6 +2003,15 @@ export const characters: Character[] = [
           }
         ],
         "organizations": [],
+        "image": {
+          "assetId": "asset-shaokahn-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/f/fe/Shao_render.png/revision/latest?cb=20231122223307",
+          "assetType": "character_portrait",
+          "entityId": "shao-kahn",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Shao Kahn"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -1767,12 +2055,12 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-kano-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mortalkombat/images/kano_portrait.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/c/c8/Kano_MK1_Render.png/revision/latest?cb=20231215100742",
       "assetType": "character_portrait",
       "entityId": "kano",
-      "rightsStatus": "pending-review",
-      "attribution": "Mortal Kombat franchise \u00a9 Warner Bros. Entertainment Inc.",
-      "alt": "Kano community reference render"
+      "rightsStatus": "approved",
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Kano"
     },
     "versions": [
       {
@@ -1797,6 +2085,15 @@ export const characters: Character[] = [
             "name": "Black Dragon"
           }
         ],
+        "image": {
+          "assetId": "asset-kano-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/c/c8/Kano_MK1_Render.png/revision/latest?cb=20231215100742",
+          "assetType": "character_portrait",
+          "entityId": "kano",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Kano"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -1821,6 +2118,15 @@ export const characters: Character[] = [
             "name": "Black Dragon"
           }
         ],
+        "image": {
+          "assetId": "asset-kano-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/c/c8/Kano_MK1_Render.png/revision/latest?cb=20231215100742",
+          "assetType": "character_portrait",
+          "entityId": "kano",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Kano"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -1864,12 +2170,12 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-baraka-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mortalkombat/images/baraka_portrait.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/4/40/Baraka_%28MK1%29_Render.png/revision/latest?cb=20250319170034",
       "assetType": "character_portrait",
       "entityId": "baraka",
-      "rightsStatus": "pending-review",
-      "attribution": "Mortal Kombat franchise \u00a9 Warner Bros. Entertainment Inc.",
-      "alt": "Baraka community reference render"
+      "rightsStatus": "approved",
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Baraka"
     },
     "versions": [
       {
@@ -1888,6 +2194,15 @@ export const characters: Character[] = [
         ],
         "weapons": [],
         "organizations": [],
+        "image": {
+          "assetId": "asset-baraka-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/4/40/Baraka_%28MK1%29_Render.png/revision/latest?cb=20250319170034",
+          "assetType": "character_portrait",
+          "entityId": "baraka",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Baraka"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -1906,6 +2221,15 @@ export const characters: Character[] = [
         ],
         "weapons": [],
         "organizations": [],
+        "image": {
+          "assetId": "asset-baraka-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/4/40/Baraka_%28MK1%29_Render.png/revision/latest?cb=20250319170034",
+          "assetType": "character_portrait",
+          "entityId": "baraka",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Baraka"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -1949,12 +2273,12 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-kenshi-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mortalkombat/images/kenshi_portrait.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/d/d4/Kenshi.png/revision/latest?cb=20110815213455",
       "assetType": "character_portrait",
       "entityId": "kenshi",
-      "rightsStatus": "pending-review",
-      "attribution": "Mortal Kombat franchise \u00a9 Warner Bros. Entertainment Inc.",
-      "alt": "Kenshi community reference render"
+      "rightsStatus": "approved",
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Kenshi"
     },
     "versions": [
       {
@@ -1990,6 +2314,15 @@ export const characters: Character[] = [
             "name": "Special Forces"
           }
         ],
+        "image": {
+          "assetId": "asset-kenshi-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/d/d4/Kenshi.png/revision/latest?cb=20110815213455",
+          "assetType": "character_portrait",
+          "entityId": "kenshi",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Kenshi"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -2025,6 +2358,15 @@ export const characters: Character[] = [
             "name": "Special Forces"
           }
         ],
+        "image": {
+          "assetId": "asset-kenshi-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/d/d4/Kenshi.png/revision/latest?cb=20110815213455",
+          "assetType": "character_portrait",
+          "entityId": "kenshi",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Kenshi"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -2055,6 +2397,15 @@ export const characters: Character[] = [
             "name": "Shirai Ryu"
           }
         ],
+        "image": {
+          "assetId": "asset-kenshi-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/d/d4/Kenshi.png/revision/latest?cb=20110815213455",
+          "assetType": "character_portrait",
+          "entityId": "kenshi",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Kenshi"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -2098,12 +2449,12 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-noobsaibot-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mortalkombat/images/noobsaibot_portrait.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/8/89/Noob_Saibot.png/revision/latest?cb=20110311063327",
       "assetType": "character_portrait",
       "entityId": "noob-saibot",
-      "rightsStatus": "pending-review",
-      "attribution": "Mortal Kombat franchise \u00a9 Warner Bros. Entertainment Inc.",
-      "alt": "Noob Saibot community reference render"
+      "rightsStatus": "approved",
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Noob Saibot"
     },
     "versions": [
       {
@@ -2133,6 +2484,15 @@ export const characters: Character[] = [
             "name": "Brotherhood of Shadow"
           }
         ],
+        "image": {
+          "assetId": "asset-noobsaibot-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/8/89/Noob_Saibot.png/revision/latest?cb=20110311063327",
+          "assetType": "character_portrait",
+          "entityId": "noob-saibot",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Noob Saibot"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -2162,6 +2522,15 @@ export const characters: Character[] = [
             "name": "Brotherhood of Shadow"
           }
         ],
+        "image": {
+          "assetId": "asset-noobsaibot-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/8/89/Noob_Saibot.png/revision/latest?cb=20110311063327",
+          "assetType": "character_portrait",
+          "entityId": "noob-saibot",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Noob Saibot"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -2205,12 +2574,12 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-smoke-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mortalkombat/images/smoke_portrait.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/9/95/Smoke_%28MK1%29_Render.png/revision/latest?cb=20250319170102",
       "assetType": "character_portrait",
       "entityId": "smoke",
-      "rightsStatus": "pending-review",
-      "attribution": "Mortal Kombat franchise \u00a9 Warner Bros. Entertainment Inc.",
-      "alt": "Smoke community reference render"
+      "rightsStatus": "approved",
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Smoke"
     },
     "versions": [
       {
@@ -2235,6 +2604,15 @@ export const characters: Character[] = [
             "name": "Lin Kuei"
           }
         ],
+        "image": {
+          "assetId": "asset-smoke-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/9/95/Smoke_%28MK1%29_Render.png/revision/latest?cb=20250319170102",
+          "assetType": "character_portrait",
+          "entityId": "smoke",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Smoke"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -2259,6 +2637,15 @@ export const characters: Character[] = [
             "name": "Lin Kuei"
           }
         ],
+        "image": {
+          "assetId": "asset-smoke-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/9/95/Smoke_%28MK1%29_Render.png/revision/latest?cb=20250319170102",
+          "assetType": "character_portrait",
+          "entityId": "smoke",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Smoke"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -2283,6 +2670,15 @@ export const characters: Character[] = [
             "name": "Lin Kuei"
           }
         ],
+        "image": {
+          "assetId": "asset-smoke-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/9/95/Smoke_%28MK1%29_Render.png/revision/latest?cb=20250319170102",
+          "assetType": "character_portrait",
+          "entityId": "smoke",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Smoke"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -2326,12 +2722,12 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-cyrax-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mortalkombat/images/cyrax_portrait.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/4/40/Cyrax_MK1_Render.png/revision/latest?cb=20250408031043",
       "assetType": "character_portrait",
       "entityId": "cyrax",
-      "rightsStatus": "pending-review",
-      "attribution": "Mortal Kombat franchise \u00a9 Warner Bros. Entertainment Inc.",
-      "alt": "Cyrax community reference render"
+      "rightsStatus": "approved",
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Cyrax"
     },
     "versions": [
       {
@@ -2361,6 +2757,15 @@ export const characters: Character[] = [
             "name": "Lin Kuei"
           }
         ],
+        "image": {
+          "assetId": "asset-cyrax-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/4/40/Cyrax_MK1_Render.png/revision/latest?cb=20250408031043",
+          "assetType": "character_portrait",
+          "entityId": "cyrax",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Cyrax"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -2390,6 +2795,15 @@ export const characters: Character[] = [
             "name": "Lin Kuei"
           }
         ],
+        "image": {
+          "assetId": "asset-cyrax-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/4/40/Cyrax_MK1_Render.png/revision/latest?cb=20250408031043",
+          "assetType": "character_portrait",
+          "entityId": "cyrax",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Cyrax"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -2433,12 +2847,12 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-sektor-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mortalkombat/images/sektor_portrait.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/a/af/Sektor_MK1_Render.png/revision/latest?cb=20250325020045",
       "assetType": "character_portrait",
       "entityId": "sektor",
-      "rightsStatus": "pending-review",
-      "attribution": "Mortal Kombat franchise \u00a9 Warner Bros. Entertainment Inc.",
-      "alt": "Sektor community reference render"
+      "rightsStatus": "approved",
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Sektor"
     },
     "versions": [
       {
@@ -2468,6 +2882,15 @@ export const characters: Character[] = [
             "name": "Lin Kuei"
           }
         ],
+        "image": {
+          "assetId": "asset-sektor-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/a/af/Sektor_MK1_Render.png/revision/latest?cb=20250325020045",
+          "assetType": "character_portrait",
+          "entityId": "sektor",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Sektor"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -2497,6 +2920,15 @@ export const characters: Character[] = [
             "name": "Lin Kuei"
           }
         ],
+        "image": {
+          "assetId": "asset-sektor-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/a/af/Sektor_MK1_Render.png/revision/latest?cb=20250325020045",
+          "assetType": "character_portrait",
+          "entityId": "sektor",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Sektor"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -2540,12 +2972,12 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-reptile-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mortalkombat/images/reptile_portrait.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/c/c2/Reptile_MK1_render.webp/revision/latest?cb=20250711101600",
       "assetType": "character_portrait",
       "entityId": "reptile",
-      "rightsStatus": "pending-review",
-      "attribution": "Mortal Kombat franchise \u00a9 Warner Bros. Entertainment Inc.",
-      "alt": "Reptile community reference render"
+      "rightsStatus": "approved",
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Reptile"
     },
     "versions": [
       {
@@ -2564,6 +2996,15 @@ export const characters: Character[] = [
         ],
         "weapons": [],
         "organizations": [],
+        "image": {
+          "assetId": "asset-reptile-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/c/c2/Reptile_MK1_render.webp/revision/latest?cb=20250711101600",
+          "assetType": "character_portrait",
+          "entityId": "reptile",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Reptile"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -2582,6 +3023,15 @@ export const characters: Character[] = [
         ],
         "weapons": [],
         "organizations": [],
+        "image": {
+          "assetId": "asset-reptile-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/c/c2/Reptile_MK1_render.webp/revision/latest?cb=20250711101600",
+          "assetType": "character_portrait",
+          "entityId": "reptile",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Reptile"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -2600,6 +3050,15 @@ export const characters: Character[] = [
         ],
         "weapons": [],
         "organizations": [],
+        "image": {
+          "assetId": "asset-reptile-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/c/c2/Reptile_MK1_render.webp/revision/latest?cb=20250711101600",
+          "assetType": "character_portrait",
+          "entityId": "reptile",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Reptile"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -2643,12 +3102,12 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-geras-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mortalkombat/images/geras_portrait.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/3/36/Geras_MK1_Render.png/revision/latest?cb=20250319170152",
       "assetType": "character_portrait",
       "entityId": "geras",
-      "rightsStatus": "pending-review",
-      "attribution": "Mortal Kombat franchise \u00a9 Warner Bros. Entertainment Inc.",
-      "alt": "Geras community reference render"
+      "rightsStatus": "approved",
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Geras"
     },
     "versions": [
       {
@@ -2667,6 +3126,15 @@ export const characters: Character[] = [
         ],
         "weapons": [],
         "organizations": [],
+        "image": {
+          "assetId": "asset-geras-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/3/36/Geras_MK1_Render.png/revision/latest?cb=20250319170152",
+          "assetType": "character_portrait",
+          "entityId": "geras",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Geras"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -2685,6 +3153,15 @@ export const characters: Character[] = [
         ],
         "weapons": [],
         "organizations": [],
+        "image": {
+          "assetId": "asset-geras-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/3/36/Geras_MK1_Render.png/revision/latest?cb=20250319170152",
+          "assetType": "character_portrait",
+          "entityId": "geras",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Geras"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -2746,12 +3223,12 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-kronika-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mortalkombat/images/kronika_portrait.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/1/1f/MK11KronikaRender.png/revision/latest?cb=20190812124147",
       "assetType": "character_portrait",
       "entityId": "kronika",
-      "rightsStatus": "pending-review",
-      "attribution": "Mortal Kombat franchise \u00a9 Warner Bros. Entertainment Inc.",
-      "alt": "Kronika community reference render"
+      "rightsStatus": "approved",
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Kronika"
     },
     "versions": [
       {
@@ -2770,6 +3247,15 @@ export const characters: Character[] = [
         ],
         "weapons": [],
         "organizations": [],
+        "image": {
+          "assetId": "asset-kronika-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/1/1f/MK11KronikaRender.png/revision/latest?cb=20190812124147",
+          "assetType": "character_portrait",
+          "entityId": "kronika",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Kronika"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -2813,12 +3299,12 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-sindel-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mortalkombat/images/sindel_portrait.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/0/05/Sindel_MK1_render.webp/revision/latest?cb=20250313144711",
       "assetType": "character_portrait",
       "entityId": "sindel",
-      "rightsStatus": "pending-review",
-      "attribution": "Mortal Kombat franchise \u00a9 Warner Bros. Entertainment Inc.",
-      "alt": "Sindel community reference render"
+      "rightsStatus": "approved",
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Sindel"
     },
     "versions": [
       {
@@ -2847,6 +3333,15 @@ export const characters: Character[] = [
         ],
         "weapons": [],
         "organizations": [],
+        "image": {
+          "assetId": "asset-sindel-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/0/05/Sindel_MK1_render.webp/revision/latest?cb=20250313144711",
+          "assetType": "character_portrait",
+          "entityId": "sindel",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Sindel"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -2870,6 +3365,15 @@ export const characters: Character[] = [
         ],
         "weapons": [],
         "organizations": [],
+        "image": {
+          "assetId": "asset-sindel-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/0/05/Sindel_MK1_render.webp/revision/latest?cb=20250313144711",
+          "assetType": "character_portrait",
+          "entityId": "sindel",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Sindel"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -2913,12 +3417,12 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-goro-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mortalkombat/images/goro_portrait.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/6/68/Goro_MK1_Render.png/revision/latest?cb=20231215100554",
       "assetType": "character_portrait",
       "entityId": "goro",
-      "rightsStatus": "pending-review",
-      "attribution": "Mortal Kombat franchise \u00a9 Warner Bros. Entertainment Inc.",
-      "alt": "Goro community reference render"
+      "rightsStatus": "approved",
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Goro"
     },
     "versions": [
       {
@@ -2942,6 +3446,15 @@ export const characters: Character[] = [
         ],
         "weapons": [],
         "organizations": [],
+        "image": {
+          "assetId": "asset-goro-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/6/68/Goro_MK1_Render.png/revision/latest?cb=20231215100554",
+          "assetType": "character_portrait",
+          "entityId": "goro",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Goro"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -2960,6 +3473,15 @@ export const characters: Character[] = [
         ],
         "weapons": [],
         "organizations": [],
+        "image": {
+          "assetId": "asset-goro-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/6/68/Goro_MK1_Render.png/revision/latest?cb=20231215100554",
+          "assetType": "character_portrait",
+          "entityId": "goro",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Goro"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -3003,12 +3525,12 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-kintaro-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mortalkombat/images/kintaro_portrait.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/1/1b/Kintaromk9.png/revision/latest?cb=20120804180654",
       "assetType": "character_portrait",
       "entityId": "kintaro",
-      "rightsStatus": "pending-review",
-      "attribution": "Mortal Kombat franchise \u00a9 Warner Bros. Entertainment Inc.",
-      "alt": "Kintaro community reference render"
+      "rightsStatus": "approved",
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Kintaro"
     },
     "versions": [
       {
@@ -3027,6 +3549,15 @@ export const characters: Character[] = [
         ],
         "weapons": [],
         "organizations": [],
+        "image": {
+          "assetId": "asset-kintaro-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/1/1b/Kintaromk9.png/revision/latest?cb=20120804180654",
+          "assetType": "character_portrait",
+          "entityId": "kintaro",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Kintaro"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -3070,12 +3601,12 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-shinnok-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mortalkombat/images/shinnok_portrait.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/b/bc/Shinnok_RENDER_PNG.png/revision/latest?cb=20190423022022",
       "assetType": "character_portrait",
       "entityId": "shinnok",
-      "rightsStatus": "pending-review",
-      "attribution": "Mortal Kombat franchise \u00a9 Warner Bros. Entertainment Inc.",
-      "alt": "Shinnok community reference render"
+      "rightsStatus": "approved",
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Shinnok"
     },
     "versions": [
       {
@@ -3105,6 +3636,15 @@ export const characters: Character[] = [
             "name": "Brotherhood of Shadow"
           }
         ],
+        "image": {
+          "assetId": "asset-shinnok-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/b/bc/Shinnok_RENDER_PNG.png/revision/latest?cb=20190423022022",
+          "assetType": "character_portrait",
+          "entityId": "shinnok",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Shinnok"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -3134,6 +3674,15 @@ export const characters: Character[] = [
             "name": "Brotherhood of Shadow"
           }
         ],
+        "image": {
+          "assetId": "asset-shinnok-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/b/bc/Shinnok_RENDER_PNG.png/revision/latest?cb=20190423022022",
+          "assetType": "character_portrait",
+          "entityId": "shinnok",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Shinnok"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -3177,12 +3726,12 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-fujin-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mortalkombat/images/fujin_portrait.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/6/63/MK11_Fujin_render-0.png/revision/latest?cb=20240604094101",
       "assetType": "character_portrait",
       "entityId": "fujin",
-      "rightsStatus": "pending-review",
-      "attribution": "Mortal Kombat franchise \u00a9 Warner Bros. Entertainment Inc.",
-      "alt": "Fujin community reference render"
+      "rightsStatus": "approved",
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Fujin"
     },
     "versions": [
       {
@@ -3212,6 +3761,15 @@ export const characters: Character[] = [
             "name": "White Lotus Society"
           }
         ],
+        "image": {
+          "assetId": "asset-fujin-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/6/63/MK11_Fujin_render-0.png/revision/latest?cb=20240604094101",
+          "assetType": "character_portrait",
+          "entityId": "fujin",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Fujin"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -3236,6 +3794,15 @@ export const characters: Character[] = [
             "name": "White Lotus Society"
           }
         ],
+        "image": {
+          "assetId": "asset-fujin-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/6/63/MK11_Fujin_render-0.png/revision/latest?cb=20240604094101",
+          "assetType": "character_portrait",
+          "entityId": "fujin",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Fujin"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -3279,12 +3846,12 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-frost-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mortalkombat/images/frost_portrait.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/5/52/Frost_MK1_Render.png/revision/latest?cb=20231215100457",
       "assetType": "character_portrait",
       "entityId": "frost",
-      "rightsStatus": "pending-review",
-      "attribution": "Mortal Kombat franchise \u00a9 Warner Bros. Entertainment Inc.",
-      "alt": "Frost community reference render"
+      "rightsStatus": "approved",
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Frost"
     },
     "versions": [
       {
@@ -3320,6 +3887,15 @@ export const characters: Character[] = [
             "name": "Lin Kuei"
           }
         ],
+        "image": {
+          "assetId": "asset-frost-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/5/52/Frost_MK1_Render.png/revision/latest?cb=20231215100457",
+          "assetType": "character_portrait",
+          "entityId": "frost",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Frost"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -3349,6 +3925,15 @@ export const characters: Character[] = [
             "name": "Lin Kuei"
           }
         ],
+        "image": {
+          "assetId": "asset-frost-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/5/52/Frost_MK1_Render.png/revision/latest?cb=20231215100457",
+          "assetType": "character_portrait",
+          "entityId": "frost",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Frost"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -3410,12 +3995,12 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-boraicho-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mortalkombat/images/boraicho_portrait.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/5/59/Bo_Rai_Cho_Render_MKX.png/revision/latest?cb=20160620210628",
       "assetType": "character_portrait",
       "entityId": "boraicho",
-      "rightsStatus": "pending-review",
-      "attribution": "Mortal Kombat franchise \u00a9 Warner Bros. Entertainment Inc.",
-      "alt": "Bo' Rai Cho community reference render"
+      "rightsStatus": "approved",
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Bo' Rai Cho"
     },
     "versions": [
       {
@@ -3445,6 +4030,15 @@ export const characters: Character[] = [
             "name": "White Lotus Society"
           }
         ],
+        "image": {
+          "assetId": "asset-boraicho-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/5/59/Bo_Rai_Cho_Render_MKX.png/revision/latest?cb=20160620210628",
+          "assetType": "character_portrait",
+          "entityId": "boraicho",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Bo' Rai Cho"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -3469,6 +4063,15 @@ export const characters: Character[] = [
             "name": "White Lotus Society"
           }
         ],
+        "image": {
+          "assetId": "asset-boraicho-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/5/59/Bo_Rai_Cho_Render_MKX.png/revision/latest?cb=20160620210628",
+          "assetType": "character_portrait",
+          "entityId": "boraicho",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Bo' Rai Cho"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -3530,12 +4133,12 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-limei-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mortalkombat/images/limei_portrait.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/c/ca/LiMei_MK1_render.webp/revision/latest?cb=20250314101827",
       "assetType": "character_portrait",
       "entityId": "limei",
-      "rightsStatus": "pending-review",
-      "attribution": "Mortal Kombat franchise \u00a9 Warner Bros. Entertainment Inc.",
-      "alt": "Li Mei community reference render"
+      "rightsStatus": "approved",
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Li Mei"
     },
     "versions": [
       {
@@ -3554,6 +4157,15 @@ export const characters: Character[] = [
         ],
         "weapons": [],
         "organizations": [],
+        "image": {
+          "assetId": "asset-limei-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/c/ca/LiMei_MK1_render.webp/revision/latest?cb=20250314101827",
+          "assetType": "character_portrait",
+          "entityId": "limei",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Li Mei"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -3578,6 +4190,15 @@ export const characters: Character[] = [
             "name": "The Umgadi"
           }
         ],
+        "image": {
+          "assetId": "asset-limei-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/c/ca/LiMei_MK1_render.webp/revision/latest?cb=20250314101827",
+          "assetType": "character_portrait",
+          "entityId": "limei",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Li Mei"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -3621,12 +4242,12 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-tanya-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mortalkombat/images/tanya_portrait.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/6/6a/Tanya_MK1_render.webp/revision/latest?cb=20230920060746",
       "assetType": "character_portrait",
       "entityId": "tanya",
-      "rightsStatus": "pending-review",
-      "attribution": "Mortal Kombat franchise \u00a9 Warner Bros. Entertainment Inc.",
-      "alt": "Tanya community reference render"
+      "rightsStatus": "approved",
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Tanya"
     },
     "versions": [
       {
@@ -3645,6 +4266,15 @@ export const characters: Character[] = [
           }
         ],
         "organizations": [],
+        "image": {
+          "assetId": "asset-tanya-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/6/6a/Tanya_MK1_render.webp/revision/latest?cb=20230920060746",
+          "assetType": "character_portrait",
+          "entityId": "tanya",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Tanya"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -3669,6 +4299,15 @@ export const characters: Character[] = [
             "name": "The Umgadi"
           }
         ],
+        "image": {
+          "assetId": "asset-tanya-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/6/6a/Tanya_MK1_render.webp/revision/latest?cb=20230920060746",
+          "assetType": "character_portrait",
+          "entityId": "tanya",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Tanya"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -3730,12 +4369,12 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-havik-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mortalkombat/images/havik_portrait.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/7/78/Havik_MK1_render.webp/revision/latest?cb=20250401183326",
       "assetType": "character_portrait",
       "entityId": "havik",
-      "rightsStatus": "pending-review",
-      "attribution": "Mortal Kombat franchise \u00a9 Warner Bros. Entertainment Inc.",
-      "alt": "Havik community reference render"
+      "rightsStatus": "approved",
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Havik"
     },
     "versions": [
       {
@@ -3754,6 +4393,15 @@ export const characters: Character[] = [
         ],
         "weapons": [],
         "organizations": [],
+        "image": {
+          "assetId": "asset-havik-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/7/78/Havik_MK1_render.webp/revision/latest?cb=20250401183326",
+          "assetType": "character_portrait",
+          "entityId": "havik",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Havik"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -3772,6 +4420,15 @@ export const characters: Character[] = [
         ],
         "weapons": [],
         "organizations": [],
+        "image": {
+          "assetId": "asset-havik-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/7/78/Havik_MK1_render.webp/revision/latest?cb=20250401183326",
+          "assetType": "character_portrait",
+          "entityId": "havik",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Havik"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -3815,12 +4472,12 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-cassiecage-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mortalkombat/images/cassiecage_portrait.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/d/d2/Cassie_mk11.png/revision/latest?cb=20190306231757",
       "assetType": "character_portrait",
       "entityId": "cassiecage",
-      "rightsStatus": "pending-review",
-      "attribution": "Mortal Kombat franchise \u00a9 Warner Bros. Entertainment Inc.",
-      "alt": "Cassie Cage community reference render"
+      "rightsStatus": "approved",
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Cassie Cage"
     },
     "versions": [
       {
@@ -3850,6 +4507,15 @@ export const characters: Character[] = [
             "name": "Special Forces"
           }
         ],
+        "image": {
+          "assetId": "asset-cassiecage-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/d/d2/Cassie_mk11.png/revision/latest?cb=20190306231757",
+          "assetType": "character_portrait",
+          "entityId": "cassiecage",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Cassie Cage"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -3879,6 +4545,15 @@ export const characters: Character[] = [
             "name": "Special Forces"
           }
         ],
+        "image": {
+          "assetId": "asset-cassiecage-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/d/d2/Cassie_mk11.png/revision/latest?cb=20190306231757",
+          "assetType": "character_portrait",
+          "entityId": "cassiecage",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Cassie Cage"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -3956,12 +4631,12 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-kotalkahn-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mortalkombat/images/kotalkahn_portrait.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/f/f1/Kotal_mk11.png/revision/latest?cb=20190321025157",
       "assetType": "character_portrait",
       "entityId": "kotalkahn",
-      "rightsStatus": "pending-review",
-      "attribution": "Mortal Kombat franchise \u00a9 Warner Bros. Entertainment Inc.",
-      "alt": "Kotal Kahn community reference render"
+      "rightsStatus": "approved",
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Kotal Kahn"
     },
     "versions": [
       {
@@ -3991,6 +4666,15 @@ export const characters: Character[] = [
             "name": "Osh-Tekk Tribe"
           }
         ],
+        "image": {
+          "assetId": "asset-kotalkahn-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/f/f1/Kotal_mk11.png/revision/latest?cb=20190321025157",
+          "assetType": "character_portrait",
+          "entityId": "kotalkahn",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Kotal Kahn"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -4015,6 +4699,15 @@ export const characters: Character[] = [
             "name": "Osh-Tekk Tribe"
           }
         ],
+        "image": {
+          "assetId": "asset-kotalkahn-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/f/f1/Kotal_mk11.png/revision/latest?cb=20190321025157",
+          "assetType": "character_portrait",
+          "entityId": "kotalkahn",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Kotal Kahn"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -4076,12 +4769,12 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-erronblack-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mortalkombat/images/erronblack_portrait.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/9/91/Erron_mk11.png/revision/latest?cb=20190313041908",
       "assetType": "character_portrait",
       "entityId": "erronblack",
-      "rightsStatus": "pending-review",
-      "attribution": "Mortal Kombat franchise \u00a9 Warner Bros. Entertainment Inc.",
-      "alt": "Erron Black community reference render"
+      "rightsStatus": "approved",
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Erron Black"
     },
     "versions": [
       {
@@ -4112,6 +4805,15 @@ export const characters: Character[] = [
             "name": "Black Dragon"
           }
         ],
+        "image": {
+          "assetId": "asset-erronblack-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/9/91/Erron_mk11.png/revision/latest?cb=20190313041908",
+          "assetType": "character_portrait",
+          "entityId": "erronblack",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Erron Black"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -4142,6 +4844,15 @@ export const characters: Character[] = [
             "name": "Black Dragon"
           }
         ],
+        "image": {
+          "assetId": "asset-erronblack-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/9/91/Erron_mk11.png/revision/latest?cb=20190313041908",
+          "assetType": "character_portrait",
+          "entityId": "erronblack",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Erron Black"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -4185,12 +4896,12 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-jade-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mortalkombat/images/jade_portrait.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/2/26/Jade_MK11.png/revision/latest?cb=20190227220506",
       "assetType": "character_portrait",
       "entityId": "jade",
-      "rightsStatus": "pending-review",
-      "attribution": "Mortal Kombat franchise \u00a9 Warner Bros. Entertainment Inc.",
-      "alt": "Jade community reference render"
+      "rightsStatus": "approved",
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Jade"
     },
     "versions": [
       {
@@ -4225,6 +4936,15 @@ export const characters: Character[] = [
           }
         ],
         "organizations": [],
+        "image": {
+          "assetId": "asset-jade-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/2/26/Jade_MK11.png/revision/latest?cb=20190227220506",
+          "assetType": "character_portrait",
+          "entityId": "jade",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Jade"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -4254,6 +4974,15 @@ export const characters: Character[] = [
           }
         ],
         "organizations": [],
+        "image": {
+          "assetId": "asset-jade-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/2/26/Jade_MK11.png/revision/latest?cb=20190227220506",
+          "assetType": "character_portrait",
+          "entityId": "jade",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Jade"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -4315,12 +5044,12 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-kabal-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mortalkombat/images/kabal_portrait.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/c/c7/Kabal_MK11.png/revision/latest?cb=20190323002944",
       "assetType": "character_portrait",
       "entityId": "kabal",
-      "rightsStatus": "pending-review",
-      "attribution": "Mortal Kombat franchise \u00a9 Warner Bros. Entertainment Inc.",
-      "alt": "Kabal community reference render"
+      "rightsStatus": "approved",
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Kabal"
     },
     "versions": [
       {
@@ -4361,6 +5090,15 @@ export const characters: Character[] = [
             "name": "Black Dragon"
           }
         ],
+        "image": {
+          "assetId": "asset-kabal-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/c/c7/Kabal_MK11.png/revision/latest?cb=20190323002944",
+          "assetType": "character_portrait",
+          "entityId": "kabal",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Kabal"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -4396,6 +5134,15 @@ export const characters: Character[] = [
             "name": "Black Dragon"
           }
         ],
+        "image": {
+          "assetId": "asset-kabal-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/c/c7/Kabal_MK11.png/revision/latest?cb=20190323002944",
+          "assetType": "character_portrait",
+          "entityId": "kabal",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Kabal"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -4457,12 +5204,12 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-stryker-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mortalkombat/images/stryker_portrait.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/2/21/Stryker_MK1_Render.png/revision/latest?cb=20231215101237",
       "assetType": "character_portrait",
       "entityId": "stryker",
-      "rightsStatus": "pending-review",
-      "attribution": "Mortal Kombat franchise \u00a9 Warner Bros. Entertainment Inc.",
-      "alt": "Kurtis Stryker community reference render"
+      "rightsStatus": "approved",
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Kurtis Stryker"
     },
     "versions": [
       {
@@ -4503,6 +5250,15 @@ export const characters: Character[] = [
             "name": "Special Forces"
           }
         ],
+        "image": {
+          "assetId": "asset-stryker-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/2/21/Stryker_MK1_Render.png/revision/latest?cb=20231215101237",
+          "assetType": "character_portrait",
+          "entityId": "stryker",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Kurtis Stryker"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -4538,6 +5294,15 @@ export const characters: Character[] = [
             "name": "Special Forces"
           }
         ],
+        "image": {
+          "assetId": "asset-stryker-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/2/21/Stryker_MK1_Render.png/revision/latest?cb=20231215101237",
+          "assetType": "character_portrait",
+          "entityId": "stryker",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Kurtis Stryker"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -4581,12 +5346,12 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-sheeva-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mortalkombat/images/sheeva_portrait.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/8/84/Sheeva_Render.png/revision/latest?cb=20200508024526",
       "assetType": "character_portrait",
       "entityId": "sheeva",
-      "rightsStatus": "pending-review",
-      "attribution": "Mortal Kombat franchise \u00a9 Warner Bros. Entertainment Inc.",
-      "alt": "Sheeva community reference render"
+      "rightsStatus": "approved",
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Sheeva"
     },
     "versions": [
       {
@@ -4621,6 +5386,15 @@ export const characters: Character[] = [
           }
         ],
         "organizations": [],
+        "image": {
+          "assetId": "asset-sheeva-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/8/84/Sheeva_Render.png/revision/latest?cb=20200508024526",
+          "assetType": "character_portrait",
+          "entityId": "sheeva",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Sheeva"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -4645,6 +5419,15 @@ export const characters: Character[] = [
           }
         ],
         "organizations": [],
+        "image": {
+          "assetId": "asset-sheeva-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/8/84/Sheeva_Render.png/revision/latest?cb=20200508024526",
+          "assetType": "character_portrait",
+          "entityId": "sheeva",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Sheeva"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -4706,12 +5489,12 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-nightwolf-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mortalkombat/images/nightwolf_portrait.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/a/ad/NightwolfRenderMK11.png/revision/latest?cb=20190815003315",
       "assetType": "character_portrait",
       "entityId": "nightwolf",
-      "rightsStatus": "pending-review",
-      "attribution": "Mortal Kombat franchise \u00a9 Warner Bros. Entertainment Inc.",
-      "alt": "Nightwolf community reference render"
+      "rightsStatus": "approved",
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Nightwolf"
     },
     "versions": [
       {
@@ -4746,6 +5529,15 @@ export const characters: Character[] = [
           }
         ],
         "organizations": [],
+        "image": {
+          "assetId": "asset-nightwolf-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/a/ad/NightwolfRenderMK11.png/revision/latest?cb=20190815003315",
+          "assetType": "character_portrait",
+          "entityId": "nightwolf",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Nightwolf"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -4775,6 +5567,15 @@ export const characters: Character[] = [
           }
         ],
         "organizations": [],
+        "image": {
+          "assetId": "asset-nightwolf-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/a/ad/NightwolfRenderMK11.png/revision/latest?cb=20190815003315",
+          "assetType": "character_portrait",
+          "entityId": "nightwolf",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Nightwolf"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -4836,12 +5637,12 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-dvorah-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mortalkombat/images/dvorah_portrait.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/8/85/D%27vorah_mk11_2.png/revision/latest?cb=20190414150233",
       "assetType": "character_portrait",
       "entityId": "dvorah",
-      "rightsStatus": "pending-review",
-      "attribution": "Mortal Kombat franchise \u00a9 Warner Bros. Entertainment Inc.",
-      "alt": "D'Vorah community reference render"
+      "rightsStatus": "approved",
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi D'Vorah"
     },
     "versions": [
       {
@@ -4876,6 +5677,15 @@ export const characters: Character[] = [
           }
         ],
         "organizations": [],
+        "image": {
+          "assetId": "asset-dvorah-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/8/85/D%27vorah_mk11_2.png/revision/latest?cb=20190414150233",
+          "assetType": "character_portrait",
+          "entityId": "dvorah",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi D'Vorah"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -4905,6 +5715,15 @@ export const characters: Character[] = [
           }
         ],
         "organizations": [],
+        "image": {
+          "assetId": "asset-dvorah-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/8/85/D%27vorah_mk11_2.png/revision/latest?cb=20190414150233",
+          "assetType": "character_portrait",
+          "entityId": "dvorah",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi D'Vorah"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -4982,12 +5801,12 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-jacqui-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mortalkombat/images/jacqui_portrait.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/9/9f/Jacqui_mk11.png/revision/latest?cb=20190322005550",
       "assetType": "character_portrait",
       "entityId": "jacqui",
-      "rightsStatus": "pending-review",
-      "attribution": "Mortal Kombat franchise \u00a9 Warner Bros. Entertainment Inc.",
-      "alt": "Jacqui Briggs community reference render"
+      "rightsStatus": "approved",
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Jacqui Briggs"
     },
     "versions": [
       {
@@ -5022,6 +5841,15 @@ export const characters: Character[] = [
             "name": "Special Forces"
           }
         ],
+        "image": {
+          "assetId": "asset-jacqui-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/9/9f/Jacqui_mk11.png/revision/latest?cb=20190322005550",
+          "assetType": "character_portrait",
+          "entityId": "jacqui",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Jacqui Briggs"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -5051,6 +5879,15 @@ export const characters: Character[] = [
             "name": "Special Forces"
           }
         ],
+        "image": {
+          "assetId": "asset-jacqui-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/9/9f/Jacqui_mk11.png/revision/latest?cb=20190322005550",
+          "assetType": "character_portrait",
+          "entityId": "jacqui",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Jacqui Briggs"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -5112,12 +5949,12 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-takeda-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mortalkombat/images/takeda_portrait.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/f/f1/TakedaMK1.png/revision/latest?cb=20240723181548",
       "assetType": "character_portrait",
       "entityId": "takeda",
-      "rightsStatus": "pending-review",
-      "attribution": "Mortal Kombat franchise \u00a9 Warner Bros. Entertainment Inc.",
-      "alt": "Takeda Takahashi community reference render"
+      "rightsStatus": "approved",
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Takeda Takahashi"
     },
     "versions": [
       {
@@ -5158,6 +5995,15 @@ export const characters: Character[] = [
             "name": "Shirai Ryu"
           }
         ],
+        "image": {
+          "assetId": "asset-takeda-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/f/f1/TakedaMK1.png/revision/latest?cb=20240723181548",
+          "assetType": "character_portrait",
+          "entityId": "takeda",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Takeda Takahashi"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -5219,12 +6065,12 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-kungjin-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mortalkombat/images/kungjin_portrait.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/6/69/Kung_Jin_RENDER.png/revision/latest?cb=20150402022350",
       "assetType": "character_portrait",
       "entityId": "kungjin",
-      "rightsStatus": "pending-review",
-      "attribution": "Mortal Kombat franchise \u00a9 Warner Bros. Entertainment Inc.",
-      "alt": "Kung Jin community reference render"
+      "rightsStatus": "approved",
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Kung Jin"
     },
     "versions": [
       {
@@ -5265,6 +6111,15 @@ export const characters: Character[] = [
             "name": "Special Forces"
           }
         ],
+        "image": {
+          "assetId": "asset-kungjin-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/6/69/Kung_Jin_RENDER.png/revision/latest?cb=20150402022350",
+          "assetType": "character_portrait",
+          "entityId": "kungjin",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Kung Jin"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -5326,12 +6181,12 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-cetrion-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mortalkombat/images/cetrion_portrait.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/d/d7/Cetrion_MK11.png/revision/latest?cb=20190412180127",
       "assetType": "character_portrait",
       "entityId": "cetrion",
-      "rightsStatus": "pending-review",
-      "attribution": "Mortal Kombat franchise \u00a9 Warner Bros. Entertainment Inc.",
-      "alt": "Cetrion community reference render"
+      "rightsStatus": "approved",
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Cetrion"
     },
     "versions": [
       {
@@ -5360,6 +6215,15 @@ export const characters: Character[] = [
         ],
         "weapons": [],
         "organizations": [],
+        "image": {
+          "assetId": "asset-cetrion-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/d/d7/Cetrion_MK11.png/revision/latest?cb=20190412180127",
+          "assetType": "character_portrait",
+          "entityId": "cetrion",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Cetrion"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -5421,12 +6285,12 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-kollector-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mortalkombat/images/kollector_portrait.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/9/91/Kollector_MK11.png/revision/latest?cb=20190407091921",
       "assetType": "character_portrait",
       "entityId": "kollector",
-      "rightsStatus": "pending-review",
-      "attribution": "Mortal Kombat franchise \u00a9 Warner Bros. Entertainment Inc.",
-      "alt": "Kollector community reference render"
+      "rightsStatus": "approved",
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Kollector"
     },
     "versions": [
       {
@@ -5455,6 +6319,15 @@ export const characters: Character[] = [
         ],
         "weapons": [],
         "organizations": [],
+        "image": {
+          "assetId": "asset-kollector-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/9/91/Kollector_MK11.png/revision/latest?cb=20190407091921",
+          "assetType": "character_portrait",
+          "entityId": "kollector",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Kollector"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -5498,12 +6371,12 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-onaga-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mortalkombat/images/onaga_portrait.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/b/b0/MK1_Onaga.jpeg/revision/latest?cb=20230921004228",
       "assetType": "character_portrait",
       "entityId": "onaga",
-      "rightsStatus": "pending-review",
-      "attribution": "Mortal Kombat franchise \u00a9 Warner Bros. Entertainment Inc.",
-      "alt": "Onaga community reference render"
+      "rightsStatus": "approved",
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Onaga"
     },
     "versions": [
       {
@@ -5527,6 +6400,15 @@ export const characters: Character[] = [
         ],
         "weapons": [],
         "organizations": [],
+        "image": {
+          "assetId": "asset-onaga-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/b/b0/MK1_Onaga.jpeg/revision/latest?cb=20230921004228",
+          "assetType": "character_portrait",
+          "entityId": "onaga",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Onaga"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -5545,6 +6427,15 @@ export const characters: Character[] = [
         ],
         "weapons": [],
         "organizations": [],
+        "image": {
+          "assetId": "asset-onaga-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/b/b0/MK1_Onaga.jpeg/revision/latest?cb=20230921004228",
+          "assetType": "character_portrait",
+          "entityId": "onaga",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Onaga"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -5606,12 +6497,12 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-shujinko-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mortalkombat/images/shujinko_portrait.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/3/35/Shujinko_MK1_Render.png/revision/latest?cb=20231215101153",
       "assetType": "character_portrait",
       "entityId": "shujinko",
-      "rightsStatus": "pending-review",
-      "attribution": "Mortal Kombat franchise \u00a9 Warner Bros. Entertainment Inc.",
-      "alt": "Shujinko community reference render"
+      "rightsStatus": "approved",
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Shujinko"
     },
     "versions": [
       {
@@ -5641,6 +6532,15 @@ export const characters: Character[] = [
             "name": "White Lotus Society"
           }
         ],
+        "image": {
+          "assetId": "asset-shujinko-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/3/35/Shujinko_MK1_Render.png/revision/latest?cb=20231215101153",
+          "assetType": "character_portrait",
+          "entityId": "shujinko",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Shujinko"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -5665,6 +6565,15 @@ export const characters: Character[] = [
             "name": "White Lotus Society"
           }
         ],
+        "image": {
+          "assetId": "asset-shujinko-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/3/35/Shujinko_MK1_Render.png/revision/latest?cb=20231215101153",
+          "assetType": "character_portrait",
+          "entityId": "shujinko",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Shujinko"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -5726,12 +6635,12 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-reiko-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mortalkombat/images/reiko_portrait.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/7/7e/Reiko_MK1_render.webp/revision/latest?cb=20250314102645",
       "assetType": "character_portrait",
       "entityId": "reiko",
-      "rightsStatus": "pending-review",
-      "attribution": "Mortal Kombat franchise \u00a9 Warner Bros. Entertainment Inc.",
-      "alt": "Reiko community reference render"
+      "rightsStatus": "approved",
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Reiko"
     },
     "versions": [
       {
@@ -5756,6 +6665,15 @@ export const characters: Character[] = [
           }
         ],
         "organizations": [],
+        "image": {
+          "assetId": "asset-reiko-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/7/7e/Reiko_MK1_render.webp/revision/latest?cb=20250314102645",
+          "assetType": "character_portrait",
+          "entityId": "reiko",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Reiko"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -5780,6 +6698,15 @@ export const characters: Character[] = [
           }
         ],
         "organizations": [],
+        "image": {
+          "assetId": "asset-reiko-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/7/7e/Reiko_MK1_render.webp/revision/latest?cb=20250314102645",
+          "assetType": "character_portrait",
+          "entityId": "reiko",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Reiko"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -5804,6 +6731,15 @@ export const characters: Character[] = [
           }
         ],
         "organizations": [],
+        "image": {
+          "assetId": "asset-reiko-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/7/7e/Reiko_MK1_render.webp/revision/latest?cb=20250314102645",
+          "assetType": "character_portrait",
+          "entityId": "reiko",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Reiko"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -5847,12 +6783,12 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-nitara-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mortalkombat/images/nitara_portrait.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/6/6c/Nitara_MK1_render.webp/revision/latest?cb=20250318123742",
       "assetType": "character_portrait",
       "entityId": "nitara",
-      "rightsStatus": "pending-review",
-      "attribution": "Mortal Kombat franchise \u00a9 Warner Bros. Entertainment Inc.",
-      "alt": "Nitara community reference render"
+      "rightsStatus": "approved",
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Nitara"
     },
     "versions": [
       {
@@ -5876,6 +6812,15 @@ export const characters: Character[] = [
         ],
         "weapons": [],
         "organizations": [],
+        "image": {
+          "assetId": "asset-nitara-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/6/6c/Nitara_MK1_render.webp/revision/latest?cb=20250318123742",
+          "assetType": "character_portrait",
+          "entityId": "nitara",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Nitara"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -5894,6 +6839,15 @@ export const characters: Character[] = [
         ],
         "weapons": [],
         "organizations": [],
+        "image": {
+          "assetId": "asset-nitara-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/6/6c/Nitara_MK1_render.webp/revision/latest?cb=20250318123742",
+          "assetType": "character_portrait",
+          "entityId": "nitara",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Nitara"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -5937,12 +6891,12 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-sareena-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mortalkombat/images/sareena_portrait.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/1/1d/Sareena_MK1_Render.png/revision/latest?cb=20231215100918",
       "assetType": "character_portrait",
       "entityId": "sareena",
-      "rightsStatus": "pending-review",
-      "attribution": "Mortal Kombat franchise \u00a9 Warner Bros. Entertainment Inc.",
-      "alt": "Sareena community reference render"
+      "rightsStatus": "approved",
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Sareena"
     },
     "versions": [
       {
@@ -5967,6 +6921,15 @@ export const characters: Character[] = [
             "name": "Brotherhood of Shadow"
           }
         ],
+        "image": {
+          "assetId": "asset-sareena-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/1/1d/Sareena_MK1_Render.png/revision/latest?cb=20231215100918",
+          "assetType": "character_portrait",
+          "entityId": "sareena",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Sareena"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -5991,6 +6954,15 @@ export const characters: Character[] = [
             "name": "Lin Kuei"
           }
         ],
+        "image": {
+          "assetId": "asset-sareena-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/1/1d/Sareena_MK1_Render.png/revision/latest?cb=20231215100918",
+          "assetType": "character_portrait",
+          "entityId": "sareena",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Sareena"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -6052,12 +7024,12 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-ashrah-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mortalkombat/images/ashrah_portrait.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/b/be/Ashrah_MK1_render.webp/revision/latest?cb=20250514084922",
       "assetType": "character_portrait",
       "entityId": "ashrah",
-      "rightsStatus": "pending-review",
-      "attribution": "Mortal Kombat franchise \u00a9 Warner Bros. Entertainment Inc.",
-      "alt": "Ashrah community reference render"
+      "rightsStatus": "approved",
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Ashrah"
     },
     "versions": [
       {
@@ -6087,6 +7059,15 @@ export const characters: Character[] = [
           }
         ],
         "organizations": [],
+        "image": {
+          "assetId": "asset-ashrah-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/b/be/Ashrah_MK1_render.webp/revision/latest?cb=20250514084922",
+          "assetType": "character_portrait",
+          "entityId": "ashrah",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Ashrah"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -6111,6 +7092,15 @@ export const characters: Character[] = [
           }
         ],
         "organizations": [],
+        "image": {
+          "assetId": "asset-ashrah-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/b/be/Ashrah_MK1_render.webp/revision/latest?cb=20250514084922",
+          "assetType": "character_portrait",
+          "entityId": "ashrah",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Ashrah"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -6172,12 +7162,12 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-hotaru-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mortalkombat/images/hotaru_portrait.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/c/ca/MSEL_PORTRAIT_HOTARU.png/revision/latest?cb=20130329211100",
       "assetType": "character_portrait",
       "entityId": "hotaru",
-      "rightsStatus": "pending-review",
-      "attribution": "Mortal Kombat franchise \u00a9 Warner Bros. Entertainment Inc.",
-      "alt": "Hotaru community reference render"
+      "rightsStatus": "approved",
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Hotaru"
     },
     "versions": [
       {
@@ -6202,6 +7192,15 @@ export const characters: Character[] = [
             "name": "Seidan Guard"
           }
         ],
+        "image": {
+          "assetId": "asset-hotaru-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/c/ca/MSEL_PORTRAIT_HOTARU.png/revision/latest?cb=20130329211100",
+          "assetType": "character_portrait",
+          "entityId": "hotaru",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Hotaru"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -6226,6 +7225,15 @@ export const characters: Character[] = [
             "name": "Seidan Guard"
           }
         ],
+        "image": {
+          "assetId": "asset-hotaru-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/c/ca/MSEL_PORTRAIT_HOTARU.png/revision/latest?cb=20130329211100",
+          "assetType": "character_portrait",
+          "entityId": "hotaru",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Hotaru"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -6287,12 +7295,12 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-mavado-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mortalkombat/images/mavado_portrait.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/3/33/MK1_Mavado_Render.png/revision/latest?cb=20250213151512",
       "assetType": "character_portrait",
       "entityId": "mavado",
-      "rightsStatus": "pending-review",
-      "attribution": "Mortal Kombat franchise \u00a9 Warner Bros. Entertainment Inc.",
-      "alt": "Mavado community reference render"
+      "rightsStatus": "approved",
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Mavado"
     },
     "versions": [
       {
@@ -6323,6 +7331,15 @@ export const characters: Character[] = [
             "name": "Red Dragon"
           }
         ],
+        "image": {
+          "assetId": "asset-mavado-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/3/33/MK1_Mavado_Render.png/revision/latest?cb=20250213151512",
+          "assetType": "character_portrait",
+          "entityId": "mavado",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Mavado"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -6353,6 +7370,15 @@ export const characters: Character[] = [
             "name": "Red Dragon"
           }
         ],
+        "image": {
+          "assetId": "asset-mavado-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/3/33/MK1_Mavado_Render.png/revision/latest?cb=20250213151512",
+          "assetType": "character_portrait",
+          "entityId": "mavado",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Mavado"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -6414,12 +7440,12 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-ferratorr-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mortalkombat/images/ferratorr_portrait.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/4/43/KAM_Ferra_Tower.png/revision/latest?cb=20240724085048",
       "assetType": "character_portrait",
       "entityId": "ferratorr",
-      "rightsStatus": "pending-review",
-      "attribution": "Mortal Kombat franchise \u00a9 Warner Bros. Entertainment Inc.",
-      "alt": "Ferra & Torr community reference render"
+      "rightsStatus": "approved",
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Ferra & Torr"
     },
     "versions": [
       {
@@ -6438,6 +7464,15 @@ export const characters: Character[] = [
             "name": "Osh-Tekk Tribe"
           }
         ],
+        "image": {
+          "assetId": "asset-ferratorr-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/4/43/KAM_Ferra_Tower.png/revision/latest?cb=20240724085048",
+          "assetType": "character_portrait",
+          "entityId": "ferratorr",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Ferra & Torr"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -6481,12 +7516,12 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-motaro-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mortalkombat/images/motaro_portrait.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/f/fb/Motaro_MK1_Render.png/revision/latest?cb=20231215100833",
       "assetType": "character_portrait",
       "entityId": "motaro",
-      "rightsStatus": "pending-review",
-      "attribution": "Mortal Kombat franchise \u00a9 Warner Bros. Entertainment Inc.",
-      "alt": "Motaro community reference render"
+      "rightsStatus": "approved",
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Motaro"
     },
     "versions": [
       {
@@ -6505,6 +7540,15 @@ export const characters: Character[] = [
         ],
         "weapons": [],
         "organizations": [],
+        "image": {
+          "assetId": "asset-motaro-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/f/fb/Motaro_MK1_Render.png/revision/latest?cb=20231215100833",
+          "assetType": "character_portrait",
+          "entityId": "motaro",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Motaro"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -6523,6 +7567,15 @@ export const characters: Character[] = [
         ],
         "weapons": [],
         "organizations": [],
+        "image": {
+          "assetId": "asset-motaro-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/f/fb/Motaro_MK1_Render.png/revision/latest?cb=20231215100833",
+          "assetType": "character_portrait",
+          "entityId": "motaro",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Motaro"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -6566,12 +7619,12 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-blaze-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mortalkombat/images/blaze_portrait.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/b/be/Blaze_Fury.png/revision/latest?cb=20160404023315",
       "assetType": "character_portrait",
       "entityId": "blaze",
-      "rightsStatus": "pending-review",
-      "attribution": "Mortal Kombat franchise \u00a9 Warner Bros. Entertainment Inc.",
-      "alt": "Blaze community reference render"
+      "rightsStatus": "approved",
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Blaze"
     },
     "versions": [
       {
@@ -6590,6 +7643,15 @@ export const characters: Character[] = [
         ],
         "weapons": [],
         "organizations": [],
+        "image": {
+          "assetId": "asset-blaze-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/b/be/Blaze_Fury.png/revision/latest?cb=20160404023315",
+          "assetType": "character_portrait",
+          "entityId": "blaze",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Blaze"
+        },
         "verificationStatus": "verified"
       },
       {
@@ -6608,6 +7670,15 @@ export const characters: Character[] = [
         ],
         "weapons": [],
         "organizations": [],
+        "image": {
+          "assetId": "asset-blaze-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/b/be/Blaze_Fury.png/revision/latest?cb=20160404023315",
+          "assetType": "character_portrait",
+          "entityId": "blaze",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Blaze"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -6651,12 +7722,12 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-daegon-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mortalkombat/images/daegon_portrait.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/f/f7/Daegon_Render_MKA.png/revision/latest?cb=20081011192925",
       "assetType": "character_portrait",
       "entityId": "daegon",
-      "rightsStatus": "pending-review",
-      "attribution": "Mortal Kombat franchise \u00a9 Warner Bros. Entertainment Inc.",
-      "alt": "Daegon community reference render"
+      "rightsStatus": "approved",
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Daegon"
     },
     "versions": [
       {
@@ -6675,6 +7746,15 @@ export const characters: Character[] = [
             "name": "Red Dragon"
           }
         ],
+        "image": {
+          "assetId": "asset-daegon-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/f/f7/Daegon_Render_MKA.png/revision/latest?cb=20081011192925",
+          "assetType": "character_portrait",
+          "entityId": "daegon",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Daegon"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -6718,12 +7798,12 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-taven-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mortalkombat/images/taven_portrait.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/e/ea/MKA_Taven_Render.png/revision/latest?cb=20081011123710",
       "assetType": "character_portrait",
       "entityId": "taven",
-      "rightsStatus": "pending-review",
-      "attribution": "Mortal Kombat franchise \u00a9 Warner Bros. Entertainment Inc.",
-      "alt": "Taven community reference render"
+      "rightsStatus": "approved",
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Taven"
     },
     "versions": [
       {
@@ -6736,6 +7816,15 @@ export const characters: Character[] = [
         "abilities": [],
         "weapons": [],
         "organizations": [],
+        "image": {
+          "assetId": "asset-taven-portrait",
+          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/e/ea/MKA_Taven_Render.png/revision/latest?cb=20081011123710",
+          "assetType": "character_portrait",
+          "entityId": "taven",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Taven"
+        },
         "verificationStatus": "verified"
       }
     ],
@@ -6775,7 +7864,15 @@ export const characters: Character[] = [
     "faction": "Neutral",
     "role": "Antihero",
     "popular": false,
-    "image": null,
+    "image": {
+      "assetId": "asset-scorpion-fetch-failed-portrait",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/a/ab/Scorpion.png/revision/latest?cb=20130603185450",
+      "assetType": "character_portrait",
+      "entityId": "scorpion-fetch-failed",
+      "rightsStatus": "approved",
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+      "alt": "Potret karakter resmi Scorpion (Fetch Failed)"
+    },
     "versions": [],
     "relationships": [],
     "relatedCharacters": [],
@@ -6839,12 +7936,12 @@ export const games: Game[] = [
     ],
     "image": {
       "assetId": "asset-mk1-1992-cover",
-      "assetURL": "https://press.wbd.com/media/games/mk1-1992/boxart.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/4/44/MK_title.png/revision/latest?cb=20060610175437",
       "assetType": "game_cover",
       "gameId": "mk1-1992",
       "rightsStatus": "approved",
-      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios",
-      "alt": "Mortal Kombat (1992) official standalone release box art cover"
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / Midway / NetherRealm Studios",
+      "alt": "Sampul resmi Mortal Kombat (1992)"
     },
     "sources": [
       {
@@ -6903,12 +8000,12 @@ export const games: Game[] = [
     ],
     "image": {
       "assetId": "asset-mk2-1993-cover",
-      "assetURL": "https://press.wbd.com/media/games/mk2-1993/boxart.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/6/6e/Mk2-1.png/revision/latest?cb=20060606003500",
       "assetType": "game_cover",
       "gameId": "mk2-1993",
       "rightsStatus": "approved",
-      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios",
-      "alt": "Mortal Kombat II official standalone release box art cover"
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / Midway / NetherRealm Studios",
+      "alt": "Sampul resmi Mortal Kombat II"
     },
     "sources": [
       {
@@ -6967,12 +8064,12 @@ export const games: Game[] = [
     ],
     "image": {
       "assetId": "asset-mk3-1995-cover",
-      "assetURL": "https://press.wbd.com/media/games/mk3-1995/boxart.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/0/0b/Mk3.png/revision/latest?cb=20060619152448",
       "assetType": "game_cover",
       "gameId": "mk3-1995",
       "rightsStatus": "approved",
-      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios",
-      "alt": "Mortal Kombat 3 official standalone release box art cover"
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / Midway / NetherRealm Studios",
+      "alt": "Sampul resmi Mortal Kombat 3"
     },
     "sources": [
       {
@@ -7031,12 +8128,12 @@ export const games: Game[] = [
     ],
     "image": {
       "assetId": "asset-umk3-1995-cover",
-      "assetURL": "https://press.wbd.com/media/games/umk3-1995/boxart.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/2/22/Umk3.png/revision/latest?cb=20060619004401",
       "assetType": "game_cover",
       "gameId": "umk3-1995",
       "rightsStatus": "approved",
-      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios",
-      "alt": "Ultimate Mortal Kombat 3 official standalone release box art cover"
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / Midway / NetherRealm Studios",
+      "alt": "Sampul resmi Ultimate Mortal Kombat 3"
     },
     "sources": [
       {
@@ -7095,12 +8192,12 @@ export const games: Game[] = [
     ],
     "image": {
       "assetId": "asset-mkt-1996-cover",
-      "assetURL": "https://press.wbd.com/media/games/mkt-1996/boxart.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/7/70/MKTBox.jpg/revision/latest?cb=20060619002237",
       "assetType": "game_cover",
       "gameId": "mkt-1996",
       "rightsStatus": "approved",
-      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios",
-      "alt": "Mortal Kombat Trilogy official standalone release box art cover"
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / Midway / NetherRealm Studios",
+      "alt": "Sampul resmi Mortal Kombat Trilogy"
     },
     "sources": [
       {
@@ -7159,12 +8256,12 @@ export const games: Game[] = [
     ],
     "image": {
       "assetId": "asset-mk4-1997-cover",
-      "assetURL": "https://press.wbd.com/media/games/mk4-1997/boxart.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/c/cc/Mok4gb0b.jpg/revision/latest?cb=20110509201625",
       "assetType": "game_cover",
       "gameId": "mk4-1997",
       "rightsStatus": "approved",
-      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios",
-      "alt": "Mortal Kombat 4 official standalone release box art cover"
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / Midway / NetherRealm Studios",
+      "alt": "Sampul resmi Mortal Kombat 4"
     },
     "sources": [
       {
@@ -7220,12 +8317,12 @@ export const games: Game[] = [
     ],
     "image": {
       "assetId": "asset-mk-gold-1999-cover",
-      "assetURL": "https://press.wbd.com/media/games/mk-gold-1999/boxart.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/1/1a/MK_gold_logo.jpg/revision/latest?cb=20060619002702",
       "assetType": "game_cover",
       "gameId": "mk-gold-1999",
       "rightsStatus": "approved",
-      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios",
-      "alt": "Mortal Kombat Gold official standalone release box art cover"
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / Midway / NetherRealm Studios",
+      "alt": "Sampul resmi Mortal Kombat Gold"
     },
     "sources": [
       {
@@ -7283,12 +8380,12 @@ export const games: Game[] = [
     ],
     "image": {
       "assetId": "asset-mk-deadly-alliance-2002-cover",
-      "assetURL": "https://press.wbd.com/media/games/mk-deadly-alliance-2002/boxart.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/6/6f/PS2_-_MK_Deadly_Alliance.jpg/revision/latest?cb=20060613184607",
       "assetType": "game_cover",
       "gameId": "mk-deadly-alliance-2002",
       "rightsStatus": "approved",
-      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios",
-      "alt": "Mortal Kombat: Deadly Alliance official standalone release box art cover"
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / Midway / NetherRealm Studios",
+      "alt": "Sampul resmi Mortal Kombat: Deadly Alliance"
     },
     "sources": [
       {
@@ -7344,12 +8441,12 @@ export const games: Game[] = [
     ],
     "image": {
       "assetId": "asset-mk-tournament-edition-2003-cover",
-      "assetURL": "https://press.wbd.com/media/games/mk-tournament-edition-2003/boxart.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/1/1b/Cover_Tournament_Edition.PNG/revision/latest?cb=20060619003627",
       "assetType": "game_cover",
       "gameId": "mk-tournament-edition-2003",
       "rightsStatus": "approved",
-      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios",
-      "alt": "Mortal Kombat: Tournament Edition official standalone release box art cover"
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / Midway / NetherRealm Studios",
+      "alt": "Sampul resmi Mortal Kombat: Tournament Edition"
     },
     "sources": [
       {
@@ -7407,12 +8504,12 @@ export const games: Game[] = [
     ],
     "image": {
       "assetId": "asset-mk-deception-2004-cover",
-      "assetURL": "https://press.wbd.com/media/games/mk-deception-2004/boxart.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/f/f2/Mortal_Kombat_-_Deception_Coverart.png/revision/latest?cb=20140806065300",
       "assetType": "game_cover",
       "gameId": "mk-deception-2004",
       "rightsStatus": "approved",
-      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios",
-      "alt": "Mortal Kombat: Deception official standalone release box art cover"
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / Midway / NetherRealm Studios",
+      "alt": "Sampul resmi Mortal Kombat: Deception"
     },
     "sources": [
       {
@@ -7468,12 +8565,12 @@ export const games: Game[] = [
     ],
     "image": {
       "assetId": "asset-mk-unchained-2006-cover",
-      "assetURL": "https://press.wbd.com/media/games/mk-unchained-2006/boxart.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/f/f6/Mkupegibox.jpg/revision/latest?cb=20110109001035",
       "assetType": "game_cover",
       "gameId": "mk-unchained-2006",
       "rightsStatus": "approved",
-      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios",
-      "alt": "Mortal Kombat: Unchained official standalone release box art cover"
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / Midway / NetherRealm Studios",
+      "alt": "Sampul resmi Mortal Kombat: Unchained"
     },
     "sources": [
       {
@@ -7531,12 +8628,12 @@ export const games: Game[] = [
     ],
     "image": {
       "assetId": "asset-mk-armageddon-2006-cover",
-      "assetURL": "https://press.wbd.com/media/games/mk-armageddon-2006/boxart.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/8/8e/MKA_Cover.jpg/revision/latest?cb=20190322083202",
       "assetType": "game_cover",
       "gameId": "mk-armageddon-2006",
       "rightsStatus": "approved",
-      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios",
-      "alt": "Mortal Kombat: Armageddon official standalone release box art cover"
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / Midway / NetherRealm Studios",
+      "alt": "Sampul resmi Mortal Kombat: Armageddon"
     },
     "sources": [
       {
@@ -7593,12 +8690,12 @@ export const games: Game[] = [
     ],
     "image": {
       "assetId": "asset-mk-mythologies-1997-cover",
-      "assetURL": "https://press.wbd.com/media/games/mk-mythologies-1997/boxart.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/e/ec/Mortal_Kombat_-_Mythologies_Sub_Zero_-_Logo_2.jpg/revision/latest?cb=20060619153416",
       "assetType": "game_cover",
       "gameId": "mk-mythologies-1997",
       "rightsStatus": "approved",
-      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios",
-      "alt": "Mortal Kombat Mythologies: Sub-Zero official standalone release box art cover"
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / Midway / NetherRealm Studios",
+      "alt": "Sampul resmi Mortal Kombat Mythologies: Sub-Zero"
     },
     "sources": [
       {
@@ -7654,12 +8751,12 @@ export const games: Game[] = [
     ],
     "image": {
       "assetId": "asset-mk-special-forces-2000-cover",
-      "assetURL": "https://press.wbd.com/media/games/mk-special-forces-2000/boxart.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/0/07/Mksf.png/revision/latest?cb=20060620024400",
       "assetType": "game_cover",
       "gameId": "mk-special-forces-2000",
       "rightsStatus": "approved",
-      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios",
-      "alt": "Mortal Kombat: Special Forces official standalone release box art cover"
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / Midway / NetherRealm Studios",
+      "alt": "Sampul resmi Mortal Kombat: Special Forces"
     },
     "sources": [
       {
@@ -7716,12 +8813,12 @@ export const games: Game[] = [
     ],
     "image": {
       "assetId": "asset-mk-shaolin-monks-2005-cover",
-      "assetURL": "https://press.wbd.com/media/games/mk-shaolin-monks-2005/boxart.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/2/21/Mortal_Kombat_Shaolin_Monks_cover.png/revision/latest?cb=20140824215814",
       "assetType": "game_cover",
       "gameId": "mk-shaolin-monks-2005",
       "rightsStatus": "approved",
-      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios",
-      "alt": "Mortal Kombat: Shaolin Monks official standalone release box art cover"
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / Midway / NetherRealm Studios",
+      "alt": "Sampul resmi Mortal Kombat: Shaolin Monks"
     },
     "sources": [
       {
@@ -7778,12 +8875,12 @@ export const games: Game[] = [
     ],
     "image": {
       "assetId": "asset-mk-vs-dc-2008-cover",
-      "assetURL": "https://press.wbd.com/media/games/mk-vs-dc-2008/boxart.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/9/9e/Mortal_Kombat_vs._DC_cover.jpg/revision/latest?cb=20140824213937",
       "assetType": "game_cover",
       "gameId": "mk-vs-dc-2008",
       "rightsStatus": "approved",
-      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios",
-      "alt": "Mortal Kombat vs. DC Universe official standalone release box art cover"
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / Midway / NetherRealm Studios",
+      "alt": "Sampul resmi Mortal Kombat vs. DC Universe"
     },
     "sources": [
       {
@@ -7841,12 +8938,12 @@ export const games: Game[] = [
     ],
     "image": {
       "assetId": "asset-mk-arcade-kollection-2011-cover",
-      "assetURL": "https://press.wbd.com/media/games/mk-arcade-kollection-2011/boxart.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/a/ae/MK_Kollection.jpg/revision/latest?cb=20110830124936",
       "assetType": "game_cover",
       "gameId": "mk-arcade-kollection-2011",
       "rightsStatus": "approved",
-      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios",
-      "alt": "Mortal Kombat Arcade Kollection official standalone release box art cover"
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / Midway / NetherRealm Studios",
+      "alt": "Sampul resmi Mortal Kombat Arcade Kollection"
     },
     "sources": [
       {
@@ -7904,12 +9001,12 @@ export const games: Game[] = [
     ],
     "image": {
       "assetId": "asset-mk9-2011-cover",
-      "assetURL": "https://press.wbd.com/media/games/mk9-2011/boxart.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/b/b1/Mortal_kombat_9-500x542.jpg/revision/latest?cb=20220419033542",
       "assetType": "game_cover",
       "gameId": "mk9-2011",
       "rightsStatus": "approved",
-      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios",
-      "alt": "Mortal Kombat (2011) official standalone release box art cover"
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / Midway / NetherRealm Studios",
+      "alt": "Sampul resmi Mortal Kombat (2011)"
     },
     "sources": [
       {
@@ -7967,12 +9064,12 @@ export const games: Game[] = [
     ],
     "image": {
       "assetId": "asset-mkx-2015-cover",
-      "assetURL": "https://press.wbd.com/media/games/mkx-2015/boxart.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/0/0d/MKX.png/revision/latest?cb=20200517164428",
       "assetType": "game_cover",
       "gameId": "mkx-2015",
       "rightsStatus": "approved",
-      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios",
-      "alt": "Mortal Kombat X official standalone release box art cover"
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / Midway / NetherRealm Studios",
+      "alt": "Sampul resmi Mortal Kombat X"
     },
     "sources": [
       {
@@ -8029,12 +9126,12 @@ export const games: Game[] = [
     ],
     "image": {
       "assetId": "asset-mk-mobile-2015-cover",
-      "assetURL": "https://press.wbd.com/media/games/mk-mobile-2015/boxart.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/0/0c/IconMortalKombatMobile10Years.jpg/revision/latest?cb=20260510201156",
       "assetType": "game_cover",
       "gameId": "mk-mobile-2015",
       "rightsStatus": "approved",
-      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios",
-      "alt": "Mortal Kombat Mobile official standalone release box art cover"
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / Midway / NetherRealm Studios",
+      "alt": "Sampul resmi Mortal Kombat Mobile"
     },
     "sources": [
       {
@@ -8093,12 +9190,12 @@ export const games: Game[] = [
     ],
     "image": {
       "assetId": "asset-mk11-2019-cover",
-      "assetURL": "https://press.wbd.com/media/games/mk11-2019/boxart.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/e/e2/Mk11coverart.png/revision/latest?cb=20190110191329",
       "assetType": "game_cover",
       "gameId": "mk11-2019",
       "rightsStatus": "approved",
-      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios",
-      "alt": "Mortal Kombat 11 official standalone release box art cover"
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / Midway / NetherRealm Studios",
+      "alt": "Sampul resmi Mortal Kombat 11"
     },
     "sources": [
       {
@@ -8157,12 +9254,12 @@ export const games: Game[] = [
     ],
     "image": {
       "assetId": "asset-mk1-2023-cover",
-      "assetURL": "https://press.wbd.com/media/games/mk1-2023/boxart.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/5/5a/MK1_cover_art.png/revision/latest?cb=20230518134700",
       "assetType": "game_cover",
       "gameId": "mk1-2023",
       "rightsStatus": "approved",
-      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios",
-      "alt": "Mortal Kombat 1 (2023) official standalone release box art cover"
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / Midway / NetherRealm Studios",
+      "alt": "Sampul resmi Mortal Kombat 1 (2023)"
     },
     "sources": [
       {
@@ -8219,12 +9316,12 @@ export const games: Game[] = [
     ],
     "image": {
       "assetId": "asset-mk-onslaught-2023-cover",
-      "assetURL": "https://press.wbd.com/media/games/mk-onslaught-2023/boxart.webp",
+      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/2/20/MKOnslaughtIcon.jpg/revision/latest?cb=20231006072446",
       "assetType": "game_cover",
       "gameId": "mk-onslaught-2023",
       "rightsStatus": "approved",
-      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios",
-      "alt": "Mortal Kombat: Onslaught official standalone release box art cover"
+      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / Midway / NetherRealm Studios",
+      "alt": "Sampul resmi Mortal Kombat: Onslaught"
     },
     "sources": [
       {

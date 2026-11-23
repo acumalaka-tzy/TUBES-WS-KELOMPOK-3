@@ -137,3 +137,15 @@ body {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Sembunyikan indikator Next.js development overlay */
+nextjs-portal,
+[data-nextjs-toast],
+[data-nextjs-dev-overlay],
+div[data-nextjs-route-announcer],
+button[aria-label="Next.js Dev Tools"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}

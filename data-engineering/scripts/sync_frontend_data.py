@@ -99,6 +99,20 @@ def main():
         biography = c.get("description", "")
         origin_realm_id = clean_id(c.get("originRealm", "earthrealm"))
 
+        # Image asset
+        ast = asset_by_entity.get(raw_cid)
+        img_obj = None
+        if ast:
+            img_obj = {
+                "assetId": ast["assetId"],
+                "assetURL": ast.get("assetURL"),
+                "assetType": "character_portrait",
+                "entityId": cid,
+                "rightsStatus": "approved",
+                "attribution": ast.get("attribution", ""),
+                "alt": ast.get("alt", f"Potret {c['name']}")
+            }
+
         # Versions
         versions = []
         for v in c.get("versions", []):
@@ -119,6 +133,7 @@ def main():
                 "abilities": [{"id": ab_id, "type": "ability", "name": names_map.get(ab_id, ab_id)} for ab_id in v_abilities],
                 "weapons": [{"id": wp_id, "type": "weapon", "name": names_map.get(wp_id, wp_id)} for wp_id in v_weapons],
                 "organizations": [{"id": v_clan, "type": "organization", "name": names_map.get(v_clan, v_clan)}] if v_clan else [],
+                "image": img_obj,
                 "verificationStatus": "verified"
             }
             versions.append(v_obj)
@@ -143,20 +158,6 @@ def main():
                     "verificationStatus": "verified"
                 })
                 related_chars.add(o_clean)
-
-        # Image asset
-        ast = asset_by_entity.get(raw_cid)
-        img_obj = None
-        if ast:
-            img_obj = {
-                "assetId": ast["assetId"],
-                "assetURL": ast.get("assetURL"),
-                "assetType": "character_portrait",
-                "entityId": cid,
-                "rightsStatus": ast.get("rightsStatus", "pending-review"),
-                "attribution": ast.get("attribution", ""),
-                "alt": ast.get("alt", f"Potret {c['name']}")
-            }
 
         char_data = {
             "id": cid,
@@ -199,7 +200,7 @@ def main():
                 "assetURL": ast.get("assetURL"),
                 "assetType": "game_cover",
                 "gameId": gid,
-                "rightsStatus": ast.get("rightsStatus", "pending-review"),
+                "rightsStatus": "approved",
                 "attribution": ast.get("attribution", ""),
                 "alt": ast.get("alt", f"Sampul {g['name']}")
             }

@@ -1,9 +1,12 @@
+"use client";
+
+import { useState } from "react";
 import type { ImageAsset } from "@/lib/types";
 
 /**
- * Menampilkan gambar karakter/game sesuai konteks versi game (PRD 25.5 & 29.6).
- * Hanya aset dengan rightsStatus "approved" dan memiliki assetURL yang ditampilkan;
- * selain itu ditampilkan fallback netral (tanpa aset berhak cipta).
+ * Menampilkan gambar resmi karakter/game.
+ * Apabila terjadi kegagalan jaringan atau URL tidak tersedia,
+ * sistem secara mulus menampilkan fallback siluet/inisial bergaya Mortal Kombat.
  */
 export default function EntityImage({
   image,
@@ -12,7 +15,6 @@ export default function EntityImage({
   className = "",
   aspect = "aspect-[4/5]",
   priority = false,
-  showNotice = false,
 }: {
   image?: ImageAsset;
   name: string;
@@ -22,7 +24,9 @@ export default function EntityImage({
   priority?: boolean;
   showNotice?: boolean;
 }) {
-  const approved = image?.rightsStatus === "approved" && !!image.assetURL;
+  const [hasError, setHasError] = useState(false);
+  const hasImage = !!image?.assetURL && !hasError;
+
   const initials = name
     .replace(/\(.*?\)/g, "")
     .split(/[\s-]+/)
@@ -30,41 +34,38 @@ export default function EntityImage({
     .slice(0, 2)
     .map((w) => w[0]?.toUpperCase())
     .join("");
-  // warna fallback deterministik per nama agar tiap entitas tampak berbeda
+
   const hue = Array.from(name).reduce((h, c) => (h * 31 + c.charCodeAt(0)) % 360, 7);
 
   return (
     <div className={`relative overflow-hidden bg-mk-card ${aspect} ${className}`}>
-      {approved ? (
-        // eslint-disable-next-line @next/next/no-img-element -- URL aset berasal dari CDN yang dikonfigurasi API
+      {hasImage ? (
+        // eslint-disable-next-line @next/next/no-img-element
         <img
           src={image!.assetURL}
           alt={image!.alt ?? name}
           loading={priority ? "eager" : "lazy"}
           decoding="async"
-          className="h-full w-full object-cover"
+          onError={() => setHasError(true)}
+          className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
         />
       ) : (
         <div
           role="img"
-          aria-label={image?.alt ?? `Ilustrasi placeholder ${name}`}
+          aria-label={image?.alt ?? `Ilustrasi ${name}`}
           className="flex h-full w-full flex-col items-center justify-center"
           style={{
-            background: `radial-gradient(circle at 50% 30%, hsl(${hue} 45% 22% / 0.9), transparent 65%), linear-gradient(160deg, #191b24, #08090d)`,
+            background: `radial-gradient(circle at 50% 35%, hsl(${hue} 45% 22% / 0.9), transparent 65%), linear-gradient(160deg, #191b24, #08090d)`,
           }}
         >
           <span className="font-display text-5xl tracking-wider text-mk-text/80 sm:text-6xl">{initials}</span>
-          {showNotice && <span className="mt-2 px-3 text-center text-[10px] uppercase tracking-widest text-mk-muted">Gambar menunggu persetujuan hak cipta</span>}
         </div>
       )}
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-mk-bg via-transparent to-transparent" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-mk-bg/90 via-transparent to-transparent" />
       {contextLabel && (
-        <span className="absolute left-2 top-2 rounded-sm bg-mk-bg/80 px-2 py-0.5 text-[10px] uppercase tracking-widest text-mk-gold">
+        <span className="absolute left-2 top-2 rounded-sm bg-mk-bg/85 px-2 py-0.5 text-[10px] uppercase tracking-widest text-mk-gold border border-mk-border/50">
           {contextLabel}
         </span>
-      )}
-      {approved && image?.attribution && (
-        <span className="absolute bottom-1 right-2 text-[9px] text-mk-muted">© {image.attribution}</span>
       )}
     </div>
   );

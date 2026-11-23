@@ -3,6 +3,7 @@ import { Bebas_Neue, Cinzel, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import FloatingAssistant from "@/components/ai/FloatingAssistant";
 
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
 const cinzel = Cinzel({ variable: "--font-cinzel", subsets: ["latin"], weight: ["600", "700", "800"] });
@@ -32,6 +33,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           {children}
         </main>
         <Footer />
+        <FloatingAssistant />
       </body>
     </html>
   );

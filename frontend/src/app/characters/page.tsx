@@ -114,7 +114,7 @@ export default function CharactersPage() {
                   name={c.name}
                   subtitle={c.summary}
                   type="character"
-                  image={latestVer?.image}
+                  image={latestVer?.image ?? c.image}
                   contextLabel={latestVer?.gameTitle}
                 />
               );

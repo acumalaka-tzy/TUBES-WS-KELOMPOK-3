@@ -113,9 +113,9 @@ export default function AssistantPage() {
   return (
     <>
       <PageHeader
-        eyebrow="Semantic RAG &amp; LLM"
+        eyebrow="Semantic RAG &amp; AI"
         title="AI Knowledge Assistant"
-        description="Tanya jawab interaktif berbasis Semantic Knowledge Graph dan ontologi Mortal Kombat (PRD v1.5 Bagian 6 &amp; 25.6)."
+        description="Tanya jawab interaktif berbasis kecerdasan semantik kanonikal Mortal Kombat."
         crumbs={[{ label: "AI Assistant" }]}
       />
 
@@ -129,12 +129,12 @@ export default function AssistantPage() {
               </span>
               <div>
                 <p className="font-heading text-sm font-bold text-mk-text">Mortal Kombat Knowledge AI</p>
-                <p className="text-[11px] text-mk-muted">Tergrounding pada Knowledge Graph &amp; RDF Ontology</p>
+                <p className="text-[11px] text-mk-muted">Pencarian Semantik &amp; RAG Terpadu</p>
               </div>
             </div>
             <div className="flex items-center gap-2">
               <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
-              <span className="text-xs text-mk-muted">RAG Active</span>
+              <span className="text-xs text-mk-muted">Online</span>
             </div>
           </div>
 
@@ -211,7 +211,7 @@ export default function AssistantPage() {
             {loading && (
               <div className="flex items-center gap-2 rounded-sm border border-mk-border bg-mk-bg p-3 text-xs text-mk-muted max-w-[90%] sm:max-w-[70%] lg:max-w-[50%]">
                 <span className="inline-block h-3 w-3 animate-spin rounded-full border-2 border-mk-red border-t-transparent" />
-                <span>AI sedang menelusuri Knowledge Graph dan menyusun jawaban...</span>
+                <span>AI sedang menelusuri data kanonikal dan menyusun jawaban...</span>
               </div>
             )}
             <div ref={messagesEndRef} />

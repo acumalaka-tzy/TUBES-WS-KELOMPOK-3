@@ -43,8 +43,6 @@ export const MAIN_NAV: NavItem[] = [
   { label: "Characters", href: "/characters" },
   { label: "Games", href: "/games" },
   { label: "Story", href: "/story" },
-  { label: "Knowledge Graph", href: "/knowledge-graph" },
-  { label: "AI Assistant", href: "/assistant" },
   { label: "About", href: "/about" },
 ];
 

@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { USE_MOCK } from "@/lib/api";
 
 const groups = [
   {
@@ -24,7 +23,6 @@ const groups = [
     title: "Nexus",
     links: [
       { label: "Global Search", href: "/search" },
-      { label: "Knowledge Graph", href: "/knowledge-graph" },
       { label: "Explore", href: "/explore" },
       { label: "About", href: "/about" },
     ],
@@ -38,7 +36,7 @@ export default function Footer() {
         <div>
           <p className="font-heading text-lg font-bold tracking-[0.2em]">MK NEXUS</p>
           <p className="mt-3 text-sm text-mk-muted">
-            Semantic Knowledge Graph &amp; Hybrid Search Engine untuk lore Mortal Kombat. Tugas Besar Kelompok 3.
+            Ensiklopedia dan mesin pencari komprehensif semesta Mortal Kombat.
           </p>
         </div>
         {groups.map((g) => (
@@ -59,12 +57,8 @@ export default function Footer() {
       <div className="border-t border-mk-border">
         <div className="mx-auto flex max-w-7xl flex-col gap-2 px-4 py-5 text-xs text-mk-muted sm:px-6 md:flex-row md:items-center md:justify-between">
           <p>
-            <strong className="text-mk-text">Proyek penggemar tidak resmi.</strong> Mortal Kombat dan seluruh merek terkait adalah milik
-            pemegang hak masing-masing. Situs ini tidak berafiliasi dengan Warner Bros. Games maupun NetherRealm Studios.
+            © 2026 Mortal Kombat Knowledge Nexus. Seluruh hak cipta, merek dagang, dan materi Mortal Kombat adalah milik Warner Bros. Entertainment Inc. dan NetherRealm Studios.
           </p>
-          {USE_MOCK && (
-            <p className="shrink-0 rounded-sm border border-mk-gold/40 px-2 py-1 text-mk-gold">Mode data contoh (mock)</p>
-          )}
         </div>
       </div>
     </footer>
