@@ -8223,7 +8223,7 @@ export const games: Game[] = [
     "developer": "Midway Games",
     "publisher": "Midway Games",
     "gameType": "Fighting (2D/3D)",
-    "era": "Classic Era",
+    "era": "3D Era",
     "summary": "The first 3D installment focusing on the fallen Elder God Shinnok's war, introducing real-time 3D environments and drawn weapon combat.",
     "timeline": {
       "id": "original",
@@ -8284,7 +8284,7 @@ export const games: Game[] = [
     "developer": "Midway Games",
     "publisher": "Midway Games",
     "gameType": "Fighting (2D/3D)",
-    "era": "Classic Era",
+    "era": "3D Era",
     "summary": "Standalone enhanced 3D release of MK4 for Dreamcast adding Kitana, Mileena, Cyrax, Kung Lao, and Baraka to the Shinnok conflict.",
     "timeline": {
       "id": "original",
@@ -8347,7 +8347,7 @@ export const games: Game[] = [
     "developer": "Midway Games",
     "publisher": "Midway Games",
     "gameType": "Fighting (2D/3D)",
-    "era": "Classic Era",
+    "era": "3D Era",
     "summary": "Reinvented combat mechanics with three unique fighting styles per warrior and the dark alliance between sorcerers Shang Tsung and Quan Chi.",
     "timeline": {
       "id": "original",
@@ -8408,7 +8408,7 @@ export const games: Game[] = [
     "developer": "Midway Games",
     "publisher": "Midway Games",
     "gameType": "Fighting (2D/3D)",
-    "era": "Classic Era",
+    "era": "3D Era",
     "summary": "Standalone handheld sister release to Deadly Alliance introducing Sareena, Mavado, and Bo' Rai Cho in dedicated mobile 3D combat.",
     "timeline": {
       "id": "original",
@@ -8471,7 +8471,7 @@ export const games: Game[] = [
     "developer": "Midway Games",
     "publisher": "Midway Games",
     "gameType": "Fighting (2D/3D)",
-    "era": "Classic Era",
+    "era": "3D Era",
     "summary": "Features the return of the Dragon King Onaga, death traps, Puzzle/Chess Kombat, and the open-world RPG Konquest adventure mode.",
     "timeline": {
       "id": "original",
@@ -8532,7 +8532,7 @@ export const games: Game[] = [
     "developer": "Midway Games",
     "publisher": "Midway Games",
     "gameType": "Fighting (2D/3D)",
-    "era": "Classic Era",
+    "era": "3D Era",
     "summary": "Standalone handheld adaptation of Deception for PSP featuring exclusive access to Kitana, Jax, Frost, and Blaze in base roster.",
     "timeline": {
       "id": "original",
@@ -8595,7 +8595,7 @@ export const games: Game[] = [
     "developer": "Midway Games",
     "publisher": "Midway Games",
     "gameType": "Fighting (2D/3D)",
-    "era": "Classic Era",
+    "era": "3D Era",
     "summary": "Climax of the original continuity featuring all 62 fighters competing at the Pyramid of Argus, Kreate-A-Fighter, and Motor Kombat.",
     "timeline": {
       "id": "original",
@@ -8968,7 +8968,7 @@ export const games: Game[] = [
     "developer": "NetherRealm Studios",
     "publisher": "Warner Bros. Games",
     "gameType": "Fighting (2D/3D)",
-    "era": "Classic Era",
+    "era": "Reboot Era",
     "summary": "Timeline reset orchestrated by Raiden rewinding the events of MK1 through MK3, introducing the super meter and cinematic Story Mode.",
     "timeline": {
       "id": "original",
@@ -9031,7 +9031,7 @@ export const games: Game[] = [
     "developer": "NetherRealm Studios",
     "publisher": "Warner Bros. Games",
     "gameType": "Fighting (2D/3D)",
-    "era": "Classic Era",
+    "era": "Reboot Era",
     "summary": "Set 25 years after MK9, introducing three distinct character combat variations and the next generation of Earthrealm Kombatants.",
     "timeline": {
       "id": "original",
@@ -9093,7 +9093,7 @@ export const games: Game[] = [
     "developer": "NetherRealm Studios",
     "publisher": "Warner Bros. Games",
     "gameType": "Fighting (2D/3D)",
-    "era": "Classic Era",
+    "era": "Reboot Era",
     "summary": "Standalone free-to-play mobile collectible card fighter and battle team game with touch-based gestures and persistent cross-game events.",
     "timeline": {
       "id": "original",
@@ -9157,7 +9157,7 @@ export const games: Game[] = [
     "developer": "NetherRealm Studios",
     "publisher": "Warner Bros. Games",
     "gameType": "Fighting (2D/3D)",
-    "era": "Classic Era",
+    "era": "Reboot Era",
     "summary": "Time-bending conflict against Keeper of Time Kronika, introducing Krushing Blows, Fatal Blows, and deep cosmetic gear customization.",
     "timeline": {
       "id": "original",
@@ -12976,28 +12976,64 @@ export const organizations: Organization[] = [
     "id": "shirai-ryu",
     "name": "Shirai Ryu",
     "kind": "clan",
-    "description": "Renegade ninja clan of Japan founded by Takeda, historically led by Grandmaster Hanzo Hasashi.",
+    "description": "Klan ninja pemberontak Jepang yang didirikan oleh Takeda, dipimpin secara historis oleh Grandmaster Hanzo Hasashi (Scorpion) dengan sumpah melindungi Earthrealm dan membalaskan dendam keluarganya.",
+    "leader": {
+      "id": "scorpion",
+      "type": "character",
+      "name": "Scorpion (Hanzo Hasashi)"
+    },
     "members": [
       {
         "id": "scorpion",
         "type": "character",
         "name": "Scorpion"
+      },
+      {
+        "id": "takeda",
+        "type": "character",
+        "name": "Takeda Takahashi"
+      },
+      {
+        "id": "kenshi",
+        "type": "character",
+        "name": "Kenshi"
+      },
+      {
+        "id": "smoke",
+        "type": "character",
+        "name": "Smoke"
       }
     ],
-    "rivals": [],
+    "rivals": [
+      {
+        "id": "lin-kuei",
+        "type": "organization",
+        "name": "Lin Kuei"
+      },
+      {
+        "id": "brotherhood-of-shadow",
+        "type": "organization",
+        "name": "Brotherhood of Shadow"
+      }
+    ],
     "timelines": [
       {
         "id": "original",
         "type": "timeline",
         "name": "Timeline Original"
+      },
+      {
+        "id": "reboot",
+        "type": "timeline",
+        "name": "Timeline Baru (Reboot)"
       }
     ],
     "events": [],
     "sources": [
       {
         "id": "fandom-shirai-ryu",
-        "title": "Mortal Kombat Wiki \u2014 Shirai Ryu",
-        "url": "https://mortalkombat.fandom.com",
+        "title": "Mortal Kombat Wiki — Shirai Ryu",
+        "url": "https://mortalkombat.fandom.com/wiki/Shirai_Ryu",
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
@@ -13007,28 +13043,74 @@ export const organizations: Organization[] = [
     "id": "lin-kuei",
     "name": "Lin Kuei",
     "kind": "clan",
-    "description": "Ancient Chinese stealth clan of assassins and cryomancers, historically pledged to protect Earthrealm.",
+    "description": "Klan pembunuh siluman kuno Tiongkok yang beranggotakan para cryomancer dan petarung berkemampuan khusus, berkomitmen melindungi Earthrealm sebelum dirusak oleh program Cyber Initiative.",
+    "leader": {
+      "id": "sub-zero",
+      "type": "character",
+      "name": "Sub-Zero (Kuai Liang)"
+    },
     "members": [
       {
-        "id": "scorpion",
+        "id": "sub-zero",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Sub-Zero"
+      },
+      {
+        "id": "noob-saibot",
+        "type": "character",
+        "name": "Noob Saibot (Bi-Han)"
+      },
+      {
+        "id": "smoke",
+        "type": "character",
+        "name": "Smoke"
+      },
+      {
+        "id": "cyrax",
+        "type": "character",
+        "name": "Cyrax"
+      },
+      {
+        "id": "sektor",
+        "type": "character",
+        "name": "Sektor"
+      },
+      {
+        "id": "frost",
+        "type": "character",
+        "name": "Frost"
       }
     ],
-    "rivals": [],
+    "rivals": [
+      {
+        "id": "shirai-ryu",
+        "type": "organization",
+        "name": "Shirai Ryu"
+      },
+      {
+        "id": "special-forces",
+        "type": "organization",
+        "name": "Special Forces"
+      }
+    ],
     "timelines": [
       {
         "id": "original",
         "type": "timeline",
         "name": "Timeline Original"
+      },
+      {
+        "id": "reboot",
+        "type": "timeline",
+        "name": "Timeline Baru (Reboot)"
       }
     ],
     "events": [],
     "sources": [
       {
         "id": "fandom-lin-kuei",
-        "title": "Mortal Kombat Wiki \u2014 Lin Kuei",
-        "url": "https://mortalkombat.fandom.com",
+        "title": "Mortal Kombat Wiki — Lin Kuei",
+        "url": "https://mortalkombat.fandom.com/wiki/Lin_Kuei",
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
@@ -13038,28 +13120,84 @@ export const organizations: Organization[] = [
     "id": "special-forces",
     "name": "Special Forces",
     "kind": "organization",
-    "description": "Earthrealm military division led by Sonya Blade and Jax Briggs tasked with countering otherworldly threats.",
+    "description": "Divisi militer elite taktis dan intelijen Earthrealm yang dipimpin oleh Jenderal Sonya Blade dan Mayor Jackson Briggs guna menangkal ancaman antardimensi dan sindikat kejahatan global.",
+    "leader": {
+      "id": "sonya-blade",
+      "type": "character",
+      "name": "Sonya Blade"
+    },
     "members": [
       {
-        "id": "scorpion",
+        "id": "sonya-blade",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Sonya Blade"
+      },
+      {
+        "id": "jax",
+        "type": "character",
+        "name": "Jax Briggs"
+      },
+      {
+        "id": "johnny-cage",
+        "type": "character",
+        "name": "Johnny Cage"
+      },
+      {
+        "id": "cassiecage",
+        "type": "character",
+        "name": "Cassie Cage"
+      },
+      {
+        "id": "jacqui",
+        "type": "character",
+        "name": "Jacqui Briggs"
+      },
+      {
+        "id": "kenshi",
+        "type": "character",
+        "name": "Kenshi"
+      },
+      {
+        "id": "stryker",
+        "type": "character",
+        "name": "Kurtis Stryker"
+      },
+      {
+        "id": "kungjin",
+        "type": "character",
+        "name": "Kung Jin"
       }
     ],
-    "rivals": [],
+    "rivals": [
+      {
+        "id": "black-dragon",
+        "type": "organization",
+        "name": "Black Dragon"
+      },
+      {
+        "id": "red-dragon",
+        "type": "organization",
+        "name": "Red Dragon"
+      }
+    ],
     "timelines": [
       {
         "id": "original",
         "type": "timeline",
         "name": "Timeline Original"
+      },
+      {
+        "id": "reboot",
+        "type": "timeline",
+        "name": "Timeline Baru (Reboot)"
       }
     ],
     "events": [],
     "sources": [
       {
         "id": "fandom-special-forces",
-        "title": "Mortal Kombat Wiki \u2014 Special Forces",
-        "url": "https://mortalkombat.fandom.com",
+        "title": "Mortal Kombat Wiki — Special Forces",
+        "url": "https://mortalkombat.fandom.com/wiki/Special_Forces",
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
@@ -13069,28 +13207,59 @@ export const organizations: Organization[] = [
     "id": "black-dragon",
     "name": "Black Dragon",
     "kind": "organization",
-    "description": "Ruthless international mercenary syndicate led by the criminal Kano dealing in illicit weapons and extortion.",
+    "description": "Sindikat tentara bayaran, kriminal internasional, dan penyelundup senjata tanpa ampun yang dipimpin oleh Kano, menjadi musuh bebuyutan Special Forces di Earthrealm.",
+    "leader": {
+      "id": "kano",
+      "type": "character",
+      "name": "Kano"
+    },
     "members": [
       {
-        "id": "scorpion",
+        "id": "kano",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Kano"
+      },
+      {
+        "id": "kabal",
+        "type": "character",
+        "name": "Kabal"
+      },
+      {
+        "id": "erronblack",
+        "type": "character",
+        "name": "Erron Black"
       }
     ],
-    "rivals": [],
+    "rivals": [
+      {
+        "id": "special-forces",
+        "type": "organization",
+        "name": "Special Forces"
+      },
+      {
+        "id": "red-dragon",
+        "type": "organization",
+        "name": "Red Dragon"
+      }
+    ],
     "timelines": [
       {
         "id": "original",
         "type": "timeline",
         "name": "Timeline Original"
+      },
+      {
+        "id": "reboot",
+        "type": "timeline",
+        "name": "Timeline Baru (Reboot)"
       }
     ],
     "events": [],
     "sources": [
       {
         "id": "fandom-black-dragon",
-        "title": "Mortal Kombat Wiki \u2014 Black Dragon",
-        "url": "https://mortalkombat.fandom.com",
+        "title": "Mortal Kombat Wiki — Black Dragon",
+        "url": "https://mortalkombat.fandom.com/wiki/Black_Dragon",
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
@@ -13100,28 +13269,74 @@ export const organizations: Organization[] = [
     "id": "white-lotus",
     "name": "White Lotus Society",
     "kind": "organization",
-    "description": "Secret society of martial artists founded by Raiden to defend Earthrealm in Mortal Kombat tournaments.",
+    "description": "Perhimpunan rahasia biksu Shaolin dan petarung kebajikan yang dibentuk oleh Dewa Petir Raiden untuk mendidik para jawara Earthrealm dalam menghadapi Turnamen Mortal Kombat.",
+    "leader": {
+      "id": "raiden",
+      "type": "character",
+      "name": "Raiden"
+    },
     "members": [
       {
-        "id": "scorpion",
+        "id": "raiden",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Raiden"
+      },
+      {
+        "id": "liu-kang",
+        "type": "character",
+        "name": "Liu Kang"
+      },
+      {
+        "id": "kung-lao",
+        "type": "character",
+        "name": "Kung Lao"
+      },
+      {
+        "id": "fujin",
+        "type": "character",
+        "name": "Fujin"
+      },
+      {
+        "id": "boraicho",
+        "type": "character",
+        "name": "Bo' Rai Cho"
+      },
+      {
+        "id": "shujinko",
+        "type": "character",
+        "name": "Shujinko"
+      },
+      {
+        "id": "kungjin",
+        "type": "character",
+        "name": "Kung Jin"
       }
     ],
-    "rivals": [],
+    "rivals": [
+      {
+        "id": "brotherhood-of-shadow",
+        "type": "organization",
+        "name": "Brotherhood of Shadow"
+      }
+    ],
     "timelines": [
       {
         "id": "original",
         "type": "timeline",
         "name": "Timeline Original"
+      },
+      {
+        "id": "reboot",
+        "type": "timeline",
+        "name": "Timeline Baru (Reboot)"
       }
     ],
     "events": [],
     "sources": [
       {
         "id": "fandom-white-lotus",
-        "title": "Mortal Kombat Wiki \u2014 White Lotus Society",
-        "url": "https://mortalkombat.fandom.com",
+        "title": "Mortal Kombat Wiki — White Lotus Society",
+        "url": "https://mortalkombat.fandom.com/wiki/White_Lotus_Society",
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
@@ -13131,28 +13346,69 @@ export const organizations: Organization[] = [
     "id": "brotherhood-of-shadow",
     "name": "Brotherhood of Shadow",
     "kind": "organization",
-    "description": "Fanatical Netherrealm religious cult serving the fallen Elder God Shinnok and sorcerer Quan Chi.",
+    "description": "Sekte fanatik kegelapan dari Netherrealm yang mengabdi setia kepada Dewa Kuno sesat Shinnok dan penyihir licik Quan Chi untuk menyebarkan kekacauan di seluruh dimensi.",
+    "leader": {
+      "id": "shinnok",
+      "type": "character",
+      "name": "Shinnok"
+    },
     "members": [
       {
-        "id": "scorpion",
+        "id": "shinnok",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Shinnok"
+      },
+      {
+        "id": "quanchi",
+        "type": "character",
+        "name": "Quan Chi"
+      },
+      {
+        "id": "noob-saibot",
+        "type": "character",
+        "name": "Noob Saibot"
+      },
+      {
+        "id": "sareena",
+        "type": "character",
+        "name": "Sareena"
+      },
+      {
+        "id": "ashrah",
+        "type": "character",
+        "name": "Ashrah"
       }
     ],
-    "rivals": [],
+    "rivals": [
+      {
+        "id": "white-lotus",
+        "type": "organization",
+        "name": "White Lotus Society"
+      },
+      {
+        "id": "shirai-ryu",
+        "type": "organization",
+        "name": "Shirai Ryu"
+      }
+    ],
     "timelines": [
       {
         "id": "original",
         "type": "timeline",
         "name": "Timeline Original"
+      },
+      {
+        "id": "reboot",
+        "type": "timeline",
+        "name": "Timeline Baru (Reboot)"
       }
     ],
     "events": [],
     "sources": [
       {
         "id": "fandom-brotherhood-of-shadow",
-        "title": "Mortal Kombat Wiki \u2014 Brotherhood of Shadow",
-        "url": "https://mortalkombat.fandom.com",
+        "title": "Mortal Kombat Wiki — Brotherhood of Shadow",
+        "url": "https://mortalkombat.fandom.com/wiki/Brotherhood_of_Shadow",
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
@@ -13162,15 +13418,36 @@ export const organizations: Organization[] = [
     "id": "red-dragon",
     "name": "Red Dragon",
     "kind": "organization",
-    "description": "Ancient secret criminal syndicate founded by the Edenian demigod Daegon, sworn mortal enemies of the Black Dragon.",
+    "description": "Sindikat klan kriminal kuno yang didirikan ribuan tahun silam oleh manusia setengah dewa Edenia, Daegon, dengan struktur militeristik ketat guna menghancurkan klan sempalan Black Dragon.",
+    "leader": {
+      "id": "daegon",
+      "type": "character",
+      "name": "Daegon"
+    },
     "members": [
       {
-        "id": "scorpion",
+        "id": "daegon",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Daegon"
+      },
+      {
+        "id": "mavado",
+        "type": "character",
+        "name": "Mavado"
       }
     ],
-    "rivals": [],
+    "rivals": [
+      {
+        "id": "black-dragon",
+        "type": "organization",
+        "name": "Black Dragon"
+      },
+      {
+        "id": "special-forces",
+        "type": "organization",
+        "name": "Special Forces"
+      }
+    ],
     "timelines": [
       {
         "id": "original",
@@ -13182,8 +13459,8 @@ export const organizations: Organization[] = [
     "sources": [
       {
         "id": "fandom-red-dragon",
-        "title": "Mortal Kombat Wiki \u2014 Red Dragon",
-        "url": "https://mortalkombat.fandom.com",
+        "title": "Mortal Kombat Wiki — Red Dragon",
+        "url": "https://mortalkombat.fandom.com/wiki/Red_Dragon",
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
@@ -13193,28 +13470,59 @@ export const organizations: Organization[] = [
     "id": "umgadi",
     "name": "The Umgadi",
     "kind": "organization",
-    "description": "Elite warrior priestesses selected from Outworld first-born daughters sworn to protect the royal family and emperor.",
+    "description": "Ordo kesatria wanita dan pendeta tempur terbaik yang dipilih sejak kecil dari putri sulung Outworld, bersumpah menjaga takhta kerajaan dan keluarga kaisar sampai titik darah penghabisan.",
+    "leader": {
+      "id": "tanya",
+      "type": "character",
+      "name": "Tanya"
+    },
     "members": [
       {
-        "id": "scorpion",
+        "id": "tanya",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Tanya"
+      },
+      {
+        "id": "limei",
+        "type": "character",
+        "name": "Li Mei"
+      },
+      {
+        "id": "kitana",
+        "type": "character",
+        "name": "Kitana"
+      },
+      {
+        "id": "mileena",
+        "type": "character",
+        "name": "Mileena"
+      },
+      {
+        "id": "jade",
+        "type": "character",
+        "name": "Jade"
       }
     ],
-    "rivals": [],
+    "rivals": [
+      {
+        "id": "brotherhood-of-shadow",
+        "type": "organization",
+        "name": "Brotherhood of Shadow"
+      }
+    ],
     "timelines": [
       {
-        "id": "original",
+        "id": "new-era",
         "type": "timeline",
-        "name": "Timeline Original"
+        "name": "New Era (MK1 2023)"
       }
     ],
     "events": [],
     "sources": [
       {
         "id": "fandom-umgadi",
-        "title": "Mortal Kombat Wiki \u2014 The Umgadi",
-        "url": "https://mortalkombat.fandom.com",
+        "title": "Mortal Kombat Wiki — The Umgadi",
+        "url": "https://mortalkombat.fandom.com/wiki/Umgadi",
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
@@ -13223,29 +13531,55 @@ export const organizations: Organization[] = [
   {
     "id": "osh-tekk",
     "name": "Osh-Tekk Tribe",
-    "kind": "organization",
-    "description": "Sun-worshipping warrior civilization of Outworld historically ruled by Kotal K'atz and Emperor Kotal Kahn.",
+    "kind": "faction",
+    "description": "Peradaban kesatria penyembah kekuatan matahari dari Outworld yang perkasa dan berdisiplin tinggi, dipimpin oleh Jenderal perang Kotal Kahn yang kemudian naik takhta menjadi Kaisar Outworld.",
+    "leader": {
+      "id": "kotalkahn",
+      "type": "character",
+      "name": "Kotal Kahn"
+    },
     "members": [
       {
-        "id": "scorpion",
+        "id": "kotalkahn",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Kotal Kahn"
+      },
+      {
+        "id": "ferratorr",
+        "type": "character",
+        "name": "Ferra & Torr"
+      },
+      {
+        "id": "dvorah",
+        "type": "character",
+        "name": "D'Vorah"
+      },
+      {
+        "id": "erronblack",
+        "type": "character",
+        "name": "Erron Black"
       }
     ],
-    "rivals": [],
+    "rivals": [
+      {
+        "id": "brotherhood-of-shadow",
+        "type": "organization",
+        "name": "Brotherhood of Shadow"
+      }
+    ],
     "timelines": [
       {
-        "id": "original",
+        "id": "reboot",
         "type": "timeline",
-        "name": "Timeline Original"
+        "name": "Timeline Baru (Reboot)"
       }
     ],
     "events": [],
     "sources": [
       {
         "id": "fandom-osh-tekk",
-        "title": "Mortal Kombat Wiki \u2014 Osh-Tekk Tribe",
-        "url": "https://mortalkombat.fandom.com",
+        "title": "Mortal Kombat Wiki — Osh-Tekk Tribe",
+        "url": "https://mortalkombat.fandom.com/wiki/Osh-Tekk",
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
@@ -13255,15 +13589,31 @@ export const organizations: Organization[] = [
     "id": "seidan-guard",
     "name": "Seidan Guard",
     "kind": "organization",
-    "description": "The disciplined, authoritarian military defense force of Orderrealm commanded by Hotaru.",
+    "description": "Pasukan militer penjaga ketertiban berkekuatan absolut dari dimensi Orderrealm (Seido) yang dipimpin oleh Jenderal Hotaru, menjunjung tinggi supremasi hukum tanpa toleransi bagi anarki.",
+    "leader": {
+      "id": "hotaru",
+      "type": "character",
+      "name": "Hotaru"
+    },
     "members": [
       {
-        "id": "scorpion",
+        "id": "hotaru",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Hotaru"
+      },
+      {
+        "id": "reiko",
+        "type": "character",
+        "name": "Reiko"
       }
     ],
-    "rivals": [],
+    "rivals": [
+      {
+        "id": "brotherhood-of-shadow",
+        "type": "organization",
+        "name": "Brotherhood of Shadow"
+      }
+    ],
     "timelines": [
       {
         "id": "original",
@@ -13275,8 +13625,8 @@ export const organizations: Organization[] = [
     "sources": [
       {
         "id": "fandom-seidan-guard",
-        "title": "Mortal Kombat Wiki \u2014 Seidan Guard",
-        "url": "https://mortalkombat.fandom.com",
+        "title": "Mortal Kombat Wiki — Seidan Guard",
+        "url": "https://mortalkombat.fandom.com/wiki/Seidan_Guard",
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }

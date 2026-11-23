@@ -3,7 +3,8 @@
 import { useMemo, useState, useEffect } from "react";
 import { getCharacters } from "@/lib/api";
 import { useAsync } from "@/lib/hooks";
-import { EntityCard } from "@/components/ui/Cards";
+import CharacterCard from "@/components/encyclopedia/CharacterCard";
+import BreadcrumbNavigation from "@/components/encyclopedia/BreadcrumbNavigation";
 import { Container, PageHeader } from "@/components/ui/Layout";
 import ListToolbar, { SelectFilter } from "@/components/ui/ListToolbar";
 import { EmptyState, ErrorState, LoadingState } from "@/components/ui/States";
@@ -120,20 +121,9 @@ export default function CharactersPage() {
         ) : (
           <>
             <div className="grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-3 lg:grid-cols-4">
-              {paginated.map((c) => {
-                const latestVer = c.versions[c.versions.length - 1];
-                return (
-                  <EntityCard
-                    key={c.id}
-                    href={`/characters/${c.id}`}
-                    name={c.name}
-                    subtitle={c.summary}
-                    type="character"
-                    image={latestVer?.image ?? c.image}
-                    contextLabel={latestVer?.gameTitle}
-                  />
-                );
-              })}
+              {paginated.map((c) => (
+                <CharacterCard key={c.id} character={c} />
+              ))}
             </div>
             <Pagination
               currentPage={currentPage}

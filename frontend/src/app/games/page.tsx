@@ -4,7 +4,7 @@ import { useMemo, useState, useEffect } from "react";
 import { getGames } from "@/lib/api";
 import { useAsync } from "@/lib/hooks";
 import type { GameEra } from "@/lib/types";
-import { EntityCard } from "@/components/ui/Cards";
+import GameCard from "@/components/encyclopedia/GameCard";
 import { Container, PageHeader } from "@/components/ui/Layout";
 import ListToolbar, { SelectFilter } from "@/components/ui/ListToolbar";
 import { EmptyState, ErrorState, LoadingState } from "@/components/ui/States";
@@ -101,18 +101,9 @@ export default function GamesPage() {
           />
         ) : (
           <>
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
               {paginated.map((g) => (
-                <EntityCard
-                  key={g.id}
-                  href={`/games/${g.id}`}
-                  name={g.title}
-                  subtitle={`${g.releaseYear} • ${g.era}`}
-                  type="game"
-                  image={g.image}
-                  contextLabel={String(g.releaseYear)}
-                  aspect="aspect-[3/4]"
-                />
+                <GameCard key={g.id} game={g} />
               ))}
             </div>
             <Pagination

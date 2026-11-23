@@ -44,6 +44,12 @@ export default function FloatingAssistant() {
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
+    const handleOpen = () => setIsOpen(true);
+    window.addEventListener("open-mkn-assistant", handleOpen);
+    return () => window.removeEventListener("open-mkn-assistant", handleOpen);
+  }, []);
+
+  useEffect(() => {
     if (isOpen) {
       messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
       setTimeout(() => inputRef.current?.focus(), 150);

@@ -86,9 +86,8 @@ export default function StoryEventDetailPage({
               { label: "Story Arc", value: event.arc ?? "-" },
               {
                 label: "Urutan Kronologi",
-                value: `#${event.chronology} (${event.chronologyType === "confirmed" ? "Terkonfirmasi" : "Hasil Inferensi"})`,
+                value: `#${event.chronology}`,
               },
-              { label: "Status Verifikasi", value: event.verificationStatus },
             ]}
           />
         </Section>
@@ -121,7 +120,7 @@ export default function StoryEventDetailPage({
             {event.consequences.length > 0 ? (
               <EntityLinks items={event.consequences} />
             ) : (
-              <p className="text-sm text-mk-muted italic">Belum ada konsekuensi terverifikasi.</p>
+              <p className="text-sm text-mk-muted italic">Belum ada catatan konsekuensi peristiwa.</p>
             )}
           </Section>
         </div>

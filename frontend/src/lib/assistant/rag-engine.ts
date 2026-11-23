@@ -28,7 +28,7 @@ function synthesizeKnowledgeAnswer(
   searchResults: Awaited<ReturnType<typeof executeSearch>>
 ): string {
   if (searchResults.results.length === 0) {
-    return `Maaf, informasi mengenai "${query}" belum ditemukan dalam Knowledge Base Mortal Kombat Knowledge Nexus. Sistem hanya menyajikan fakta yang terverifikasi dalam Knowledge Graph.`;
+    return `Maaf, informasi mengenai "${query}" belum ditemukan dalam Knowledge Base Mortal Kombat Knowledge Nexus.`;
   }
 
   const primary = searchResults.results[0];

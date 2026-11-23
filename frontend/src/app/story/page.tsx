@@ -127,20 +127,8 @@ function StoryExplorerContent() {
                 >
                   <div className="flex flex-wrap items-center justify-between gap-2">
                     <div className="flex flex-wrap items-center gap-2">
-                      <span className="rounded-sm border border-mk-gold/40 bg-mk-bg px-2 py-0.5 text-[10px] uppercase tracking-wider text-mk-gold">
-                        {ev.eventType}
-                      </span>
-                      <span className="rounded-sm border border-mk-border bg-mk-bg px-2 py-0.5 text-[10px] text-mk-muted">
+                      <span className="rounded-sm border border-mk-gold/40 bg-mk-bg px-2.5 py-0.5 text-xs font-semibold text-mk-gold">
                         {ev.timeline.name}
-                      </span>
-                      {ev.arc && (
-                        <span className="rounded-sm border border-mk-red/40 bg-mk-red-deep/20 px-2 py-0.5 text-[10px] text-red-200">
-                          Arc: {ev.arc}
-                        </span>
-                      )}
-                      <span className="text-[10px] text-mk-muted">
-                        Kronologi: #{ev.chronology} (
-                        {ev.chronologyType === "confirmed" ? "Pasti" : "Perkiraan"})
                       </span>
                     </div>
                     <VerificationBadge status={ev.verificationStatus} />
