@@ -364,7 +364,12 @@ function SearchResultCard({
       <div className="flex flex-col gap-4 p-4 sm:flex-row sm:items-start sm:p-5">
         {/* Thumbnail if available */}
         <div className="h-24 w-24 shrink-0 overflow-hidden rounded-sm border border-mk-border bg-mk-bg">
-          <EntityImage image={result.image} name={result.name} aspect="aspect-square" />
+          <EntityImage
+            image={result.image}
+            name={result.name}
+            aspect="aspect-square"
+            objectPosition={result.type === "character" ? "object-top" : undefined}
+          />
         </div>
 
         {/* Main Result Content */}

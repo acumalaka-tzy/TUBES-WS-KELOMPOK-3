@@ -4,7 +4,7 @@
     "entityId": "character-scorpion",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/a/ab/Scorpion.png/revision/latest?cb=20130603185450",
+    "assetURL": "/images/characters/scorpion.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Scorpion",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -15,14 +15,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Scorpion"
+    "alt": "Potret karakter resmi Scorpion",
+    "localFile": "scorpion.png"
   },
   {
     "assetId": "asset-subzero-portrait",
     "entityId": "character-subzero",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/8/81/Sub-Zero.png/revision/latest?cb=20110129183905",
+    "assetURL": "/images/characters/sub-zero.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Sub-Zero",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -33,14 +34,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Sub-Zero"
+    "alt": "Potret karakter resmi Sub-Zero",
+    "localFile": "sub-zero.png"
   },
   {
     "assetId": "asset-raiden-portrait",
     "entityId": "character-raiden",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/c/cd/Raiden_%28MK1%29_Render.png/revision/latest?cb=20240517202601",
+    "assetURL": "/images/characters/raiden.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Raiden",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -51,14 +53,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Raiden"
+    "alt": "Potret karakter resmi Raiden",
+    "localFile": "raiden.png"
   },
   {
     "assetId": "asset-liukang-portrait",
     "entityId": "character-liukang",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/e/e9/Liu_Kang_Render_%28MK1%29.png/revision/latest?cb=20250319165938",
+    "assetURL": "/images/characters/liu-kang.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Liu_Kang",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -69,14 +72,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Liu Kang"
+    "alt": "Potret karakter resmi Liu Kang",
+    "localFile": "liu-kang.png"
   },
   {
     "assetId": "asset-kitana-portrait",
     "entityId": "character-kitana",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/5/51/Kitana_MK1_render.webp/revision/latest?cb=20250317155722",
+    "assetURL": "/images/characters/kitana.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Kitana",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -87,14 +91,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Kitana"
+    "alt": "Potret karakter resmi Kitana",
+    "localFile": "kitana.png"
   },
   {
     "assetId": "asset-mileena-portrait",
     "entityId": "character-mileena",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/2/22/Mileena_MK1_render.webp/revision/latest?cb=20250712090157",
+    "assetURL": "/images/characters/mileena.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Mileena",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -105,14 +110,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Mileena"
+    "alt": "Potret karakter resmi Mileena",
+    "localFile": "mileena.png"
   },
   {
     "assetId": "asset-johnnycage-portrait",
     "entityId": "character-johnnycage",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/c/c0/JohnnyCage_MK1_render.webp/revision/latest?cb=20250409201914",
+    "assetURL": "/images/characters/johnny-cage.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Johnny_Cage",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -123,14 +129,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Johnny Cage"
+    "alt": "Potret karakter resmi Johnny Cage",
+    "localFile": "johnny-cage.png"
   },
   {
     "assetId": "asset-sonyablade-portrait",
     "entityId": "character-sonyablade",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/b/b1/Sonya_MK1_Render.png/revision/latest?cb=20231215102112",
+    "assetURL": "/images/characters/sonya-blade.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Sonya_Blade",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -141,14 +148,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Sonya Blade"
+    "alt": "Potret karakter resmi Sonya Blade",
+    "localFile": "sonya-blade.png"
   },
   {
     "assetId": "asset-jax-portrait",
     "entityId": "character-jax",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/a/a1/Jax_MK1_Render.png/revision/latest?cb=20231215100652",
+    "assetURL": "/images/characters/jax.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Jax_Briggs",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -159,14 +167,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Jax Briggs"
+    "alt": "Potret karakter resmi Jax Briggs",
+    "localFile": "jax.png"
   },
   {
     "assetId": "asset-kunglao-portrait",
     "entityId": "character-kunglao",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/4/49/KungLao_MK1_render.webp/revision/latest?cb=20250512010110",
+    "assetURL": "/images/characters/kung-lao.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Kung_Lao",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -177,14 +186,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Kung Lao"
+    "alt": "Potret karakter resmi Kung Lao",
+    "localFile": "kung-lao.png"
   },
   {
     "assetId": "asset-shangtsung-portrait",
     "entityId": "character-shangtsung",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/e/ef/ShangTsung_MK1_render.webp/revision/latest?cb=20250407001935",
+    "assetURL": "/images/characters/shangtsung.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Shang_Tsung",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -195,14 +205,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Shang Tsung"
+    "alt": "Potret karakter resmi Shang Tsung",
+    "localFile": "shangtsung.png"
   },
   {
     "assetId": "asset-quanchi-portrait",
     "entityId": "character-quanchi",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/7/7d/QuanChi_MK1_render.webp/revision/latest?cb=20250325061111",
+    "assetURL": "/images/characters/quanchi.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Quan_Chi",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -213,14 +224,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Quan Chi"
+    "alt": "Potret karakter resmi Quan Chi",
+    "localFile": "quanchi.png"
   },
   {
     "assetId": "asset-shaokahn-portrait",
     "entityId": "character-shaokahn",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/f/fe/Shao_render.png/revision/latest?cb=20231122223307",
+    "assetURL": "/images/characters/shao-kahn.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Shao_Kahn",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -231,14 +243,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Shao Kahn"
+    "alt": "Potret karakter resmi Shao Kahn",
+    "localFile": "shao-kahn.png"
   },
   {
     "assetId": "asset-kano-portrait",
     "entityId": "character-kano",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/c/c8/Kano_MK1_Render.png/revision/latest?cb=20231215100742",
+    "assetURL": "/images/characters/kano.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Kano",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -249,14 +262,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Kano"
+    "alt": "Potret karakter resmi Kano",
+    "localFile": "kano.png"
   },
   {
     "assetId": "asset-baraka-portrait",
     "entityId": "character-baraka",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/4/40/Baraka_%28MK1%29_Render.png/revision/latest?cb=20250319170034",
+    "assetURL": "/images/characters/baraka.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Baraka",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -267,14 +281,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Baraka"
+    "alt": "Potret karakter resmi Baraka",
+    "localFile": "baraka.png"
   },
   {
     "assetId": "asset-kenshi-portrait",
     "entityId": "character-kenshi",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/d/d4/Kenshi.png/revision/latest?cb=20110815213455",
+    "assetURL": "/images/characters/kenshi.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Kenshi",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -285,14 +300,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Kenshi"
+    "alt": "Potret karakter resmi Kenshi",
+    "localFile": "kenshi.png"
   },
   {
     "assetId": "asset-noobsaibot-portrait",
     "entityId": "character-noobsaibot",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/8/89/Noob_Saibot.png/revision/latest?cb=20110311063327",
+    "assetURL": "/images/characters/noob-saibot.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Noob_Saibot",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -303,14 +319,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Noob Saibot"
+    "alt": "Potret karakter resmi Noob Saibot",
+    "localFile": "noob-saibot.png"
   },
   {
     "assetId": "asset-smoke-portrait",
     "entityId": "character-smoke",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/9/95/Smoke_%28MK1%29_Render.png/revision/latest?cb=20250319170102",
+    "assetURL": "/images/characters/smoke.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Smoke",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -321,14 +338,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Smoke"
+    "alt": "Potret karakter resmi Smoke",
+    "localFile": "smoke.png"
   },
   {
     "assetId": "asset-cyrax-portrait",
     "entityId": "character-cyrax",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/4/40/Cyrax_MK1_Render.png/revision/latest?cb=20250408031043",
+    "assetURL": "/images/characters/cyrax.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Cyrax",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -339,14 +357,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Cyrax"
+    "alt": "Potret karakter resmi Cyrax",
+    "localFile": "cyrax.png"
   },
   {
     "assetId": "asset-sektor-portrait",
     "entityId": "character-sektor",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/a/af/Sektor_MK1_Render.png/revision/latest?cb=20250325020045",
+    "assetURL": "/images/characters/sektor.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Sektor",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -357,14 +376,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Sektor"
+    "alt": "Potret karakter resmi Sektor",
+    "localFile": "sektor.png"
   },
   {
     "assetId": "asset-reptile-portrait",
     "entityId": "character-reptile",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/c/c2/Reptile_MK1_render.webp/revision/latest?cb=20250711101600",
+    "assetURL": "/images/characters/reptile.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Reptile",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -375,14 +395,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Reptile"
+    "alt": "Potret karakter resmi Reptile",
+    "localFile": "reptile.png"
   },
   {
     "assetId": "asset-geras-portrait",
     "entityId": "character-geras",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/3/36/Geras_MK1_Render.png/revision/latest?cb=20250319170152",
+    "assetURL": "/images/characters/geras.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Geras",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -393,14 +414,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Geras"
+    "alt": "Potret karakter resmi Geras",
+    "localFile": "geras.png"
   },
   {
     "assetId": "asset-kronika-portrait",
     "entityId": "character-kronika",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/1/1f/MK11KronikaRender.png/revision/latest?cb=20190812124147",
+    "assetURL": "/images/characters/kronika.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Kronika",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -411,14 +433,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Kronika"
+    "alt": "Potret karakter resmi Kronika",
+    "localFile": "kronika.png"
   },
   {
     "assetId": "asset-sindel-portrait",
     "entityId": "character-sindel",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/0/05/Sindel_MK1_render.webp/revision/latest?cb=20250313144711",
+    "assetURL": "/images/characters/sindel.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Sindel",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -429,14 +452,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Sindel"
+    "alt": "Potret karakter resmi Sindel",
+    "localFile": "sindel.png"
   },
   {
     "assetId": "asset-goro-portrait",
     "entityId": "character-goro",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/6/68/Goro_MK1_Render.png/revision/latest?cb=20231215100554",
+    "assetURL": "/images/characters/goro.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Goro",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -447,14 +471,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Goro"
+    "alt": "Potret karakter resmi Goro",
+    "localFile": "goro.png"
   },
   {
     "assetId": "asset-kintaro-portrait",
     "entityId": "character-kintaro",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/1/1b/Kintaromk9.png/revision/latest?cb=20120804180654",
+    "assetURL": "/images/characters/kintaro.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Kintaro",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -465,14 +490,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Kintaro"
+    "alt": "Potret karakter resmi Kintaro",
+    "localFile": "kintaro.png"
   },
   {
     "assetId": "asset-shinnok-portrait",
     "entityId": "character-shinnok",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/b/bc/Shinnok_RENDER_PNG.png/revision/latest?cb=20190423022022",
+    "assetURL": "/images/characters/shinnok.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Shinnok",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -483,14 +509,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Shinnok"
+    "alt": "Potret karakter resmi Shinnok",
+    "localFile": "shinnok.png"
   },
   {
     "assetId": "asset-fujin-portrait",
     "entityId": "character-fujin",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/6/63/MK11_Fujin_render-0.png/revision/latest?cb=20240604094101",
+    "assetURL": "/images/characters/fujin.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Fujin",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -501,14 +528,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Fujin"
+    "alt": "Potret karakter resmi Fujin",
+    "localFile": "fujin.png"
   },
   {
     "assetId": "asset-frost-portrait",
     "entityId": "character-frost",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/5/52/Frost_MK1_Render.png/revision/latest?cb=20231215100457",
+    "assetURL": "/images/characters/frost.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Frost",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -519,14 +547,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Frost"
+    "alt": "Potret karakter resmi Frost",
+    "localFile": "frost.png"
   },
   {
     "assetId": "asset-boraicho-portrait",
     "entityId": "character-boraicho",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/5/59/Bo_Rai_Cho_Render_MKX.png/revision/latest?cb=20160620210628",
+    "assetURL": "/images/characters/boraicho.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Bo'_Rai_Cho",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -537,14 +566,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Bo' Rai Cho"
+    "alt": "Potret karakter resmi Bo' Rai Cho",
+    "localFile": "boraicho.png"
   },
   {
     "assetId": "asset-limei-portrait",
     "entityId": "character-limei",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/c/ca/LiMei_MK1_render.webp/revision/latest?cb=20250314101827",
+    "assetURL": "/images/characters/limei.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Li_Mei",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -555,14 +585,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Li Mei"
+    "alt": "Potret karakter resmi Li Mei",
+    "localFile": "limei.png"
   },
   {
     "assetId": "asset-tanya-portrait",
     "entityId": "character-tanya",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/6/6a/Tanya_MK1_render.webp/revision/latest?cb=20230920060746",
+    "assetURL": "/images/characters/tanya.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Tanya",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -573,14 +604,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Tanya"
+    "alt": "Potret karakter resmi Tanya",
+    "localFile": "tanya.png"
   },
   {
     "assetId": "asset-havik-portrait",
     "entityId": "character-havik",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/7/78/Havik_MK1_render.webp/revision/latest?cb=20250401183326",
+    "assetURL": "/images/characters/havik.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Havik",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -591,14 +623,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Havik"
+    "alt": "Potret karakter resmi Havik",
+    "localFile": "havik.png"
   },
   {
     "assetId": "asset-cassiecage-portrait",
     "entityId": "character-cassiecage",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/d/d2/Cassie_mk11.png/revision/latest?cb=20190306231757",
+    "assetURL": "/images/characters/cassiecage.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Cassie_Cage",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -609,14 +642,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Cassie Cage"
+    "alt": "Potret karakter resmi Cassie Cage",
+    "localFile": "cassiecage.png"
   },
   {
     "assetId": "asset-kotalkahn-portrait",
     "entityId": "character-kotalkahn",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/f/f1/Kotal_mk11.png/revision/latest?cb=20190321025157",
+    "assetURL": "/images/characters/kotalkahn.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Kotal_Kahn",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -627,14 +661,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Kotal Kahn"
+    "alt": "Potret karakter resmi Kotal Kahn",
+    "localFile": "kotalkahn.png"
   },
   {
     "assetId": "asset-erronblack-portrait",
     "entityId": "character-erronblack",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/9/91/Erron_mk11.png/revision/latest?cb=20190313041908",
+    "assetURL": "/images/characters/erronblack.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Erron_Black",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -645,14 +680,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Erron Black"
+    "alt": "Potret karakter resmi Erron Black",
+    "localFile": "erronblack.png"
   },
   {
     "assetId": "asset-jade-portrait",
     "entityId": "character-jade",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/2/26/Jade_MK11.png/revision/latest?cb=20190227220506",
+    "assetURL": "/images/characters/jade.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Jade",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -663,14 +699,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Jade"
+    "alt": "Potret karakter resmi Jade",
+    "localFile": "jade.png"
   },
   {
     "assetId": "asset-kabal-portrait",
     "entityId": "character-kabal",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/c/c7/Kabal_MK11.png/revision/latest?cb=20190323002944",
+    "assetURL": "/images/characters/kabal.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Kabal",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -681,14 +718,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Kabal"
+    "alt": "Potret karakter resmi Kabal",
+    "localFile": "kabal.png"
   },
   {
     "assetId": "asset-stryker-portrait",
     "entityId": "character-stryker",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/2/21/Stryker_MK1_Render.png/revision/latest?cb=20231215101237",
+    "assetURL": "/images/characters/stryker.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Kurtis_Stryker",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -699,14 +737,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Kurtis Stryker"
+    "alt": "Potret karakter resmi Kurtis Stryker",
+    "localFile": "stryker.png"
   },
   {
     "assetId": "asset-sheeva-portrait",
     "entityId": "character-sheeva",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/8/84/Sheeva_Render.png/revision/latest?cb=20200508024526",
+    "assetURL": "/images/characters/sheeva.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Sheeva",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -717,14 +756,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Sheeva"
+    "alt": "Potret karakter resmi Sheeva",
+    "localFile": "sheeva.png"
   },
   {
     "assetId": "asset-nightwolf-portrait",
     "entityId": "character-nightwolf",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/a/ad/NightwolfRenderMK11.png/revision/latest?cb=20190815003315",
+    "assetURL": "/images/characters/nightwolf.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Nightwolf",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -735,14 +775,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Nightwolf"
+    "alt": "Potret karakter resmi Nightwolf",
+    "localFile": "nightwolf.png"
   },
   {
     "assetId": "asset-dvorah-portrait",
     "entityId": "character-dvorah",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/8/85/D%27vorah_mk11_2.png/revision/latest?cb=20190414150233",
+    "assetURL": "/images/characters/dvorah.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/D'Vorah",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -753,14 +794,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi D'Vorah"
+    "alt": "Potret karakter resmi D'Vorah",
+    "localFile": "dvorah.png"
   },
   {
     "assetId": "asset-jacqui-portrait",
     "entityId": "character-jacqui",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/9/9f/Jacqui_mk11.png/revision/latest?cb=20190322005550",
+    "assetURL": "/images/characters/jacqui.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Jacqui_Briggs",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -771,14 +813,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Jacqui Briggs"
+    "alt": "Potret karakter resmi Jacqui Briggs",
+    "localFile": "jacqui.png"
   },
   {
     "assetId": "asset-takeda-portrait",
     "entityId": "character-takeda",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/f/f1/TakedaMK1.png/revision/latest?cb=20240723181548",
+    "assetURL": "/images/characters/takeda.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Takeda_Takahashi",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -789,14 +832,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Takeda Takahashi"
+    "alt": "Potret karakter resmi Takeda Takahashi",
+    "localFile": "takeda.png"
   },
   {
     "assetId": "asset-kungjin-portrait",
     "entityId": "character-kungjin",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/6/69/Kung_Jin_RENDER.png/revision/latest?cb=20150402022350",
+    "assetURL": "/images/characters/kungjin.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Kung_Jin",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -807,14 +851,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Kung Jin"
+    "alt": "Potret karakter resmi Kung Jin",
+    "localFile": "kungjin.png"
   },
   {
     "assetId": "asset-cetrion-portrait",
     "entityId": "character-cetrion",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/d/d7/Cetrion_MK11.png/revision/latest?cb=20190412180127",
+    "assetURL": "/images/characters/cetrion.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Cetrion",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -825,14 +870,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Cetrion"
+    "alt": "Potret karakter resmi Cetrion",
+    "localFile": "cetrion.png"
   },
   {
     "assetId": "asset-kollector-portrait",
     "entityId": "character-kollector",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/9/91/Kollector_MK11.png/revision/latest?cb=20190407091921",
+    "assetURL": "/images/characters/kollector.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Kollector",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -843,14 +889,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Kollector"
+    "alt": "Potret karakter resmi Kollector",
+    "localFile": "kollector.png"
   },
   {
     "assetId": "asset-onaga-portrait",
     "entityId": "character-onaga",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/b/b0/MK1_Onaga.jpeg/revision/latest?cb=20230921004228",
+    "assetURL": "/images/characters/onaga.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Onaga",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -861,14 +908,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Onaga"
+    "alt": "Potret karakter resmi Onaga",
+    "localFile": "onaga.png"
   },
   {
     "assetId": "asset-shujinko-portrait",
     "entityId": "character-shujinko",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/3/35/Shujinko_MK1_Render.png/revision/latest?cb=20231215101153",
+    "assetURL": "/images/characters/shujinko.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Shujinko",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -879,14 +927,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Shujinko"
+    "alt": "Potret karakter resmi Shujinko",
+    "localFile": "shujinko.png"
   },
   {
     "assetId": "asset-reiko-portrait",
     "entityId": "character-reiko",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/7/7e/Reiko_MK1_render.webp/revision/latest?cb=20250314102645",
+    "assetURL": "/images/characters/reiko.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Reiko",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -897,14 +946,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Reiko"
+    "alt": "Potret karakter resmi Reiko",
+    "localFile": "reiko.png"
   },
   {
     "assetId": "asset-nitara-portrait",
     "entityId": "character-nitara",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/6/6c/Nitara_MK1_render.webp/revision/latest?cb=20250318123742",
+    "assetURL": "/images/characters/nitara.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Nitara",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -915,14 +965,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Nitara"
+    "alt": "Potret karakter resmi Nitara",
+    "localFile": "nitara.png"
   },
   {
     "assetId": "asset-sareena-portrait",
     "entityId": "character-sareena",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/1/1d/Sareena_MK1_Render.png/revision/latest?cb=20231215100918",
+    "assetURL": "/images/characters/sareena.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Sareena",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -933,14 +984,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Sareena"
+    "alt": "Potret karakter resmi Sareena",
+    "localFile": "sareena.png"
   },
   {
     "assetId": "asset-ashrah-portrait",
     "entityId": "character-ashrah",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/b/be/Ashrah_MK1_render.webp/revision/latest?cb=20250514084922",
+    "assetURL": "/images/characters/ashrah.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Ashrah",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -951,14 +1003,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Ashrah"
+    "alt": "Potret karakter resmi Ashrah",
+    "localFile": "ashrah.png"
   },
   {
     "assetId": "asset-hotaru-portrait",
     "entityId": "character-hotaru",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/c/ca/MSEL_PORTRAIT_HOTARU.png/revision/latest?cb=20130329211100",
+    "assetURL": "/images/characters/hotaru.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Hotaru",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -969,14 +1022,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Hotaru"
+    "alt": "Potret karakter resmi Hotaru",
+    "localFile": "hotaru.png"
   },
   {
     "assetId": "asset-mavado-portrait",
     "entityId": "character-mavado",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/3/33/MK1_Mavado_Render.png/revision/latest?cb=20250213151512",
+    "assetURL": "/images/characters/mavado.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Mavado",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -987,14 +1041,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Mavado"
+    "alt": "Potret karakter resmi Mavado",
+    "localFile": "mavado.png"
   },
   {
     "assetId": "asset-ferratorr-portrait",
     "entityId": "character-ferratorr",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/4/43/KAM_Ferra_Tower.png/revision/latest?cb=20240724085048",
+    "assetURL": "/images/characters/ferratorr.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Ferra_&_Torr",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -1005,14 +1060,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Ferra & Torr"
+    "alt": "Potret karakter resmi Ferra & Torr",
+    "localFile": "ferratorr.png"
   },
   {
     "assetId": "asset-motaro-portrait",
     "entityId": "character-motaro",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/f/fb/Motaro_MK1_Render.png/revision/latest?cb=20231215100833",
+    "assetURL": "/images/characters/motaro.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Motaro",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -1023,14 +1079,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Motaro"
+    "alt": "Potret karakter resmi Motaro",
+    "localFile": "motaro.png"
   },
   {
     "assetId": "asset-blaze-portrait",
     "entityId": "character-blaze",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/b/be/Blaze_Fury.png/revision/latest?cb=20160404023315",
+    "assetURL": "/images/characters/blaze.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Blaze",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -1041,14 +1098,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Blaze"
+    "alt": "Potret karakter resmi Blaze",
+    "localFile": "blaze.png"
   },
   {
     "assetId": "asset-daegon-portrait",
     "entityId": "character-daegon",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/f/f7/Daegon_Render_MKA.png/revision/latest?cb=20081011192925",
+    "assetURL": "/images/characters/daegon.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Daegon",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -1059,14 +1117,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Daegon"
+    "alt": "Potret karakter resmi Daegon",
+    "localFile": "daegon.png"
   },
   {
     "assetId": "asset-taven-portrait",
     "entityId": "character-taven",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/e/ea/MKA_Taven_Render.png/revision/latest?cb=20081011123710",
+    "assetURL": "/images/characters/taven.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Taven",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -1077,14 +1136,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Taven"
+    "alt": "Potret karakter resmi Taven",
+    "localFile": "taven.png"
   },
   {
     "assetId": "asset-scorpion-fetch-failed-portrait",
     "entityId": "character-scorpion-fetch-failed",
     "characterVersionId": null,
     "assetType": "character_portrait",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/a/ab/Scorpion.png/revision/latest?cb=20130603185450",
+    "assetURL": "/images/characters/scorpion-fetch-failed.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Scorpion_(Fetch_Failed)",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -1095,14 +1155,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "800x1200",
-    "alt": "Potret karakter resmi Scorpion (Fetch Failed)"
+    "alt": "Potret karakter resmi Scorpion (Fetch Failed)",
+    "localFile": "scorpion-fetch-failed.png"
   },
   {
     "assetId": "asset-mk1-1992-cover",
     "entityId": "game-mk1-1992",
     "gameId": "game-mk1-1992",
     "assetType": "game_cover",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/4/44/MK_title.png/revision/latest?cb=20060610175437",
+    "assetURL": "/images/games/mk1-1992.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Mortal_Kombat_(1992)",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -1113,14 +1174,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "1200x1600",
-    "alt": "Sampul resmi Mortal Kombat (1992)"
+    "alt": "Sampul resmi Mortal Kombat (1992)",
+    "localFile": "mk1-1992.png"
   },
   {
     "assetId": "asset-mk2-1993-cover",
     "entityId": "game-mk2-1993",
     "gameId": "game-mk2-1993",
     "assetType": "game_cover",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/6/6e/Mk2-1.png/revision/latest?cb=20060606003500",
+    "assetURL": "/images/games/mk2-1993.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Mortal_Kombat_II",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -1131,14 +1193,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "1200x1600",
-    "alt": "Sampul resmi Mortal Kombat II"
+    "alt": "Sampul resmi Mortal Kombat II",
+    "localFile": "mk2-1993.png"
   },
   {
     "assetId": "asset-mk3-1995-cover",
     "entityId": "game-mk3-1995",
     "gameId": "game-mk3-1995",
     "assetType": "game_cover",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/0/0b/Mk3.png/revision/latest?cb=20060619152448",
+    "assetURL": "/images/games/mk3-1995.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Mortal_Kombat_3",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -1149,14 +1212,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "1200x1600",
-    "alt": "Sampul resmi Mortal Kombat 3"
+    "alt": "Sampul resmi Mortal Kombat 3",
+    "localFile": "mk3-1995.png"
   },
   {
     "assetId": "asset-umk3-1995-cover",
     "entityId": "game-umk3-1995",
     "gameId": "game-umk3-1995",
     "assetType": "game_cover",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/2/22/Umk3.png/revision/latest?cb=20060619004401",
+    "assetURL": "/images/games/umk3-1995.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Ultimate_Mortal_Kombat_3",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -1167,14 +1231,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "1200x1600",
-    "alt": "Sampul resmi Ultimate Mortal Kombat 3"
+    "alt": "Sampul resmi Ultimate Mortal Kombat 3",
+    "localFile": "umk3-1995.png"
   },
   {
     "assetId": "asset-mkt-1996-cover",
     "entityId": "game-mkt-1996",
     "gameId": "game-mkt-1996",
     "assetType": "game_cover",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/7/70/MKTBox.jpg/revision/latest?cb=20060619002237",
+    "assetURL": "/images/games/mkt-1996.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Mortal_Kombat_Trilogy",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -1185,14 +1250,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "1200x1600",
-    "alt": "Sampul resmi Mortal Kombat Trilogy"
+    "alt": "Sampul resmi Mortal Kombat Trilogy",
+    "localFile": "mkt-1996.png"
   },
   {
     "assetId": "asset-mk4-1997-cover",
     "entityId": "game-mk4-1997",
     "gameId": "game-mk4-1997",
     "assetType": "game_cover",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/c/cc/Mok4gb0b.jpg/revision/latest?cb=20110509201625",
+    "assetURL": "/images/games/mk4-1997.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Mortal_Kombat_4",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -1203,14 +1269,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "1200x1600",
-    "alt": "Sampul resmi Mortal Kombat 4"
+    "alt": "Sampul resmi Mortal Kombat 4",
+    "localFile": "mk4-1997.png"
   },
   {
     "assetId": "asset-mk-gold-1999-cover",
     "entityId": "game-mk-gold-1999",
     "gameId": "game-mk-gold-1999",
     "assetType": "game_cover",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/1/1a/MK_gold_logo.jpg/revision/latest?cb=20060619002702",
+    "assetURL": "/images/games/mk-gold-1999.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Mortal_Kombat_Gold",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -1221,14 +1288,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "1200x1600",
-    "alt": "Sampul resmi Mortal Kombat Gold"
+    "alt": "Sampul resmi Mortal Kombat Gold",
+    "localFile": "mk-gold-1999.png"
   },
   {
     "assetId": "asset-mk-deadly-alliance-2002-cover",
     "entityId": "game-mk-deadly-alliance-2002",
     "gameId": "game-mk-deadly-alliance-2002",
     "assetType": "game_cover",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/6/6f/PS2_-_MK_Deadly_Alliance.jpg/revision/latest?cb=20060613184607",
+    "assetURL": "/images/games/mk-deadly-alliance-2002.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Mortal_Kombat:_Deadly_Alliance",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -1239,14 +1307,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "1200x1600",
-    "alt": "Sampul resmi Mortal Kombat: Deadly Alliance"
+    "alt": "Sampul resmi Mortal Kombat: Deadly Alliance",
+    "localFile": "mk-deadly-alliance-2002.png"
   },
   {
     "assetId": "asset-mk-tournament-edition-2003-cover",
     "entityId": "game-mk-tournament-edition-2003",
     "gameId": "game-mk-tournament-edition-2003",
     "assetType": "game_cover",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/1/1b/Cover_Tournament_Edition.PNG/revision/latest?cb=20060619003627",
+    "assetURL": "/images/games/mk-tournament-edition-2003.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Mortal_Kombat:_Tournament_Edition",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -1257,14 +1326,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "1200x1600",
-    "alt": "Sampul resmi Mortal Kombat: Tournament Edition"
+    "alt": "Sampul resmi Mortal Kombat: Tournament Edition",
+    "localFile": "mk-tournament-edition-2003.png"
   },
   {
     "assetId": "asset-mk-deception-2004-cover",
     "entityId": "game-mk-deception-2004",
     "gameId": "game-mk-deception-2004",
     "assetType": "game_cover",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/f/f2/Mortal_Kombat_-_Deception_Coverart.png/revision/latest?cb=20140806065300",
+    "assetURL": "/images/games/mk-deception-2004.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Mortal_Kombat:_Deception",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -1275,14 +1345,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "1200x1600",
-    "alt": "Sampul resmi Mortal Kombat: Deception"
+    "alt": "Sampul resmi Mortal Kombat: Deception",
+    "localFile": "mk-deception-2004.png"
   },
   {
     "assetId": "asset-mk-unchained-2006-cover",
     "entityId": "game-mk-unchained-2006",
     "gameId": "game-mk-unchained-2006",
     "assetType": "game_cover",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/f/f6/Mkupegibox.jpg/revision/latest?cb=20110109001035",
+    "assetURL": "/images/games/mk-unchained-2006.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Mortal_Kombat:_Unchained",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -1293,14 +1364,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "1200x1600",
-    "alt": "Sampul resmi Mortal Kombat: Unchained"
+    "alt": "Sampul resmi Mortal Kombat: Unchained",
+    "localFile": "mk-unchained-2006.png"
   },
   {
     "assetId": "asset-mk-armageddon-2006-cover",
     "entityId": "game-mk-armageddon-2006",
     "gameId": "game-mk-armageddon-2006",
     "assetType": "game_cover",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/8/8e/MKA_Cover.jpg/revision/latest?cb=20190322083202",
+    "assetURL": "/images/games/mk-armageddon-2006.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Mortal_Kombat:_Armageddon",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -1311,14 +1383,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "1200x1600",
-    "alt": "Sampul resmi Mortal Kombat: Armageddon"
+    "alt": "Sampul resmi Mortal Kombat: Armageddon",
+    "localFile": "mk-armageddon-2006.png"
   },
   {
     "assetId": "asset-mk-mythologies-1997-cover",
     "entityId": "game-mk-mythologies-1997",
     "gameId": "game-mk-mythologies-1997",
     "assetType": "game_cover",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/e/ec/Mortal_Kombat_-_Mythologies_Sub_Zero_-_Logo_2.jpg/revision/latest?cb=20060619153416",
+    "assetURL": "/images/games/mk-mythologies-1997.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Mortal_Kombat_Mythologies:_Sub-Zero",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -1329,14 +1402,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "1200x1600",
-    "alt": "Sampul resmi Mortal Kombat Mythologies: Sub-Zero"
+    "alt": "Sampul resmi Mortal Kombat Mythologies: Sub-Zero",
+    "localFile": "mk-mythologies-1997.png"
   },
   {
     "assetId": "asset-mk-special-forces-2000-cover",
     "entityId": "game-mk-special-forces-2000",
     "gameId": "game-mk-special-forces-2000",
     "assetType": "game_cover",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/0/07/Mksf.png/revision/latest?cb=20060620024400",
+    "assetURL": "/images/games/mk-special-forces-2000.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Mortal_Kombat:_Special_Forces",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -1345,16 +1419,17 @@
     "rightsStatus": "approved",
     "verificationStatus": "verified",
     "isApprovedForDisplay": true,
-    "contentType": "image/webp",
+    "contentType": "image/png",
     "dimensions": "1200x1600",
-    "alt": "Sampul resmi Mortal Kombat: Special Forces"
+    "alt": "Sampul resmi Mortal Kombat: Special Forces",
+    "localFile": "mk-special-forces-2000.png"
   },
   {
     "assetId": "asset-mk-shaolin-monks-2005-cover",
     "entityId": "game-mk-shaolin-monks-2005",
     "gameId": "game-mk-shaolin-monks-2005",
     "assetType": "game_cover",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/2/21/Mortal_Kombat_Shaolin_Monks_cover.png/revision/latest?cb=20140824215814",
+    "assetURL": "/images/games/mk-shaolin-monks-2005.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Mortal_Kombat:_Shaolin_Monks",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -1365,14 +1440,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "1200x1600",
-    "alt": "Sampul resmi Mortal Kombat: Shaolin Monks"
+    "alt": "Sampul resmi Mortal Kombat: Shaolin Monks",
+    "localFile": "mk-shaolin-monks-2005.png"
   },
   {
     "assetId": "asset-mk-vs-dc-2008-cover",
     "entityId": "game-mk-vs-dc-2008",
     "gameId": "game-mk-vs-dc-2008",
     "assetType": "game_cover",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/9/9e/Mortal_Kombat_vs._DC_cover.jpg/revision/latest?cb=20140824213937",
+    "assetURL": "/images/games/mk-vs-dc-2008.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Mortal_Kombat_vs._DC_Universe",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -1383,14 +1459,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "1200x1600",
-    "alt": "Sampul resmi Mortal Kombat vs. DC Universe"
+    "alt": "Sampul resmi Mortal Kombat vs. DC Universe",
+    "localFile": "mk-vs-dc-2008.png"
   },
   {
     "assetId": "asset-mk-arcade-kollection-2011-cover",
     "entityId": "game-mk-arcade-kollection-2011",
     "gameId": "game-mk-arcade-kollection-2011",
     "assetType": "game_cover",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/a/ae/MK_Kollection.jpg/revision/latest?cb=20110830124936",
+    "assetURL": "/images/games/mk-arcade-kollection-2011.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Mortal_Kombat_Arcade_Kollection",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -1401,14 +1478,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "1200x1600",
-    "alt": "Sampul resmi Mortal Kombat Arcade Kollection"
+    "alt": "Sampul resmi Mortal Kombat Arcade Kollection",
+    "localFile": "mk-arcade-kollection-2011.png"
   },
   {
     "assetId": "asset-mk9-2011-cover",
     "entityId": "game-mk9-2011",
     "gameId": "game-mk9-2011",
     "assetType": "game_cover",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/b/b1/Mortal_kombat_9-500x542.jpg/revision/latest?cb=20220419033542",
+    "assetURL": "/images/games/mk9-2011.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Mortal_Kombat_(2011)",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -1419,14 +1497,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "1200x1600",
-    "alt": "Sampul resmi Mortal Kombat (2011)"
+    "alt": "Sampul resmi Mortal Kombat (2011)",
+    "localFile": "mk9-2011.png"
   },
   {
     "assetId": "asset-mkx-2015-cover",
     "entityId": "game-mkx-2015",
     "gameId": "game-mkx-2015",
     "assetType": "game_cover",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/0/0d/MKX.png/revision/latest?cb=20200517164428",
+    "assetURL": "/images/games/mkx-2015.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Mortal_Kombat_X",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -1437,14 +1516,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "1200x1600",
-    "alt": "Sampul resmi Mortal Kombat X"
+    "alt": "Sampul resmi Mortal Kombat X",
+    "localFile": "mkx-2015.png"
   },
   {
     "assetId": "asset-mk-mobile-2015-cover",
     "entityId": "game-mk-mobile-2015",
     "gameId": "game-mk-mobile-2015",
     "assetType": "game_cover",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/0/0c/IconMortalKombatMobile10Years.jpg/revision/latest?cb=20260510201156",
+    "assetURL": "/images/games/mk-mobile-2015.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Mortal_Kombat_Mobile",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -1455,14 +1535,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "1200x1600",
-    "alt": "Sampul resmi Mortal Kombat Mobile"
+    "alt": "Sampul resmi Mortal Kombat Mobile",
+    "localFile": "mk-mobile-2015.png"
   },
   {
     "assetId": "asset-mk11-2019-cover",
     "entityId": "game-mk11-2019",
     "gameId": "game-mk11-2019",
     "assetType": "game_cover",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/e/e2/Mk11coverart.png/revision/latest?cb=20190110191329",
+    "assetURL": "/images/games/mk11-2019.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Mortal_Kombat_11",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -1473,14 +1554,15 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "1200x1600",
-    "alt": "Sampul resmi Mortal Kombat 11"
+    "alt": "Sampul resmi Mortal Kombat 11",
+    "localFile": "mk11-2019.png"
   },
   {
     "assetId": "asset-mk1-2023-cover",
     "entityId": "game-mk1-2023",
     "gameId": "game-mk1-2023",
     "assetType": "game_cover",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/5/5a/MK1_cover_art.png/revision/latest?cb=20230518134700",
+    "assetURL": "/images/games/mk1-2023.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Mortal_Kombat_1_(2023)",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -1489,16 +1571,17 @@
     "rightsStatus": "approved",
     "verificationStatus": "verified",
     "isApprovedForDisplay": true,
-    "contentType": "image/webp",
+    "contentType": "image/jpeg",
     "dimensions": "1200x1600",
-    "alt": "Sampul resmi Mortal Kombat 1 (2023)"
+    "alt": "Sampul resmi Mortal Kombat 1 (2023)",
+    "localFile": "mk1-2023.png"
   },
   {
     "assetId": "asset-mk-onslaught-2023-cover",
     "entityId": "game-mk-onslaught-2023",
     "gameId": "game-mk-onslaught-2023",
     "assetType": "game_cover",
-    "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/2/20/MKOnslaughtIcon.jpg/revision/latest?cb=20231006072446",
+    "assetURL": "/images/games/mk-onslaught-2023.png",
     "sourceURL": "https://mortalkombat.fandom.com/wiki/Mortal_Kombat:_Onslaught",
     "sourceId": "fandom-wiki",
     "sourceName": "Mortal Kombat Fandom Wiki",
@@ -1509,6 +1592,7 @@
     "isApprovedForDisplay": true,
     "contentType": "image/webp",
     "dimensions": "1200x1600",
-    "alt": "Sampul resmi Mortal Kombat: Onslaught"
+    "alt": "Sampul resmi Mortal Kombat: Onslaught",
+    "localFile": "mk-onslaught-2023.png"
   }
 ]

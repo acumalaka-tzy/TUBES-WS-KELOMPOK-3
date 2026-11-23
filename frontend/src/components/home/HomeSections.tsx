@@ -34,7 +34,14 @@ export function PopularCharacters() {
           const v = c.versions[c.versions.length - 1];
           return (
             <li key={c.id} className="w-44 shrink-0 snap-start sm:w-56">
-              <EntityCard href={`/characters/${c.id}`} name={c.name} subtitle={c.summary} image={v?.image} contextLabel={v ? v.gameTitle : undefined} />
+              <EntityCard
+                href={`/characters/${c.id}`}
+                name={c.name}
+                subtitle={c.summary}
+                type="character"
+                image={v?.image ?? c.image}
+                contextLabel={v ? v.gameTitle : undefined}
+              />
             </li>
           );
         })}

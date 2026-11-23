@@ -43,7 +43,6 @@ export const MAIN_NAV: NavItem[] = [
   { label: "Characters", href: "/characters" },
   { label: "Games", href: "/games" },
   { label: "Story", href: "/story" },
-  { label: "About", href: "/about" },
 ];
 
 /** Kategori informasi ensiklopedia — dipakai di Landing & Explore */

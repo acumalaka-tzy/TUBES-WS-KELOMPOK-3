@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import { getGames } from "@/lib/api";
 import { useAsync } from "@/lib/hooks";
 import type { GameEra } from "@/lib/types";
@@ -8,6 +8,9 @@ import { EntityCard } from "@/components/ui/Cards";
 import { Container, PageHeader } from "@/components/ui/Layout";
 import ListToolbar, { SelectFilter } from "@/components/ui/ListToolbar";
 import { EmptyState, ErrorState, LoadingState } from "@/components/ui/States";
+import Pagination from "@/components/ui/Pagination";
+
+const PAGE_SIZE = 12;
 
 const ERAS: { value: string; label: string }[] = [
   { value: "all", label: "Semua Era" },
@@ -22,6 +25,7 @@ export default function GamesPage() {
   const { data, error, loading, reload } = useAsync(getGames, []);
   const [query, setQuery] = useState("");
   const [selectedEra, setSelectedEra] = useState("all");
+  const [currentPage, setCurrentPage] = useState(1);
 
   const filtered = useMemo(() => {
     if (!data) return [];
@@ -39,6 +43,16 @@ export default function GamesPage() {
       })
       .sort((a, b) => a.releaseYear - b.releaseYear);
   }, [data, query, selectedEra]);
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [query, selectedEra]);
+
+  const totalPages = Math.ceil(filtered.length / PAGE_SIZE) || 1;
+  const paginated = useMemo(() => {
+    const start = (currentPage - 1) * PAGE_SIZE;
+    return filtered.slice(start, start + PAGE_SIZE);
+  }, [filtered, currentPage]);
 
   return (
     <>
@@ -86,20 +100,30 @@ export default function GamesPage() {
             }
           />
         ) : (
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-            {filtered.map((g) => (
-              <EntityCard
-                key={g.id}
-                href={`/games/${g.id}`}
-                name={g.title}
-                subtitle={`${g.releaseYear} • ${g.era}`}
-                type="game"
-                image={g.image}
-                contextLabel={String(g.releaseYear)}
-                aspect="aspect-[3/4]"
-              />
-            ))}
-          </div>
+          <>
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+              {paginated.map((g) => (
+                <EntityCard
+                  key={g.id}
+                  href={`/games/${g.id}`}
+                  name={g.title}
+                  subtitle={`${g.releaseYear} • ${g.era}`}
+                  type="game"
+                  image={g.image}
+                  contextLabel={String(g.releaseYear)}
+                  aspect="aspect-[3/4]"
+                />
+              ))}
+            </div>
+            <Pagination
+              currentPage={currentPage}
+              totalPages={totalPages}
+              onPageChange={setCurrentPage}
+              totalItems={filtered.length}
+              pageSize={PAGE_SIZE}
+              itemName="game"
+            />
+          </>
         )}
       </Container>
     </>

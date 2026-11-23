@@ -46,7 +46,7 @@ export const characters: Character[] = [
     "popular": true,
     "image": {
       "assetId": "asset-scorpion-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/a/ab/Scorpion.png/revision/latest?cb=20130603185450",
+      "assetURL": "/images/characters/scorpion.png",
       "assetType": "character_portrait",
       "entityId": "scorpion",
       "rightsStatus": "approved",
@@ -94,7 +94,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-scorpion-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/a/ab/Scorpion.png/revision/latest?cb=20130603185450",
+          "assetURL": "/images/characters/scorpion.png",
           "assetType": "character_portrait",
           "entityId": "scorpion",
           "rightsStatus": "approved",
@@ -143,7 +143,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-scorpion-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/a/ab/Scorpion.png/revision/latest?cb=20130603185450",
+          "assetURL": "/images/characters/scorpion.png",
           "assetType": "character_portrait",
           "entityId": "scorpion",
           "rightsStatus": "approved",
@@ -187,7 +187,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-scorpion-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/a/ab/Scorpion.png/revision/latest?cb=20130603185450",
+          "assetURL": "/images/characters/scorpion.png",
           "assetType": "character_portrait",
           "entityId": "scorpion",
           "rightsStatus": "approved",
@@ -282,7 +282,7 @@ export const characters: Character[] = [
     "popular": true,
     "image": {
       "assetId": "asset-subzero-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/8/81/Sub-Zero.png/revision/latest?cb=20110129183905",
+      "assetURL": "/images/characters/sub-zero.png",
       "assetType": "character_portrait",
       "entityId": "sub-zero",
       "rightsStatus": "approved",
@@ -330,7 +330,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-subzero-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/8/81/Sub-Zero.png/revision/latest?cb=20110129183905",
+          "assetURL": "/images/characters/sub-zero.png",
           "assetType": "character_portrait",
           "entityId": "sub-zero",
           "rightsStatus": "approved",
@@ -379,7 +379,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-subzero-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/8/81/Sub-Zero.png/revision/latest?cb=20110129183905",
+          "assetURL": "/images/characters/sub-zero.png",
           "assetType": "character_portrait",
           "entityId": "sub-zero",
           "rightsStatus": "approved",
@@ -423,7 +423,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-subzero-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/8/81/Sub-Zero.png/revision/latest?cb=20110129183905",
+          "assetURL": "/images/characters/sub-zero.png",
           "assetType": "character_portrait",
           "entityId": "sub-zero",
           "rightsStatus": "approved",
@@ -473,7 +473,7 @@ export const characters: Character[] = [
     "popular": true,
     "image": {
       "assetId": "asset-raiden-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/c/cd/Raiden_%28MK1%29_Render.png/revision/latest?cb=20240517202601",
+      "assetURL": "/images/characters/raiden.png",
       "assetType": "character_portrait",
       "entityId": "raiden",
       "rightsStatus": "approved",
@@ -515,7 +515,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-raiden-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/c/cd/Raiden_%28MK1%29_Render.png/revision/latest?cb=20240517202601",
+          "assetURL": "/images/characters/raiden.png",
           "assetType": "character_portrait",
           "entityId": "raiden",
           "rightsStatus": "approved",
@@ -553,7 +553,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-raiden-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/c/cd/Raiden_%28MK1%29_Render.png/revision/latest?cb=20240517202601",
+          "assetURL": "/images/characters/raiden.png",
           "assetType": "character_portrait",
           "entityId": "raiden",
           "rightsStatus": "approved",
@@ -586,7 +586,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-raiden-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/c/cd/Raiden_%28MK1%29_Render.png/revision/latest?cb=20240517202601",
+          "assetURL": "/images/characters/raiden.png",
           "assetType": "character_portrait",
           "entityId": "raiden",
           "rightsStatus": "approved",
@@ -670,7 +670,7 @@ export const characters: Character[] = [
     "popular": true,
     "image": {
       "assetId": "asset-liukang-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/e/e9/Liu_Kang_Render_%28MK1%29.png/revision/latest?cb=20250319165938",
+      "assetURL": "/images/characters/liu-kang.png",
       "assetType": "character_portrait",
       "entityId": "liu-kang",
       "rightsStatus": "approved",
@@ -712,7 +712,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-liukang-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/e/e9/Liu_Kang_Render_%28MK1%29.png/revision/latest?cb=20250319165938",
+          "assetURL": "/images/characters/liu-kang.png",
           "assetType": "character_portrait",
           "entityId": "liu-kang",
           "rightsStatus": "approved",
@@ -755,7 +755,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-liukang-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/e/e9/Liu_Kang_Render_%28MK1%29.png/revision/latest?cb=20250319165938",
+          "assetURL": "/images/characters/liu-kang.png",
           "assetType": "character_portrait",
           "entityId": "liu-kang",
           "rightsStatus": "approved",
@@ -793,7 +793,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-liukang-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/e/e9/Liu_Kang_Render_%28MK1%29.png/revision/latest?cb=20250319165938",
+          "assetURL": "/images/characters/liu-kang.png",
           "assetType": "character_portrait",
           "entityId": "liu-kang",
           "rightsStatus": "approved",
@@ -843,7 +843,7 @@ export const characters: Character[] = [
     "popular": true,
     "image": {
       "assetId": "asset-kitana-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/5/51/Kitana_MK1_render.webp/revision/latest?cb=20250317155722",
+      "assetURL": "/images/characters/kitana.png",
       "assetType": "character_portrait",
       "entityId": "kitana",
       "rightsStatus": "approved",
@@ -885,7 +885,7 @@ export const characters: Character[] = [
         "organizations": [],
         "image": {
           "assetId": "asset-kitana-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/5/51/Kitana_MK1_render.webp/revision/latest?cb=20250317155722",
+          "assetURL": "/images/characters/kitana.png",
           "assetType": "character_portrait",
           "entityId": "kitana",
           "rightsStatus": "approved",
@@ -923,7 +923,7 @@ export const characters: Character[] = [
         "organizations": [],
         "image": {
           "assetId": "asset-kitana-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/5/51/Kitana_MK1_render.webp/revision/latest?cb=20250317155722",
+          "assetURL": "/images/characters/kitana.png",
           "assetType": "character_portrait",
           "entityId": "kitana",
           "rightsStatus": "approved",
@@ -991,7 +991,7 @@ export const characters: Character[] = [
     "popular": true,
     "image": {
       "assetId": "asset-mileena-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/2/22/Mileena_MK1_render.webp/revision/latest?cb=20250712090157",
+      "assetURL": "/images/characters/mileena.png",
       "assetType": "character_portrait",
       "entityId": "mileena",
       "rightsStatus": "approved",
@@ -1023,7 +1023,7 @@ export const characters: Character[] = [
         "organizations": [],
         "image": {
           "assetId": "asset-mileena-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/2/22/Mileena_MK1_render.webp/revision/latest?cb=20250712090157",
+          "assetURL": "/images/characters/mileena.png",
           "assetType": "character_portrait",
           "entityId": "mileena",
           "rightsStatus": "approved",
@@ -1056,7 +1056,7 @@ export const characters: Character[] = [
         "organizations": [],
         "image": {
           "assetId": "asset-mileena-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/2/22/Mileena_MK1_render.webp/revision/latest?cb=20250712090157",
+          "assetURL": "/images/characters/mileena.png",
           "assetType": "character_portrait",
           "entityId": "mileena",
           "rightsStatus": "approved",
@@ -1089,7 +1089,7 @@ export const characters: Character[] = [
         "organizations": [],
         "image": {
           "assetId": "asset-mileena-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/2/22/Mileena_MK1_render.webp/revision/latest?cb=20250712090157",
+          "assetURL": "/images/characters/mileena.png",
           "assetType": "character_portrait",
           "entityId": "mileena",
           "rightsStatus": "approved",
@@ -1139,7 +1139,7 @@ export const characters: Character[] = [
     "popular": true,
     "image": {
       "assetId": "asset-johnnycage-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/c/c0/JohnnyCage_MK1_render.webp/revision/latest?cb=20250409201914",
+      "assetURL": "/images/characters/johnny-cage.png",
       "assetType": "character_portrait",
       "entityId": "johnny-cage",
       "rightsStatus": "approved",
@@ -1176,7 +1176,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-johnnycage-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/c/c0/JohnnyCage_MK1_render.webp/revision/latest?cb=20250409201914",
+          "assetURL": "/images/characters/johnny-cage.png",
           "assetType": "character_portrait",
           "entityId": "johnny-cage",
           "rightsStatus": "approved",
@@ -1214,7 +1214,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-johnnycage-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/c/c0/JohnnyCage_MK1_render.webp/revision/latest?cb=20250409201914",
+          "assetURL": "/images/characters/johnny-cage.png",
           "assetType": "character_portrait",
           "entityId": "johnny-cage",
           "rightsStatus": "approved",
@@ -1264,7 +1264,7 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-sonyablade-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/b/b1/Sonya_MK1_Render.png/revision/latest?cb=20231215102112",
+      "assetURL": "/images/characters/sonya-blade.png",
       "assetType": "character_portrait",
       "entityId": "sonya-blade",
       "rightsStatus": "approved",
@@ -1301,7 +1301,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-sonyablade-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/b/b1/Sonya_MK1_Render.png/revision/latest?cb=20231215102112",
+          "assetURL": "/images/characters/sonya-blade.png",
           "assetType": "character_portrait",
           "entityId": "sonya-blade",
           "rightsStatus": "approved",
@@ -1339,7 +1339,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-sonyablade-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/b/b1/Sonya_MK1_Render.png/revision/latest?cb=20231215102112",
+          "assetURL": "/images/characters/sonya-blade.png",
           "assetType": "character_portrait",
           "entityId": "sonya-blade",
           "rightsStatus": "approved",
@@ -1407,7 +1407,7 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-jax-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/a/a1/Jax_MK1_Render.png/revision/latest?cb=20231215100652",
+      "assetURL": "/images/characters/jax.png",
       "assetType": "character_portrait",
       "entityId": "jax",
       "rightsStatus": "approved",
@@ -1450,7 +1450,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-jax-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/a/a1/Jax_MK1_Render.png/revision/latest?cb=20231215100652",
+          "assetURL": "/images/characters/jax.png",
           "assetType": "character_portrait",
           "entityId": "jax",
           "rightsStatus": "approved",
@@ -1494,7 +1494,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-jax-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/a/a1/Jax_MK1_Render.png/revision/latest?cb=20231215100652",
+          "assetURL": "/images/characters/jax.png",
           "assetType": "character_portrait",
           "entityId": "jax",
           "rightsStatus": "approved",
@@ -1544,7 +1544,7 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-kunglao-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/4/49/KungLao_MK1_render.webp/revision/latest?cb=20250512010110",
+      "assetURL": "/images/characters/kung-lao.png",
       "assetType": "character_portrait",
       "entityId": "kung-lao",
       "rightsStatus": "approved",
@@ -1586,7 +1586,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-kunglao-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/4/49/KungLao_MK1_render.webp/revision/latest?cb=20250512010110",
+          "assetURL": "/images/characters/kung-lao.png",
           "assetType": "character_portrait",
           "entityId": "kung-lao",
           "rightsStatus": "approved",
@@ -1624,7 +1624,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-kunglao-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/4/49/KungLao_MK1_render.webp/revision/latest?cb=20250512010110",
+          "assetURL": "/images/characters/kung-lao.png",
           "assetType": "character_portrait",
           "entityId": "kung-lao",
           "rightsStatus": "approved",
@@ -1674,7 +1674,7 @@ export const characters: Character[] = [
     "popular": true,
     "image": {
       "assetId": "asset-shangtsung-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/e/ef/ShangTsung_MK1_render.webp/revision/latest?cb=20250407001935",
+      "assetURL": "/images/characters/shangtsung.png",
       "assetType": "character_portrait",
       "entityId": "shangtsung",
       "rightsStatus": "approved",
@@ -1705,7 +1705,7 @@ export const characters: Character[] = [
         "organizations": [],
         "image": {
           "assetId": "asset-shangtsung-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/e/ef/ShangTsung_MK1_render.webp/revision/latest?cb=20250407001935",
+          "assetURL": "/images/characters/shangtsung.png",
           "assetType": "character_portrait",
           "entityId": "shangtsung",
           "rightsStatus": "approved",
@@ -1732,7 +1732,7 @@ export const characters: Character[] = [
         "organizations": [],
         "image": {
           "assetId": "asset-shangtsung-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/e/ef/ShangTsung_MK1_render.webp/revision/latest?cb=20250407001935",
+          "assetURL": "/images/characters/shangtsung.png",
           "assetType": "character_portrait",
           "entityId": "shangtsung",
           "rightsStatus": "approved",
@@ -1759,7 +1759,7 @@ export const characters: Character[] = [
         "organizations": [],
         "image": {
           "assetId": "asset-shangtsung-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/e/ef/ShangTsung_MK1_render.webp/revision/latest?cb=20250407001935",
+          "assetURL": "/images/characters/shangtsung.png",
           "assetType": "character_portrait",
           "entityId": "shangtsung",
           "rightsStatus": "approved",
@@ -1827,7 +1827,7 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-quanchi-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/7/7d/QuanChi_MK1_render.webp/revision/latest?cb=20250325061111",
+      "assetURL": "/images/characters/quanchi.png",
       "assetType": "character_portrait",
       "entityId": "quanchi",
       "rightsStatus": "approved",
@@ -1864,7 +1864,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-quanchi-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/7/7d/QuanChi_MK1_render.webp/revision/latest?cb=20250325061111",
+          "assetURL": "/images/characters/quanchi.png",
           "assetType": "character_portrait",
           "entityId": "quanchi",
           "rightsStatus": "approved",
@@ -1902,7 +1902,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-quanchi-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/7/7d/QuanChi_MK1_render.webp/revision/latest?cb=20250325061111",
+          "assetURL": "/images/characters/quanchi.png",
           "assetType": "character_portrait",
           "entityId": "quanchi",
           "rightsStatus": "approved",
@@ -1952,7 +1952,7 @@ export const characters: Character[] = [
     "popular": true,
     "image": {
       "assetId": "asset-shaokahn-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/f/fe/Shao_render.png/revision/latest?cb=20231122223307",
+      "assetURL": "/images/characters/shao-kahn.png",
       "assetType": "character_portrait",
       "entityId": "shao-kahn",
       "rightsStatus": "approved",
@@ -1978,7 +1978,7 @@ export const characters: Character[] = [
         "organizations": [],
         "image": {
           "assetId": "asset-shaokahn-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/f/fe/Shao_render.png/revision/latest?cb=20231122223307",
+          "assetURL": "/images/characters/shao-kahn.png",
           "assetType": "character_portrait",
           "entityId": "shao-kahn",
           "rightsStatus": "approved",
@@ -2005,7 +2005,7 @@ export const characters: Character[] = [
         "organizations": [],
         "image": {
           "assetId": "asset-shaokahn-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/f/fe/Shao_render.png/revision/latest?cb=20231122223307",
+          "assetURL": "/images/characters/shao-kahn.png",
           "assetType": "character_portrait",
           "entityId": "shao-kahn",
           "rightsStatus": "approved",
@@ -2055,7 +2055,7 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-kano-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/c/c8/Kano_MK1_Render.png/revision/latest?cb=20231215100742",
+      "assetURL": "/images/characters/kano.png",
       "assetType": "character_portrait",
       "entityId": "kano",
       "rightsStatus": "approved",
@@ -2087,7 +2087,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-kano-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/c/c8/Kano_MK1_Render.png/revision/latest?cb=20231215100742",
+          "assetURL": "/images/characters/kano.png",
           "assetType": "character_portrait",
           "entityId": "kano",
           "rightsStatus": "approved",
@@ -2120,7 +2120,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-kano-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/c/c8/Kano_MK1_Render.png/revision/latest?cb=20231215100742",
+          "assetURL": "/images/characters/kano.png",
           "assetType": "character_portrait",
           "entityId": "kano",
           "rightsStatus": "approved",
@@ -2170,7 +2170,7 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-baraka-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/4/40/Baraka_%28MK1%29_Render.png/revision/latest?cb=20250319170034",
+      "assetURL": "/images/characters/baraka.png",
       "assetType": "character_portrait",
       "entityId": "baraka",
       "rightsStatus": "approved",
@@ -2196,7 +2196,7 @@ export const characters: Character[] = [
         "organizations": [],
         "image": {
           "assetId": "asset-baraka-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/4/40/Baraka_%28MK1%29_Render.png/revision/latest?cb=20250319170034",
+          "assetURL": "/images/characters/baraka.png",
           "assetType": "character_portrait",
           "entityId": "baraka",
           "rightsStatus": "approved",
@@ -2223,7 +2223,7 @@ export const characters: Character[] = [
         "organizations": [],
         "image": {
           "assetId": "asset-baraka-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/4/40/Baraka_%28MK1%29_Render.png/revision/latest?cb=20250319170034",
+          "assetURL": "/images/characters/baraka.png",
           "assetType": "character_portrait",
           "entityId": "baraka",
           "rightsStatus": "approved",
@@ -2273,7 +2273,7 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-kenshi-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/d/d4/Kenshi.png/revision/latest?cb=20110815213455",
+      "assetURL": "/images/characters/kenshi.png",
       "assetType": "character_portrait",
       "entityId": "kenshi",
       "rightsStatus": "approved",
@@ -2316,7 +2316,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-kenshi-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/d/d4/Kenshi.png/revision/latest?cb=20110815213455",
+          "assetURL": "/images/characters/kenshi.png",
           "assetType": "character_portrait",
           "entityId": "kenshi",
           "rightsStatus": "approved",
@@ -2360,7 +2360,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-kenshi-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/d/d4/Kenshi.png/revision/latest?cb=20110815213455",
+          "assetURL": "/images/characters/kenshi.png",
           "assetType": "character_portrait",
           "entityId": "kenshi",
           "rightsStatus": "approved",
@@ -2399,7 +2399,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-kenshi-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/d/d4/Kenshi.png/revision/latest?cb=20110815213455",
+          "assetURL": "/images/characters/kenshi.png",
           "assetType": "character_portrait",
           "entityId": "kenshi",
           "rightsStatus": "approved",
@@ -2449,7 +2449,7 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-noobsaibot-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/8/89/Noob_Saibot.png/revision/latest?cb=20110311063327",
+      "assetURL": "/images/characters/noob-saibot.png",
       "assetType": "character_portrait",
       "entityId": "noob-saibot",
       "rightsStatus": "approved",
@@ -2486,7 +2486,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-noobsaibot-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/8/89/Noob_Saibot.png/revision/latest?cb=20110311063327",
+          "assetURL": "/images/characters/noob-saibot.png",
           "assetType": "character_portrait",
           "entityId": "noob-saibot",
           "rightsStatus": "approved",
@@ -2524,7 +2524,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-noobsaibot-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/8/89/Noob_Saibot.png/revision/latest?cb=20110311063327",
+          "assetURL": "/images/characters/noob-saibot.png",
           "assetType": "character_portrait",
           "entityId": "noob-saibot",
           "rightsStatus": "approved",
@@ -2574,7 +2574,7 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-smoke-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/9/95/Smoke_%28MK1%29_Render.png/revision/latest?cb=20250319170102",
+      "assetURL": "/images/characters/smoke.png",
       "assetType": "character_portrait",
       "entityId": "smoke",
       "rightsStatus": "approved",
@@ -2606,7 +2606,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-smoke-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/9/95/Smoke_%28MK1%29_Render.png/revision/latest?cb=20250319170102",
+          "assetURL": "/images/characters/smoke.png",
           "assetType": "character_portrait",
           "entityId": "smoke",
           "rightsStatus": "approved",
@@ -2639,7 +2639,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-smoke-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/9/95/Smoke_%28MK1%29_Render.png/revision/latest?cb=20250319170102",
+          "assetURL": "/images/characters/smoke.png",
           "assetType": "character_portrait",
           "entityId": "smoke",
           "rightsStatus": "approved",
@@ -2672,7 +2672,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-smoke-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/9/95/Smoke_%28MK1%29_Render.png/revision/latest?cb=20250319170102",
+          "assetURL": "/images/characters/smoke.png",
           "assetType": "character_portrait",
           "entityId": "smoke",
           "rightsStatus": "approved",
@@ -2722,7 +2722,7 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-cyrax-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/4/40/Cyrax_MK1_Render.png/revision/latest?cb=20250408031043",
+      "assetURL": "/images/characters/cyrax.png",
       "assetType": "character_portrait",
       "entityId": "cyrax",
       "rightsStatus": "approved",
@@ -2759,7 +2759,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-cyrax-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/4/40/Cyrax_MK1_Render.png/revision/latest?cb=20250408031043",
+          "assetURL": "/images/characters/cyrax.png",
           "assetType": "character_portrait",
           "entityId": "cyrax",
           "rightsStatus": "approved",
@@ -2797,7 +2797,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-cyrax-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/4/40/Cyrax_MK1_Render.png/revision/latest?cb=20250408031043",
+          "assetURL": "/images/characters/cyrax.png",
           "assetType": "character_portrait",
           "entityId": "cyrax",
           "rightsStatus": "approved",
@@ -2847,7 +2847,7 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-sektor-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/a/af/Sektor_MK1_Render.png/revision/latest?cb=20250325020045",
+      "assetURL": "/images/characters/sektor.png",
       "assetType": "character_portrait",
       "entityId": "sektor",
       "rightsStatus": "approved",
@@ -2884,7 +2884,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-sektor-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/a/af/Sektor_MK1_Render.png/revision/latest?cb=20250325020045",
+          "assetURL": "/images/characters/sektor.png",
           "assetType": "character_portrait",
           "entityId": "sektor",
           "rightsStatus": "approved",
@@ -2922,7 +2922,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-sektor-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/a/af/Sektor_MK1_Render.png/revision/latest?cb=20250325020045",
+          "assetURL": "/images/characters/sektor.png",
           "assetType": "character_portrait",
           "entityId": "sektor",
           "rightsStatus": "approved",
@@ -2972,7 +2972,7 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-reptile-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/c/c2/Reptile_MK1_render.webp/revision/latest?cb=20250711101600",
+      "assetURL": "/images/characters/reptile.png",
       "assetType": "character_portrait",
       "entityId": "reptile",
       "rightsStatus": "approved",
@@ -2998,7 +2998,7 @@ export const characters: Character[] = [
         "organizations": [],
         "image": {
           "assetId": "asset-reptile-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/c/c2/Reptile_MK1_render.webp/revision/latest?cb=20250711101600",
+          "assetURL": "/images/characters/reptile.png",
           "assetType": "character_portrait",
           "entityId": "reptile",
           "rightsStatus": "approved",
@@ -3025,7 +3025,7 @@ export const characters: Character[] = [
         "organizations": [],
         "image": {
           "assetId": "asset-reptile-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/c/c2/Reptile_MK1_render.webp/revision/latest?cb=20250711101600",
+          "assetURL": "/images/characters/reptile.png",
           "assetType": "character_portrait",
           "entityId": "reptile",
           "rightsStatus": "approved",
@@ -3052,7 +3052,7 @@ export const characters: Character[] = [
         "organizations": [],
         "image": {
           "assetId": "asset-reptile-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/c/c2/Reptile_MK1_render.webp/revision/latest?cb=20250711101600",
+          "assetURL": "/images/characters/reptile.png",
           "assetType": "character_portrait",
           "entityId": "reptile",
           "rightsStatus": "approved",
@@ -3102,7 +3102,7 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-geras-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/3/36/Geras_MK1_Render.png/revision/latest?cb=20250319170152",
+      "assetURL": "/images/characters/geras.png",
       "assetType": "character_portrait",
       "entityId": "geras",
       "rightsStatus": "approved",
@@ -3128,7 +3128,7 @@ export const characters: Character[] = [
         "organizations": [],
         "image": {
           "assetId": "asset-geras-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/3/36/Geras_MK1_Render.png/revision/latest?cb=20250319170152",
+          "assetURL": "/images/characters/geras.png",
           "assetType": "character_portrait",
           "entityId": "geras",
           "rightsStatus": "approved",
@@ -3155,7 +3155,7 @@ export const characters: Character[] = [
         "organizations": [],
         "image": {
           "assetId": "asset-geras-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/3/36/Geras_MK1_Render.png/revision/latest?cb=20250319170152",
+          "assetURL": "/images/characters/geras.png",
           "assetType": "character_portrait",
           "entityId": "geras",
           "rightsStatus": "approved",
@@ -3223,7 +3223,7 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-kronika-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/1/1f/MK11KronikaRender.png/revision/latest?cb=20190812124147",
+      "assetURL": "/images/characters/kronika.png",
       "assetType": "character_portrait",
       "entityId": "kronika",
       "rightsStatus": "approved",
@@ -3249,7 +3249,7 @@ export const characters: Character[] = [
         "organizations": [],
         "image": {
           "assetId": "asset-kronika-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/1/1f/MK11KronikaRender.png/revision/latest?cb=20190812124147",
+          "assetURL": "/images/characters/kronika.png",
           "assetType": "character_portrait",
           "entityId": "kronika",
           "rightsStatus": "approved",
@@ -3299,7 +3299,7 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-sindel-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/0/05/Sindel_MK1_render.webp/revision/latest?cb=20250313144711",
+      "assetURL": "/images/characters/sindel.png",
       "assetType": "character_portrait",
       "entityId": "sindel",
       "rightsStatus": "approved",
@@ -3335,7 +3335,7 @@ export const characters: Character[] = [
         "organizations": [],
         "image": {
           "assetId": "asset-sindel-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/0/05/Sindel_MK1_render.webp/revision/latest?cb=20250313144711",
+          "assetURL": "/images/characters/sindel.png",
           "assetType": "character_portrait",
           "entityId": "sindel",
           "rightsStatus": "approved",
@@ -3367,7 +3367,7 @@ export const characters: Character[] = [
         "organizations": [],
         "image": {
           "assetId": "asset-sindel-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/0/05/Sindel_MK1_render.webp/revision/latest?cb=20250313144711",
+          "assetURL": "/images/characters/sindel.png",
           "assetType": "character_portrait",
           "entityId": "sindel",
           "rightsStatus": "approved",
@@ -3417,7 +3417,7 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-goro-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/6/68/Goro_MK1_Render.png/revision/latest?cb=20231215100554",
+      "assetURL": "/images/characters/goro.png",
       "assetType": "character_portrait",
       "entityId": "goro",
       "rightsStatus": "approved",
@@ -3448,7 +3448,7 @@ export const characters: Character[] = [
         "organizations": [],
         "image": {
           "assetId": "asset-goro-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/6/68/Goro_MK1_Render.png/revision/latest?cb=20231215100554",
+          "assetURL": "/images/characters/goro.png",
           "assetType": "character_portrait",
           "entityId": "goro",
           "rightsStatus": "approved",
@@ -3475,7 +3475,7 @@ export const characters: Character[] = [
         "organizations": [],
         "image": {
           "assetId": "asset-goro-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/6/68/Goro_MK1_Render.png/revision/latest?cb=20231215100554",
+          "assetURL": "/images/characters/goro.png",
           "assetType": "character_portrait",
           "entityId": "goro",
           "rightsStatus": "approved",
@@ -3525,7 +3525,7 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-kintaro-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/1/1b/Kintaromk9.png/revision/latest?cb=20120804180654",
+      "assetURL": "/images/characters/kintaro.png",
       "assetType": "character_portrait",
       "entityId": "kintaro",
       "rightsStatus": "approved",
@@ -3551,7 +3551,7 @@ export const characters: Character[] = [
         "organizations": [],
         "image": {
           "assetId": "asset-kintaro-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/1/1b/Kintaromk9.png/revision/latest?cb=20120804180654",
+          "assetURL": "/images/characters/kintaro.png",
           "assetType": "character_portrait",
           "entityId": "kintaro",
           "rightsStatus": "approved",
@@ -3601,7 +3601,7 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-shinnok-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/b/bc/Shinnok_RENDER_PNG.png/revision/latest?cb=20190423022022",
+      "assetURL": "/images/characters/shinnok.png",
       "assetType": "character_portrait",
       "entityId": "shinnok",
       "rightsStatus": "approved",
@@ -3638,7 +3638,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-shinnok-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/b/bc/Shinnok_RENDER_PNG.png/revision/latest?cb=20190423022022",
+          "assetURL": "/images/characters/shinnok.png",
           "assetType": "character_portrait",
           "entityId": "shinnok",
           "rightsStatus": "approved",
@@ -3676,7 +3676,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-shinnok-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/b/bc/Shinnok_RENDER_PNG.png/revision/latest?cb=20190423022022",
+          "assetURL": "/images/characters/shinnok.png",
           "assetType": "character_portrait",
           "entityId": "shinnok",
           "rightsStatus": "approved",
@@ -3726,7 +3726,7 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-fujin-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/6/63/MK11_Fujin_render-0.png/revision/latest?cb=20240604094101",
+      "assetURL": "/images/characters/fujin.png",
       "assetType": "character_portrait",
       "entityId": "fujin",
       "rightsStatus": "approved",
@@ -3763,7 +3763,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-fujin-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/6/63/MK11_Fujin_render-0.png/revision/latest?cb=20240604094101",
+          "assetURL": "/images/characters/fujin.png",
           "assetType": "character_portrait",
           "entityId": "fujin",
           "rightsStatus": "approved",
@@ -3796,7 +3796,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-fujin-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/6/63/MK11_Fujin_render-0.png/revision/latest?cb=20240604094101",
+          "assetURL": "/images/characters/fujin.png",
           "assetType": "character_portrait",
           "entityId": "fujin",
           "rightsStatus": "approved",
@@ -3846,7 +3846,7 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-frost-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/5/52/Frost_MK1_Render.png/revision/latest?cb=20231215100457",
+      "assetURL": "/images/characters/frost.png",
       "assetType": "character_portrait",
       "entityId": "frost",
       "rightsStatus": "approved",
@@ -3889,7 +3889,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-frost-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/5/52/Frost_MK1_Render.png/revision/latest?cb=20231215100457",
+          "assetURL": "/images/characters/frost.png",
           "assetType": "character_portrait",
           "entityId": "frost",
           "rightsStatus": "approved",
@@ -3927,7 +3927,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-frost-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/5/52/Frost_MK1_Render.png/revision/latest?cb=20231215100457",
+          "assetURL": "/images/characters/frost.png",
           "assetType": "character_portrait",
           "entityId": "frost",
           "rightsStatus": "approved",
@@ -3995,7 +3995,7 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-boraicho-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/5/59/Bo_Rai_Cho_Render_MKX.png/revision/latest?cb=20160620210628",
+      "assetURL": "/images/characters/boraicho.png",
       "assetType": "character_portrait",
       "entityId": "boraicho",
       "rightsStatus": "approved",
@@ -4032,7 +4032,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-boraicho-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/5/59/Bo_Rai_Cho_Render_MKX.png/revision/latest?cb=20160620210628",
+          "assetURL": "/images/characters/boraicho.png",
           "assetType": "character_portrait",
           "entityId": "boraicho",
           "rightsStatus": "approved",
@@ -4065,7 +4065,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-boraicho-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/5/59/Bo_Rai_Cho_Render_MKX.png/revision/latest?cb=20160620210628",
+          "assetURL": "/images/characters/boraicho.png",
           "assetType": "character_portrait",
           "entityId": "boraicho",
           "rightsStatus": "approved",
@@ -4133,7 +4133,7 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-limei-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/c/ca/LiMei_MK1_render.webp/revision/latest?cb=20250314101827",
+      "assetURL": "/images/characters/limei.png",
       "assetType": "character_portrait",
       "entityId": "limei",
       "rightsStatus": "approved",
@@ -4159,7 +4159,7 @@ export const characters: Character[] = [
         "organizations": [],
         "image": {
           "assetId": "asset-limei-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/c/ca/LiMei_MK1_render.webp/revision/latest?cb=20250314101827",
+          "assetURL": "/images/characters/limei.png",
           "assetType": "character_portrait",
           "entityId": "limei",
           "rightsStatus": "approved",
@@ -4192,7 +4192,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-limei-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/c/ca/LiMei_MK1_render.webp/revision/latest?cb=20250314101827",
+          "assetURL": "/images/characters/limei.png",
           "assetType": "character_portrait",
           "entityId": "limei",
           "rightsStatus": "approved",
@@ -4242,7 +4242,7 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-tanya-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/6/6a/Tanya_MK1_render.webp/revision/latest?cb=20230920060746",
+      "assetURL": "/images/characters/tanya.png",
       "assetType": "character_portrait",
       "entityId": "tanya",
       "rightsStatus": "approved",
@@ -4268,7 +4268,7 @@ export const characters: Character[] = [
         "organizations": [],
         "image": {
           "assetId": "asset-tanya-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/6/6a/Tanya_MK1_render.webp/revision/latest?cb=20230920060746",
+          "assetURL": "/images/characters/tanya.png",
           "assetType": "character_portrait",
           "entityId": "tanya",
           "rightsStatus": "approved",
@@ -4301,7 +4301,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-tanya-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/6/6a/Tanya_MK1_render.webp/revision/latest?cb=20230920060746",
+          "assetURL": "/images/characters/tanya.png",
           "assetType": "character_portrait",
           "entityId": "tanya",
           "rightsStatus": "approved",
@@ -4369,7 +4369,7 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-havik-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/7/78/Havik_MK1_render.webp/revision/latest?cb=20250401183326",
+      "assetURL": "/images/characters/havik.png",
       "assetType": "character_portrait",
       "entityId": "havik",
       "rightsStatus": "approved",
@@ -4395,7 +4395,7 @@ export const characters: Character[] = [
         "organizations": [],
         "image": {
           "assetId": "asset-havik-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/7/78/Havik_MK1_render.webp/revision/latest?cb=20250401183326",
+          "assetURL": "/images/characters/havik.png",
           "assetType": "character_portrait",
           "entityId": "havik",
           "rightsStatus": "approved",
@@ -4422,7 +4422,7 @@ export const characters: Character[] = [
         "organizations": [],
         "image": {
           "assetId": "asset-havik-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/7/78/Havik_MK1_render.webp/revision/latest?cb=20250401183326",
+          "assetURL": "/images/characters/havik.png",
           "assetType": "character_portrait",
           "entityId": "havik",
           "rightsStatus": "approved",
@@ -4472,7 +4472,7 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-cassiecage-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/d/d2/Cassie_mk11.png/revision/latest?cb=20190306231757",
+      "assetURL": "/images/characters/cassiecage.png",
       "assetType": "character_portrait",
       "entityId": "cassiecage",
       "rightsStatus": "approved",
@@ -4509,7 +4509,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-cassiecage-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/d/d2/Cassie_mk11.png/revision/latest?cb=20190306231757",
+          "assetURL": "/images/characters/cassiecage.png",
           "assetType": "character_portrait",
           "entityId": "cassiecage",
           "rightsStatus": "approved",
@@ -4547,7 +4547,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-cassiecage-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/d/d2/Cassie_mk11.png/revision/latest?cb=20190306231757",
+          "assetURL": "/images/characters/cassiecage.png",
           "assetType": "character_portrait",
           "entityId": "cassiecage",
           "rightsStatus": "approved",
@@ -4631,7 +4631,7 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-kotalkahn-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/f/f1/Kotal_mk11.png/revision/latest?cb=20190321025157",
+      "assetURL": "/images/characters/kotalkahn.png",
       "assetType": "character_portrait",
       "entityId": "kotalkahn",
       "rightsStatus": "approved",
@@ -4668,7 +4668,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-kotalkahn-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/f/f1/Kotal_mk11.png/revision/latest?cb=20190321025157",
+          "assetURL": "/images/characters/kotalkahn.png",
           "assetType": "character_portrait",
           "entityId": "kotalkahn",
           "rightsStatus": "approved",
@@ -4701,7 +4701,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-kotalkahn-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/f/f1/Kotal_mk11.png/revision/latest?cb=20190321025157",
+          "assetURL": "/images/characters/kotalkahn.png",
           "assetType": "character_portrait",
           "entityId": "kotalkahn",
           "rightsStatus": "approved",
@@ -4769,7 +4769,7 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-erronblack-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/9/91/Erron_mk11.png/revision/latest?cb=20190313041908",
+      "assetURL": "/images/characters/erronblack.png",
       "assetType": "character_portrait",
       "entityId": "erronblack",
       "rightsStatus": "approved",
@@ -4807,7 +4807,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-erronblack-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/9/91/Erron_mk11.png/revision/latest?cb=20190313041908",
+          "assetURL": "/images/characters/erronblack.png",
           "assetType": "character_portrait",
           "entityId": "erronblack",
           "rightsStatus": "approved",
@@ -4846,7 +4846,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-erronblack-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/9/91/Erron_mk11.png/revision/latest?cb=20190313041908",
+          "assetURL": "/images/characters/erronblack.png",
           "assetType": "character_portrait",
           "entityId": "erronblack",
           "rightsStatus": "approved",
@@ -4896,7 +4896,7 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-jade-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/2/26/Jade_MK11.png/revision/latest?cb=20190227220506",
+      "assetURL": "/images/characters/jade.png",
       "assetType": "character_portrait",
       "entityId": "jade",
       "rightsStatus": "approved",
@@ -4938,7 +4938,7 @@ export const characters: Character[] = [
         "organizations": [],
         "image": {
           "assetId": "asset-jade-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/2/26/Jade_MK11.png/revision/latest?cb=20190227220506",
+          "assetURL": "/images/characters/jade.png",
           "assetType": "character_portrait",
           "entityId": "jade",
           "rightsStatus": "approved",
@@ -4976,7 +4976,7 @@ export const characters: Character[] = [
         "organizations": [],
         "image": {
           "assetId": "asset-jade-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/2/26/Jade_MK11.png/revision/latest?cb=20190227220506",
+          "assetURL": "/images/characters/jade.png",
           "assetType": "character_portrait",
           "entityId": "jade",
           "rightsStatus": "approved",
@@ -5044,7 +5044,7 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-kabal-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/c/c7/Kabal_MK11.png/revision/latest?cb=20190323002944",
+      "assetURL": "/images/characters/kabal.png",
       "assetType": "character_portrait",
       "entityId": "kabal",
       "rightsStatus": "approved",
@@ -5092,7 +5092,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-kabal-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/c/c7/Kabal_MK11.png/revision/latest?cb=20190323002944",
+          "assetURL": "/images/characters/kabal.png",
           "assetType": "character_portrait",
           "entityId": "kabal",
           "rightsStatus": "approved",
@@ -5136,7 +5136,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-kabal-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/c/c7/Kabal_MK11.png/revision/latest?cb=20190323002944",
+          "assetURL": "/images/characters/kabal.png",
           "assetType": "character_portrait",
           "entityId": "kabal",
           "rightsStatus": "approved",
@@ -5204,7 +5204,7 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-stryker-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/2/21/Stryker_MK1_Render.png/revision/latest?cb=20231215101237",
+      "assetURL": "/images/characters/stryker.png",
       "assetType": "character_portrait",
       "entityId": "stryker",
       "rightsStatus": "approved",
@@ -5252,7 +5252,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-stryker-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/2/21/Stryker_MK1_Render.png/revision/latest?cb=20231215101237",
+          "assetURL": "/images/characters/stryker.png",
           "assetType": "character_portrait",
           "entityId": "stryker",
           "rightsStatus": "approved",
@@ -5296,7 +5296,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-stryker-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/2/21/Stryker_MK1_Render.png/revision/latest?cb=20231215101237",
+          "assetURL": "/images/characters/stryker.png",
           "assetType": "character_portrait",
           "entityId": "stryker",
           "rightsStatus": "approved",
@@ -5346,7 +5346,7 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-sheeva-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/8/84/Sheeva_Render.png/revision/latest?cb=20200508024526",
+      "assetURL": "/images/characters/sheeva.png",
       "assetType": "character_portrait",
       "entityId": "sheeva",
       "rightsStatus": "approved",
@@ -5388,7 +5388,7 @@ export const characters: Character[] = [
         "organizations": [],
         "image": {
           "assetId": "asset-sheeva-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/8/84/Sheeva_Render.png/revision/latest?cb=20200508024526",
+          "assetURL": "/images/characters/sheeva.png",
           "assetType": "character_portrait",
           "entityId": "sheeva",
           "rightsStatus": "approved",
@@ -5421,7 +5421,7 @@ export const characters: Character[] = [
         "organizations": [],
         "image": {
           "assetId": "asset-sheeva-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/8/84/Sheeva_Render.png/revision/latest?cb=20200508024526",
+          "assetURL": "/images/characters/sheeva.png",
           "assetType": "character_portrait",
           "entityId": "sheeva",
           "rightsStatus": "approved",
@@ -5489,7 +5489,7 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-nightwolf-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/a/ad/NightwolfRenderMK11.png/revision/latest?cb=20190815003315",
+      "assetURL": "/images/characters/nightwolf.png",
       "assetType": "character_portrait",
       "entityId": "nightwolf",
       "rightsStatus": "approved",
@@ -5531,7 +5531,7 @@ export const characters: Character[] = [
         "organizations": [],
         "image": {
           "assetId": "asset-nightwolf-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/a/ad/NightwolfRenderMK11.png/revision/latest?cb=20190815003315",
+          "assetURL": "/images/characters/nightwolf.png",
           "assetType": "character_portrait",
           "entityId": "nightwolf",
           "rightsStatus": "approved",
@@ -5569,7 +5569,7 @@ export const characters: Character[] = [
         "organizations": [],
         "image": {
           "assetId": "asset-nightwolf-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/a/ad/NightwolfRenderMK11.png/revision/latest?cb=20190815003315",
+          "assetURL": "/images/characters/nightwolf.png",
           "assetType": "character_portrait",
           "entityId": "nightwolf",
           "rightsStatus": "approved",
@@ -5637,7 +5637,7 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-dvorah-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/8/85/D%27vorah_mk11_2.png/revision/latest?cb=20190414150233",
+      "assetURL": "/images/characters/dvorah.png",
       "assetType": "character_portrait",
       "entityId": "dvorah",
       "rightsStatus": "approved",
@@ -5679,7 +5679,7 @@ export const characters: Character[] = [
         "organizations": [],
         "image": {
           "assetId": "asset-dvorah-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/8/85/D%27vorah_mk11_2.png/revision/latest?cb=20190414150233",
+          "assetURL": "/images/characters/dvorah.png",
           "assetType": "character_portrait",
           "entityId": "dvorah",
           "rightsStatus": "approved",
@@ -5717,7 +5717,7 @@ export const characters: Character[] = [
         "organizations": [],
         "image": {
           "assetId": "asset-dvorah-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/8/85/D%27vorah_mk11_2.png/revision/latest?cb=20190414150233",
+          "assetURL": "/images/characters/dvorah.png",
           "assetType": "character_portrait",
           "entityId": "dvorah",
           "rightsStatus": "approved",
@@ -5801,7 +5801,7 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-jacqui-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/9/9f/Jacqui_mk11.png/revision/latest?cb=20190322005550",
+      "assetURL": "/images/characters/jacqui.png",
       "assetType": "character_portrait",
       "entityId": "jacqui",
       "rightsStatus": "approved",
@@ -5843,7 +5843,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-jacqui-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/9/9f/Jacqui_mk11.png/revision/latest?cb=20190322005550",
+          "assetURL": "/images/characters/jacqui.png",
           "assetType": "character_portrait",
           "entityId": "jacqui",
           "rightsStatus": "approved",
@@ -5881,7 +5881,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-jacqui-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/9/9f/Jacqui_mk11.png/revision/latest?cb=20190322005550",
+          "assetURL": "/images/characters/jacqui.png",
           "assetType": "character_portrait",
           "entityId": "jacqui",
           "rightsStatus": "approved",
@@ -5949,7 +5949,7 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-takeda-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/f/f1/TakedaMK1.png/revision/latest?cb=20240723181548",
+      "assetURL": "/images/characters/takeda.png",
       "assetType": "character_portrait",
       "entityId": "takeda",
       "rightsStatus": "approved",
@@ -5997,7 +5997,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-takeda-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/f/f1/TakedaMK1.png/revision/latest?cb=20240723181548",
+          "assetURL": "/images/characters/takeda.png",
           "assetType": "character_portrait",
           "entityId": "takeda",
           "rightsStatus": "approved",
@@ -6065,7 +6065,7 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-kungjin-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/6/69/Kung_Jin_RENDER.png/revision/latest?cb=20150402022350",
+      "assetURL": "/images/characters/kungjin.png",
       "assetType": "character_portrait",
       "entityId": "kungjin",
       "rightsStatus": "approved",
@@ -6113,7 +6113,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-kungjin-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/6/69/Kung_Jin_RENDER.png/revision/latest?cb=20150402022350",
+          "assetURL": "/images/characters/kungjin.png",
           "assetType": "character_portrait",
           "entityId": "kungjin",
           "rightsStatus": "approved",
@@ -6181,7 +6181,7 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-cetrion-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/d/d7/Cetrion_MK11.png/revision/latest?cb=20190412180127",
+      "assetURL": "/images/characters/cetrion.png",
       "assetType": "character_portrait",
       "entityId": "cetrion",
       "rightsStatus": "approved",
@@ -6217,7 +6217,7 @@ export const characters: Character[] = [
         "organizations": [],
         "image": {
           "assetId": "asset-cetrion-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/d/d7/Cetrion_MK11.png/revision/latest?cb=20190412180127",
+          "assetURL": "/images/characters/cetrion.png",
           "assetType": "character_portrait",
           "entityId": "cetrion",
           "rightsStatus": "approved",
@@ -6285,7 +6285,7 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-kollector-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/9/91/Kollector_MK11.png/revision/latest?cb=20190407091921",
+      "assetURL": "/images/characters/kollector.png",
       "assetType": "character_portrait",
       "entityId": "kollector",
       "rightsStatus": "approved",
@@ -6321,7 +6321,7 @@ export const characters: Character[] = [
         "organizations": [],
         "image": {
           "assetId": "asset-kollector-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/9/91/Kollector_MK11.png/revision/latest?cb=20190407091921",
+          "assetURL": "/images/characters/kollector.png",
           "assetType": "character_portrait",
           "entityId": "kollector",
           "rightsStatus": "approved",
@@ -6371,7 +6371,7 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-onaga-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/b/b0/MK1_Onaga.jpeg/revision/latest?cb=20230921004228",
+      "assetURL": "/images/characters/onaga.png",
       "assetType": "character_portrait",
       "entityId": "onaga",
       "rightsStatus": "approved",
@@ -6402,7 +6402,7 @@ export const characters: Character[] = [
         "organizations": [],
         "image": {
           "assetId": "asset-onaga-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/b/b0/MK1_Onaga.jpeg/revision/latest?cb=20230921004228",
+          "assetURL": "/images/characters/onaga.png",
           "assetType": "character_portrait",
           "entityId": "onaga",
           "rightsStatus": "approved",
@@ -6429,7 +6429,7 @@ export const characters: Character[] = [
         "organizations": [],
         "image": {
           "assetId": "asset-onaga-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/b/b0/MK1_Onaga.jpeg/revision/latest?cb=20230921004228",
+          "assetURL": "/images/characters/onaga.png",
           "assetType": "character_portrait",
           "entityId": "onaga",
           "rightsStatus": "approved",
@@ -6497,7 +6497,7 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-shujinko-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/3/35/Shujinko_MK1_Render.png/revision/latest?cb=20231215101153",
+      "assetURL": "/images/characters/shujinko.png",
       "assetType": "character_portrait",
       "entityId": "shujinko",
       "rightsStatus": "approved",
@@ -6534,7 +6534,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-shujinko-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/3/35/Shujinko_MK1_Render.png/revision/latest?cb=20231215101153",
+          "assetURL": "/images/characters/shujinko.png",
           "assetType": "character_portrait",
           "entityId": "shujinko",
           "rightsStatus": "approved",
@@ -6567,7 +6567,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-shujinko-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/3/35/Shujinko_MK1_Render.png/revision/latest?cb=20231215101153",
+          "assetURL": "/images/characters/shujinko.png",
           "assetType": "character_portrait",
           "entityId": "shujinko",
           "rightsStatus": "approved",
@@ -6635,7 +6635,7 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-reiko-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/7/7e/Reiko_MK1_render.webp/revision/latest?cb=20250314102645",
+      "assetURL": "/images/characters/reiko.png",
       "assetType": "character_portrait",
       "entityId": "reiko",
       "rightsStatus": "approved",
@@ -6667,7 +6667,7 @@ export const characters: Character[] = [
         "organizations": [],
         "image": {
           "assetId": "asset-reiko-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/7/7e/Reiko_MK1_render.webp/revision/latest?cb=20250314102645",
+          "assetURL": "/images/characters/reiko.png",
           "assetType": "character_portrait",
           "entityId": "reiko",
           "rightsStatus": "approved",
@@ -6700,7 +6700,7 @@ export const characters: Character[] = [
         "organizations": [],
         "image": {
           "assetId": "asset-reiko-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/7/7e/Reiko_MK1_render.webp/revision/latest?cb=20250314102645",
+          "assetURL": "/images/characters/reiko.png",
           "assetType": "character_portrait",
           "entityId": "reiko",
           "rightsStatus": "approved",
@@ -6733,7 +6733,7 @@ export const characters: Character[] = [
         "organizations": [],
         "image": {
           "assetId": "asset-reiko-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/7/7e/Reiko_MK1_render.webp/revision/latest?cb=20250314102645",
+          "assetURL": "/images/characters/reiko.png",
           "assetType": "character_portrait",
           "entityId": "reiko",
           "rightsStatus": "approved",
@@ -6783,7 +6783,7 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-nitara-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/6/6c/Nitara_MK1_render.webp/revision/latest?cb=20250318123742",
+      "assetURL": "/images/characters/nitara.png",
       "assetType": "character_portrait",
       "entityId": "nitara",
       "rightsStatus": "approved",
@@ -6814,7 +6814,7 @@ export const characters: Character[] = [
         "organizations": [],
         "image": {
           "assetId": "asset-nitara-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/6/6c/Nitara_MK1_render.webp/revision/latest?cb=20250318123742",
+          "assetURL": "/images/characters/nitara.png",
           "assetType": "character_portrait",
           "entityId": "nitara",
           "rightsStatus": "approved",
@@ -6841,7 +6841,7 @@ export const characters: Character[] = [
         "organizations": [],
         "image": {
           "assetId": "asset-nitara-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/6/6c/Nitara_MK1_render.webp/revision/latest?cb=20250318123742",
+          "assetURL": "/images/characters/nitara.png",
           "assetType": "character_portrait",
           "entityId": "nitara",
           "rightsStatus": "approved",
@@ -6891,7 +6891,7 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-sareena-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/1/1d/Sareena_MK1_Render.png/revision/latest?cb=20231215100918",
+      "assetURL": "/images/characters/sareena.png",
       "assetType": "character_portrait",
       "entityId": "sareena",
       "rightsStatus": "approved",
@@ -6923,7 +6923,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-sareena-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/1/1d/Sareena_MK1_Render.png/revision/latest?cb=20231215100918",
+          "assetURL": "/images/characters/sareena.png",
           "assetType": "character_portrait",
           "entityId": "sareena",
           "rightsStatus": "approved",
@@ -6956,7 +6956,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-sareena-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/1/1d/Sareena_MK1_Render.png/revision/latest?cb=20231215100918",
+          "assetURL": "/images/characters/sareena.png",
           "assetType": "character_portrait",
           "entityId": "sareena",
           "rightsStatus": "approved",
@@ -7024,7 +7024,7 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-ashrah-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/b/be/Ashrah_MK1_render.webp/revision/latest?cb=20250514084922",
+      "assetURL": "/images/characters/ashrah.png",
       "assetType": "character_portrait",
       "entityId": "ashrah",
       "rightsStatus": "approved",
@@ -7061,7 +7061,7 @@ export const characters: Character[] = [
         "organizations": [],
         "image": {
           "assetId": "asset-ashrah-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/b/be/Ashrah_MK1_render.webp/revision/latest?cb=20250514084922",
+          "assetURL": "/images/characters/ashrah.png",
           "assetType": "character_portrait",
           "entityId": "ashrah",
           "rightsStatus": "approved",
@@ -7094,7 +7094,7 @@ export const characters: Character[] = [
         "organizations": [],
         "image": {
           "assetId": "asset-ashrah-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/b/be/Ashrah_MK1_render.webp/revision/latest?cb=20250514084922",
+          "assetURL": "/images/characters/ashrah.png",
           "assetType": "character_portrait",
           "entityId": "ashrah",
           "rightsStatus": "approved",
@@ -7162,7 +7162,7 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-hotaru-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/c/ca/MSEL_PORTRAIT_HOTARU.png/revision/latest?cb=20130329211100",
+      "assetURL": "/images/characters/hotaru.png",
       "assetType": "character_portrait",
       "entityId": "hotaru",
       "rightsStatus": "approved",
@@ -7194,7 +7194,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-hotaru-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/c/ca/MSEL_PORTRAIT_HOTARU.png/revision/latest?cb=20130329211100",
+          "assetURL": "/images/characters/hotaru.png",
           "assetType": "character_portrait",
           "entityId": "hotaru",
           "rightsStatus": "approved",
@@ -7227,7 +7227,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-hotaru-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/c/ca/MSEL_PORTRAIT_HOTARU.png/revision/latest?cb=20130329211100",
+          "assetURL": "/images/characters/hotaru.png",
           "assetType": "character_portrait",
           "entityId": "hotaru",
           "rightsStatus": "approved",
@@ -7295,7 +7295,7 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-mavado-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/3/33/MK1_Mavado_Render.png/revision/latest?cb=20250213151512",
+      "assetURL": "/images/characters/mavado.png",
       "assetType": "character_portrait",
       "entityId": "mavado",
       "rightsStatus": "approved",
@@ -7333,7 +7333,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-mavado-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/3/33/MK1_Mavado_Render.png/revision/latest?cb=20250213151512",
+          "assetURL": "/images/characters/mavado.png",
           "assetType": "character_portrait",
           "entityId": "mavado",
           "rightsStatus": "approved",
@@ -7372,7 +7372,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-mavado-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/3/33/MK1_Mavado_Render.png/revision/latest?cb=20250213151512",
+          "assetURL": "/images/characters/mavado.png",
           "assetType": "character_portrait",
           "entityId": "mavado",
           "rightsStatus": "approved",
@@ -7440,7 +7440,7 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-ferratorr-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/4/43/KAM_Ferra_Tower.png/revision/latest?cb=20240724085048",
+      "assetURL": "/images/characters/ferratorr.png",
       "assetType": "character_portrait",
       "entityId": "ferratorr",
       "rightsStatus": "approved",
@@ -7466,7 +7466,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-ferratorr-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/4/43/KAM_Ferra_Tower.png/revision/latest?cb=20240724085048",
+          "assetURL": "/images/characters/ferratorr.png",
           "assetType": "character_portrait",
           "entityId": "ferratorr",
           "rightsStatus": "approved",
@@ -7516,7 +7516,7 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-motaro-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/f/fb/Motaro_MK1_Render.png/revision/latest?cb=20231215100833",
+      "assetURL": "/images/characters/motaro.png",
       "assetType": "character_portrait",
       "entityId": "motaro",
       "rightsStatus": "approved",
@@ -7542,7 +7542,7 @@ export const characters: Character[] = [
         "organizations": [],
         "image": {
           "assetId": "asset-motaro-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/f/fb/Motaro_MK1_Render.png/revision/latest?cb=20231215100833",
+          "assetURL": "/images/characters/motaro.png",
           "assetType": "character_portrait",
           "entityId": "motaro",
           "rightsStatus": "approved",
@@ -7569,7 +7569,7 @@ export const characters: Character[] = [
         "organizations": [],
         "image": {
           "assetId": "asset-motaro-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/f/fb/Motaro_MK1_Render.png/revision/latest?cb=20231215100833",
+          "assetURL": "/images/characters/motaro.png",
           "assetType": "character_portrait",
           "entityId": "motaro",
           "rightsStatus": "approved",
@@ -7619,7 +7619,7 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-blaze-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/b/be/Blaze_Fury.png/revision/latest?cb=20160404023315",
+      "assetURL": "/images/characters/blaze.png",
       "assetType": "character_portrait",
       "entityId": "blaze",
       "rightsStatus": "approved",
@@ -7645,7 +7645,7 @@ export const characters: Character[] = [
         "organizations": [],
         "image": {
           "assetId": "asset-blaze-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/b/be/Blaze_Fury.png/revision/latest?cb=20160404023315",
+          "assetURL": "/images/characters/blaze.png",
           "assetType": "character_portrait",
           "entityId": "blaze",
           "rightsStatus": "approved",
@@ -7672,7 +7672,7 @@ export const characters: Character[] = [
         "organizations": [],
         "image": {
           "assetId": "asset-blaze-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/b/be/Blaze_Fury.png/revision/latest?cb=20160404023315",
+          "assetURL": "/images/characters/blaze.png",
           "assetType": "character_portrait",
           "entityId": "blaze",
           "rightsStatus": "approved",
@@ -7722,7 +7722,7 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-daegon-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/f/f7/Daegon_Render_MKA.png/revision/latest?cb=20081011192925",
+      "assetURL": "/images/characters/daegon.png",
       "assetType": "character_portrait",
       "entityId": "daegon",
       "rightsStatus": "approved",
@@ -7748,7 +7748,7 @@ export const characters: Character[] = [
         ],
         "image": {
           "assetId": "asset-daegon-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/f/f7/Daegon_Render_MKA.png/revision/latest?cb=20081011192925",
+          "assetURL": "/images/characters/daegon.png",
           "assetType": "character_portrait",
           "entityId": "daegon",
           "rightsStatus": "approved",
@@ -7798,7 +7798,7 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-taven-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/e/ea/MKA_Taven_Render.png/revision/latest?cb=20081011123710",
+      "assetURL": "/images/characters/taven.png",
       "assetType": "character_portrait",
       "entityId": "taven",
       "rightsStatus": "approved",
@@ -7818,7 +7818,7 @@ export const characters: Character[] = [
         "organizations": [],
         "image": {
           "assetId": "asset-taven-portrait",
-          "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/e/ea/MKA_Taven_Render.png/revision/latest?cb=20081011123710",
+          "assetURL": "/images/characters/taven.png",
           "assetType": "character_portrait",
           "entityId": "taven",
           "rightsStatus": "approved",
@@ -7866,7 +7866,7 @@ export const characters: Character[] = [
     "popular": false,
     "image": {
       "assetId": "asset-scorpion-fetch-failed-portrait",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/a/ab/Scorpion.png/revision/latest?cb=20130603185450",
+      "assetURL": "/images/characters/scorpion-fetch-failed.png",
       "assetType": "character_portrait",
       "entityId": "scorpion-fetch-failed",
       "rightsStatus": "approved",
@@ -7936,7 +7936,7 @@ export const games: Game[] = [
     ],
     "image": {
       "assetId": "asset-mk1-1992-cover",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/4/44/MK_title.png/revision/latest?cb=20060610175437",
+      "assetURL": "/images/games/mk1-1992.png",
       "assetType": "game_cover",
       "gameId": "mk1-1992",
       "rightsStatus": "approved",
@@ -8000,7 +8000,7 @@ export const games: Game[] = [
     ],
     "image": {
       "assetId": "asset-mk2-1993-cover",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/6/6e/Mk2-1.png/revision/latest?cb=20060606003500",
+      "assetURL": "/images/games/mk2-1993.png",
       "assetType": "game_cover",
       "gameId": "mk2-1993",
       "rightsStatus": "approved",
@@ -8064,7 +8064,7 @@ export const games: Game[] = [
     ],
     "image": {
       "assetId": "asset-mk3-1995-cover",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/0/0b/Mk3.png/revision/latest?cb=20060619152448",
+      "assetURL": "/images/games/mk3-1995.png",
       "assetType": "game_cover",
       "gameId": "mk3-1995",
       "rightsStatus": "approved",
@@ -8128,7 +8128,7 @@ export const games: Game[] = [
     ],
     "image": {
       "assetId": "asset-umk3-1995-cover",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/2/22/Umk3.png/revision/latest?cb=20060619004401",
+      "assetURL": "/images/games/umk3-1995.png",
       "assetType": "game_cover",
       "gameId": "umk3-1995",
       "rightsStatus": "approved",
@@ -8192,7 +8192,7 @@ export const games: Game[] = [
     ],
     "image": {
       "assetId": "asset-mkt-1996-cover",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/7/70/MKTBox.jpg/revision/latest?cb=20060619002237",
+      "assetURL": "/images/games/mkt-1996.png",
       "assetType": "game_cover",
       "gameId": "mkt-1996",
       "rightsStatus": "approved",
@@ -8256,7 +8256,7 @@ export const games: Game[] = [
     ],
     "image": {
       "assetId": "asset-mk4-1997-cover",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/c/cc/Mok4gb0b.jpg/revision/latest?cb=20110509201625",
+      "assetURL": "/images/games/mk4-1997.png",
       "assetType": "game_cover",
       "gameId": "mk4-1997",
       "rightsStatus": "approved",
@@ -8317,7 +8317,7 @@ export const games: Game[] = [
     ],
     "image": {
       "assetId": "asset-mk-gold-1999-cover",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/1/1a/MK_gold_logo.jpg/revision/latest?cb=20060619002702",
+      "assetURL": "/images/games/mk-gold-1999.png",
       "assetType": "game_cover",
       "gameId": "mk-gold-1999",
       "rightsStatus": "approved",
@@ -8380,7 +8380,7 @@ export const games: Game[] = [
     ],
     "image": {
       "assetId": "asset-mk-deadly-alliance-2002-cover",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/6/6f/PS2_-_MK_Deadly_Alliance.jpg/revision/latest?cb=20060613184607",
+      "assetURL": "/images/games/mk-deadly-alliance-2002.png",
       "assetType": "game_cover",
       "gameId": "mk-deadly-alliance-2002",
       "rightsStatus": "approved",
@@ -8441,7 +8441,7 @@ export const games: Game[] = [
     ],
     "image": {
       "assetId": "asset-mk-tournament-edition-2003-cover",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/1/1b/Cover_Tournament_Edition.PNG/revision/latest?cb=20060619003627",
+      "assetURL": "/images/games/mk-tournament-edition-2003.png",
       "assetType": "game_cover",
       "gameId": "mk-tournament-edition-2003",
       "rightsStatus": "approved",
@@ -8504,7 +8504,7 @@ export const games: Game[] = [
     ],
     "image": {
       "assetId": "asset-mk-deception-2004-cover",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/f/f2/Mortal_Kombat_-_Deception_Coverart.png/revision/latest?cb=20140806065300",
+      "assetURL": "/images/games/mk-deception-2004.png",
       "assetType": "game_cover",
       "gameId": "mk-deception-2004",
       "rightsStatus": "approved",
@@ -8565,7 +8565,7 @@ export const games: Game[] = [
     ],
     "image": {
       "assetId": "asset-mk-unchained-2006-cover",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/f/f6/Mkupegibox.jpg/revision/latest?cb=20110109001035",
+      "assetURL": "/images/games/mk-unchained-2006.png",
       "assetType": "game_cover",
       "gameId": "mk-unchained-2006",
       "rightsStatus": "approved",
@@ -8628,7 +8628,7 @@ export const games: Game[] = [
     ],
     "image": {
       "assetId": "asset-mk-armageddon-2006-cover",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/8/8e/MKA_Cover.jpg/revision/latest?cb=20190322083202",
+      "assetURL": "/images/games/mk-armageddon-2006.png",
       "assetType": "game_cover",
       "gameId": "mk-armageddon-2006",
       "rightsStatus": "approved",
@@ -8690,7 +8690,7 @@ export const games: Game[] = [
     ],
     "image": {
       "assetId": "asset-mk-mythologies-1997-cover",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/e/ec/Mortal_Kombat_-_Mythologies_Sub_Zero_-_Logo_2.jpg/revision/latest?cb=20060619153416",
+      "assetURL": "/images/games/mk-mythologies-1997.png",
       "assetType": "game_cover",
       "gameId": "mk-mythologies-1997",
       "rightsStatus": "approved",
@@ -8751,7 +8751,7 @@ export const games: Game[] = [
     ],
     "image": {
       "assetId": "asset-mk-special-forces-2000-cover",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/0/07/Mksf.png/revision/latest?cb=20060620024400",
+      "assetURL": "/images/games/mk-special-forces-2000.png",
       "assetType": "game_cover",
       "gameId": "mk-special-forces-2000",
       "rightsStatus": "approved",
@@ -8813,7 +8813,7 @@ export const games: Game[] = [
     ],
     "image": {
       "assetId": "asset-mk-shaolin-monks-2005-cover",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/2/21/Mortal_Kombat_Shaolin_Monks_cover.png/revision/latest?cb=20140824215814",
+      "assetURL": "/images/games/mk-shaolin-monks-2005.png",
       "assetType": "game_cover",
       "gameId": "mk-shaolin-monks-2005",
       "rightsStatus": "approved",
@@ -8875,7 +8875,7 @@ export const games: Game[] = [
     ],
     "image": {
       "assetId": "asset-mk-vs-dc-2008-cover",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/9/9e/Mortal_Kombat_vs._DC_cover.jpg/revision/latest?cb=20140824213937",
+      "assetURL": "/images/games/mk-vs-dc-2008.png",
       "assetType": "game_cover",
       "gameId": "mk-vs-dc-2008",
       "rightsStatus": "approved",
@@ -8938,7 +8938,7 @@ export const games: Game[] = [
     ],
     "image": {
       "assetId": "asset-mk-arcade-kollection-2011-cover",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/a/ae/MK_Kollection.jpg/revision/latest?cb=20110830124936",
+      "assetURL": "/images/games/mk-arcade-kollection-2011.png",
       "assetType": "game_cover",
       "gameId": "mk-arcade-kollection-2011",
       "rightsStatus": "approved",
@@ -9001,7 +9001,7 @@ export const games: Game[] = [
     ],
     "image": {
       "assetId": "asset-mk9-2011-cover",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/b/b1/Mortal_kombat_9-500x542.jpg/revision/latest?cb=20220419033542",
+      "assetURL": "/images/games/mk9-2011.png",
       "assetType": "game_cover",
       "gameId": "mk9-2011",
       "rightsStatus": "approved",
@@ -9064,7 +9064,7 @@ export const games: Game[] = [
     ],
     "image": {
       "assetId": "asset-mkx-2015-cover",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/0/0d/MKX.png/revision/latest?cb=20200517164428",
+      "assetURL": "/images/games/mkx-2015.png",
       "assetType": "game_cover",
       "gameId": "mkx-2015",
       "rightsStatus": "approved",
@@ -9126,7 +9126,7 @@ export const games: Game[] = [
     ],
     "image": {
       "assetId": "asset-mk-mobile-2015-cover",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/0/0c/IconMortalKombatMobile10Years.jpg/revision/latest?cb=20260510201156",
+      "assetURL": "/images/games/mk-mobile-2015.png",
       "assetType": "game_cover",
       "gameId": "mk-mobile-2015",
       "rightsStatus": "approved",
@@ -9190,7 +9190,7 @@ export const games: Game[] = [
     ],
     "image": {
       "assetId": "asset-mk11-2019-cover",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/e/e2/Mk11coverart.png/revision/latest?cb=20190110191329",
+      "assetURL": "/images/games/mk11-2019.png",
       "assetType": "game_cover",
       "gameId": "mk11-2019",
       "rightsStatus": "approved",
@@ -9254,7 +9254,7 @@ export const games: Game[] = [
     ],
     "image": {
       "assetId": "asset-mk1-2023-cover",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/5/5a/MK1_cover_art.png/revision/latest?cb=20230518134700",
+      "assetURL": "/images/games/mk1-2023.png",
       "assetType": "game_cover",
       "gameId": "mk1-2023",
       "rightsStatus": "approved",
@@ -9316,7 +9316,7 @@ export const games: Game[] = [
     ],
     "image": {
       "assetId": "asset-mk-onslaught-2023-cover",
-      "assetURL": "https://static.wikia.nocookie.net/mkwikia/images/2/20/MKOnslaughtIcon.jpg/revision/latest?cb=20231006072446",
+      "assetURL": "/images/games/mk-onslaught-2023.png",
       "assetType": "game_cover",
       "gameId": "mk-onslaught-2023",
       "rightsStatus": "approved",

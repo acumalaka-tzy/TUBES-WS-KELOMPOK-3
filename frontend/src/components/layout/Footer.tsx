@@ -24,7 +24,6 @@ const groups = [
     links: [
       { label: "Global Search", href: "/search" },
       { label: "Explore", href: "/explore" },
-      { label: "About", href: "/about" },
     ],
   },
 ];

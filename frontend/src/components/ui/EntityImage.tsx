@@ -15,6 +15,7 @@ export default function EntityImage({
   className = "",
   aspect = "aspect-[4/5]",
   priority = false,
+  objectPosition,
 }: {
   image?: ImageAsset;
   name: string;
@@ -23,9 +24,14 @@ export default function EntityImage({
   aspect?: string;
   priority?: boolean;
   showNotice?: boolean;
+  objectPosition?: string;
 }) {
   const [hasError, setHasError] = useState(false);
   const hasImage = !!image?.assetURL && !hasError;
+
+  // Utamakan object-top untuk karakter agar kepala dan wajah selalu utuh terlihat di atas
+  const isCharacter = image?.assetType === "character_portrait" || (!image?.assetType && !image?.gameId);
+  const positionClass = objectPosition || (isCharacter ? "object-top" : "object-center");
 
   const initials = name
     .replace(/\(.*?\)/g, "")
@@ -46,8 +52,9 @@ export default function EntityImage({
           alt={image!.alt ?? name}
           loading={priority ? "eager" : "lazy"}
           decoding="async"
+          referrerPolicy="no-referrer"
           onError={() => setHasError(true)}
-          className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+          className={`h-full w-full object-cover ${positionClass} transition-transform duration-500 hover:scale-105`}
         />
       ) : (
         <div

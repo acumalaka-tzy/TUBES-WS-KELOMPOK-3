@@ -69,8 +69,8 @@ export default function CharacterDetailPage({
                   name={character.name}
                   contextLabel={currentVersion ? currentVersion.gameTitle : undefined}
                   aspect="aspect-[3/4]"
+                  objectPosition="object-top"
                   priority
-                  showNotice
                 />
               </div>
 
