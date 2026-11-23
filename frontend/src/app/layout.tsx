@@ -26,49 +26,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="id" className={`${inter.variable} ${cinzel.variable} ${bebas.variable} h-full antialiased`}>
+    <html
+      lang="id"
+      data-scroll-behavior="smooth"
+      suppressHydrationWarning
+      className={`${inter.variable} ${cinzel.variable} ${bebas.variable} h-full antialiased`}
+    >
       <head>
         <link rel="icon" href="/images/mk-logo.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/images/mk-logo.svg" />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                if (typeof window === 'undefined') return;
-                function purgeDevTools() {
-                  try {
-                    var els = document.querySelectorAll('nextjs-portal, script[data-nextjs-dev-overlay], [data-nextjs-dev-overlay]');
-                    for (var i = 0; i < els.length; i++) {
-                      els[i].remove();
-                    }
-                  } catch (e) {}
-                }
-                if (document.readyState === 'loading') {
-                  document.addEventListener('DOMContentLoaded', purgeDevTools);
-                } else {
-                  purgeDevTools();
-                }
-                try {
-                  var observer = new MutationObserver(function(mutations) {
-                    for (var i = 0; i < mutations.length; i++) {
-                      var added = mutations[i].addedNodes;
-                      for (var j = 0; j < added.length; j++) {
-                        var node = added[j];
-                        if (node.nodeType === 1) {
-                          var tag = (node.tagName || '').toUpperCase();
-                          if (tag === 'NEXTJS-PORTAL' || (node.getAttribute && node.getAttribute('data-nextjs-dev-overlay'))) {
-                            node.remove();
-                          }
-                        }
-                      }
-                    }
-                  });
-                  observer.observe(document.documentElement, { childList: true, subtree: true });
-                } catch (e) {}
-              })();
-            `,
-          }}
-        />
       </head>
       <body className="flex min-h-full flex-col bg-mk-bg text-mk-text">
         <ThemeProvider>

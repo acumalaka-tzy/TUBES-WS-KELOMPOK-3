@@ -1,7 +1,7 @@
 /**
  * DATASET UTAMA MORTAL KOMBAT KNOWLEDGE NEXUS
  * Disinkronkan langsung dari pipeline Data Engineering (entities.json & relationships.json).
- * Berisi 61 Karakter, 23 Game Standalone, 101 Abilities, 20 Weapons, 10 Clans, dan 25 Events.
+ * Berisi 60 Karakter, 23 Game Standalone, 140 Abilities, 20 Weapons, 10 Clans, dan 25 Events.
  */
 import type {
   Ability,
@@ -27,7 +27,7 @@ export const characters: Character[] = [
     "summary": "Resurrected Shirai Ryu ninja specter fueled by vengeance against those who exterminated his clan and family.",
     "biography": "Resurrected Shirai Ryu ninja specter fueled by vengeance against those who exterminated his clan and family.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mk1-1992",
       "type": "game",
       "name": "Mortal Kombat (1992)"
     },
@@ -71,6 +71,11 @@ export const characters: Character[] = [
             "id": "move-spear",
             "type": "ability",
             "name": "Kunai Spear (Get Over Here!)"
+          },
+          {
+            "id": "flame-aura",
+            "type": "ability",
+            "name": "Flame Aura"
           },
           {
             "id": "fatality-toasty",
@@ -122,6 +127,11 @@ export const characters: Character[] = [
             "name": "Kunai Spear (Get Over Here!)"
           },
           {
+            "id": "flame-aura",
+            "type": "ability",
+            "name": "Flame Aura"
+          },
+          {
             "id": "fatality-toasty",
             "type": "ability",
             "name": "Fatality: Toasty!"
@@ -169,6 +179,16 @@ export const characters: Character[] = [
             "id": "move-spear",
             "type": "ability",
             "name": "Kunai Spear (Get Over Here!)"
+          },
+          {
+            "id": "flame-aura",
+            "type": "ability",
+            "name": "Flame Aura"
+          },
+          {
+            "id": "fatality-toasty",
+            "type": "ability",
+            "name": "Fatality: Toasty!"
           }
         ],
         "weapons": [
@@ -180,9 +200,9 @@ export const characters: Character[] = [
         ],
         "organizations": [
           {
-            "id": "lin-kuei",
+            "id": "shirai-ryu",
             "type": "organization",
-            "name": "Lin Kuei"
+            "name": "Shirai Ryu"
           }
         ],
         "image": {
@@ -204,20 +224,42 @@ export const characters: Character[] = [
         "target": {
           "id": "sub-zero",
           "type": "character",
-          "name": "sub-zero"
+          "name": "Sub-Zero"
         },
-        "context": "Original Timeline & Early Reboot",
+        "context": "Original & Early Reboot",
         "verificationStatus": "verified"
       },
       {
         "type": "enemyOf",
         "label": "Musuh",
         "target": {
-          "id": "quanchi",
+          "id": "quan-chi",
           "type": "character",
           "name": "Quan Chi"
         },
-        "context": "All Timelines",
+        "context": "Seluruh Timeline",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "enemyOf",
+        "label": "Musuh",
+        "target": {
+          "id": "dvorah",
+          "type": "character",
+          "name": "D'Vorah"
+        },
+        "context": "Mortal Kombat 11",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "mentorOf",
+        "label": "Mentor",
+        "target": {
+          "id": "takeda",
+          "type": "character",
+          "name": "Takeda Takahashi"
+        },
+        "context": "Reboot Timeline",
         "verificationStatus": "verified"
       },
       {
@@ -226,22 +268,32 @@ export const characters: Character[] = [
         "target": {
           "id": "sub-zero",
           "type": "character",
-          "name": "sub-zero"
+          "name": "Sub-Zero"
         },
-        "context": "Reboot Timeline (MKX & MK11)",
+        "context": "Reboot (MKX/MK11) & New Era",
         "verificationStatus": "verified"
       }
     ],
     "relatedCharacters": [
       {
-        "id": "quanchi",
+        "id": "dvorah",
         "type": "character",
-        "name": "Quan Chi"
+        "name": "D'Vorah"
+      },
+      {
+        "id": "quan-chi",
+        "type": "character",
+        "name": "Quan-Chi"
       },
       {
         "id": "sub-zero",
         "type": "character",
-        "name": "sub-zero"
+        "name": "Sub-Zero"
+      },
+      {
+        "id": "takeda",
+        "type": "character",
+        "name": "Takeda Takahashi"
       }
     ],
     "sources": [
@@ -263,7 +315,7 @@ export const characters: Character[] = [
     "summary": "Grandmaster of the Lin Kuei possessing lethal cryomantic powers to flash-freeze moisture into weapons and barriers.",
     "biography": "Grandmaster of the Lin Kuei possessing lethal cryomantic powers to flash-freeze moisture into weapons and barriers.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mk1-1992",
       "type": "game",
       "name": "Mortal Kombat (1992)"
     },
@@ -278,7 +330,7 @@ export const characters: Character[] = [
       "name": "Earthrealm"
     },
     "faction": "Lin Kuei",
-    "role": "Villain",
+    "role": "Antihero",
     "popular": true,
     "image": {
       "assetId": "asset-subzero-portrait",
@@ -307,6 +359,16 @@ export const characters: Character[] = [
             "id": "move-ice-freeze",
             "type": "ability",
             "name": "Deep Freeze"
+          },
+          {
+            "id": "ice-slide",
+            "type": "ability",
+            "name": "Ice Slide"
+          },
+          {
+            "id": "ice-clone",
+            "type": "ability",
+            "name": "Ice Clone"
           },
           {
             "id": "fatality-spine-rip",
@@ -361,6 +423,16 @@ export const characters: Character[] = [
             "id": "ice-slide",
             "type": "ability",
             "name": "Ice Slide"
+          },
+          {
+            "id": "ice-clone",
+            "type": "ability",
+            "name": "Ice Clone"
+          },
+          {
+            "id": "fatality-spine-rip",
+            "type": "ability",
+            "name": "Fatality: Spine Rip"
           }
         ],
         "weapons": [
@@ -405,6 +477,21 @@ export const characters: Character[] = [
             "id": "move-ice-freeze",
             "type": "ability",
             "name": "Deep Freeze"
+          },
+          {
+            "id": "ice-slide",
+            "type": "ability",
+            "name": "Ice Slide"
+          },
+          {
+            "id": "ice-clone",
+            "type": "ability",
+            "name": "Ice Clone"
+          },
+          {
+            "id": "fatality-spine-rip",
+            "type": "ability",
+            "name": "Fatality: Spine Rip"
           }
         ],
         "weapons": [
@@ -433,8 +520,144 @@ export const characters: Character[] = [
         "verificationStatus": "verified"
       }
     ],
-    "relationships": [],
-    "relatedCharacters": [],
+    "relationships": [
+      {
+        "type": "familyOf",
+        "label": "Keluarga",
+        "target": {
+          "id": "noob-saibot",
+          "type": "character",
+          "name": "Noob Saibot"
+        },
+        "context": "Seluruh Timeline",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "enemyOf",
+        "label": "Musuh",
+        "target": {
+          "id": "scorpion",
+          "type": "character",
+          "name": "Scorpion"
+        },
+        "context": "Original & Early Reboot",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "rivalOf",
+        "label": "Rival",
+        "target": {
+          "id": "frost",
+          "type": "character",
+          "name": "Frost"
+        },
+        "context": "3D Era & Reboot Timeline",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "enemyOf",
+        "label": "Musuh",
+        "target": {
+          "id": "sektor",
+          "type": "character",
+          "name": "Sektor"
+        },
+        "context": "Reboot & 3D Era",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "mentorOf",
+        "label": "Mentor",
+        "target": {
+          "id": "frost",
+          "type": "character",
+          "name": "Frost"
+        },
+        "context": "Seluruh Timeline",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "alliedWith",
+        "label": "Sekutu",
+        "target": {
+          "id": "scorpion",
+          "type": "character",
+          "name": "Scorpion"
+        },
+        "context": "Reboot (MKX/MK11) & New Era",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "alliedWith",
+        "label": "Sekutu",
+        "target": {
+          "id": "smoke",
+          "type": "character",
+          "name": "Smoke"
+        },
+        "context": "Seluruh Timeline",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "alliedWith",
+        "label": "Sekutu",
+        "target": {
+          "id": "cyrax",
+          "type": "character",
+          "name": "Cyrax"
+        },
+        "context": "3D Era & Reboot",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "alliedWith",
+        "label": "Sekutu",
+        "target": {
+          "id": "sareena",
+          "type": "character",
+          "name": "Sareena"
+        },
+        "context": "Mythologies & 3D Era",
+        "verificationStatus": "verified"
+      }
+    ],
+    "relatedCharacters": [
+      {
+        "id": "cyrax",
+        "type": "character",
+        "name": "Cyrax"
+      },
+      {
+        "id": "frost",
+        "type": "character",
+        "name": "Frost"
+      },
+      {
+        "id": "noob-saibot",
+        "type": "character",
+        "name": "Noob-Saibot"
+      },
+      {
+        "id": "sareena",
+        "type": "character",
+        "name": "Sareena"
+      },
+      {
+        "id": "scorpion",
+        "type": "character",
+        "name": "Scorpion"
+      },
+      {
+        "id": "sektor",
+        "type": "character",
+        "name": "Sektor"
+      },
+      {
+        "id": "smoke",
+        "type": "character",
+        "name": "Smoke"
+      }
+    ],
     "sources": [
       {
         "id": "fandom-sub-zero",
@@ -454,7 +677,7 @@ export const characters: Character[] = [
     "summary": "Immortal God of Thunder and ancient Protector of Earthrealm, wielding crackling lightning and temporal visions.",
     "biography": "Immortal God of Thunder and ancient Protector of Earthrealm, wielding crackling lightning and temporal visions.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mk1-1992",
       "type": "game",
       "name": "Mortal Kombat (1992)"
     },
@@ -505,7 +728,13 @@ export const characters: Character[] = [
             "name": "Dimensional Teleportation"
           }
         ],
-        "weapons": [],
+        "weapons": [
+          {
+            "id": "bo-staff",
+            "type": "weapon",
+            "name": "Imperial Bo Staff"
+          }
+        ],
         "organizations": [
           {
             "id": "white-lotus",
@@ -541,9 +770,20 @@ export const characters: Character[] = [
             "id": "electric-fly",
             "type": "ability",
             "name": "Electric Fly (Superman)"
+          },
+          {
+            "id": "teleportation",
+            "type": "ability",
+            "name": "Dimensional Teleportation"
           }
         ],
-        "weapons": [],
+        "weapons": [
+          {
+            "id": "bo-staff",
+            "type": "weapon",
+            "name": "Imperial Bo Staff"
+          }
+        ],
         "organizations": [
           {
             "id": "white-lotus",
@@ -574,9 +814,25 @@ export const characters: Character[] = [
             "id": "thunder-mastery",
             "type": "ability",
             "name": "Thunder Mastery"
+          },
+          {
+            "id": "electric-fly",
+            "type": "ability",
+            "name": "Electric Fly (Superman)"
+          },
+          {
+            "id": "teleportation",
+            "type": "ability",
+            "name": "Dimensional Teleportation"
           }
         ],
-        "weapons": [],
+        "weapons": [
+          {
+            "id": "bo-staff",
+            "type": "weapon",
+            "name": "Imperial Bo Staff"
+          }
+        ],
         "organizations": [
           {
             "id": "white-lotus",
@@ -598,6 +854,17 @@ export const characters: Character[] = [
     ],
     "relationships": [
       {
+        "type": "familyOf",
+        "label": "Keluarga",
+        "target": {
+          "id": "fujin",
+          "type": "character",
+          "name": "Fujin"
+        },
+        "context": "Seluruh Timeline",
+        "verificationStatus": "verified"
+      },
+      {
         "type": "enemyOf",
         "label": "Musuh",
         "target": {
@@ -605,7 +872,18 @@ export const characters: Character[] = [
           "type": "character",
           "name": "Shinnok"
         },
-        "context": "All Timelines",
+        "context": "Seluruh Timeline",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "mentorOf",
+        "label": "Mentor",
+        "target": {
+          "id": "liu-kang",
+          "type": "character",
+          "name": "Liu Kang"
+        },
+        "context": "Seluruh Timeline",
         "verificationStatus": "verified"
       },
       {
@@ -614,17 +892,38 @@ export const characters: Character[] = [
         "target": {
           "id": "liu-kang",
           "type": "character",
-          "name": "liu-kang"
+          "name": "Liu Kang"
         },
-        "context": "Original & Reboot Timelines",
+        "context": "Seluruh Timeline",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "alliedWith",
+        "label": "Sekutu",
+        "target": {
+          "id": "nightwolf",
+          "type": "character",
+          "name": "Nightwolf"
+        },
+        "context": "Seluruh Timeline",
         "verificationStatus": "verified"
       }
     ],
     "relatedCharacters": [
       {
+        "id": "fujin",
+        "type": "character",
+        "name": "Fujin"
+      },
+      {
         "id": "liu-kang",
         "type": "character",
-        "name": "liu-kang"
+        "name": "Liu-Kang"
+      },
+      {
+        "id": "nightwolf",
+        "type": "character",
+        "name": "Nightwolf"
       },
       {
         "id": "shinnok",
@@ -651,7 +950,7 @@ export const characters: Character[] = [
     "summary": "Shaolin monk who won four consecutive Mortal Kombat tournaments, later ascending to become the Fire God and Architect of the New Era.",
     "biography": "Shaolin monk who won four consecutive Mortal Kombat tournaments, later ascending to become the Fire God and Architect of the New Era.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mk1-1992",
       "type": "game",
       "name": "Mortal Kombat (1992)"
     },
@@ -697,12 +996,23 @@ export const characters: Character[] = [
             "name": "Bicycle Kick"
           },
           {
+            "id": "move-flying-kick",
+            "type": "ability",
+            "name": "Flying Dragon Kick"
+          },
+          {
             "id": "fatality-dragon-bite",
             "type": "ability",
             "name": "Fatality: Dragon Feast"
           }
         ],
-        "weapons": [],
+        "weapons": [
+          {
+            "id": "dragon-blade",
+            "type": "weapon",
+            "name": "Kamidogu Dragon Blade"
+          }
+        ],
         "organizations": [
           {
             "id": "white-lotus",
@@ -740,12 +1050,23 @@ export const characters: Character[] = [
             "name": "Bicycle Kick"
           },
           {
-            "id": "thunder-mastery",
+            "id": "move-flying-kick",
             "type": "ability",
-            "name": "Thunder Mastery"
+            "name": "Flying Dragon Kick"
+          },
+          {
+            "id": "fatality-dragon-bite",
+            "type": "ability",
+            "name": "Fatality: Dragon Feast"
           }
         ],
-        "weapons": [],
+        "weapons": [
+          {
+            "id": "dragon-blade",
+            "type": "weapon",
+            "name": "Kamidogu Dragon Blade"
+          }
+        ],
         "organizations": [
           {
             "id": "white-lotus",
@@ -778,12 +1099,28 @@ export const characters: Character[] = [
             "name": "Dragon Fireball"
           },
           {
-            "id": "thunder-mastery",
+            "id": "move-bicycle-kick",
             "type": "ability",
-            "name": "Thunder Mastery"
+            "name": "Bicycle Kick"
+          },
+          {
+            "id": "move-flying-kick",
+            "type": "ability",
+            "name": "Flying Dragon Kick"
+          },
+          {
+            "id": "fatality-dragon-bite",
+            "type": "ability",
+            "name": "Fatality: Dragon Feast"
           }
         ],
-        "weapons": [],
+        "weapons": [
+          {
+            "id": "dragon-blade",
+            "type": "weapon",
+            "name": "Kamidogu Dragon Blade"
+          }
+        ],
         "organizations": [
           {
             "id": "white-lotus",
@@ -803,8 +1140,149 @@ export const characters: Character[] = [
         "verificationStatus": "verified"
       }
     ],
-    "relationships": [],
-    "relatedCharacters": [],
+    "relationships": [
+      {
+        "type": "alliedWith",
+        "label": "Sekutu",
+        "target": {
+          "id": "kitana",
+          "type": "character",
+          "name": "Kitana"
+        },
+        "context": "Seluruh Timeline",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "enemyOf",
+        "label": "Musuh",
+        "target": {
+          "id": "shang-tsung",
+          "type": "character",
+          "name": "Shang Tsung"
+        },
+        "context": "Seluruh Timeline",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "enemyOf",
+        "label": "Musuh",
+        "target": {
+          "id": "shao-kahn",
+          "type": "character",
+          "name": "Shao Kahn"
+        },
+        "context": "Original & Reboot Timeline",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "enemyOf",
+        "label": "Musuh",
+        "target": {
+          "id": "kronika",
+          "type": "character",
+          "name": "Kronika"
+        },
+        "context": "Mortal Kombat 11",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "mentorOf",
+        "label": "Murid",
+        "target": {
+          "id": "bo-rai-cho",
+          "type": "character",
+          "name": "Bo' Rai Cho"
+        },
+        "context": "Seluruh Timeline",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "mentorOf",
+        "label": "Murid",
+        "target": {
+          "id": "raiden",
+          "type": "character",
+          "name": "Raiden"
+        },
+        "context": "Seluruh Timeline",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "alliedWith",
+        "label": "Sekutu",
+        "target": {
+          "id": "kung-lao",
+          "type": "character",
+          "name": "Kung Lao"
+        },
+        "context": "Seluruh Timeline",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "alliedWith",
+        "label": "Sekutu",
+        "target": {
+          "id": "raiden",
+          "type": "character",
+          "name": "Raiden"
+        },
+        "context": "Seluruh Timeline",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "alliedWith",
+        "label": "Sekutu",
+        "target": {
+          "id": "geras",
+          "type": "character",
+          "name": "Geras"
+        },
+        "context": "Mortal Kombat 1 (2023)",
+        "verificationStatus": "verified"
+      }
+    ],
+    "relatedCharacters": [
+      {
+        "id": "bo-rai-cho",
+        "type": "character",
+        "name": "Bo-Rai-Cho"
+      },
+      {
+        "id": "geras",
+        "type": "character",
+        "name": "Geras"
+      },
+      {
+        "id": "kitana",
+        "type": "character",
+        "name": "Kitana"
+      },
+      {
+        "id": "kronika",
+        "type": "character",
+        "name": "Kronika"
+      },
+      {
+        "id": "kung-lao",
+        "type": "character",
+        "name": "Kung-Lao"
+      },
+      {
+        "id": "raiden",
+        "type": "character",
+        "name": "Raiden"
+      },
+      {
+        "id": "shang-tsung",
+        "type": "character",
+        "name": "Shang-Tsung"
+      },
+      {
+        "id": "shao-kahn",
+        "type": "character",
+        "name": "Shao-Kahn"
+      }
+    ],
     "sources": [
       {
         "id": "fandom-liu-kang",
@@ -824,9 +1302,9 @@ export const characters: Character[] = [
     "summary": "10,000-year-old royal princess of Edenia who broke free from Shao Kahn's control to lead Outworld as Kitana Kahn.",
     "biography": "10,000-year-old royal princess of Edenia who broke free from Shao Kahn's control to lead Outworld as Kitana Kahn.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mk2-1993",
       "type": "game",
-      "name": "Mortal Kombat (1992)"
+      "name": "Mortal Kombat II"
     },
     "species": {
       "id": "human",
@@ -838,7 +1316,7 @@ export const characters: Character[] = [
       "type": "location",
       "name": "Edenia"
     },
-    "faction": "Neutral",
+    "faction": "Independent / Outworld",
     "role": "Hero",
     "popular": true,
     "image": {
@@ -865,14 +1343,14 @@ export const characters: Character[] = [
             "name": "Fan Lift"
           },
           {
-            "id": "fatality-fan-decapitation",
-            "type": "ability",
-            "name": "Fatality: Decapitating Fans"
-          },
-          {
             "id": "move-square-wave",
             "type": "ability",
             "name": "Square Wave Flight"
+          },
+          {
+            "id": "fatality-fan-decapitation",
+            "type": "ability",
+            "name": "Fatality: Decapitating Fans"
           }
         ],
         "weapons": [
@@ -908,6 +1386,11 @@ export const characters: Character[] = [
             "name": "Fan Lift"
           },
           {
+            "id": "move-square-wave",
+            "type": "ability",
+            "name": "Square Wave Flight"
+          },
+          {
             "id": "fatality-fan-decapitation",
             "type": "ability",
             "name": "Fatality: Decapitating Fans"
@@ -935,22 +1418,86 @@ export const characters: Character[] = [
     ],
     "relationships": [
       {
+        "type": "familyOf",
+        "label": "Keluarga",
+        "target": {
+          "id": "sindel",
+          "type": "character",
+          "name": "Sindel"
+        },
+        "context": "Seluruh Timeline",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "alliedWith",
+        "label": "Sekutu",
+        "target": {
+          "id": "liu-kang",
+          "type": "character",
+          "name": "Liu Kang"
+        },
+        "context": "Seluruh Timeline",
+        "verificationStatus": "verified"
+      },
+      {
         "type": "enemyOf",
         "label": "Musuh",
         "target": {
           "id": "shao-kahn",
           "type": "character",
-          "name": "shao-kahn"
+          "name": "Shao Kahn"
         },
-        "context": "Reboot Timeline",
+        "context": "Original & Reboot Timeline",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "rivalOf",
+        "label": "Rival",
+        "target": {
+          "id": "mileena",
+          "type": "character",
+          "name": "Mileena"
+        },
+        "context": "Seluruh Timeline",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "alliedWith",
+        "label": "Sekutu",
+        "target": {
+          "id": "jade",
+          "type": "character",
+          "name": "Jade"
+        },
+        "context": "Seluruh Timeline",
         "verificationStatus": "verified"
       }
     ],
     "relatedCharacters": [
       {
+        "id": "jade",
+        "type": "character",
+        "name": "Jade"
+      },
+      {
+        "id": "liu-kang",
+        "type": "character",
+        "name": "Liu-Kang"
+      },
+      {
+        "id": "mileena",
+        "type": "character",
+        "name": "Mileena"
+      },
+      {
         "id": "shao-kahn",
         "type": "character",
-        "name": "shao-kahn"
+        "name": "Shao-Kahn"
+      },
+      {
+        "id": "sindel",
+        "type": "character",
+        "name": "Sindel"
       }
     ],
     "sources": [
@@ -972,9 +1519,9 @@ export const characters: Character[] = [
     "summary": "A savage genetic clone created in Shang Tsung's Flesh Pits combining Edenian royal DNA with ferocious Tarkatan physiology.",
     "biography": "A savage genetic clone created in Shang Tsung's Flesh Pits combining Edenian royal DNA with ferocious Tarkatan physiology.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mk2-1993",
       "type": "game",
-      "name": "Mortal Kombat (1992)"
+      "name": "Mortal Kombat II"
     },
     "species": {
       "id": "human",
@@ -986,7 +1533,7 @@ export const characters: Character[] = [
       "type": "location",
       "name": "Outworld"
     },
-    "faction": "Neutral",
+    "faction": "Independent / Outworld",
     "role": "Villain",
     "popular": true,
     "image": {
@@ -1007,6 +1554,21 @@ export const characters: Character[] = [
         "timelineId": "original",
         "timelineName": "Original Timeline",
         "abilities": [
+          {
+            "id": "move-sai-toss",
+            "type": "ability",
+            "name": "Soaring Sai Toss"
+          },
+          {
+            "id": "move-ball-roll",
+            "type": "ability",
+            "name": "Rolling Thunder (Ball Roll)"
+          },
+          {
+            "id": "move-leaping-neck-bite",
+            "type": "ability",
+            "name": "Leaping Lunch (Neck Bite)"
+          },
           {
             "id": "teleportation",
             "type": "ability",
@@ -1041,6 +1603,21 @@ export const characters: Character[] = [
         "timelineName": "Reboot Timeline",
         "abilities": [
           {
+            "id": "move-sai-toss",
+            "type": "ability",
+            "name": "Soaring Sai Toss"
+          },
+          {
+            "id": "move-ball-roll",
+            "type": "ability",
+            "name": "Rolling Thunder (Ball Roll)"
+          },
+          {
+            "id": "move-leaping-neck-bite",
+            "type": "ability",
+            "name": "Leaping Lunch (Neck Bite)"
+          },
+          {
             "id": "teleportation",
             "type": "ability",
             "name": "Dimensional Teleportation"
@@ -1074,6 +1651,21 @@ export const characters: Character[] = [
         "timelineName": "New Era",
         "abilities": [
           {
+            "id": "move-sai-toss",
+            "type": "ability",
+            "name": "Soaring Sai Toss"
+          },
+          {
+            "id": "move-ball-roll",
+            "type": "ability",
+            "name": "Rolling Thunder (Ball Roll)"
+          },
+          {
+            "id": "move-leaping-neck-bite",
+            "type": "ability",
+            "name": "Leaping Lunch (Neck Bite)"
+          },
+          {
             "id": "teleportation",
             "type": "ability",
             "name": "Dimensional Teleportation"
@@ -1099,8 +1691,106 @@ export const characters: Character[] = [
         "verificationStatus": "verified"
       }
     ],
-    "relationships": [],
-    "relatedCharacters": [],
+    "relationships": [
+      {
+        "type": "familyOf",
+        "label": "Keluarga",
+        "target": {
+          "id": "shao-kahn",
+          "type": "character",
+          "name": "Shao Kahn"
+        },
+        "context": "Original & Reboot Timeline",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "alliedWith",
+        "label": "Sekutu",
+        "target": {
+          "id": "tanya",
+          "type": "character",
+          "name": "Tanya"
+        },
+        "context": "Reboot & New Era",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "alliedWith",
+        "label": "Sekutu",
+        "target": {
+          "id": "baraka",
+          "type": "character",
+          "name": "Baraka"
+        },
+        "context": "Original Timeline",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "rivalOf",
+        "label": "Rival",
+        "target": {
+          "id": "kitana",
+          "type": "character",
+          "name": "Kitana"
+        },
+        "context": "Seluruh Timeline",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "enemyOf",
+        "label": "Musuh",
+        "target": {
+          "id": "kotal-kahn",
+          "type": "character",
+          "name": "Kotal Kahn"
+        },
+        "context": "Mortal Kombat X",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "enemyOf",
+        "label": "Musuh",
+        "target": {
+          "id": "dvorah",
+          "type": "character",
+          "name": "D'Vorah"
+        },
+        "context": "Mortal Kombat X",
+        "verificationStatus": "verified"
+      }
+    ],
+    "relatedCharacters": [
+      {
+        "id": "baraka",
+        "type": "character",
+        "name": "Baraka"
+      },
+      {
+        "id": "dvorah",
+        "type": "character",
+        "name": "D'Vorah"
+      },
+      {
+        "id": "kitana",
+        "type": "character",
+        "name": "Kitana"
+      },
+      {
+        "id": "kotal-kahn",
+        "type": "character",
+        "name": "Kotal-Kahn"
+      },
+      {
+        "id": "shao-kahn",
+        "type": "character",
+        "name": "Shao-Kahn"
+      },
+      {
+        "id": "tanya",
+        "type": "character",
+        "name": "Tanya"
+      }
+    ],
     "sources": [
       {
         "id": "fandom-mileena",
@@ -1120,7 +1810,7 @@ export const characters: Character[] = [
     "summary": "Hollywood martial arts superstar possessing hereditary Mediterranean warrior heritage granting mystical green kinetic shields.",
     "biography": "Hollywood martial arts superstar possessing hereditary Mediterranean warrior heritage granting mystical green kinetic shields.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mk1-1992",
       "type": "game",
       "name": "Mortal Kombat (1992)"
     },
@@ -1164,6 +1854,11 @@ export const characters: Character[] = [
             "id": "move-nut-punch",
             "type": "ability",
             "name": "Nut Punch"
+          },
+          {
+            "id": "move-flying-kick",
+            "type": "ability",
+            "name": "Flying Dragon Kick"
           }
         ],
         "weapons": [],
@@ -1202,6 +1897,11 @@ export const characters: Character[] = [
             "id": "move-nut-punch",
             "type": "ability",
             "name": "Nut Punch"
+          },
+          {
+            "id": "move-flying-kick",
+            "type": "ability",
+            "name": "Flying Dragon Kick"
           }
         ],
         "weapons": [],
@@ -1224,8 +1924,42 @@ export const characters: Character[] = [
         "verificationStatus": "verified"
       }
     ],
-    "relationships": [],
-    "relatedCharacters": [],
+    "relationships": [
+      {
+        "type": "familyOf",
+        "label": "Keluarga",
+        "target": {
+          "id": "cassie-cage",
+          "type": "character",
+          "name": "Cassie Cage"
+        },
+        "context": "Reboot Timeline",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "alliedWith",
+        "label": "Sekutu",
+        "target": {
+          "id": "sonya-blade",
+          "type": "character",
+          "name": "Sonya Blade"
+        },
+        "context": "Reboot Timeline",
+        "verificationStatus": "verified"
+      }
+    ],
+    "relatedCharacters": [
+      {
+        "id": "cassie-cage",
+        "type": "character",
+        "name": "Cassie-Cage"
+      },
+      {
+        "id": "sonya-blade",
+        "type": "character",
+        "name": "Sonya-Blade"
+      }
+    ],
     "sources": [
       {
         "id": "fandom-johnny-cage",
@@ -1245,7 +1979,7 @@ export const characters: Character[] = [
     "summary": "Commanding General of Earthrealm Special Forces, relentlessly hunting Kano and the Black Dragon with high-tech military ordinance.",
     "biography": "Commanding General of Earthrealm Special Forces, relentlessly hunting Kano and the Black Dragon with high-tech military ordinance.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mk1-1992",
       "type": "game",
       "name": "Mortal Kombat (1992)"
     },
@@ -1261,7 +1995,7 @@ export const characters: Character[] = [
     },
     "faction": "Special Forces",
     "role": "Hero",
-    "popular": false,
+    "popular": true,
     "image": {
       "assetId": "asset-sonyablade-portrait",
       "assetURL": "/images/characters/sonya-blade.png",
@@ -1286,12 +2020,28 @@ export const characters: Character[] = [
             "name": "Energy Ring Toss"
           },
           {
+            "id": "move-air-throw",
+            "type": "ability",
+            "name": "Aerial Combat Throw"
+          },
+          {
+            "id": "move-grenade-toss",
+            "type": "ability",
+            "name": "High/Low Grenade Toss"
+          },
+          {
             "id": "fatality-kiss-of-death",
             "type": "ability",
             "name": "Fatality: Kiss of Death"
           }
         ],
-        "weapons": [],
+        "weapons": [
+          {
+            "id": "nightsticks",
+            "type": "weapon",
+            "name": "Police Nightsticks"
+          }
+        ],
         "organizations": [
           {
             "id": "special-forces",
@@ -1324,12 +2074,28 @@ export const characters: Character[] = [
             "name": "Energy Ring Toss"
           },
           {
+            "id": "move-air-throw",
+            "type": "ability",
+            "name": "Aerial Combat Throw"
+          },
+          {
+            "id": "move-grenade-toss",
+            "type": "ability",
+            "name": "High/Low Grenade Toss"
+          },
+          {
             "id": "fatality-kiss-of-death",
             "type": "ability",
             "name": "Fatality: Kiss of Death"
           }
         ],
-        "weapons": [],
+        "weapons": [
+          {
+            "id": "nightsticks",
+            "type": "weapon",
+            "name": "Police Nightsticks"
+          }
+        ],
         "organizations": [
           {
             "id": "special-forces",
@@ -1351,6 +2117,28 @@ export const characters: Character[] = [
     ],
     "relationships": [
       {
+        "type": "familyOf",
+        "label": "Keluarga",
+        "target": {
+          "id": "cassie-cage",
+          "type": "character",
+          "name": "Cassie Cage"
+        },
+        "context": "Reboot Timeline",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "alliedWith",
+        "label": "Sekutu",
+        "target": {
+          "id": "johnny-cage",
+          "type": "character",
+          "name": "Johnny Cage"
+        },
+        "context": "Reboot Timeline",
+        "verificationStatus": "verified"
+      },
+      {
         "type": "enemyOf",
         "label": "Musuh",
         "target": {
@@ -1358,11 +2146,21 @@ export const characters: Character[] = [
           "type": "character",
           "name": "Kano"
         },
-        "context": "All Timelines",
+        "context": "Seluruh Timeline",
         "verificationStatus": "verified"
       }
     ],
     "relatedCharacters": [
+      {
+        "id": "cassie-cage",
+        "type": "character",
+        "name": "Cassie-Cage"
+      },
+      {
+        "id": "johnny-cage",
+        "type": "character",
+        "name": "Johnny-Cage"
+      },
       {
         "id": "kano",
         "type": "character",
@@ -1388,7 +2186,7 @@ export const characters: Character[] = [
     "summary": "Decorated Special Forces commander outfitted with titanium bionic cyber arms capable of generating devastating seismic shockwaves.",
     "biography": "Decorated Special Forces commander outfitted with titanium bionic cyber arms capable of generating devastating seismic shockwaves.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mk1-1992",
       "type": "game",
       "name": "Mortal Kombat (1992)"
     },
@@ -1404,7 +2202,7 @@ export const characters: Character[] = [
     },
     "faction": "Special Forces",
     "role": "Hero",
-    "popular": false,
+    "popular": true,
     "image": {
       "assetId": "asset-jax-portrait",
       "assetURL": "/images/characters/jax.png",
@@ -1525,9 +2323,9 @@ export const characters: Character[] = [
     "summary": "Shaolin pacifist warrior descendant of the Great Kung Lao, master of whirlwind kicks and a razor-brimmed throwing hat.",
     "biography": "Shaolin pacifist warrior descendant of the Great Kung Lao, master of whirlwind kicks and a razor-brimmed throwing hat.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mk2-1993",
       "type": "game",
-      "name": "Mortal Kombat (1992)"
+      "name": "Mortal Kombat II"
     },
     "species": {
       "id": "human",
@@ -1540,7 +2338,7 @@ export const characters: Character[] = [
       "name": "Earthrealm"
     },
     "faction": "White Lotus Society",
-    "role": "Villain",
+    "role": "Hero",
     "popular": false,
     "image": {
       "assetId": "asset-kunglao-portrait",
@@ -1612,6 +2410,11 @@ export const characters: Character[] = [
             "id": "move-wind-tornado",
             "type": "ability",
             "name": "Wind Tornado Vortex"
+          },
+          {
+            "id": "teleportation",
+            "type": "ability",
+            "name": "Dimensional Teleportation"
           }
         ],
         "weapons": [],
@@ -1634,8 +2437,58 @@ export const characters: Character[] = [
         "verificationStatus": "verified"
       }
     ],
-    "relationships": [],
-    "relatedCharacters": [],
+    "relationships": [
+      {
+        "type": "familyOf",
+        "label": "Keluarga",
+        "target": {
+          "id": "kung-jin",
+          "type": "character",
+          "name": "Kung Jin"
+        },
+        "context": "Reboot Timeline",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "mentorOf",
+        "label": "Murid",
+        "target": {
+          "id": "bo-rai-cho",
+          "type": "character",
+          "name": "Bo' Rai Cho"
+        },
+        "context": "Seluruh Timeline",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "alliedWith",
+        "label": "Sekutu",
+        "target": {
+          "id": "liu-kang",
+          "type": "character",
+          "name": "Liu Kang"
+        },
+        "context": "Seluruh Timeline",
+        "verificationStatus": "verified"
+      }
+    ],
+    "relatedCharacters": [
+      {
+        "id": "bo-rai-cho",
+        "type": "character",
+        "name": "Bo-Rai-Cho"
+      },
+      {
+        "id": "kung-jin",
+        "type": "character",
+        "name": "Kung-Jin"
+      },
+      {
+        "id": "liu-kang",
+        "type": "character",
+        "name": "Liu-Kang"
+      }
+    ],
     "sources": [
       {
         "id": "fandom-kung-lao",
@@ -1647,7 +2500,7 @@ export const characters: Character[] = [
     ]
   },
   {
-    "id": "shangtsung",
+    "id": "shang-tsung",
     "name": "Shang Tsung",
     "aliases": [
       "The Soul Stealer"
@@ -1655,7 +2508,7 @@ export const characters: Character[] = [
     "summary": "Treacherous shapeshifting sorcerer who consumes mortal souls to sustain his youth and mimic enemy abilities.",
     "biography": "Treacherous shapeshifting sorcerer who consumes mortal souls to sustain his youth and mimic enemy abilities.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mk1-1992",
       "type": "game",
       "name": "Mortal Kombat (1992)"
     },
@@ -1669,21 +2522,21 @@ export const characters: Character[] = [
       "type": "location",
       "name": "Earthrealm"
     },
-    "faction": "Neutral",
+    "faction": "Independent / Outworld",
     "role": "Villain",
     "popular": true,
     "image": {
       "assetId": "asset-shangtsung-portrait",
       "assetURL": "/images/characters/shangtsung.png",
       "assetType": "character_portrait",
-      "entityId": "shangtsung",
+      "entityId": "shang-tsung",
       "rightsStatus": "approved",
       "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
       "alt": "Potret karakter resmi Shang Tsung"
     },
     "versions": [
       {
-        "id": "shangtsung-mk1-1992",
+        "id": "shang-tsung-mk1-1992",
         "label": "Mortal Kombat (1992)",
         "gameId": "mk1-1992",
         "gameTitle": "Mortal Kombat (1992)",
@@ -1699,6 +2552,11 @@ export const characters: Character[] = [
             "id": "move-soul-ball",
             "type": "ability",
             "name": "Green Soul Burst"
+          },
+          {
+            "id": "move-flaming-skulls",
+            "type": "ability",
+            "name": "Flaming Skulls Volley"
           }
         ],
         "weapons": [],
@@ -1707,7 +2565,7 @@ export const characters: Character[] = [
           "assetId": "asset-shangtsung-portrait",
           "assetURL": "/images/characters/shangtsung.png",
           "assetType": "character_portrait",
-          "entityId": "shangtsung",
+          "entityId": "shang-tsung",
           "rightsStatus": "approved",
           "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
           "alt": "Potret karakter resmi Shang Tsung"
@@ -1715,7 +2573,7 @@ export const characters: Character[] = [
         "verificationStatus": "verified"
       },
       {
-        "id": "shangtsung-mk-deadly-alliance-2002",
+        "id": "shang-tsung-mk-deadly-alliance-2002",
         "label": "Mortal Kombat: Deadly Alliance",
         "gameId": "mk-deadly-alliance-2002",
         "gameTitle": "Mortal Kombat: Deadly Alliance",
@@ -1726,6 +2584,16 @@ export const characters: Character[] = [
             "id": "soul-stealing",
             "type": "ability",
             "name": "Soul Steal"
+          },
+          {
+            "id": "move-soul-ball",
+            "type": "ability",
+            "name": "Green Soul Burst"
+          },
+          {
+            "id": "move-flaming-skulls",
+            "type": "ability",
+            "name": "Flaming Skulls Volley"
           }
         ],
         "weapons": [],
@@ -1734,7 +2602,7 @@ export const characters: Character[] = [
           "assetId": "asset-shangtsung-portrait",
           "assetURL": "/images/characters/shangtsung.png",
           "assetType": "character_portrait",
-          "entityId": "shangtsung",
+          "entityId": "shang-tsung",
           "rightsStatus": "approved",
           "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
           "alt": "Potret karakter resmi Shang Tsung"
@@ -1742,7 +2610,7 @@ export const characters: Character[] = [
         "verificationStatus": "verified"
       },
       {
-        "id": "shangtsung-mk1-2023",
+        "id": "shang-tsung-mk1-2023",
         "label": "Mortal Kombat 1 (2023)",
         "gameId": "mk1-2023",
         "gameTitle": "Mortal Kombat 1 (2023)",
@@ -1753,6 +2621,16 @@ export const characters: Character[] = [
             "id": "soul-stealing",
             "type": "ability",
             "name": "Soul Steal"
+          },
+          {
+            "id": "move-soul-ball",
+            "type": "ability",
+            "name": "Green Soul Burst"
+          },
+          {
+            "id": "move-flaming-skulls",
+            "type": "ability",
+            "name": "Flaming Skulls Volley"
           }
         ],
         "weapons": [],
@@ -1761,7 +2639,7 @@ export const characters: Character[] = [
           "assetId": "asset-shangtsung-portrait",
           "assetURL": "/images/characters/shangtsung.png",
           "assetType": "character_portrait",
-          "entityId": "shangtsung",
+          "entityId": "shang-tsung",
           "rightsStatus": "approved",
           "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
           "alt": "Potret karakter resmi Shang Tsung"
@@ -1771,27 +2649,59 @@ export const characters: Character[] = [
     ],
     "relationships": [
       {
+        "type": "enemyOf",
+        "label": "Musuh",
+        "target": {
+          "id": "liu-kang",
+          "type": "character",
+          "name": "Liu Kang"
+        },
+        "context": "Seluruh Timeline",
+        "verificationStatus": "verified"
+      },
+      {
         "type": "alliedWith",
         "label": "Sekutu",
         "target": {
-          "id": "quanchi",
+          "id": "quan-chi",
           "type": "character",
           "name": "Quan Chi"
         },
-        "context": "Original Timeline (Deadly Alliance)",
+        "context": "Deadly Alliance (2002)",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "alliedWith",
+        "label": "Sekutu",
+        "target": {
+          "id": "goro",
+          "type": "character",
+          "name": "Goro"
+        },
+        "context": "Mortal Kombat (1992)",
         "verificationStatus": "verified"
       }
     ],
     "relatedCharacters": [
       {
-        "id": "quanchi",
+        "id": "goro",
         "type": "character",
-        "name": "Quan Chi"
+        "name": "Goro"
+      },
+      {
+        "id": "liu-kang",
+        "type": "character",
+        "name": "Liu-Kang"
+      },
+      {
+        "id": "quan-chi",
+        "type": "character",
+        "name": "Quan-Chi"
       }
     ],
     "sources": [
       {
-        "id": "fandom-shangtsung",
+        "id": "fandom-shang-tsung",
         "title": "Mortal Kombat Wiki \u2014 Shang Tsung",
         "url": "https://mortalkombat.fandom.com/wiki/Shang_Tsung",
         "sourceType": "community-wiki",
@@ -1800,7 +2710,7 @@ export const characters: Character[] = [
     ]
   },
   {
-    "id": "quanchi",
+    "id": "quan-chi",
     "name": "Quan Chi",
     "aliases": [
       "Arch-Sorcerer of the Netherrealm"
@@ -1808,9 +2718,9 @@ export const characters: Character[] = [
     "summary": "Scheming demonic necromancer from the Netherrealm who orchestrates proxy wars, resurrects revenants, and formed the Deadly Alliance.",
     "biography": "Scheming demonic necromancer from the Netherrealm who orchestrates proxy wars, resurrects revenants, and formed the Deadly Alliance.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mk-mythologies-1997",
       "type": "game",
-      "name": "Mortal Kombat (1992)"
+      "name": "Mortal Kombat Mythologies: Sub-Zero"
     },
     "species": {
       "id": "human",
@@ -1829,14 +2739,14 @@ export const characters: Character[] = [
       "assetId": "asset-quanchi-portrait",
       "assetURL": "/images/characters/quanchi.png",
       "assetType": "character_portrait",
-      "entityId": "quanchi",
+      "entityId": "quan-chi",
       "rightsStatus": "approved",
       "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
       "alt": "Potret karakter resmi Quan Chi"
     },
     "versions": [
       {
-        "id": "quanchi-mk4-1997",
+        "id": "quan-chi-mk4-1997",
         "label": "Mortal Kombat 4",
         "gameId": "mk4-1997",
         "gameTitle": "Mortal Kombat 4",
@@ -1849,42 +2759,14 @@ export const characters: Character[] = [
             "name": "Necromancy"
           },
           {
-            "id": "teleportation",
+            "id": "move-ground-burst",
             "type": "ability",
-            "name": "Dimensional Teleportation"
-          }
-        ],
-        "weapons": [],
-        "organizations": [
+            "name": "Netherrealm Ground Eruption"
+          },
           {
-            "id": "brotherhood-of-shadow",
-            "type": "organization",
-            "name": "Brotherhood of Shadow"
-          }
-        ],
-        "image": {
-          "assetId": "asset-quanchi-portrait",
-          "assetURL": "/images/characters/quanchi.png",
-          "assetType": "character_portrait",
-          "entityId": "quanchi",
-          "rightsStatus": "approved",
-          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
-          "alt": "Potret karakter resmi Quan Chi"
-        },
-        "verificationStatus": "verified"
-      },
-      {
-        "id": "quanchi-mkx-2015",
-        "label": "Mortal Kombat X",
-        "gameId": "mkx-2015",
-        "gameTitle": "Mortal Kombat X",
-        "timelineId": "reboot",
-        "timelineName": "Reboot Timeline",
-        "abilities": [
-          {
-            "id": "necromancy",
+            "id": "move-skeletal-boost",
             "type": "ability",
-            "name": "Necromancy"
+            "name": "Skeletal Strength Boost"
           },
           {
             "id": "teleportation",
@@ -1904,7 +2786,55 @@ export const characters: Character[] = [
           "assetId": "asset-quanchi-portrait",
           "assetURL": "/images/characters/quanchi.png",
           "assetType": "character_portrait",
-          "entityId": "quanchi",
+          "entityId": "quan-chi",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Quan Chi"
+        },
+        "verificationStatus": "verified"
+      },
+      {
+        "id": "quan-chi-mkx-2015",
+        "label": "Mortal Kombat X",
+        "gameId": "mkx-2015",
+        "gameTitle": "Mortal Kombat X",
+        "timelineId": "reboot",
+        "timelineName": "Reboot Timeline",
+        "abilities": [
+          {
+            "id": "necromancy",
+            "type": "ability",
+            "name": "Necromancy"
+          },
+          {
+            "id": "move-ground-burst",
+            "type": "ability",
+            "name": "Netherrealm Ground Eruption"
+          },
+          {
+            "id": "move-skeletal-boost",
+            "type": "ability",
+            "name": "Skeletal Strength Boost"
+          },
+          {
+            "id": "teleportation",
+            "type": "ability",
+            "name": "Dimensional Teleportation"
+          }
+        ],
+        "weapons": [],
+        "organizations": [
+          {
+            "id": "brotherhood-of-shadow",
+            "type": "organization",
+            "name": "Brotherhood of Shadow"
+          }
+        ],
+        "image": {
+          "assetId": "asset-quanchi-portrait",
+          "assetURL": "/images/characters/quanchi.png",
+          "assetType": "character_portrait",
+          "entityId": "quan-chi",
           "rightsStatus": "approved",
           "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
           "alt": "Potret karakter resmi Quan Chi"
@@ -1912,11 +2842,77 @@ export const characters: Character[] = [
         "verificationStatus": "verified"
       }
     ],
-    "relationships": [],
-    "relatedCharacters": [],
+    "relationships": [
+      {
+        "type": "enemyOf",
+        "label": "Musuh",
+        "target": {
+          "id": "scorpion",
+          "type": "character",
+          "name": "Scorpion"
+        },
+        "context": "Seluruh Timeline",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "enemyOf",
+        "label": "Musuh",
+        "target": {
+          "id": "ashrah",
+          "type": "character",
+          "name": "Ashrah"
+        },
+        "context": "3D Era & New Era",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "alliedWith",
+        "label": "Sekutu",
+        "target": {
+          "id": "shang-tsung",
+          "type": "character",
+          "name": "Shang Tsung"
+        },
+        "context": "Deadly Alliance (2002)",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "alliedWith",
+        "label": "Sekutu",
+        "target": {
+          "id": "noob-saibot",
+          "type": "character",
+          "name": "Noob Saibot"
+        },
+        "context": "Seluruh Timeline",
+        "verificationStatus": "verified"
+      }
+    ],
+    "relatedCharacters": [
+      {
+        "id": "ashrah",
+        "type": "character",
+        "name": "Ashrah"
+      },
+      {
+        "id": "noob-saibot",
+        "type": "character",
+        "name": "Noob-Saibot"
+      },
+      {
+        "id": "scorpion",
+        "type": "character",
+        "name": "Scorpion"
+      },
+      {
+        "id": "shang-tsung",
+        "type": "character",
+        "name": "Shang-Tsung"
+      }
+    ],
     "sources": [
       {
-        "id": "fandom-quanchi",
+        "id": "fandom-quan-chi",
         "title": "Mortal Kombat Wiki \u2014 Quan Chi",
         "url": "https://mortalkombat.fandom.com/wiki/Quan_Chi",
         "sourceType": "community-wiki",
@@ -1933,9 +2929,9 @@ export const characters: Character[] = [
     "summary": "Colossal tyrannical warlord who ruled Outworld for ten millennia, conquering realms by force and wielding the mighty Wrath Hammer.",
     "biography": "Colossal tyrannical warlord who ruled Outworld for ten millennia, conquering realms by force and wielding the mighty Wrath Hammer.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mk2-1993",
       "type": "game",
-      "name": "Mortal Kombat (1992)"
+      "name": "Mortal Kombat II"
     },
     "species": {
       "id": "human",
@@ -1947,7 +2943,7 @@ export const characters: Character[] = [
       "type": "location",
       "name": "Outworld"
     },
-    "faction": "Neutral",
+    "faction": "Independent / Outworld",
     "role": "Villain",
     "popular": true,
     "image": {
@@ -1967,7 +2963,28 @@ export const characters: Character[] = [
         "gameTitle": "Mortal Kombat II",
         "timelineId": "original",
         "timelineName": "Original Timeline",
-        "abilities": [],
+        "abilities": [
+          {
+            "id": "move-wrath-hammer",
+            "type": "ability",
+            "name": "Wrath Hammer Slam"
+          },
+          {
+            "id": "move-shoulder-charge",
+            "type": "ability",
+            "name": "Shao Kahn Shoulder Charge"
+          },
+          {
+            "id": "move-light-spear",
+            "type": "ability",
+            "name": "Imperial Light Spear"
+          },
+          {
+            "id": "move-emperor-shield",
+            "type": "ability",
+            "name": "Emperor's Repelling Shield"
+          }
+        ],
         "weapons": [
           {
             "id": "war-hammer",
@@ -1994,7 +3011,28 @@ export const characters: Character[] = [
         "gameTitle": "Mortal Kombat 11",
         "timelineId": "reboot",
         "timelineName": "Reboot Timeline",
-        "abilities": [],
+        "abilities": [
+          {
+            "id": "move-wrath-hammer",
+            "type": "ability",
+            "name": "Wrath Hammer Slam"
+          },
+          {
+            "id": "move-shoulder-charge",
+            "type": "ability",
+            "name": "Shao Kahn Shoulder Charge"
+          },
+          {
+            "id": "move-light-spear",
+            "type": "ability",
+            "name": "Imperial Light Spear"
+          },
+          {
+            "id": "move-emperor-shield",
+            "type": "ability",
+            "name": "Emperor's Repelling Shield"
+          }
+        ],
         "weapons": [
           {
             "id": "war-hammer",
@@ -2015,8 +3053,106 @@ export const characters: Character[] = [
         "verificationStatus": "verified"
       }
     ],
-    "relationships": [],
-    "relatedCharacters": [],
+    "relationships": [
+      {
+        "type": "familyOf",
+        "label": "Keluarga",
+        "target": {
+          "id": "mileena",
+          "type": "character",
+          "name": "Mileena"
+        },
+        "context": "Original & Reboot Timeline",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "alliedWith",
+        "label": "Sekutu",
+        "target": {
+          "id": "sindel",
+          "type": "character",
+          "name": "Sindel"
+        },
+        "context": "Original & Reboot Timeline",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "enemyOf",
+        "label": "Musuh",
+        "target": {
+          "id": "kitana",
+          "type": "character",
+          "name": "Kitana"
+        },
+        "context": "Original & Reboot Timeline",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "enemyOf",
+        "label": "Musuh",
+        "target": {
+          "id": "liu-kang",
+          "type": "character",
+          "name": "Liu Kang"
+        },
+        "context": "Original & Reboot Timeline",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "enemyOf",
+        "label": "Musuh",
+        "target": {
+          "id": "onaga",
+          "type": "character",
+          "name": "Onaga"
+        },
+        "context": "3D Era Timeline",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "alliedWith",
+        "label": "Sekutu",
+        "target": {
+          "id": "kintaro",
+          "type": "character",
+          "name": "Kintaro"
+        },
+        "context": "Mortal Kombat II",
+        "verificationStatus": "verified"
+      }
+    ],
+    "relatedCharacters": [
+      {
+        "id": "kintaro",
+        "type": "character",
+        "name": "Kintaro"
+      },
+      {
+        "id": "kitana",
+        "type": "character",
+        "name": "Kitana"
+      },
+      {
+        "id": "liu-kang",
+        "type": "character",
+        "name": "Liu-Kang"
+      },
+      {
+        "id": "mileena",
+        "type": "character",
+        "name": "Mileena"
+      },
+      {
+        "id": "onaga",
+        "type": "character",
+        "name": "Onaga"
+      },
+      {
+        "id": "sindel",
+        "type": "character",
+        "name": "Sindel"
+      }
+    ],
     "sources": [
       {
         "id": "fandom-shao-kahn",
@@ -2036,7 +3172,7 @@ export const characters: Character[] = [
     "summary": "Cybernetically modified Australian mercenary and ruthless boss of the Black Dragon, possessing an infrared laser cyber-eye.",
     "biography": "Cybernetically modified Australian mercenary and ruthless boss of the Black Dragon, possessing an infrared laser cyber-eye.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mk1-1992",
       "type": "game",
       "name": "Mortal Kombat (1992)"
     },
@@ -2052,7 +3188,7 @@ export const characters: Character[] = [
     },
     "faction": "Black Dragon",
     "role": "Villain",
-    "popular": false,
+    "popular": true,
     "image": {
       "assetId": "asset-kano-portrait",
       "assetURL": "/images/characters/kano.png",
@@ -2075,6 +3211,16 @@ export const characters: Character[] = [
             "id": "move-cannonball",
             "type": "ability",
             "name": "Cannonball Roll"
+          },
+          {
+            "id": "move-eye-laser",
+            "type": "ability",
+            "name": "Cybernetic Eye Laser"
+          },
+          {
+            "id": "move-knife-toss",
+            "type": "ability",
+            "name": "Heart-Seeker Knife Toss"
           }
         ],
         "weapons": [],
@@ -2108,6 +3254,16 @@ export const characters: Character[] = [
             "id": "move-cannonball",
             "type": "ability",
             "name": "Cannonball Roll"
+          },
+          {
+            "id": "move-eye-laser",
+            "type": "ability",
+            "name": "Cybernetic Eye Laser"
+          },
+          {
+            "id": "move-knife-toss",
+            "type": "ability",
+            "name": "Heart-Seeker Knife Toss"
           }
         ],
         "weapons": [],
@@ -2130,8 +3286,58 @@ export const characters: Character[] = [
         "verificationStatus": "verified"
       }
     ],
-    "relationships": [],
-    "relatedCharacters": [],
+    "relationships": [
+      {
+        "type": "enemyOf",
+        "label": "Musuh",
+        "target": {
+          "id": "sonya-blade",
+          "type": "character",
+          "name": "Sonya Blade"
+        },
+        "context": "Seluruh Timeline",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "enemyOf",
+        "label": "Musuh",
+        "target": {
+          "id": "jax-briggs",
+          "type": "character",
+          "name": "Jax-Briggs"
+        },
+        "context": "Seluruh Timeline",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "enemyOf",
+        "label": "Musuh",
+        "target": {
+          "id": "mavado",
+          "type": "character",
+          "name": "Mavado"
+        },
+        "context": "3D Era Timeline",
+        "verificationStatus": "verified"
+      }
+    ],
+    "relatedCharacters": [
+      {
+        "id": "jax-briggs",
+        "type": "character",
+        "name": "Jax-Briggs"
+      },
+      {
+        "id": "mavado",
+        "type": "character",
+        "name": "Mavado"
+      },
+      {
+        "id": "sonya-blade",
+        "type": "character",
+        "name": "Sonya-Blade"
+      }
+    ],
     "sources": [
       {
         "id": "fandom-kano",
@@ -2151,9 +3357,9 @@ export const characters: Character[] = [
     "summary": "Ferocious warlord of the nomadic Tarkatan tribe with razor-sharp teeth and long, retractable bone blades extending from his forearms.",
     "biography": "Ferocious warlord of the nomadic Tarkatan tribe with razor-sharp teeth and long, retractable bone blades extending from his forearms.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mk2-1993",
       "type": "game",
-      "name": "Mortal Kombat (1992)"
+      "name": "Mortal Kombat II"
     },
     "species": {
       "id": "human",
@@ -2165,7 +3371,7 @@ export const characters: Character[] = [
       "type": "location",
       "name": "Outworld"
     },
-    "faction": "Neutral",
+    "faction": "Independent / Outworld",
     "role": "Villain",
     "popular": false,
     "image": {
@@ -2190,6 +3396,16 @@ export const characters: Character[] = [
             "id": "move-tarkatan-chop",
             "type": "ability",
             "name": "Blade Fury"
+          },
+          {
+            "id": "move-blade-spark",
+            "type": "ability",
+            "name": "Tarkatan Blade Spark"
+          },
+          {
+            "id": "move-blade-spin",
+            "type": "ability",
+            "name": "Tarkatan Blade Spin"
           }
         ],
         "weapons": [],
@@ -2217,6 +3433,16 @@ export const characters: Character[] = [
             "id": "move-tarkatan-chop",
             "type": "ability",
             "name": "Blade Fury"
+          },
+          {
+            "id": "move-blade-spark",
+            "type": "ability",
+            "name": "Tarkatan Blade Spark"
+          },
+          {
+            "id": "move-blade-spin",
+            "type": "ability",
+            "name": "Tarkatan Blade Spin"
           }
         ],
         "weapons": [],
@@ -2233,8 +3459,42 @@ export const characters: Character[] = [
         "verificationStatus": "verified"
       }
     ],
-    "relationships": [],
-    "relatedCharacters": [],
+    "relationships": [
+      {
+        "type": "alliedWith",
+        "label": "Sekutu",
+        "target": {
+          "id": "mileena",
+          "type": "character",
+          "name": "Mileena"
+        },
+        "context": "Original Timeline",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "enemyOf",
+        "label": "Musuh",
+        "target": {
+          "id": "dvorah",
+          "type": "character",
+          "name": "D'Vorah"
+        },
+        "context": "Mortal Kombat X",
+        "verificationStatus": "verified"
+      }
+    ],
+    "relatedCharacters": [
+      {
+        "id": "dvorah",
+        "type": "character",
+        "name": "D'Vorah"
+      },
+      {
+        "id": "mileena",
+        "type": "character",
+        "name": "Mileena"
+      }
+    ],
     "sources": [
       {
         "id": "fandom-baraka",
@@ -2254,9 +3514,9 @@ export const characters: Character[] = [
     "summary": "Blind telekinetic master swordsman guided by the spirits of his samurai ancestors housed within the ancestral blade Sento.",
     "biography": "Blind telekinetic master swordsman guided by the spirits of his samurai ancestors housed within the ancestral blade Sento.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mk-deadly-alliance-2002",
       "type": "game",
-      "name": "Mortal Kombat (1992)"
+      "name": "Mortal Kombat: Deadly Alliance"
     },
     "species": {
       "id": "human",
@@ -2269,7 +3529,7 @@ export const characters: Character[] = [
       "name": "Earthrealm"
     },
     "faction": "Special Forces",
-    "role": "Villain",
+    "role": "Hero",
     "popular": false,
     "image": {
       "assetId": "asset-kenshi-portrait",
@@ -2298,6 +3558,11 @@ export const characters: Character[] = [
             "id": "move-telekinesis-slam",
             "type": "ability",
             "name": "Telekinetic Slam"
+          },
+          {
+            "id": "move-energy-spark",
+            "type": "ability",
+            "name": "Luminescent Spark Burst"
           }
         ],
         "weapons": [
@@ -2342,6 +3607,11 @@ export const characters: Character[] = [
             "id": "move-telekinesis-slam",
             "type": "ability",
             "name": "Telekinetic Slam"
+          },
+          {
+            "id": "move-energy-spark",
+            "type": "ability",
+            "name": "Luminescent Spark Burst"
           }
         ],
         "weapons": [
@@ -2381,6 +3651,16 @@ export const characters: Character[] = [
             "id": "move-tele-flurry",
             "type": "ability",
             "name": "Tele-Flurry"
+          },
+          {
+            "id": "move-telekinesis-slam",
+            "type": "ability",
+            "name": "Telekinetic Slam"
+          },
+          {
+            "id": "move-energy-spark",
+            "type": "ability",
+            "name": "Luminescent Spark Burst"
           }
         ],
         "weapons": [
@@ -2392,9 +3672,9 @@ export const characters: Character[] = [
         ],
         "organizations": [
           {
-            "id": "shirai-ryu",
+            "id": "special-forces",
             "type": "organization",
-            "name": "Shirai Ryu"
+            "name": "Special Forces"
           }
         ],
         "image": {
@@ -2409,8 +3689,26 @@ export const characters: Character[] = [
         "verificationStatus": "verified"
       }
     ],
-    "relationships": [],
-    "relatedCharacters": [],
+    "relationships": [
+      {
+        "type": "familyOf",
+        "label": "Keluarga",
+        "target": {
+          "id": "takeda",
+          "type": "character",
+          "name": "Takeda Takahashi"
+        },
+        "context": "Reboot Timeline",
+        "verificationStatus": "verified"
+      }
+    ],
+    "relatedCharacters": [
+      {
+        "id": "takeda",
+        "type": "character",
+        "name": "Takeda Takahashi"
+      }
+    ],
     "sources": [
       {
         "id": "fandom-kenshi",
@@ -2430,9 +3728,9 @@ export const characters: Character[] = [
     "summary": "The resurrected wraith of the original Sub-Zero Bi-Han, corrupted by the dark necromancy of Quan Chi into living shadow.",
     "biography": "The resurrected wraith of the original Sub-Zero Bi-Han, corrupted by the dark necromancy of Quan Chi into living shadow.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mk2-1993",
       "type": "game",
-      "name": "Mortal Kombat (1992)"
+      "name": "Mortal Kombat II"
     },
     "species": {
       "id": "human",
@@ -2446,7 +3744,7 @@ export const characters: Character[] = [
     },
     "faction": "Brotherhood of Shadow",
     "role": "Villain",
-    "popular": false,
+    "popular": true,
     "image": {
       "assetId": "asset-noobsaibot-portrait",
       "assetURL": "/images/characters/noob-saibot.png",
@@ -2474,9 +3772,25 @@ export const characters: Character[] = [
             "id": "move-shadow-slide",
             "type": "ability",
             "name": "Shadow Slide"
+          },
+          {
+            "id": "move-shadow-tackle",
+            "type": "ability",
+            "name": "Shadow Clone Tackle"
+          },
+          {
+            "id": "move-black-hole",
+            "type": "ability",
+            "name": "Darkness Black Hole"
           }
         ],
-        "weapons": [],
+        "weapons": [
+          {
+            "id": "kriss-dagger",
+            "type": "weapon",
+            "name": "Kriss Purification Dagger"
+          }
+        ],
         "organizations": [
           {
             "id": "brotherhood-of-shadow",
@@ -2512,9 +3826,25 @@ export const characters: Character[] = [
             "id": "move-shadow-slide",
             "type": "ability",
             "name": "Shadow Slide"
+          },
+          {
+            "id": "move-shadow-tackle",
+            "type": "ability",
+            "name": "Shadow Clone Tackle"
+          },
+          {
+            "id": "move-black-hole",
+            "type": "ability",
+            "name": "Darkness Black Hole"
           }
         ],
-        "weapons": [],
+        "weapons": [
+          {
+            "id": "kriss-dagger",
+            "type": "weapon",
+            "name": "Kriss Purification Dagger"
+          }
+        ],
         "organizations": [
           {
             "id": "brotherhood-of-shadow",
@@ -2534,8 +3864,42 @@ export const characters: Character[] = [
         "verificationStatus": "verified"
       }
     ],
-    "relationships": [],
-    "relatedCharacters": [],
+    "relationships": [
+      {
+        "type": "familyOf",
+        "label": "Keluarga",
+        "target": {
+          "id": "sub-zero",
+          "type": "character",
+          "name": "Sub-Zero"
+        },
+        "context": "Seluruh Timeline",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "alliedWith",
+        "label": "Sekutu",
+        "target": {
+          "id": "quan-chi",
+          "type": "character",
+          "name": "Quan Chi"
+        },
+        "context": "Seluruh Timeline",
+        "verificationStatus": "verified"
+      }
+    ],
+    "relatedCharacters": [
+      {
+        "id": "quan-chi",
+        "type": "character",
+        "name": "Quan-Chi"
+      },
+      {
+        "id": "sub-zero",
+        "type": "character",
+        "name": "Sub-Zero"
+      }
+    ],
     "sources": [
       {
         "id": "fandom-noob-saibot",
@@ -2555,9 +3919,9 @@ export const characters: Character[] = [
     "summary": "Lin Kuei warrior capable of dissolving his physical form into clouds of choking, defensive vapor.",
     "biography": "Lin Kuei warrior capable of dissolving his physical form into clouds of choking, defensive vapor.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mk2-1993",
       "type": "game",
-      "name": "Mortal Kombat (1992)"
+      "name": "Mortal Kombat II"
     },
     "species": {
       "id": "human",
@@ -2571,7 +3935,7 @@ export const characters: Character[] = [
     },
     "faction": "Lin Kuei",
     "role": "Villain",
-    "popular": false,
+    "popular": true,
     "image": {
       "assetId": "asset-smoke-portrait",
       "assetURL": "/images/characters/smoke.png",
@@ -2591,12 +3955,33 @@ export const characters: Character[] = [
         "timelineName": "Original Timeline",
         "abilities": [
           {
+            "id": "move-smoke-cloud",
+            "type": "ability",
+            "name": "Smoke Cloud Teleport"
+          },
+          {
+            "id": "move-smoke-bomb",
+            "type": "ability",
+            "name": "Smoke Bomb Stun"
+          },
+          {
+            "id": "invisibility",
+            "type": "ability",
+            "name": "Chameleon Camouflage (Invisibility)"
+          },
+          {
             "id": "teleportation",
             "type": "ability",
             "name": "Dimensional Teleportation"
           }
         ],
-        "weapons": [],
+        "weapons": [
+          {
+            "id": "kriss-dagger",
+            "type": "weapon",
+            "name": "Kriss Purification Dagger"
+          }
+        ],
         "organizations": [
           {
             "id": "lin-kuei",
@@ -2624,12 +4009,33 @@ export const characters: Character[] = [
         "timelineName": "Reboot Timeline",
         "abilities": [
           {
+            "id": "move-smoke-cloud",
+            "type": "ability",
+            "name": "Smoke Cloud Teleport"
+          },
+          {
+            "id": "move-smoke-bomb",
+            "type": "ability",
+            "name": "Smoke Bomb Stun"
+          },
+          {
+            "id": "invisibility",
+            "type": "ability",
+            "name": "Chameleon Camouflage (Invisibility)"
+          },
+          {
             "id": "teleportation",
             "type": "ability",
             "name": "Dimensional Teleportation"
           }
         ],
-        "weapons": [],
+        "weapons": [
+          {
+            "id": "kriss-dagger",
+            "type": "weapon",
+            "name": "Kriss Purification Dagger"
+          }
+        ],
         "organizations": [
           {
             "id": "lin-kuei",
@@ -2657,12 +4063,33 @@ export const characters: Character[] = [
         "timelineName": "New Era",
         "abilities": [
           {
+            "id": "move-smoke-cloud",
+            "type": "ability",
+            "name": "Smoke Cloud Teleport"
+          },
+          {
+            "id": "move-smoke-bomb",
+            "type": "ability",
+            "name": "Smoke Bomb Stun"
+          },
+          {
+            "id": "invisibility",
+            "type": "ability",
+            "name": "Chameleon Camouflage (Invisibility)"
+          },
+          {
             "id": "teleportation",
             "type": "ability",
             "name": "Dimensional Teleportation"
           }
         ],
-        "weapons": [],
+        "weapons": [
+          {
+            "id": "kriss-dagger",
+            "type": "weapon",
+            "name": "Kriss Purification Dagger"
+          }
+        ],
         "organizations": [
           {
             "id": "lin-kuei",
@@ -2682,8 +4109,26 @@ export const characters: Character[] = [
         "verificationStatus": "verified"
       }
     ],
-    "relationships": [],
-    "relatedCharacters": [],
+    "relationships": [
+      {
+        "type": "alliedWith",
+        "label": "Sekutu",
+        "target": {
+          "id": "sub-zero",
+          "type": "character",
+          "name": "Sub-Zero"
+        },
+        "context": "Seluruh Timeline",
+        "verificationStatus": "verified"
+      }
+    ],
+    "relatedCharacters": [
+      {
+        "id": "sub-zero",
+        "type": "character",
+        "name": "Sub-Zero"
+      }
+    ],
     "sources": [
       {
         "id": "fandom-smoke",
@@ -2703,9 +4148,9 @@ export const characters: Character[] = [
     "summary": "Botswanan assassin mechanised into a lethal yellow cyborg unit equipped with an energy net and chest saw.",
     "biography": "Botswanan assassin mechanised into a lethal yellow cyborg unit equipped with an energy net and chest saw.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mk3-1995",
       "type": "game",
-      "name": "Mortal Kombat (1992)"
+      "name": "Mortal Kombat 3"
     },
     "species": {
       "id": "human",
@@ -2718,8 +4163,8 @@ export const characters: Character[] = [
       "name": "Earthrealm"
     },
     "faction": "Lin Kuei",
-    "role": "Villain",
-    "popular": false,
+    "role": "Antihero",
+    "popular": true,
     "image": {
       "assetId": "asset-cyrax-portrait",
       "assetURL": "/images/characters/cyrax.png",
@@ -2742,6 +4187,16 @@ export const characters: Character[] = [
             "id": "move-net-tangle",
             "type": "ability",
             "name": "Energy Net"
+          },
+          {
+            "id": "move-chest-saw",
+            "type": "ability",
+            "name": "Chest Saw Cutter"
+          },
+          {
+            "id": "move-exploding-bomb",
+            "type": "ability",
+            "name": "Timed Cyber Bomb"
           },
           {
             "id": "teleportation",
@@ -2782,6 +4237,16 @@ export const characters: Character[] = [
             "name": "Energy Net"
           },
           {
+            "id": "move-chest-saw",
+            "type": "ability",
+            "name": "Chest Saw Cutter"
+          },
+          {
+            "id": "move-exploding-bomb",
+            "type": "ability",
+            "name": "Timed Cyber Bomb"
+          },
+          {
             "id": "teleportation",
             "type": "ability",
             "name": "Dimensional Teleportation"
@@ -2807,8 +4272,42 @@ export const characters: Character[] = [
         "verificationStatus": "verified"
       }
     ],
-    "relationships": [],
-    "relatedCharacters": [],
+    "relationships": [
+      {
+        "type": "rivalOf",
+        "label": "Rival",
+        "target": {
+          "id": "sektor",
+          "type": "character",
+          "name": "Sektor"
+        },
+        "context": "Seluruh Timeline",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "alliedWith",
+        "label": "Sekutu",
+        "target": {
+          "id": "sub-zero",
+          "type": "character",
+          "name": "Sub-Zero"
+        },
+        "context": "3D Era & Reboot",
+        "verificationStatus": "verified"
+      }
+    ],
+    "relatedCharacters": [
+      {
+        "id": "sektor",
+        "type": "character",
+        "name": "Sektor"
+      },
+      {
+        "id": "sub-zero",
+        "type": "character",
+        "name": "Sub-Zero"
+      }
+    ],
     "sources": [
       {
         "id": "fandom-cyrax",
@@ -2828,9 +4327,9 @@ export const characters: Character[] = [
     "summary": "Ruthless grandmaster's son who willingly embraced cybernetization, armed with thermal rockets and dual flamethrowers.",
     "biography": "Ruthless grandmaster's son who willingly embraced cybernetization, armed with thermal rockets and dual flamethrowers.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mk3-1995",
       "type": "game",
-      "name": "Mortal Kombat (1992)"
+      "name": "Mortal Kombat 3"
     },
     "species": {
       "id": "human",
@@ -2869,9 +4368,19 @@ export const characters: Character[] = [
             "name": "Homing Missile"
           },
           {
-            "id": "teleportation",
+            "id": "move-flamethrower",
             "type": "ability",
-            "name": "Dimensional Teleportation"
+            "name": "Cybernetic Flamethrower"
+          },
+          {
+            "id": "move-teleport-uppercut",
+            "type": "ability",
+            "name": "Teleport Rocket Uppercut"
+          },
+          {
+            "id": "move-compactor",
+            "type": "ability",
+            "name": "Chest Compactor Crush"
           }
         ],
         "weapons": [],
@@ -2907,9 +4416,19 @@ export const characters: Character[] = [
             "name": "Homing Missile"
           },
           {
-            "id": "teleportation",
+            "id": "move-flamethrower",
             "type": "ability",
-            "name": "Dimensional Teleportation"
+            "name": "Cybernetic Flamethrower"
+          },
+          {
+            "id": "move-teleport-uppercut",
+            "type": "ability",
+            "name": "Teleport Rocket Uppercut"
+          },
+          {
+            "id": "move-compactor",
+            "type": "ability",
+            "name": "Chest Compactor Crush"
           }
         ],
         "weapons": [],
@@ -2932,8 +4451,42 @@ export const characters: Character[] = [
         "verificationStatus": "verified"
       }
     ],
-    "relationships": [],
-    "relatedCharacters": [],
+    "relationships": [
+      {
+        "type": "enemyOf",
+        "label": "Musuh",
+        "target": {
+          "id": "sub-zero",
+          "type": "character",
+          "name": "Sub-Zero"
+        },
+        "context": "Reboot & 3D Era",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "rivalOf",
+        "label": "Rival",
+        "target": {
+          "id": "cyrax",
+          "type": "character",
+          "name": "Cyrax"
+        },
+        "context": "Seluruh Timeline",
+        "verificationStatus": "verified"
+      }
+    ],
+    "relatedCharacters": [
+      {
+        "id": "cyrax",
+        "type": "character",
+        "name": "Cyrax"
+      },
+      {
+        "id": "sub-zero",
+        "type": "character",
+        "name": "Sub-Zero"
+      }
+    ],
     "sources": [
       {
         "id": "fandom-sektor",
@@ -2953,7 +4506,7 @@ export const characters: Character[] = [
     "summary": "Last known Saurian humanoid, possessing camouflage invisibility and corrosive acid saliva, fighting desperately to revive his home realm.",
     "biography": "Last known Saurian humanoid, possessing camouflage invisibility and corrosive acid saliva, fighting desperately to revive his home realm.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mk1-1992",
       "type": "game",
       "name": "Mortal Kombat (1992)"
     },
@@ -2967,7 +4520,7 @@ export const characters: Character[] = [
       "type": "location",
       "name": "Outworld"
     },
-    "faction": "Neutral",
+    "faction": "Independent / Outworld",
     "role": "Villain",
     "popular": false,
     "image": {
@@ -2992,6 +4545,21 @@ export const characters: Character[] = [
             "id": "move-acid-spit",
             "type": "ability",
             "name": "Corrosive Acid Spit"
+          },
+          {
+            "id": "move-forceball",
+            "type": "ability",
+            "name": "Corrosive Forceball"
+          },
+          {
+            "id": "invisibility",
+            "type": "ability",
+            "name": "Chameleon Camouflage (Invisibility)"
+          },
+          {
+            "id": "move-reptile-slide",
+            "type": "ability",
+            "name": "Acidic Reptilian Slide"
           }
         ],
         "weapons": [],
@@ -3019,6 +4587,21 @@ export const characters: Character[] = [
             "id": "move-acid-spit",
             "type": "ability",
             "name": "Corrosive Acid Spit"
+          },
+          {
+            "id": "move-forceball",
+            "type": "ability",
+            "name": "Corrosive Forceball"
+          },
+          {
+            "id": "invisibility",
+            "type": "ability",
+            "name": "Chameleon Camouflage (Invisibility)"
+          },
+          {
+            "id": "move-reptile-slide",
+            "type": "ability",
+            "name": "Acidic Reptilian Slide"
           }
         ],
         "weapons": [],
@@ -3046,6 +4629,21 @@ export const characters: Character[] = [
             "id": "move-acid-spit",
             "type": "ability",
             "name": "Corrosive Acid Spit"
+          },
+          {
+            "id": "move-forceball",
+            "type": "ability",
+            "name": "Corrosive Forceball"
+          },
+          {
+            "id": "invisibility",
+            "type": "ability",
+            "name": "Chameleon Camouflage (Invisibility)"
+          },
+          {
+            "id": "move-reptile-slide",
+            "type": "ability",
+            "name": "Acidic Reptilian Slide"
           }
         ],
         "weapons": [],
@@ -3083,9 +4681,9 @@ export const characters: Character[] = [
     "summary": "Immortal artificial construct created to manage temporal sand, resurrecting stronger and wiser after every death.",
     "biography": "Immortal artificial construct created to manage temporal sand, resurrecting stronger and wiser after every death.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mk11-2019",
       "type": "game",
-      "name": "Mortal Kombat (1992)"
+      "name": "Mortal Kombat 11"
     },
     "species": {
       "id": "human",
@@ -3097,7 +4695,7 @@ export const characters: Character[] = [
       "type": "location",
       "name": "Earthrealm"
     },
-    "faction": "Neutral",
+    "faction": "Independent / Outworld",
     "role": "Villain",
     "popular": false,
     "image": {
@@ -3118,6 +4716,16 @@ export const characters: Character[] = [
         "timelineId": "reboot",
         "timelineName": "Reboot Timeline",
         "abilities": [
+          {
+            "id": "temporal-reversal",
+            "type": "ability",
+            "name": "Temporal Reversal (Time Rewind)"
+          },
+          {
+            "id": "sand-manipulation",
+            "type": "ability",
+            "name": "Titan Sand Manipulation"
+          },
           {
             "id": "teleportation",
             "type": "ability",
@@ -3146,6 +4754,16 @@ export const characters: Character[] = [
         "timelineName": "New Era",
         "abilities": [
           {
+            "id": "temporal-reversal",
+            "type": "ability",
+            "name": "Temporal Reversal (Time Rewind)"
+          },
+          {
+            "id": "sand-manipulation",
+            "type": "ability",
+            "name": "Titan Sand Manipulation"
+          },
+          {
             "id": "teleportation",
             "type": "ability",
             "name": "Dimensional Teleportation"
@@ -3170,19 +4788,35 @@ export const characters: Character[] = [
         "type": "alliedWith",
         "label": "Sekutu",
         "target": {
+          "id": "kronika",
+          "type": "character",
+          "name": "Kronika"
+        },
+        "context": "Mortal Kombat 11",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "alliedWith",
+        "label": "Sekutu",
+        "target": {
           "id": "liu-kang",
           "type": "character",
-          "name": "liu-kang"
+          "name": "Liu Kang"
         },
-        "context": "New Era Timeline",
+        "context": "Mortal Kombat 1 (2023)",
         "verificationStatus": "verified"
       }
     ],
     "relatedCharacters": [
       {
+        "id": "kronika",
+        "type": "character",
+        "name": "Kronika"
+      },
+      {
         "id": "liu-kang",
         "type": "character",
-        "name": "liu-kang"
+        "name": "Liu-Kang"
       }
     ],
     "sources": [
@@ -3204,9 +4838,9 @@ export const characters: Character[] = [
     "summary": "Titan of Time and architect of universe cycles who sought to restart history when Raiden disrupted the balance between Good and Evil.",
     "biography": "Titan of Time and architect of universe cycles who sought to restart history when Raiden disrupted the balance between Good and Evil.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mk11-2019",
       "type": "game",
-      "name": "Mortal Kombat (1992)"
+      "name": "Mortal Kombat 11"
     },
     "species": {
       "id": "human",
@@ -3218,7 +4852,7 @@ export const characters: Character[] = [
       "type": "location",
       "name": "Earthrealm"
     },
-    "faction": "Neutral",
+    "faction": "Independent / Outworld",
     "role": "Villain",
     "popular": false,
     "image": {
@@ -3240,6 +4874,16 @@ export const characters: Character[] = [
         "timelineName": "Reboot Timeline",
         "abilities": [
           {
+            "id": "temporal-manipulation",
+            "type": "ability",
+            "name": "Chronokinesis (Time Mastery)"
+          },
+          {
+            "id": "move-hourglass-rewind",
+            "type": "ability",
+            "name": "Hourglass Epoch Rewind"
+          },
+          {
             "id": "teleportation",
             "type": "ability",
             "name": "Dimensional Teleportation"
@@ -3259,8 +4903,74 @@ export const characters: Character[] = [
         "verificationStatus": "verified"
       }
     ],
-    "relationships": [],
-    "relatedCharacters": [],
+    "relationships": [
+      {
+        "type": "familyOf",
+        "label": "Keluarga",
+        "target": {
+          "id": "shinnok",
+          "type": "character",
+          "name": "Shinnok"
+        },
+        "context": "Reboot Timeline (MK11)",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "familyOf",
+        "label": "Keluarga",
+        "target": {
+          "id": "cetrion",
+          "type": "character",
+          "name": "Cetrion"
+        },
+        "context": "Reboot Timeline (MK11)",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "enemyOf",
+        "label": "Musuh",
+        "target": {
+          "id": "liu-kang",
+          "type": "character",
+          "name": "Liu Kang"
+        },
+        "context": "Mortal Kombat 11",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "alliedWith",
+        "label": "Sekutu",
+        "target": {
+          "id": "geras",
+          "type": "character",
+          "name": "Geras"
+        },
+        "context": "Mortal Kombat 11",
+        "verificationStatus": "verified"
+      }
+    ],
+    "relatedCharacters": [
+      {
+        "id": "cetrion",
+        "type": "character",
+        "name": "Cetrion"
+      },
+      {
+        "id": "geras",
+        "type": "character",
+        "name": "Geras"
+      },
+      {
+        "id": "liu-kang",
+        "type": "character",
+        "name": "Liu-Kang"
+      },
+      {
+        "id": "shinnok",
+        "type": "character",
+        "name": "Shinnok"
+      }
+    ],
     "sources": [
       {
         "id": "fandom-kronika",
@@ -3280,9 +4990,9 @@ export const characters: Character[] = [
     "summary": "Queen of Edenia and Empress of Outworld, commanding a devastating sonic banshee shriek and lethal prehensile hair.",
     "biography": "Queen of Edenia and Empress of Outworld, commanding a devastating sonic banshee shriek and lethal prehensile hair.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mk3-1995",
       "type": "game",
-      "name": "Mortal Kombat (1992)"
+      "name": "Mortal Kombat 3"
     },
     "species": {
       "id": "human",
@@ -3294,7 +5004,7 @@ export const characters: Character[] = [
       "type": "location",
       "name": "Edenia"
     },
-    "faction": "Neutral",
+    "faction": "Independent / Outworld",
     "role": "Villain",
     "popular": false,
     "image": {
@@ -3361,6 +5071,11 @@ export const characters: Character[] = [
             "id": "move-hair-whip",
             "type": "ability",
             "name": "Prehensile Hair Whip"
+          },
+          {
+            "id": "fatality-scream-queen",
+            "type": "ability",
+            "name": "Fatality: Scream Queen"
           }
         ],
         "weapons": [],
@@ -3377,8 +5092,58 @@ export const characters: Character[] = [
         "verificationStatus": "verified"
       }
     ],
-    "relationships": [],
-    "relatedCharacters": [],
+    "relationships": [
+      {
+        "type": "familyOf",
+        "label": "Keluarga",
+        "target": {
+          "id": "kitana",
+          "type": "character",
+          "name": "Kitana"
+        },
+        "context": "Seluruh Timeline",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "alliedWith",
+        "label": "Sekutu",
+        "target": {
+          "id": "shao-kahn",
+          "type": "character",
+          "name": "Shao Kahn"
+        },
+        "context": "Original & Reboot Timeline",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "alliedWith",
+        "label": "Sekutu",
+        "target": {
+          "id": "sheeva",
+          "type": "character",
+          "name": "Sheeva"
+        },
+        "context": "Original & Reboot Timeline",
+        "verificationStatus": "verified"
+      }
+    ],
+    "relatedCharacters": [
+      {
+        "id": "kitana",
+        "type": "character",
+        "name": "Kitana"
+      },
+      {
+        "id": "shao-kahn",
+        "type": "character",
+        "name": "Shao-Kahn"
+      },
+      {
+        "id": "sheeva",
+        "type": "character",
+        "name": "Sheeva"
+      }
+    ],
     "sources": [
       {
         "id": "fandom-sindel",
@@ -3398,7 +5163,7 @@ export const characters: Character[] = [
     "summary": "Four-armed Shokan prince who held the title of Mortal Kombat Grand Champion for 500 years before being defeated by Liu Kang.",
     "biography": "Four-armed Shokan prince who held the title of Mortal Kombat Grand Champion for 500 years before being defeated by Liu Kang.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mk1-1992",
       "type": "game",
       "name": "Mortal Kombat (1992)"
     },
@@ -3412,7 +5177,7 @@ export const characters: Character[] = [
       "type": "location",
       "name": "Outworld"
     },
-    "faction": "Neutral",
+    "faction": "Independent / Outworld",
     "role": "Villain",
     "popular": false,
     "image": {
@@ -3439,12 +5204,23 @@ export const characters: Character[] = [
             "name": "Telestomp"
           },
           {
+            "id": "move-dragon-slam",
+            "type": "ability",
+            "name": "Titanic Dragon Slam"
+          },
+          {
             "id": "fatality-shokan-tear",
             "type": "ability",
             "name": "Fatality: Limb Disassembly"
           }
         ],
-        "weapons": [],
+        "weapons": [
+          {
+            "id": "shokan-cleavers",
+            "type": "weapon",
+            "name": "Dual Shokan Cleavers"
+          }
+        ],
         "organizations": [],
         "image": {
           "assetId": "asset-goro-portrait",
@@ -3469,9 +5245,25 @@ export const characters: Character[] = [
             "id": "move-shokan-stomp",
             "type": "ability",
             "name": "Telestomp"
+          },
+          {
+            "id": "move-dragon-slam",
+            "type": "ability",
+            "name": "Titanic Dragon Slam"
+          },
+          {
+            "id": "fatality-shokan-tear",
+            "type": "ability",
+            "name": "Fatality: Limb Disassembly"
           }
         ],
-        "weapons": [],
+        "weapons": [
+          {
+            "id": "shokan-cleavers",
+            "type": "weapon",
+            "name": "Dual Shokan Cleavers"
+          }
+        ],
         "organizations": [],
         "image": {
           "assetId": "asset-goro-portrait",
@@ -3485,8 +5277,26 @@ export const characters: Character[] = [
         "verificationStatus": "verified"
       }
     ],
-    "relationships": [],
-    "relatedCharacters": [],
+    "relationships": [
+      {
+        "type": "alliedWith",
+        "label": "Sekutu",
+        "target": {
+          "id": "shang-tsung",
+          "type": "character",
+          "name": "Shang Tsung"
+        },
+        "context": "Mortal Kombat (1992)",
+        "verificationStatus": "verified"
+      }
+    ],
+    "relatedCharacters": [
+      {
+        "id": "shang-tsung",
+        "type": "character",
+        "name": "Shang-Tsung"
+      }
+    ],
     "sources": [
       {
         "id": "fandom-goro",
@@ -3506,9 +5316,9 @@ export const characters: Character[] = [
     "summary": "Fierce feline-striped Tigrar Shokan general serving as Shao Kahn's vanguard during the Outworld tournament.",
     "biography": "Fierce feline-striped Tigrar Shokan general serving as Shao Kahn's vanguard during the Outworld tournament.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mk2-1993",
       "type": "game",
-      "name": "Mortal Kombat (1992)"
+      "name": "Mortal Kombat II"
     },
     "species": {
       "id": "human",
@@ -3520,7 +5330,7 @@ export const characters: Character[] = [
       "type": "location",
       "name": "Outworld"
     },
-    "faction": "Neutral",
+    "faction": "Independent / Outworld",
     "role": "Villain",
     "popular": false,
     "image": {
@@ -3545,6 +5355,16 @@ export const characters: Character[] = [
             "id": "move-shokan-stomp",
             "type": "ability",
             "name": "Telestomp"
+          },
+          {
+            "id": "move-dragon-breath",
+            "type": "ability",
+            "name": "Dragon King Fire Breath"
+          },
+          {
+            "id": "fatality-shokan-tear",
+            "type": "ability",
+            "name": "Fatality: Limb Disassembly"
           }
         ],
         "weapons": [],
@@ -3561,8 +5381,26 @@ export const characters: Character[] = [
         "verificationStatus": "verified"
       }
     ],
-    "relationships": [],
-    "relatedCharacters": [],
+    "relationships": [
+      {
+        "type": "alliedWith",
+        "label": "Sekutu",
+        "target": {
+          "id": "shao-kahn",
+          "type": "character",
+          "name": "Shao Kahn"
+        },
+        "context": "Mortal Kombat II",
+        "verificationStatus": "verified"
+      }
+    ],
+    "relatedCharacters": [
+      {
+        "id": "shao-kahn",
+        "type": "character",
+        "name": "Shao-Kahn"
+      }
+    ],
     "sources": [
       {
         "id": "fandom-kintaro",
@@ -3582,9 +5420,9 @@ export const characters: Character[] = [
     "summary": "Banished Elder God of Death and Darkness who plotted to conquer the realms using his powerful sacred amulet.",
     "biography": "Banished Elder God of Death and Darkness who plotted to conquer the realms using his powerful sacred amulet.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mk-mythologies-1997",
       "type": "game",
-      "name": "Mortal Kombat (1992)"
+      "name": "Mortal Kombat Mythologies: Sub-Zero"
     },
     "species": {
       "id": "human",
@@ -3623,12 +5461,28 @@ export const characters: Character[] = [
             "name": "Necromancy"
           },
           {
+            "id": "shadow-magic",
+            "type": "ability",
+            "name": "Shadow Magic"
+          },
+          {
+            "id": "move-skeletal-boost",
+            "type": "ability",
+            "name": "Skeletal Strength Boost"
+          },
+          {
             "id": "teleportation",
             "type": "ability",
             "name": "Dimensional Teleportation"
           }
         ],
-        "weapons": [],
+        "weapons": [
+          {
+            "id": "kriss-dagger",
+            "type": "weapon",
+            "name": "Kriss Purification Dagger"
+          }
+        ],
         "organizations": [
           {
             "id": "brotherhood-of-shadow",
@@ -3661,12 +5515,28 @@ export const characters: Character[] = [
             "name": "Necromancy"
           },
           {
+            "id": "shadow-magic",
+            "type": "ability",
+            "name": "Shadow Magic"
+          },
+          {
+            "id": "move-skeletal-boost",
+            "type": "ability",
+            "name": "Skeletal Strength Boost"
+          },
+          {
             "id": "teleportation",
             "type": "ability",
             "name": "Dimensional Teleportation"
           }
         ],
-        "weapons": [],
+        "weapons": [
+          {
+            "id": "kriss-dagger",
+            "type": "weapon",
+            "name": "Kriss Purification Dagger"
+          }
+        ],
         "organizations": [
           {
             "id": "brotherhood-of-shadow",
@@ -3686,8 +5556,74 @@ export const characters: Character[] = [
         "verificationStatus": "verified"
       }
     ],
-    "relationships": [],
-    "relatedCharacters": [],
+    "relationships": [
+      {
+        "type": "familyOf",
+        "label": "Keluarga",
+        "target": {
+          "id": "kronika",
+          "type": "character",
+          "name": "Kronika"
+        },
+        "context": "Reboot Timeline (MK11)",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "familyOf",
+        "label": "Keluarga",
+        "target": {
+          "id": "cetrion",
+          "type": "character",
+          "name": "Cetrion"
+        },
+        "context": "Reboot Timeline (MK11)",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "enemyOf",
+        "label": "Musuh",
+        "target": {
+          "id": "raiden",
+          "type": "character",
+          "name": "Raiden"
+        },
+        "context": "Seluruh Timeline",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "enemyOf",
+        "label": "Musuh",
+        "target": {
+          "id": "cassie-cage",
+          "type": "character",
+          "name": "Cassie Cage"
+        },
+        "context": "Mortal Kombat X",
+        "verificationStatus": "verified"
+      }
+    ],
+    "relatedCharacters": [
+      {
+        "id": "cassie-cage",
+        "type": "character",
+        "name": "Cassie-Cage"
+      },
+      {
+        "id": "cetrion",
+        "type": "character",
+        "name": "Cetrion"
+      },
+      {
+        "id": "kronika",
+        "type": "character",
+        "name": "Kronika"
+      },
+      {
+        "id": "raiden",
+        "type": "character",
+        "name": "Raiden"
+      }
+    ],
     "sources": [
       {
         "id": "fandom-shinnok",
@@ -3707,9 +5643,9 @@ export const characters: Character[] = [
     "summary": "Benevolent God of Wind and brother to Raiden, utilizing gale force whirlwinds and levitation in Earthrealm's defense.",
     "biography": "Benevolent God of Wind and brother to Raiden, utilizing gale force whirlwinds and levitation in Earthrealm's defense.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mk-mythologies-1997",
       "type": "game",
-      "name": "Mortal Kombat (1992)"
+      "name": "Mortal Kombat Mythologies: Sub-Zero"
     },
     "species": {
       "id": "human",
@@ -3722,7 +5658,7 @@ export const characters: Character[] = [
       "name": "Earthrealm"
     },
     "faction": "White Lotus Society",
-    "role": "Villain",
+    "role": "Hero",
     "popular": false,
     "image": {
       "assetId": "asset-fujin-portrait",
@@ -3751,9 +5687,20 @@ export const characters: Character[] = [
             "id": "move-wind-kick",
             "type": "ability",
             "name": "Tornado Gale Kick"
+          },
+          {
+            "id": "teleportation",
+            "type": "ability",
+            "name": "Dimensional Teleportation"
           }
         ],
-        "weapons": [],
+        "weapons": [
+          {
+            "id": "bo-staff",
+            "type": "weapon",
+            "name": "Imperial Bo Staff"
+          }
+        ],
         "organizations": [
           {
             "id": "white-lotus",
@@ -3784,9 +5731,25 @@ export const characters: Character[] = [
             "id": "move-wind-tornado",
             "type": "ability",
             "name": "Wind Tornado Vortex"
+          },
+          {
+            "id": "move-wind-kick",
+            "type": "ability",
+            "name": "Tornado Gale Kick"
+          },
+          {
+            "id": "teleportation",
+            "type": "ability",
+            "name": "Dimensional Teleportation"
           }
         ],
-        "weapons": [],
+        "weapons": [
+          {
+            "id": "bo-staff",
+            "type": "weapon",
+            "name": "Imperial Bo Staff"
+          }
+        ],
         "organizations": [
           {
             "id": "white-lotus",
@@ -3806,8 +5769,26 @@ export const characters: Character[] = [
         "verificationStatus": "verified"
       }
     ],
-    "relationships": [],
-    "relatedCharacters": [],
+    "relationships": [
+      {
+        "type": "familyOf",
+        "label": "Keluarga",
+        "target": {
+          "id": "raiden",
+          "type": "character",
+          "name": "Raiden"
+        },
+        "context": "Seluruh Timeline",
+        "verificationStatus": "verified"
+      }
+    ],
+    "relatedCharacters": [
+      {
+        "id": "raiden",
+        "type": "character",
+        "name": "Raiden"
+      }
+    ],
     "sources": [
       {
         "id": "fandom-fujin",
@@ -3827,9 +5808,9 @@ export const characters: Character[] = [
     "summary": "Ambitious cryomancer apprentice of Sub-Zero whose hubris drove her to betray her master and convert herself into a cybernetic leader.",
     "biography": "Ambitious cryomancer apprentice of Sub-Zero whose hubris drove her to betray her master and convert herself into a cybernetic leader.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mk-deadly-alliance-2002",
       "type": "game",
-      "name": "Mortal Kombat (1992)"
+      "name": "Mortal Kombat: Deadly Alliance"
     },
     "species": {
       "id": "human",
@@ -3871,6 +5852,11 @@ export const characters: Character[] = [
             "id": "move-cyber-trap",
             "type": "ability",
             "name": "Cryo Floor Trap"
+          },
+          {
+            "id": "move-ice-freeze",
+            "type": "ability",
+            "name": "Deep Freeze"
           }
         ],
         "weapons": [
@@ -3915,9 +5901,20 @@ export const characters: Character[] = [
             "id": "move-cyber-trap",
             "type": "ability",
             "name": "Cryo Floor Trap"
+          },
+          {
+            "id": "move-ice-freeze",
+            "type": "ability",
+            "name": "Deep Freeze"
           }
         ],
-        "weapons": [],
+        "weapons": [
+          {
+            "id": "kori-blade",
+            "type": "weapon",
+            "name": "K\u014dri Blade"
+          }
+        ],
         "organizations": [
           {
             "id": "lin-kuei",
@@ -3939,14 +5936,25 @@ export const characters: Character[] = [
     ],
     "relationships": [
       {
-        "type": "enemyOf",
-        "label": "Musuh",
+        "type": "rivalOf",
+        "label": "Rival",
         "target": {
           "id": "sub-zero",
           "type": "character",
-          "name": "sub-zero"
+          "name": "Sub-Zero"
         },
-        "context": "Reboot Timeline",
+        "context": "3D Era & Reboot Timeline",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "mentorOf",
+        "label": "Murid",
+        "target": {
+          "id": "sub-zero",
+          "type": "character",
+          "name": "Sub-Zero"
+        },
+        "context": "Seluruh Timeline",
         "verificationStatus": "verified"
       }
     ],
@@ -3954,7 +5962,7 @@ export const characters: Character[] = [
       {
         "id": "sub-zero",
         "type": "character",
-        "name": "sub-zero"
+        "name": "Sub-Zero"
       }
     ],
     "sources": [
@@ -3968,7 +5976,7 @@ export const characters: Character[] = [
     ]
   },
   {
-    "id": "boraicho",
+    "id": "bo-rai-cho",
     "name": "Bo' Rai Cho",
     "aliases": [
       "The Drunken Master"
@@ -3976,9 +5984,9 @@ export const characters: Character[] = [
     "summary": "Jovial martial arts master from Outworld who trained Liu Kang, Kung Lao, and Shujinko in the legendary Drunken Fist style.",
     "biography": "Jovial martial arts master from Outworld who trained Liu Kang, Kung Lao, and Shujinko in the legendary Drunken Fist style.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mk-deadly-alliance-2002",
       "type": "game",
-      "name": "Mortal Kombat (1992)"
+      "name": "Mortal Kombat: Deadly Alliance"
     },
     "species": {
       "id": "human",
@@ -3991,20 +5999,20 @@ export const characters: Character[] = [
       "name": "Outworld"
     },
     "faction": "White Lotus Society",
-    "role": "Villain",
+    "role": "Hero",
     "popular": false,
     "image": {
       "assetId": "asset-boraicho-portrait",
       "assetURL": "/images/characters/boraicho.png",
       "assetType": "character_portrait",
-      "entityId": "boraicho",
+      "entityId": "bo-rai-cho",
       "rightsStatus": "approved",
       "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
       "alt": "Potret karakter resmi Bo' Rai Cho"
     },
     "versions": [
       {
-        "id": "boraicho-mk-deadly-alliance-2002",
+        "id": "bo-rai-cho-mk-deadly-alliance-2002",
         "label": "Mortal Kombat: Deadly Alliance",
         "gameId": "mk-deadly-alliance-2002",
         "gameTitle": "Mortal Kombat: Deadly Alliance",
@@ -4020,9 +6028,20 @@ export const characters: Character[] = [
             "id": "move-puke-puddle",
             "type": "ability",
             "name": "Hazardous Fluid Puddle"
+          },
+          {
+            "id": "move-ground-pound",
+            "type": "ability",
+            "name": "Ground Pound"
           }
         ],
-        "weapons": [],
+        "weapons": [
+          {
+            "id": "bo-staff",
+            "type": "weapon",
+            "name": "Imperial Bo Staff"
+          }
+        ],
         "organizations": [
           {
             "id": "white-lotus",
@@ -4034,7 +6053,7 @@ export const characters: Character[] = [
           "assetId": "asset-boraicho-portrait",
           "assetURL": "/images/characters/boraicho.png",
           "assetType": "character_portrait",
-          "entityId": "boraicho",
+          "entityId": "bo-rai-cho",
           "rightsStatus": "approved",
           "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
           "alt": "Potret karakter resmi Bo' Rai Cho"
@@ -4042,7 +6061,7 @@ export const characters: Character[] = [
         "verificationStatus": "verified"
       },
       {
-        "id": "boraicho-mkx-2015",
+        "id": "bo-rai-cho-mkx-2015",
         "label": "Mortal Kombat X",
         "gameId": "mkx-2015",
         "gameTitle": "Mortal Kombat X",
@@ -4053,9 +6072,25 @@ export const characters: Character[] = [
             "id": "move-drunken-fist",
             "type": "ability",
             "name": "Drunken Fist Roll"
+          },
+          {
+            "id": "move-puke-puddle",
+            "type": "ability",
+            "name": "Hazardous Fluid Puddle"
+          },
+          {
+            "id": "move-ground-pound",
+            "type": "ability",
+            "name": "Ground Pound"
           }
         ],
-        "weapons": [],
+        "weapons": [
+          {
+            "id": "bo-staff",
+            "type": "weapon",
+            "name": "Imperial Bo Staff"
+          }
+        ],
         "organizations": [
           {
             "id": "white-lotus",
@@ -4067,7 +6102,7 @@ export const characters: Character[] = [
           "assetId": "asset-boraicho-portrait",
           "assetURL": "/images/characters/boraicho.png",
           "assetType": "character_portrait",
-          "entityId": "boraicho",
+          "entityId": "bo-rai-cho",
           "rightsStatus": "approved",
           "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
           "alt": "Potret karakter resmi Bo' Rai Cho"
@@ -4077,27 +6112,43 @@ export const characters: Character[] = [
     ],
     "relationships": [
       {
-        "type": "alliedWith",
-        "label": "Sekutu",
+        "type": "mentorOf",
+        "label": "Mentor",
         "target": {
           "id": "liu-kang",
           "type": "character",
-          "name": "liu-kang"
+          "name": "Liu Kang"
         },
-        "context": "Original & Reboot Timelines",
+        "context": "Seluruh Timeline",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "mentorOf",
+        "label": "Mentor",
+        "target": {
+          "id": "kung-lao",
+          "type": "character",
+          "name": "Kung Lao"
+        },
+        "context": "Seluruh Timeline",
         "verificationStatus": "verified"
       }
     ],
     "relatedCharacters": [
       {
+        "id": "kung-lao",
+        "type": "character",
+        "name": "Kung-Lao"
+      },
+      {
         "id": "liu-kang",
         "type": "character",
-        "name": "liu-kang"
+        "name": "Liu-Kang"
       }
     ],
     "sources": [
       {
-        "id": "fandom-boraicho",
+        "id": "fandom-bo-rai-cho",
         "title": "Mortal Kombat Wiki \u2014 Bo' Rai Cho",
         "url": "https://mortalkombat.fandom.com/wiki/Bo%27_Rai_Cho",
         "sourceType": "community-wiki",
@@ -4106,7 +6157,7 @@ export const characters: Character[] = [
     ]
   },
   {
-    "id": "limei",
+    "id": "li-mei",
     "name": "Li Mei",
     "aliases": [
       "First Constable of Sun Do"
@@ -4114,9 +6165,9 @@ export const characters: Character[] = [
     "summary": "Noble Sun Do martial artist who fought to liberate her people from the Deadly Alliance, now serving as Chief Constable of the imperial capital.",
     "biography": "Noble Sun Do martial artist who fought to liberate her people from the Deadly Alliance, now serving as Chief Constable of the imperial capital.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mk-deadly-alliance-2002",
       "type": "game",
-      "name": "Mortal Kombat (1992)"
+      "name": "Mortal Kombat: Deadly Alliance"
     },
     "species": {
       "id": "human",
@@ -4128,21 +6179,21 @@ export const characters: Character[] = [
       "type": "location",
       "name": "Outworld"
     },
-    "faction": "Neutral",
-    "role": "Villain",
+    "faction": "The Umgadi",
+    "role": "Hero",
     "popular": false,
     "image": {
       "assetId": "asset-limei-portrait",
       "assetURL": "/images/characters/limei.png",
       "assetType": "character_portrait",
-      "entityId": "limei",
+      "entityId": "li-mei",
       "rightsStatus": "approved",
       "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
       "alt": "Potret karakter resmi Li Mei"
     },
     "versions": [
       {
-        "id": "limei-mk-deadly-alliance-2002",
+        "id": "li-mei-mk-deadly-alliance-2002",
         "label": "Mortal Kombat: Deadly Alliance",
         "gameId": "mk-deadly-alliance-2002",
         "gameTitle": "Mortal Kombat: Deadly Alliance",
@@ -4153,33 +6204,16 @@ export const characters: Character[] = [
             "id": "move-energy-spark",
             "type": "ability",
             "name": "Luminescent Spark Burst"
-          }
-        ],
-        "weapons": [],
-        "organizations": [],
-        "image": {
-          "assetId": "asset-limei-portrait",
-          "assetURL": "/images/characters/limei.png",
-          "assetType": "character_portrait",
-          "entityId": "limei",
-          "rightsStatus": "approved",
-          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
-          "alt": "Potret karakter resmi Li Mei"
-        },
-        "verificationStatus": "verified"
-      },
-      {
-        "id": "limei-mk1-2023",
-        "label": "Mortal Kombat 1 (2023)",
-        "gameId": "mk1-2023",
-        "gameTitle": "Mortal Kombat 1 (2023)",
-        "timelineId": "new-era",
-        "timelineName": "New Era",
-        "abilities": [
+          },
           {
-            "id": "move-energy-spark",
+            "id": "move-flying-kick",
             "type": "ability",
-            "name": "Luminescent Spark Burst"
+            "name": "Flying Dragon Kick"
+          },
+          {
+            "id": "move-wind-kick",
+            "type": "ability",
+            "name": "Tornado Gale Kick"
           }
         ],
         "weapons": [],
@@ -4194,7 +6228,50 @@ export const characters: Character[] = [
           "assetId": "asset-limei-portrait",
           "assetURL": "/images/characters/limei.png",
           "assetType": "character_portrait",
-          "entityId": "limei",
+          "entityId": "li-mei",
+          "rightsStatus": "approved",
+          "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
+          "alt": "Potret karakter resmi Li Mei"
+        },
+        "verificationStatus": "verified"
+      },
+      {
+        "id": "li-mei-mk1-2023",
+        "label": "Mortal Kombat 1 (2023)",
+        "gameId": "mk1-2023",
+        "gameTitle": "Mortal Kombat 1 (2023)",
+        "timelineId": "new-era",
+        "timelineName": "New Era",
+        "abilities": [
+          {
+            "id": "move-energy-spark",
+            "type": "ability",
+            "name": "Luminescent Spark Burst"
+          },
+          {
+            "id": "move-flying-kick",
+            "type": "ability",
+            "name": "Flying Dragon Kick"
+          },
+          {
+            "id": "move-wind-kick",
+            "type": "ability",
+            "name": "Tornado Gale Kick"
+          }
+        ],
+        "weapons": [],
+        "organizations": [
+          {
+            "id": "umgadi",
+            "type": "organization",
+            "name": "The Umgadi"
+          }
+        ],
+        "image": {
+          "assetId": "asset-limei-portrait",
+          "assetURL": "/images/characters/limei.png",
+          "assetType": "character_portrait",
+          "entityId": "li-mei",
           "rightsStatus": "approved",
           "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
           "alt": "Potret karakter resmi Li Mei"
@@ -4206,7 +6283,7 @@ export const characters: Character[] = [
     "relatedCharacters": [],
     "sources": [
       {
-        "id": "fandom-limei",
+        "id": "fandom-li-mei",
         "title": "Mortal Kombat Wiki \u2014 Li Mei",
         "url": "https://mortalkombat.fandom.com/wiki/Li_Mei",
         "sourceType": "community-wiki",
@@ -4223,9 +6300,9 @@ export const characters: Character[] = [
     "summary": "Edenian diplomat whose allegiance shifted during Shinnok's war; reimagined in the New Era as the disciplined leader of the royal Umgadi guard.",
     "biography": "Edenian diplomat whose allegiance shifted during Shinnok's war; reimagined in the New Era as the disciplined leader of the royal Umgadi guard.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mk4-1997",
       "type": "game",
-      "name": "Mortal Kombat (1992)"
+      "name": "Mortal Kombat 4"
     },
     "species": {
       "id": "human",
@@ -4237,7 +6314,7 @@ export const characters: Character[] = [
       "type": "location",
       "name": "Edenia"
     },
-    "faction": "Neutral",
+    "faction": "The Umgadi",
     "role": "Villain",
     "popular": false,
     "image": {
@@ -4257,7 +6334,23 @@ export const characters: Character[] = [
         "gameTitle": "Mortal Kombat 4",
         "timelineId": "original",
         "timelineName": "Original Timeline",
-        "abilities": [],
+        "abilities": [
+          {
+            "id": "move-surging-fire",
+            "type": "ability",
+            "name": "Surging Fireball"
+          },
+          {
+            "id": "move-split-flip-kick",
+            "type": "ability",
+            "name": "Split-Flip Kick"
+          },
+          {
+            "id": "move-tonfa-flurry",
+            "type": "ability",
+            "name": "Kobu Jutsu Tonfa Flurry"
+          }
+        ],
         "weapons": [
           {
             "id": "daggers-of-denial",
@@ -4265,7 +6358,13 @@ export const characters: Character[] = [
             "name": "Kobu Jutsu Tonfa Daggers"
           }
         ],
-        "organizations": [],
+        "organizations": [
+          {
+            "id": "umgadi",
+            "type": "organization",
+            "name": "The Umgadi"
+          }
+        ],
         "image": {
           "assetId": "asset-tanya-portrait",
           "assetURL": "/images/characters/tanya.png",
@@ -4284,7 +6383,23 @@ export const characters: Character[] = [
         "gameTitle": "Mortal Kombat 1 (2023)",
         "timelineId": "new-era",
         "timelineName": "New Era",
-        "abilities": [],
+        "abilities": [
+          {
+            "id": "move-surging-fire",
+            "type": "ability",
+            "name": "Surging Fireball"
+          },
+          {
+            "id": "move-split-flip-kick",
+            "type": "ability",
+            "name": "Split-Flip Kick"
+          },
+          {
+            "id": "move-tonfa-flurry",
+            "type": "ability",
+            "name": "Kobu Jutsu Tonfa Flurry"
+          }
+        ],
         "weapons": [
           {
             "id": "daggers-of-denial",
@@ -4320,7 +6435,7 @@ export const characters: Character[] = [
           "type": "character",
           "name": "Mileena"
         },
-        "context": "Reboot & New Era Timelines",
+        "context": "Reboot & New Era",
         "verificationStatus": "verified"
       }
     ],
@@ -4350,9 +6465,9 @@ export const characters: Character[] = [
     "summary": "Cleric from Chaosrealm who embraces bodily contortion, self-mutilation, and anarchy to dismantle rigid oppressive order across all realms.",
     "biography": "Cleric from Chaosrealm who embraces bodily contortion, self-mutilation, and anarchy to dismantle rigid oppressive order across all realms.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mk-deception-2004",
       "type": "game",
-      "name": "Mortal Kombat (1992)"
+      "name": "Mortal Kombat: Deception"
     },
     "species": {
       "id": "human",
@@ -4364,7 +6479,7 @@ export const characters: Character[] = [
       "type": "location",
       "name": "Chaosrealm"
     },
-    "faction": "Neutral",
+    "faction": "Independent / Outworld",
     "role": "Villain",
     "popular": false,
     "image": {
@@ -4389,9 +6504,25 @@ export const characters: Character[] = [
             "id": "move-bone-twist",
             "type": "ability",
             "name": "360 Torso Contortion"
+          },
+          {
+            "id": "move-blood-spit",
+            "type": "ability",
+            "name": "Hemomantic Blood Spit"
+          },
+          {
+            "id": "move-ground-burst",
+            "type": "ability",
+            "name": "Netherrealm Ground Eruption"
           }
         ],
-        "weapons": [],
+        "weapons": [
+          {
+            "id": "spiked-club",
+            "type": "weapon",
+            "name": "Spiked War Mace"
+          }
+        ],
         "organizations": [],
         "image": {
           "assetId": "asset-havik-portrait",
@@ -4416,9 +6547,25 @@ export const characters: Character[] = [
             "id": "move-bone-twist",
             "type": "ability",
             "name": "360 Torso Contortion"
+          },
+          {
+            "id": "move-blood-spit",
+            "type": "ability",
+            "name": "Hemomantic Blood Spit"
+          },
+          {
+            "id": "move-ground-burst",
+            "type": "ability",
+            "name": "Netherrealm Ground Eruption"
           }
         ],
-        "weapons": [],
+        "weapons": [
+          {
+            "id": "spiked-club",
+            "type": "weapon",
+            "name": "Spiked War Mace"
+          }
+        ],
         "organizations": [],
         "image": {
           "assetId": "asset-havik-portrait",
@@ -4432,8 +6579,26 @@ export const characters: Character[] = [
         "verificationStatus": "verified"
       }
     ],
-    "relationships": [],
-    "relatedCharacters": [],
+    "relationships": [
+      {
+        "type": "enemyOf",
+        "label": "Musuh",
+        "target": {
+          "id": "hotaru",
+          "type": "character",
+          "name": "Hotaru"
+        },
+        "context": "3D Era & New Era",
+        "verificationStatus": "verified"
+      }
+    ],
+    "relatedCharacters": [
+      {
+        "id": "hotaru",
+        "type": "character",
+        "name": "Hotaru"
+      }
+    ],
     "sources": [
       {
         "id": "fandom-havik",
@@ -4445,7 +6610,7 @@ export const characters: Character[] = [
     ]
   },
   {
-    "id": "cassiecage",
+    "id": "cassie-cage",
     "name": "Cassie Cage",
     "aliases": [
       "Commander Cassandra Cage"
@@ -4453,9 +6618,9 @@ export const characters: Character[] = [
     "summary": "Daughter of Johnny Cage and Sonya Blade, leading Earthrealm's new-generation strike team and inheriting her father's ancient green halo power.",
     "biography": "Daughter of Johnny Cage and Sonya Blade, leading Earthrealm's new-generation strike team and inheriting her father's ancient green halo power.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mkx-2015",
       "type": "game",
-      "name": "Mortal Kombat (1992)"
+      "name": "Mortal Kombat X"
     },
     "species": {
       "id": "human",
@@ -4468,20 +6633,20 @@ export const characters: Character[] = [
       "name": "Earthrealm"
     },
     "faction": "Special Forces",
-    "role": "Villain",
+    "role": "Hero",
     "popular": false,
     "image": {
       "assetId": "asset-cassiecage-portrait",
       "assetURL": "/images/characters/cassiecage.png",
       "assetType": "character_portrait",
-      "entityId": "cassiecage",
+      "entityId": "cassie-cage",
       "rightsStatus": "approved",
       "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
       "alt": "Potret karakter resmi Cassie Cage"
     },
     "versions": [
       {
-        "id": "cassiecage-mkx-2015",
+        "id": "cassie-cage-mkx-2015",
         "label": "Mortal Kombat X",
         "gameId": "mkx-2015",
         "gameTitle": "Mortal Kombat X",
@@ -4497,9 +6662,20 @@ export const characters: Character[] = [
             "id": "move-nut-punch",
             "type": "ability",
             "name": "Nut Punch"
+          },
+          {
+            "id": "move-revolver-quickdraw",
+            "type": "ability",
+            "name": "Sand Slam & Quickdraw"
           }
         ],
-        "weapons": [],
+        "weapons": [
+          {
+            "id": "dual-revolvers",
+            "type": "weapon",
+            "name": "Dual Revolvers"
+          }
+        ],
         "organizations": [
           {
             "id": "special-forces",
@@ -4511,7 +6687,7 @@ export const characters: Character[] = [
           "assetId": "asset-cassiecage-portrait",
           "assetURL": "/images/characters/cassiecage.png",
           "assetType": "character_portrait",
-          "entityId": "cassiecage",
+          "entityId": "cassie-cage",
           "rightsStatus": "approved",
           "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
           "alt": "Potret karakter resmi Cassie Cage"
@@ -4519,7 +6695,7 @@ export const characters: Character[] = [
         "verificationStatus": "verified"
       },
       {
-        "id": "cassiecage-mk11-2019",
+        "id": "cassie-cage-mk11-2019",
         "label": "Mortal Kombat 11",
         "gameId": "mk11-2019",
         "gameTitle": "Mortal Kombat 11",
@@ -4535,9 +6711,20 @@ export const characters: Character[] = [
             "id": "move-nut-punch",
             "type": "ability",
             "name": "Nut Punch"
+          },
+          {
+            "id": "move-revolver-quickdraw",
+            "type": "ability",
+            "name": "Sand Slam & Quickdraw"
           }
         ],
-        "weapons": [],
+        "weapons": [
+          {
+            "id": "dual-revolvers",
+            "type": "weapon",
+            "name": "Dual Revolvers"
+          }
+        ],
         "organizations": [
           {
             "id": "special-forces",
@@ -4549,7 +6736,7 @@ export const characters: Character[] = [
           "assetId": "asset-cassiecage-portrait",
           "assetURL": "/images/characters/cassiecage.png",
           "assetType": "character_portrait",
-          "entityId": "cassiecage",
+          "entityId": "cassie-cage",
           "rightsStatus": "approved",
           "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
           "alt": "Potret karakter resmi Cassie Cage"
@@ -4559,6 +6746,28 @@ export const characters: Character[] = [
     ],
     "relationships": [
       {
+        "type": "familyOf",
+        "label": "Keluarga",
+        "target": {
+          "id": "johnny-cage",
+          "type": "character",
+          "name": "Johnny Cage"
+        },
+        "context": "Reboot Timeline",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "familyOf",
+        "label": "Keluarga",
+        "target": {
+          "id": "sonya-blade",
+          "type": "character",
+          "name": "Sonya Blade"
+        },
+        "context": "Reboot Timeline",
+        "verificationStatus": "verified"
+      },
+      {
         "type": "enemyOf",
         "label": "Musuh",
         "target": {
@@ -4566,22 +6775,59 @@ export const characters: Character[] = [
           "type": "character",
           "name": "Shinnok"
         },
-        "context": "Reboot Timeline (MKX)",
+        "context": "Mortal Kombat X",
         "verificationStatus": "verified"
       },
       {
         "type": "alliedWith",
         "label": "Sekutu",
         "target": {
-          "id": "sonya-blade",
+          "id": "jacqui",
           "type": "character",
-          "name": "sonya-blade"
+          "name": "Jacqui Briggs"
+        },
+        "context": "Reboot Timeline",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "alliedWith",
+        "label": "Sekutu",
+        "target": {
+          "id": "takeda",
+          "type": "character",
+          "name": "Takeda Takahashi"
+        },
+        "context": "Reboot Timeline",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "alliedWith",
+        "label": "Sekutu",
+        "target": {
+          "id": "kung-jin",
+          "type": "character",
+          "name": "Kung Jin"
         },
         "context": "Reboot Timeline",
         "verificationStatus": "verified"
       }
     ],
     "relatedCharacters": [
+      {
+        "id": "jacqui",
+        "type": "character",
+        "name": "Jacqui Briggs"
+      },
+      {
+        "id": "johnny-cage",
+        "type": "character",
+        "name": "Johnny-Cage"
+      },
+      {
+        "id": "kung-jin",
+        "type": "character",
+        "name": "Kung-Jin"
+      },
       {
         "id": "shinnok",
         "type": "character",
@@ -4590,12 +6836,17 @@ export const characters: Character[] = [
       {
         "id": "sonya-blade",
         "type": "character",
-        "name": "sonya-blade"
+        "name": "Sonya-Blade"
+      },
+      {
+        "id": "takeda",
+        "type": "character",
+        "name": "Takeda Takahashi"
       }
     ],
     "sources": [
       {
-        "id": "fandom-cassiecage",
+        "id": "fandom-cassie-cage",
         "title": "Mortal Kombat Wiki \u2014 Cassie Cage",
         "url": "https://mortalkombat.fandom.com/wiki/Cassie_Cage",
         "sourceType": "community-wiki",
@@ -4604,7 +6855,7 @@ export const characters: Character[] = [
     ]
   },
   {
-    "id": "kotalkahn",
+    "id": "kotal-kahn",
     "name": "Kotal Kahn",
     "aliases": [
       "Ko'atal (Sun God)"
@@ -4612,9 +6863,9 @@ export const characters: Character[] = [
     "summary": "Osh-Tekk warrior and Sun God who deposed Mileena during the Outworld Civil War to become a pragmatic Emperor of Outworld.",
     "biography": "Osh-Tekk warrior and Sun God who deposed Mileena during the Outworld Civil War to become a pragmatic Emperor of Outworld.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mkx-2015",
       "type": "game",
-      "name": "Mortal Kombat (1992)"
+      "name": "Mortal Kombat X"
     },
     "species": {
       "id": "human",
@@ -4627,20 +6878,20 @@ export const characters: Character[] = [
       "name": "Outworld"
     },
     "faction": "Osh-Tekk Tribe",
-    "role": "Villain",
+    "role": "Antihero",
     "popular": false,
     "image": {
       "assetId": "asset-kotalkahn-portrait",
       "assetURL": "/images/characters/kotalkahn.png",
       "assetType": "character_portrait",
-      "entityId": "kotalkahn",
+      "entityId": "kotal-kahn",
       "rightsStatus": "approved",
       "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
       "alt": "Potret karakter resmi Kotal Kahn"
     },
     "versions": [
       {
-        "id": "kotalkahn-mkx-2015",
+        "id": "kotal-kahn-mkx-2015",
         "label": "Mortal Kombat X",
         "gameId": "mkx-2015",
         "gameTitle": "Mortal Kombat X",
@@ -4656,9 +6907,20 @@ export const characters: Character[] = [
             "id": "move-blood-tentacles",
             "type": "ability",
             "name": "Blood Tentacles"
+          },
+          {
+            "id": "move-blade-spark",
+            "type": "ability",
+            "name": "Tarkatan Blade Spark"
           }
         ],
-        "weapons": [],
+        "weapons": [
+          {
+            "id": "war-hammer",
+            "type": "weapon",
+            "name": "Wrath Hammer"
+          }
+        ],
         "organizations": [
           {
             "id": "osh-tekk",
@@ -4670,7 +6932,7 @@ export const characters: Character[] = [
           "assetId": "asset-kotalkahn-portrait",
           "assetURL": "/images/characters/kotalkahn.png",
           "assetType": "character_portrait",
-          "entityId": "kotalkahn",
+          "entityId": "kotal-kahn",
           "rightsStatus": "approved",
           "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
           "alt": "Potret karakter resmi Kotal Kahn"
@@ -4678,7 +6940,7 @@ export const characters: Character[] = [
         "verificationStatus": "verified"
       },
       {
-        "id": "kotalkahn-mk11-2019",
+        "id": "kotal-kahn-mk11-2019",
         "label": "Mortal Kombat 11",
         "gameId": "mk11-2019",
         "gameTitle": "Mortal Kombat 11",
@@ -4689,9 +6951,25 @@ export const characters: Character[] = [
             "id": "move-sun-ray",
             "type": "ability",
             "name": "Sun God's Ray"
+          },
+          {
+            "id": "move-blood-tentacles",
+            "type": "ability",
+            "name": "Blood Tentacles"
+          },
+          {
+            "id": "move-blade-spark",
+            "type": "ability",
+            "name": "Tarkatan Blade Spark"
           }
         ],
-        "weapons": [],
+        "weapons": [
+          {
+            "id": "war-hammer",
+            "type": "weapon",
+            "name": "Wrath Hammer"
+          }
+        ],
         "organizations": [
           {
             "id": "osh-tekk",
@@ -4703,7 +6981,7 @@ export const characters: Character[] = [
           "assetId": "asset-kotalkahn-portrait",
           "assetURL": "/images/characters/kotalkahn.png",
           "assetType": "character_portrait",
-          "entityId": "kotalkahn",
+          "entityId": "kotal-kahn",
           "rightsStatus": "approved",
           "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
           "alt": "Potret karakter resmi Kotal Kahn"
@@ -4720,11 +6998,27 @@ export const characters: Character[] = [
           "type": "character",
           "name": "Mileena"
         },
-        "context": "Reboot Timeline (Outworld Civil War)",
+        "context": "Mortal Kombat X",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "alliedWith",
+        "label": "Sekutu",
+        "target": {
+          "id": "erron-black",
+          "type": "character",
+          "name": "Erron Black"
+        },
+        "context": "Mortal Kombat X",
         "verificationStatus": "verified"
       }
     ],
     "relatedCharacters": [
+      {
+        "id": "erron-black",
+        "type": "character",
+        "name": "Erron-Black"
+      },
       {
         "id": "mileena",
         "type": "character",
@@ -4733,7 +7027,7 @@ export const characters: Character[] = [
     ],
     "sources": [
       {
-        "id": "fandom-kotalkahn",
+        "id": "fandom-kotal-kahn",
         "title": "Mortal Kombat Wiki \u2014 Kotal Kahn",
         "url": "https://mortalkombat.fandom.com/wiki/Kotal_Kahn",
         "sourceType": "community-wiki",
@@ -4742,7 +7036,7 @@ export const characters: Character[] = [
     ]
   },
   {
-    "id": "erronblack",
+    "id": "erron-black",
     "name": "Erron Black",
     "aliases": [
       "The Outworld Gunslinger"
@@ -4750,9 +7044,9 @@ export const characters: Character[] = [
     "summary": "Earthrealm 19th-century mercenary cowboy granted slowed aging by Shang Tsung, working as an Outworld gunslinger for highest bidder.",
     "biography": "Earthrealm 19th-century mercenary cowboy granted slowed aging by Shang Tsung, working as an Outworld gunslinger for highest bidder.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mkx-2015",
       "type": "game",
-      "name": "Mortal Kombat (1992)"
+      "name": "Mortal Kombat X"
     },
     "species": {
       "id": "human",
@@ -4765,20 +7059,20 @@ export const characters: Character[] = [
       "name": "Earthrealm"
     },
     "faction": "Black Dragon",
-    "role": "Villain",
+    "role": "Antihero",
     "popular": false,
     "image": {
       "assetId": "asset-erronblack-portrait",
       "assetURL": "/images/characters/erronblack.png",
       "assetType": "character_portrait",
-      "entityId": "erronblack",
+      "entityId": "erron-black",
       "rightsStatus": "approved",
       "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
       "alt": "Potret karakter resmi Erron Black"
     },
     "versions": [
       {
-        "id": "erronblack-mkx-2015",
+        "id": "erron-black-mkx-2015",
         "label": "Mortal Kombat X",
         "gameId": "mkx-2015",
         "gameTitle": "Mortal Kombat X",
@@ -4789,6 +7083,16 @@ export const characters: Character[] = [
             "id": "move-revolver-quickdraw",
             "type": "ability",
             "name": "Sand Slam & Quickdraw"
+          },
+          {
+            "id": "move-grenade-toss",
+            "type": "ability",
+            "name": "High/Low Grenade Toss"
+          },
+          {
+            "id": "move-acid-spit",
+            "type": "ability",
+            "name": "Corrosive Acid Spit"
           }
         ],
         "weapons": [
@@ -4809,7 +7113,7 @@ export const characters: Character[] = [
           "assetId": "asset-erronblack-portrait",
           "assetURL": "/images/characters/erronblack.png",
           "assetType": "character_portrait",
-          "entityId": "erronblack",
+          "entityId": "erron-black",
           "rightsStatus": "approved",
           "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
           "alt": "Potret karakter resmi Erron Black"
@@ -4817,7 +7121,7 @@ export const characters: Character[] = [
         "verificationStatus": "verified"
       },
       {
-        "id": "erronblack-mk11-2019",
+        "id": "erron-black-mk11-2019",
         "label": "Mortal Kombat 11",
         "gameId": "mk11-2019",
         "gameTitle": "Mortal Kombat 11",
@@ -4828,6 +7132,16 @@ export const characters: Character[] = [
             "id": "move-revolver-quickdraw",
             "type": "ability",
             "name": "Sand Slam & Quickdraw"
+          },
+          {
+            "id": "move-grenade-toss",
+            "type": "ability",
+            "name": "High/Low Grenade Toss"
+          },
+          {
+            "id": "move-acid-spit",
+            "type": "ability",
+            "name": "Corrosive Acid Spit"
           }
         ],
         "weapons": [
@@ -4848,7 +7162,7 @@ export const characters: Character[] = [
           "assetId": "asset-erronblack-portrait",
           "assetURL": "/images/characters/erronblack.png",
           "assetType": "character_portrait",
-          "entityId": "erronblack",
+          "entityId": "erron-black",
           "rightsStatus": "approved",
           "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
           "alt": "Potret karakter resmi Erron Black"
@@ -4856,11 +7170,29 @@ export const characters: Character[] = [
         "verificationStatus": "verified"
       }
     ],
-    "relationships": [],
-    "relatedCharacters": [],
+    "relationships": [
+      {
+        "type": "alliedWith",
+        "label": "Sekutu",
+        "target": {
+          "id": "kotal-kahn",
+          "type": "character",
+          "name": "Kotal Kahn"
+        },
+        "context": "Mortal Kombat X",
+        "verificationStatus": "verified"
+      }
+    ],
+    "relatedCharacters": [
+      {
+        "id": "kotal-kahn",
+        "type": "character",
+        "name": "Kotal-Kahn"
+      }
+    ],
     "sources": [
       {
-        "id": "fandom-erronblack",
+        "id": "fandom-erron-black",
         "title": "Mortal Kombat Wiki \u2014 Erron Black",
         "url": "https://mortalkombat.fandom.com/wiki/Erron_Black",
         "sourceType": "community-wiki",
@@ -4877,9 +7209,9 @@ export const characters: Character[] = [
     "summary": "Stealth assassin and steadfast childhood friend of Kitana, renowned for her blazing staff combat and loyalty to Edenia.",
     "biography": "Stealth assassin and steadfast childhood friend of Kitana, renowned for her blazing staff combat and loyalty to Edenia.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mk2-1993",
       "type": "game",
-      "name": "Mortal Kombat (1992)"
+      "name": "Mortal Kombat II"
     },
     "species": {
       "id": "human",
@@ -4891,8 +7223,8 @@ export const characters: Character[] = [
       "type": "location",
       "name": "Edenia"
     },
-    "faction": "Neutral",
-    "role": "Villain",
+    "faction": "Independent / Outworld",
+    "role": "Hero",
     "popular": false,
     "image": {
       "assetId": "asset-jade-portrait",
@@ -4964,6 +7296,11 @@ export const characters: Character[] = [
             "id": "move-tribomerang",
             "type": "ability",
             "name": "Tribomerang Throw"
+          },
+          {
+            "id": "fatality-bow-before-me",
+            "type": "ability",
+            "name": "Fatality: Bow Before Me"
           }
         ],
         "weapons": [
@@ -4995,7 +7332,7 @@ export const characters: Character[] = [
           "type": "character",
           "name": "Kitana"
         },
-        "context": "All Timelines",
+        "context": "Seluruh Timeline",
         "verificationStatus": "verified"
       }
     ],
@@ -5025,9 +7362,9 @@ export const characters: Character[] = [
     "summary": "Former Black Dragon enforcer equipped with artificial respirators and superhuman running speed following severe burns from Shao Kahn's extermination squads.",
     "biography": "Former Black Dragon enforcer equipped with artificial respirators and superhuman running speed following severe burns from Shao Kahn's extermination squads.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mk3-1995",
       "type": "game",
-      "name": "Mortal Kombat (1992)"
+      "name": "Mortal Kombat 3"
     },
     "species": {
       "id": "human",
@@ -5040,7 +7377,7 @@ export const characters: Character[] = [
       "name": "Earthrealm"
     },
     "faction": "Black Dragon",
-    "role": "Villain",
+    "role": "Antihero",
     "popular": false,
     "image": {
       "assetId": "asset-kabal-portrait",
@@ -5118,6 +7455,11 @@ export const characters: Character[] = [
             "id": "move-buzzsaw",
             "type": "ability",
             "name": "Buzzsaw Roll"
+          },
+          {
+            "id": "fatality-road-rash",
+            "type": "ability",
+            "name": "Fatality: Road Rash"
           }
         ],
         "weapons": [
@@ -5151,19 +7493,19 @@ export const characters: Character[] = [
         "type": "alliedWith",
         "label": "Sekutu",
         "target": {
-          "id": "stryker",
+          "id": "kurtis-stryker",
           "type": "character",
           "name": "Kurtis Stryker"
         },
-        "context": "Reboot Timeline (MK9)",
+        "context": "Mortal Kombat (2011)",
         "verificationStatus": "verified"
       }
     ],
     "relatedCharacters": [
       {
-        "id": "stryker",
+        "id": "kurtis-stryker",
         "type": "character",
-        "name": "Kurtis Stryker"
+        "name": "Kurtis-Stryker"
       }
     ],
     "sources": [
@@ -5177,7 +7519,7 @@ export const characters: Character[] = [
     ]
   },
   {
-    "id": "stryker",
+    "id": "kurtis-stryker",
     "name": "Kurtis Stryker",
     "aliases": [
       "Riot Control Officer"
@@ -5185,9 +7527,9 @@ export const characters: Character[] = [
     "summary": "Earthrealm riot police leader thrust into the invasion of Earthrealm, defending humanity using batons, grenades, and standard issue firepower.",
     "biography": "Earthrealm riot police leader thrust into the invasion of Earthrealm, defending humanity using batons, grenades, and standard issue firepower.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mk3-1995",
       "type": "game",
-      "name": "Mortal Kombat (1992)"
+      "name": "Mortal Kombat 3"
     },
     "species": {
       "id": "human",
@@ -5200,20 +7542,20 @@ export const characters: Character[] = [
       "name": "Earthrealm"
     },
     "faction": "Special Forces",
-    "role": "Villain",
+    "role": "Hero",
     "popular": false,
     "image": {
       "assetId": "asset-stryker-portrait",
       "assetURL": "/images/characters/stryker.png",
       "assetType": "character_portrait",
-      "entityId": "stryker",
+      "entityId": "kurtis-stryker",
       "rightsStatus": "approved",
       "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
       "alt": "Potret karakter resmi Kurtis Stryker"
     },
     "versions": [
       {
-        "id": "stryker-mk3-1995",
+        "id": "kurtis-stryker-mk3-1995",
         "label": "Mortal Kombat 3",
         "gameId": "mk3-1995",
         "gameTitle": "Mortal Kombat 3",
@@ -5254,7 +7596,7 @@ export const characters: Character[] = [
           "assetId": "asset-stryker-portrait",
           "assetURL": "/images/characters/stryker.png",
           "assetType": "character_portrait",
-          "entityId": "stryker",
+          "entityId": "kurtis-stryker",
           "rightsStatus": "approved",
           "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
           "alt": "Potret karakter resmi Kurtis Stryker"
@@ -5262,7 +7604,7 @@ export const characters: Character[] = [
         "verificationStatus": "verified"
       },
       {
-        "id": "stryker-mk9-2011",
+        "id": "kurtis-stryker-mk9-2011",
         "label": "Mortal Kombat (2011)",
         "gameId": "mk9-2011",
         "gameTitle": "Mortal Kombat (2011)",
@@ -5278,6 +7620,11 @@ export const characters: Character[] = [
             "id": "move-grenade-toss",
             "type": "ability",
             "name": "High/Low Grenade Toss"
+          },
+          {
+            "id": "fatality-time-served",
+            "type": "ability",
+            "name": "Fatality: Time Served"
           }
         ],
         "weapons": [
@@ -5298,7 +7645,7 @@ export const characters: Character[] = [
           "assetId": "asset-stryker-portrait",
           "assetURL": "/images/characters/stryker.png",
           "assetType": "character_portrait",
-          "entityId": "stryker",
+          "entityId": "kurtis-stryker",
           "rightsStatus": "approved",
           "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
           "alt": "Potret karakter resmi Kurtis Stryker"
@@ -5306,11 +7653,29 @@ export const characters: Character[] = [
         "verificationStatus": "verified"
       }
     ],
-    "relationships": [],
-    "relatedCharacters": [],
+    "relationships": [
+      {
+        "type": "alliedWith",
+        "label": "Sekutu",
+        "target": {
+          "id": "kabal",
+          "type": "character",
+          "name": "Kabal"
+        },
+        "context": "Mortal Kombat (2011)",
+        "verificationStatus": "verified"
+      }
+    ],
+    "relatedCharacters": [
+      {
+        "id": "kabal",
+        "type": "character",
+        "name": "Kabal"
+      }
+    ],
     "sources": [
       {
-        "id": "fandom-stryker",
+        "id": "fandom-kurtis-stryker",
         "title": "Mortal Kombat Wiki \u2014 Kurtis Stryker",
         "url": "https://mortalkombat.fandom.com/wiki/Kurtis_Stryker",
         "sourceType": "community-wiki",
@@ -5327,9 +7692,9 @@ export const characters: Character[] = [
     "summary": "Noble Draco Shokan warrior appointed by Shao Kahn as personal bodyguard to Queen Sindel, later becoming Queen of the Shokan people.",
     "biography": "Noble Draco Shokan warrior appointed by Shao Kahn as personal bodyguard to Queen Sindel, later becoming Queen of the Shokan people.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mk3-1995",
       "type": "game",
-      "name": "Mortal Kombat (1992)"
+      "name": "Mortal Kombat 3"
     },
     "species": {
       "id": "human",
@@ -5341,8 +7706,8 @@ export const characters: Character[] = [
       "type": "location",
       "name": "Outworld"
     },
-    "faction": "Neutral",
-    "role": "Villain",
+    "faction": "Independent / Outworld",
+    "role": "Antihero",
     "popular": false,
     "image": {
       "assetId": "asset-sheeva-portrait",
@@ -5409,6 +7774,16 @@ export const characters: Character[] = [
             "id": "move-teleport-stomp",
             "type": "ability",
             "name": "Shokan Drop Stomp"
+          },
+          {
+            "id": "move-untranslatable-rage",
+            "type": "ability",
+            "name": "Untranslatable Rage"
+          },
+          {
+            "id": "fatality-spine-ripper",
+            "type": "ability",
+            "name": "Fatality: Lend a Hand"
           }
         ],
         "weapons": [
@@ -5440,7 +7815,7 @@ export const characters: Character[] = [
           "type": "character",
           "name": "Sindel"
         },
-        "context": "Classic & Reboot Timelines",
+        "context": "Original & Reboot Timeline",
         "verificationStatus": "verified"
       }
     ],
@@ -5470,9 +7845,9 @@ export const characters: Character[] = [
     "summary": "Matoka tribal shaman and historian chosen by the Great Spirit to defend Earthrealm using spirit weapons and sacred communion.",
     "biography": "Matoka tribal shaman and historian chosen by the Great Spirit to defend Earthrealm using spirit weapons and sacred communion.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mk3-1995",
       "type": "game",
-      "name": "Mortal Kombat (1992)"
+      "name": "Mortal Kombat 3"
     },
     "species": {
       "id": "human",
@@ -5484,8 +7859,8 @@ export const characters: Character[] = [
       "type": "location",
       "name": "Earthrealm"
     },
-    "faction": "Neutral",
-    "role": "Villain",
+    "faction": "Independent / Outworld",
+    "role": "Hero",
     "popular": false,
     "image": {
       "assetId": "asset-nightwolf-portrait",
@@ -5557,6 +7932,11 @@ export const characters: Character[] = [
             "id": "move-rhino-charge",
             "type": "ability",
             "name": "Rhino Charge"
+          },
+          {
+            "id": "fatality-war-dance",
+            "type": "ability",
+            "name": "Fatality: Kompshina Calling"
           }
         ],
         "weapons": [
@@ -5588,7 +7968,7 @@ export const characters: Character[] = [
           "type": "character",
           "name": "Raiden"
         },
-        "context": "All Timelines",
+        "context": "Seluruh Timeline",
         "verificationStatus": "verified"
       }
     ],
@@ -5618,9 +7998,9 @@ export const characters: Character[] = [
     "summary": "Ruthless sentient insectoid swarm entity seeking solely the survival and propagation of the Kytinn species above all empire allegiances.",
     "biography": "Ruthless sentient insectoid swarm entity seeking solely the survival and propagation of the Kytinn species above all empire allegiances.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mkx-2015",
       "type": "game",
-      "name": "Mortal Kombat (1992)"
+      "name": "Mortal Kombat X"
     },
     "species": {
       "id": "human",
@@ -5632,7 +8012,7 @@ export const characters: Character[] = [
       "type": "location",
       "name": "Outworld"
     },
-    "faction": "Neutral",
+    "faction": "Independent / Outworld",
     "role": "Villain",
     "popular": false,
     "image": {
@@ -5705,6 +8085,11 @@ export const characters: Character[] = [
             "id": "move-bug-spray",
             "type": "ability",
             "name": "Spittle Spray"
+          },
+          {
+            "id": "fatality-infestation",
+            "type": "ability",
+            "name": "Fatality: Bug Me"
           }
         ],
         "weapons": [
@@ -5736,7 +8121,18 @@ export const characters: Character[] = [
           "type": "character",
           "name": "Mileena"
         },
-        "context": "Reboot Timeline (MKX)",
+        "context": "Mortal Kombat X",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "enemyOf",
+        "label": "Musuh",
+        "target": {
+          "id": "baraka",
+          "type": "character",
+          "name": "Baraka"
+        },
+        "context": "Mortal Kombat X",
         "verificationStatus": "verified"
       },
       {
@@ -5747,11 +8143,16 @@ export const characters: Character[] = [
           "type": "character",
           "name": "Scorpion"
         },
-        "context": "Reboot Timeline (MK11)",
+        "context": "Mortal Kombat 11",
         "verificationStatus": "verified"
       }
     ],
     "relatedCharacters": [
+      {
+        "id": "baraka",
+        "type": "character",
+        "name": "Baraka"
+      },
       {
         "id": "mileena",
         "type": "character",
@@ -5782,9 +8183,9 @@ export const characters: Character[] = [
     "summary": "Junior Olympic kickboxer and Special Forces operative fighting in high-tech combat gauntlets alongside her father Jax.",
     "biography": "Junior Olympic kickboxer and Special Forces operative fighting in high-tech combat gauntlets alongside her father Jax.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mkx-2015",
       "type": "game",
-      "name": "Mortal Kombat (1992)"
+      "name": "Mortal Kombat X"
     },
     "species": {
       "id": "human",
@@ -5797,7 +8198,7 @@ export const characters: Character[] = [
       "name": "Earthrealm"
     },
     "faction": "Special Forces",
-    "role": "Villain",
+    "role": "Hero",
     "popular": false,
     "image": {
       "assetId": "asset-jacqui-portrait",
@@ -5833,7 +8234,13 @@ export const characters: Character[] = [
             "name": "Fatality: Spider Mines"
           }
         ],
-        "weapons": [],
+        "weapons": [
+          {
+            "id": "cybernetic-arms",
+            "type": "weapon",
+            "name": "Bionic Cyber Arms"
+          }
+        ],
         "organizations": [
           {
             "id": "special-forces",
@@ -5869,9 +8276,20 @@ export const characters: Character[] = [
             "id": "move-shotgun-blast",
             "type": "ability",
             "name": "Gauntlet Shotgun Blast"
+          },
+          {
+            "id": "fatality-spider-mines",
+            "type": "ability",
+            "name": "Fatality: Spider Mines"
           }
         ],
-        "weapons": [],
+        "weapons": [
+          {
+            "id": "cybernetic-arms",
+            "type": "weapon",
+            "name": "Bionic Cyber Arms"
+          }
+        ],
         "organizations": [
           {
             "id": "special-forces",
@@ -5893,10 +8311,21 @@ export const characters: Character[] = [
     ],
     "relationships": [
       {
+        "type": "familyOf",
+        "label": "Keluarga",
+        "target": {
+          "id": "jax-briggs",
+          "type": "character",
+          "name": "Jax-Briggs"
+        },
+        "context": "Reboot Timeline",
+        "verificationStatus": "verified"
+      },
+      {
         "type": "alliedWith",
         "label": "Sekutu",
         "target": {
-          "id": "cassiecage",
+          "id": "cassie-cage",
           "type": "character",
           "name": "Cassie Cage"
         },
@@ -5906,9 +8335,14 @@ export const characters: Character[] = [
     ],
     "relatedCharacters": [
       {
-        "id": "cassiecage",
+        "id": "cassie-cage",
         "type": "character",
-        "name": "Cassie Cage"
+        "name": "Cassie-Cage"
+      },
+      {
+        "id": "jax-briggs",
+        "type": "character",
+        "name": "Jax-Briggs"
       }
     ],
     "sources": [
@@ -5930,9 +8364,9 @@ export const characters: Character[] = [
     "summary": "Son of Kenshi trained from boyhood by Grandmaster Hanzo Hasashi in Shirai Ryu martial arts and telepathic sensory control.",
     "biography": "Son of Kenshi trained from boyhood by Grandmaster Hanzo Hasashi in Shirai Ryu martial arts and telepathic sensory control.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mkx-2015",
       "type": "game",
-      "name": "Mortal Kombat (1992)"
+      "name": "Mortal Kombat X"
     },
     "species": {
       "id": "human",
@@ -5945,7 +8379,7 @@ export const characters: Character[] = [
       "name": "Earthrealm"
     },
     "faction": "Shirai Ryu",
-    "role": "Villain",
+    "role": "Hero",
     "popular": false,
     "image": {
       "assetId": "asset-takeda-portrait",
@@ -6009,8 +8443,8 @@ export const characters: Character[] = [
     ],
     "relationships": [
       {
-        "type": "alliedWith",
-        "label": "Sekutu",
+        "type": "familyOf",
+        "label": "Keluarga",
         "target": {
           "id": "kenshi",
           "type": "character",
@@ -6018,13 +8452,45 @@ export const characters: Character[] = [
         },
         "context": "Reboot Timeline",
         "verificationStatus": "verified"
+      },
+      {
+        "type": "mentorOf",
+        "label": "Murid",
+        "target": {
+          "id": "scorpion",
+          "type": "character",
+          "name": "Scorpion"
+        },
+        "context": "Reboot Timeline",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "alliedWith",
+        "label": "Sekutu",
+        "target": {
+          "id": "cassie-cage",
+          "type": "character",
+          "name": "Cassie Cage"
+        },
+        "context": "Reboot Timeline",
+        "verificationStatus": "verified"
       }
     ],
     "relatedCharacters": [
       {
+        "id": "cassie-cage",
+        "type": "character",
+        "name": "Cassie-Cage"
+      },
+      {
         "id": "kenshi",
         "type": "character",
         "name": "Kenshi"
+      },
+      {
+        "id": "scorpion",
+        "type": "character",
+        "name": "Scorpion"
       }
     ],
     "sources": [
@@ -6038,7 +8504,7 @@ export const characters: Character[] = [
     ]
   },
   {
-    "id": "kungjin",
+    "id": "kung-jin",
     "name": "Kung Jin",
     "aliases": [
       "Shaolin Archer"
@@ -6046,9 +8512,9 @@ export const characters: Character[] = [
     "summary": "Cousin of Kung Lao and reformed thief turned Shaolin archer recruited into Cassie Cage's Special Forces tactical unit.",
     "biography": "Cousin of Kung Lao and reformed thief turned Shaolin archer recruited into Cassie Cage's Special Forces tactical unit.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mkx-2015",
       "type": "game",
-      "name": "Mortal Kombat (1992)"
+      "name": "Mortal Kombat X"
     },
     "species": {
       "id": "human",
@@ -6060,21 +8526,21 @@ export const characters: Character[] = [
       "type": "location",
       "name": "Earthrealm"
     },
-    "faction": "Special Forces",
-    "role": "Villain",
+    "faction": "White Lotus Society",
+    "role": "Hero",
     "popular": false,
     "image": {
       "assetId": "asset-kungjin-portrait",
       "assetURL": "/images/characters/kungjin.png",
       "assetType": "character_portrait",
-      "entityId": "kungjin",
+      "entityId": "kung-jin",
       "rightsStatus": "approved",
       "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
       "alt": "Potret karakter resmi Kung Jin"
     },
     "versions": [
       {
-        "id": "kungjin-mkx-2015",
+        "id": "kung-jin-mkx-2015",
         "label": "Mortal Kombat X",
         "gameId": "mkx-2015",
         "gameTitle": "Mortal Kombat X",
@@ -6106,16 +8572,16 @@ export const characters: Character[] = [
         ],
         "organizations": [
           {
-            "id": "special-forces",
+            "id": "white-lotus",
             "type": "organization",
-            "name": "Special Forces"
+            "name": "White Lotus Society"
           }
         ],
         "image": {
           "assetId": "asset-kungjin-portrait",
           "assetURL": "/images/characters/kungjin.png",
           "assetType": "character_portrait",
-          "entityId": "kungjin",
+          "entityId": "kung-jin",
           "rightsStatus": "approved",
           "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
           "alt": "Potret karakter resmi Kung Jin"
@@ -6125,12 +8591,23 @@ export const characters: Character[] = [
     ],
     "relationships": [
       {
-        "type": "alliedWith",
-        "label": "Sekutu",
+        "type": "familyOf",
+        "label": "Keluarga",
         "target": {
           "id": "kung-lao",
           "type": "character",
-          "name": "kung-lao"
+          "name": "Kung Lao"
+        },
+        "context": "Reboot Timeline",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "alliedWith",
+        "label": "Sekutu",
+        "target": {
+          "id": "cassie-cage",
+          "type": "character",
+          "name": "Cassie Cage"
         },
         "context": "Reboot Timeline",
         "verificationStatus": "verified"
@@ -6138,14 +8615,19 @@ export const characters: Character[] = [
     ],
     "relatedCharacters": [
       {
+        "id": "cassie-cage",
+        "type": "character",
+        "name": "Cassie-Cage"
+      },
+      {
         "id": "kung-lao",
         "type": "character",
-        "name": "kung-lao"
+        "name": "Kung-Lao"
       }
     ],
     "sources": [
       {
-        "id": "fandom-kungjin",
+        "id": "fandom-kung-jin",
         "title": "Mortal Kombat Wiki \u2014 Kung Jin",
         "url": "https://mortalkombat.fandom.com/wiki/Kung_Jin",
         "sourceType": "community-wiki",
@@ -6162,9 +8644,9 @@ export const characters: Character[] = [
     "summary": "Daughter of Kronika and sister to Shinnok, manipulating earth, water, fire, and air while torn between familial duty and universal righteousness.",
     "biography": "Daughter of Kronika and sister to Shinnok, manipulating earth, water, fire, and air while torn between familial duty and universal righteousness.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mk11-2019",
       "type": "game",
-      "name": "Mortal Kombat (1992)"
+      "name": "Mortal Kombat 11"
     },
     "species": {
       "id": "human",
@@ -6176,7 +8658,7 @@ export const characters: Character[] = [
       "type": "location",
       "name": "Earthrealm"
     },
-    "faction": "Neutral",
+    "faction": "Independent / Outworld",
     "role": "Villain",
     "popular": false,
     "image": {
@@ -6229,12 +8711,23 @@ export const characters: Character[] = [
     ],
     "relationships": [
       {
-        "type": "alliedWith",
-        "label": "Sekutu",
+        "type": "familyOf",
+        "label": "Keluarga",
         "target": {
           "id": "kronika",
           "type": "character",
           "name": "Kronika"
+        },
+        "context": "Reboot Timeline (MK11)",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "familyOf",
+        "label": "Keluarga",
+        "target": {
+          "id": "shinnok",
+          "type": "character",
+          "name": "Shinnok"
         },
         "context": "Reboot Timeline (MK11)",
         "verificationStatus": "verified"
@@ -6245,6 +8738,11 @@ export const characters: Character[] = [
         "id": "kronika",
         "type": "character",
         "name": "Kronika"
+      },
+      {
+        "id": "shinnok",
+        "type": "character",
+        "name": "Shinnok"
       }
     ],
     "sources": [
@@ -6266,9 +8764,9 @@ export const characters: Character[] = [
     "summary": "Six-armed Naknada extortionist who amassed wealth and stolen relics across the realms in unwavering service to Shao Kahn.",
     "biography": "Six-armed Naknada extortionist who amassed wealth and stolen relics across the realms in unwavering service to Shao Kahn.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mk11-2019",
       "type": "game",
-      "name": "Mortal Kombat (1992)"
+      "name": "Mortal Kombat 11"
     },
     "species": {
       "id": "human",
@@ -6280,7 +8778,7 @@ export const characters: Character[] = [
       "type": "location",
       "name": "Outworld"
     },
-    "faction": "Neutral",
+    "faction": "Independent / Outworld",
     "role": "Villain",
     "popular": false,
     "image": {
@@ -6317,7 +8815,13 @@ export const characters: Character[] = [
             "name": "Fatality: For the Kollection"
           }
         ],
-        "weapons": [],
+        "weapons": [
+          {
+            "id": "spiked-club",
+            "type": "weapon",
+            "name": "Spiked War Mace"
+          }
+        ],
         "organizations": [],
         "image": {
           "assetId": "asset-kollector-portrait",
@@ -6352,9 +8856,9 @@ export const characters: Character[] = [
     "summary": "Ancient colossal Dragon King who ruled Outworld with an undefeatable army before being poisoned by Shao Kahn; returned by manipulating Shujinko.",
     "biography": "Ancient colossal Dragon King who ruled Outworld with an undefeatable army before being poisoned by Shao Kahn; returned by manipulating Shujinko.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mk-deception-2004",
       "type": "game",
-      "name": "Mortal Kombat (1992)"
+      "name": "Mortal Kombat: Deception"
     },
     "species": {
       "id": "human",
@@ -6366,7 +8870,7 @@ export const characters: Character[] = [
       "type": "location",
       "name": "Outworld"
     },
-    "faction": "Neutral",
+    "faction": "Independent / Outworld",
     "role": "Villain",
     "popular": false,
     "image": {
@@ -6396,9 +8900,20 @@ export const characters: Character[] = [
             "id": "move-dragon-slam",
             "type": "ability",
             "name": "Titanic Dragon Slam"
+          },
+          {
+            "id": "necromancy",
+            "type": "ability",
+            "name": "Necromancy"
           }
         ],
-        "weapons": [],
+        "weapons": [
+          {
+            "id": "dragon-blade",
+            "type": "weapon",
+            "name": "Kamidogu Dragon Blade"
+          }
+        ],
         "organizations": [],
         "image": {
           "assetId": "asset-onaga-portrait",
@@ -6423,9 +8938,25 @@ export const characters: Character[] = [
             "id": "move-dragon-breath",
             "type": "ability",
             "name": "Dragon King Fire Breath"
+          },
+          {
+            "id": "move-dragon-slam",
+            "type": "ability",
+            "name": "Titanic Dragon Slam"
+          },
+          {
+            "id": "necromancy",
+            "type": "ability",
+            "name": "Necromancy"
           }
         ],
-        "weapons": [],
+        "weapons": [
+          {
+            "id": "dragon-blade",
+            "type": "weapon",
+            "name": "Kamidogu Dragon Blade"
+          }
+        ],
         "organizations": [],
         "image": {
           "assetId": "asset-onaga-portrait",
@@ -6446,9 +8977,20 @@ export const characters: Character[] = [
         "target": {
           "id": "shao-kahn",
           "type": "character",
-          "name": "shao-kahn"
+          "name": "Shao Kahn"
         },
-        "context": "Original Timeline",
+        "context": "3D Era Timeline",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "enemyOf",
+        "label": "Musuh",
+        "target": {
+          "id": "shujinko",
+          "type": "character",
+          "name": "Shujinko"
+        },
+        "context": "Mortal Kombat: Deception",
         "verificationStatus": "verified"
       }
     ],
@@ -6456,7 +8998,12 @@ export const characters: Character[] = [
       {
         "id": "shao-kahn",
         "type": "character",
-        "name": "shao-kahn"
+        "name": "Shao-Kahn"
+      },
+      {
+        "id": "shujinko",
+        "type": "character",
+        "name": "Shujinko"
       }
     ],
     "sources": [
@@ -6478,9 +9025,9 @@ export const characters: Character[] = [
     "summary": "Earthrealm warrior who spent decades questing to gather the Kamidogu for the entity Damashi, only to realize he had been manipulated into resurrecting Onaga.",
     "biography": "Earthrealm warrior who spent decades questing to gather the Kamidogu for the entity Damashi, only to realize he had been manipulated into resurrecting Onaga.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mk-deception-2004",
       "type": "game",
-      "name": "Mortal Kombat (1992)"
+      "name": "Mortal Kombat: Deception"
     },
     "species": {
       "id": "human",
@@ -6493,7 +9040,7 @@ export const characters: Character[] = [
       "name": "Earthrealm"
     },
     "faction": "White Lotus Society",
-    "role": "Villain",
+    "role": "Hero",
     "popular": false,
     "image": {
       "assetId": "asset-shujinko-portrait",
@@ -6519,12 +9066,28 @@ export const characters: Character[] = [
             "name": "Ape Mimicry"
           },
           {
+            "id": "move-spear",
+            "type": "ability",
+            "name": "Kunai Spear (Get Over Here!)"
+          },
+          {
+            "id": "move-ice-freeze",
+            "type": "ability",
+            "name": "Deep Freeze"
+          },
+          {
             "id": "fatality-face-crusher",
             "type": "ability",
             "name": "Fatality: Five Point Strike"
           }
         ],
-        "weapons": [],
+        "weapons": [
+          {
+            "id": "dragon-blade",
+            "type": "weapon",
+            "name": "Kamidogu Dragon Blade"
+          }
+        ],
         "organizations": [
           {
             "id": "white-lotus",
@@ -6555,9 +9118,30 @@ export const characters: Character[] = [
             "id": "move-mimic-mastery",
             "type": "ability",
             "name": "Ape Mimicry"
+          },
+          {
+            "id": "move-spear",
+            "type": "ability",
+            "name": "Kunai Spear (Get Over Here!)"
+          },
+          {
+            "id": "move-ice-freeze",
+            "type": "ability",
+            "name": "Deep Freeze"
+          },
+          {
+            "id": "fatality-face-crusher",
+            "type": "ability",
+            "name": "Fatality: Five Point Strike"
           }
         ],
-        "weapons": [],
+        "weapons": [
+          {
+            "id": "dragon-blade",
+            "type": "weapon",
+            "name": "Kamidogu Dragon Blade"
+          }
+        ],
         "organizations": [
           {
             "id": "white-lotus",
@@ -6586,7 +9170,7 @@ export const characters: Character[] = [
           "type": "character",
           "name": "Onaga"
         },
-        "context": "Original Timeline (MK Deception)",
+        "context": "Mortal Kombat: Deception",
         "verificationStatus": "verified"
       }
     ],
@@ -6616,9 +9200,9 @@ export const characters: Character[] = [
     "summary": "Savage Outworld war general who served in Shinnok's forces and Shao Kahn's legions, obsessed with unyielding imperial dominance.",
     "biography": "Savage Outworld war general who served in Shinnok's forces and Shao Kahn's legions, obsessed with unyielding imperial dominance.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mk4-1997",
       "type": "game",
-      "name": "Mortal Kombat (1992)"
+      "name": "Mortal Kombat 4"
     },
     "species": {
       "id": "human",
@@ -6630,7 +9214,7 @@ export const characters: Character[] = [
       "type": "location",
       "name": "Outworld"
     },
-    "faction": "Neutral",
+    "faction": "Independent / Outworld",
     "role": "Villain",
     "popular": false,
     "image": {
@@ -6655,13 +9239,23 @@ export const characters: Character[] = [
             "id": "move-charging-spear",
             "type": "ability",
             "name": "Charging Spartan Spear"
+          },
+          {
+            "id": "move-revolver-quickdraw",
+            "type": "ability",
+            "name": "Sand Slam & Quickdraw"
+          },
+          {
+            "id": "move-teleport-stomp",
+            "type": "ability",
+            "name": "Shokan Drop Stomp"
           }
         ],
         "weapons": [
           {
-            "id": "spiked-club",
+            "id": "bo-staff",
             "type": "weapon",
-            "name": "Spiked War Mace"
+            "name": "Imperial Bo Staff"
           }
         ],
         "organizations": [],
@@ -6688,13 +9282,23 @@ export const characters: Character[] = [
             "id": "move-charging-spear",
             "type": "ability",
             "name": "Charging Spartan Spear"
+          },
+          {
+            "id": "move-revolver-quickdraw",
+            "type": "ability",
+            "name": "Sand Slam & Quickdraw"
+          },
+          {
+            "id": "move-teleport-stomp",
+            "type": "ability",
+            "name": "Shokan Drop Stomp"
           }
         ],
         "weapons": [
           {
-            "id": "spiked-club",
+            "id": "bo-staff",
             "type": "weapon",
-            "name": "Spiked War Mace"
+            "name": "Imperial Bo Staff"
           }
         ],
         "organizations": [],
@@ -6721,13 +9325,23 @@ export const characters: Character[] = [
             "id": "move-charging-spear",
             "type": "ability",
             "name": "Charging Spartan Spear"
+          },
+          {
+            "id": "move-revolver-quickdraw",
+            "type": "ability",
+            "name": "Sand Slam & Quickdraw"
+          },
+          {
+            "id": "move-teleport-stomp",
+            "type": "ability",
+            "name": "Shokan Drop Stomp"
           }
         ],
         "weapons": [
           {
-            "id": "spiked-club",
+            "id": "bo-staff",
             "type": "weapon",
-            "name": "Spiked War Mace"
+            "name": "Imperial Bo Staff"
           }
         ],
         "organizations": [],
@@ -6764,9 +9378,9 @@ export const characters: Character[] = [
     "summary": "Vampire warrior who sought to separate her home realm of Vaeternus from Outworld by destroying the binding dimensional orb.",
     "biography": "Vampire warrior who sought to separate her home realm of Vaeternus from Outworld by destroying the binding dimensional orb.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mk-deadly-alliance-2002",
       "type": "game",
-      "name": "Mortal Kombat (1992)"
+      "name": "Mortal Kombat: Deadly Alliance"
     },
     "species": {
       "id": "human",
@@ -6778,7 +9392,7 @@ export const characters: Character[] = [
       "type": "location",
       "name": "Vaeternus"
     },
-    "faction": "Neutral",
+    "faction": "Independent / Outworld",
     "role": "Villain",
     "popular": false,
     "image": {
@@ -6805,12 +9419,23 @@ export const characters: Character[] = [
             "name": "Hemomantic Blood Spit"
           },
           {
+            "id": "move-blood-tentacles",
+            "type": "ability",
+            "name": "Blood Tentacles"
+          },
+          {
             "id": "fatality-vaeternus-drain",
             "type": "ability",
             "name": "Fatality: Blood Feast"
           }
         ],
-        "weapons": [],
+        "weapons": [
+          {
+            "id": "kriss-dagger",
+            "type": "weapon",
+            "name": "Kriss Purification Dagger"
+          }
+        ],
         "organizations": [],
         "image": {
           "assetId": "asset-nitara-portrait",
@@ -6835,9 +9460,25 @@ export const characters: Character[] = [
             "id": "move-blood-spit",
             "type": "ability",
             "name": "Hemomantic Blood Spit"
+          },
+          {
+            "id": "move-blood-tentacles",
+            "type": "ability",
+            "name": "Blood Tentacles"
+          },
+          {
+            "id": "fatality-vaeternus-drain",
+            "type": "ability",
+            "name": "Fatality: Blood Feast"
           }
         ],
-        "weapons": [],
+        "weapons": [
+          {
+            "id": "kriss-dagger",
+            "type": "weapon",
+            "name": "Kriss Purification Dagger"
+          }
+        ],
         "organizations": [],
         "image": {
           "assetId": "asset-nitara-portrait",
@@ -6872,9 +9513,9 @@ export const characters: Character[] = [
     "summary": "Netherrealm demon assassin serving Quan Chi who rebelled after meeting Bi-Han, seeking to escape the Netherrealm and preserve her humanity.",
     "biography": "Netherrealm demon assassin serving Quan Chi who rebelled after meeting Bi-Han, seeking to escape the Netherrealm and preserve her humanity.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mk-mythologies-1997",
       "type": "game",
-      "name": "Mortal Kombat (1992)"
+      "name": "Mortal Kombat Mythologies: Sub-Zero"
     },
     "species": {
       "id": "human",
@@ -6911,9 +9552,25 @@ export const characters: Character[] = [
             "id": "move-skull-daggers",
             "type": "ability",
             "name": "Demon Skull Dagger"
+          },
+          {
+            "id": "move-shadow-slide",
+            "type": "ability",
+            "name": "Shadow Slide"
+          },
+          {
+            "id": "shadow-magic",
+            "type": "ability",
+            "name": "Shadow Magic"
           }
         ],
-        "weapons": [],
+        "weapons": [
+          {
+            "id": "kriss-dagger",
+            "type": "weapon",
+            "name": "Kriss Purification Dagger"
+          }
+        ],
         "organizations": [
           {
             "id": "brotherhood-of-shadow",
@@ -6944,14 +9601,30 @@ export const characters: Character[] = [
             "id": "move-skull-daggers",
             "type": "ability",
             "name": "Demon Skull Dagger"
+          },
+          {
+            "id": "move-shadow-slide",
+            "type": "ability",
+            "name": "Shadow Slide"
+          },
+          {
+            "id": "shadow-magic",
+            "type": "ability",
+            "name": "Shadow Magic"
           }
         ],
-        "weapons": [],
+        "weapons": [
+          {
+            "id": "kriss-dagger",
+            "type": "weapon",
+            "name": "Kriss Purification Dagger"
+          }
+        ],
         "organizations": [
           {
-            "id": "lin-kuei",
+            "id": "brotherhood-of-shadow",
             "type": "organization",
-            "name": "Lin Kuei"
+            "name": "Brotherhood of Shadow"
           }
         ],
         "image": {
@@ -6973,9 +9646,9 @@ export const characters: Character[] = [
         "target": {
           "id": "sub-zero",
           "type": "character",
-          "name": "sub-zero"
+          "name": "Sub-Zero"
         },
-        "context": "Original Timeline",
+        "context": "Mythologies & 3D Era",
         "verificationStatus": "verified"
       }
     ],
@@ -6983,7 +9656,7 @@ export const characters: Character[] = [
       {
         "id": "sub-zero",
         "type": "character",
-        "name": "sub-zero"
+        "name": "Sub-Zero"
       }
     ],
     "sources": [
@@ -7005,9 +9678,9 @@ export const characters: Character[] = [
     "summary": "Netherrealm demon who found the holy Kriss sword 'Datusha', purifying her demonic soul with every evil demon she slays.",
     "biography": "Netherrealm demon who found the holy Kriss sword 'Datusha', purifying her demonic soul with every evil demon she slays.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mk-deception-2004",
       "type": "game",
-      "name": "Mortal Kombat (1992)"
+      "name": "Mortal Kombat: Deception"
     },
     "species": {
       "id": "human",
@@ -7019,8 +9692,8 @@ export const characters: Character[] = [
       "type": "location",
       "name": "Netherrealm"
     },
-    "faction": "Neutral",
-    "role": "Villain",
+    "faction": "Brotherhood of Shadow",
+    "role": "Hero",
     "popular": false,
     "image": {
       "assetId": "asset-ashrah-portrait",
@@ -7046,6 +9719,11 @@ export const characters: Character[] = [
             "name": "Heavenly Cleansing Light"
           },
           {
+            "id": "teleportation",
+            "type": "ability",
+            "name": "Dimensional Teleportation"
+          },
+          {
             "id": "fatality-divine-purification",
             "type": "ability",
             "name": "Fatality: Heavenly Cleansing"
@@ -7058,7 +9736,13 @@ export const characters: Character[] = [
             "name": "Kriss Purification Dagger"
           }
         ],
-        "organizations": [],
+        "organizations": [
+          {
+            "id": "brotherhood-of-shadow",
+            "type": "organization",
+            "name": "Brotherhood of Shadow"
+          }
+        ],
         "image": {
           "assetId": "asset-ashrah-portrait",
           "assetURL": "/images/characters/ashrah.png",
@@ -7082,6 +9766,16 @@ export const characters: Character[] = [
             "id": "move-heavenly-light",
             "type": "ability",
             "name": "Heavenly Cleansing Light"
+          },
+          {
+            "id": "teleportation",
+            "type": "ability",
+            "name": "Dimensional Teleportation"
+          },
+          {
+            "id": "fatality-divine-purification",
+            "type": "ability",
+            "name": "Fatality: Heavenly Cleansing"
           }
         ],
         "weapons": [
@@ -7091,7 +9785,13 @@ export const characters: Character[] = [
             "name": "Kriss Purification Dagger"
           }
         ],
-        "organizations": [],
+        "organizations": [
+          {
+            "id": "brotherhood-of-shadow",
+            "type": "organization",
+            "name": "Brotherhood of Shadow"
+          }
+        ],
         "image": {
           "assetId": "asset-ashrah-portrait",
           "assetURL": "/images/characters/ashrah.png",
@@ -7109,19 +9809,19 @@ export const characters: Character[] = [
         "type": "enemyOf",
         "label": "Musuh",
         "target": {
-          "id": "quanchi",
+          "id": "quan-chi",
           "type": "character",
           "name": "Quan Chi"
         },
-        "context": "Original & New Era Timelines",
+        "context": "3D Era & New Era",
         "verificationStatus": "verified"
       }
     ],
     "relatedCharacters": [
       {
-        "id": "quanchi",
+        "id": "quan-chi",
         "type": "character",
-        "name": "Quan Chi"
+        "name": "Quan-Chi"
       }
     ],
     "sources": [
@@ -7143,9 +9843,9 @@ export const characters: Character[] = [
     "summary": "Inflexible military commander from Orderrealm who enforces law and order with zero tolerance for chaos, even allying with Onaga to suppress rebellion.",
     "biography": "Inflexible military commander from Orderrealm who enforces law and order with zero tolerance for chaos, even allying with Onaga to suppress rebellion.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mk-deception-2004",
       "type": "game",
-      "name": "Mortal Kombat (1992)"
+      "name": "Mortal Kombat: Deception"
     },
     "species": {
       "id": "human",
@@ -7182,9 +9882,25 @@ export const characters: Character[] = [
             "id": "move-lava-burst",
             "type": "ability",
             "name": "Order Lava Eruption"
+          },
+          {
+            "id": "move-wind-kick",
+            "type": "ability",
+            "name": "Tornado Gale Kick"
+          },
+          {
+            "id": "move-sun-ray",
+            "type": "ability",
+            "name": "Sun God's Ray"
           }
         ],
-        "weapons": [],
+        "weapons": [
+          {
+            "id": "bo-staff",
+            "type": "weapon",
+            "name": "Imperial Bo Staff"
+          }
+        ],
         "organizations": [
           {
             "id": "seidan-guard",
@@ -7215,9 +9931,25 @@ export const characters: Character[] = [
             "id": "move-lava-burst",
             "type": "ability",
             "name": "Order Lava Eruption"
+          },
+          {
+            "id": "move-wind-kick",
+            "type": "ability",
+            "name": "Tornado Gale Kick"
+          },
+          {
+            "id": "move-sun-ray",
+            "type": "ability",
+            "name": "Sun God's Ray"
           }
         ],
-        "weapons": [],
+        "weapons": [
+          {
+            "id": "bo-staff",
+            "type": "weapon",
+            "name": "Imperial Bo Staff"
+          }
+        ],
         "organizations": [
           {
             "id": "seidan-guard",
@@ -7246,7 +9978,7 @@ export const characters: Character[] = [
           "type": "character",
           "name": "Havik"
         },
-        "context": "Original Timeline (MK Deception)",
+        "context": "3D Era & New Era",
         "verificationStatus": "verified"
       }
     ],
@@ -7276,9 +10008,9 @@ export const characters: Character[] = [
     "summary": "Disciplined operative who uses grappling hook bungee cables in battle, dedicated to the total eradication of Kano's Black Dragon.",
     "biography": "Disciplined operative who uses grappling hook bungee cables in battle, dedicated to the total eradication of Kano's Black Dragon.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mk-deadly-alliance-2002",
       "type": "game",
-      "name": "Mortal Kombat (1992)"
+      "name": "Mortal Kombat: Deadly Alliance"
     },
     "species": {
       "id": "human",
@@ -7315,6 +10047,16 @@ export const characters: Character[] = [
             "id": "move-grapple-hook-kick",
             "type": "ability",
             "name": "Elastic Grapple Kick"
+          },
+          {
+            "id": "move-hookswords",
+            "type": "ability",
+            "name": "move-hookswords"
+          },
+          {
+            "id": "move-nomad-dash",
+            "type": "ability",
+            "name": "Nomad Dash"
           }
         ],
         "weapons": [
@@ -7354,6 +10096,16 @@ export const characters: Character[] = [
             "id": "move-grapple-hook-kick",
             "type": "ability",
             "name": "Elastic Grapple Kick"
+          },
+          {
+            "id": "move-hookswords",
+            "type": "ability",
+            "name": "move-hookswords"
+          },
+          {
+            "id": "move-nomad-dash",
+            "type": "ability",
+            "name": "Nomad Dash"
           }
         ],
         "weapons": [
@@ -7391,7 +10143,7 @@ export const characters: Character[] = [
           "type": "character",
           "name": "Kano"
         },
-        "context": "Original Timeline",
+        "context": "3D Era Timeline",
         "verificationStatus": "verified"
       }
     ],
@@ -7421,7 +10173,7 @@ export const characters: Character[] = [
     "summary": "Brutal symbiotic pair from Outworld consisting of the child rider Ferra commanding the hulking brute Torr in battle.",
     "biography": "Brutal symbiotic pair from Outworld consisting of the child rider Ferra commanding the hulking brute Torr in battle.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mk1-1992",
       "type": "game",
       "name": "Mortal Kombat (1992)"
     },
@@ -7497,9 +10249,9 @@ export const characters: Character[] = [
     "summary": "Mighty Centaurian warlord with a bionic tail chosen by Shao Kahn to head his invasion squads, rivaling the Shokan race.",
     "biography": "Mighty Centaurian warlord with a bionic tail chosen by Shao Kahn to head his invasion squads, rivaling the Shokan race.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mk3-1995",
       "type": "game",
-      "name": "Mortal Kombat (1992)"
+      "name": "Mortal Kombat 3"
     },
     "species": {
       "id": "human",
@@ -7511,7 +10263,7 @@ export const characters: Character[] = [
       "type": "location",
       "name": "Outworld"
     },
-    "faction": "Neutral",
+    "faction": "Independent / Outworld",
     "role": "Villain",
     "popular": false,
     "image": {
@@ -7536,6 +10288,16 @@ export const characters: Character[] = [
             "id": "move-centaur-charge",
             "type": "ability",
             "name": "Centaur Gallop Charge"
+          },
+          {
+            "id": "move-teleport-stomp",
+            "type": "ability",
+            "name": "Shokan Drop Stomp"
+          },
+          {
+            "id": "move-energy-spark",
+            "type": "ability",
+            "name": "Luminescent Spark Burst"
           }
         ],
         "weapons": [],
@@ -7563,6 +10325,16 @@ export const characters: Character[] = [
             "id": "move-centaur-charge",
             "type": "ability",
             "name": "Centaur Gallop Charge"
+          },
+          {
+            "id": "move-teleport-stomp",
+            "type": "ability",
+            "name": "Shokan Drop Stomp"
+          },
+          {
+            "id": "move-energy-spark",
+            "type": "ability",
+            "name": "Luminescent Spark Burst"
           }
         ],
         "weapons": [],
@@ -7600,9 +10372,9 @@ export const characters: Character[] = [
     "summary": "Living fire elemental created by Edenian sorceress Delia to monitor warrior power growth and trigger the Armageddon convergence.",
     "biography": "Living fire elemental created by Edenian sorceress Delia to monitor warrior power growth and trigger the Armageddon convergence.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mk-deadly-alliance-2002",
       "type": "game",
-      "name": "Mortal Kombat (1992)"
+      "name": "Mortal Kombat: Deadly Alliance"
     },
     "species": {
       "id": "human",
@@ -7614,7 +10386,7 @@ export const characters: Character[] = [
       "type": "location",
       "name": "Edenia"
     },
-    "faction": "Neutral",
+    "faction": "Independent / Outworld",
     "role": "Villain",
     "popular": false,
     "image": {
@@ -7639,6 +10411,16 @@ export const characters: Character[] = [
             "id": "move-fire-fist",
             "type": "ability",
             "name": "Elemental Conflagration"
+          },
+          {
+            "id": "hellfire",
+            "type": "ability",
+            "name": "Hellfire Manipulation"
+          },
+          {
+            "id": "flame-aura",
+            "type": "ability",
+            "name": "Flame Aura"
           }
         ],
         "weapons": [],
@@ -7666,6 +10448,16 @@ export const characters: Character[] = [
             "id": "move-fire-fist",
             "type": "ability",
             "name": "Elemental Conflagration"
+          },
+          {
+            "id": "hellfire",
+            "type": "ability",
+            "name": "Hellfire Manipulation"
+          },
+          {
+            "id": "flame-aura",
+            "type": "ability",
+            "name": "Flame Aura"
           }
         ],
         "weapons": [],
@@ -7703,9 +10495,9 @@ export const characters: Character[] = [
     "summary": "Edenian demigod son of Argus and Delia who awoke prematurely, slew his parents, and established the criminal Red Dragon syndicate.",
     "biography": "Edenian demigod son of Argus and Delia who awoke prematurely, slew his parents, and established the criminal Red Dragon syndicate.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mk-armageddon-2006",
       "type": "game",
-      "name": "Mortal Kombat (1992)"
+      "name": "Mortal Kombat: Armageddon"
     },
     "species": {
       "id": "human",
@@ -7737,8 +10529,30 @@ export const characters: Character[] = [
         "gameTitle": "Mortal Kombat: Armageddon",
         "timelineId": "original",
         "timelineName": "Original Timeline",
-        "abilities": [],
-        "weapons": [],
+        "abilities": [
+          {
+            "id": "move-drakes-breath",
+            "type": "ability",
+            "name": "Drake's Breath Fireball"
+          },
+          {
+            "id": "move-drakes-shield",
+            "type": "ability",
+            "name": "Dragon Shield Reflector"
+          },
+          {
+            "id": "move-flying-kick",
+            "type": "ability",
+            "name": "Flying Dragon Kick"
+          }
+        ],
+        "weapons": [
+          {
+            "id": "dragon-blade",
+            "type": "weapon",
+            "name": "Kamidogu Dragon Blade"
+          }
+        ],
         "organizations": [
           {
             "id": "red-dragon",
@@ -7758,8 +10572,37 @@ export const characters: Character[] = [
         "verificationStatus": "verified"
       }
     ],
-    "relationships": [],
-    "relatedCharacters": [],
+    "relationships": [
+      {
+        "type": "familyOf",
+        "label": "Keluarga",
+        "target": {
+          "id": "taven",
+          "type": "character",
+          "name": "Taven"
+        },
+        "context": "3D Era Timeline",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "rivalOf",
+        "label": "Rival",
+        "target": {
+          "id": "taven",
+          "type": "character",
+          "name": "Taven"
+        },
+        "context": "Mortal Kombat: Armageddon",
+        "verificationStatus": "verified"
+      }
+    ],
+    "relatedCharacters": [
+      {
+        "id": "taven",
+        "type": "character",
+        "name": "Taven"
+      }
+    ],
     "sources": [
       {
         "id": "fandom-daegon",
@@ -7779,9 +10622,9 @@ export const characters: Character[] = [
     "summary": "Edenian demigod awoken during Armageddon to fulfill his father's quest by ascending the Pyramid of Argus and defeating Blaze.",
     "biography": "Edenian demigod awoken during Armageddon to fulfill his father's quest by ascending the Pyramid of Argus and defeating Blaze.",
     "firstAppearance": {
-      "id": "mk-1992",
+      "id": "mk-armageddon-2006",
       "type": "game",
-      "name": "Mortal Kombat (1992)"
+      "name": "Mortal Kombat: Armageddon"
     },
     "species": {
       "id": "human",
@@ -7793,8 +10636,8 @@ export const characters: Character[] = [
       "type": "location",
       "name": "Edenia"
     },
-    "faction": "Neutral",
-    "role": "Villain",
+    "faction": "Independent / Outworld",
+    "role": "Hero",
     "popular": false,
     "image": {
       "assetId": "asset-taven-portrait",
@@ -7813,8 +10656,30 @@ export const characters: Character[] = [
         "gameTitle": "Mortal Kombat: Armageddon",
         "timelineId": "original",
         "timelineName": "Original Timeline",
-        "abilities": [],
-        "weapons": [],
+        "abilities": [
+          {
+            "id": "move-inner-fire",
+            "type": "ability",
+            "name": "Inner Flame Surge"
+          },
+          {
+            "id": "move-speed-of-light",
+            "type": "ability",
+            "name": "Speed of Light Teleport"
+          },
+          {
+            "id": "teleportation",
+            "type": "ability",
+            "name": "Dimensional Teleportation"
+          }
+        ],
+        "weapons": [
+          {
+            "id": "dragon-blade",
+            "type": "weapon",
+            "name": "Kamidogu Dragon Blade"
+          }
+        ],
         "organizations": [],
         "image": {
           "assetId": "asset-taven-portrait",
@@ -7828,59 +10693,42 @@ export const characters: Character[] = [
         "verificationStatus": "verified"
       }
     ],
-    "relationships": [],
-    "relatedCharacters": [],
+    "relationships": [
+      {
+        "type": "familyOf",
+        "label": "Keluarga",
+        "target": {
+          "id": "daegon",
+          "type": "character",
+          "name": "Daegon"
+        },
+        "context": "3D Era Timeline",
+        "verificationStatus": "verified"
+      },
+      {
+        "type": "rivalOf",
+        "label": "Rival",
+        "target": {
+          "id": "daegon",
+          "type": "character",
+          "name": "Daegon"
+        },
+        "context": "Mortal Kombat: Armageddon",
+        "verificationStatus": "verified"
+      }
+    ],
+    "relatedCharacters": [
+      {
+        "id": "daegon",
+        "type": "character",
+        "name": "Daegon"
+      }
+    ],
     "sources": [
       {
         "id": "fandom-taven",
         "title": "Mortal Kombat Wiki \u2014 Taven",
         "url": "https://mortalkombat.fandom.com/wiki/Taven",
-        "sourceType": "community-wiki",
-        "verificationStatus": "verified"
-      }
-    ]
-  },
-  {
-    "id": "scorpion-fetch-failed",
-    "name": "Scorpion (Fetch Failed)",
-    "aliases": [],
-    "summary": "Official franchise profile for Scorpion (Fetch Failed).",
-    "biography": "Official franchise profile for Scorpion (Fetch Failed).",
-    "firstAppearance": {
-      "id": "mk-1992",
-      "type": "game",
-      "name": "Mortal Kombat (1992)"
-    },
-    "species": {
-      "id": "human",
-      "type": "species",
-      "name": "Human"
-    },
-    "realm": {
-      "id": "earthrealm",
-      "type": "location",
-      "name": "Earthrealm"
-    },
-    "faction": "Neutral",
-    "role": "Antihero",
-    "popular": false,
-    "image": {
-      "assetId": "asset-scorpion-fetch-failed-portrait",
-      "assetURL": "/images/characters/scorpion-fetch-failed.png",
-      "assetType": "character_portrait",
-      "entityId": "scorpion-fetch-failed",
-      "rightsStatus": "approved",
-      "attribution": "Mortal Kombat \u00a9 Warner Bros. Games / NetherRealm Studios / Fandom Community",
-      "alt": "Potret karakter resmi Scorpion (Fetch Failed)"
-    },
-    "versions": [],
-    "relationships": [],
-    "relatedCharacters": [],
-    "sources": [
-      {
-        "id": "fandom-scorpion-fetch-failed",
-        "title": "Mortal Kombat Wiki \u2014 Scorpion (Fetch Failed)",
-        "url": "https://www.mortalkombat.com/en-us/roster/scorpion",
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
@@ -7908,7 +10756,7 @@ export const games: Game[] = [
     "timeline": {
       "id": "original",
       "type": "timeline",
-      "name": "Timeline Original"
+      "name": "Timeline Kanonik"
     },
     "characters": [
       {
@@ -7917,21 +10765,49 @@ export const games: Game[] = [
         "name": "Scorpion"
       },
       {
-        "id": "subzero",
+        "id": "sub-zero",
         "type": "character",
         "name": "Sub-Zero"
-      }
-    ],
-    "baseRoster": [
-      {
-        "id": "scorpion",
-        "type": "character",
-        "name": "Scorpion"
       },
       {
-        "id": "subzero",
+        "id": "raiden",
         "type": "character",
-        "name": "Sub-Zero"
+        "name": "Raiden"
+      },
+      {
+        "id": "liu-kang",
+        "type": "character",
+        "name": "Liu Kang"
+      },
+      {
+        "id": "johnny-cage",
+        "type": "character",
+        "name": "Johnny Cage"
+      },
+      {
+        "id": "sonya-blade",
+        "type": "character",
+        "name": "Sonya Blade"
+      },
+      {
+        "id": "shang-tsung",
+        "type": "character",
+        "name": "Shang Tsung"
+      },
+      {
+        "id": "kano",
+        "type": "character",
+        "name": "Kano"
+      },
+      {
+        "id": "reptile",
+        "type": "character",
+        "name": "Reptile"
+      },
+      {
+        "id": "goro",
+        "type": "character",
+        "name": "Goro"
       }
     ],
     "image": {
@@ -7972,30 +10848,48 @@ export const games: Game[] = [
     "timeline": {
       "id": "original",
       "type": "timeline",
-      "name": "Timeline Original"
+      "name": "Timeline Kanonik"
     },
     "characters": [
       {
-        "id": "scorpion",
+        "id": "kitana",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Kitana"
       },
       {
-        "id": "subzero",
+        "id": "mileena",
         "type": "character",
-        "name": "Sub-Zero"
-      }
-    ],
-    "baseRoster": [
-      {
-        "id": "scorpion",
-        "type": "character",
-        "name": "Scorpion"
+        "name": "Mileena"
       },
       {
-        "id": "subzero",
+        "id": "jax",
         "type": "character",
-        "name": "Sub-Zero"
+        "name": "Jax Briggs"
+      },
+      {
+        "id": "kung-lao",
+        "type": "character",
+        "name": "Kung Lao"
+      },
+      {
+        "id": "shao-kahn",
+        "type": "character",
+        "name": "Shao Kahn"
+      },
+      {
+        "id": "baraka",
+        "type": "character",
+        "name": "Baraka"
+      },
+      {
+        "id": "noob-saibot",
+        "type": "character",
+        "name": "Noob Saibot"
+      },
+      {
+        "id": "kintaro",
+        "type": "character",
+        "name": "Kintaro"
       }
     ],
     "image": {
@@ -8036,30 +10930,53 @@ export const games: Game[] = [
     "timeline": {
       "id": "original",
       "type": "timeline",
-      "name": "Timeline Original"
+      "name": "Timeline Kanonik"
     },
     "characters": [
       {
-        "id": "scorpion",
+        "id": "smoke",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Smoke"
       },
       {
-        "id": "subzero",
+        "id": "cyrax",
         "type": "character",
-        "name": "Sub-Zero"
-      }
-    ],
-    "baseRoster": [
-      {
-        "id": "scorpion",
-        "type": "character",
-        "name": "Scorpion"
+        "name": "Cyrax"
       },
       {
-        "id": "subzero",
+        "id": "sektor",
         "type": "character",
-        "name": "Sub-Zero"
+        "name": "Sektor"
+      },
+      {
+        "id": "sindel",
+        "type": "character",
+        "name": "Sindel"
+      },
+      {
+        "id": "kabal",
+        "type": "character",
+        "name": "Kabal"
+      },
+      {
+        "id": "kurtis-stryker",
+        "type": "character",
+        "name": "Kurtis Stryker"
+      },
+      {
+        "id": "sheeva",
+        "type": "character",
+        "name": "Sheeva"
+      },
+      {
+        "id": "nightwolf",
+        "type": "character",
+        "name": "Nightwolf"
+      },
+      {
+        "id": "motaro",
+        "type": "character",
+        "name": "Motaro"
       }
     ],
     "image": {
@@ -8100,30 +11017,13 @@ export const games: Game[] = [
     "timeline": {
       "id": "original",
       "type": "timeline",
-      "name": "Timeline Original"
+      "name": "Timeline Kanonik"
     },
     "characters": [
       {
-        "id": "scorpion",
+        "id": "jade",
         "type": "character",
-        "name": "Scorpion"
-      },
-      {
-        "id": "subzero",
-        "type": "character",
-        "name": "Sub-Zero"
-      }
-    ],
-    "baseRoster": [
-      {
-        "id": "scorpion",
-        "type": "character",
-        "name": "Scorpion"
-      },
-      {
-        "id": "subzero",
-        "type": "character",
-        "name": "Sub-Zero"
+        "name": "Jade"
       }
     ],
     "image": {
@@ -8164,7 +11064,7 @@ export const games: Game[] = [
     "timeline": {
       "id": "original",
       "type": "timeline",
-      "name": "Timeline Original"
+      "name": "Timeline Kanonik"
     },
     "characters": [
       {
@@ -8173,19 +11073,7 @@ export const games: Game[] = [
         "name": "Scorpion"
       },
       {
-        "id": "subzero",
-        "type": "character",
-        "name": "Sub-Zero"
-      }
-    ],
-    "baseRoster": [
-      {
-        "id": "scorpion",
-        "type": "character",
-        "name": "Scorpion"
-      },
-      {
-        "id": "subzero",
+        "id": "sub-zero",
         "type": "character",
         "name": "Sub-Zero"
       }
@@ -8228,30 +11116,33 @@ export const games: Game[] = [
     "timeline": {
       "id": "original",
       "type": "timeline",
-      "name": "Timeline Original"
+      "name": "Timeline Kanonik"
     },
     "characters": [
       {
-        "id": "scorpion",
+        "id": "quan-chi",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Quan Chi"
       },
       {
-        "id": "subzero",
+        "id": "shinnok",
         "type": "character",
-        "name": "Sub-Zero"
-      }
-    ],
-    "baseRoster": [
-      {
-        "id": "scorpion",
-        "type": "character",
-        "name": "Scorpion"
+        "name": "Shinnok"
       },
       {
-        "id": "subzero",
+        "id": "fujin",
         "type": "character",
-        "name": "Sub-Zero"
+        "name": "Fujin"
+      },
+      {
+        "id": "tanya",
+        "type": "character",
+        "name": "Tanya"
+      },
+      {
+        "id": "reiko",
+        "type": "character",
+        "name": "Reiko"
       }
     ],
     "image": {
@@ -8289,30 +11180,13 @@ export const games: Game[] = [
     "timeline": {
       "id": "original",
       "type": "timeline",
-      "name": "Timeline Original"
+      "name": "Timeline Kanonik"
     },
     "characters": [
       {
-        "id": "scorpion",
+        "id": "reiko",
         "type": "character",
-        "name": "Scorpion"
-      },
-      {
-        "id": "subzero",
-        "type": "character",
-        "name": "Sub-Zero"
-      }
-    ],
-    "baseRoster": [
-      {
-        "id": "scorpion",
-        "type": "character",
-        "name": "Scorpion"
-      },
-      {
-        "id": "subzero",
-        "type": "character",
-        "name": "Sub-Zero"
+        "name": "Reiko"
       }
     ],
     "image": {
@@ -8352,30 +11226,48 @@ export const games: Game[] = [
     "timeline": {
       "id": "original",
       "type": "timeline",
-      "name": "Timeline Original"
+      "name": "Timeline Kanonik"
     },
     "characters": [
       {
-        "id": "scorpion",
+        "id": "shang-tsung",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Shang Tsung"
       },
       {
-        "id": "subzero",
+        "id": "kenshi",
         "type": "character",
-        "name": "Sub-Zero"
-      }
-    ],
-    "baseRoster": [
-      {
-        "id": "scorpion",
-        "type": "character",
-        "name": "Scorpion"
+        "name": "Kenshi"
       },
       {
-        "id": "subzero",
+        "id": "frost",
         "type": "character",
-        "name": "Sub-Zero"
+        "name": "Frost"
+      },
+      {
+        "id": "bo-rai-cho",
+        "type": "character",
+        "name": "Bo' Rai Cho"
+      },
+      {
+        "id": "li-mei",
+        "type": "character",
+        "name": "Li Mei"
+      },
+      {
+        "id": "nitara",
+        "type": "character",
+        "name": "Nitara"
+      },
+      {
+        "id": "mavado",
+        "type": "character",
+        "name": "Mavado"
+      },
+      {
+        "id": "blaze",
+        "type": "character",
+        "name": "Blaze"
       }
     ],
     "image": {
@@ -8413,30 +11305,18 @@ export const games: Game[] = [
     "timeline": {
       "id": "original",
       "type": "timeline",
-      "name": "Timeline Original"
+      "name": "Timeline Kanonik"
     },
     "characters": [
       {
-        "id": "scorpion",
+        "id": "sareena",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Sareena"
       },
       {
-        "id": "subzero",
+        "id": "mavado",
         "type": "character",
-        "name": "Sub-Zero"
-      }
-    ],
-    "baseRoster": [
-      {
-        "id": "scorpion",
-        "type": "character",
-        "name": "Scorpion"
-      },
-      {
-        "id": "subzero",
-        "type": "character",
-        "name": "Sub-Zero"
+        "name": "Mavado"
       }
     ],
     "image": {
@@ -8476,30 +11356,33 @@ export const games: Game[] = [
     "timeline": {
       "id": "original",
       "type": "timeline",
-      "name": "Timeline Original"
+      "name": "Timeline Kanonik"
     },
     "characters": [
       {
-        "id": "scorpion",
+        "id": "havik",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Havik"
       },
       {
-        "id": "subzero",
+        "id": "onaga",
         "type": "character",
-        "name": "Sub-Zero"
-      }
-    ],
-    "baseRoster": [
-      {
-        "id": "scorpion",
-        "type": "character",
-        "name": "Scorpion"
+        "name": "Onaga"
       },
       {
-        "id": "subzero",
+        "id": "shujinko",
         "type": "character",
-        "name": "Sub-Zero"
+        "name": "Shujinko"
+      },
+      {
+        "id": "ashrah",
+        "type": "character",
+        "name": "Ashrah"
+      },
+      {
+        "id": "hotaru",
+        "type": "character",
+        "name": "Hotaru"
       }
     ],
     "image": {
@@ -8537,7 +11420,7 @@ export const games: Game[] = [
     "timeline": {
       "id": "original",
       "type": "timeline",
-      "name": "Timeline Original"
+      "name": "Timeline Kanonik"
     },
     "characters": [
       {
@@ -8546,19 +11429,7 @@ export const games: Game[] = [
         "name": "Scorpion"
       },
       {
-        "id": "subzero",
-        "type": "character",
-        "name": "Sub-Zero"
-      }
-    ],
-    "baseRoster": [
-      {
-        "id": "scorpion",
-        "type": "character",
-        "name": "Scorpion"
-      },
-      {
-        "id": "subzero",
+        "id": "sub-zero",
         "type": "character",
         "name": "Sub-Zero"
       }
@@ -8600,30 +11471,48 @@ export const games: Game[] = [
     "timeline": {
       "id": "original",
       "type": "timeline",
-      "name": "Timeline Original"
+      "name": "Timeline Kanonik"
     },
     "characters": [
       {
-        "id": "scorpion",
+        "id": "fujin",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Fujin"
       },
       {
-        "id": "subzero",
+        "id": "onaga",
         "type": "character",
-        "name": "Sub-Zero"
-      }
-    ],
-    "baseRoster": [
-      {
-        "id": "scorpion",
-        "type": "character",
-        "name": "Scorpion"
+        "name": "Onaga"
       },
       {
-        "id": "subzero",
+        "id": "shujinko",
         "type": "character",
-        "name": "Sub-Zero"
+        "name": "Shujinko"
+      },
+      {
+        "id": "hotaru",
+        "type": "character",
+        "name": "Hotaru"
+      },
+      {
+        "id": "motaro",
+        "type": "character",
+        "name": "Motaro"
+      },
+      {
+        "id": "blaze",
+        "type": "character",
+        "name": "Blaze"
+      },
+      {
+        "id": "daegon",
+        "type": "character",
+        "name": "Daegon"
+      },
+      {
+        "id": "taven",
+        "type": "character",
+        "name": "Taven"
       }
     ],
     "image": {
@@ -8662,30 +11551,13 @@ export const games: Game[] = [
     "timeline": {
       "id": "original",
       "type": "timeline",
-      "name": "Timeline Original"
+      "name": "Timeline Kanonik"
     },
     "characters": [
       {
-        "id": "scorpion",
+        "id": "sareena",
         "type": "character",
-        "name": "Scorpion"
-      },
-      {
-        "id": "subzero",
-        "type": "character",
-        "name": "Sub-Zero"
-      }
-    ],
-    "baseRoster": [
-      {
-        "id": "scorpion",
-        "type": "character",
-        "name": "Scorpion"
-      },
-      {
-        "id": "subzero",
-        "type": "character",
-        "name": "Sub-Zero"
+        "name": "Sareena"
       }
     ],
     "image": {
@@ -8723,7 +11595,7 @@ export const games: Game[] = [
     "timeline": {
       "id": "original",
       "type": "timeline",
-      "name": "Timeline Original"
+      "name": "Timeline Kanonik"
     },
     "characters": [
       {
@@ -8732,19 +11604,7 @@ export const games: Game[] = [
         "name": "Scorpion"
       },
       {
-        "id": "subzero",
-        "type": "character",
-        "name": "Sub-Zero"
-      }
-    ],
-    "baseRoster": [
-      {
-        "id": "scorpion",
-        "type": "character",
-        "name": "Scorpion"
-      },
-      {
-        "id": "subzero",
+        "id": "sub-zero",
         "type": "character",
         "name": "Sub-Zero"
       }
@@ -8785,7 +11645,7 @@ export const games: Game[] = [
     "timeline": {
       "id": "original",
       "type": "timeline",
-      "name": "Timeline Original"
+      "name": "Timeline Kanonik"
     },
     "characters": [
       {
@@ -8794,19 +11654,7 @@ export const games: Game[] = [
         "name": "Scorpion"
       },
       {
-        "id": "subzero",
-        "type": "character",
-        "name": "Sub-Zero"
-      }
-    ],
-    "baseRoster": [
-      {
-        "id": "scorpion",
-        "type": "character",
-        "name": "Scorpion"
-      },
-      {
-        "id": "subzero",
+        "id": "sub-zero",
         "type": "character",
         "name": "Sub-Zero"
       }
@@ -8845,9 +11693,9 @@ export const games: Game[] = [
     "era": "Spin-off",
     "summary": "Standalone crossover fighting game where cataclysmic world-merger pits Kombatants against DC Comics superheroes and villains.",
     "timeline": {
-      "id": "original",
+      "id": "reboot",
       "type": "timeline",
-      "name": "Timeline Original"
+      "name": "Timeline Kanonik"
     },
     "characters": [
       {
@@ -8856,19 +11704,7 @@ export const games: Game[] = [
         "name": "Scorpion"
       },
       {
-        "id": "subzero",
-        "type": "character",
-        "name": "Sub-Zero"
-      }
-    ],
-    "baseRoster": [
-      {
-        "id": "scorpion",
-        "type": "character",
-        "name": "Scorpion"
-      },
-      {
-        "id": "subzero",
+        "id": "sub-zero",
         "type": "character",
         "name": "Sub-Zero"
       }
@@ -8908,9 +11744,9 @@ export const games: Game[] = [
     "era": "Spin-off",
     "summary": "Standalone arcade anthology package uniting pristine arcade emulations of MK1, MK2, and Ultimate Mortal Kombat 3 with online matchmaking.",
     "timeline": {
-      "id": "original",
+      "id": "reboot",
       "type": "timeline",
-      "name": "Timeline Original"
+      "name": "Timeline Kanonik"
     },
     "characters": [
       {
@@ -8919,19 +11755,7 @@ export const games: Game[] = [
         "name": "Scorpion"
       },
       {
-        "id": "subzero",
-        "type": "character",
-        "name": "Sub-Zero"
-      }
-    ],
-    "baseRoster": [
-      {
-        "id": "scorpion",
-        "type": "character",
-        "name": "Scorpion"
-      },
-      {
-        "id": "subzero",
+        "id": "sub-zero",
         "type": "character",
         "name": "Sub-Zero"
       }
@@ -8971,32 +11795,40 @@ export const games: Game[] = [
     "era": "Reboot Era",
     "summary": "Timeline reset orchestrated by Raiden rewinding the events of MK1 through MK3, introducing the super meter and cinematic Story Mode.",
     "timeline": {
-      "id": "original",
+      "id": "reboot",
       "type": "timeline",
-      "name": "Timeline Original"
+      "name": "Timeline Kanonik"
     },
     "characters": [
       {
-        "id": "scorpion",
+        "id": "smoke",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Smoke"
       },
       {
-        "id": "subzero",
+        "id": "cyrax",
         "type": "character",
-        "name": "Sub-Zero"
-      }
-    ],
-    "baseRoster": [
-      {
-        "id": "scorpion",
-        "type": "character",
-        "name": "Scorpion"
+        "name": "Cyrax"
       },
       {
-        "id": "subzero",
+        "id": "sektor",
         "type": "character",
-        "name": "Sub-Zero"
+        "name": "Sektor"
+      },
+      {
+        "id": "kurtis-stryker",
+        "type": "character",
+        "name": "Kurtis Stryker"
+      },
+      {
+        "id": "sheeva",
+        "type": "character",
+        "name": "Sheeva"
+      },
+      {
+        "id": "nightwolf",
+        "type": "character",
+        "name": "Nightwolf"
       }
     ],
     "image": {
@@ -9034,32 +11866,85 @@ export const games: Game[] = [
     "era": "Reboot Era",
     "summary": "Set 25 years after MK9, introducing three distinct character combat variations and the next generation of Earthrealm Kombatants.",
     "timeline": {
-      "id": "original",
+      "id": "reboot",
       "type": "timeline",
-      "name": "Timeline Original"
+      "name": "Timeline Kanonik"
     },
     "characters": [
       {
-        "id": "scorpion",
+        "id": "mileena",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Mileena"
       },
       {
-        "id": "subzero",
+        "id": "quan-chi",
         "type": "character",
-        "name": "Sub-Zero"
-      }
-    ],
-    "baseRoster": [
-      {
-        "id": "scorpion",
-        "type": "character",
-        "name": "Scorpion"
+        "name": "Quan Chi"
       },
       {
-        "id": "subzero",
+        "id": "kenshi",
         "type": "character",
-        "name": "Sub-Zero"
+        "name": "Kenshi"
+      },
+      {
+        "id": "reptile",
+        "type": "character",
+        "name": "Reptile"
+      },
+      {
+        "id": "goro",
+        "type": "character",
+        "name": "Goro"
+      },
+      {
+        "id": "shinnok",
+        "type": "character",
+        "name": "Shinnok"
+      },
+      {
+        "id": "bo-rai-cho",
+        "type": "character",
+        "name": "Bo' Rai Cho"
+      },
+      {
+        "id": "cassie-cage",
+        "type": "character",
+        "name": "Cassie Cage"
+      },
+      {
+        "id": "kotal-kahn",
+        "type": "character",
+        "name": "Kotal Kahn"
+      },
+      {
+        "id": "erron-black",
+        "type": "character",
+        "name": "Erron Black"
+      },
+      {
+        "id": "dvorah",
+        "type": "character",
+        "name": "D'Vorah"
+      },
+      {
+        "id": "jacqui",
+        "type": "character",
+        "name": "Jacqui Briggs"
+      },
+      {
+        "id": "takeda",
+        "type": "character",
+        "name": "Takeda Takahashi"
+      },
+      {
+        "id": "kung-jin",
+        "type": "character",
+        "name": "Kung Jin"
+      },
+      {
+        "id": "ferratorr",
+        "type": "character",
+        "name": "Ferra & Torr"
       }
     ],
     "image": {
@@ -9096,9 +11981,9 @@ export const games: Game[] = [
     "era": "Reboot Era",
     "summary": "Standalone free-to-play mobile collectible card fighter and battle team game with touch-based gestures and persistent cross-game events.",
     "timeline": {
-      "id": "original",
+      "id": "reboot",
       "type": "timeline",
-      "name": "Timeline Original"
+      "name": "Timeline Kanonik"
     },
     "characters": [
       {
@@ -9107,19 +11992,7 @@ export const games: Game[] = [
         "name": "Scorpion"
       },
       {
-        "id": "subzero",
-        "type": "character",
-        "name": "Sub-Zero"
-      }
-    ],
-    "baseRoster": [
-      {
-        "id": "scorpion",
-        "type": "character",
-        "name": "Scorpion"
-      },
-      {
-        "id": "subzero",
+        "id": "sub-zero",
         "type": "character",
         "name": "Sub-Zero"
       }
@@ -9160,9 +12033,9 @@ export const games: Game[] = [
     "era": "Reboot Era",
     "summary": "Time-bending conflict against Keeper of Time Kronika, introducing Krushing Blows, Fatal Blows, and deep cosmetic gear customization.",
     "timeline": {
-      "id": "original",
+      "id": "reboot",
       "type": "timeline",
-      "name": "Timeline Original"
+      "name": "Timeline Kanonik"
     },
     "characters": [
       {
@@ -9171,21 +12044,124 @@ export const games: Game[] = [
         "name": "Scorpion"
       },
       {
-        "id": "subzero",
+        "id": "sub-zero",
         "type": "character",
         "name": "Sub-Zero"
-      }
-    ],
-    "baseRoster": [
-      {
-        "id": "scorpion",
-        "type": "character",
-        "name": "Scorpion"
       },
       {
-        "id": "subzero",
+        "id": "raiden",
         "type": "character",
-        "name": "Sub-Zero"
+        "name": "Raiden"
+      },
+      {
+        "id": "liu-kang",
+        "type": "character",
+        "name": "Liu Kang"
+      },
+      {
+        "id": "kitana",
+        "type": "character",
+        "name": "Kitana"
+      },
+      {
+        "id": "johnny-cage",
+        "type": "character",
+        "name": "Johnny Cage"
+      },
+      {
+        "id": "sonya-blade",
+        "type": "character",
+        "name": "Sonya Blade"
+      },
+      {
+        "id": "jax",
+        "type": "character",
+        "name": "Jax Briggs"
+      },
+      {
+        "id": "kung-lao",
+        "type": "character",
+        "name": "Kung Lao"
+      },
+      {
+        "id": "shao-kahn",
+        "type": "character",
+        "name": "Shao Kahn"
+      },
+      {
+        "id": "kano",
+        "type": "character",
+        "name": "Kano"
+      },
+      {
+        "id": "baraka",
+        "type": "character",
+        "name": "Baraka"
+      },
+      {
+        "id": "noob-saibot",
+        "type": "character",
+        "name": "Noob Saibot"
+      },
+      {
+        "id": "geras",
+        "type": "character",
+        "name": "Geras"
+      },
+      {
+        "id": "kronika",
+        "type": "character",
+        "name": "Kronika"
+      },
+      {
+        "id": "frost",
+        "type": "character",
+        "name": "Frost"
+      },
+      {
+        "id": "cassie-cage",
+        "type": "character",
+        "name": "Cassie Cage"
+      },
+      {
+        "id": "kotal-kahn",
+        "type": "character",
+        "name": "Kotal Kahn"
+      },
+      {
+        "id": "erron-black",
+        "type": "character",
+        "name": "Erron Black"
+      },
+      {
+        "id": "jade",
+        "type": "character",
+        "name": "Jade"
+      },
+      {
+        "id": "kabal",
+        "type": "character",
+        "name": "Kabal"
+      },
+      {
+        "id": "dvorah",
+        "type": "character",
+        "name": "D'Vorah"
+      },
+      {
+        "id": "jacqui",
+        "type": "character",
+        "name": "Jacqui Briggs"
+      },
+      {
+        "id": "cetrion",
+        "type": "character",
+        "name": "Cetrion"
+      },
+      {
+        "id": "kollector",
+        "type": "character",
+        "name": "Kollector"
       }
     ],
     "image": {
@@ -9224,9 +12200,9 @@ export const games: Game[] = [
     "era": "New Era",
     "summary": "A reborn Mortal Kombat universe crafted by Fire God Liu Kang featuring reimagined character origins and Kameo Fighter assist combat.",
     "timeline": {
-      "id": "original",
+      "id": "new-era",
       "type": "timeline",
-      "name": "Timeline Original"
+      "name": "Timeline Kanonik"
     },
     "characters": [
       {
@@ -9235,21 +12211,84 @@ export const games: Game[] = [
         "name": "Scorpion"
       },
       {
-        "id": "subzero",
+        "id": "sub-zero",
         "type": "character",
         "name": "Sub-Zero"
-      }
-    ],
-    "baseRoster": [
-      {
-        "id": "scorpion",
-        "type": "character",
-        "name": "Scorpion"
       },
       {
-        "id": "subzero",
+        "id": "raiden",
         "type": "character",
-        "name": "Sub-Zero"
+        "name": "Raiden"
+      },
+      {
+        "id": "liu-kang",
+        "type": "character",
+        "name": "Liu Kang"
+      },
+      {
+        "id": "mileena",
+        "type": "character",
+        "name": "Mileena"
+      },
+      {
+        "id": "shang-tsung",
+        "type": "character",
+        "name": "Shang Tsung"
+      },
+      {
+        "id": "kenshi",
+        "type": "character",
+        "name": "Kenshi"
+      },
+      {
+        "id": "smoke",
+        "type": "character",
+        "name": "Smoke"
+      },
+      {
+        "id": "reptile",
+        "type": "character",
+        "name": "Reptile"
+      },
+      {
+        "id": "geras",
+        "type": "character",
+        "name": "Geras"
+      },
+      {
+        "id": "sindel",
+        "type": "character",
+        "name": "Sindel"
+      },
+      {
+        "id": "li-mei",
+        "type": "character",
+        "name": "Li Mei"
+      },
+      {
+        "id": "tanya",
+        "type": "character",
+        "name": "Tanya"
+      },
+      {
+        "id": "havik",
+        "type": "character",
+        "name": "Havik"
+      },
+      {
+        "id": "reiko",
+        "type": "character",
+        "name": "Reiko"
+      },
+      {
+        "id": "nitara",
+        "type": "character",
+        "name": "Nitara"
+      },
+      {
+        "id": "ashrah",
+        "type": "character",
+        "name": "Ashrah"
       }
     ],
     "image": {
@@ -9286,9 +12325,9 @@ export const games: Game[] = [
     "era": "New Era",
     "summary": "Standalone real-time strategic team RPG mobile release where players assemble strike squads of Kombatants across a brand-new cinematic campaign.",
     "timeline": {
-      "id": "original",
+      "id": "new-era",
       "type": "timeline",
-      "name": "Timeline Original"
+      "name": "Timeline Kanonik"
     },
     "characters": [
       {
@@ -9297,19 +12336,7 @@ export const games: Game[] = [
         "name": "Scorpion"
       },
       {
-        "id": "subzero",
-        "type": "character",
-        "name": "Sub-Zero"
-      }
-    ],
-    "baseRoster": [
-      {
-        "id": "scorpion",
-        "type": "character",
-        "name": "Scorpion"
-      },
-      {
-        "id": "subzero",
+        "id": "sub-zero",
         "type": "character",
         "name": "Sub-Zero"
       }
@@ -9340,20 +12367,24 @@ export const abilities: Ability[] = [
     "id": "hellfire",
     "name": "Hellfire Manipulation",
     "category": "special-move",
-    "element": null,
     "description": "Summoning and projecting demonic fire from the Netherrealm.",
     "characters": [
       {
         "id": "scorpion",
         "type": "character",
         "name": "Scorpion"
+      },
+      {
+        "id": "blaze",
+        "type": "character",
+        "name": "Blaze"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -9370,20 +12401,24 @@ export const abilities: Ability[] = [
     "id": "flame-aura",
     "name": "Flame Aura",
     "category": "special-move",
-    "element": null,
     "description": "Surrounding the body in intense heat that incinerates nearby foes.",
     "characters": [
       {
         "id": "scorpion",
         "type": "character",
         "name": "Scorpion"
+      },
+      {
+        "id": "blaze",
+        "type": "character",
+        "name": "Blaze"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -9400,20 +12435,19 @@ export const abilities: Ability[] = [
     "id": "fireball-dragon",
     "name": "Dragon Fireball",
     "category": "special-move",
-    "element": null,
     "description": "Concentrated chi energy manifested as a searing dragon of flame.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "liu-kang",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Liu Kang"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -9430,20 +12464,24 @@ export const abilities: Ability[] = [
     "id": "cryomancy",
     "name": "Cryomancy",
     "category": "special-move",
-    "element": null,
     "description": "Instant freezing of atmospheric moisture into ice shields, spikes, and weaponry.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "sub-zero",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Sub-Zero"
+      },
+      {
+        "id": "frost",
+        "type": "character",
+        "name": "Frost"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -9460,20 +12498,19 @@ export const abilities: Ability[] = [
     "id": "ice-slide",
     "name": "Ice Slide",
     "category": "special-move",
-    "element": null,
     "description": "Coating the ground with ice to slide swiftly beneath enemy defenses.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "sub-zero",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Sub-Zero"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -9490,20 +12527,19 @@ export const abilities: Ability[] = [
     "id": "ice-clone",
     "name": "Ice Clone",
     "category": "special-move",
-    "element": null,
     "description": "Leaving behind a flash-frozen decoy that freezes whoever touches it.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "sub-zero",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Sub-Zero"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -9520,20 +12556,19 @@ export const abilities: Ability[] = [
     "id": "thunder-mastery",
     "name": "Thunder Mastery",
     "category": "special-move",
-    "element": null,
     "description": "Summoning divine lightning bolts from storm clouds.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "raiden",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Raiden"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -9550,20 +12585,19 @@ export const abilities: Ability[] = [
     "id": "electric-fly",
     "name": "Electric Fly (Superman)",
     "category": "special-move",
-    "element": null,
     "description": "Propelling oneself horizontally through the air enveloped in electrical power.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "raiden",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Raiden"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -9580,20 +12614,74 @@ export const abilities: Ability[] = [
     "id": "teleportation",
     "name": "Dimensional Teleportation",
     "category": "special-move",
-    "element": null,
     "description": "Instant spatial traversal across short or long combat distances.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "raiden",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Raiden"
+      },
+      {
+        "id": "mileena",
+        "type": "character",
+        "name": "Mileena"
+      },
+      {
+        "id": "kung-lao",
+        "type": "character",
+        "name": "Kung Lao"
+      },
+      {
+        "id": "quan-chi",
+        "type": "character",
+        "name": "Quan Chi"
+      },
+      {
+        "id": "smoke",
+        "type": "character",
+        "name": "Smoke"
+      },
+      {
+        "id": "cyrax",
+        "type": "character",
+        "name": "Cyrax"
+      },
+      {
+        "id": "geras",
+        "type": "character",
+        "name": "Geras"
+      },
+      {
+        "id": "kronika",
+        "type": "character",
+        "name": "Kronika"
+      },
+      {
+        "id": "shinnok",
+        "type": "character",
+        "name": "Shinnok"
+      },
+      {
+        "id": "fujin",
+        "type": "character",
+        "name": "Fujin"
+      },
+      {
+        "id": "ashrah",
+        "type": "character",
+        "name": "Ashrah"
+      },
+      {
+        "id": "taven",
+        "type": "character",
+        "name": "Taven"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -9610,20 +12698,29 @@ export const abilities: Ability[] = [
     "id": "shadow-magic",
     "name": "Shadow Magic",
     "category": "special-move",
-    "element": null,
     "description": "Summoning shadow wraiths, portals, and dark clones.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "noob-saibot",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Noob Saibot"
+      },
+      {
+        "id": "shinnok",
+        "type": "character",
+        "name": "Shinnok"
+      },
+      {
+        "id": "sareena",
+        "type": "character",
+        "name": "Sareena"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -9640,20 +12737,19 @@ export const abilities: Ability[] = [
     "id": "soul-stealing",
     "name": "Soul Steal",
     "category": "special-move",
-    "element": null,
     "description": "Draining an opponent's soul to heal and assume their appearance and abilities.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "shang-tsung",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Shang Tsung"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -9670,20 +12766,29 @@ export const abilities: Ability[] = [
     "id": "necromancy",
     "name": "Necromancy",
     "category": "special-move",
-    "element": null,
     "description": "Reanimating the dead as loyal Netherrealm revenants.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "quan-chi",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Quan Chi"
+      },
+      {
+        "id": "shinnok",
+        "type": "character",
+        "name": "Shinnok"
+      },
+      {
+        "id": "onaga",
+        "type": "character",
+        "name": "Onaga"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -9700,20 +12805,24 @@ export const abilities: Ability[] = [
     "id": "move-spear",
     "name": "Kunai Spear (Get Over Here!)",
     "category": "special-move",
-    "element": null,
     "description": "Hurling a rope or chain spear into the enemy and pulling them in with extreme force.",
     "characters": [
       {
         "id": "scorpion",
         "type": "character",
         "name": "Scorpion"
+      },
+      {
+        "id": "shujinko",
+        "type": "character",
+        "name": "Shujinko"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -9730,20 +12839,29 @@ export const abilities: Ability[] = [
     "id": "move-ice-freeze",
     "name": "Deep Freeze",
     "category": "special-move",
-    "element": null,
     "description": "Blasting a stream of liquid nitrogen vapor that freezes the target solid.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "sub-zero",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Sub-Zero"
+      },
+      {
+        "id": "frost",
+        "type": "character",
+        "name": "Frost"
+      },
+      {
+        "id": "shujinko",
+        "type": "character",
+        "name": "Shujinko"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -9760,20 +12878,19 @@ export const abilities: Ability[] = [
     "id": "move-bicycle-kick",
     "name": "Bicycle Kick",
     "category": "special-move",
-    "element": null,
     "description": "Defying gravity with rapid aerial bicycle kicks propelled by chi.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "liu-kang",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Liu Kang"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -9790,20 +12907,24 @@ export const abilities: Ability[] = [
     "id": "move-shadow-kick",
     "name": "Shadow Kick",
     "category": "special-move",
-    "element": null,
     "description": "A dashing high-impact kick trailing green kinetic shadow energy.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "johnny-cage",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Johnny Cage"
+      },
+      {
+        "id": "cassie-cage",
+        "type": "character",
+        "name": "Cassie Cage"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -9820,20 +12941,19 @@ export const abilities: Ability[] = [
     "id": "move-hat-throw",
     "name": "Razor Rim Hat Toss",
     "category": "special-move",
-    "element": null,
     "description": "Throwing a circular razor-rimmed hat with boomerang-like trajectory.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "kung-lao",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Kung Lao"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -9850,20 +12970,19 @@ export const abilities: Ability[] = [
     "id": "move-fan-lift",
     "name": "Fan Lift",
     "category": "special-move",
-    "element": null,
     "description": "Waving bladed war fans to create an updraft that suspends opponents helplessly in mid-air.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "kitana",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Kitana"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -9880,20 +12999,24 @@ export const abilities: Ability[] = [
     "id": "move-ground-pound",
     "name": "Ground Pound",
     "category": "special-move",
-    "element": null,
     "description": "Striking the ground with cybernetic arms to cause localized seismic shockwaves.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "jax",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Jax Briggs"
+      },
+      {
+        "id": "bo-rai-cho",
+        "type": "character",
+        "name": "Bo' Rai Cho"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -9910,20 +13033,19 @@ export const abilities: Ability[] = [
     "id": "move-cannonball",
     "name": "Cannonball Roll",
     "category": "special-move",
-    "element": null,
     "description": "Curling into a tightly wound ball and launching forward like a deadly sphere.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "kano",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Kano"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -9940,20 +13062,24 @@ export const abilities: Ability[] = [
     "id": "move-wind-tornado",
     "name": "Wind Tornado Vortex",
     "category": "special-move",
-    "element": null,
     "description": "Spinning into a cyclone that lifts and disorients nearby foes.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "kung-lao",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Kung Lao"
+      },
+      {
+        "id": "fujin",
+        "type": "character",
+        "name": "Fujin"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -9970,20 +13096,19 @@ export const abilities: Ability[] = [
     "id": "move-sonic-scream",
     "name": "Banshee Sonic Scream",
     "category": "special-move",
-    "element": null,
     "description": "High-decibel vocal resonance that stuns and strips the flesh from targets.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "shujinko",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Shujinko"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -10000,20 +13125,24 @@ export const abilities: Ability[] = [
     "id": "move-shokan-stomp",
     "name": "Telestomp",
     "category": "special-move",
-    "element": null,
     "description": "Leaping off-screen and crashing down with the immense weight of four arms.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "goro",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Goro"
+      },
+      {
+        "id": "kintaro",
+        "type": "character",
+        "name": "Kintaro"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -10030,20 +13159,24 @@ export const abilities: Ability[] = [
     "id": "move-blood-tentacles",
     "name": "Blood Tentacles",
     "category": "special-move",
-    "element": null,
     "description": "Conjuring whipping tendrils of coagulated blood to lash opponents.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "kotal-kahn",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Kotal Kahn"
+      },
+      {
+        "id": "nitara",
+        "type": "character",
+        "name": "Nitara"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -10060,20 +13193,24 @@ export const abilities: Ability[] = [
     "id": "move-acid-spit",
     "name": "Corrosive Acid Spit",
     "category": "special-move",
-    "element": null,
     "description": "Ejecting caustic digestive acid that melts armor and flesh on contact.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "reptile",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Reptile"
+      },
+      {
+        "id": "erron-black",
+        "type": "character",
+        "name": "Erron Black"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -10090,20 +13227,19 @@ export const abilities: Ability[] = [
     "id": "move-soul-ball",
     "name": "Green Soul Burst",
     "category": "special-move",
-    "element": null,
     "description": "Harnessing stolen souls into an explosive sphere of spiritual energy.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "shang-tsung",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Shang Tsung"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -10120,20 +13256,19 @@ export const abilities: Ability[] = [
     "id": "move-telekinesis-slam",
     "name": "Telekinetic Slam",
     "category": "special-move",
-    "element": null,
     "description": "Lifting enemies telepathically and slamming them forcefully against the arena floor.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "kenshi",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Kenshi"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -10150,20 +13285,19 @@ export const abilities: Ability[] = [
     "id": "move-tarkatan-chop",
     "name": "Blade Fury",
     "category": "special-move",
-    "element": null,
     "description": "Rapid succession of vicious slashes from forearm arm blades.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "baraka",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Baraka"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -10180,20 +13314,19 @@ export const abilities: Ability[] = [
     "id": "move-net-tangle",
     "name": "Energy Net",
     "category": "special-move",
-    "element": null,
     "description": "Firing an electrified green plasma net that immobilizes targets.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "cyrax",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Cyrax"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -10210,20 +13343,19 @@ export const abilities: Ability[] = [
     "id": "move-missile-salvo",
     "name": "Homing Missile",
     "category": "special-move",
-    "element": null,
     "description": "Chest-mounted rocket targeting enemy coordinates with thermal tracking.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "sektor",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Sektor"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -10240,20 +13372,24 @@ export const abilities: Ability[] = [
     "id": "move-sun-ray",
     "name": "Sun God's Ray",
     "category": "special-move",
-    "element": null,
     "description": "Summoning a focused beam of sunlight that burns enemies while healing allies.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "kotal-kahn",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Kotal Kahn"
+      },
+      {
+        "id": "hotaru",
+        "type": "character",
+        "name": "Hotaru"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -10270,20 +13406,29 @@ export const abilities: Ability[] = [
     "id": "move-revolver-quickdraw",
     "name": "Sand Slam & Quickdraw",
     "category": "special-move",
-    "element": null,
     "description": "Rapid six-shooter revolver barrage accompanied by blinding Netherrealm sand.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "cassie-cage",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Cassie Cage"
+      },
+      {
+        "id": "erron-black",
+        "type": "character",
+        "name": "Erron Black"
+      },
+      {
+        "id": "reiko",
+        "type": "character",
+        "name": "Reiko"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -10300,20 +13445,19 @@ export const abilities: Ability[] = [
     "id": "move-drunken-fist",
     "name": "Drunken Fist Roll",
     "category": "special-move",
-    "element": null,
     "description": "Unpredictable tumbling footwork baffling enemy guard.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "bo-rai-cho",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Bo' Rai Cho"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -10330,20 +13474,34 @@ export const abilities: Ability[] = [
     "id": "move-flying-kick",
     "name": "Flying Dragon Kick",
     "category": "special-move",
-    "element": null,
     "description": "Liu Kang's signature horizontal flight across the screen backed by flaming chi.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "liu-kang",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Liu Kang"
+      },
+      {
+        "id": "johnny-cage",
+        "type": "character",
+        "name": "Johnny Cage"
+      },
+      {
+        "id": "li-mei",
+        "type": "character",
+        "name": "Li Mei"
+      },
+      {
+        "id": "daegon",
+        "type": "character",
+        "name": "Daegon"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -10360,20 +13518,19 @@ export const abilities: Ability[] = [
     "id": "move-square-wave",
     "name": "Square Wave Flight",
     "category": "special-move",
-    "element": null,
     "description": "Mid-air dive propelled by acrobatic Edenian momentum.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "kitana",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Kitana"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -10390,20 +13547,24 @@ export const abilities: Ability[] = [
     "id": "move-nut-punch",
     "name": "Nut Punch",
     "category": "special-move",
-    "element": null,
     "description": "Splits on the ground delivering an unexpected disabling low strike.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "johnny-cage",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Johnny Cage"
+      },
+      {
+        "id": "cassie-cage",
+        "type": "character",
+        "name": "Cassie Cage"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -10420,20 +13581,19 @@ export const abilities: Ability[] = [
     "id": "move-ring-toss",
     "name": "Energy Ring Toss",
     "category": "special-move",
-    "element": null,
     "description": "Wrist-blaster concentric sonic rings that slice through incoming projectiles.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "sonya-blade",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Sonya Blade"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -10450,20 +13610,19 @@ export const abilities: Ability[] = [
     "id": "move-tele-flurry",
     "name": "Tele-Flurry",
     "category": "special-move",
-    "element": null,
     "description": "Kenshi telepathically projects a warrior spirit to slash the opponent from afar.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "kenshi",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Kenshi"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -10480,20 +13639,24 @@ export const abilities: Ability[] = [
     "id": "move-shadow-slide",
     "name": "Shadow Slide",
     "category": "special-move",
-    "element": null,
     "description": "Noob Saibot dispatches his shadow clone sliding forward to trip the enemy.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "noob-saibot",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Noob Saibot"
+      },
+      {
+        "id": "sareena",
+        "type": "character",
+        "name": "Sareena"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -10510,20 +13673,24 @@ export const abilities: Ability[] = [
     "id": "move-air-throw",
     "name": "Aerial Combat Throw",
     "category": "special-move",
-    "element": null,
     "description": "Jax grabs the opponent out of mid-air and violently slams them to the turf.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "sonya-blade",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Sonya Blade"
+      },
+      {
+        "id": "jax",
+        "type": "character",
+        "name": "Jax Briggs"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -10540,20 +13707,29 @@ export const abilities: Ability[] = [
     "id": "move-wind-kick",
     "name": "Tornado Gale Kick",
     "category": "special-move",
-    "element": null,
     "description": "Fujin spins horizontally on a cushion of wind, striking repeatedly.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "fujin",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Fujin"
+      },
+      {
+        "id": "li-mei",
+        "type": "character",
+        "name": "Li Mei"
+      },
+      {
+        "id": "hotaru",
+        "type": "character",
+        "name": "Hotaru"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -10570,20 +13746,19 @@ export const abilities: Ability[] = [
     "id": "move-cyber-trap",
     "name": "Cryo Floor Trap",
     "category": "special-move",
-    "element": null,
     "description": "Frost releases a cryogenic ground mine that flash-freezes unobservant opponents.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "frost",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Frost"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -10600,20 +13775,19 @@ export const abilities: Ability[] = [
     "id": "move-puke-puddle",
     "name": "Hazardous Fluid Puddle",
     "category": "special-move",
-    "element": null,
     "description": "Bo' Rai Cho coats the arena floor causing approaching enemies to lose their balance.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "bo-rai-cho",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Bo' Rai Cho"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -10630,20 +13804,29 @@ export const abilities: Ability[] = [
     "id": "move-energy-spark",
     "name": "Luminescent Spark Burst",
     "category": "special-move",
-    "element": null,
     "description": "Li Mei unleashes purple festive chi sparks that juggle airborne targets.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "kenshi",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Kenshi"
+      },
+      {
+        "id": "li-mei",
+        "type": "character",
+        "name": "Li Mei"
+      },
+      {
+        "id": "motaro",
+        "type": "character",
+        "name": "Motaro"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -10660,20 +13843,19 @@ export const abilities: Ability[] = [
     "id": "move-bone-twist",
     "name": "360 Torso Contortion",
     "category": "special-move",
-    "element": null,
     "description": "Havik twists his own torso a full 360 degrees to strike backward unpredictably.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "havik",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Havik"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -10690,20 +13872,19 @@ export const abilities: Ability[] = [
     "id": "move-blazing-nitro-kick",
     "name": "Blazing Nitro Kick",
     "category": "special-move",
-    "element": null,
     "description": "Jade surrounds herself in an emerald glow, sliding or flying across the arena with a devastating strike.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "jade",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Jade"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -10720,20 +13901,19 @@ export const abilities: Ability[] = [
     "id": "move-tribomerang",
     "name": "Tribomerang Throw",
     "category": "special-move",
-    "element": null,
     "description": "Jade hurls a glowing three-pointed boomerang that can be curved upward or downward.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "jade",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Jade"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -10750,20 +13930,24 @@ export const abilities: Ability[] = [
     "id": "move-nomad-dash",
     "name": "Nomad Dash",
     "category": "special-move",
-    "element": null,
     "description": "Kabal dashes past the opponent at supersonic speed, leaving them spinning helplessly like a top.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "kabal",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Kabal"
+      },
+      {
+        "id": "mavado",
+        "type": "character",
+        "name": "Mavado"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -10780,20 +13964,19 @@ export const abilities: Ability[] = [
     "id": "move-buzzsaw",
     "name": "Buzzsaw Roll",
     "category": "special-move",
-    "element": null,
     "description": "Kabal sends a spinning serrated buzzsaw along the ground to cut opponents at ankle level.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "kabal",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Kabal"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -10810,20 +13993,19 @@ export const abilities: Ability[] = [
     "id": "move-baton-trip",
     "name": "Baton Sweep & Toss",
     "category": "special-move",
-    "element": null,
     "description": "Kurtis Stryker hooks the enemy's legs with his police baton and slams them onto their back.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "kurtis-stryker",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Kurtis Stryker"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -10840,20 +14022,29 @@ export const abilities: Ability[] = [
     "id": "move-grenade-toss",
     "name": "High/Low Grenade Toss",
     "category": "special-move",
-    "element": null,
     "description": "Stryker launches tactical concussion grenades in high or low arcs.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "sonya-blade",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Sonya Blade"
+      },
+      {
+        "id": "erron-black",
+        "type": "character",
+        "name": "Erron Black"
+      },
+      {
+        "id": "kurtis-stryker",
+        "type": "character",
+        "name": "Kurtis Stryker"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -10870,20 +14061,29 @@ export const abilities: Ability[] = [
     "id": "move-teleport-stomp",
     "name": "Shokan Drop Stomp",
     "category": "special-move",
-    "element": null,
     "description": "Sheeva leaps high into the sky and stomps violently downward onto her opponent.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "sheeva",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Sheeva"
+      },
+      {
+        "id": "reiko",
+        "type": "character",
+        "name": "Reiko"
+      },
+      {
+        "id": "motaro",
+        "type": "character",
+        "name": "Motaro"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -10900,20 +14100,19 @@ export const abilities: Ability[] = [
     "id": "move-untranslatable-rage",
     "name": "Untranslatable Rage",
     "category": "special-move",
-    "element": null,
     "description": "Sheeva grabs the opponent with all four arms, delivering thunderous headbutts and ground smashes.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "sheeva",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Sheeva"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -10930,20 +14129,19 @@ export const abilities: Ability[] = [
     "id": "move-spirit-arrow",
     "name": "Spirit Arrow",
     "category": "special-move",
-    "element": null,
     "description": "Nightwolf draws a bow made of spiritual green light, firing piercing mystic arrows.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "nightwolf",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Nightwolf"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -10960,20 +14158,19 @@ export const abilities: Ability[] = [
     "id": "move-rhino-charge",
     "name": "Rhino Charge",
     "category": "special-move",
-    "element": null,
     "description": "Nightwolf charges forward enveloped in a mystical green aura, bowling over the target.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "nightwolf",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Nightwolf"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -10990,20 +14187,19 @@ export const abilities: Ability[] = [
     "id": "move-banshee-scream",
     "name": "Levitating Banshee Scream",
     "category": "special-move",
-    "element": null,
     "description": "Sindel levitates and releases sonic shriek waves that paralyze the opponent's nervous system.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "sindel",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Sindel"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -11020,20 +14216,19 @@ export const abilities: Ability[] = [
     "id": "move-hair-whip",
     "name": "Prehensile Hair Whip",
     "category": "special-move",
-    "element": null,
     "description": "Sindel extends her magical hair like steel cords to grab, toss, and choke opponents.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "sindel",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Sindel"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -11050,20 +14245,19 @@ export const abilities: Ability[] = [
     "id": "move-ovipositor-rush",
     "name": "Ovipositor Rush",
     "category": "special-move",
-    "element": null,
     "description": "D'Vorah thrusts her razor-sharp insectoid back appendages forward in a rapid stabbing flurry.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "dvorah",
         "type": "character",
-        "name": "Scorpion"
+        "name": "D'Vorah"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -11080,20 +14274,19 @@ export const abilities: Ability[] = [
     "id": "move-bug-spray",
     "name": "Spittle Spray",
     "category": "special-move",
-    "element": null,
     "description": "D'Vorah sprays swarms of toxic larvae and bugs that bite and disorient the target.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "dvorah",
         "type": "character",
-        "name": "Scorpion"
+        "name": "D'Vorah"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -11110,20 +14303,19 @@ export const abilities: Ability[] = [
     "id": "move-bionic-dash",
     "name": "Bionic Rocket Dash",
     "category": "special-move",
-    "element": null,
     "description": "Jacqui Briggs ignites rocket thrusters on her gauntlets, driving an explosive punch into the target.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "jacqui",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Jacqui Briggs"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -11140,20 +14332,19 @@ export const abilities: Ability[] = [
     "id": "move-shotgun-blast",
     "name": "Gauntlet Shotgun Blast",
     "category": "special-move",
-    "element": null,
     "description": "Jacqui fires concentrated kinetic buckshot directly from her wrist cannons.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "jacqui",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Jacqui Briggs"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -11170,20 +14361,19 @@ export const abilities: Ability[] = [
     "id": "move-whip-strike",
     "name": "Shirai Ryu Whip Flurry",
     "category": "special-move",
-    "element": null,
     "description": "Takeda Takahashi cracks his bladed plasma whips in acrobatic circles around the target.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "takeda",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Takeda Takahashi"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -11200,20 +14390,19 @@ export const abilities: Ability[] = [
     "id": "move-shirai-ryu-phase",
     "name": "Shirai Ryu Phase Teleport",
     "category": "special-move",
-    "element": null,
     "description": "Takeda drops through a shadow smoke portal, reappearing behind the opponent with a kick.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "takeda",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Takeda Takahashi"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -11230,20 +14419,19 @@ export const abilities: Ability[] = [
     "id": "move-straight-shot",
     "name": "Straight Arrow Shot",
     "category": "special-move",
-    "element": null,
     "description": "Kung Jin notches and fires Shaolin arrows with pinpoint accuracy at high velocity.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "kung-jin",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Kung Jin"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -11260,20 +14448,19 @@ export const abilities: Ability[] = [
     "id": "move-lunge-kick",
     "name": "Bo Vault Kick",
     "category": "special-move",
-    "element": null,
     "description": "Kung Jin plants his combat bow as a pole vault, launching both feet into the enemy's chest.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "kung-jin",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Kung Jin"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -11290,20 +14477,19 @@ export const abilities: Ability[] = [
     "id": "move-boulder-bash",
     "name": "Boulder Bash",
     "category": "special-move",
-    "element": null,
     "description": "Elder Goddess Cetrion telekinetically hurls massive earthen boulders at the opponent.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "cetrion",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Cetrion"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -11320,20 +14506,19 @@ export const abilities: Ability[] = [
     "id": "move-hells-wrath",
     "name": "Hell's Wrath Tendril",
     "category": "special-move",
-    "element": null,
     "description": "Cetrion commands fiery roots to burst from subterranean depths, gripping the target.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "cetrion",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Cetrion"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -11350,20 +14535,19 @@ export const abilities: Ability[] = [
     "id": "move-shotel-strike",
     "name": "Demonic Shotel Flurry",
     "category": "special-move",
-    "element": null,
     "description": "Kollector slashes with curved shotel blades using four arms simultaneously.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "kollector",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Kollector"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -11380,20 +14564,19 @@ export const abilities: Ability[] = [
     "id": "move-demonic-mace",
     "name": "Demonic Mace Toss",
     "category": "special-move",
-    "element": null,
     "description": "Kollector whips out a spiked mace from his magical collection satchel.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "kollector",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Kollector"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -11410,20 +14593,24 @@ export const abilities: Ability[] = [
     "id": "move-dragon-breath",
     "name": "Dragon King Fire Breath",
     "category": "special-move",
-    "element": null,
     "description": "Onaga unleashes a devastating cone of primordial dragon fire capable of incinerating armies.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "kintaro",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Kintaro"
+      },
+      {
+        "id": "onaga",
+        "type": "character",
+        "name": "Onaga"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -11440,20 +14627,24 @@ export const abilities: Ability[] = [
     "id": "move-dragon-slam",
     "name": "Titanic Dragon Slam",
     "category": "special-move",
-    "element": null,
     "description": "Onaga flies into the air and crashes down with unyielding draconic mass.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "goro",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Goro"
+      },
+      {
+        "id": "onaga",
+        "type": "character",
+        "name": "Onaga"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -11470,20 +14661,19 @@ export const abilities: Ability[] = [
     "id": "move-mimic-mastery",
     "name": "Ape Mimicry",
     "category": "special-move",
-    "element": null,
     "description": "Shujinko draws upon the martial styles learned from masters across all realms.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "shujinko",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Shujinko"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -11500,20 +14690,19 @@ export const abilities: Ability[] = [
     "id": "move-charging-spear",
     "name": "Charging Spartan Spear",
     "category": "special-move",
-    "element": null,
     "description": "Reiko charges across the battlefield thrusting a ceremonial war spear.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "reiko",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Reiko"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -11530,20 +14719,24 @@ export const abilities: Ability[] = [
     "id": "move-blood-spit",
     "name": "Hemomantic Blood Spit",
     "category": "special-move",
-    "element": null,
     "description": "Nitara expels a sphere of vampiric blood that drains opponent vitality.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "havik",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Havik"
+      },
+      {
+        "id": "nitara",
+        "type": "character",
+        "name": "Nitara"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -11560,20 +14753,19 @@ export const abilities: Ability[] = [
     "id": "move-skull-daggers",
     "name": "Demon Skull Dagger",
     "category": "special-move",
-    "element": null,
     "description": "Sareena throws Netherrealm skull-engraved daggers with shadow trajectory.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "sareena",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Sareena"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -11590,20 +14782,19 @@ export const abilities: Ability[] = [
     "id": "move-heavenly-light",
     "name": "Heavenly Cleansing Light",
     "category": "special-move",
-    "element": null,
     "description": "Ashrah channels the holy energy of the Kriss, blinding demons with pure light.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "ashrah",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Ashrah"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -11620,20 +14811,19 @@ export const abilities: Ability[] = [
     "id": "move-lava-burst",
     "name": "Order Lava Eruption",
     "category": "special-move",
-    "element": null,
     "description": "Hotaru summons molten magma jets from Seido's core to incinerate anarchists.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "hotaru",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Hotaru"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -11650,20 +14840,19 @@ export const abilities: Ability[] = [
     "id": "move-grapple-hook-kick",
     "name": "Elastic Grapple Kick",
     "category": "special-move",
-    "element": null,
     "description": "Mavado slingshots himself across the screen using high-tension bungee cables.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "mavado",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Mavado"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -11680,20 +14869,19 @@ export const abilities: Ability[] = [
     "id": "move-centaur-charge",
     "name": "Centaur Gallop Charge",
     "category": "special-move",
-    "element": null,
     "description": "Motaro charges on all four hooves, trampling anyone in his path.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "motaro",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Motaro"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -11710,20 +14898,19 @@ export const abilities: Ability[] = [
     "id": "move-fire-fist",
     "name": "Elemental Conflagration",
     "category": "special-move",
-    "element": null,
     "description": "Blaze ignites his body in an inferno, crushing opponents with molten magma strikes.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "blaze",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Blaze"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -11740,7 +14927,6 @@ export const abilities: Ability[] = [
     "id": "fatality-toasty",
     "name": "Fatality: Toasty!",
     "category": "fatality",
-    "element": null,
     "description": "Removing the mask to reveal a flaming skull and incinerating the opponent to ashes.",
     "characters": [
       {
@@ -11753,7 +14939,7 @@ export const abilities: Ability[] = [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -11770,20 +14956,19 @@ export const abilities: Ability[] = [
     "id": "fatality-spine-rip",
     "name": "Fatality: Spine Rip",
     "category": "fatality",
-    "element": null,
     "description": "Grabbing the victim's neck and cleanly ripping out their head and spine.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "sub-zero",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Sub-Zero"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -11800,20 +14985,19 @@ export const abilities: Ability[] = [
     "id": "fatality-dragon-bite",
     "name": "Fatality: Dragon Feast",
     "category": "fatality",
-    "element": null,
     "description": "Morphing into a massive dragon that bites the opponent's torso in half.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "liu-kang",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Liu Kang"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -11830,20 +15014,19 @@ export const abilities: Ability[] = [
     "id": "fatality-fan-decapitation",
     "name": "Fatality: Decapitating Fans",
     "category": "fatality",
-    "element": null,
     "description": "Slicing off the opponent's head with a swift flick of dual steel war fans.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "kitana",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Kitana"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -11860,20 +15043,19 @@ export const abilities: Ability[] = [
     "id": "fatality-kiss-of-death",
     "name": "Fatality: Kiss of Death",
     "category": "fatality",
-    "element": null,
     "description": "Blowing a glowing kiss of energy that causes the opponent to violently detonate.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "sonya-blade",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Sonya Blade"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -11890,20 +15072,24 @@ export const abilities: Ability[] = [
     "id": "fatality-shokan-tear",
     "name": "Fatality: Limb Disassembly",
     "category": "fatality",
-    "element": null,
     "description": "Goro grabs both arms and legs, tearing the opponent into four separate pieces.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "goro",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Goro"
+      },
+      {
+        "id": "kintaro",
+        "type": "character",
+        "name": "Kintaro"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -11920,20 +15106,19 @@ export const abilities: Ability[] = [
     "id": "fatality-bow-before-me",
     "name": "Fatality: Bow Before Me",
     "category": "fatality",
-    "element": null,
     "description": "Jade vaults on her staff, driving both ends through the opponent's eye sockets.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "jade",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Jade"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -11950,20 +15135,19 @@ export const abilities: Ability[] = [
     "id": "fatality-road-rash",
     "name": "Fatality: Road Rash",
     "category": "fatality",
-    "element": null,
     "description": "Kabal drags the opponent at super-speed face first across the concrete, grinding their skull away.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "kabal",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Kabal"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -11980,20 +15164,19 @@ export const abilities: Ability[] = [
     "id": "fatality-time-served",
     "name": "Fatality: Time Served",
     "category": "fatality",
-    "element": null,
     "description": "Stryker plants a grenade in the target's chest, shoots them with a taser, and detonates the charge.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "kurtis-stryker",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Kurtis Stryker"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -12010,20 +15193,19 @@ export const abilities: Ability[] = [
     "id": "fatality-spine-ripper",
     "name": "Fatality: Lend a Hand",
     "category": "fatality",
-    "element": null,
     "description": "Sheeva grabs both sets of limbs and tears the flesh completely from the skeletal frame.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "sheeva",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Sheeva"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -12040,20 +15222,19 @@ export const abilities: Ability[] = [
     "id": "fatality-war-dance",
     "name": "Fatality: Kompshina Calling",
     "category": "fatality",
-    "element": null,
     "description": "Nightwolf embeds his tomahawks into the victim's collarbones, summoning a massive lightning bolt to split them.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "nightwolf",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Nightwolf"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -12070,20 +15251,19 @@ export const abilities: Ability[] = [
     "id": "fatality-scream-queen",
     "name": "Fatality: Scream Queen",
     "category": "fatality",
-    "element": null,
     "description": "Sindel screams directly into the victim's mouth, causing their eyes and entrails to explode outward.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "sindel",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Sindel"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -12100,20 +15280,19 @@ export const abilities: Ability[] = [
     "id": "fatality-infestation",
     "name": "Fatality: Bug Me",
     "category": "fatality",
-    "element": null,
     "description": "D'Vorah fills the victim's torso with ravenous wasp larvae that burst out from the ribcage.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "dvorah",
         "type": "character",
-        "name": "Scorpion"
+        "name": "D'Vorah"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -12130,20 +15309,19 @@ export const abilities: Ability[] = [
     "id": "fatality-spider-mines",
     "name": "Fatality: Spider Mines",
     "category": "fatality",
-    "element": null,
     "description": "Jacqui Briggs deploys spider mines that burrow into the opponent's joints and detonate simultaneously.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "jacqui",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Jacqui Briggs"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -12160,20 +15338,19 @@ export const abilities: Ability[] = [
     "id": "fatality-whip-it-good",
     "name": "Fatality: Whip It Good",
     "category": "fatality",
-    "element": null,
     "description": "Takeda loops his serrated whips around the target's neck and joints, yanking them into clean cubes.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "takeda",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Takeda Takahashi"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -12190,20 +15367,19 @@ export const abilities: Ability[] = [
     "id": "fatality-target-practice",
     "name": "Fatality: Target Practice",
     "category": "fatality",
-    "element": null,
     "description": "Kung Jin pins the target with three rapid arrows before piercing the forehead with a flaming shaft.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "kung-jin",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Kung Jin"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -12220,20 +15396,19 @@ export const abilities: Ability[] = [
     "id": "fatality-good-and-evil",
     "name": "Fatality: Good and Evil",
     "category": "fatality",
-    "element": null,
     "description": "Cetrion grows to planetary scale and blasts a beam of pure cosmic light from the cosmos.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "cetrion",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Cetrion"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -12250,20 +15425,19 @@ export const abilities: Ability[] = [
     "id": "fatality-for-the-kollection",
     "name": "Fatality: For the Kollection",
     "category": "fatality",
-    "element": null,
     "description": "Kollector methodically carves out the opponent's heart, head, and organs, packing them neatly in his satchel.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "kollector",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Kollector"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -12280,20 +15454,19 @@ export const abilities: Ability[] = [
     "id": "fatality-face-crusher",
     "name": "Fatality: Five Point Strike",
     "category": "fatality",
-    "element": null,
     "description": "Shujinko strikes vital meridian pressure points, causing the victim's body to cave in on itself.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "shujinko",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Shujinko"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -12310,20 +15483,19 @@ export const abilities: Ability[] = [
     "id": "fatality-vaeternus-drain",
     "name": "Fatality: Blood Feast",
     "category": "fatality",
-    "element": null,
     "description": "Nitara rips open the victim's carotid artery with fangs and claws, drinking them completely dry.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "nitara",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Nitara"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
@@ -12340,26 +15512,1176 @@ export const abilities: Ability[] = [
     "id": "fatality-divine-purification",
     "name": "Fatality: Heavenly Cleansing",
     "category": "fatality",
-    "element": null,
     "description": "Ashrah pierces the demon's heart with the Kriss, causing holy blue light to incinerate the body from within.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "ashrah",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Ashrah"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "sources": [
       {
         "id": "fandom-fatality-divine-purification",
         "title": "Mortal Kombat Wiki \u2014 Fatality: Heavenly Cleansing",
+        "url": "https://mortalkombat.fandom.com",
+        "sourceType": "community-wiki",
+        "verificationStatus": "verified"
+      }
+    ]
+  },
+  {
+    "id": "move-sai-toss",
+    "name": "Soaring Sai Toss",
+    "category": "special-move",
+    "description": "Melempar sepasang sai bermuatan energi magis ke arah lawan.",
+    "characters": [
+      {
+        "id": "mileena",
+        "type": "character",
+        "name": "Mileena"
+      }
+    ],
+    "games": [
+      {
+        "id": "mk-1992",
+        "type": "game",
+        "name": "Mortal Kombat Franchise"
+      }
+    ],
+    "sources": [
+      {
+        "id": "fandom-move-sai-toss",
+        "title": "Mortal Kombat Wiki \u2014 Soaring Sai Toss",
+        "url": "https://mortalkombat.fandom.com",
+        "sourceType": "community-wiki",
+        "verificationStatus": "verified"
+      }
+    ]
+  },
+  {
+    "id": "move-ball-roll",
+    "name": "Rolling Thunder (Ball Roll)",
+    "category": "special-move",
+    "description": "Menggulung tubuh menjadi bola maut dan menerjang kaki musuh dengan kecepatan tinggi.",
+    "characters": [
+      {
+        "id": "mileena",
+        "type": "character",
+        "name": "Mileena"
+      }
+    ],
+    "games": [
+      {
+        "id": "mk-1992",
+        "type": "game",
+        "name": "Mortal Kombat Franchise"
+      }
+    ],
+    "sources": [
+      {
+        "id": "fandom-move-ball-roll",
+        "title": "Mortal Kombat Wiki \u2014 Rolling Thunder (Ball Roll)",
+        "url": "https://mortalkombat.fandom.com",
+        "sourceType": "community-wiki",
+        "verificationStatus": "verified"
+      }
+    ]
+  },
+  {
+    "id": "move-leaping-neck-bite",
+    "name": "Leaping Lunch (Neck Bite)",
+    "category": "special-move",
+    "description": "Melompat ke pundak lawan dan merobek leher mereka dengan taring Tarkatan yang buas.",
+    "characters": [
+      {
+        "id": "mileena",
+        "type": "character",
+        "name": "Mileena"
+      }
+    ],
+    "games": [
+      {
+        "id": "mk-1992",
+        "type": "game",
+        "name": "Mortal Kombat Franchise"
+      }
+    ],
+    "sources": [
+      {
+        "id": "fandom-move-leaping-neck-bite",
+        "title": "Mortal Kombat Wiki \u2014 Leaping Lunch (Neck Bite)",
+        "url": "https://mortalkombat.fandom.com",
+        "sourceType": "community-wiki",
+        "verificationStatus": "verified"
+      }
+    ]
+  },
+  {
+    "id": "move-smoke-cloud",
+    "name": "Smoke Cloud Teleport",
+    "category": "special-move",
+    "description": "Menyelimuti diri dalam kabut asap pekat lalu muncul di belakang lawan.",
+    "characters": [
+      {
+        "id": "smoke",
+        "type": "character",
+        "name": "Smoke"
+      }
+    ],
+    "games": [
+      {
+        "id": "mk-1992",
+        "type": "game",
+        "name": "Mortal Kombat Franchise"
+      }
+    ],
+    "sources": [
+      {
+        "id": "fandom-move-smoke-cloud",
+        "title": "Mortal Kombat Wiki \u2014 Smoke Cloud Teleport",
+        "url": "https://mortalkombat.fandom.com",
+        "sourceType": "community-wiki",
+        "verificationStatus": "verified"
+      }
+    ]
+  },
+  {
+    "id": "move-smoke-bomb",
+    "name": "Smoke Bomb Stun",
+    "category": "special-move",
+    "description": "Melempar bom asap pekat yang melumpuhkan pandangan dan pergerakan lawan.",
+    "characters": [
+      {
+        "id": "smoke",
+        "type": "character",
+        "name": "Smoke"
+      }
+    ],
+    "games": [
+      {
+        "id": "mk-1992",
+        "type": "game",
+        "name": "Mortal Kombat Franchise"
+      }
+    ],
+    "sources": [
+      {
+        "id": "fandom-move-smoke-bomb",
+        "title": "Mortal Kombat Wiki \u2014 Smoke Bomb Stun",
+        "url": "https://mortalkombat.fandom.com",
+        "sourceType": "community-wiki",
+        "verificationStatus": "verified"
+      }
+    ]
+  },
+  {
+    "id": "invisibility",
+    "name": "Chameleon Camouflage (Invisibility)",
+    "category": "ability",
+    "description": "Kemampuan memanipulasi cahaya atau asap untuk menghilang tanpa jejak dari pandangan lawan.",
+    "characters": [
+      {
+        "id": "smoke",
+        "type": "character",
+        "name": "Smoke"
+      },
+      {
+        "id": "reptile",
+        "type": "character",
+        "name": "Reptile"
+      }
+    ],
+    "games": [
+      {
+        "id": "mk-1992",
+        "type": "game",
+        "name": "Mortal Kombat Franchise"
+      }
+    ],
+    "sources": [
+      {
+        "id": "fandom-invisibility",
+        "title": "Mortal Kombat Wiki \u2014 Chameleon Camouflage (Invisibility)",
+        "url": "https://mortalkombat.fandom.com",
+        "sourceType": "community-wiki",
+        "verificationStatus": "verified"
+      }
+    ]
+  },
+  {
+    "id": "move-chest-saw",
+    "name": "Chest Saw Cutter",
+    "category": "special-move",
+    "description": "Membuka plat dada sibernetik untuk meluncurkan bilah gergaji bundar berputar tinggi.",
+    "characters": [
+      {
+        "id": "cyrax",
+        "type": "character",
+        "name": "Cyrax"
+      }
+    ],
+    "games": [
+      {
+        "id": "mk-1992",
+        "type": "game",
+        "name": "Mortal Kombat Franchise"
+      }
+    ],
+    "sources": [
+      {
+        "id": "fandom-move-chest-saw",
+        "title": "Mortal Kombat Wiki \u2014 Chest Saw Cutter",
+        "url": "https://mortalkombat.fandom.com",
+        "sourceType": "community-wiki",
+        "verificationStatus": "verified"
+      }
+    ]
+  },
+  {
+    "id": "move-exploding-bomb",
+    "name": "Timed Cyber Bomb",
+    "category": "special-move",
+    "description": "Menjatuhkan bom sibernetik dengan sensor jarak dekat yang meledakkan target ke udara.",
+    "characters": [
+      {
+        "id": "cyrax",
+        "type": "character",
+        "name": "Cyrax"
+      }
+    ],
+    "games": [
+      {
+        "id": "mk-1992",
+        "type": "game",
+        "name": "Mortal Kombat Franchise"
+      }
+    ],
+    "sources": [
+      {
+        "id": "fandom-move-exploding-bomb",
+        "title": "Mortal Kombat Wiki \u2014 Timed Cyber Bomb",
+        "url": "https://mortalkombat.fandom.com",
+        "sourceType": "community-wiki",
+        "verificationStatus": "verified"
+      }
+    ]
+  },
+  {
+    "id": "move-flamethrower",
+    "name": "Cybernetic Flamethrower",
+    "category": "special-move",
+    "description": "Semburan api membara dari kompartemen tangan sibernetik Sektor.",
+    "characters": [
+      {
+        "id": "sektor",
+        "type": "character",
+        "name": "Sektor"
+      }
+    ],
+    "games": [
+      {
+        "id": "mk-1992",
+        "type": "game",
+        "name": "Mortal Kombat Franchise"
+      }
+    ],
+    "sources": [
+      {
+        "id": "fandom-move-flamethrower",
+        "title": "Mortal Kombat Wiki \u2014 Cybernetic Flamethrower",
+        "url": "https://mortalkombat.fandom.com",
+        "sourceType": "community-wiki",
+        "verificationStatus": "verified"
+      }
+    ]
+  },
+  {
+    "id": "move-teleport-uppercut",
+    "name": "Teleport Rocket Uppercut",
+    "category": "special-move",
+    "description": "Menghilang ke dalam tanah dan meluncur ke atas menghantam dagu lawan dengan roket pendorong.",
+    "characters": [
+      {
+        "id": "sektor",
+        "type": "character",
+        "name": "Sektor"
+      }
+    ],
+    "games": [
+      {
+        "id": "mk-1992",
+        "type": "game",
+        "name": "Mortal Kombat Franchise"
+      }
+    ],
+    "sources": [
+      {
+        "id": "fandom-move-teleport-uppercut",
+        "title": "Mortal Kombat Wiki \u2014 Teleport Rocket Uppercut",
+        "url": "https://mortalkombat.fandom.com",
+        "sourceType": "community-wiki",
+        "verificationStatus": "verified"
+      }
+    ]
+  },
+  {
+    "id": "move-compactor",
+    "name": "Chest Compactor Crush",
+    "category": "special-move",
+    "description": "Alat pres mekanik yang keluar dari dada untuk meremukkan tubuh lawan.",
+    "characters": [
+      {
+        "id": "sektor",
+        "type": "character",
+        "name": "Sektor"
+      }
+    ],
+    "games": [
+      {
+        "id": "mk-1992",
+        "type": "game",
+        "name": "Mortal Kombat Franchise"
+      }
+    ],
+    "sources": [
+      {
+        "id": "fandom-move-compactor",
+        "title": "Mortal Kombat Wiki \u2014 Chest Compactor Crush",
+        "url": "https://mortalkombat.fandom.com",
+        "sourceType": "community-wiki",
+        "verificationStatus": "verified"
+      }
+    ]
+  },
+  {
+    "id": "move-wrath-hammer",
+    "name": "Wrath Hammer Slam",
+    "category": "special-move",
+    "description": "Hantaman palu raksasa Wrath Hammer yang mengguncang tanah dan mematahkan tulang musuh.",
+    "characters": [
+      {
+        "id": "shao-kahn",
+        "type": "character",
+        "name": "Shao Kahn"
+      }
+    ],
+    "games": [
+      {
+        "id": "mk-1992",
+        "type": "game",
+        "name": "Mortal Kombat Franchise"
+      }
+    ],
+    "sources": [
+      {
+        "id": "fandom-move-wrath-hammer",
+        "title": "Mortal Kombat Wiki \u2014 Wrath Hammer Slam",
+        "url": "https://mortalkombat.fandom.com",
+        "sourceType": "community-wiki",
+        "verificationStatus": "verified"
+      }
+    ]
+  },
+  {
+    "id": "move-shoulder-charge",
+    "name": "Shao Kahn Shoulder Charge",
+    "category": "special-move",
+    "description": "Terjangan bahu bertenaga dewa yang dilapisi aura hijau kekaisaran Outworld.",
+    "characters": [
+      {
+        "id": "shao-kahn",
+        "type": "character",
+        "name": "Shao Kahn"
+      }
+    ],
+    "games": [
+      {
+        "id": "mk-1992",
+        "type": "game",
+        "name": "Mortal Kombat Franchise"
+      }
+    ],
+    "sources": [
+      {
+        "id": "fandom-move-shoulder-charge",
+        "title": "Mortal Kombat Wiki \u2014 Shao Kahn Shoulder Charge",
+        "url": "https://mortalkombat.fandom.com",
+        "sourceType": "community-wiki",
+        "verificationStatus": "verified"
+      }
+    ]
+  },
+  {
+    "id": "move-light-spear",
+    "name": "Imperial Light Spear",
+    "category": "special-move",
+    "description": "Tombak energi mistis murni yang dilemparkan menembus pertahanan lawan.",
+    "characters": [
+      {
+        "id": "shao-kahn",
+        "type": "character",
+        "name": "Shao Kahn"
+      }
+    ],
+    "games": [
+      {
+        "id": "mk-1992",
+        "type": "game",
+        "name": "Mortal Kombat Franchise"
+      }
+    ],
+    "sources": [
+      {
+        "id": "fandom-move-light-spear",
+        "title": "Mortal Kombat Wiki \u2014 Imperial Light Spear",
+        "url": "https://mortalkombat.fandom.com",
+        "sourceType": "community-wiki",
+        "verificationStatus": "verified"
+      }
+    ]
+  },
+  {
+    "id": "move-emperor-shield",
+    "name": "Emperor's Repelling Shield",
+    "category": "special-move",
+    "description": "Perisai energi yang memantulkan proyektil lawan kembali ke penembaknya.",
+    "characters": [
+      {
+        "id": "shao-kahn",
+        "type": "character",
+        "name": "Shao Kahn"
+      }
+    ],
+    "games": [
+      {
+        "id": "mk-1992",
+        "type": "game",
+        "name": "Mortal Kombat Franchise"
+      }
+    ],
+    "sources": [
+      {
+        "id": "fandom-move-emperor-shield",
+        "title": "Mortal Kombat Wiki \u2014 Emperor's Repelling Shield",
+        "url": "https://mortalkombat.fandom.com",
+        "sourceType": "community-wiki",
+        "verificationStatus": "verified"
+      }
+    ]
+  },
+  {
+    "id": "move-surging-fire",
+    "name": "Surging Fireball",
+    "category": "special-move",
+    "description": "Bola api Edenian mistis ungu yang diluncurkan dari udara atau tanah.",
+    "characters": [
+      {
+        "id": "tanya",
+        "type": "character",
+        "name": "Tanya"
+      }
+    ],
+    "games": [
+      {
+        "id": "mk-1992",
+        "type": "game",
+        "name": "Mortal Kombat Franchise"
+      }
+    ],
+    "sources": [
+      {
+        "id": "fandom-move-surging-fire",
+        "title": "Mortal Kombat Wiki \u2014 Surging Fireball",
+        "url": "https://mortalkombat.fandom.com",
+        "sourceType": "community-wiki",
+        "verificationStatus": "verified"
+      }
+    ]
+  },
+  {
+    "id": "move-split-flip-kick",
+    "name": "Split-Flip Kick",
+    "category": "special-move",
+    "description": "Tendangan akrobatik salto mematikan yang memecah konsentrasi musuh.",
+    "characters": [
+      {
+        "id": "tanya",
+        "type": "character",
+        "name": "Tanya"
+      }
+    ],
+    "games": [
+      {
+        "id": "mk-1992",
+        "type": "game",
+        "name": "Mortal Kombat Franchise"
+      }
+    ],
+    "sources": [
+      {
+        "id": "fandom-move-split-flip-kick",
+        "title": "Mortal Kombat Wiki \u2014 Split-Flip Kick",
+        "url": "https://mortalkombat.fandom.com",
+        "sourceType": "community-wiki",
+        "verificationStatus": "verified"
+      }
+    ]
+  },
+  {
+    "id": "move-tonfa-flurry",
+    "name": "Kobu Jutsu Tonfa Flurry",
+    "category": "special-move",
+    "description": "Kombinasi serangan tongkat tonfa berbilah tajam dari Umgadi.",
+    "characters": [
+      {
+        "id": "tanya",
+        "type": "character",
+        "name": "Tanya"
+      }
+    ],
+    "games": [
+      {
+        "id": "mk-1992",
+        "type": "game",
+        "name": "Mortal Kombat Franchise"
+      }
+    ],
+    "sources": [
+      {
+        "id": "fandom-move-tonfa-flurry",
+        "title": "Mortal Kombat Wiki \u2014 Kobu Jutsu Tonfa Flurry",
+        "url": "https://mortalkombat.fandom.com",
+        "sourceType": "community-wiki",
+        "verificationStatus": "verified"
+      }
+    ]
+  },
+  {
+    "id": "move-forceball",
+    "name": "Corrosive Forceball",
+    "category": "special-move",
+    "description": "Bola lendir asam Zaterran melayang yang menarik dan menjatuhkan musuh.",
+    "characters": [
+      {
+        "id": "reptile",
+        "type": "character",
+        "name": "Reptile"
+      }
+    ],
+    "games": [
+      {
+        "id": "mk-1992",
+        "type": "game",
+        "name": "Mortal Kombat Franchise"
+      }
+    ],
+    "sources": [
+      {
+        "id": "fandom-move-forceball",
+        "title": "Mortal Kombat Wiki \u2014 Corrosive Forceball",
+        "url": "https://mortalkombat.fandom.com",
+        "sourceType": "community-wiki",
+        "verificationStatus": "verified"
+      }
+    ]
+  },
+  {
+    "id": "move-reptile-slide",
+    "name": "Acidic Reptilian Slide",
+    "category": "special-move",
+    "description": "Seluncuran cepat di atas lapisan lendir asam yang menyapu kaki lawan.",
+    "characters": [
+      {
+        "id": "reptile",
+        "type": "character",
+        "name": "Reptile"
+      }
+    ],
+    "games": [
+      {
+        "id": "mk-1992",
+        "type": "game",
+        "name": "Mortal Kombat Franchise"
+      }
+    ],
+    "sources": [
+      {
+        "id": "fandom-move-reptile-slide",
+        "title": "Mortal Kombat Wiki \u2014 Acidic Reptilian Slide",
+        "url": "https://mortalkombat.fandom.com",
+        "sourceType": "community-wiki",
+        "verificationStatus": "verified"
+      }
+    ]
+  },
+  {
+    "id": "move-eye-laser",
+    "name": "Cybernetic Eye Laser",
+    "category": "special-move",
+    "description": "Tembakan sinar laser merah berdaya bakar tinggi dari plat mata sibernetik Kano.",
+    "characters": [
+      {
+        "id": "kano",
+        "type": "character",
+        "name": "Kano"
+      }
+    ],
+    "games": [
+      {
+        "id": "mk-1992",
+        "type": "game",
+        "name": "Mortal Kombat Franchise"
+      }
+    ],
+    "sources": [
+      {
+        "id": "fandom-move-eye-laser",
+        "title": "Mortal Kombat Wiki \u2014 Cybernetic Eye Laser",
+        "url": "https://mortalkombat.fandom.com",
+        "sourceType": "community-wiki",
+        "verificationStatus": "verified"
+      }
+    ]
+  },
+  {
+    "id": "move-knife-toss",
+    "name": "Heart-Seeker Knife Toss",
+    "category": "special-move",
+    "description": "Lemparan pisau berburu bergerigi kembar yang menancap akurat ke titik vital lawan.",
+    "characters": [
+      {
+        "id": "kano",
+        "type": "character",
+        "name": "Kano"
+      }
+    ],
+    "games": [
+      {
+        "id": "mk-1992",
+        "type": "game",
+        "name": "Mortal Kombat Franchise"
+      }
+    ],
+    "sources": [
+      {
+        "id": "fandom-move-knife-toss",
+        "title": "Mortal Kombat Wiki \u2014 Heart-Seeker Knife Toss",
+        "url": "https://mortalkombat.fandom.com",
+        "sourceType": "community-wiki",
+        "verificationStatus": "verified"
+      }
+    ]
+  },
+  {
+    "id": "move-blade-spark",
+    "name": "Tarkatan Blade Spark",
+    "category": "special-move",
+    "description": "Gesekan cepat bilah lengan bertulang menghasilkan percikan api tajam ke arah lawan.",
+    "characters": [
+      {
+        "id": "baraka",
+        "type": "character",
+        "name": "Baraka"
+      },
+      {
+        "id": "kotal-kahn",
+        "type": "character",
+        "name": "Kotal Kahn"
+      }
+    ],
+    "games": [
+      {
+        "id": "mk-1992",
+        "type": "game",
+        "name": "Mortal Kombat Franchise"
+      }
+    ],
+    "sources": [
+      {
+        "id": "fandom-move-blade-spark",
+        "title": "Mortal Kombat Wiki \u2014 Tarkatan Blade Spark",
+        "url": "https://mortalkombat.fandom.com",
+        "sourceType": "community-wiki",
+        "verificationStatus": "verified"
+      }
+    ]
+  },
+  {
+    "id": "move-blade-spin",
+    "name": "Tarkatan Blade Spin",
+    "category": "special-move",
+    "description": "Putaran tornado bilah lengan yang merobek siapa pun yang mendekat.",
+    "characters": [
+      {
+        "id": "baraka",
+        "type": "character",
+        "name": "Baraka"
+      }
+    ],
+    "games": [
+      {
+        "id": "mk-1992",
+        "type": "game",
+        "name": "Mortal Kombat Franchise"
+      }
+    ],
+    "sources": [
+      {
+        "id": "fandom-move-blade-spin",
+        "title": "Mortal Kombat Wiki \u2014 Tarkatan Blade Spin",
+        "url": "https://mortalkombat.fandom.com",
+        "sourceType": "community-wiki",
+        "verificationStatus": "verified"
+      }
+    ]
+  },
+  {
+    "id": "temporal-reversal",
+    "name": "Temporal Reversal (Time Rewind)",
+    "category": "ability",
+    "description": "Memutar balik waktu tubuh sendiri beberapa detik untuk memulihkan kesehatan dan posisi.",
+    "characters": [
+      {
+        "id": "geras",
+        "type": "character",
+        "name": "Geras"
+      }
+    ],
+    "games": [
+      {
+        "id": "mk-1992",
+        "type": "game",
+        "name": "Mortal Kombat Franchise"
+      }
+    ],
+    "sources": [
+      {
+        "id": "fandom-temporal-reversal",
+        "title": "Mortal Kombat Wiki \u2014 Temporal Reversal (Time Rewind)",
+        "url": "https://mortalkombat.fandom.com",
+        "sourceType": "community-wiki",
+        "verificationStatus": "verified"
+      }
+    ]
+  },
+  {
+    "id": "sand-manipulation",
+    "name": "Titan Sand Manipulation",
+    "category": "ability",
+    "description": "Membentuk pasir waktu abadi menjadi palu, dinding pertahanan, atau jebakan temporal.",
+    "characters": [
+      {
+        "id": "geras",
+        "type": "character",
+        "name": "Geras"
+      }
+    ],
+    "games": [
+      {
+        "id": "mk-1992",
+        "type": "game",
+        "name": "Mortal Kombat Franchise"
+      }
+    ],
+    "sources": [
+      {
+        "id": "fandom-sand-manipulation",
+        "title": "Mortal Kombat Wiki \u2014 Titan Sand Manipulation",
+        "url": "https://mortalkombat.fandom.com",
+        "sourceType": "community-wiki",
+        "verificationStatus": "verified"
+      }
+    ]
+  },
+  {
+    "id": "temporal-manipulation",
+    "name": "Chronokinesis (Time Mastery)",
+    "category": "ability",
+    "description": "Pengendalian absolut terhadap aliran masa lalu, masa kini, dan masa depan.",
+    "characters": [
+      {
+        "id": "kronika",
+        "type": "character",
+        "name": "Kronika"
+      }
+    ],
+    "games": [
+      {
+        "id": "mk-1992",
+        "type": "game",
+        "name": "Mortal Kombat Franchise"
+      }
+    ],
+    "sources": [
+      {
+        "id": "fandom-temporal-manipulation",
+        "title": "Mortal Kombat Wiki \u2014 Chronokinesis (Time Mastery)",
+        "url": "https://mortalkombat.fandom.com",
+        "sourceType": "community-wiki",
+        "verificationStatus": "verified"
+      }
+    ]
+  },
+  {
+    "id": "move-hourglass-rewind",
+    "name": "Hourglass Epoch Rewind",
+    "category": "special-move",
+    "description": "Memanipulasi pasir Hourglass untuk mereset kontinuitas sejarah semesta.",
+    "characters": [
+      {
+        "id": "kronika",
+        "type": "character",
+        "name": "Kronika"
+      }
+    ],
+    "games": [
+      {
+        "id": "mk-1992",
+        "type": "game",
+        "name": "Mortal Kombat Franchise"
+      }
+    ],
+    "sources": [
+      {
+        "id": "fandom-move-hourglass-rewind",
+        "title": "Mortal Kombat Wiki \u2014 Hourglass Epoch Rewind",
+        "url": "https://mortalkombat.fandom.com",
+        "sourceType": "community-wiki",
+        "verificationStatus": "verified"
+      }
+    ]
+  },
+  {
+    "id": "move-bowl-girl",
+    "name": "Bowl Girl (Ferra Toss)",
+    "category": "special-move",
+    "description": "Torr melempar Ferra dengan tenaga luar biasa untuk mencakar dan menusuk mata musuh.",
+    "characters": [
+      {
+        "id": "shujinko",
+        "type": "character",
+        "name": "Shujinko"
+      }
+    ],
+    "games": [
+      {
+        "id": "mk-1992",
+        "type": "game",
+        "name": "Mortal Kombat Franchise"
+      }
+    ],
+    "sources": [
+      {
+        "id": "fandom-move-bowl-girl",
+        "title": "Mortal Kombat Wiki \u2014 Bowl Girl (Ferra Toss)",
+        "url": "https://mortalkombat.fandom.com",
+        "sourceType": "community-wiki",
+        "verificationStatus": "verified"
+      }
+    ]
+  },
+  {
+    "id": "move-torr-charge",
+    "name": "Brute Torr Charge",
+    "category": "special-move",
+    "description": "Serudukan raksasa Torr yang tak terhentikan meluluhlantakkan garis pertahanan.",
+    "characters": [
+      {
+        "id": "shujinko",
+        "type": "character",
+        "name": "Shujinko"
+      }
+    ],
+    "games": [
+      {
+        "id": "mk-1992",
+        "type": "game",
+        "name": "Mortal Kombat Franchise"
+      }
+    ],
+    "sources": [
+      {
+        "id": "fandom-move-torr-charge",
+        "title": "Mortal Kombat Wiki \u2014 Brute Torr Charge",
+        "url": "https://mortalkombat.fandom.com",
+        "sourceType": "community-wiki",
+        "verificationStatus": "verified"
+      }
+    ]
+  },
+  {
+    "id": "move-drakes-breath",
+    "name": "Drake's Breath Fireball",
+    "category": "special-move",
+    "description": "Semburan api naga merah kuno yang dipelajari Daegon dari naga Caro.",
+    "characters": [
+      {
+        "id": "daegon",
+        "type": "character",
+        "name": "Daegon"
+      }
+    ],
+    "games": [
+      {
+        "id": "mk-1992",
+        "type": "game",
+        "name": "Mortal Kombat Franchise"
+      }
+    ],
+    "sources": [
+      {
+        "id": "fandom-move-drakes-breath",
+        "title": "Mortal Kombat Wiki \u2014 Drake's Breath Fireball",
+        "url": "https://mortalkombat.fandom.com",
+        "sourceType": "community-wiki",
+        "verificationStatus": "verified"
+      }
+    ]
+  },
+  {
+    "id": "move-drakes-shield",
+    "name": "Dragon Shield Reflector",
+    "category": "special-move",
+    "description": "Perisai energi naga merah yang menangkis serangan jarak jauh musuh.",
+    "characters": [
+      {
+        "id": "daegon",
+        "type": "character",
+        "name": "Daegon"
+      }
+    ],
+    "games": [
+      {
+        "id": "mk-1992",
+        "type": "game",
+        "name": "Mortal Kombat Franchise"
+      }
+    ],
+    "sources": [
+      {
+        "id": "fandom-move-drakes-shield",
+        "title": "Mortal Kombat Wiki \u2014 Dragon Shield Reflector",
+        "url": "https://mortalkombat.fandom.com",
+        "sourceType": "community-wiki",
+        "verificationStatus": "verified"
+      }
+    ]
+  },
+  {
+    "id": "move-inner-fire",
+    "name": "Inner Flame Surge",
+    "category": "special-move",
+    "description": "Pancaran energi dewa api Edenian murni yang membakar tubuh Taven saat menyerang.",
+    "characters": [
+      {
+        "id": "taven",
+        "type": "character",
+        "name": "Taven"
+      }
+    ],
+    "games": [
+      {
+        "id": "mk-1992",
+        "type": "game",
+        "name": "Mortal Kombat Franchise"
+      }
+    ],
+    "sources": [
+      {
+        "id": "fandom-move-inner-fire",
+        "title": "Mortal Kombat Wiki \u2014 Inner Flame Surge",
+        "url": "https://mortalkombat.fandom.com",
+        "sourceType": "community-wiki",
+        "verificationStatus": "verified"
+      }
+    ]
+  },
+  {
+    "id": "move-speed-of-light",
+    "name": "Speed of Light Teleport",
+    "category": "special-move",
+    "description": "Pergerakan secepat cahaya yang menempatkan Taven langsung di belakang punggung musuh.",
+    "characters": [
+      {
+        "id": "taven",
+        "type": "character",
+        "name": "Taven"
+      }
+    ],
+    "games": [
+      {
+        "id": "mk-1992",
+        "type": "game",
+        "name": "Mortal Kombat Franchise"
+      }
+    ],
+    "sources": [
+      {
+        "id": "fandom-move-speed-of-light",
+        "title": "Mortal Kombat Wiki \u2014 Speed of Light Teleport",
+        "url": "https://mortalkombat.fandom.com",
+        "sourceType": "community-wiki",
+        "verificationStatus": "verified"
+      }
+    ]
+  },
+  {
+    "id": "move-shadow-tackle",
+    "name": "Shadow Clone Tackle",
+    "category": "special-move",
+    "description": "Kloning bayangan Saibot berlari kencang menerjang dan membanting tubuh lawan.",
+    "characters": [
+      {
+        "id": "noob-saibot",
+        "type": "character",
+        "name": "Noob Saibot"
+      }
+    ],
+    "games": [
+      {
+        "id": "mk-1992",
+        "type": "game",
+        "name": "Mortal Kombat Franchise"
+      }
+    ],
+    "sources": [
+      {
+        "id": "fandom-move-shadow-tackle",
+        "title": "Mortal Kombat Wiki \u2014 Shadow Clone Tackle",
+        "url": "https://mortalkombat.fandom.com",
+        "sourceType": "community-wiki",
+        "verificationStatus": "verified"
+      }
+    ]
+  },
+  {
+    "id": "move-black-hole",
+    "name": "Darkness Black Hole",
+    "category": "special-move",
+    "description": "Membuka portal kegelapan di lantai yang menyedot lawan dan menjatuhkannya dari langit.",
+    "characters": [
+      {
+        "id": "noob-saibot",
+        "type": "character",
+        "name": "Noob Saibot"
+      }
+    ],
+    "games": [
+      {
+        "id": "mk-1992",
+        "type": "game",
+        "name": "Mortal Kombat Franchise"
+      }
+    ],
+    "sources": [
+      {
+        "id": "fandom-move-black-hole",
+        "title": "Mortal Kombat Wiki \u2014 Darkness Black Hole",
+        "url": "https://mortalkombat.fandom.com",
+        "sourceType": "community-wiki",
+        "verificationStatus": "verified"
+      }
+    ]
+  },
+  {
+    "id": "move-flaming-skulls",
+    "name": "Flaming Skulls Volley",
+    "category": "special-move",
+    "description": "Rentetan tengkorak api berderak yang ditembakkan secara beruntun oleh Shang Tsung.",
+    "characters": [
+      {
+        "id": "shang-tsung",
+        "type": "character",
+        "name": "Shang Tsung"
+      }
+    ],
+    "games": [
+      {
+        "id": "mk-1992",
+        "type": "game",
+        "name": "Mortal Kombat Franchise"
+      }
+    ],
+    "sources": [
+      {
+        "id": "fandom-move-flaming-skulls",
+        "title": "Mortal Kombat Wiki \u2014 Flaming Skulls Volley",
+        "url": "https://mortalkombat.fandom.com",
+        "sourceType": "community-wiki",
+        "verificationStatus": "verified"
+      }
+    ]
+  },
+  {
+    "id": "move-ground-burst",
+    "name": "Netherrealm Ground Eruption",
+    "category": "special-move",
+    "description": "Retakan magis tanah Netherrealm yang meledakkan target ke udara.",
+    "characters": [
+      {
+        "id": "quan-chi",
+        "type": "character",
+        "name": "Quan Chi"
+      },
+      {
+        "id": "havik",
+        "type": "character",
+        "name": "Havik"
+      }
+    ],
+    "games": [
+      {
+        "id": "mk-1992",
+        "type": "game",
+        "name": "Mortal Kombat Franchise"
+      }
+    ],
+    "sources": [
+      {
+        "id": "fandom-move-ground-burst",
+        "title": "Mortal Kombat Wiki \u2014 Netherrealm Ground Eruption",
+        "url": "https://mortalkombat.fandom.com",
+        "sourceType": "community-wiki",
+        "verificationStatus": "verified"
+      }
+    ]
+  },
+  {
+    "id": "move-skeletal-boost",
+    "name": "Skeletal Strength Boost",
+    "category": "special-move",
+    "description": "Sihir kutukan Quan Chi yang memperkuat daya rusak fisik prajurit mayat hidup.",
+    "characters": [
+      {
+        "id": "quan-chi",
+        "type": "character",
+        "name": "Quan Chi"
+      },
+      {
+        "id": "shinnok",
+        "type": "character",
+        "name": "Shinnok"
+      }
+    ],
+    "games": [
+      {
+        "id": "mk-1992",
+        "type": "game",
+        "name": "Mortal Kombat Franchise"
+      }
+    ],
+    "sources": [
+      {
+        "id": "fandom-move-skeletal-boost",
+        "title": "Mortal Kombat Wiki \u2014 Skeletal Strength Boost",
         "url": "https://mortalkombat.fandom.com",
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
@@ -12385,7 +16707,7 @@ export const weapons: Weapon[] = [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "relatedAbilities": [],
@@ -12406,16 +16728,21 @@ export const weapons: Weapon[] = [
     "description": "Sub-Zero's flash-frozen cryogenic sword forged from thin air.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "sub-zero",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Sub-Zero"
+      },
+      {
+        "id": "frost",
+        "type": "character",
+        "name": "Frost"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "relatedAbilities": [],
@@ -12436,16 +16763,21 @@ export const weapons: Weapon[] = [
     "description": "Shao Kahn's devastating monolithic maul that crushes armor and bone.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "shao-kahn",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Shao Kahn"
+      },
+      {
+        "id": "kotal-kahn",
+        "type": "character",
+        "name": "Kotal Kahn"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "relatedAbilities": [],
@@ -12466,16 +16798,16 @@ export const weapons: Weapon[] = [
     "description": "Ancestral katana housing the souls of the Takahashi clan's warrior ancestors.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "kenshi",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Kenshi"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "relatedAbilities": [],
@@ -12496,16 +16828,21 @@ export const weapons: Weapon[] = [
     "description": "Twin curved Chinese hook swords wielded with lethal acrobatics by Kabal and Mavado.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "kabal",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Kabal"
+      },
+      {
+        "id": "mavado",
+        "type": "character",
+        "name": "Mavado"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "relatedAbilities": [],
@@ -12526,16 +16863,16 @@ export const weapons: Weapon[] = [
     "description": "Princess Kitana's razor-edged folding steel fans used for slicing and air control.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "kitana",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Kitana"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "relatedAbilities": [],
@@ -12556,16 +16893,21 @@ export const weapons: Weapon[] = [
     "description": "Jax Briggs' titanium cybernetic prosthetics delivering earthquake punches.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "jax",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Jax Briggs"
+      },
+      {
+        "id": "jacqui",
+        "type": "character",
+        "name": "Jacqui Briggs"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "relatedAbilities": [],
@@ -12586,16 +16928,21 @@ export const weapons: Weapon[] = [
     "description": "Erron Black's custom Outworld six-shooter revolvers loaded with hollow-point lead.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "cassie-cage",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Cassie Cage"
+      },
+      {
+        "id": "erron-black",
+        "type": "character",
+        "name": "Erron Black"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "relatedAbilities": [],
@@ -12616,16 +16963,41 @@ export const weapons: Weapon[] = [
     "description": "Jade's glowing triboluminescent steel bo staff delivering long-reach pole vault strikes.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "raiden",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Raiden"
+      },
+      {
+        "id": "fujin",
+        "type": "character",
+        "name": "Fujin"
+      },
+      {
+        "id": "bo-rai-cho",
+        "type": "character",
+        "name": "Bo' Rai Cho"
+      },
+      {
+        "id": "jade",
+        "type": "character",
+        "name": "Jade"
+      },
+      {
+        "id": "reiko",
+        "type": "character",
+        "name": "Reiko"
+      },
+      {
+        "id": "hotaru",
+        "type": "character",
+        "name": "Hotaru"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "relatedAbilities": [],
@@ -12646,16 +17018,16 @@ export const weapons: Weapon[] = [
     "description": "Mileena's pair of three-pronged sai daggers used for rapid stabbing and teleport throws.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "mileena",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Mileena"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "relatedAbilities": [],
@@ -12676,16 +17048,21 @@ export const weapons: Weapon[] = [
     "description": "Kurtis Stryker's reinforced side-handle PR-24 police batons for crowd control takedowns.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "sonya-blade",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Sonya Blade"
+      },
+      {
+        "id": "kurtis-stryker",
+        "type": "character",
+        "name": "Kurtis Stryker"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "relatedAbilities": [],
@@ -12706,16 +17083,16 @@ export const weapons: Weapon[] = [
     "description": "Nightwolf's twin glowing spirit axes manifested through Matoka shamanic communion.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "nightwolf",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Nightwolf"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "relatedAbilities": [],
@@ -12736,16 +17113,16 @@ export const weapons: Weapon[] = [
     "description": "D'Vorah's four serrated insectoid appendages emerging from her back to impale prey.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "dvorah",
         "type": "character",
-        "name": "Scorpion"
+        "name": "D'Vorah"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "relatedAbilities": [],
@@ -12766,16 +17143,16 @@ export const weapons: Weapon[] = [
     "description": "Takeda Takahashi's retractable dual cyber-whips laced with high-frequency heated blades.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "takeda",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Takeda Takahashi"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "relatedAbilities": [],
@@ -12796,16 +17173,16 @@ export const weapons: Weapon[] = [
     "description": "Kung Jin's collapsible recurve bow functioning as a bludgeon, bo staff, and trick arrow launcher.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "kung-jin",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Kung Jin"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "relatedAbilities": [],
@@ -12826,16 +17203,41 @@ export const weapons: Weapon[] = [
     "description": "Ashrah's holy sword 'Datusha' that cleanses the demonic soul of its wielder with each demon slain.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "noob-saibot",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Noob Saibot"
+      },
+      {
+        "id": "smoke",
+        "type": "character",
+        "name": "Smoke"
+      },
+      {
+        "id": "shinnok",
+        "type": "character",
+        "name": "Shinnok"
+      },
+      {
+        "id": "nitara",
+        "type": "character",
+        "name": "Nitara"
+      },
+      {
+        "id": "sareena",
+        "type": "character",
+        "name": "Sareena"
+      },
+      {
+        "id": "ashrah",
+        "type": "character",
+        "name": "Ashrah"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "relatedAbilities": [],
@@ -12856,16 +17258,21 @@ export const weapons: Weapon[] = [
     "description": "General Reiko's heavy spiked Outworld bludgeon designed to crush skull helmets.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "havik",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Havik"
+      },
+      {
+        "id": "kollector",
+        "type": "character",
+        "name": "Kollector"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "relatedAbilities": [],
@@ -12886,16 +17293,21 @@ export const weapons: Weapon[] = [
     "description": "Sheeva's twin broad cleaver blades forged from Outworld furnace steel.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "goro",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Goro"
+      },
+      {
+        "id": "sheeva",
+        "type": "character",
+        "name": "Sheeva"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "relatedAbilities": [],
@@ -12916,16 +17328,16 @@ export const weapons: Weapon[] = [
     "description": "Tanya's agile Kobu Jutsu batons and dual stiletto daggers.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "tanya",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Tanya"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "relatedAbilities": [],
@@ -12946,16 +17358,36 @@ export const weapons: Weapon[] = [
     "description": "Ancient ceremonial blade housing the cosmic essence of the realms.",
     "characters": [
       {
-        "id": "scorpion",
+        "id": "liu-kang",
         "type": "character",
-        "name": "Scorpion"
+        "name": "Liu Kang"
+      },
+      {
+        "id": "onaga",
+        "type": "character",
+        "name": "Onaga"
+      },
+      {
+        "id": "shujinko",
+        "type": "character",
+        "name": "Shujinko"
+      },
+      {
+        "id": "daegon",
+        "type": "character",
+        "name": "Daegon"
+      },
+      {
+        "id": "taven",
+        "type": "character",
+        "name": "Taven"
       }
     ],
     "games": [
       {
         "id": "mk-1992",
         "type": "game",
-        "name": "Mortal Kombat (1992)"
+        "name": "Mortal Kombat Franchise"
       }
     ],
     "relatedAbilities": [],
@@ -12976,12 +17408,7 @@ export const organizations: Organization[] = [
     "id": "shirai-ryu",
     "name": "Shirai Ryu",
     "kind": "clan",
-    "description": "Klan ninja pemberontak Jepang yang didirikan oleh Takeda, dipimpin secara historis oleh Grandmaster Hanzo Hasashi (Scorpion) dengan sumpah melindungi Earthrealm dan membalaskan dendam keluarganya.",
-    "leader": {
-      "id": "scorpion",
-      "type": "character",
-      "name": "Scorpion (Hanzo Hasashi)"
-    },
+    "description": "Renegade ninja clan of Japan founded by Takeda, historically led by Grandmaster Hanzo Hasashi.",
     "members": [
       {
         "id": "scorpion",
@@ -12992,16 +17419,6 @@ export const organizations: Organization[] = [
         "id": "takeda",
         "type": "character",
         "name": "Takeda Takahashi"
-      },
-      {
-        "id": "kenshi",
-        "type": "character",
-        "name": "Kenshi"
-      },
-      {
-        "id": "smoke",
-        "type": "character",
-        "name": "Smoke"
       }
     ],
     "rivals": [
@@ -13009,31 +17426,26 @@ export const organizations: Organization[] = [
         "id": "lin-kuei",
         "type": "organization",
         "name": "Lin Kuei"
-      },
-      {
-        "id": "brotherhood-of-shadow",
-        "type": "organization",
-        "name": "Brotherhood of Shadow"
       }
     ],
     "timelines": [
       {
         "id": "original",
         "type": "timeline",
-        "name": "Timeline Original"
+        "name": "Original Timeline"
       },
       {
         "id": "reboot",
         "type": "timeline",
-        "name": "Timeline Baru (Reboot)"
+        "name": "Reboot Timeline"
       }
     ],
     "events": [],
     "sources": [
       {
         "id": "fandom-shirai-ryu",
-        "title": "Mortal Kombat Wiki — Shirai Ryu",
-        "url": "https://mortalkombat.fandom.com/wiki/Shirai_Ryu",
+        "title": "Mortal Kombat Wiki \u2014 Shirai Ryu",
+        "url": "https://mortalkombat.fandom.com",
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
@@ -13043,22 +17455,12 @@ export const organizations: Organization[] = [
     "id": "lin-kuei",
     "name": "Lin Kuei",
     "kind": "clan",
-    "description": "Klan pembunuh siluman kuno Tiongkok yang beranggotakan para cryomancer dan petarung berkemampuan khusus, berkomitmen melindungi Earthrealm sebelum dirusak oleh program Cyber Initiative.",
-    "leader": {
-      "id": "sub-zero",
-      "type": "character",
-      "name": "Sub-Zero (Kuai Liang)"
-    },
+    "description": "Ancient Chinese stealth clan of assassins and cryomancers, historically pledged to protect Earthrealm.",
     "members": [
       {
         "id": "sub-zero",
         "type": "character",
         "name": "Sub-Zero"
-      },
-      {
-        "id": "noob-saibot",
-        "type": "character",
-        "name": "Noob Saibot (Bi-Han)"
       },
       {
         "id": "smoke",
@@ -13086,31 +17488,26 @@ export const organizations: Organization[] = [
         "id": "shirai-ryu",
         "type": "organization",
         "name": "Shirai Ryu"
-      },
-      {
-        "id": "special-forces",
-        "type": "organization",
-        "name": "Special Forces"
       }
     ],
     "timelines": [
       {
         "id": "original",
         "type": "timeline",
-        "name": "Timeline Original"
+        "name": "Original Timeline"
       },
       {
         "id": "reboot",
         "type": "timeline",
-        "name": "Timeline Baru (Reboot)"
+        "name": "Reboot Timeline"
       }
     ],
     "events": [],
     "sources": [
       {
         "id": "fandom-lin-kuei",
-        "title": "Mortal Kombat Wiki — Lin Kuei",
-        "url": "https://mortalkombat.fandom.com/wiki/Lin_Kuei",
+        "title": "Mortal Kombat Wiki \u2014 Lin Kuei",
+        "url": "https://mortalkombat.fandom.com",
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
@@ -13120,12 +17517,7 @@ export const organizations: Organization[] = [
     "id": "special-forces",
     "name": "Special Forces",
     "kind": "organization",
-    "description": "Divisi militer elite taktis dan intelijen Earthrealm yang dipimpin oleh Jenderal Sonya Blade dan Mayor Jackson Briggs guna menangkal ancaman antardimensi dan sindikat kejahatan global.",
-    "leader": {
-      "id": "sonya-blade",
-      "type": "character",
-      "name": "Sonya Blade"
-    },
+    "description": "Earthrealm military division led by Sonya Blade and Jax Briggs tasked with countering otherworldly threats.",
     "members": [
       {
         "id": "sonya-blade",
@@ -13133,7 +17525,7 @@ export const organizations: Organization[] = [
         "name": "Sonya Blade"
       },
       {
-        "id": "jax",
+        "id": "jax-briggs",
         "type": "character",
         "name": "Jax Briggs"
       },
@@ -13143,7 +17535,7 @@ export const organizations: Organization[] = [
         "name": "Johnny Cage"
       },
       {
-        "id": "cassiecage",
+        "id": "cassie-cage",
         "type": "character",
         "name": "Cassie Cage"
       },
@@ -13153,51 +17545,30 @@ export const organizations: Organization[] = [
         "name": "Jacqui Briggs"
       },
       {
-        "id": "kenshi",
-        "type": "character",
-        "name": "Kenshi"
-      },
-      {
-        "id": "stryker",
+        "id": "kurtis-stryker",
         "type": "character",
         "name": "Kurtis Stryker"
-      },
-      {
-        "id": "kungjin",
-        "type": "character",
-        "name": "Kung Jin"
       }
     ],
-    "rivals": [
-      {
-        "id": "black-dragon",
-        "type": "organization",
-        "name": "Black Dragon"
-      },
-      {
-        "id": "red-dragon",
-        "type": "organization",
-        "name": "Red Dragon"
-      }
-    ],
+    "rivals": [],
     "timelines": [
       {
         "id": "original",
         "type": "timeline",
-        "name": "Timeline Original"
+        "name": "Original Timeline"
       },
       {
         "id": "reboot",
         "type": "timeline",
-        "name": "Timeline Baru (Reboot)"
+        "name": "Reboot Timeline"
       }
     ],
     "events": [],
     "sources": [
       {
         "id": "fandom-special-forces",
-        "title": "Mortal Kombat Wiki — Special Forces",
-        "url": "https://mortalkombat.fandom.com/wiki/Special_Forces",
+        "title": "Mortal Kombat Wiki \u2014 Special Forces",
+        "url": "https://mortalkombat.fandom.com",
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
@@ -13207,12 +17578,7 @@ export const organizations: Organization[] = [
     "id": "black-dragon",
     "name": "Black Dragon",
     "kind": "organization",
-    "description": "Sindikat tentara bayaran, kriminal internasional, dan penyelundup senjata tanpa ampun yang dipimpin oleh Kano, menjadi musuh bebuyutan Special Forces di Earthrealm.",
-    "leader": {
-      "id": "kano",
-      "type": "character",
-      "name": "Kano"
-    },
+    "description": "Ruthless international mercenary syndicate led by the criminal Kano dealing in illicit weapons and extortion.",
     "members": [
       {
         "id": "kano",
@@ -13225,41 +17591,35 @@ export const organizations: Organization[] = [
         "name": "Kabal"
       },
       {
-        "id": "erronblack",
+        "id": "erron-black",
         "type": "character",
         "name": "Erron Black"
-      }
-    ],
-    "rivals": [
-      {
-        "id": "special-forces",
-        "type": "organization",
-        "name": "Special Forces"
       },
       {
-        "id": "red-dragon",
-        "type": "organization",
-        "name": "Red Dragon"
+        "id": "mavado",
+        "type": "character",
+        "name": "Mavado"
       }
     ],
+    "rivals": [],
     "timelines": [
       {
         "id": "original",
         "type": "timeline",
-        "name": "Timeline Original"
+        "name": "Original Timeline"
       },
       {
         "id": "reboot",
         "type": "timeline",
-        "name": "Timeline Baru (Reboot)"
+        "name": "Reboot Timeline"
       }
     ],
     "events": [],
     "sources": [
       {
         "id": "fandom-black-dragon",
-        "title": "Mortal Kombat Wiki — Black Dragon",
-        "url": "https://mortalkombat.fandom.com/wiki/Black_Dragon",
+        "title": "Mortal Kombat Wiki \u2014 Black Dragon",
+        "url": "https://mortalkombat.fandom.com",
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
@@ -13269,18 +17629,8 @@ export const organizations: Organization[] = [
     "id": "white-lotus",
     "name": "White Lotus Society",
     "kind": "organization",
-    "description": "Perhimpunan rahasia biksu Shaolin dan petarung kebajikan yang dibentuk oleh Dewa Petir Raiden untuk mendidik para jawara Earthrealm dalam menghadapi Turnamen Mortal Kombat.",
-    "leader": {
-      "id": "raiden",
-      "type": "character",
-      "name": "Raiden"
-    },
+    "description": "Secret society of martial artists founded by Raiden to defend Earthrealm in Mortal Kombat tournaments.",
     "members": [
-      {
-        "id": "raiden",
-        "type": "character",
-        "name": "Raiden"
-      },
       {
         "id": "liu-kang",
         "type": "character",
@@ -13292,51 +17642,50 @@ export const organizations: Organization[] = [
         "name": "Kung Lao"
       },
       {
+        "id": "raiden",
+        "type": "character",
+        "name": "Raiden"
+      },
+      {
+        "id": "bo-rai-cho",
+        "type": "character",
+        "name": "Bo' Rai Cho"
+      },
+      {
+        "id": "kung-jin",
+        "type": "character",
+        "name": "Kung Jin"
+      },
+      {
         "id": "fujin",
         "type": "character",
         "name": "Fujin"
       },
       {
-        "id": "boraicho",
-        "type": "character",
-        "name": "Bo' Rai Cho"
-      },
-      {
         "id": "shujinko",
         "type": "character",
         "name": "Shujinko"
-      },
-      {
-        "id": "kungjin",
-        "type": "character",
-        "name": "Kung Jin"
       }
     ],
-    "rivals": [
-      {
-        "id": "brotherhood-of-shadow",
-        "type": "organization",
-        "name": "Brotherhood of Shadow"
-      }
-    ],
+    "rivals": [],
     "timelines": [
       {
         "id": "original",
         "type": "timeline",
-        "name": "Timeline Original"
+        "name": "Original Timeline"
       },
       {
         "id": "reboot",
         "type": "timeline",
-        "name": "Timeline Baru (Reboot)"
+        "name": "Reboot Timeline"
       }
     ],
     "events": [],
     "sources": [
       {
         "id": "fandom-white-lotus",
-        "title": "Mortal Kombat Wiki — White Lotus Society",
-        "url": "https://mortalkombat.fandom.com/wiki/White_Lotus_Society",
+        "title": "Mortal Kombat Wiki \u2014 White Lotus Society",
+        "url": "https://mortalkombat.fandom.com",
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
@@ -13346,20 +17695,10 @@ export const organizations: Organization[] = [
     "id": "brotherhood-of-shadow",
     "name": "Brotherhood of Shadow",
     "kind": "organization",
-    "description": "Sekte fanatik kegelapan dari Netherrealm yang mengabdi setia kepada Dewa Kuno sesat Shinnok dan penyihir licik Quan Chi untuk menyebarkan kekacauan di seluruh dimensi.",
-    "leader": {
-      "id": "shinnok",
-      "type": "character",
-      "name": "Shinnok"
-    },
+    "description": "Fanatical Netherrealm religious cult serving the fallen Elder God Shinnok and sorcerer Quan Chi.",
     "members": [
       {
-        "id": "shinnok",
-        "type": "character",
-        "name": "Shinnok"
-      },
-      {
-        "id": "quanchi",
+        "id": "quan-chi",
         "type": "character",
         "name": "Quan Chi"
       },
@@ -13367,6 +17706,11 @@ export const organizations: Organization[] = [
         "id": "noob-saibot",
         "type": "character",
         "name": "Noob Saibot"
+      },
+      {
+        "id": "shinnok",
+        "type": "character",
+        "name": "Shinnok"
       },
       {
         "id": "sareena",
@@ -13379,36 +17723,25 @@ export const organizations: Organization[] = [
         "name": "Ashrah"
       }
     ],
-    "rivals": [
-      {
-        "id": "white-lotus",
-        "type": "organization",
-        "name": "White Lotus Society"
-      },
-      {
-        "id": "shirai-ryu",
-        "type": "organization",
-        "name": "Shirai Ryu"
-      }
-    ],
+    "rivals": [],
     "timelines": [
       {
         "id": "original",
         "type": "timeline",
-        "name": "Timeline Original"
+        "name": "Original Timeline"
       },
       {
         "id": "reboot",
         "type": "timeline",
-        "name": "Timeline Baru (Reboot)"
+        "name": "Reboot Timeline"
       }
     ],
     "events": [],
     "sources": [
       {
         "id": "fandom-brotherhood-of-shadow",
-        "title": "Mortal Kombat Wiki — Brotherhood of Shadow",
-        "url": "https://mortalkombat.fandom.com/wiki/Brotherhood_of_Shadow",
+        "title": "Mortal Kombat Wiki \u2014 Brotherhood of Shadow",
+        "url": "https://mortalkombat.fandom.com",
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
@@ -13418,49 +17751,38 @@ export const organizations: Organization[] = [
     "id": "red-dragon",
     "name": "Red Dragon",
     "kind": "organization",
-    "description": "Sindikat klan kriminal kuno yang didirikan ribuan tahun silam oleh manusia setengah dewa Edenia, Daegon, dengan struktur militeristik ketat guna menghancurkan klan sempalan Black Dragon.",
-    "leader": {
-      "id": "daegon",
-      "type": "character",
-      "name": "Daegon"
-    },
+    "description": "Ancient secret criminal syndicate founded by the Edenian demigod Daegon, sworn mortal enemies of the Black Dragon.",
     "members": [
-      {
-        "id": "daegon",
-        "type": "character",
-        "name": "Daegon"
-      },
       {
         "id": "mavado",
         "type": "character",
         "name": "Mavado"
-      }
-    ],
-    "rivals": [
-      {
-        "id": "black-dragon",
-        "type": "organization",
-        "name": "Black Dragon"
       },
       {
-        "id": "special-forces",
-        "type": "organization",
-        "name": "Special Forces"
+        "id": "daegon",
+        "type": "character",
+        "name": "Daegon"
       }
     ],
+    "rivals": [],
     "timelines": [
       {
         "id": "original",
         "type": "timeline",
-        "name": "Timeline Original"
+        "name": "Original Timeline"
+      },
+      {
+        "id": "reboot",
+        "type": "timeline",
+        "name": "Reboot Timeline"
       }
     ],
     "events": [],
     "sources": [
       {
         "id": "fandom-red-dragon",
-        "title": "Mortal Kombat Wiki — Red Dragon",
-        "url": "https://mortalkombat.fandom.com/wiki/Red_Dragon",
+        "title": "Mortal Kombat Wiki \u2014 Red Dragon",
+        "url": "https://mortalkombat.fandom.com",
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
@@ -13470,12 +17792,7 @@ export const organizations: Organization[] = [
     "id": "umgadi",
     "name": "The Umgadi",
     "kind": "organization",
-    "description": "Ordo kesatria wanita dan pendeta tempur terbaik yang dipilih sejak kecil dari putri sulung Outworld, bersumpah menjaga takhta kerajaan dan keluarga kaisar sampai titik darah penghabisan.",
-    "leader": {
-      "id": "tanya",
-      "type": "character",
-      "name": "Tanya"
-    },
+    "description": "Elite warrior priestesses selected from Outworld first-born daughters sworn to protect the royal family and emperor.",
     "members": [
       {
         "id": "tanya",
@@ -13483,46 +17800,30 @@ export const organizations: Organization[] = [
         "name": "Tanya"
       },
       {
-        "id": "limei",
+        "id": "li-mei",
         "type": "character",
         "name": "Li Mei"
-      },
-      {
-        "id": "kitana",
-        "type": "character",
-        "name": "Kitana"
-      },
-      {
-        "id": "mileena",
-        "type": "character",
-        "name": "Mileena"
-      },
-      {
-        "id": "jade",
-        "type": "character",
-        "name": "Jade"
       }
     ],
-    "rivals": [
-      {
-        "id": "brotherhood-of-shadow",
-        "type": "organization",
-        "name": "Brotherhood of Shadow"
-      }
-    ],
+    "rivals": [],
     "timelines": [
       {
-        "id": "new-era",
+        "id": "original",
         "type": "timeline",
-        "name": "New Era (MK1 2023)"
+        "name": "Original Timeline"
+      },
+      {
+        "id": "reboot",
+        "type": "timeline",
+        "name": "Reboot Timeline"
       }
     ],
     "events": [],
     "sources": [
       {
         "id": "fandom-umgadi",
-        "title": "Mortal Kombat Wiki — The Umgadi",
-        "url": "https://mortalkombat.fandom.com/wiki/Umgadi",
+        "title": "Mortal Kombat Wiki \u2014 The Umgadi",
+        "url": "https://mortalkombat.fandom.com",
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
@@ -13531,55 +17832,34 @@ export const organizations: Organization[] = [
   {
     "id": "osh-tekk",
     "name": "Osh-Tekk Tribe",
-    "kind": "faction",
-    "description": "Peradaban kesatria penyembah kekuatan matahari dari Outworld yang perkasa dan berdisiplin tinggi, dipimpin oleh Jenderal perang Kotal Kahn yang kemudian naik takhta menjadi Kaisar Outworld.",
-    "leader": {
-      "id": "kotalkahn",
-      "type": "character",
-      "name": "Kotal Kahn"
-    },
+    "kind": "organization",
+    "description": "Sun-worshipping warrior civilization of Outworld historically ruled by Kotal K'atz and Emperor Kotal Kahn.",
     "members": [
       {
-        "id": "kotalkahn",
+        "id": "kotal-kahn",
         "type": "character",
         "name": "Kotal Kahn"
-      },
-      {
-        "id": "ferratorr",
-        "type": "character",
-        "name": "Ferra & Torr"
-      },
-      {
-        "id": "dvorah",
-        "type": "character",
-        "name": "D'Vorah"
-      },
-      {
-        "id": "erronblack",
-        "type": "character",
-        "name": "Erron Black"
       }
     ],
-    "rivals": [
-      {
-        "id": "brotherhood-of-shadow",
-        "type": "organization",
-        "name": "Brotherhood of Shadow"
-      }
-    ],
+    "rivals": [],
     "timelines": [
+      {
+        "id": "original",
+        "type": "timeline",
+        "name": "Original Timeline"
+      },
       {
         "id": "reboot",
         "type": "timeline",
-        "name": "Timeline Baru (Reboot)"
+        "name": "Reboot Timeline"
       }
     ],
     "events": [],
     "sources": [
       {
         "id": "fandom-osh-tekk",
-        "title": "Mortal Kombat Wiki — Osh-Tekk Tribe",
-        "url": "https://mortalkombat.fandom.com/wiki/Osh-Tekk",
+        "title": "Mortal Kombat Wiki \u2014 Osh-Tekk Tribe",
+        "url": "https://mortalkombat.fandom.com",
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
@@ -13589,44 +17869,33 @@ export const organizations: Organization[] = [
     "id": "seidan-guard",
     "name": "Seidan Guard",
     "kind": "organization",
-    "description": "Pasukan militer penjaga ketertiban berkekuatan absolut dari dimensi Orderrealm (Seido) yang dipimpin oleh Jenderal Hotaru, menjunjung tinggi supremasi hukum tanpa toleransi bagi anarki.",
-    "leader": {
-      "id": "hotaru",
-      "type": "character",
-      "name": "Hotaru"
-    },
+    "description": "The disciplined, authoritarian military defense force of Orderrealm commanded by Hotaru.",
     "members": [
       {
         "id": "hotaru",
         "type": "character",
         "name": "Hotaru"
-      },
-      {
-        "id": "reiko",
-        "type": "character",
-        "name": "Reiko"
       }
     ],
-    "rivals": [
-      {
-        "id": "brotherhood-of-shadow",
-        "type": "organization",
-        "name": "Brotherhood of Shadow"
-      }
-    ],
+    "rivals": [],
     "timelines": [
       {
         "id": "original",
         "type": "timeline",
-        "name": "Timeline Original"
+        "name": "Original Timeline"
+      },
+      {
+        "id": "reboot",
+        "type": "timeline",
+        "name": "Reboot Timeline"
       }
     ],
     "events": [],
     "sources": [
       {
         "id": "fandom-seidan-guard",
-        "title": "Mortal Kombat Wiki — Seidan Guard",
-        "url": "https://mortalkombat.fandom.com/wiki/Seidan_Guard",
+        "title": "Mortal Kombat Wiki \u2014 Seidan Guard",
+        "url": "https://mortalkombat.fandom.com",
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
@@ -13642,9 +17911,19 @@ export const timelines: Timeline[] = [
     "order": 1,
     "games": [
       {
-        "id": "mk-1992",
+        "id": "mk1-1992",
         "type": "game",
         "name": "Mortal Kombat (1992)"
+      },
+      {
+        "id": "mk2-1993",
+        "type": "game",
+        "name": "Mortal Kombat II"
+      },
+      {
+        "id": "mk3-1995",
+        "type": "game",
+        "name": "Mortal Kombat 3"
       }
     ],
     "characterVersions": [
@@ -13679,14 +17958,24 @@ export const timelines: Timeline[] = [
   },
   {
     "id": "reboot",
-    "name": "Timeline Baru (Reboot MK9\u2013MK11)",
+    "name": "Reboot Timeline (MK9\u2013MK11)",
     "description": "Timeline yang tercipta setelah Raiden mengirim visi ke masa lalu; mencakup Mortal Kombat (2011), MKX, dan MK11.",
     "order": 2,
     "games": [
       {
-        "id": "mk-2011",
+        "id": "mk9-2011",
         "type": "game",
         "name": "Mortal Kombat (2011)"
+      },
+      {
+        "id": "mkx-2015",
+        "type": "game",
+        "name": "Mortal Kombat X"
+      },
+      {
+        "id": "mk11-2019",
+        "type": "game",
+        "name": "Mortal Kombat 11"
       }
     ],
     "characterVersions": [
@@ -13732,11 +18021,11 @@ export const timelines: Timeline[] = [
           "type": "character",
           "name": "Scorpion"
         },
-        "versionLabel": "Anggota Lin Kuei (identitas baru)"
+        "versionLabel": "Kuai Liang sebagai Scorpion di Lin Kuei"
       }
     ],
     "relationshipChanges": [
-      "Banyak hubungan karakter diatur ulang; rivalitas lama tidak otomatis berlaku."
+      "Banyak hubungan karakter diatur ulang; Kuai Liang dan Bi-Han awalnya bersaudara di Lin Kuei sebelum berpisah."
     ],
     "events": [],
     "sources": [
@@ -13772,14 +18061,14 @@ export const storyEvents: StoryEvent[] = [
     "eventType": "Konflik Naratif",
     "participants": [
       {
-        "id": "subzero",
+        "id": "sub-zero",
         "type": "character",
         "name": "Sub-Zero"
       },
       {
-        "id": "quanchi",
+        "id": "quan-chi",
         "type": "character",
-        "name": "Quan Chi"
+        "name": "Quan-Chi"
       },
       {
         "id": "shinnok",
@@ -13829,14 +18118,14 @@ export const storyEvents: StoryEvent[] = [
     "eventType": "Konflik Naratif",
     "participants": [
       {
-        "id": "liukang",
+        "id": "liu-kang",
         "type": "character",
-        "name": "Liu Kang"
+        "name": "Liu-Kang"
       },
       {
-        "id": "shangtsung",
+        "id": "shang-tsung",
         "type": "character",
-        "name": "Shang Tsung"
+        "name": "Shang-Tsung"
       },
       {
         "id": "goro",
@@ -13891,14 +18180,14 @@ export const storyEvents: StoryEvent[] = [
     "eventType": "Konflik Naratif",
     "participants": [
       {
-        "id": "shaokahn",
+        "id": "shao-kahn",
         "type": "character",
-        "name": "Shao Kahn"
+        "name": "Shao-Kahn"
       },
       {
-        "id": "liukang",
+        "id": "liu-kang",
         "type": "character",
-        "name": "Liu Kang"
+        "name": "Liu-Kang"
       },
       {
         "id": "kitana",
@@ -13953,9 +18242,9 @@ export const storyEvents: StoryEvent[] = [
     "eventType": "Konflik Naratif",
     "participants": [
       {
-        "id": "shaokahn",
+        "id": "shao-kahn",
         "type": "character",
-        "name": "Shao Kahn"
+        "name": "Shao-Kahn"
       },
       {
         "id": "sindel",
@@ -13978,9 +18267,9 @@ export const storyEvents: StoryEvent[] = [
         "name": "Kabal"
       },
       {
-        "id": "stryker",
+        "id": "kurtis-stryker",
         "type": "character",
-        "name": "Kurtis Stryker"
+        "name": "Kurtis-Stryker"
       }
     ],
     "chronology": 4,
@@ -14025,9 +18314,9 @@ export const storyEvents: StoryEvent[] = [
         "name": "Shinnok"
       },
       {
-        "id": "quanchi",
+        "id": "quan-chi",
         "type": "character",
-        "name": "Quan Chi"
+        "name": "Quan-Chi"
       },
       {
         "id": "raiden",
@@ -14134,19 +18423,19 @@ export const storyEvents: StoryEvent[] = [
     "eventType": "Konflik Naratif",
     "participants": [
       {
-        "id": "shangtsung",
+        "id": "shang-tsung",
         "type": "character",
-        "name": "Shang Tsung"
+        "name": "Shang-Tsung"
       },
       {
-        "id": "quanchi",
+        "id": "quan-chi",
         "type": "character",
-        "name": "Quan Chi"
+        "name": "Quan-Chi"
       },
       {
-        "id": "liukang",
+        "id": "liu-kang",
         "type": "character",
-        "name": "Liu Kang"
+        "name": "Liu-Kang"
       },
       {
         "id": "raiden",
@@ -14211,9 +18500,9 @@ export const storyEvents: StoryEvent[] = [
         "name": "Onaga"
       },
       {
-        "id": "boraicho",
+        "id": "bo-rai-cho",
         "type": "character",
-        "name": "Bo' Rai Cho"
+        "name": "Bo-Rai-Cho"
       }
     ],
     "chronology": 8,
@@ -14258,14 +18547,14 @@ export const storyEvents: StoryEvent[] = [
         "name": "Raiden"
       },
       {
-        "id": "shangtsung",
+        "id": "shang-tsung",
         "type": "character",
-        "name": "Shang Tsung"
+        "name": "Shang-Tsung"
       },
       {
-        "id": "quanchi",
+        "id": "quan-chi",
         "type": "character",
-        "name": "Quan Chi"
+        "name": "Quan-Chi"
       },
       {
         "id": "onaga",
@@ -14320,14 +18609,14 @@ export const storyEvents: StoryEvent[] = [
     "eventType": "Konflik Naratif",
     "participants": [
       {
-        "id": "liukang",
+        "id": "liu-kang",
         "type": "character",
-        "name": "Liu Kang"
+        "name": "Liu-Kang"
       },
       {
-        "id": "kunglao",
+        "id": "kung-lao",
         "type": "character",
-        "name": "Kung Lao"
+        "name": "Kung-Lao"
       },
       {
         "id": "baraka",
@@ -14382,9 +18671,9 @@ export const storyEvents: StoryEvent[] = [
         "name": "Raiden"
       },
       {
-        "id": "shaokahn",
+        "id": "shao-kahn",
         "type": "character",
-        "name": "Shao Kahn"
+        "name": "Shao-Kahn"
       },
       {
         "id": "blaze",
@@ -14444,9 +18733,9 @@ export const storyEvents: StoryEvent[] = [
         "name": "Raiden"
       },
       {
-        "id": "shaokahn",
+        "id": "shao-kahn",
         "type": "character",
-        "name": "Shao Kahn"
+        "name": "Shao-Kahn"
       },
       {
         "id": "scorpion",
@@ -14454,7 +18743,7 @@ export const storyEvents: StoryEvent[] = [
         "name": "Scorpion"
       },
       {
-        "id": "subzero",
+        "id": "sub-zero",
         "type": "character",
         "name": "Sub-Zero"
       }
@@ -14501,14 +18790,14 @@ export const storyEvents: StoryEvent[] = [
         "name": "Raiden"
       },
       {
-        "id": "liukang",
+        "id": "liu-kang",
         "type": "character",
-        "name": "Liu Kang"
+        "name": "Liu-Kang"
       },
       {
-        "id": "shaokahn",
+        "id": "shao-kahn",
         "type": "character",
-        "name": "Shao Kahn"
+        "name": "Shao-Kahn"
       }
     ],
     "chronology": 13,
@@ -14548,7 +18837,7 @@ export const storyEvents: StoryEvent[] = [
     "eventType": "Konflik Naratif",
     "participants": [
       {
-        "id": "subzero",
+        "id": "sub-zero",
         "type": "character",
         "name": "Sub-Zero"
       },
@@ -14625,9 +18914,9 @@ export const storyEvents: StoryEvent[] = [
         "name": "Kabal"
       },
       {
-        "id": "stryker",
+        "id": "kurtis-stryker",
         "type": "character",
-        "name": "Kurtis Stryker"
+        "name": "Kurtis-Stryker"
       },
       {
         "id": "nightwolf",
@@ -14682,19 +18971,19 @@ export const storyEvents: StoryEvent[] = [
         "name": "Raiden"
       },
       {
-        "id": "quanchi",
+        "id": "quan-chi",
         "type": "character",
-        "name": "Quan Chi"
+        "name": "Quan-Chi"
       },
       {
-        "id": "johnnycage",
+        "id": "johnny-cage",
         "type": "character",
-        "name": "Johnny Cage"
+        "name": "Johnny-Cage"
       },
       {
-        "id": "sonyablade",
+        "id": "sonya-blade",
         "type": "character",
-        "name": "Sonya Blade"
+        "name": "Sonya-Blade"
       }
     ],
     "chronology": 16,
@@ -14734,9 +19023,9 @@ export const storyEvents: StoryEvent[] = [
     "eventType": "Konflik Naratif",
     "participants": [
       {
-        "id": "kotalkahn",
+        "id": "kotal-kahn",
         "type": "character",
-        "name": "Kotal Kahn"
+        "name": "Kotal-Kahn"
       },
       {
         "id": "mileena",
@@ -14749,14 +19038,14 @@ export const storyEvents: StoryEvent[] = [
         "name": "D'Vorah"
       },
       {
-        "id": "cassiecage",
+        "id": "cassie-cage",
         "type": "character",
-        "name": "Cassie Cage"
+        "name": "Cassie-Cage"
       },
       {
-        "id": "erronblack",
+        "id": "erron-black",
         "type": "character",
-        "name": "Erron Black"
+        "name": "Erron-Black"
       }
     ],
     "chronology": 17,
@@ -14801,7 +19090,7 @@ export const storyEvents: StoryEvent[] = [
         "name": "Scorpion"
       },
       {
-        "id": "subzero",
+        "id": "sub-zero",
         "type": "character",
         "name": "Sub-Zero"
       }
@@ -14843,9 +19132,9 @@ export const storyEvents: StoryEvent[] = [
     "eventType": "Konflik Naratif",
     "participants": [
       {
-        "id": "cassiecage",
+        "id": "cassie-cage",
         "type": "character",
-        "name": "Cassie Cage"
+        "name": "Cassie-Cage"
       },
       {
         "id": "shinnok",
@@ -14853,9 +19142,9 @@ export const storyEvents: StoryEvent[] = [
         "name": "Shinnok"
       },
       {
-        "id": "johnnycage",
+        "id": "johnny-cage",
         "type": "character",
-        "name": "Johnny Cage"
+        "name": "Johnny-Cage"
       },
       {
         "id": "jacqui",
@@ -14868,9 +19157,9 @@ export const storyEvents: StoryEvent[] = [
         "name": "Takeda Takahashi"
       },
       {
-        "id": "kungjin",
+        "id": "kung-jin",
         "type": "character",
-        "name": "Kung Jin"
+        "name": "Kung-Jin"
       }
     ],
     "chronology": 19,
@@ -15024,9 +19313,9 @@ export const storyEvents: StoryEvent[] = [
         "name": "Kronika"
       },
       {
-        "id": "liukang",
+        "id": "liu-kang",
         "type": "character",
-        "name": "Liu Kang"
+        "name": "Liu-Kang"
       },
       {
         "id": "raiden",
@@ -15081,9 +19370,9 @@ export const storyEvents: StoryEvent[] = [
     "eventType": "Konflik Naratif",
     "participants": [
       {
-        "id": "liukang",
+        "id": "liu-kang",
         "type": "character",
-        "name": "Liu Kang"
+        "name": "Liu-Kang"
       },
       {
         "id": "geras",
@@ -15133,17 +19422,17 @@ export const storyEvents: StoryEvent[] = [
     "eventType": "Konflik Naratif",
     "participants": [
       {
-        "id": "liukang",
+        "id": "liu-kang",
         "type": "character",
-        "name": "Liu Kang"
+        "name": "Liu-Kang"
       },
       {
-        "id": "shangtsung",
+        "id": "shang-tsung",
         "type": "character",
-        "name": "Shang Tsung"
+        "name": "Shang-Tsung"
       },
       {
-        "id": "subzero",
+        "id": "sub-zero",
         "type": "character",
         "name": "Sub-Zero"
       },
@@ -15200,7 +19489,7 @@ export const storyEvents: StoryEvent[] = [
         "name": "Scorpion"
       },
       {
-        "id": "subzero",
+        "id": "sub-zero",
         "type": "character",
         "name": "Sub-Zero"
       },

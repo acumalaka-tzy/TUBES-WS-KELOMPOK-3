@@ -111,7 +111,7 @@ export interface Ability {
   id: string;
   name: string;
   category: AbilityCategory;
-  element?: string;
+  element?: string | null;
   description: string;
   characters: EntityRef[];
   games: EntityRef[];

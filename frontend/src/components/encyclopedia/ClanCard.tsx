@@ -12,7 +12,7 @@ export default function ClanCard({ clan }: { clan: Organization }) {
           {clan.name}
         </h4>
         <span className="rounded bg-mk-bg px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-mk-navy dark:text-blue-300 border border-mk-border/60">
-          {clan.type}
+          {clan.kind || "organization"}
         </span>
       </div>
 

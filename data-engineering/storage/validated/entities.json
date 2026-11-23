@@ -17,6 +17,7 @@
           "abilities": [
             "ability-hellfire",
             "move-spear",
+            "ability-flame-aura",
             "fatality-toasty"
           ],
           "weapons": [
@@ -31,6 +32,7 @@
           "abilities": [
             "ability-hellfire",
             "move-spear",
+            "ability-flame-aura",
             "fatality-toasty"
           ],
           "weapons": [
@@ -44,12 +46,14 @@
           "timelineId": "timeline-new-era",
           "abilities": [
             "ability-hellfire",
-            "move-spear"
+            "move-spear",
+            "ability-flame-aura",
+            "fatality-toasty"
           ],
           "weapons": [
             "weapon-kunai-spear"
           ],
-          "clan": "org-lin-kuei"
+          "clan": "org-shirai-ryu"
         }
       ]
     },
@@ -70,6 +74,8 @@
           "abilities": [
             "ability-cryomancy",
             "move-ice-freeze",
+            "ability-ice-slide",
+            "ability-ice-clone",
             "fatality-spine-rip"
           ],
           "weapons": [
@@ -84,7 +90,9 @@
           "abilities": [
             "ability-cryomancy",
             "move-ice-freeze",
-            "ability-ice-slide"
+            "ability-ice-slide",
+            "ability-ice-clone",
+            "fatality-spine-rip"
           ],
           "weapons": [
             "weapon-kori-blade"
@@ -97,7 +105,10 @@
           "timelineId": "timeline-new-era",
           "abilities": [
             "ability-cryomancy",
-            "move-ice-freeze"
+            "move-ice-freeze",
+            "ability-ice-slide",
+            "ability-ice-clone",
+            "fatality-spine-rip"
           ],
           "weapons": [
             "weapon-kori-blade"
@@ -125,7 +136,9 @@
             "ability-electric-fly",
             "ability-teleportation"
           ],
-          "weapons": [],
+          "weapons": [
+            "weapon-bo-staff"
+          ],
           "clan": "org-white-lotus"
         },
         {
@@ -134,9 +147,12 @@
           "timelineId": "timeline-reboot",
           "abilities": [
             "ability-thunder-mastery",
-            "ability-electric-fly"
+            "ability-electric-fly",
+            "ability-teleportation"
           ],
-          "weapons": [],
+          "weapons": [
+            "weapon-bo-staff"
+          ],
           "clan": "org-white-lotus"
         },
         {
@@ -144,9 +160,13 @@
           "gameId": "game-mk1-2023",
           "timelineId": "timeline-new-era",
           "abilities": [
-            "ability-thunder-mastery"
+            "ability-thunder-mastery",
+            "ability-electric-fly",
+            "ability-teleportation"
           ],
-          "weapons": [],
+          "weapons": [
+            "weapon-bo-staff"
+          ],
           "clan": "org-white-lotus"
         }
       ]
@@ -168,9 +188,12 @@
           "abilities": [
             "ability-fireball-dragon",
             "move-bicycle-kick",
+            "move-flying-kick",
             "fatality-dragon-bite"
           ],
-          "weapons": [],
+          "weapons": [
+            "weapon-dragon-blade"
+          ],
           "clan": "org-white-lotus"
         },
         {
@@ -180,9 +203,12 @@
           "abilities": [
             "ability-fireball-dragon",
             "move-bicycle-kick",
-            "ability-thunder-mastery"
+            "move-flying-kick",
+            "fatality-dragon-bite"
           ],
-          "weapons": [],
+          "weapons": [
+            "weapon-dragon-blade"
+          ],
           "clan": "org-white-lotus"
         },
         {
@@ -191,9 +217,13 @@
           "timelineId": "timeline-new-era",
           "abilities": [
             "ability-fireball-dragon",
-            "ability-thunder-mastery"
+            "move-bicycle-kick",
+            "move-flying-kick",
+            "fatality-dragon-bite"
           ],
-          "weapons": [],
+          "weapons": [
+            "weapon-dragon-blade"
+          ],
           "clan": "org-white-lotus"
         }
       ]
@@ -214,8 +244,8 @@
           "timelineId": "timeline-original",
           "abilities": [
             "move-fan-lift",
-            "fatality-fan-decapitation",
-            "move-square-wave"
+            "move-square-wave",
+            "fatality-fan-decapitation"
           ],
           "weapons": [
             "weapon-steel-fans"
@@ -228,6 +258,7 @@
           "timelineId": "timeline-reboot",
           "abilities": [
             "move-fan-lift",
+            "move-square-wave",
             "fatality-fan-decapitation"
           ],
           "weapons": [
@@ -252,6 +283,9 @@
           "gameId": "game-mk2-1993",
           "timelineId": "timeline-original",
           "abilities": [
+            "move-sai-toss",
+            "move-ball-roll",
+            "move-leaping-neck-bite",
             "ability-teleportation"
           ],
           "weapons": [
@@ -264,6 +298,9 @@
           "gameId": "game-mkx-2015",
           "timelineId": "timeline-reboot",
           "abilities": [
+            "move-sai-toss",
+            "move-ball-roll",
+            "move-leaping-neck-bite",
             "ability-teleportation"
           ],
           "weapons": [
@@ -276,6 +313,9 @@
           "gameId": "game-mk1-2023",
           "timelineId": "timeline-new-era",
           "abilities": [
+            "move-sai-toss",
+            "move-ball-roll",
+            "move-leaping-neck-bite",
             "ability-teleportation"
           ],
           "weapons": [
@@ -301,7 +341,8 @@
           "timelineId": "timeline-original",
           "abilities": [
             "move-shadow-kick",
-            "move-nut-punch"
+            "move-nut-punch",
+            "move-flying-kick"
           ],
           "weapons": [],
           "clan": "org-special-forces"
@@ -312,7 +353,8 @@
           "timelineId": "timeline-reboot",
           "abilities": [
             "move-shadow-kick",
-            "move-nut-punch"
+            "move-nut-punch",
+            "move-flying-kick"
           ],
           "weapons": [],
           "clan": "org-special-forces"
@@ -335,9 +377,13 @@
           "timelineId": "timeline-original",
           "abilities": [
             "move-ring-toss",
+            "move-air-throw",
+            "move-grenade-toss",
             "fatality-kiss-of-death"
           ],
-          "weapons": [],
+          "weapons": [
+            "weapon-nightsticks"
+          ],
           "clan": "org-special-forces"
         },
         {
@@ -346,9 +392,13 @@
           "timelineId": "timeline-reboot",
           "abilities": [
             "move-ring-toss",
+            "move-air-throw",
+            "move-grenade-toss",
             "fatality-kiss-of-death"
           ],
-          "weapons": [],
+          "weapons": [
+            "weapon-nightsticks"
+          ],
           "clan": "org-special-forces"
         }
       ]
@@ -419,7 +469,8 @@
           "timelineId": "timeline-reboot",
           "abilities": [
             "move-hat-throw",
-            "move-wind-tornado"
+            "move-wind-tornado",
+            "ability-teleportation"
           ],
           "weapons": [],
           "clan": "org-white-lotus"
@@ -442,7 +493,8 @@
           "timelineId": "timeline-original",
           "abilities": [
             "ability-soul-stealing",
-            "move-soul-ball"
+            "move-soul-ball",
+            "move-flaming-skulls"
           ],
           "weapons": [],
           "clan": null
@@ -452,7 +504,9 @@
           "gameId": "game-mk-deadly-alliance-2002",
           "timelineId": "timeline-original",
           "abilities": [
-            "ability-soul-stealing"
+            "ability-soul-stealing",
+            "move-soul-ball",
+            "move-flaming-skulls"
           ],
           "weapons": [],
           "clan": null
@@ -462,7 +516,9 @@
           "gameId": "game-mk1-2023",
           "timelineId": "timeline-new-era",
           "abilities": [
-            "ability-soul-stealing"
+            "ability-soul-stealing",
+            "move-soul-ball",
+            "move-flaming-skulls"
           ],
           "weapons": [],
           "clan": null
@@ -485,6 +541,8 @@
           "timelineId": "timeline-original",
           "abilities": [
             "ability-necromancy",
+            "move-ground-burst",
+            "move-skeletal-boost",
             "ability-teleportation"
           ],
           "weapons": [],
@@ -496,6 +554,8 @@
           "timelineId": "timeline-reboot",
           "abilities": [
             "ability-necromancy",
+            "move-ground-burst",
+            "move-skeletal-boost",
             "ability-teleportation"
           ],
           "weapons": [],
@@ -517,7 +577,12 @@
           "versionId": "version-shaokahn-mk2",
           "gameId": "game-mk2-1993",
           "timelineId": "timeline-original",
-          "abilities": [],
+          "abilities": [
+            "move-wrath-hammer",
+            "move-shoulder-charge",
+            "move-light-spear",
+            "move-emperor-shield"
+          ],
           "weapons": [
             "weapon-war-hammer"
           ],
@@ -527,7 +592,12 @@
           "versionId": "version-shaokahn-mk11",
           "gameId": "game-mk11-2019",
           "timelineId": "timeline-reboot",
-          "abilities": [],
+          "abilities": [
+            "move-wrath-hammer",
+            "move-shoulder-charge",
+            "move-light-spear",
+            "move-emperor-shield"
+          ],
           "weapons": [
             "weapon-war-hammer"
           ],
@@ -550,7 +620,9 @@
           "gameId": "game-mk1-1992",
           "timelineId": "timeline-original",
           "abilities": [
-            "move-cannonball"
+            "move-cannonball",
+            "move-eye-laser",
+            "move-knife-toss"
           ],
           "weapons": [],
           "clan": "org-black-dragon"
@@ -560,7 +632,9 @@
           "gameId": "game-mk11-2019",
           "timelineId": "timeline-reboot",
           "abilities": [
-            "move-cannonball"
+            "move-cannonball",
+            "move-eye-laser",
+            "move-knife-toss"
           ],
           "weapons": [],
           "clan": "org-black-dragon"
@@ -582,7 +656,9 @@
           "gameId": "game-mk2-1993",
           "timelineId": "timeline-original",
           "abilities": [
-            "move-tarkatan-chop"
+            "move-tarkatan-chop",
+            "move-blade-spark",
+            "move-blade-spin"
           ],
           "weapons": [],
           "clan": null
@@ -592,7 +668,9 @@
           "gameId": "game-mk11-2019",
           "timelineId": "timeline-reboot",
           "abilities": [
-            "move-tarkatan-chop"
+            "move-tarkatan-chop",
+            "move-blade-spark",
+            "move-blade-spin"
           ],
           "weapons": [],
           "clan": null
@@ -615,7 +693,8 @@
           "timelineId": "timeline-original",
           "abilities": [
             "move-tele-flurry",
-            "move-telekinesis-slam"
+            "move-telekinesis-slam",
+            "move-energy-spark"
           ],
           "weapons": [
             "weapon-sento"
@@ -628,7 +707,8 @@
           "timelineId": "timeline-reboot",
           "abilities": [
             "move-tele-flurry",
-            "move-telekinesis-slam"
+            "move-telekinesis-slam",
+            "move-energy-spark"
           ],
           "weapons": [
             "weapon-sento"
@@ -640,12 +720,14 @@
           "gameId": "game-mk1-2023",
           "timelineId": "timeline-new-era",
           "abilities": [
-            "move-tele-flurry"
+            "move-tele-flurry",
+            "move-telekinesis-slam",
+            "move-energy-spark"
           ],
           "weapons": [
             "weapon-sento"
           ],
-          "clan": "org-shirai-ryu"
+          "clan": "org-special-forces"
         }
       ]
     },
@@ -665,9 +747,13 @@
           "timelineId": "timeline-original",
           "abilities": [
             "ability-shadow-magic",
-            "move-shadow-slide"
+            "move-shadow-slide",
+            "move-shadow-tackle",
+            "move-black-hole"
           ],
-          "weapons": [],
+          "weapons": [
+            "weapon-kriss-dagger"
+          ],
           "clan": "org-brotherhood-of-shadow"
         },
         {
@@ -676,9 +762,13 @@
           "timelineId": "timeline-reboot",
           "abilities": [
             "ability-shadow-magic",
-            "move-shadow-slide"
+            "move-shadow-slide",
+            "move-shadow-tackle",
+            "move-black-hole"
           ],
-          "weapons": [],
+          "weapons": [
+            "weapon-kriss-dagger"
+          ],
           "clan": "org-brotherhood-of-shadow"
         }
       ]
@@ -698,9 +788,14 @@
           "gameId": "game-mk3-1995",
           "timelineId": "timeline-original",
           "abilities": [
+            "move-smoke-cloud",
+            "move-smoke-bomb",
+            "ability-invisibility",
             "ability-teleportation"
           ],
-          "weapons": [],
+          "weapons": [
+            "weapon-kriss-dagger"
+          ],
           "clan": "org-lin-kuei"
         },
         {
@@ -708,9 +803,14 @@
           "gameId": "game-mk9-2011",
           "timelineId": "timeline-reboot",
           "abilities": [
+            "move-smoke-cloud",
+            "move-smoke-bomb",
+            "ability-invisibility",
             "ability-teleportation"
           ],
-          "weapons": [],
+          "weapons": [
+            "weapon-kriss-dagger"
+          ],
           "clan": "org-lin-kuei"
         },
         {
@@ -718,9 +818,14 @@
           "gameId": "game-mk1-2023",
           "timelineId": "timeline-new-era",
           "abilities": [
+            "move-smoke-cloud",
+            "move-smoke-bomb",
+            "ability-invisibility",
             "ability-teleportation"
           ],
-          "weapons": [],
+          "weapons": [
+            "weapon-kriss-dagger"
+          ],
           "clan": "org-lin-kuei"
         }
       ]
@@ -741,6 +846,8 @@
           "timelineId": "timeline-original",
           "abilities": [
             "move-net-tangle",
+            "move-chest-saw",
+            "move-exploding-bomb",
             "ability-teleportation"
           ],
           "weapons": [],
@@ -752,6 +859,8 @@
           "timelineId": "timeline-reboot",
           "abilities": [
             "move-net-tangle",
+            "move-chest-saw",
+            "move-exploding-bomb",
             "ability-teleportation"
           ],
           "weapons": [],
@@ -775,7 +884,9 @@
           "timelineId": "timeline-original",
           "abilities": [
             "move-missile-salvo",
-            "ability-teleportation"
+            "move-flamethrower",
+            "move-teleport-uppercut",
+            "move-compactor"
           ],
           "weapons": [],
           "clan": "org-lin-kuei"
@@ -786,7 +897,9 @@
           "timelineId": "timeline-reboot",
           "abilities": [
             "move-missile-salvo",
-            "ability-teleportation"
+            "move-flamethrower",
+            "move-teleport-uppercut",
+            "move-compactor"
           ],
           "weapons": [],
           "clan": "org-lin-kuei"
@@ -808,7 +921,10 @@
           "gameId": "game-mk1-1992",
           "timelineId": "timeline-original",
           "abilities": [
-            "move-acid-spit"
+            "move-acid-spit",
+            "move-forceball",
+            "ability-invisibility",
+            "move-reptile-slide"
           ],
           "weapons": [],
           "clan": null
@@ -818,7 +934,10 @@
           "gameId": "game-mkx-2015",
           "timelineId": "timeline-reboot",
           "abilities": [
-            "move-acid-spit"
+            "move-acid-spit",
+            "move-forceball",
+            "ability-invisibility",
+            "move-reptile-slide"
           ],
           "weapons": [],
           "clan": null
@@ -828,7 +947,10 @@
           "gameId": "game-mk1-2023",
           "timelineId": "timeline-new-era",
           "abilities": [
-            "move-acid-spit"
+            "move-acid-spit",
+            "move-forceball",
+            "ability-invisibility",
+            "move-reptile-slide"
           ],
           "weapons": [],
           "clan": null
@@ -850,6 +972,8 @@
           "gameId": "game-mk11-2019",
           "timelineId": "timeline-reboot",
           "abilities": [
+            "ability-temporal-reversal",
+            "ability-sand-manipulation",
             "ability-teleportation"
           ],
           "weapons": [],
@@ -860,6 +984,8 @@
           "gameId": "game-mk1-2023",
           "timelineId": "timeline-new-era",
           "abilities": [
+            "ability-temporal-reversal",
+            "ability-sand-manipulation",
             "ability-teleportation"
           ],
           "weapons": [],
@@ -882,6 +1008,8 @@
           "gameId": "game-mk11-2019",
           "timelineId": "timeline-reboot",
           "abilities": [
+            "ability-temporal-manipulation",
+            "move-hourglass-rewind",
             "ability-teleportation"
           ],
           "weapons": [],
@@ -917,7 +1045,8 @@
           "timelineId": "timeline-new-era",
           "abilities": [
             "move-banshee-scream",
-            "move-hair-whip"
+            "move-hair-whip",
+            "fatality-scream-queen"
           ],
           "weapons": [],
           "clan": null
@@ -940,9 +1069,12 @@
           "timelineId": "timeline-original",
           "abilities": [
             "move-shokan-stomp",
+            "move-dragon-slam",
             "fatality-shokan-tear"
           ],
-          "weapons": [],
+          "weapons": [
+            "weapon-shokan-cleavers"
+          ],
           "clan": null
         },
         {
@@ -950,9 +1082,13 @@
           "gameId": "game-mkx-2015",
           "timelineId": "timeline-reboot",
           "abilities": [
-            "move-shokan-stomp"
+            "move-shokan-stomp",
+            "move-dragon-slam",
+            "fatality-shokan-tear"
           ],
-          "weapons": [],
+          "weapons": [
+            "weapon-shokan-cleavers"
+          ],
           "clan": null
         }
       ]
@@ -972,7 +1108,9 @@
           "gameId": "game-mk2-1993",
           "timelineId": "timeline-original",
           "abilities": [
-            "move-shokan-stomp"
+            "move-shokan-stomp",
+            "move-dragon-breath",
+            "fatality-shokan-tear"
           ],
           "weapons": [],
           "clan": null
@@ -995,9 +1133,13 @@
           "timelineId": "timeline-original",
           "abilities": [
             "ability-necromancy",
+            "ability-shadow-magic",
+            "move-skeletal-boost",
             "ability-teleportation"
           ],
-          "weapons": [],
+          "weapons": [
+            "weapon-kriss-dagger"
+          ],
           "clan": "org-brotherhood-of-shadow"
         },
         {
@@ -1006,9 +1148,13 @@
           "timelineId": "timeline-reboot",
           "abilities": [
             "ability-necromancy",
+            "ability-shadow-magic",
+            "move-skeletal-boost",
             "ability-teleportation"
           ],
-          "weapons": [],
+          "weapons": [
+            "weapon-kriss-dagger"
+          ],
           "clan": "org-brotherhood-of-shadow"
         }
       ]
@@ -1029,9 +1175,12 @@
           "timelineId": "timeline-original",
           "abilities": [
             "move-wind-tornado",
-            "move-wind-kick"
+            "move-wind-kick",
+            "ability-teleportation"
           ],
-          "weapons": [],
+          "weapons": [
+            "weapon-bo-staff"
+          ],
           "clan": "org-white-lotus"
         },
         {
@@ -1039,9 +1188,13 @@
           "gameId": "game-mk-armageddon-2006",
           "timelineId": "timeline-original",
           "abilities": [
-            "move-wind-tornado"
+            "move-wind-tornado",
+            "move-wind-kick",
+            "ability-teleportation"
           ],
-          "weapons": [],
+          "weapons": [
+            "weapon-bo-staff"
+          ],
           "clan": "org-white-lotus"
         }
       ]
@@ -1062,7 +1215,8 @@
           "timelineId": "timeline-original",
           "abilities": [
             "ability-cryomancy",
-            "move-cyber-trap"
+            "move-cyber-trap",
+            "move-ice-freeze"
           ],
           "weapons": [
             "weapon-kori-blade"
@@ -1075,9 +1229,12 @@
           "timelineId": "timeline-reboot",
           "abilities": [
             "ability-cryomancy",
-            "move-cyber-trap"
+            "move-cyber-trap",
+            "move-ice-freeze"
           ],
-          "weapons": [],
+          "weapons": [
+            "weapon-kori-blade"
+          ],
           "clan": "org-lin-kuei"
         }
       ]
@@ -1098,9 +1255,12 @@
           "timelineId": "timeline-original",
           "abilities": [
             "move-drunken-fist",
-            "move-puke-puddle"
+            "move-puke-puddle",
+            "move-ground-pound"
           ],
-          "weapons": [],
+          "weapons": [
+            "weapon-bo-staff"
+          ],
           "clan": "org-white-lotus"
         },
         {
@@ -1108,9 +1268,13 @@
           "gameId": "game-mkx-2015",
           "timelineId": "timeline-reboot",
           "abilities": [
-            "move-drunken-fist"
+            "move-drunken-fist",
+            "move-puke-puddle",
+            "move-ground-pound"
           ],
-          "weapons": [],
+          "weapons": [
+            "weapon-bo-staff"
+          ],
           "clan": "org-white-lotus"
         }
       ]
@@ -1130,17 +1294,21 @@
           "gameId": "game-mk-deadly-alliance-2002",
           "timelineId": "timeline-original",
           "abilities": [
-            "move-energy-spark"
+            "move-energy-spark",
+            "move-flying-kick",
+            "move-wind-kick"
           ],
           "weapons": [],
-          "clan": null
+          "clan": "org-umgadi"
         },
         {
           "versionId": "version-limei-mk1-2023",
           "gameId": "game-mk1-2023",
           "timelineId": "timeline-new-era",
           "abilities": [
-            "move-energy-spark"
+            "move-energy-spark",
+            "move-flying-kick",
+            "move-wind-kick"
           ],
           "weapons": [],
           "clan": "org-umgadi"
@@ -1161,17 +1329,25 @@
           "versionId": "version-tanya-mk4",
           "gameId": "game-mk4-1997",
           "timelineId": "timeline-original",
-          "abilities": [],
+          "abilities": [
+            "move-surging-fire",
+            "move-split-flip-kick",
+            "move-tonfa-flurry"
+          ],
           "weapons": [
             "weapon-daggers-of-denial"
           ],
-          "clan": null
+          "clan": "org-umgadi"
         },
         {
           "versionId": "version-tanya-mk1-2023",
           "gameId": "game-mk1-2023",
           "timelineId": "timeline-new-era",
-          "abilities": [],
+          "abilities": [
+            "move-surging-fire",
+            "move-split-flip-kick",
+            "move-tonfa-flurry"
+          ],
           "weapons": [
             "weapon-daggers-of-denial"
           ],
@@ -1194,9 +1370,13 @@
           "gameId": "game-mk-deception-2004",
           "timelineId": "timeline-original",
           "abilities": [
-            "move-bone-twist"
+            "move-bone-twist",
+            "move-blood-spit",
+            "move-ground-burst"
           ],
-          "weapons": [],
+          "weapons": [
+            "weapon-spiked-club"
+          ],
           "clan": null
         },
         {
@@ -1204,9 +1384,13 @@
           "gameId": "game-mk1-2023",
           "timelineId": "timeline-new-era",
           "abilities": [
-            "move-bone-twist"
+            "move-bone-twist",
+            "move-blood-spit",
+            "move-ground-burst"
           ],
-          "weapons": [],
+          "weapons": [
+            "weapon-spiked-club"
+          ],
           "clan": null
         }
       ]
@@ -1227,9 +1411,12 @@
           "timelineId": "timeline-reboot",
           "abilities": [
             "move-shadow-kick",
-            "move-nut-punch"
+            "move-nut-punch",
+            "move-revolver-quickdraw"
           ],
-          "weapons": [],
+          "weapons": [
+            "weapon-dual-revolvers"
+          ],
           "clan": "org-special-forces"
         },
         {
@@ -1238,9 +1425,12 @@
           "timelineId": "timeline-reboot",
           "abilities": [
             "move-shadow-kick",
-            "move-nut-punch"
+            "move-nut-punch",
+            "move-revolver-quickdraw"
           ],
-          "weapons": [],
+          "weapons": [
+            "weapon-dual-revolvers"
+          ],
           "clan": "org-special-forces"
         }
       ]
@@ -1261,9 +1451,12 @@
           "timelineId": "timeline-reboot",
           "abilities": [
             "move-sun-ray",
-            "move-blood-tentacles"
+            "move-blood-tentacles",
+            "move-blade-spark"
           ],
-          "weapons": [],
+          "weapons": [
+            "weapon-war-hammer"
+          ],
           "clan": "org-osh-tekk"
         },
         {
@@ -1271,9 +1464,13 @@
           "gameId": "game-mk11-2019",
           "timelineId": "timeline-reboot",
           "abilities": [
-            "move-sun-ray"
+            "move-sun-ray",
+            "move-blood-tentacles",
+            "move-blade-spark"
           ],
-          "weapons": [],
+          "weapons": [
+            "weapon-war-hammer"
+          ],
           "clan": "org-osh-tekk"
         }
       ]
@@ -1293,7 +1490,9 @@
           "gameId": "game-mkx-2015",
           "timelineId": "timeline-reboot",
           "abilities": [
-            "move-revolver-quickdraw"
+            "move-revolver-quickdraw",
+            "move-grenade-toss",
+            "move-acid-spit"
           ],
           "weapons": [
             "weapon-dual-revolvers"
@@ -1305,7 +1504,9 @@
           "gameId": "game-mk11-2019",
           "timelineId": "timeline-reboot",
           "abilities": [
-            "move-revolver-quickdraw"
+            "move-revolver-quickdraw",
+            "move-grenade-toss",
+            "move-acid-spit"
           ],
           "weapons": [
             "weapon-dual-revolvers"
@@ -1344,7 +1545,8 @@
           "timelineId": "timeline-reboot",
           "abilities": [
             "move-blazing-nitro-kick",
-            "move-tribomerang"
+            "move-tribomerang",
+            "fatality-bow-before-me"
           ],
           "weapons": [
             "weapon-bo-staff"
@@ -1383,7 +1585,8 @@
           "timelineId": "timeline-reboot",
           "abilities": [
             "move-nomad-dash",
-            "move-buzzsaw"
+            "move-buzzsaw",
+            "fatality-road-rash"
           ],
           "weapons": [
             "weapon-hookswords"
@@ -1422,7 +1625,8 @@
           "timelineId": "timeline-reboot",
           "abilities": [
             "move-baton-trip",
-            "move-grenade-toss"
+            "move-grenade-toss",
+            "fatality-time-served"
           ],
           "weapons": [
             "weapon-nightsticks"
@@ -1460,7 +1664,9 @@
           "gameId": "game-mk9-2011",
           "timelineId": "timeline-reboot",
           "abilities": [
-            "move-teleport-stomp"
+            "move-teleport-stomp",
+            "move-untranslatable-rage",
+            "fatality-spine-ripper"
           ],
           "weapons": [
             "weapon-shokan-cleavers"
@@ -1499,7 +1705,8 @@
           "timelineId": "timeline-reboot",
           "abilities": [
             "move-spirit-arrow",
-            "move-rhino-charge"
+            "move-rhino-charge",
+            "fatality-war-dance"
           ],
           "weapons": [
             "weapon-spirit-tomahawks"
@@ -1538,7 +1745,8 @@
           "timelineId": "timeline-reboot",
           "abilities": [
             "move-ovipositor-rush",
-            "move-bug-spray"
+            "move-bug-spray",
+            "fatality-infestation"
           ],
           "weapons": [
             "weapon-ovipositors"
@@ -1566,7 +1774,9 @@
             "move-shotgun-blast",
             "fatality-spider-mines"
           ],
-          "weapons": [],
+          "weapons": [
+            "weapon-cybernetic-arms"
+          ],
           "clan": "org-special-forces"
         },
         {
@@ -1575,9 +1785,12 @@
           "timelineId": "timeline-reboot",
           "abilities": [
             "move-bionic-dash",
-            "move-shotgun-blast"
+            "move-shotgun-blast",
+            "fatality-spider-mines"
           ],
-          "weapons": [],
+          "weapons": [
+            "weapon-cybernetic-arms"
+          ],
           "clan": "org-special-forces"
         }
       ]
@@ -1630,7 +1843,7 @@
           "weapons": [
             "weapon-combat-bow"
           ],
-          "clan": "org-special-forces"
+          "clan": "org-white-lotus"
         }
       ]
     },
@@ -1677,7 +1890,9 @@
             "move-demonic-mace",
             "fatality-for-the-kollection"
           ],
-          "weapons": [],
+          "weapons": [
+            "weapon-spiked-club"
+          ],
           "clan": null
         }
       ]
@@ -1698,9 +1913,12 @@
           "timelineId": "timeline-original",
           "abilities": [
             "move-dragon-breath",
-            "move-dragon-slam"
+            "move-dragon-slam",
+            "ability-necromancy"
           ],
-          "weapons": [],
+          "weapons": [
+            "weapon-dragon-blade"
+          ],
           "clan": null
         },
         {
@@ -1708,9 +1926,13 @@
           "gameId": "game-mk-armageddon-2006",
           "timelineId": "timeline-original",
           "abilities": [
-            "move-dragon-breath"
+            "move-dragon-breath",
+            "move-dragon-slam",
+            "ability-necromancy"
           ],
-          "weapons": [],
+          "weapons": [
+            "weapon-dragon-blade"
+          ],
           "clan": null
         }
       ]
@@ -1731,9 +1953,13 @@
           "timelineId": "timeline-original",
           "abilities": [
             "move-mimic-mastery",
+            "move-spear",
+            "move-ice-freeze",
             "fatality-face-crusher"
           ],
-          "weapons": [],
+          "weapons": [
+            "weapon-dragon-blade"
+          ],
           "clan": "org-white-lotus"
         },
         {
@@ -1741,9 +1967,14 @@
           "gameId": "game-mk-armageddon-2006",
           "timelineId": "timeline-original",
           "abilities": [
-            "move-mimic-mastery"
+            "move-mimic-mastery",
+            "move-spear",
+            "move-ice-freeze",
+            "fatality-face-crusher"
           ],
-          "weapons": [],
+          "weapons": [
+            "weapon-dragon-blade"
+          ],
           "clan": "org-white-lotus"
         }
       ]
@@ -1763,10 +1994,12 @@
           "gameId": "game-mk4-1997",
           "timelineId": "timeline-original",
           "abilities": [
-            "move-charging-spear"
+            "move-charging-spear",
+            "move-revolver-quickdraw",
+            "move-teleport-stomp"
           ],
           "weapons": [
-            "weapon-spiked-club"
+            "weapon-bo-staff"
           ],
           "clan": null
         },
@@ -1775,10 +2008,12 @@
           "gameId": "game-mk-gold-1999",
           "timelineId": "timeline-original",
           "abilities": [
-            "move-charging-spear"
+            "move-charging-spear",
+            "move-revolver-quickdraw",
+            "move-teleport-stomp"
           ],
           "weapons": [
-            "weapon-spiked-club"
+            "weapon-bo-staff"
           ],
           "clan": null
         },
@@ -1787,10 +2022,12 @@
           "gameId": "game-mk1-2023",
           "timelineId": "timeline-new-era",
           "abilities": [
-            "move-charging-spear"
+            "move-charging-spear",
+            "move-revolver-quickdraw",
+            "move-teleport-stomp"
           ],
           "weapons": [
-            "weapon-spiked-club"
+            "weapon-bo-staff"
           ],
           "clan": null
         }
@@ -1812,9 +2049,12 @@
           "timelineId": "timeline-original",
           "abilities": [
             "move-blood-spit",
+            "move-blood-tentacles",
             "fatality-vaeternus-drain"
           ],
-          "weapons": [],
+          "weapons": [
+            "weapon-kriss-dagger"
+          ],
           "clan": null
         },
         {
@@ -1822,9 +2062,13 @@
           "gameId": "game-mk1-2023",
           "timelineId": "timeline-new-era",
           "abilities": [
-            "move-blood-spit"
+            "move-blood-spit",
+            "move-blood-tentacles",
+            "fatality-vaeternus-drain"
           ],
-          "weapons": [],
+          "weapons": [
+            "weapon-kriss-dagger"
+          ],
           "clan": null
         }
       ]
@@ -1844,9 +2088,13 @@
           "gameId": "game-mk-mythologies-1997",
           "timelineId": "timeline-original",
           "abilities": [
-            "move-skull-daggers"
+            "move-skull-daggers",
+            "move-shadow-slide",
+            "ability-shadow-magic"
           ],
-          "weapons": [],
+          "weapons": [
+            "weapon-kriss-dagger"
+          ],
           "clan": "org-brotherhood-of-shadow"
         },
         {
@@ -1854,10 +2102,14 @@
           "gameId": "game-mk-tournament-edition-2003",
           "timelineId": "timeline-original",
           "abilities": [
-            "move-skull-daggers"
+            "move-skull-daggers",
+            "move-shadow-slide",
+            "ability-shadow-magic"
           ],
-          "weapons": [],
-          "clan": "org-lin-kuei"
+          "weapons": [
+            "weapon-kriss-dagger"
+          ],
+          "clan": "org-brotherhood-of-shadow"
         }
       ]
     },
@@ -1877,24 +2129,27 @@
           "timelineId": "timeline-original",
           "abilities": [
             "move-heavenly-light",
+            "ability-teleportation",
             "fatality-divine-purification"
           ],
           "weapons": [
             "weapon-kriss-dagger"
           ],
-          "clan": null
+          "clan": "org-brotherhood-of-shadow"
         },
         {
           "versionId": "version-ashrah-mk1-2023",
           "gameId": "game-mk1-2023",
           "timelineId": "timeline-new-era",
           "abilities": [
-            "move-heavenly-light"
+            "move-heavenly-light",
+            "ability-teleportation",
+            "fatality-divine-purification"
           ],
           "weapons": [
             "weapon-kriss-dagger"
           ],
-          "clan": null
+          "clan": "org-brotherhood-of-shadow"
         }
       ]
     },
@@ -1913,9 +2168,13 @@
           "gameId": "game-mk-deception-2004",
           "timelineId": "timeline-original",
           "abilities": [
-            "move-lava-burst"
+            "move-lava-burst",
+            "move-wind-kick",
+            "move-sun-ray"
           ],
-          "weapons": [],
+          "weapons": [
+            "weapon-bo-staff"
+          ],
           "clan": "org-seidan-guard"
         },
         {
@@ -1923,9 +2182,13 @@
           "gameId": "game-mk-armageddon-2006",
           "timelineId": "timeline-original",
           "abilities": [
-            "move-lava-burst"
+            "move-lava-burst",
+            "move-wind-kick",
+            "move-sun-ray"
           ],
-          "weapons": [],
+          "weapons": [
+            "weapon-bo-staff"
+          ],
           "clan": "org-seidan-guard"
         }
       ]
@@ -1945,7 +2208,9 @@
           "gameId": "game-mk-deadly-alliance-2002",
           "timelineId": "timeline-original",
           "abilities": [
-            "move-grapple-hook-kick"
+            "move-grapple-hook-kick",
+            "move-hookswords",
+            "move-nomad-dash"
           ],
           "weapons": [
             "weapon-hookswords"
@@ -1957,7 +2222,9 @@
           "gameId": "game-mk-tournament-edition-2003",
           "timelineId": "timeline-original",
           "abilities": [
-            "move-grapple-hook-kick"
+            "move-grapple-hook-kick",
+            "move-hookswords",
+            "move-nomad-dash"
           ],
           "weapons": [
             "weapon-hookswords"
@@ -2001,7 +2268,9 @@
           "gameId": "game-mk3-1995",
           "timelineId": "timeline-original",
           "abilities": [
-            "move-centaur-charge"
+            "move-centaur-charge",
+            "move-teleport-stomp",
+            "move-energy-spark"
           ],
           "weapons": [],
           "clan": null
@@ -2011,7 +2280,9 @@
           "gameId": "game-mk-armageddon-2006",
           "timelineId": "timeline-original",
           "abilities": [
-            "move-centaur-charge"
+            "move-centaur-charge",
+            "move-teleport-stomp",
+            "move-energy-spark"
           ],
           "weapons": [],
           "clan": null
@@ -2033,7 +2304,9 @@
           "gameId": "game-mk-deadly-alliance-2002",
           "timelineId": "timeline-original",
           "abilities": [
-            "move-fire-fist"
+            "move-fire-fist",
+            "ability-hellfire",
+            "ability-flame-aura"
           ],
           "weapons": [],
           "clan": null
@@ -2043,7 +2316,9 @@
           "gameId": "game-mk-armageddon-2006",
           "timelineId": "timeline-original",
           "abilities": [
-            "move-fire-fist"
+            "move-fire-fist",
+            "ability-hellfire",
+            "ability-flame-aura"
           ],
           "weapons": [],
           "clan": null
@@ -2064,8 +2339,14 @@
           "versionId": "version-daegon-mk-armageddon-2006",
           "gameId": "game-mk-armageddon-2006",
           "timelineId": "timeline-original",
-          "abilities": [],
-          "weapons": [],
+          "abilities": [
+            "move-drakes-breath",
+            "move-drakes-shield",
+            "move-flying-kick"
+          ],
+          "weapons": [
+            "weapon-dragon-blade"
+          ],
           "clan": "org-red-dragon"
         }
       ]
@@ -2084,23 +2365,17 @@
           "versionId": "version-taven-mk-armageddon-2006",
           "gameId": "game-mk-armageddon-2006",
           "timelineId": "timeline-original",
-          "abilities": [],
-          "weapons": [],
+          "abilities": [
+            "move-inner-fire",
+            "move-speed-of-light",
+            "ability-teleportation"
+          ],
+          "weapons": [
+            "weapon-dragon-blade"
+          ],
           "clan": null
         }
       ]
-    },
-    {
-      "id": "character-scorpion-fetch-failed",
-      "name": "Scorpion (Fetch Failed)",
-      "alternateName": null,
-      "firstAppearanceYear": "Unknown",
-      "description": "Official franchise profile for Scorpion (Fetch Failed).",
-      "species": "Human",
-      "originRealm": "realm-earthrealm",
-      "sourceURL": "https://www.mortalkombat.com/en-us/roster/scorpion",
-      "verificationStatus": "partially_verified",
-      "versions": []
     }
   ],
   "games": [
@@ -2613,61 +2888,116 @@
       "id": "org-shirai-ryu",
       "name": "Shirai Ryu",
       "type": "clan",
-      "description": "Renegade ninja clan of Japan founded by Takeda, historically led by Grandmaster Hanzo Hasashi."
+      "description": "Renegade ninja clan of Japan founded by Takeda, historically led by Grandmaster Hanzo Hasashi.",
+      "members": [
+        "character-scorpion",
+        "character-takeda"
+      ]
     },
     {
       "id": "org-lin-kuei",
       "name": "Lin Kuei",
       "type": "clan",
-      "description": "Ancient Chinese stealth clan of assassins and cryomancers, historically pledged to protect Earthrealm."
+      "description": "Ancient Chinese stealth clan of assassins and cryomancers, historically pledged to protect Earthrealm.",
+      "members": [
+        "character-subzero",
+        "character-smoke",
+        "character-cyrax",
+        "character-sektor",
+        "character-frost"
+      ]
     },
     {
       "id": "org-special-forces",
       "name": "Special Forces",
       "type": "military",
-      "description": "Earthrealm military division led by Sonya Blade and Jax Briggs tasked with countering otherworldly threats."
+      "description": "Earthrealm military division led by Sonya Blade and Jax Briggs tasked with countering otherworldly threats.",
+      "members": [
+        "character-sonyablade",
+        "character-jaxbriggs",
+        "character-johnnycage",
+        "character-cassiecage",
+        "character-jacqui",
+        "character-stryker"
+      ]
     },
     {
       "id": "org-black-dragon",
       "name": "Black Dragon",
       "type": "syndicate",
-      "description": "Ruthless international mercenary syndicate led by the criminal Kano dealing in illicit weapons and extortion."
+      "description": "Ruthless international mercenary syndicate led by the criminal Kano dealing in illicit weapons and extortion.",
+      "members": [
+        "character-kano",
+        "character-kabal",
+        "character-erronblack",
+        "character-mavado"
+      ]
     },
     {
       "id": "org-white-lotus",
       "name": "White Lotus Society",
       "type": "order",
-      "description": "Secret society of martial artists founded by Raiden to defend Earthrealm in Mortal Kombat tournaments."
+      "description": "Secret society of martial artists founded by Raiden to defend Earthrealm in Mortal Kombat tournaments.",
+      "members": [
+        "character-liukang",
+        "character-kunglao",
+        "character-raiden",
+        "character-boraicho",
+        "character-kungjin",
+        "character-fujin",
+        "character-shujinko"
+      ]
     },
     {
       "id": "org-brotherhood-of-shadow",
       "name": "Brotherhood of Shadow",
       "type": "cult",
-      "description": "Fanatical Netherrealm religious cult serving the fallen Elder God Shinnok and sorcerer Quan Chi."
+      "description": "Fanatical Netherrealm religious cult serving the fallen Elder God Shinnok and sorcerer Quan Chi.",
+      "members": [
+        "character-quanchi",
+        "character-noobsaibot",
+        "character-shinnok",
+        "character-sareena",
+        "character-ashrah"
+      ]
     },
     {
       "id": "org-red-dragon",
       "name": "Red Dragon",
       "type": "syndicate",
-      "description": "Ancient secret criminal syndicate founded by the Edenian demigod Daegon, sworn mortal enemies of the Black Dragon."
+      "description": "Ancient secret criminal syndicate founded by the Edenian demigod Daegon, sworn mortal enemies of the Black Dragon.",
+      "members": [
+        "character-mavado",
+        "character-daegon"
+      ]
     },
     {
       "id": "org-umgadi",
       "name": "The Umgadi",
       "type": "order",
-      "description": "Elite warrior priestesses selected from Outworld first-born daughters sworn to protect the royal family and emperor."
+      "description": "Elite warrior priestesses selected from Outworld first-born daughters sworn to protect the royal family and emperor.",
+      "members": [
+        "character-tanya",
+        "character-limei"
+      ]
     },
     {
       "id": "org-osh-tekk",
       "name": "Osh-Tekk Tribe",
       "type": "order",
-      "description": "Sun-worshipping warrior civilization of Outworld historically ruled by Kotal K'atz and Emperor Kotal Kahn."
+      "description": "Sun-worshipping warrior civilization of Outworld historically ruled by Kotal K'atz and Emperor Kotal Kahn.",
+      "members": [
+        "character-kotalkahn"
+      ]
     },
     {
       "id": "org-seidan-guard",
       "name": "Seidan Guard",
       "type": "military",
-      "description": "The disciplined, authoritarian military defense force of Orderrealm commanded by Hotaru."
+      "description": "The disciplined, authoritarian military defense force of Orderrealm commanded by Hotaru.",
+      "members": [
+        "character-hotaru"
+      ]
     }
   ],
   "elements": [
@@ -3419,6 +3749,279 @@
       "elementId": "element-energy",
       "category": "Fatality",
       "description": "Ashrah pierces the demon's heart with the Kriss, causing holy blue light to incinerate the body from within."
+    },
+    {
+      "id": "move-sai-toss",
+      "name": "Soaring Sai Toss",
+      "category": "Special Move",
+      "elementId": null,
+      "description": "Melempar sepasang sai bermuatan energi magis ke arah lawan."
+    },
+    {
+      "id": "move-ball-roll",
+      "name": "Rolling Thunder (Ball Roll)",
+      "category": "Special Move",
+      "elementId": null,
+      "description": "Menggulung tubuh menjadi bola maut dan menerjang kaki musuh dengan kecepatan tinggi."
+    },
+    {
+      "id": "move-leaping-neck-bite",
+      "name": "Leaping Lunch (Neck Bite)",
+      "category": "Special Move",
+      "elementId": null,
+      "description": "Melompat ke pundak lawan dan merobek leher mereka dengan taring Tarkatan yang buas."
+    },
+    {
+      "id": "move-smoke-cloud",
+      "name": "Smoke Cloud Teleport",
+      "category": "Special Move",
+      "elementId": null,
+      "description": "Menyelimuti diri dalam kabut asap pekat lalu muncul di belakang lawan."
+    },
+    {
+      "id": "move-smoke-bomb",
+      "name": "Smoke Bomb Stun",
+      "category": "Special Move",
+      "elementId": null,
+      "description": "Melempar bom asap pekat yang melumpuhkan pandangan dan pergerakan lawan."
+    },
+    {
+      "id": "ability-invisibility",
+      "name": "Chameleon Camouflage (Invisibility)",
+      "category": "Ability",
+      "elementId": null,
+      "description": "Kemampuan memanipulasi cahaya atau asap untuk menghilang tanpa jejak dari pandangan lawan."
+    },
+    {
+      "id": "move-chest-saw",
+      "name": "Chest Saw Cutter",
+      "category": "Special Move",
+      "elementId": null,
+      "description": "Membuka plat dada sibernetik untuk meluncurkan bilah gergaji bundar berputar tinggi."
+    },
+    {
+      "id": "move-exploding-bomb",
+      "name": "Timed Cyber Bomb",
+      "category": "Special Move",
+      "elementId": null,
+      "description": "Menjatuhkan bom sibernetik dengan sensor jarak dekat yang meledakkan target ke udara."
+    },
+    {
+      "id": "move-flamethrower",
+      "name": "Cybernetic Flamethrower",
+      "category": "Special Move",
+      "elementId": "elem-fire",
+      "description": "Semburan api membara dari kompartemen tangan sibernetik Sektor."
+    },
+    {
+      "id": "move-teleport-uppercut",
+      "name": "Teleport Rocket Uppercut",
+      "category": "Special Move",
+      "elementId": null,
+      "description": "Menghilang ke dalam tanah dan meluncur ke atas menghantam dagu lawan dengan roket pendorong."
+    },
+    {
+      "id": "move-compactor",
+      "name": "Chest Compactor Crush",
+      "category": "Special Move",
+      "elementId": null,
+      "description": "Alat pres mekanik yang keluar dari dada untuk meremukkan tubuh lawan."
+    },
+    {
+      "id": "move-wrath-hammer",
+      "name": "Wrath Hammer Slam",
+      "category": "Special Move",
+      "elementId": null,
+      "description": "Hantaman palu raksasa Wrath Hammer yang mengguncang tanah dan mematahkan tulang musuh."
+    },
+    {
+      "id": "move-shoulder-charge",
+      "name": "Shao Kahn Shoulder Charge",
+      "category": "Special Move",
+      "elementId": null,
+      "description": "Terjangan bahu bertenaga dewa yang dilapisi aura hijau kekaisaran Outworld."
+    },
+    {
+      "id": "move-light-spear",
+      "name": "Imperial Light Spear",
+      "category": "Special Move",
+      "elementId": null,
+      "description": "Tombak energi mistis murni yang dilemparkan menembus pertahanan lawan."
+    },
+    {
+      "id": "move-emperor-shield",
+      "name": "Emperor's Repelling Shield",
+      "category": "Special Move",
+      "elementId": null,
+      "description": "Perisai energi yang memantulkan proyektil lawan kembali ke penembaknya."
+    },
+    {
+      "id": "move-surging-fire",
+      "name": "Surging Fireball",
+      "category": "Special Move",
+      "elementId": "elem-fire",
+      "description": "Bola api Edenian mistis ungu yang diluncurkan dari udara atau tanah."
+    },
+    {
+      "id": "move-split-flip-kick",
+      "name": "Split-Flip Kick",
+      "category": "Special Move",
+      "elementId": null,
+      "description": "Tendangan akrobatik salto mematikan yang memecah konsentrasi musuh."
+    },
+    {
+      "id": "move-tonfa-flurry",
+      "name": "Kobu Jutsu Tonfa Flurry",
+      "category": "Special Move",
+      "elementId": null,
+      "description": "Kombinasi serangan tongkat tonfa berbilah tajam dari Umgadi."
+    },
+    {
+      "id": "move-forceball",
+      "name": "Corrosive Forceball",
+      "category": "Special Move",
+      "elementId": "elem-acid",
+      "description": "Bola lendir asam Zaterran melayang yang menarik dan menjatuhkan musuh."
+    },
+    {
+      "id": "move-reptile-slide",
+      "name": "Acidic Reptilian Slide",
+      "category": "Special Move",
+      "elementId": "elem-acid",
+      "description": "Seluncuran cepat di atas lapisan lendir asam yang menyapu kaki lawan."
+    },
+    {
+      "id": "move-eye-laser",
+      "name": "Cybernetic Eye Laser",
+      "category": "Special Move",
+      "elementId": null,
+      "description": "Tembakan sinar laser merah berdaya bakar tinggi dari plat mata sibernetik Kano."
+    },
+    {
+      "id": "move-knife-toss",
+      "name": "Heart-Seeker Knife Toss",
+      "category": "Special Move",
+      "elementId": null,
+      "description": "Lemparan pisau berburu bergerigi kembar yang menancap akurat ke titik vital lawan."
+    },
+    {
+      "id": "move-blade-spark",
+      "name": "Tarkatan Blade Spark",
+      "category": "Special Move",
+      "elementId": null,
+      "description": "Gesekan cepat bilah lengan bertulang menghasilkan percikan api tajam ke arah lawan."
+    },
+    {
+      "id": "move-blade-spin",
+      "name": "Tarkatan Blade Spin",
+      "category": "Special Move",
+      "elementId": null,
+      "description": "Putaran tornado bilah lengan yang merobek siapa pun yang mendekat."
+    },
+    {
+      "id": "ability-temporal-reversal",
+      "name": "Temporal Reversal (Time Rewind)",
+      "category": "Ability",
+      "elementId": null,
+      "description": "Memutar balik waktu tubuh sendiri beberapa detik untuk memulihkan kesehatan dan posisi."
+    },
+    {
+      "id": "ability-sand-manipulation",
+      "name": "Titan Sand Manipulation",
+      "category": "Ability",
+      "elementId": null,
+      "description": "Membentuk pasir waktu abadi menjadi palu, dinding pertahanan, atau jebakan temporal."
+    },
+    {
+      "id": "ability-temporal-manipulation",
+      "name": "Chronokinesis (Time Mastery)",
+      "category": "Ability",
+      "elementId": null,
+      "description": "Pengendalian absolut terhadap aliran masa lalu, masa kini, dan masa depan."
+    },
+    {
+      "id": "move-hourglass-rewind",
+      "name": "Hourglass Epoch Rewind",
+      "category": "Special Move",
+      "elementId": null,
+      "description": "Memanipulasi pasir Hourglass untuk mereset kontinuitas sejarah semesta."
+    },
+    {
+      "id": "move-bowl-girl",
+      "name": "Bowl Girl (Ferra Toss)",
+      "category": "Special Move",
+      "elementId": null,
+      "description": "Torr melempar Ferra dengan tenaga luar biasa untuk mencakar dan menusuk mata musuh."
+    },
+    {
+      "id": "move-torr-charge",
+      "name": "Brute Torr Charge",
+      "category": "Special Move",
+      "elementId": null,
+      "description": "Serudukan raksasa Torr yang tak terhentikan meluluhlantakkan garis pertahanan."
+    },
+    {
+      "id": "move-drakes-breath",
+      "name": "Drake's Breath Fireball",
+      "category": "Special Move",
+      "elementId": "elem-fire",
+      "description": "Semburan api naga merah kuno yang dipelajari Daegon dari naga Caro."
+    },
+    {
+      "id": "move-drakes-shield",
+      "name": "Dragon Shield Reflector",
+      "category": "Special Move",
+      "elementId": null,
+      "description": "Perisai energi naga merah yang menangkis serangan jarak jauh musuh."
+    },
+    {
+      "id": "move-inner-fire",
+      "name": "Inner Flame Surge",
+      "category": "Special Move",
+      "elementId": "elem-fire",
+      "description": "Pancaran energi dewa api Edenian murni yang membakar tubuh Taven saat menyerang."
+    },
+    {
+      "id": "move-speed-of-light",
+      "name": "Speed of Light Teleport",
+      "category": "Special Move",
+      "elementId": null,
+      "description": "Pergerakan secepat cahaya yang menempatkan Taven langsung di belakang punggung musuh."
+    },
+    {
+      "id": "move-shadow-tackle",
+      "name": "Shadow Clone Tackle",
+      "category": "Special Move",
+      "elementId": "elem-shadow",
+      "description": "Kloning bayangan Saibot berlari kencang menerjang dan membanting tubuh lawan."
+    },
+    {
+      "id": "move-black-hole",
+      "name": "Darkness Black Hole",
+      "category": "Special Move",
+      "elementId": "elem-shadow",
+      "description": "Membuka portal kegelapan di lantai yang menyedot lawan dan menjatuhkannya dari langit."
+    },
+    {
+      "id": "move-flaming-skulls",
+      "name": "Flaming Skulls Volley",
+      "category": "Special Move",
+      "elementId": "elem-fire",
+      "description": "Rentetan tengkorak api berderak yang ditembakkan secara beruntun oleh Shang Tsung."
+    },
+    {
+      "id": "move-ground-burst",
+      "name": "Netherrealm Ground Eruption",
+      "category": "Special Move",
+      "elementId": null,
+      "description": "Retakan magis tanah Netherrealm yang meledakkan target ke udara."
+    },
+    {
+      "id": "move-skeletal-boost",
+      "name": "Skeletal Strength Boost",
+      "category": "Special Move",
+      "elementId": null,
+      "description": "Sihir kutukan Quan Chi yang memperkuat daya rusak fisik prajurit mayat hidup."
     }
   ],
   "weapons": [

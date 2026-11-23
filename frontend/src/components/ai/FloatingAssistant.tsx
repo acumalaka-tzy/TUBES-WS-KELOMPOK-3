@@ -26,6 +26,159 @@ const SAMPLE_PROMPTS = [
   "Hubungan antara Scorpion dan Sub-Zero",
 ];
 
+function parseInlineMarkdown(text: string): React.ReactNode[] {
+  const tokens = text.split(/(\*\*\*.*?\*\*\*|\*\*.*?\*\*|\*[^*]+?\*|`[^`]+?`)/g);
+
+  return tokens.map((part, idx) => {
+    if (part.startsWith("***") && part.endsWith("***") && part.length >= 6) {
+      return (
+        <strong key={idx} className="font-semibold italic text-mk-text dark:text-zinc-100">
+          {part.slice(3, -3)}
+        </strong>
+      );
+    }
+    if (part.startsWith("**") && part.endsWith("**") && part.length >= 4) {
+      return (
+        <strong key={idx} className="font-semibold text-mk-text dark:text-zinc-100">
+          {part.slice(2, -2)}
+        </strong>
+      );
+    }
+    if (part.startsWith("*") && part.endsWith("*") && part.length >= 2) {
+      return (
+        <em key={idx} className="italic text-mk-text/90">
+          {part.slice(1, -1)}
+        </em>
+      );
+    }
+    if (part.startsWith("`") && part.endsWith("`") && part.length >= 2) {
+      return (
+        <code key={idx} className="rounded bg-mk-bg px-1 py-0.5 font-mono text-[11px] text-mk-gold">
+          {part.slice(1, -1)}
+        </code>
+      );
+    }
+    return part;
+  });
+}
+
+function FormattedMessage({ content, isUser }: { content: string; isUser: boolean }) {
+  if (isUser) {
+    return <p className="whitespace-pre-wrap">{content}</p>;
+  }
+
+  const lines = content.split("\n");
+  const nodes: React.ReactNode[] = [];
+  let currentList: { type: "ul" | "ol"; items: React.ReactNode[] } | null = null;
+
+  const flushList = () => {
+    if (currentList) {
+      if (currentList.type === "ul") {
+        nodes.push(
+          <ul key={`ul-${nodes.length}`} className="my-1.5 space-y-1">
+            {currentList.items.map((item, i) => (
+              <li key={i} className="flex items-start gap-1.5 leading-relaxed">
+                <span className="text-mk-gold select-none mt-0.5 shrink-0 text-xs">•</span>
+                <div className="flex-1">{item}</div>
+              </li>
+            ))}
+          </ul>
+        );
+      } else {
+        nodes.push(
+          <ol key={`ol-${nodes.length}`} className="my-1.5 space-y-1">
+            {currentList.items.map((item, i) => (
+              <li key={i} className="flex items-start gap-1.5 leading-relaxed">
+                <span className="text-mk-gold font-mono font-medium select-none shrink-0 text-xs">{i + 1}.</span>
+                <div className="flex-1">{item}</div>
+              </li>
+            ))}
+          </ol>
+        );
+      }
+      currentList = null;
+    }
+  };
+
+  for (let i = 0; i < lines.length; i++) {
+    const rawLine = lines[i];
+    const trimmed = rawLine.trim();
+
+    if (!trimmed) {
+      flushList();
+      nodes.push(<div key={`spacer-${i}`} className="h-1.5" />);
+      continue;
+    }
+
+    if (trimmed === "---" || trimmed === "***") {
+      flushList();
+      nodes.push(<hr key={`hr-${i}`} className="my-2 border-mk-border/50" />);
+      continue;
+    }
+
+    // Headings: ###, ##, #
+    const headingMatch = trimmed.match(/^(#{1,4})\s+(.+)$/);
+    if (headingMatch) {
+      flushList();
+      let headingText = headingMatch[2].trim();
+      if (headingText.startsWith("**") && headingText.endsWith("**")) {
+        headingText = headingText.slice(2, -2);
+      }
+      nodes.push(
+        <h4 key={`h-${i}`} className="font-heading font-bold text-mk-gold tracking-wide mt-2 mb-1 text-xs sm:text-sm">
+          {parseInlineMarkdown(headingText)}
+        </h4>
+      );
+      continue;
+    }
+
+    // Standalone bold titles like **Profil Cyrax** or **Profil Cyrax:**
+    const boldTitleMatch = trimmed.match(/^\*\*([^*]+)\*\*[:]?$/);
+    if (boldTitleMatch) {
+      flushList();
+      nodes.push(
+        <h5 key={`bt-${i}`} className="font-heading font-bold text-mk-gold tracking-wide mt-2 mb-0.5 text-xs sm:text-sm">
+          {boldTitleMatch[1]}
+        </h5>
+      );
+      continue;
+    }
+
+    // Bullet points: * or -
+    const bulletMatch = trimmed.match(/^[*•-]\s+(.+)$/);
+    if (bulletMatch) {
+      if (!currentList || currentList.type !== "ul") {
+        flushList();
+        currentList = { type: "ul", items: [] };
+      }
+      currentList.items.push(parseInlineMarkdown(bulletMatch[1]));
+      continue;
+    }
+
+    // Numbered lists: 1. or 1)
+    const numMatch = trimmed.match(/^\d+[\.\)]\s+(.+)$/);
+    if (numMatch) {
+      if (!currentList || currentList.type !== "ol") {
+        flushList();
+        currentList = { type: "ol", items: [] };
+      }
+      currentList.items.push(parseInlineMarkdown(numMatch[1]));
+      continue;
+    }
+
+    // Standard paragraph line
+    flushList();
+    nodes.push(
+      <p key={`p-${i}`} className="my-0.5 leading-relaxed">
+        {parseInlineMarkdown(trimmed)}
+      </p>
+    );
+  }
+
+  flushList();
+  return <div className="space-y-0.5 text-xs sm:text-sm leading-relaxed">{nodes}</div>;
+}
+
 export default function FloatingAssistant() {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
@@ -225,7 +378,7 @@ export default function FloatingAssistant() {
                     : "rounded-tl-xs bg-mk-card/90 border border-mk-border/80 text-mk-text"
                 }`}
               >
-                <p className="whitespace-pre-wrap">{m.content}</p>
+                <FormattedMessage content={m.content} isUser={m.role === "user"} />
 
                 {/* Retrieved Context Entities */}
                 {m.retrievedContext && m.retrievedContext.entities.length > 0 && (
