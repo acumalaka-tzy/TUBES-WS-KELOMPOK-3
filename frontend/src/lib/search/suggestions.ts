@@ -12,6 +12,7 @@ import type { Suggestion } from "../types";
 export function generateSearchSuggestions(query: string, maxResults: number = 8): Suggestion[] {
   const q = query.toLowerCase().trim();
   if (!q) return [];
+  const qNorm = q.replace(/[-_]/g, " ").trim();
 
   const results: { suggestion: Suggestion; score: number }[] = [];
   const seen = new Set<string>();
@@ -33,14 +34,63 @@ export function generateSearchSuggestions(query: string, maxResults: number = 8)
   // 1. Characters & aliases
   for (const c of characters) {
     const nameLower = c.name.toLowerCase();
-    if (nameLower === q) add(c.id, c.name, "character", entityHref({ id: c.id, type: "character", name: c.name }), "exact");
-    else if (nameLower.startsWith(q)) add(c.id, c.name, "character", entityHref({ id: c.id, type: "character", name: c.name }), "prefix");
-    else if (nameLower.includes(q)) add(c.id, c.name, "character", entityHref({ id: c.id, type: "character", name: c.name }), "substring");
-    else {
+    const nameNorm = nameLower.replace(/[-_]/g, " ").trim();
+
+    if (nameLower === q || nameNorm === qNorm) {
+      add(c.id, c.name, "character", entityHref({ id: c.id, type: "character", name: c.name }), "exact");
+    } else if (nameLower.startsWith(q) || nameNorm.startsWith(qNorm)) {
+      add(c.id, c.name, "character", entityHref({ id: c.id, type: "character", name: c.name }), "prefix");
+    } else if (nameLower.includes(q) || nameNorm.includes(qNorm)) {
+      add(c.id, c.name, "character", entityHref({ id: c.id, type: "character", name: c.name }), "substring");
+    } else {
       for (const a of c.aliases) {
         const aLower = a.toLowerCase();
-        if (aLower === q) add(c.id, `${c.name} (${a})`, "character", entityHref({ id: c.id, type: "character", name: c.name }), "exact");
-        else if (aLower.startsWith(q)) add(c.id, `${c.name} (${a})`, "character", entityHref({ id: c.id, type: "character", name: c.name }), "prefix");
+        const aNorm = aLower.replace(/[-_]/g, " ").trim();
+        if (aLower === q || aNorm === qNorm) {
+          add(c.id, `${c.name} (${a})`, "character", entityHref({ id: c.id, type: "character", name: c.name }), "exact");
+        } else if (aLower.startsWith(q) || aNorm.startsWith(qNorm)) {
+          add(c.id, `${c.name} (${a})`, "character", entityHref({ id: c.id, type: "character", name: c.name }), "prefix");
+        }
+      }
+    }
+
+    // Relationship matching in suggestions (e.g. "musuh scorpion" or related characters when typing "sub zero")
+    const isRel = /\b(musuh|enemy|enemies|rival|rivals|sekutu|ally|allies|mentor|guru)\b/i.test(q);
+    if (isRel) {
+      for (const rel of c.relationships) {
+        const targetLower = rel.target.name.toLowerCase();
+        const targetNorm = targetLower.replace(/[-_]/g, " ").trim();
+        if (q.includes(targetLower) || qNorm.includes(targetNorm)) {
+          const isEnemy = /\b(musuh|enemy|enemies|rival|rivals)\b/i.test(q) && (rel.type === "enemyOf" || rel.type === "rivalOf");
+          const isAlly = /\b(sekutu|ally|allies)\b/i.test(q) && (rel.type === "allyOf" || rel.type === "alliedWith");
+          const isMentor = /\b(mentor|guru)\b/i.test(q) && rel.type === "mentorOf";
+
+          if (isEnemy || isAlly || isMentor) {
+            add(
+              `${c.id}-rel`,
+              `${c.name} (${rel.label} ${rel.target.name})`,
+              "character",
+              entityHref({ id: c.id, type: "character", name: c.name }),
+              "prefix"
+            );
+          }
+        }
+      }
+    } else {
+      // General character query (e.g. typing "sub zero"):
+      // Suggest related characters such as "Scorpion (Musuh Sub-Zero)", "Noob Saibot (Keluarga Sub-Zero)"
+      for (const rel of c.relationships) {
+        const targetLower = rel.target.name.toLowerCase();
+        const targetNorm = targetLower.replace(/[-_]/g, " ").trim();
+        if (targetNorm === qNorm || targetNorm.startsWith(qNorm) || (qNorm.length >= 4 && targetNorm.includes(qNorm))) {
+          add(
+            `${c.id}-rel-${rel.target.id}`,
+            `${c.name} (${rel.label} ${rel.target.name})`,
+            "character",
+            entityHref({ id: c.id, type: "character", name: c.name }),
+            "substring"
+          );
+        }
       }
     }
   }
@@ -48,10 +98,11 @@ export function generateSearchSuggestions(query: string, maxResults: number = 8)
   // 2. Games
   for (const g of games) {
     const titleLower = g.title.toLowerCase();
+    const titleNorm = titleLower.replace(/[-_]/g, " ").trim();
     const shortLower = g.shortTitle.toLowerCase();
-    if (titleLower === q || shortLower === q) add(g.id, g.title, "game", `/games/${g.id}`, "exact");
-    else if (titleLower.startsWith(q) || shortLower.startsWith(q)) add(g.id, g.title, "game", `/games/${g.id}`, "prefix");
-    else if (titleLower.includes(q)) add(g.id, g.title, "game", `/games/${g.id}`, "substring");
+    if (titleLower === q || titleNorm === qNorm || shortLower === q) add(g.id, g.title, "game", `/games/${g.id}`, "exact");
+    else if (titleLower.startsWith(q) || titleNorm.startsWith(qNorm) || shortLower.startsWith(q)) add(g.id, g.title, "game", `/games/${g.id}`, "prefix");
+    else if (titleLower.includes(q) || titleNorm.includes(qNorm)) add(g.id, g.title, "game", `/games/${g.id}`, "substring");
   }
 
   // 3. Organizations

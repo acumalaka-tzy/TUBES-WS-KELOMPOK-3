@@ -195,7 +195,6 @@ export default function AssistantPage() {
   ]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
-  const [showSparql, setShowSparql] = useState<Record<string, boolean>>({});
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -257,10 +256,6 @@ export default function AssistantPage() {
     } finally {
       setLoading(false);
     }
-  };
-
-  const toggleSparql = (id: string) => {
-    setShowSparql((prev) => ({ ...prev, [id]: !prev[id] }));
   };
 
   return (
@@ -334,24 +329,6 @@ export default function AssistantPage() {
                               <VerificationBadge status={s.verificationStatus} />
                             </span>
                           ))}
-                        </div>
-                      )}
-
-                      {/* SPARQL inspection button */}
-                      {m.generatedSparql && (
-                        <div className="pt-1">
-                          <button
-                            type="button"
-                            onClick={() => toggleSparql(m.id)}
-                            className="text-[11px] text-mk-gold hover:underline"
-                          >
-                            {showSparql[m.id] ? "▲ Tutup SPARQL Query" : "🔍 Lihat Query SPARQL RAG"}
-                          </button>
-                          {showSparql[m.id] && (
-                            <pre className="mt-1.5 max-h-40 overflow-x-auto rounded bg-mk-bg2 p-2 font-mono text-[10px] text-mk-text/90 border border-mk-border">
-                              {m.generatedSparql}
-                            </pre>
-                          )}
                         </div>
                       )}
                     </div>

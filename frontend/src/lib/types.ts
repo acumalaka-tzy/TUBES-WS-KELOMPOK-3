@@ -129,6 +129,15 @@ export interface Weapon {
   sources: SourceRef[];
 }
 
+export interface Realm {
+  id: string;
+  name: string;
+  type: "location";
+  description: string;
+  href: string;
+  sources: SourceRef[];
+}
+
 export interface Organization {
   id: string;
   name: string;

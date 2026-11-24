@@ -55,6 +55,14 @@ export function fuseRRFResults(
       if (item.explanationNotes && existing.candidate.explanationNotes) {
         existing.candidate.explanationNotes.push(...item.explanationNotes);
       }
+      if (item.matchedRelationships) {
+        if (!existing.candidate.matchedRelationships) {
+          existing.candidate.matchedRelationships = [];
+        }
+        existing.candidate.matchedRelationships = Array.from(
+          new Set([...existing.candidate.matchedRelationships, ...item.matchedRelationships])
+        );
+      }
       if (!existing.candidate.image && item.image) {
         existing.candidate.image = item.image;
       }
@@ -72,7 +80,7 @@ export function fuseRRFResults(
   const fused: FusedSearchResult[] = [];
 
   for (const entry of Array.from(map.values())) {
-    const { candidate, semRank, kwRank } = entry;
+    const { candidate, semRank, kwRank, semScore, kwScore } = entry;
     let rrfScore = 0;
 
     if (semRank !== undefined && semRank > 0) {
@@ -82,8 +90,17 @@ export function fuseRRFResults(
       rrfScore += keywordWeight / (k + kwRank);
     }
 
+    // Boost exact matches (where score is 1.0 or very high direct match)
+    const isExact = (semScore !== undefined && semScore >= 0.98) || (kwScore !== undefined && kwScore >= 0.98);
+    if (isExact) {
+      rrfScore += 0.1;
+    }
+
     // Normalize relevance to 0..1 scale with 2 decimal places
-    const normalizedRelevance = Math.min(1.0, rrfScore / maxPossibleRRF);
+    let normalizedRelevance = Math.min(1.0, rrfScore / maxPossibleRRF);
+    if (isExact) {
+      normalizedRelevance = 1.0;
+    }
     const relevance = Math.round(normalizedRelevance * 100) / 100;
 
     fused.push({

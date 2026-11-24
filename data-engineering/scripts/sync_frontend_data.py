@@ -360,7 +360,39 @@ def main():
         else:
             cat_val = "special-move"
 
-        el_name = names_map.get(clean_id(a.get("elementId", "")), None) if a.get("elementId") else None
+        ELEMENT_NAMES = {
+            "element-fire": "Fire", "elem-fire": "Fire", "fire": "Fire",
+            "element-ice": "Ice", "elem-ice": "Ice", "ice": "Ice",
+            "element-lightning": "Lightning", "elem-lightning": "Lightning", "lightning": "Lightning",
+            "element-shadow": "Shadow", "elem-shadow": "Shadow", "shadow": "Shadow",
+            "element-soul": "Soul", "soul": "Soul",
+            "element-blood": "Blood", "blood": "Blood",
+            "element-wind": "Wind", "wind": "Wind",
+            "element-energy": "Energy", "energy": "Energy",
+            "elem-acid": "Acid", "acid": "Acid",
+        }
+        raw_el = str(a.get("elementId") or "")
+        el_name = ELEMENT_NAMES.get(raw_el, None)
+        if not el_name and raw_el:
+            el_name = ELEMENT_NAMES.get(clean_id(raw_el), None)
+        if not el_name:
+            aid_lower = aid.lower()
+            if any(k in aid_lower for k in ["fire", "flame", "hellfire", "burn", "inferno", "magma", "conflagration"]):
+                el_name = "Fire"
+            elif any(k in aid_lower for k in ["ice", "cryo", "freeze", "frost", "cold"]):
+                el_name = "Ice"
+            elif any(k in aid_lower for k in ["lightning", "thunder", "electric", "spark"]):
+                el_name = "Lightning"
+            elif any(k in aid_lower for k in ["shadow", "dark"]):
+                el_name = "Shadow"
+            elif any(k in aid_lower for k in ["soul"]):
+                el_name = "Soul"
+            elif any(k in aid_lower for k in ["blood"]):
+                el_name = "Blood"
+            elif any(k in aid_lower for k in ["wind", "tornado"]):
+                el_name = "Wind"
+            elif any(k in aid_lower for k in ["teleport"]):
+                el_name = "Teleportation"
         
         # Dynamic characters having this ability
         mapped_chars = ability_to_chars.get(aid, [])
@@ -538,13 +570,26 @@ def main():
         }
     ]
 
+    # Transform realms
+    frontend_realms = []
+    for r in realms:
+        rid = clean_id(r["id"])
+        frontend_realms.append({
+            "id": rid,
+            "name": r["name"],
+            "type": "location",
+            "description": r.get("description", f"Alam {r['name']} dalam semesta Mortal Kombat."),
+            "href": f"/search?q={rid}",
+            "sources": [{"id": f"fandom-{rid}", "title": f"Mortal Kombat Wiki — {r['name']}", "url": "https://mortalkombat.fandom.com", "sourceType": "community-wiki", "verificationStatus": "verified"}]
+        })
+
     # Output to frontend/src/lib/mock-data.ts
     out_ts = root / "frontend" / "src" / "lib" / "mock-data.ts"
     
     code = f"""/**
  * DATASET UTAMA MORTAL KOMBAT KNOWLEDGE NEXUS
  * Disinkronkan langsung dari pipeline Data Engineering (entities.json & relationships.json).
- * Berisi {len(frontend_characters)} Karakter, {len(frontend_games)} Game Standalone, {len(frontend_abilities)} Abilities, {len(frontend_weapons)} Weapons, {len(frontend_organizations)} Clans, dan {len(frontend_story_events)} Events.
+ * Berisi {len(frontend_characters)} Karakter, {len(frontend_games)} Game Standalone, {len(frontend_abilities)} Abilities, {len(frontend_weapons)} Weapons, {len(frontend_organizations)} Clans, {len(frontend_realms)} Realms, dan {len(frontend_story_events)} Events.
  */
 import type {{
   Ability,
@@ -554,6 +599,7 @@ import type {{
   EntityType,
   Game,
   Organization,
+  Realm,
   SourceRef,
   StoryEvent,
   Timeline,
@@ -569,6 +615,8 @@ export const abilities: Ability[] = {json.dumps(frontend_abilities, indent=2)};
 export const weapons: Weapon[] = {json.dumps(frontend_weapons, indent=2)};
 
 export const organizations: Organization[] = {json.dumps(frontend_organizations, indent=2)};
+
+export const realms: Realm[] = {json.dumps(frontend_realms, indent=2)};
 
 export const timelines: Timeline[] = {json.dumps(frontend_timelines, indent=2)};
 

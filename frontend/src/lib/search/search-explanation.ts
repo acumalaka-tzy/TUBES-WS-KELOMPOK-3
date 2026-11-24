@@ -32,7 +32,7 @@ export function explainSearchResult(
       parts.push(`Hasil ditemukan melalui kecocokan teks leksikal (peringkat Keyword #${result.keywordRank})`);
     }
   } else if (mode === "semantic") {
-    parts.push(`Hasil ditemukan melalui query semantik SPARQL/Knowledge Graph (peringkat #${result.semanticRank ?? 1})`);
+    parts.push(`Hasil ditemukan melalui penelusuran relasi Knowledge Graph (peringkat #${result.semanticRank ?? 1})`);
   } else {
     parts.push(`Hasil ditemukan melalui pencocokan teks nama & biografi (peringkat #${result.keywordRank ?? 1})`);
   }

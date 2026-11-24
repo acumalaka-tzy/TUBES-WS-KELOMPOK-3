@@ -1,7 +1,7 @@
 /**
  * DATASET UTAMA MORTAL KOMBAT KNOWLEDGE NEXUS
  * Disinkronkan langsung dari pipeline Data Engineering (entities.json & relationships.json).
- * Berisi 60 Karakter, 23 Game Standalone, 140 Abilities, 20 Weapons, 10 Clans, dan 25 Events.
+ * Berisi 60 Karakter, 23 Game Standalone, 140 Abilities, 20 Weapons, 10 Clans, 7 Realms, dan 25 Events.
  */
 import type {
   Ability,
@@ -11,6 +11,7 @@ import type {
   EntityType,
   Game,
   Organization,
+  Realm,
   SourceRef,
   StoryEvent,
   Timeline,
@@ -12395,7 +12396,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Fire"
   },
   {
     "id": "flame-aura",
@@ -12429,7 +12431,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Fire"
   },
   {
     "id": "fireball-dragon",
@@ -12458,7 +12461,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Fire"
   },
   {
     "id": "cryomancy",
@@ -12492,7 +12496,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Ice"
   },
   {
     "id": "ice-slide",
@@ -12521,7 +12526,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Ice"
   },
   {
     "id": "ice-clone",
@@ -12550,7 +12556,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Ice"
   },
   {
     "id": "thunder-mastery",
@@ -12579,7 +12586,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Lightning"
   },
   {
     "id": "electric-fly",
@@ -12608,7 +12616,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Lightning"
   },
   {
     "id": "teleportation",
@@ -12692,7 +12701,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "shadow-magic",
@@ -12731,7 +12741,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Shadow"
   },
   {
     "id": "soul-stealing",
@@ -12760,7 +12771,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Soul"
   },
   {
     "id": "necromancy",
@@ -12799,7 +12811,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Soul"
   },
   {
     "id": "move-spear",
@@ -12833,7 +12846,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Fire"
   },
   {
     "id": "move-ice-freeze",
@@ -12872,7 +12886,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Ice"
   },
   {
     "id": "move-bicycle-kick",
@@ -12901,7 +12916,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "move-shadow-kick",
@@ -12935,7 +12951,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "move-hat-throw",
@@ -12964,7 +12981,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "move-fan-lift",
@@ -12993,7 +13011,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Wind"
   },
   {
     "id": "move-ground-pound",
@@ -13027,7 +13046,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "move-cannonball",
@@ -13056,7 +13076,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "move-wind-tornado",
@@ -13090,7 +13111,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Wind"
   },
   {
     "id": "move-sonic-scream",
@@ -13119,7 +13141,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "move-shokan-stomp",
@@ -13153,7 +13176,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "move-blood-tentacles",
@@ -13187,7 +13211,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Blood"
   },
   {
     "id": "move-acid-spit",
@@ -13221,7 +13246,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "move-soul-ball",
@@ -13250,7 +13276,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Soul"
   },
   {
     "id": "move-telekinesis-slam",
@@ -13279,7 +13306,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "move-tarkatan-chop",
@@ -13308,7 +13336,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "move-net-tangle",
@@ -13337,7 +13366,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "move-missile-salvo",
@@ -13366,7 +13396,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Fire"
   },
   {
     "id": "move-sun-ray",
@@ -13400,7 +13431,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Fire"
   },
   {
     "id": "move-revolver-quickdraw",
@@ -13439,7 +13471,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "move-drunken-fist",
@@ -13468,7 +13501,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "move-flying-kick",
@@ -13512,7 +13546,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Fire"
   },
   {
     "id": "move-square-wave",
@@ -13541,7 +13576,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "move-nut-punch",
@@ -13575,7 +13611,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "move-ring-toss",
@@ -13604,7 +13641,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "move-tele-flurry",
@@ -13633,7 +13671,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "move-shadow-slide",
@@ -13667,7 +13706,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Shadow"
   },
   {
     "id": "move-air-throw",
@@ -13701,7 +13741,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "move-wind-kick",
@@ -13740,7 +13781,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Wind"
   },
   {
     "id": "move-cyber-trap",
@@ -13769,7 +13811,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Ice"
   },
   {
     "id": "move-puke-puddle",
@@ -13798,7 +13841,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "move-energy-spark",
@@ -13837,7 +13881,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "move-bone-twist",
@@ -13866,7 +13911,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "move-blazing-nitro-kick",
@@ -13895,7 +13941,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "move-tribomerang",
@@ -13924,7 +13971,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "move-nomad-dash",
@@ -13958,7 +14006,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Wind"
   },
   {
     "id": "move-buzzsaw",
@@ -13987,7 +14036,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "move-baton-trip",
@@ -14016,7 +14066,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "move-grenade-toss",
@@ -14055,7 +14106,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Fire"
   },
   {
     "id": "move-teleport-stomp",
@@ -14094,7 +14146,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "move-untranslatable-rage",
@@ -14123,7 +14176,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "move-spirit-arrow",
@@ -14152,7 +14206,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "move-rhino-charge",
@@ -14181,7 +14236,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "move-banshee-scream",
@@ -14210,7 +14266,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "move-hair-whip",
@@ -14239,7 +14296,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "move-ovipositor-rush",
@@ -14268,7 +14326,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "move-bug-spray",
@@ -14297,7 +14356,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "move-bionic-dash",
@@ -14326,7 +14386,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "move-shotgun-blast",
@@ -14355,7 +14416,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "move-whip-strike",
@@ -14384,7 +14446,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "move-shirai-ryu-phase",
@@ -14413,7 +14476,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Shadow"
   },
   {
     "id": "move-straight-shot",
@@ -14442,7 +14506,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "move-lunge-kick",
@@ -14471,7 +14536,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "move-boulder-bash",
@@ -14500,7 +14566,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "move-hells-wrath",
@@ -14529,7 +14596,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Fire"
   },
   {
     "id": "move-shotel-strike",
@@ -14558,7 +14626,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "move-demonic-mace",
@@ -14587,7 +14656,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "move-dragon-breath",
@@ -14621,7 +14691,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Fire"
   },
   {
     "id": "move-dragon-slam",
@@ -14655,7 +14726,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "move-mimic-mastery",
@@ -14684,7 +14756,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "move-charging-spear",
@@ -14713,7 +14786,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "move-blood-spit",
@@ -14747,7 +14821,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Blood"
   },
   {
     "id": "move-skull-daggers",
@@ -14776,7 +14851,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Shadow"
   },
   {
     "id": "move-heavenly-light",
@@ -14805,7 +14881,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "move-lava-burst",
@@ -14834,7 +14911,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Fire"
   },
   {
     "id": "move-grapple-hook-kick",
@@ -14863,7 +14941,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "move-centaur-charge",
@@ -14892,7 +14971,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "move-fire-fist",
@@ -14921,7 +15001,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Fire"
   },
   {
     "id": "fatality-toasty",
@@ -14950,7 +15031,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Fire"
   },
   {
     "id": "fatality-spine-rip",
@@ -14979,7 +15061,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Ice"
   },
   {
     "id": "fatality-dragon-bite",
@@ -15008,7 +15091,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Fire"
   },
   {
     "id": "fatality-fan-decapitation",
@@ -15037,7 +15121,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Wind"
   },
   {
     "id": "fatality-kiss-of-death",
@@ -15066,7 +15151,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "fatality-shokan-tear",
@@ -15100,7 +15186,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "fatality-bow-before-me",
@@ -15129,7 +15216,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "fatality-road-rash",
@@ -15158,7 +15246,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "fatality-time-served",
@@ -15187,7 +15276,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "fatality-spine-ripper",
@@ -15216,7 +15306,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "fatality-war-dance",
@@ -15245,7 +15336,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "fatality-scream-queen",
@@ -15274,7 +15366,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "fatality-infestation",
@@ -15303,7 +15396,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "fatality-spider-mines",
@@ -15332,7 +15426,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "fatality-whip-it-good",
@@ -15361,7 +15456,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "fatality-target-practice",
@@ -15390,7 +15486,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "fatality-good-and-evil",
@@ -15419,7 +15516,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "fatality-for-the-kollection",
@@ -15448,7 +15546,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "fatality-face-crusher",
@@ -15477,7 +15576,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "fatality-vaeternus-drain",
@@ -15506,7 +15606,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Blood"
   },
   {
     "id": "fatality-divine-purification",
@@ -15535,7 +15636,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Energy"
   },
   {
     "id": "move-sai-toss",
@@ -15801,7 +15903,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Fire"
   },
   {
     "id": "move-teleport-uppercut",
@@ -15830,7 +15933,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Teleportation"
   },
   {
     "id": "move-compactor",
@@ -16004,7 +16108,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Fire"
   },
   {
     "id": "move-split-flip-kick",
@@ -16091,7 +16196,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Acid"
   },
   {
     "id": "move-reptile-slide",
@@ -16120,7 +16226,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Acid"
   },
   {
     "id": "move-eye-laser",
@@ -16212,7 +16319,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Lightning"
   },
   {
     "id": "move-blade-spin",
@@ -16357,7 +16465,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Wind"
   },
   {
     "id": "move-bowl-girl",
@@ -16444,7 +16553,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Fire"
   },
   {
     "id": "move-drakes-shield",
@@ -16502,7 +16612,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Fire"
   },
   {
     "id": "move-speed-of-light",
@@ -16560,7 +16671,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Shadow"
   },
   {
     "id": "move-black-hole",
@@ -16589,7 +16701,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Shadow"
   },
   {
     "id": "move-flaming-skulls",
@@ -16618,7 +16731,8 @@ export const abilities: Ability[] = [
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
       }
-    ]
+    ],
+    "element": "Fire"
   },
   {
     "id": "move-ground-burst",
@@ -17895,6 +18009,121 @@ export const organizations: Organization[] = [
       {
         "id": "fandom-seidan-guard",
         "title": "Mortal Kombat Wiki \u2014 Seidan Guard",
+        "url": "https://mortalkombat.fandom.com",
+        "sourceType": "community-wiki",
+        "verificationStatus": "verified"
+      }
+    ]
+  }
+];
+
+export const realms: Realm[] = [
+  {
+    "id": "earthrealm",
+    "name": "Earthrealm",
+    "type": "location",
+    "description": "Home realm of mortal humanity, protected historically by the Thunder God Raiden and now Fire God Liu Kang.",
+    "href": "/search?q=earthrealm",
+    "sources": [
+      {
+        "id": "fandom-earthrealm",
+        "title": "Mortal Kombat Wiki \u2014 Earthrealm",
+        "url": "https://mortalkombat.fandom.com",
+        "sourceType": "community-wiki",
+        "verificationStatus": "verified"
+      }
+    ]
+  },
+  {
+    "id": "outworld",
+    "name": "Outworld",
+    "type": "location",
+    "description": "A harsh, majestic imperial realm forged by conquering and merging neighboring worlds, formerly ruled by Shao Kahn and now Empress Sindel.",
+    "href": "/search?q=outworld",
+    "sources": [
+      {
+        "id": "fandom-outworld",
+        "title": "Mortal Kombat Wiki \u2014 Outworld",
+        "url": "https://mortalkombat.fandom.com",
+        "sourceType": "community-wiki",
+        "verificationStatus": "verified"
+      }
+    ]
+  },
+  {
+    "id": "netherrealm",
+    "name": "Netherrealm",
+    "type": "location",
+    "description": "The fiery subterranean plane of eternal torment, demons, revenants, and dark necromancy, ruled by Shinnok and Quan Chi.",
+    "href": "/search?q=netherrealm",
+    "sources": [
+      {
+        "id": "fandom-netherrealm",
+        "title": "Mortal Kombat Wiki \u2014 Netherrealm",
+        "url": "https://mortalkombat.fandom.com",
+        "sourceType": "community-wiki",
+        "verificationStatus": "verified"
+      }
+    ]
+  },
+  {
+    "id": "edenia",
+    "name": "Edenia",
+    "type": "location",
+    "description": "A lush paradise realm of beauty, peace, and longevity, merged with Outworld for millennia before its restoration.",
+    "href": "/search?q=edenia",
+    "sources": [
+      {
+        "id": "fandom-edenia",
+        "title": "Mortal Kombat Wiki \u2014 Edenia",
+        "url": "https://mortalkombat.fandom.com",
+        "sourceType": "community-wiki",
+        "verificationStatus": "verified"
+      }
+    ]
+  },
+  {
+    "id": "orderrealm",
+    "name": "Orderrealm (Seido)",
+    "type": "location",
+    "description": "A rigid geometric realm governed strictly by law, hierarchy, and absolute order, policed by Hotaru and the Seidan Guard.",
+    "href": "/search?q=orderrealm",
+    "sources": [
+      {
+        "id": "fandom-orderrealm",
+        "title": "Mortal Kombat Wiki \u2014 Orderrealm (Seido)",
+        "url": "https://mortalkombat.fandom.com",
+        "sourceType": "community-wiki",
+        "verificationStatus": "verified"
+      }
+    ]
+  },
+  {
+    "id": "chaosrealm",
+    "name": "Chaosrealm",
+    "type": "location",
+    "description": "An anarchic realm of shifting structures and freedom where chaos is worshiped as supreme truth, home to Cleric Havik.",
+    "href": "/search?q=chaosrealm",
+    "sources": [
+      {
+        "id": "fandom-chaosrealm",
+        "title": "Mortal Kombat Wiki \u2014 Chaosrealm",
+        "url": "https://mortalkombat.fandom.com",
+        "sourceType": "community-wiki",
+        "verificationStatus": "verified"
+      }
+    ]
+  },
+  {
+    "id": "vaeternus",
+    "name": "Vaeternus",
+    "type": "location",
+    "description": "The shadowy realm of vampires, severed from Outworld through the efforts of the vampire warrior Nitara.",
+    "href": "/search?q=vaeternus",
+    "sources": [
+      {
+        "id": "fandom-vaeternus",
+        "title": "Mortal Kombat Wiki \u2014 Vaeternus",
         "url": "https://mortalkombat.fandom.com",
         "sourceType": "community-wiki",
         "verificationStatus": "verified"

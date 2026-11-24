@@ -34,13 +34,18 @@ export type QueryIntentType =
   | "character_by_realm"
   | "character_enemies_rivals"
   | "character_allies"
+  | "character_mentor"
   | "character_by_game"
+  | "character_by_timeline"
   | "character_cross_timeline"
   | "character_weapon"
   | "entity_relationship"
+  | "game_by_year"
+  | "all_games_by_year"
   | "story_events"
   | "general_entity_lookup"
-  | "free_keyword";
+  | "free_keyword"
+  | "no_match";
 
 export interface ParsedQueryIntent {
   intentType: QueryIntentType;
@@ -54,6 +59,8 @@ export interface ParsedQueryIntent {
     timeline?: string;
     weapon?: string;
     relationshipType?: string;
+    year?: string;
+    mentor?: string;
   };
   cleanedText: string;
   generatedSparql?: string;

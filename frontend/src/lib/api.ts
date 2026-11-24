@@ -100,18 +100,16 @@ function mockFind<T extends { id: string }>(list: T[], id: string, label: string
 // ---------------------------------------------------------------- Search
 export async function search(params: { q: string; mode?: SearchMode; type?: EntityType | "all" }): Promise<SearchResponse> {
   const mode = params.mode ?? "hybrid";
-  if (USE_MOCK) return delay(mockSearch(params.q, mode, params.type), 450);
-  if (mode === "keyword") {
-    return request<SearchResponse>("/api/search", { query: { q: params.q, type: params.type === "all" ? undefined : params.type } });
-  }
-  return request<SearchResponse>(`/api/search/${mode}`, {
-    method: "POST",
-    body: JSON.stringify({ query: params.q, type: params.type === "all" ? undefined : params.type }),
+  return request<SearchResponse>("/api/search", {
+    query: {
+      q: params.q,
+      mode,
+      type: params.type === "all" ? undefined : params.type,
+    },
   });
 }
 
 export async function getSuggestions(q: string): Promise<Suggestion[]> {
-  if (USE_MOCK) return delay(mockSuggestions(q), 120);
   return asList<Suggestion>(await request("/api/search/suggestions", { query: { q } }));
 }
 
