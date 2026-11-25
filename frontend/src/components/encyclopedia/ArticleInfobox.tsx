@@ -73,7 +73,7 @@ export default function ArticleInfobox({
                 >
                   {row.label}
                 </th>
-                <td className="w-3/5 p-2.5 text-mk-text border-b border-mk-border/50 align-top text-[11px] leading-relaxed">
+                <td className="w-3/5 p-2.5 text-mk-text border-b border-mk-border/50 align-top text-[11px] leading-relaxed break-words">
                   {row.value}
                 </td>
               </tr>

@@ -96,8 +96,8 @@ export default function GameDetailPage({
 
       {/* Layout Artikel: Kolom Konten Kiri + Infobox Kanan */}
       <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
-        {/* KOLOM KIRI: Konten Artikel Ensiklopedia */}
-        <article className="flex-1 min-w-0 space-y-10">
+        {/* KOLOM KIRI (Desktop Utama, Mobile Isi): Konten Artikel Ensiklopedia */}
+        <article className="flex-1 min-w-0 space-y-10 order-2 lg:order-1">
           {/* Ringkasan Utama */}
           <div className="rounded border border-mk-border/70 bg-mk-card p-5 shadow-2xs">
             <p className="text-sm sm:text-base leading-relaxed text-mk-text">
@@ -184,8 +184,8 @@ export default function GameDetailPage({
           </section>
         </article>
 
-        {/* KOLOM KANAN: Infobox Game Klasik */}
-        <div className="w-full lg:w-auto lg:sticky lg:top-24">
+        {/* KOLOM KANAN (Desktop Sticky, Mobile Top): Infobox Game Klasik */}
+        <div className="w-full max-w-md mx-auto lg:max-w-none lg:w-auto lg:sticky lg:top-24 order-1 lg:order-2">
           <ArticleInfobox
             title={game.title}
             subtitle={`${game.releaseYear} • ${game.era}`}
