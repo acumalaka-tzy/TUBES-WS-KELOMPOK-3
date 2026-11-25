@@ -138,6 +138,15 @@ export default function CharacterDetailPage({
     return appearedGames[0] ?? null;
   }, [character, allGames, appearedGames]);
 
+  // Ekstrak tahun rilis debut secara akurat (menghindari hardcode)
+  const debutYear = useMemo(() => {
+    if (firstGame?.releaseYear) return String(firstGame.releaseYear);
+    const title = firstGame?.title ?? character?.firstAppearance?.name ?? "";
+    const match = title.match(/\((\d{4})\)/);
+    if (match) return match[1];
+    return null;
+  }, [firstGame, character]);
+
   // Daftar era kemunculan untuk filter kategori
   const erasPresent = useMemo(() => {
     const set = new Set<string>();
@@ -232,11 +241,13 @@ export default function CharacterDetailPage({
     },
     {
       label: "Tahun Debut Rilis",
-      value: (
+      value: debutYear ? (
         <span className="inline-flex items-center gap-1 font-mono text-mk-gold font-bold">
           <span>📅</span>
-          <span>{firstGame?.releaseYear ?? 1992}</span>
+          <span>{debutYear}</span>
         </span>
+      ) : (
+        <span className="text-mk-muted">-</span>
       ),
     },
     {
@@ -323,8 +334,8 @@ export default function CharacterDetailPage({
 
       {/* Layout Artikel Ensiklopedia: Kolom Kiri (Artikel) + Kolom Kanan (Infobox) */}
       <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
-        {/* KOLOM KIRI: Isi Artikel Lengkap */}
-        <article className="flex-1 min-w-0 space-y-10">
+        {/* KOLOM KIRI (Desktop Utama, Mobile Isi): Isi Artikel Lengkap */}
+        <article className="flex-1 min-w-0 space-y-10 order-2 lg:order-1">
           {/* Ringkasan / Lead Paragraph */}
           <div className="rounded border border-mk-border/70 bg-mk-card p-5 shadow-2xs">
             <p className="text-sm sm:text-base leading-relaxed text-mk-text">
@@ -357,7 +368,7 @@ export default function CharacterDetailPage({
                   {character.realm ? (
                     <Link
                       href={`/search?q=${encodeURIComponent(character.realm.name)}`}
-                      className="text-mk-gold hover:underline"
+                      className="text-mk-gold hover:underline break-words"
                     >
                       {character.realm.name}
                     </Link>
@@ -379,13 +390,17 @@ export default function CharacterDetailPage({
                 <p className="font-heading text-base font-bold text-mk-text">
                   <Link
                     href={`/games/${firstGame?.id ?? character.firstAppearance?.id ?? "mk1-1992"}`}
-                    className="text-mk-red hover:underline line-clamp-1"
+                    className="text-mk-red hover:underline line-clamp-2 break-words"
                   >
                     {firstGame?.title ?? character.firstAppearance?.name ?? "Mortal Kombat (1992)"}
                   </Link>
                 </p>
                 <p className="text-[11px] text-mk-muted">
-                  Tahun Rilis: <strong className="text-mk-gold font-mono">{firstGame?.releaseYear ?? 1992}</strong>
+                  {debutYear ? (
+                    <>
+                      Tahun Rilis: <strong className="text-mk-gold font-mono">{debutYear}</strong>
+                    </>
+                  ) : null}
                   {firstGame?.era && ` (${firstGame.era})`}
                 </p>
               </div>
@@ -601,8 +616,8 @@ export default function CharacterDetailPage({
           </section>
         </article>
 
-        {/* KOLOM KANAN: Infobox Ensiklopedia Klasik (Desktop Sticky) */}
-        <div className="w-full lg:w-auto lg:sticky lg:top-24">
+        {/* KOLOM KANAN (Desktop Sticky, Mobile Top): Infobox Ensiklopedia Klasik */}
+        <div className="w-full max-w-md mx-auto lg:max-w-none lg:w-auto lg:sticky lg:top-24 order-1 lg:order-2">
           <ArticleInfobox
             title={character.name}
             subtitle={character.faction ?? "Mortal Kombat"}
