@@ -8,7 +8,7 @@ import { useAsync } from "@/lib/hooks";
 import { TYPE_LABEL } from "@/lib/routes";
 import type { EntityType, SearchMode, SearchResponse, SearchResult } from "@/lib/types";
 import SearchBar, { pushHistory } from "@/components/search/SearchBar";
-import { TypeBadge, VerificationBadge } from "@/components/ui/Badge";
+import { TypeBadge } from "@/components/ui/Badge";
 import EntityImage from "@/components/ui/EntityImage";
 import { Container, PageHeader } from "@/components/ui/Layout";
 import { EmptyState, ErrorState, LoadingState } from "@/components/ui/States";
@@ -24,12 +24,6 @@ const TABS: { id: EntityType | "all"; label: string }[] = [
   { id: "event", label: "Story / Event" },
 ];
 
-const MODES: { id: SearchMode; label: string; desc: string }[] = [
-  { id: "hybrid", label: "Hybrid (Default)", desc: "Gabungan teks + relasi semantik dengan RRF ranking" },
-  { id: "semantic", label: "Semantic", desc: "Pencarian berbasis relasi ontology & graph" },
-  { id: "keyword", label: "Keyword", desc: "Pencocokan nama, alias, dan teks" },
-];
-
 function SearchContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -41,7 +35,6 @@ function SearchContent() {
   const [activeMode, setActiveMode] = useState<SearchMode>(rawMode);
   const [filterGame, setFilterGame] = useState<string>("all");
   const [filterTimeline, setFilterTimeline] = useState<string>("all");
-  const [showExplanation, setShowExplanation] = useState<Record<string, boolean>>({});
 
   useEffect(() => {
     setActiveTab(rawType);
@@ -80,11 +73,6 @@ function SearchContent() {
     updateParam("type", tab);
   };
 
-  const handleModeChange = (mode: SearchMode) => {
-    setActiveMode(mode);
-    updateParam("mode", mode);
-  };
-
   // Distinct game & timeline list for filters
   const gameOptions = useMemo(() => {
     const set = new Set<string>();
@@ -111,10 +99,6 @@ function SearchContent() {
     });
   }, [data, activeTab, filterGame, filterTimeline]);
 
-  const toggleExplanation = (id: string) => {
-    setShowExplanation((prev) => ({ ...prev, [id]: !prev[id] }));
-  };
-
   return (
     <>
       <PageHeader
@@ -129,32 +113,6 @@ function SearchContent() {
       </PageHeader>
 
       <Container className="py-8">
-        {/* Search Mode Switcher & Explanation (PRD 25.5) */}
-        <div className="panel mb-6 rounded-sm p-4">
-          <div className="flex flex-wrap items-center justify-between gap-4">
-            <div className="flex flex-wrap items-center gap-2">
-              <span className="text-xs font-semibold uppercase tracking-wider text-mk-muted">Mode Pencarian:</span>
-              <div className="flex flex-wrap sm:flex-nowrap rounded-sm border border-mk-border bg-mk-bg p-0.5">
-                {MODES.map((m) => (
-                  <button
-                    key={m.id}
-                    type="button"
-                    onClick={() => handleModeChange(m.id)}
-                    className={`rounded-sm px-3 py-1 text-xs font-medium transition ${
-                      activeMode === m.id ? "bg-mk-red text-mk-text shadow" : "text-mk-muted hover:text-mk-text"
-                    }`}
-                  >
-                    {m.label}
-                  </button>
-                ))}
-              </div>
-            </div>
-            <p className="text-xs text-mk-muted italic">
-              {MODES.find((m) => m.id === activeMode)?.desc}
-            </p>
-          </div>
-        </div>
-
         {/* Entity Type Tabs (PRD 25.5 Search Results) */}
         <div className="scrollbar-thin mb-6 flex overflow-x-auto border-b border-mk-border pb-px">
           {TABS.map((tab) => (
@@ -312,8 +270,6 @@ function SearchContent() {
                 <SearchResultCard
                   key={`${result.type}-${result.id}`}
                   result={result}
-                  showExplanation={!!showExplanation[result.id]}
-                  onToggleExplanation={() => toggleExplanation(result.id)}
                 />
               ))}
             </ul>
@@ -326,12 +282,8 @@ function SearchContent() {
 
 function SearchResultCard({
   result,
-  showExplanation,
-  onToggleExplanation,
 }: {
   result: SearchResult;
-  showExplanation: boolean;
-  onToggleExplanation: () => void;
 }) {
   return (
     <li className="panel group overflow-hidden rounded-sm transition hover:border-mk-red/70">
@@ -350,7 +302,6 @@ function SearchResultCard({
         <div className="min-w-0 flex-1 space-y-2">
           <div className="flex flex-wrap items-center gap-2">
             <TypeBadge type={result.type} />
-            <span className="text-xs text-mk-muted">Skor: {Math.round(result.relevance * 100)}%</span>
             {result.timeline && (
               <span className="rounded-sm border border-mk-border px-1.5 py-0.5 text-[10px] text-mk-muted">
                 {result.timeline}
@@ -377,87 +328,12 @@ function SearchResultCard({
             </div>
           )}
 
-          {/* Matched Relationships / Concept tags */}
-          {result.matchedRelationships && result.matchedRelationships.length > 0 && (
-            <div className="flex flex-wrap items-center gap-1.5 pt-1">
-              <span className="text-[10px] uppercase tracking-wider font-semibold text-amber-700 dark:text-mk-gold">
-                Relasi Cocok:
-              </span>
-              {result.matchedRelationships.map((rel) => (
-                <span
-                  key={rel}
-                  className="rounded-sm border border-red-300 dark:border-mk-red/50 bg-red-50 dark:bg-red-950/40 px-2 py-0.5 text-[11px] font-medium text-red-700 dark:text-red-200"
-                >
-                  {rel}
-                </span>
-              ))}
-            </div>
-          )}
-
-          {/* Actions & Explanation Toggle (FR-08 Search Explanation) */}
-          <div className="flex flex-wrap items-center justify-between gap-2 border-t border-mk-border pt-3">
-            <div className="flex items-center gap-3">
-              {result.explanation && (
-                <button
-                  type="button"
-                  onClick={onToggleExplanation}
-                  className="flex items-center gap-1 text-xs text-mk-gold hover:underline"
-                >
-                  <span>{showExplanation ? "▼ Tutup penjelasan" : "▶ Mengapa hasil ini muncul?"}</span>
-                </button>
-              )}
-            </div>
-
+          {/* Actions */}
+          <div className="flex flex-wrap items-center justify-end gap-2 border-t border-mk-border pt-3">
             <Link href={result.href} className="btn-primary !py-1 !px-3 !text-[11px]">
               Lihat Detail →
             </Link>
           </div>
-
-          {/* Expandable "Why this result?" & Graph Path (PRD 25.5 Search Results) */}
-          {showExplanation && (
-            <div className="mt-3 space-y-2 rounded-sm border border-mk-border bg-mk-bg/90 p-3 text-xs text-mk-muted">
-              <div className="space-y-1">
-                <p className="font-semibold text-mk-text">Alasan Ditemukan (Search Explanation):</p>
-                <p>{result.explanation}</p>
-              </div>
-
-              {result.graphPath && result.graphPath.length > 0 && (
-                <div className="space-y-1 pt-2">
-                  <p className="font-semibold text-mk-text">Jalur Relasi Graph (RDF Traversal):</p>
-                  <div className="flex flex-wrap items-center gap-1.5 font-mono text-[11px]">
-                    {result.graphPath.map((step, idx) => (
-                      <span key={idx} className="flex items-center gap-1.5 break-all">
-                        <span
-                          className={`rounded px-1.5 py-0.5 ${
-                            idx % 2 === 0
-                              ? "bg-mk-card border border-mk-border text-amber-700 dark:text-mk-gold"
-                              : "bg-red-50 dark:bg-red-950/40 border border-red-200 dark:border-red-900 text-red-700 dark:text-red-300"
-                          }`}
-                        >
-                          {step}
-                        </span>
-                        {idx < result.graphPath!.length - 1 && <span className="text-mk-muted">→</span>}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {result.provenance && result.provenance.length > 0 && (
-                <div className="space-y-1 pt-2">
-                  <p className="font-semibold text-mk-text">Sumber Data (Provenance):</p>
-                  <ul className="space-y-0.5">
-                    {result.provenance.map((p) => (
-                      <li key={p.id} className="flex items-center gap-2">
-                        <span>• {p.title}</span>
-                        <VerificationBadge status={p.verificationStatus} />
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-            </div>
-          )}
         </div>
       </div>
     </li>
