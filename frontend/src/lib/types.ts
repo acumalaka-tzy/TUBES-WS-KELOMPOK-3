@@ -135,6 +135,8 @@ export interface Realm {
   type: "location";
   description: string;
   href: string;
+  ruler?: string;
+  inhabitants?: string;
   sources: SourceRef[];
 }
 

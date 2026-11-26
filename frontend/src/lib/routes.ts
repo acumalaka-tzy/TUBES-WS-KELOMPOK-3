@@ -8,13 +8,16 @@ const BASE_PATH: Record<EntityType, string> = {
   organization: "/organizations",
   timeline: "/timelines",
   event: "/story/events",
-  location: "/search?q=",
+  location: "/realms",
   species: "/search?q=",
 };
 
 export function entityHref(ref: Pick<EntityRef, "id" | "type" | "name">): string {
-  if (ref.type === "location" || ref.type === "species") {
+  if (ref.type === "species") {
     return `/search?q=${encodeURIComponent(ref.name)}`;
+  }
+  if (ref.type === "location") {
+    return `/realms/${ref.id}`;
   }
   return `${BASE_PATH[ref.type]}/${ref.id}`;
 }
@@ -27,7 +30,7 @@ export const TYPE_LABEL: Record<EntityType, string> = {
   organization: "Klan / Organisasi",
   timeline: "Timeline",
   event: "Peristiwa",
-  location: "Lokasi",
+  location: "Realm / Lokasi",
   species: "Spesies",
 };
 
