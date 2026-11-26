@@ -2,11 +2,13 @@
 
 import Link from "next/link";
 import { use, useEffect, useMemo, useState } from "react";
-import { getCharacter, getGames } from "@/lib/api";
+import { getAbilities, getCharacter, getCharacters, getGames } from "@/lib/api";
 import { useAsync } from "@/lib/hooks";
+import { getRecommendedCharacters } from "@/lib/character-recommendations";
 import BreadcrumbNavigation from "@/components/encyclopedia/BreadcrumbNavigation";
 import ArticleInfobox, { type InfoboxRow } from "@/components/encyclopedia/ArticleInfobox";
 import RelationshipPanel from "@/components/encyclopedia/RelationshipPanel";
+import SimilarCharactersSection from "@/components/encyclopedia/SimilarCharactersSection";
 import SourceReference from "@/components/encyclopedia/SourceReference";
 import { ErrorState, LoadingState } from "@/components/ui/States";
 import type { ImageAsset } from "@/lib/types";
@@ -19,6 +21,8 @@ export default function CharacterDetailPage({
   const { id } = use(params);
   const { data: character, error, loading, reload } = useAsync(() => getCharacter(id), [id]);
   const { data: allGames } = useAsync(getGames, []);
+  const { data: allCharacters } = useAsync(getCharacters, []);
+  const { data: allAbilities } = useAsync(getAbilities, []);
 
   const [selectedVersionId, setSelectedVersionId] = useState<string>("");
   const [selectedEra, setSelectedEra] = useState<string>("all");
@@ -161,6 +165,12 @@ export default function CharacterDetailPage({
     if (selectedEra === "all") return appearedGames;
     return appearedGames.filter((g) => g.era === selectedEra);
   }, [appearedGames, selectedEra]);
+
+  // Rekomendasi 4–6 karakter yang mirip & berkaitan (relasi ontologi, elemen, klan, realm)
+  const recommendedCharacters = useMemo(() => {
+    if (!character || !allCharacters?.length) return [];
+    return getRecommendedCharacters(character, allCharacters, allAbilities ?? [], 6);
+  }, [character, allCharacters, allAbilities]);
 
   if (loading) {
     return (
@@ -628,6 +638,9 @@ export default function CharacterDetailPage({
           />
         </div>
       </div>
+
+      {/* Section Rekomendasi Paling Bawah: Karakter yang Mirip & Berkaitan */}
+      <SimilarCharactersSection recommendations={recommendedCharacters} />
     </div>
   );
 }
