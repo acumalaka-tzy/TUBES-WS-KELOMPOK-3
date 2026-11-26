@@ -52,7 +52,7 @@ function StoryExplorerContent() {
       <PageHeader
         eyebrow="Story Explorer"
         title="Eksplorasi Cerita &amp; Peristiwa"
-        description="Telusuri peristiwa kanonikal, asal-usul karakter, konflik antarklan, dan titik perubahan sejarah Mortal Kombat berdasarkan timeline (PRD FR-23 &amp; Bagian 26)."
+        description="Telusuri peristiwa kanonikal, asal-usul karakter, konflik antarklan, dan titik perubahan sejarah Mortal Kombat berdasarkan timeline."
         crumbs={[{ label: "Story" }]}
       >
         <div className="flex flex-wrap items-center gap-3 pt-2">
