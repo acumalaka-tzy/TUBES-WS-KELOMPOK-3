@@ -11,7 +11,7 @@ export default function ExplorePage() {
       <PageHeader
         eyebrow="Explore"
         title="Jelajahi Knowledge Nexus"
-        description="Seluruh kategori ensiklopedia Mortal Kombat: karakter, game, kemampuan, senjata, klan, timeline, dan cerita."
+        description="Seluruh kategori ensiklopedia Mortal Kombat: karakter, game, dimensi realm, kemampuan, senjata, klan, timeline, dan cerita."
         crumbs={[{ label: "Explore" }]}
       />
       <Container className="py-12">
