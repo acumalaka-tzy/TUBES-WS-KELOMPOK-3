@@ -159,6 +159,36 @@ export async function executeSemanticSearch(
           }
         }
 
+        // Match Realm origin in semantic search (e.g. "Orderrealm" -> Hotaru)
+        for (const r of realms) {
+          const rId = r.id.toLowerCase();
+          const rNormName = r.name.toLowerCase();
+          const qLower = query.toLowerCase();
+          const isRealmQuery =
+            qLower.includes(rId) ||
+            qLower.includes(rNormName) ||
+            (r.id === "orderrealm" && (qLower.includes("orderrealm") || qLower.includes("seido"))) ||
+            (r.id === "chaosrealm" && qLower.includes("chaosrealm")) ||
+            (r.id === "vaeternus" && qLower.includes("vaeternus")) ||
+            (r.id === "netherrealm" && qLower.includes("netherrealm")) ||
+            (r.id === "edenia" && qLower.includes("edenia")) ||
+            (r.id === "outworld" && qLower.includes("outworld")) ||
+            (r.id === "earthrealm" && qLower.includes("earthrealm")) ||
+            recognized.some((e) => e.id === r.id);
+
+          if (isRealmQuery) {
+            const charRealmId = c.realm?.id?.toLowerCase() ?? "";
+            const charRealmName = c.realm?.name?.toLowerCase() ?? "";
+            if (charRealmId === rId || charRealmName.includes(rId) || rNormName.includes(charRealmName)) {
+              semScore = Math.max(semScore, 0.85);
+              matchedRels.push(`originatesFrom → ${r.name}`);
+              path.push(c.name, "mk:originatesFrom", r.name);
+              notes.push(`Karakter berasal dari realm "${r.name}"`);
+              break;
+            }
+          }
+        }
+
         // Check Ability -> Element relationship
         if (targetElement) {
           for (const v of c.versions) {
@@ -493,8 +523,11 @@ export async function executeSemanticSearch(
             type: "location",
             name: r.name,
             summary: r.description,
-            href: `/search?q=${encodeURIComponent(r.name)}`,
-            attributes: [{ label: "Tipe", value: "Realm" }],
+            href: entityHref({ id: r.id, type: "location", name: r.name }),
+            attributes: [
+              { label: "Tipe", value: "Realm" },
+              { label: "Penguasa", value: r.ruler ?? "-" },
+            ],
             provenance: r.sources,
             semanticScore: semScore,
             matchedRelationships: ["instanceOf → mk:Realm"],

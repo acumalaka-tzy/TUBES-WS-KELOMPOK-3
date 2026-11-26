@@ -3,6 +3,7 @@ import {
   characters,
   games,
   organizations,
+  realms,
   timelines,
   weapons,
 } from "../mock-data";
@@ -135,6 +136,36 @@ export function generateSearchSuggestions(query: string, maxResults: number = 8)
     if (tLower === q) add(t.id, t.name, "timeline", `/timelines/${t.id}`, "exact");
     else if (tLower.startsWith(q)) add(t.id, t.name, "timeline", `/timelines/${t.id}`, "prefix");
     else if (tLower.includes(q)) add(t.id, t.name, "timeline", `/timelines/${t.id}`, "substring");
+  }
+
+  // 7. Realms and Resident Characters
+  for (const r of realms) {
+    const rLower = r.name.toLowerCase();
+    const rId = r.id.toLowerCase();
+    const isExact = rLower === q || rId === q || (r.id === "orderrealm" && (q === "orderrealm" || q === "seido"));
+    const isPrefix = rLower.startsWith(q) || rId.startsWith(q) || (r.id === "orderrealm" && "orderrealm".startsWith(q));
+    const isSub = rLower.includes(q) || rId.includes(q);
+
+    if (isExact) add(r.id, r.name, "location", `/realms/${r.id}`, "exact");
+    else if (isPrefix) add(r.id, r.name, "location", `/realms/${r.id}`, "prefix");
+    else if (isSub) add(r.id, r.name, "location", `/realms/${r.id}`, "substring");
+
+    // If query matches realm, suggest resident characters directly below
+    if (isExact || (q.length >= 3 && (isPrefix || isSub))) {
+      for (const c of characters) {
+        const cRealmId = c.realm?.id?.toLowerCase() ?? "";
+        const cRealmName = c.realm?.name?.toLowerCase() ?? "";
+        if (cRealmId === rId || cRealmName.includes(rId) || rLower.includes(cRealmName)) {
+          add(
+            `${c.id}-from-${r.id}`,
+            `${c.name} (Berasal dari ${r.name})`,
+            "character",
+            entityHref({ id: c.id, type: "character", name: c.name }),
+            "substring"
+          );
+        }
+      }
+    }
   }
 
   // Sort descending by score
