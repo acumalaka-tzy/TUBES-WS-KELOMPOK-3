@@ -8,6 +8,7 @@ import {
 } from "../mock-data";
 import { entityHref } from "../routes";
 import type { Suggestion } from "../types";
+import { matchAbbreviationOrSubsequence } from "./fuzzy-matcher";
 
 export function generateSearchSuggestions(query: string, maxResults: number = 8): Suggestion[] {
   const q = query.toLowerCase().trim();
@@ -17,18 +18,46 @@ export function generateSearchSuggestions(query: string, maxResults: number = 8)
   const results: { suggestion: Suggestion; score: number }[] = [];
   const seen = new Set<string>();
 
-  const add = (id: string, label: string, type: Suggestion["type"], href: string, matchType: "exact" | "prefix" | "substring") => {
+  const add = (
+    id: string,
+    label: string,
+    type: Suggestion["type"],
+    href: string,
+    matchType: "exact" | "prefix" | "abbrev" | "substring" | "fuzzy",
+    customScore?: number,
+  ) => {
     if (seen.has(id)) return;
     seen.add(id);
     let score = 0;
     if (matchType === "exact") score = 100;
     else if (matchType === "prefix") score = 80;
-    else score = 50;
+    else if (matchType === "abbrev") score = 75;
+    else if (matchType === "substring") score = 50;
+    else score = customScore ?? 40;
 
     results.push({
       suggestion: { id, label, type, href },
       score,
     });
+  };
+
+  const addFuzzy = (
+    id: string,
+    label: string,
+    type: Suggestion["type"],
+    href: string,
+    targets: string[],
+    weight: number = 70,
+  ) => {
+    if (seen.has(id)) return;
+    for (const t of targets) {
+      const hit = matchAbbreviationOrSubsequence(t, q);
+      if (hit) {
+        const kind = hit.kind === "acronym" || hit.kind === "word_prefix" ? "abbrev" : "fuzzy";
+        add(id, label, type, href, kind, Math.round(hit.score * weight));
+        return;
+      }
+    }
   };
 
   // 1. Characters & aliases
@@ -51,6 +80,9 @@ export function generateSearchSuggestions(query: string, maxResults: number = 8)
         } else if (aLower.startsWith(q) || aNorm.startsWith(qNorm)) {
           add(c.id, `${c.name} (${a})`, "character", entityHref({ id: c.id, type: "character", name: c.name }), "prefix");
         }
+      }
+      if (!seen.has(c.id)) {
+        addFuzzy(c.id, c.name, "character", entityHref({ id: c.id, type: "character", name: c.name }), [c.name]);
       }
     }
 
@@ -103,6 +135,7 @@ export function generateSearchSuggestions(query: string, maxResults: number = 8)
     if (titleLower === q || titleNorm === qNorm || shortLower === q) add(g.id, g.title, "game", `/games/${g.id}`, "exact");
     else if (titleLower.startsWith(q) || titleNorm.startsWith(qNorm) || shortLower.startsWith(q)) add(g.id, g.title, "game", `/games/${g.id}`, "prefix");
     else if (titleLower.includes(q) || titleNorm.includes(qNorm)) add(g.id, g.title, "game", `/games/${g.id}`, "substring");
+    else addFuzzy(g.id, g.title, "game", `/games/${g.id}`, [g.title, g.shortTitle]);
   }
 
   // 3. Organizations
@@ -111,6 +144,7 @@ export function generateSearchSuggestions(query: string, maxResults: number = 8)
     if (oLower === q) add(o.id, o.name, "organization", `/organizations/${o.id}`, "exact");
     else if (oLower.startsWith(q)) add(o.id, o.name, "organization", `/organizations/${o.id}`, "prefix");
     else if (oLower.includes(q)) add(o.id, o.name, "organization", `/organizations/${o.id}`, "substring");
+    else addFuzzy(o.id, o.name, "organization", `/organizations/${o.id}`, [o.name]);
   }
 
   // 4. Abilities
@@ -119,6 +153,7 @@ export function generateSearchSuggestions(query: string, maxResults: number = 8)
     if (aLower === q) add(a.id, a.name, "ability", `/abilities/${a.id}`, "exact");
     else if (aLower.startsWith(q)) add(a.id, a.name, "ability", `/abilities/${a.id}`, "prefix");
     else if (aLower.includes(q)) add(a.id, a.name, "ability", `/abilities/${a.id}`, "substring");
+    else addFuzzy(a.id, a.name, "ability", `/abilities/${a.id}`, [a.name], 68);
   }
 
   // 5. Weapons
@@ -127,6 +162,7 @@ export function generateSearchSuggestions(query: string, maxResults: number = 8)
     if (wLower === q) add(w.id, w.name, "weapon", `/weapons/${w.id}`, "exact");
     else if (wLower.startsWith(q)) add(w.id, w.name, "weapon", `/weapons/${w.id}`, "prefix");
     else if (wLower.includes(q)) add(w.id, w.name, "weapon", `/weapons/${w.id}`, "substring");
+    else addFuzzy(w.id, w.name, "weapon", `/weapons/${w.id}`, [w.name], 68);
   }
 
   // 6. Timelines
@@ -135,6 +171,7 @@ export function generateSearchSuggestions(query: string, maxResults: number = 8)
     if (tLower === q) add(t.id, t.name, "timeline", `/timelines/${t.id}`, "exact");
     else if (tLower.startsWith(q)) add(t.id, t.name, "timeline", `/timelines/${t.id}`, "prefix");
     else if (tLower.includes(q)) add(t.id, t.name, "timeline", `/timelines/${t.id}`, "substring");
+    else addFuzzy(t.id, t.name, "timeline", `/timelines/${t.id}`, [t.name], 68);
   }
 
   // Sort descending by score

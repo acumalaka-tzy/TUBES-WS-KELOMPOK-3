@@ -10,6 +10,7 @@ import {
 import { sparqlRegexEscape } from "../../fuseki";
 import type { EntityType } from "../../types";
 import type { ParsedQueryIntent, QueryIntentType, RecognizedEntity } from "../types";
+import { matchAbbreviationOrSubsequence } from "../fuzzy-matcher";
 
 export interface EntityDictionaryEntry {
   id: string;
@@ -546,6 +547,27 @@ export function recognizeAndLinkEntities(query: string): RecognizedEntity[] {
           }
           if (seenIds.has(entry.id)) break;
         }
+      }
+    }
+  }
+
+  // 3. Singkatan (akronim) & Fuzzy Subsequence Match untuk lookup entitas singkat (mis. "sz", "mkda", "scrpn")
+  const tokens = norm.split(/\s+/).filter(Boolean);
+  const hasQuestionWord = /\b(siapa|apa|dimana|karakter|petarung|yang|dari|musuh|sekutu|klan|game|ada|tidak)\b/i.test(norm);
+  if (recognized.length === 0 && norm.length >= 2 && tokens.length <= 2 && !hasQuestionWord) {
+    for (const entry of sortedDict) {
+      if (seenIds.has(entry.id)) continue;
+      const match = matchAbbreviationOrSubsequence(entry.name, norm);
+      if (match && match.score >= 0.72) {
+        recognized.push({
+          id: entry.id,
+          name: entry.name,
+          type: entry.type,
+          uri: entry.uri,
+          confidence: match.score,
+          matchedTokens: [norm],
+        });
+        seenIds.add(entry.id);
       }
     }
   }

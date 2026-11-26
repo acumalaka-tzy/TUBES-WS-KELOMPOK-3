@@ -6,6 +6,7 @@ import { abilities, characters, games, organizations, storyEvents, timelines, we
 import { entityHref } from "./routes";
 import type { EntityType, SearchMode, SearchResponse, SearchResult, Suggestion } from "./types";
 import { processNaturalLanguageQuery } from "./search/nlp/entity-recognizer";
+import { matchAbbreviationOrSubsequence } from "./search/fuzzy-matcher";
 
 interface Doc {
   id: string;
@@ -150,6 +151,14 @@ function lexicalScore(d: Doc, q: string): { score: number; why?: string } {
   const tokens = q.split(" ").filter((t) => t.length > 2);
   if (tokens.some((t) => name.split(" ").some((n) => n.length > 3 && distance(n, t) <= 1)))
     return { score: 0.6, why: "Fuzzy match (salah ketik ringan)" };
+  const abbrevOrSub = matchAbbreviationOrSubsequence(d.name, q);
+  if (abbrevOrSub) {
+    const label =
+      abbrevOrSub.kind === "acronym" || abbrevOrSub.kind === "word_prefix"
+        ? `Singkatan cocok dengan "${d.name}"`
+        : `Fuzzy subsequence cocok dengan "${d.name}"`;
+    return { score: abbrevOrSub.score, why: label };
+  }
   if (tokens.length && tokens.every((t) => norm(d.text).includes(t))) return { score: 0.45, why: "Kata kunci ditemukan di deskripsi" };
   if (tokens.some((t) => name.includes(t))) return { score: 0.4, why: "Token nama cocok" };
   return { score: 0 };
