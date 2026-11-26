@@ -178,9 +178,17 @@ export default function Home() {
         <div className="grid gap-8 lg:grid-cols-2">
           {/* Dimensi & Realm */}
           <div className="space-y-4">
-            <h3 className="font-heading text-lg font-bold text-mk-text flex items-center gap-2">
-              <span className="text-mk-red">✦</span> Dimensi Alam Semesta (Realms)
-            </h3>
+            <div className="flex items-center justify-between">
+              <h3 className="font-heading text-lg font-bold text-mk-text flex items-center gap-2">
+                <span className="text-mk-red">✦</span> Dimensi Alam Semesta (Realms)
+              </h3>
+              <Link
+                href="/realms"
+                className="text-xs font-semibold text-mk-gold hover:text-mk-red transition-colors"
+              >
+                Lihat 7 Dimensi →
+              </Link>
+            </div>
             <div className="grid gap-4 sm:grid-cols-2">
               {REALMS_DATA.map((realm) => (
                 <RealmCard key={realm.id} realm={realm} />

@@ -11,7 +11,7 @@ interface RealmInfo {
 export default function RealmCard({ realm }: { realm: RealmInfo }) {
   return (
     <Link
-      href={`/search?q=${encodeURIComponent(realm.name)}`}
+      href={`/realms/${realm.id}`}
       className="group block rounded border border-mk-border bg-mk-card p-4 transition duration-200 hover:-translate-y-0.5 hover:border-mk-gold/70 hover:shadow-md"
     >
       <div className="flex items-center justify-between gap-2 border-b border-mk-border/50 pb-2.5">

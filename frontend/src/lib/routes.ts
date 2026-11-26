@@ -8,13 +8,16 @@ const BASE_PATH: Record<EntityType, string> = {
   organization: "/organizations",
   timeline: "/timelines",
   event: "/story/events",
-  location: "/search?q=",
+  location: "/realms",
   species: "/search?q=",
 };
 
 export function entityHref(ref: Pick<EntityRef, "id" | "type" | "name">): string {
-  if (ref.type === "location" || ref.type === "species") {
+  if (ref.type === "species") {
     return `/search?q=${encodeURIComponent(ref.name)}`;
+  }
+  if (ref.type === "location") {
+    return `/realms/${ref.id}`;
   }
   return `${BASE_PATH[ref.type]}/${ref.id}`;
 }
@@ -27,7 +30,7 @@ export const TYPE_LABEL: Record<EntityType, string> = {
   organization: "Klan / Organisasi",
   timeline: "Timeline",
   event: "Peristiwa",
-  location: "Lokasi",
+  location: "Realm / Lokasi",
   species: "Spesies",
 };
 
@@ -42,6 +45,7 @@ export const MAIN_NAV: NavItem[] = [
   { label: "Explore", href: "/explore" },
   { label: "Characters", href: "/characters" },
   { label: "Games", href: "/games" },
+  { label: "Realms", href: "/realms" },
   { label: "Story", href: "/story" },
 ];
 
@@ -49,6 +53,7 @@ export const MAIN_NAV: NavItem[] = [
 export const CATEGORIES = [
   { label: "Karakter", href: "/characters", desc: "Biografi, versi karakter, kemampuan & relasi.", icon: "⚔" },
   { label: "Game", href: "/games", desc: "Seluruh seri dari Classic Era hingga New Era.", icon: "🎮" },
+  { label: "Dimensi & Realm", href: "/realms", desc: "Tujuh dimensi kosmologi Mortal Kombat dan para penghuninya.", icon: "🌌" },
   { label: "Kemampuan & Jurus", href: "/abilities", desc: "Special move, fatality, brutality, friendship.", icon: "🔥" },
   { label: "Senjata", href: "/weapons", desc: "Senjata ikonik dan penggunanya.", icon: "🗡" },
   { label: "Klan & Organisasi", href: "/organizations", desc: "Shirai Ryu, Lin Kuei, Special Forces, dll.", icon: "🛡" },

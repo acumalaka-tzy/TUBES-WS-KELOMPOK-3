@@ -235,6 +235,34 @@ export function executeKeywordSearch(
         }
       }
 
+      // Check if character originates from queried realm (e.g. searching "Orderrealm" -> Hotaru)
+      for (const r of realms) {
+        const rNameNorm = normalizeText(r.name);
+        const rId = r.id.toLowerCase();
+        const isRealmQuery =
+          normQ === rId ||
+          normQ === rNameNorm ||
+          (r.id === "orderrealm" && (normQ.includes("orderrealm") || normQ.includes("seido"))) ||
+          (r.id === "chaosrealm" && normQ.includes("chaosrealm")) ||
+          (r.id === "vaeternus" && normQ.includes("vaeternus")) ||
+          (r.id === "netherrealm" && normQ.includes("netherrealm")) ||
+          (r.id === "edenia" && normQ.includes("edenia")) ||
+          (r.id === "outworld" && normQ.includes("outworld")) ||
+          (r.id === "earthrealm" && normQ.includes("earthrealm"));
+
+        if (isRealmQuery) {
+          const cRealmId = c.realm?.id?.toLowerCase() ?? "";
+          const cRealmName = c.realm?.name ? normalizeText(c.realm.name) : "";
+          if (cRealmId === rId || (cRealmName && (cRealmName.includes(rId) || rNameNorm.includes(cRealmName)))) {
+            if (0.82 > score) {
+              score = 0.82;
+              matchedRelLabels.push(`originatesFrom → ${r.name}`);
+              notes.push(`Berasal dari realm ${r.name}`);
+            }
+          }
+        }
+      }
+
       if (score > 0) {
         candidates.push({
           id: c.id,
@@ -392,10 +420,19 @@ export function executeKeywordSearch(
   // 4. Search Realms / Locations
   if (type === "all" || type === "location") {
     for (const r of realms) {
-      const score = matchScore(r.name, normQ);
+      const rNormName = normalizeText(r.name);
+      let score = matchScore(r.name, normQ);
       const notes: string[] = [];
 
-      if (score === 1.0) {
+      if (
+        normQ === r.id.toLowerCase() ||
+        normQ === rNormName ||
+        rNormName.startsWith(normQ) ||
+        (r.id === "orderrealm" && (normQ === "orderrealm" || normQ === "seido"))
+      ) {
+        score = 1.0;
+        notes.push(`Cocok persis dengan nama realm "${r.name}"`);
+      } else if (score === 1.0) {
         notes.push(`Cocok persis dengan nama realm "${r.name}"`);
       } else if (score >= 0.90) {
         notes.push(`Kecocokan toleransi typo dengan nama realm "${r.name}"`);
@@ -409,7 +446,7 @@ export function executeKeywordSearch(
           type: "location",
           name: r.name,
           summary: r.description,
-          href: `/search?q=${encodeURIComponent(r.name)}`,
+          href: entityHref({ id: r.id, type: "location", name: r.name }),
           attributes: [{ label: "Tipe", value: "Realm" }],
           provenance: r.sources,
           keywordScore: Math.round(score * 100) / 100,

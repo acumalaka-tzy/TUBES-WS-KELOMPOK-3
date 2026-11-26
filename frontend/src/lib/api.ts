@@ -8,7 +8,7 @@
  * Respons API boleh berbentuk objek langsung, `{ data: ... }`, atau untuk list
  * `[...]`, `{ items: [...] }`, `{ data: [...] }`, `{ results: [...] }`.
  */
-import { abilities, characters, games, organizations, storyEvents, timelines, weapons } from "./mock-data";
+import { abilities, characters, games, organizations, realms, storyEvents, timelines, weapons } from "./mock-data";
 import { mockSearch, mockSuggestions } from "./mock-search";
 import type {
   Ability,
@@ -16,6 +16,7 @@ import type {
   EntityType,
   Game,
   Organization,
+  Realm,
   SearchMode,
   SearchResponse,
   StoryEvent,
@@ -166,6 +167,15 @@ export async function getTimelines(): Promise<Timeline[]> {
 export async function getTimeline(id: string): Promise<Timeline> {
   if (USE_MOCK) return mockFind(timelines, id, "Timeline");
   return request<Timeline>(`/api/timelines/${encodeURIComponent(id)}`);
+}
+
+export async function getRealms(): Promise<Realm[]> {
+  if (USE_MOCK) return delay(realms);
+  return asList<Realm>(await request("/api/realms"));
+}
+export async function getRealm(id: string): Promise<Realm> {
+  if (USE_MOCK) return mockFind(realms, id, "Realm");
+  return request<Realm>(`/api/realms/${encodeURIComponent(id)}`);
 }
 
 // ---------------------------------------------------------------- Story

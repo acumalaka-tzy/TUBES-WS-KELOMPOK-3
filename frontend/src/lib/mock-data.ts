@@ -18023,11 +18023,13 @@ export const realms: Realm[] = [
     "name": "Earthrealm",
     "type": "location",
     "description": "Home realm of mortal humanity, protected historically by the Thunder God Raiden and now Fire God Liu Kang.",
-    "href": "/search?q=earthrealm",
+    "href": "/realms/earthrealm",
+    "ruler": "Raiden / Fujin / Fire God Liu Kang",
+    "inhabitants": "Manusia (Human), Dewa Pelindung",
     "sources": [
       {
         "id": "fandom-earthrealm",
-        "title": "Mortal Kombat Wiki \u2014 Earthrealm",
+        "title": "Mortal Kombat Wiki — Earthrealm",
         "url": "https://mortalkombat.fandom.com",
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
@@ -18039,11 +18041,13 @@ export const realms: Realm[] = [
     "name": "Outworld",
     "type": "location",
     "description": "A harsh, majestic imperial realm forged by conquering and merging neighboring worlds, formerly ruled by Shao Kahn and now Empress Sindel.",
-    "href": "/search?q=outworld",
+    "href": "/realms/outworld",
+    "ruler": "Shao Kahn / Kotal Kahn / Empress Mileena / Sindel",
+    "inhabitants": "Outworlders, Tarkatan, Shokan, Osh-Tekk",
     "sources": [
       {
         "id": "fandom-outworld",
-        "title": "Mortal Kombat Wiki \u2014 Outworld",
+        "title": "Mortal Kombat Wiki — Outworld",
         "url": "https://mortalkombat.fandom.com",
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
@@ -18055,11 +18059,13 @@ export const realms: Realm[] = [
     "name": "Netherrealm",
     "type": "location",
     "description": "The fiery subterranean plane of eternal torment, demons, revenants, and dark necromancy, ruled by Shinnok and Quan Chi.",
-    "href": "/search?q=netherrealm",
+    "href": "/realms/netherrealm",
+    "ruler": "Shinnok / Quan Chi",
+    "inhabitants": "Demons, Revenants, Specters",
     "sources": [
       {
         "id": "fandom-netherrealm",
-        "title": "Mortal Kombat Wiki \u2014 Netherrealm",
+        "title": "Mortal Kombat Wiki — Netherrealm",
         "url": "https://mortalkombat.fandom.com",
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
@@ -18071,11 +18077,13 @@ export const realms: Realm[] = [
     "name": "Edenia",
     "type": "location",
     "description": "A lush paradise realm of beauty, peace, and longevity, merged with Outworld for millennia before its restoration.",
-    "href": "/search?q=edenia",
+    "href": "/realms/edenia",
+    "ruler": "Queen Sindel / Princess Kitana / King Jerrod",
+    "inhabitants": "Edenians",
     "sources": [
       {
         "id": "fandom-edenia",
-        "title": "Mortal Kombat Wiki \u2014 Edenia",
+        "title": "Mortal Kombat Wiki — Edenia",
         "url": "https://mortalkombat.fandom.com",
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
@@ -18087,11 +18095,13 @@ export const realms: Realm[] = [
     "name": "Orderrealm (Seido)",
     "type": "location",
     "description": "A rigid geometric realm governed strictly by law, hierarchy, and absolute order, policed by Hotaru and the Seidan Guard.",
-    "href": "/search?q=orderrealm",
+    "href": "/realms/orderrealm",
+    "ruler": "Seidan Senate / Commander Hotaru",
+    "inhabitants": "Seidans",
     "sources": [
       {
         "id": "fandom-orderrealm",
-        "title": "Mortal Kombat Wiki \u2014 Orderrealm (Seido)",
+        "title": "Mortal Kombat Wiki — Orderrealm (Seido)",
         "url": "https://mortalkombat.fandom.com",
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
@@ -18103,11 +18113,13 @@ export const realms: Realm[] = [
     "name": "Chaosrealm",
     "type": "location",
     "description": "An anarchic realm of shifting structures and freedom where chaos is worshiped as supreme truth, home to Cleric Havik.",
-    "href": "/search?q=chaosrealm",
+    "href": "/realms/chaosrealm",
+    "ruler": "Cleric of Chaos Havik",
+    "inhabitants": "Chaosrealmers",
     "sources": [
       {
         "id": "fandom-chaosrealm",
-        "title": "Mortal Kombat Wiki \u2014 Chaosrealm",
+        "title": "Mortal Kombat Wiki — Chaosrealm",
         "url": "https://mortalkombat.fandom.com",
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
@@ -18119,11 +18131,13 @@ export const realms: Realm[] = [
     "name": "Vaeternus",
     "type": "location",
     "description": "The shadowy realm of vampires, severed from Outworld through the efforts of the vampire warrior Nitara.",
-    "href": "/search?q=vaeternus",
+    "href": "/realms/vaeternus",
+    "ruler": "Nitara & Vampire Coven",
+    "inhabitants": "Vampires (Moroi)",
     "sources": [
       {
         "id": "fandom-vaeternus",
-        "title": "Mortal Kombat Wiki \u2014 Vaeternus",
+        "title": "Mortal Kombat Wiki — Vaeternus",
         "url": "https://mortalkombat.fandom.com",
         "sourceType": "community-wiki",
         "verificationStatus": "verified"
