@@ -111,6 +111,11 @@ export async function executeSearch(options: GlobalSearchOptions): Promise<Searc
     fusedResults = fuseRRFResults(semCandidates, kwCandidates);
   }
 
+  // Strict filter by requested entity type if not 'all'
+  if (type && type !== "all") {
+    fusedResults = fusedResults.filter((r) => r.type === type);
+  }
+
   // Filter out low-confidence noise (< 0.25) if query was specific and no entities matched
   if (intent.recognizedEntities.length === 0 && fusedResults.length > 0 && query.length > 5) {
     fusedResults = fusedResults.filter((r) => r.relevance >= 0.35);

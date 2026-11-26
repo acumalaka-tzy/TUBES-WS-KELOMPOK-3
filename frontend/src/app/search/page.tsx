@@ -100,15 +100,16 @@ function SearchContent() {
     return Array.from(set);
   }, [data]);
 
-  // Client-side filtering by game & timeline
+  // Client-side filtering by tab (entity type), game & timeline
   const filteredResults = useMemo(() => {
     if (!data?.results) return [];
     return data.results.filter((r) => {
+      if (activeTab !== "all" && r.type !== activeTab) return false;
       if (filterGame !== "all" && !r.games?.includes(filterGame)) return false;
       if (filterTimeline !== "all" && r.timeline !== filterTimeline) return false;
       return true;
     });
-  }, [data, filterGame, filterTimeline]);
+  }, [data, activeTab, filterGame, filterTimeline]);
 
   const toggleExplanation = (id: string) => {
     setShowExplanation((prev) => ({ ...prev, [id]: !prev[id] }));

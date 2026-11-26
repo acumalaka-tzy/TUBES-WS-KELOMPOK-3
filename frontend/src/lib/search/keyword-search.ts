@@ -280,6 +280,19 @@ export function executeKeywordSearch(
         notes.push(`Cocok dengan tahun rilis game (${g.releaseYear})`);
       }
 
+      // Check if character appears in this game
+      if (score === 0) {
+        for (const c of characters) {
+          if (normQ.includes(c.name.toLowerCase()) || c.aliases.some((al) => normQ.includes(al.toLowerCase()))) {
+            if (c.versions.some((v) => v.gameId === g.id || v.gameTitle.toLowerCase() === g.title.toLowerCase())) {
+              score = Math.max(score, 0.75);
+              notes.push(`Game tempat tampilnya "${c.name}"`);
+              break;
+            }
+          }
+        }
+      }
+
       if (score > 0) {
         candidates.push({
           id: g.id,
@@ -323,6 +336,26 @@ export function executeKeywordSearch(
         if (matched >= 2) {
           score = Math.min(0.65, (matched / (qTokens.length * 2)) * 0.65);
           notes.push(`Ditemukan dalam deskripsi klan "${org.name}"`);
+        }
+      }
+
+      // Check if queried character belongs to this organization
+      if (score === 0) {
+        for (const c of characters) {
+          if (normQ.includes(c.name.toLowerCase()) || c.aliases.some((al) => normQ.includes(al.toLowerCase()))) {
+            const isMember =
+              (c.faction && c.faction.toLowerCase() === org.name.toLowerCase()) ||
+              org.members.some(
+                (m) =>
+                  m.id === c.id ||
+                  m.name.toLowerCase() === c.name.toLowerCase()
+              );
+            if (isMember) {
+              score = Math.max(score, 0.80);
+              notes.push(`Klan/afiliasi dari "${c.name}"`);
+              break;
+            }
+          }
         }
       }
 
@@ -489,6 +522,23 @@ export function executeKeywordSearch(
         notes.push(`Cocok persis dengan nama timeline "${t.name}"`);
       } else if (score > 0) {
         notes.push(`Nama timeline "${t.name}" mengandung kata kunci`);
+      } else {
+        // Check if character exists in this timeline
+        for (const c of characters) {
+          if (normQ.includes(c.name.toLowerCase()) || c.aliases.some((al) => normQ.includes(al.toLowerCase()))) {
+            if (
+              c.versions.some(
+                (v) =>
+                  v.timelineId === t.id ||
+                  v.timelineName.toLowerCase().includes(t.name.toLowerCase())
+              )
+            ) {
+              score = Math.max(score, 0.75);
+              notes.push(`Timeline di mana "${c.name}" hadir`);
+              break;
+            }
+          }
+        }
       }
 
       if (score > 0) {
@@ -517,6 +567,21 @@ export function executeKeywordSearch(
         notes.push(`Cocok persis dengan judul peristiwa "${ev.title}"`);
       } else if (score > 0) {
         notes.push(`Judul peristiwa "${ev.title}" mengandung kata kunci`);
+      } else {
+        // Check if character is involved in this event
+        for (const c of characters) {
+          if (normQ.includes(c.name.toLowerCase()) || c.aliases.some((al) => normQ.includes(al.toLowerCase()))) {
+            if (
+              ev.participants?.some(
+                (p) => p.id === c.id || p.name.toLowerCase() === c.name.toLowerCase()
+              )
+            ) {
+              score = Math.max(score, 0.75);
+              notes.push(`Peristiwa yang melibatkan "${c.name}"`);
+              break;
+            }
+          }
+        }
       }
 
       if (score > 0) {
@@ -539,13 +604,19 @@ export function executeKeywordSearch(
     }
   }
 
+  // Filter candidates strictly if a specific type is requested
+  let filteredCandidates = candidates;
+  if (type && type !== "all") {
+    filteredCandidates = candidates.filter((c) => c.type === type);
+  }
+
   // Sort by keywordScore descending
-  candidates.sort((a, b) => (b.keywordScore ?? 0) - (a.keywordScore ?? 0));
+  filteredCandidates.sort((a, b) => (b.keywordScore ?? 0) - (a.keywordScore ?? 0));
 
   // Assign 1-based ranks
-  candidates.forEach((c, idx) => {
+  filteredCandidates.forEach((c, idx) => {
     c.keywordRank = idx + 1;
   });
 
-  return candidates;
+  return filteredCandidates;
 }

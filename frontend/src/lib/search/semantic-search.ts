@@ -42,7 +42,7 @@ export async function executeSemanticSearch(
 
   // Try live SPARQL on Fuseki if SPARQL query was generated and Fuseki is available
   let fusekiSuccess = false;
-  if (intent.generatedSparql && process.env.NEXT_PUBLIC_USE_MOCK !== "true") {
+  if (intent.generatedSparql && process.env.NEXT_PUBLIC_USE_MOCK !== "true" && (!options.type || options.type === "all" || options.type === "character")) {
     try {
       const fusekiRes = await fuseki.query(intent.generatedSparql);
       if (fusekiRes?.results?.bindings?.length > 0) {
@@ -113,9 +113,16 @@ export async function executeSemanticSearch(
     const targetTimeline = intent.extractedAttributes.timeline?.toLowerCase();
     const targetYear = intent.extractedAttributes.year;
 
+    const allowType = (t: EntityType) => {
+      if (options.type && options.type !== "all") {
+        return options.type === t;
+      }
+      return true;
+    };
+
     // 1. Semantic evaluation of Characters
     if (
-      (options.type === "all" || options.type === "character" || intent.targetType === "character") &&
+      allowType("character") &&
       intent.targetType !== "event" &&
       intent.targetType !== "location"
     ) {
@@ -358,10 +365,13 @@ export async function executeSemanticSearch(
     }
 
     // 2. Semantic evaluation of Games
-    if (options.type === "all" || options.type === "game" || intent.targetType === "game") {
+    if (allowType("game")) {
+      const mainChar = recognized.find((e) => e.type === "character");
+      const mainFull = mainChar ? characters.find((ch) => ch.id === mainChar.id) : undefined;
       for (const g of games) {
         let semScore = 0;
         const notes: string[] = [];
+        const matchedRels: string[] = [];
 
         // Exact Game Lookup
         if (recognized.some((e) => e.id === g.id)) {
@@ -373,6 +383,15 @@ export async function executeSemanticSearch(
         } else if (intent.intentType === "all_games_by_year") {
           semScore = 1.0 - (g.releaseYear - 1992) * 0.005;
           notes.push(`Urutan rilis tahun ${g.releaseYear} (${g.era}).`);
+        } else if (
+          mainFull &&
+          mainFull.versions.some(
+            (v) => v.gameId === g.id || v.gameTitle.toLowerCase() === g.title.toLowerCase()
+          )
+        ) {
+          semScore = 0.75;
+          notes.push(`Game tempat tampilnya "${mainFull.name}"`);
+          matchedRels.push(`appearsIn ← ${mainFull.name}`);
         }
 
         if (semScore > 0) {
@@ -390,8 +409,12 @@ export async function executeSemanticSearch(
             timeline: g.timeline?.name,
             provenance: g.sources,
             semanticScore: semScore,
-            matchedRelationships: [`releaseYear → ${g.releaseYear}`],
-            graphPath: [g.title, "mk:releaseYear", String(g.releaseYear)],
+            matchedRelationships:
+              matchedRels.length > 0 ? matchedRels : [`releaseYear → ${g.releaseYear}`],
+            graphPath:
+              mainChar && matchedRels.length > 0
+                ? [mainChar.name, "mk:appearsIn", g.title]
+                : [g.title, "mk:releaseYear", String(g.releaseYear)],
             explanationNotes: notes,
           });
         }
@@ -399,10 +422,13 @@ export async function executeSemanticSearch(
     }
 
     // 3. Semantic evaluation of Organizations / Clans
-    if (options.type === "all" || options.type === "organization" || intent.targetType === "organization") {
+    if (allowType("organization")) {
+      const mainChar = recognized.find((e) => e.type === "character");
+      const mainFull = mainChar ? characters.find((ch) => ch.id === mainChar.id) : undefined;
       for (const org of organizations) {
         let semScore = 0;
         const notes: string[] = [];
+        const matchedRels: string[] = [];
 
         if (recognized.some((e) => e.id === org.id)) {
           semScore = 1.0;
@@ -410,6 +436,19 @@ export async function executeSemanticSearch(
         } else if (targetClan && org.name.toLowerCase().includes(targetClan)) {
           semScore = 0.95;
           notes.push(`Entitas klan "${org.name}" sesuai dengan klan yang dicari.`);
+        } else if (mainFull) {
+          const isMember =
+            (mainFull.faction && mainFull.faction.toLowerCase() === org.name.toLowerCase()) ||
+            org.members.some(
+              (m) =>
+                m.id === mainFull.id ||
+                m.name.toLowerCase() === mainFull.name.toLowerCase()
+            );
+          if (isMember) {
+            semScore = 0.85;
+            notes.push(`Klan/afiliasi dari "${mainFull.name}"`);
+            matchedRels.push(`memberOf ← ${mainFull.name}`);
+          }
         }
 
         if (semScore > 0) {
@@ -422,8 +461,12 @@ export async function executeSemanticSearch(
             attributes: [{ label: "Jenis", value: org.kind }],
             provenance: org.sources,
             semanticScore: semScore,
-            matchedRelationships: ["instanceOf → mk:Organization"],
-            graphPath: [org.name, "a", "mk:Organization"],
+            matchedRelationships:
+              matchedRels.length > 0 ? matchedRels : ["instanceOf → mk:Organization"],
+            graphPath:
+              mainChar && matchedRels.length > 0
+                ? [mainChar.name, "mk:memberOf", org.name]
+                : [org.name, "a", "mk:Organization"],
             explanationNotes: notes,
           });
         }
@@ -431,7 +474,7 @@ export async function executeSemanticSearch(
     }
 
     // 4. Semantic evaluation of Realms / Locations
-    if (options.type === "all" || options.type === "location" || intent.targetType === "location") {
+    if (allowType("location")) {
       for (const r of realms) {
         let semScore = 0;
         const notes: string[] = [];
@@ -463,8 +506,10 @@ export async function executeSemanticSearch(
     }
 
     // 5. Semantic evaluation of Story Events
-    if (options.type === "all" || options.type === "event" || intent.targetType === "event") {
+    if (allowType("event")) {
       const charInvolved = recognized.filter((e) => e.type === "character");
+      const mainChar = recognized.find((e) => e.type === "character");
+      const mainFull = mainChar ? characters.find((ch) => ch.id === mainChar.id) : undefined;
       for (const ev of storyEvents) {
         let semScore = 0;
         const matchedRels: string[] = [];
@@ -481,6 +526,17 @@ export async function executeSemanticSearch(
             matchedRels.push(`involvesCharacter → ${ci.name}`);
             notes.push(`Peristiwa ini melibatkan tokoh "${ci.name}"`);
           }
+        }
+
+        if (
+          mainFull &&
+          ev.participants?.some(
+            (ch) => ch.id === mainFull.id || ch.name.toLowerCase() === mainFull.name.toLowerCase()
+          )
+        ) {
+          semScore = Math.max(semScore, 0.75);
+          matchedRels.push(`involvesCharacter → ${mainFull.name}`);
+          notes.push(`Peristiwa yang melibatkan "${mainFull.name}"`);
         }
 
         // Timeline match
@@ -522,7 +578,7 @@ export async function executeSemanticSearch(
     }
 
     // 6. Semantic evaluation of Abilities
-    if (options.type === "all" || options.type === "ability" || intent.targetType === "ability") {
+    if (allowType("ability")) {
       const isRelSearch =
         intent.intentType === "character_enemies_rivals" || intent.intentType === "character_allies";
       const mainChar = recognized.find((e) => e.type === "character");
@@ -578,7 +634,7 @@ export async function executeSemanticSearch(
     }
 
     // 7. Semantic evaluation of Weapons
-    if (options.type === "all" || options.type === "weapon" || intent.targetType === "weapon") {
+    if (allowType("weapon")) {
       const isRelSearch =
         intent.intentType === "character_enemies_rivals" || intent.intentType === "character_allies";
       const mainChar = recognized.find((e) => e.type === "character");
@@ -626,15 +682,78 @@ export async function executeSemanticSearch(
         }
       }
     }
+
+    // 8. Semantic evaluation of Timelines
+    if (allowType("timeline")) {
+      const mainChar = recognized.find((e) => e.type === "character");
+      const mainFull = mainChar ? characters.find((ch) => ch.id === mainChar.id) : undefined;
+
+      for (const t of timelines) {
+        let semScore = 0;
+        const notes: string[] = [];
+        const matchedRels: string[] = [];
+
+        if (recognized.some((e) => e.id === t.id)) {
+          semScore = 1.0;
+          notes.push(`Timeline "${t.name}" cocok langsung.`);
+        } else if (
+          targetTimeline &&
+          (t.name.toLowerCase().includes(targetTimeline) ||
+            targetTimeline.includes(t.name.toLowerCase()))
+        ) {
+          semScore = 0.95;
+          notes.push(`Timeline "${t.name}" sesuai dengan kueri.`);
+        } else if (
+          mainFull &&
+          mainFull.versions.some(
+            (v) =>
+              v.timelineId === t.id ||
+              v.timelineName.toLowerCase().includes(t.name.toLowerCase())
+          )
+        ) {
+          semScore = 0.75;
+          notes.push(`Timeline di mana "${mainFull.name}" hadir.`);
+          matchedRels.push(`inTimeline ← ${mainFull.name}`);
+        }
+
+        if (semScore > 0) {
+          candidates.push({
+            id: t.id,
+            type: "timeline",
+            name: t.name,
+            summary: t.description,
+            href: `/timelines/${t.id}`,
+            attributes: [
+              { label: "Era", value: t.order ? `Urutan #${t.order}` : "-" },
+            ],
+            provenance: t.sources,
+            semanticScore: semScore,
+            matchedRelationships:
+              matchedRels.length > 0 ? matchedRels : ["instanceOf → mk:Timeline"],
+            graphPath:
+              mainChar && matchedRels.length > 0
+                ? [mainChar.name, "mk:inTimeline", t.name]
+                : [t.name, "a", "mk:Timeline"],
+            explanationNotes: notes,
+          });
+        }
+      }
+    }
+  }
+
+  // Filter candidates strictly if a specific type is requested
+  let filteredCandidates = candidates;
+  if (options.type && options.type !== "all") {
+    filteredCandidates = candidates.filter((c) => c.type === options.type);
   }
 
   // Sort by semanticScore descending
-  candidates.sort((a, b) => (b.semanticScore ?? 0) - (a.semanticScore ?? 0));
+  filteredCandidates.sort((a, b) => (b.semanticScore ?? 0) - (a.semanticScore ?? 0));
 
   // Assign 1-based ranks
-  candidates.forEach((c, idx) => {
+  filteredCandidates.forEach((c, idx) => {
     c.semanticRank = idx + 1;
   });
 
-  return candidates;
+  return filteredCandidates;
 }
