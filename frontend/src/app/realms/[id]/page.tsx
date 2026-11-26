@@ -1,11 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { use, useMemo } from "react";
 import { getCharacters, getRealm } from "@/lib/api";
 import { useAsync } from "@/lib/hooks";
 import { TypeBadge, VerificationBadge } from "@/components/ui/Badge";
+import EntityImage from "@/components/ui/EntityImage";
 import { Breadcrumbs, Container, InfoGrid, Section, SourceList } from "@/components/ui/Layout";
 import { ErrorState, LoadingState } from "@/components/ui/States";
 
@@ -135,19 +135,11 @@ export default function RealmDetailPage({
                     <div>
                       {/* Avatar Karakter */}
                       <div className="relative mb-3 aspect-square w-full overflow-hidden rounded bg-mk-bg/60 border border-mk-border/50">
-                        {latestVersion?.image?.url ? (
-                          <Image
-                            src={latestVersion.image.url}
-                            alt={c.name}
-                            fill
-                            className="object-cover object-top transition duration-300 group-hover:scale-105"
-                            sizes="(max-width: 768px) 50vw, 25vw"
-                          />
-                        ) : (
-                          <div className="flex h-full w-full items-center justify-center font-heading text-3xl font-bold text-mk-muted/40">
-                            {c.name.slice(0, 2).toUpperCase()}
-                          </div>
-                        )}
+                        <EntityImage
+                          image={latestVersion?.image}
+                          name={c.name}
+                          aspect="square"
+                        />
                       </div>
 
                       <h3 className="font-heading text-base font-bold text-mk-text group-hover:text-mk-gold transition-colors">
