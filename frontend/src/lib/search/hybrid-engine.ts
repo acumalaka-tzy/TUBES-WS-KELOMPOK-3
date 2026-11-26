@@ -21,7 +21,7 @@ export interface GlobalSearchOptions {
 
 /**
  * Main Hybrid Search Engine
- * Adheres to PRD Section 11, Section 15, FR-02 to FR-08
+ * Hybrid semantic search engine.
  */
 export async function executeSearch(options: GlobalSearchOptions): Promise<SearchResponse> {
   const rawQ = options.q ?? "";
@@ -55,7 +55,7 @@ export async function executeSearch(options: GlobalSearchOptions): Promise<Searc
       total: 0,
       results: [],
       status: "ok",
-      message: `Informasi untuk "${query}" tidak ditemukan dalam Knowledge Graph Mortal Kombat. Silakan coba kata kunci lain.`,
+      message: "Informasi tidak ditemukan dalam Knowledge Graph Mortal Kombat. Silakan coba kata kunci lain.",
       suggestions: suggestions.length > 0 ? suggestions : ["Scorpion", "Sub-Zero", "Liu Kang", "Raiden"],
       parsedIntent: {
         intentType: "no_match",
@@ -121,7 +121,7 @@ export async function executeSearch(options: GlobalSearchOptions): Promise<Searc
     fusedResults = fusedResults.filter((r) => r.relevance >= 0.35);
   }
 
-  // 3. Attach Explanation and provenance for each result (FR-08)
+  // 3. Attach Explanation and provenance for each result
   for (const item of fusedResults) {
     item.explanation = explainSearchResult(item, mode, intent);
   }

@@ -104,7 +104,7 @@ function SearchContent() {
       <PageHeader
         eyebrow="Global Search"
         title="Pencarian Knowledge Base"
-        description="Mencari entitas dan relasi menggunakan Hybrid Semantic Search Engine (FR-02 sampai FR-08)."
+        description="Temukan karakter, jurus, senjata, dan peristiwa di seluruh semesta Mortal Kombat secara akurat dan kontekstual."
         crumbs={[{ label: "Search" }]}
       >
         <div className="mt-4 max-w-3xl">
@@ -113,7 +113,7 @@ function SearchContent() {
       </PageHeader>
 
       <Container className="py-8">
-        {/* Entity Type Tabs (PRD 25.5 Search Results) */}
+        {/* Entity Type Tabs */}
         <div className="scrollbar-thin mb-6 flex overflow-x-auto border-b border-mk-border pb-px">
           {TABS.map((tab) => (
             <button
@@ -191,7 +191,7 @@ function SearchContent() {
           </div>
         )}
 
-        {/* Ambiguous State Notification (FR-06 / FR-02) */}
+        {/* Ambiguous State Notification */}
         {data?.status === "ambiguous" && data.message && (
           <div className="mb-6 flex items-start gap-3 rounded-sm border border-amber-500/50 bg-amber-500/10 p-4 text-sm text-amber-200">
             <span className="text-lg">ℹ</span>
@@ -231,7 +231,7 @@ function SearchContent() {
         ) : filteredResults.length === 0 ? (
           <EmptyState
             icon="✕"
-            title={`Tidak ada hasil untuk "${rawQ}"`}
+            title="Tidak ada hasil"
             description={
               data?.message ??
               "Coba periksa ejaan, gunakan kata kunci yang lebih umum, atau beralih ke mode Hybrid/Semantic."
@@ -316,7 +316,7 @@ function SearchResultCard({
 
           <p className="line-clamp-2 text-sm text-mk-muted">{result.summary}</p>
 
-          {/* Relevant Attributes (FR-08 / PRD 13.3) */}
+          {/* Relevant Attributes */}
           {result.attributes && result.attributes.length > 0 && (
             <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-mk-muted">
               {result.attributes.map((attr) => (

@@ -77,7 +77,7 @@ export default function AbilitiesPage() {
       <PageHeader
         eyebrow="Encyclopedia"
         title="Kemampuan &amp; Jurus (Abilities &amp; Moves)"
-        description="Daftar kemampuan magis, jurus khusus, serta finisher (Fatalities, Brutalities, Friendship) karakter Mortal Kombat (FR-11)."
+        description="Daftar kemampuan magis, jurus khusus, serta finisher (Fatalities, Brutalities, Friendship) karakter Mortal Kombat."
         crumbs={[{ label: "Abilities" }]}
       />
 

@@ -54,7 +54,7 @@ export default function Navbar() {
         {/* KIRI: Logo + Search Bar Menonjol */}
         <div className="flex items-center gap-3 sm:gap-5 flex-1 max-w-2xl">
           {/* Logo Website */}
-          <Link href="/" className="group flex shrink-0 items-center gap-2.5" aria-label="Mortal Kombat Knowledge Nexus">
+          <Link href="/" className="group flex shrink-0 items-center gap-2.5" aria-label="Mortal Kombat Knowledge AI">
             <div className="relative h-9 w-9 shrink-0 overflow-hidden rounded-full border border-mk-gold/50 shadow-sm transition group-hover:scale-105 group-hover:border-mk-gold">
               <Image
                 src="/images/mk-logo.svg"
@@ -66,7 +66,7 @@ export default function Navbar() {
               />
             </div>
             <span className="leading-tight hidden sm:block">
-              <span className="block font-heading text-sm font-bold tracking-[0.16em] text-mk-text">MK NEXUS</span>
+              <span className="block font-heading text-sm font-bold tracking-[0.16em] text-mk-text">MK KNOWLEDGE AI</span>
               <span className="block text-[10px] uppercase tracking-[0.2em] text-mk-gold font-medium">Encyclopedia</span>
             </span>
           </Link>
@@ -128,18 +128,6 @@ export default function Navbar() {
 
           <div className="hidden lg:block h-5 w-px bg-mk-border" />
 
-          {/* Language Switcher (EN/ID) */}
-          <button
-            type="button"
-            onClick={toggleLanguage}
-            title={language === "id" ? "Ganti ke Bahasa Inggris" : "Switch to Indonesian"}
-            className="flex items-center gap-1 rounded border border-mk-border bg-mk-bg px-2 py-1 text-[11px] font-bold tracking-wider text-mk-text hover:border-mk-gold hover:text-mk-gold transition shadow-2xs"
-          >
-            <span className={language === "id" ? "text-mk-red font-extrabold" : "text-mk-muted font-normal"}>ID</span>
-            <span className="text-mk-muted">/</span>
-            <span className={language === "en" ? "text-mk-red font-extrabold" : "text-mk-muted font-normal"}>EN</span>
-          </button>
-
           {/* Theme Toggle (Light / Dark) */}
           <button
             type="button"
@@ -191,15 +179,8 @@ export default function Navbar() {
         <div id="mobile-menu" className="border-t border-mk-border bg-mk-card lg:hidden max-h-[calc(100vh-4rem)] overflow-y-auto scrollbar-thin shadow-xl">
           <div className="mx-auto max-w-7xl px-4 py-3 space-y-2">
             <div className="flex items-center justify-between pb-2 border-b border-mk-border">
-              <span className="text-xs font-semibold uppercase tracking-wider text-mk-muted">Pengaturan</span>
+              <span className="text-xs font-semibold uppercase tracking-wider text-mk-muted">Tema</span>
               <div className="flex items-center gap-2">
-                <button
-                  type="button"
-                  onClick={toggleLanguage}
-                  className="rounded border border-mk-border bg-mk-bg px-2 py-0.5 text-xs font-bold text-mk-text"
-                >
-                  {language.toUpperCase()}
-                </button>
                 <button
                   type="button"
                   onClick={toggleTheme}

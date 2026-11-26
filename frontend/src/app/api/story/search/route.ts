@@ -3,7 +3,7 @@ import { searchStoryEvents } from '@/lib/search/story-search';
 
 /**
  * POST /api/story/search
- * Story Semantic Search endpoint (FR-23)
+ * Story Semantic Search endpoint
  * Searches narrative events by timeline, character participant, arc, and event type.
  */
 export async function POST(req: NextRequest) {

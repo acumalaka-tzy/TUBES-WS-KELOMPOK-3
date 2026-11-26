@@ -38,12 +38,12 @@ export default function KnowledgeGraphPage() {
       <PageHeader
         eyebrow="Knowledge Graph &amp; SPARQL"
         title="Knowledge Graph &amp; SPARQL Explorer"
-        description="Visualisasi hubungan antar-entitas (FR-16) dan konsol eksekusi query SPARQL langsung terhadap Knowledge Base (FR-17)."
+        description="Visualisasi hubungan antar-entitas dan konsol eksekusi query SPARQL langsung terhadap Knowledge Base."
         crumbs={[{ label: "Knowledge Graph" }]}
       />
 
       <Container className="space-y-12 py-8 sm:py-10">
-        {/* SECTION 1: INTERACTIVE GRAPH EXPLORER (FR-16 & PRD 25.5 with mobile table alternative) */}
+        {/* SECTION 1: INTERACTIVE GRAPH EXPLORER (with mobile table alternative) */}
         <Section
           title="Interactive Knowledge Graph Preview"
           action={
@@ -221,7 +221,7 @@ export default function KnowledgeGraphPage() {
               </div>
             </div>
           ) : (
-            /* Table / List Alternative View (PRD 25.5 Mobile Alternative) */
+            /* Table / List Alternative View (Mobile Alternative) */
             <div className="panel rounded-sm p-4 sm:p-5 space-y-4">
               <p className="text-xs text-mk-muted">
                 Daftar entitas dan relasi Knowledge Graph dalam format tabel interaktif:

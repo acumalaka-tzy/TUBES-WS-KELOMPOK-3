@@ -1,7 +1,7 @@
 # MK Knowledge Nexus — Frontend & Backend API
 
 Platform **Mortal Kombat Knowledge Nexus** (Tugas Besar Kelompok 3).
-Dibangun dengan **Next.js 16 (App Router) + React 19 + TypeScript + Tailwind CSS v4 + Apache Jena Fuseki Standalone** sesuai PRD v1.5.
+Dibangun dengan **Next.js 16 (App Router) + React 19 + TypeScript + Tailwind CSS v4 + Apache Jena Fuseki Standalone**.
 
 ---
 
@@ -18,7 +18,7 @@ Dibangun dengan **Next.js 16 (App Router) + React 19 + TypeScript + Tailwind CSS
 
 ## 🚀 Fitur Backend & Hybrid Search Engine (Anggota 2)
 
-Sesuai **PRD Bagian 11, 12, 14, 15, 16**, serta **FR-02 sampai FR-08** dan **FR-23**:
+Fitur pencarian terpadu yang menggabungkan:
 
 1. **Next.js Route Handlers (REST API)**:
    - Endpoint terstruktur di bawah `/api/...` dengan validasi parameter, error handling komprehensif, dan status HTTP standar (200, 400, 403, 404, 500, 503).
@@ -41,9 +41,9 @@ Sesuai **PRD Bagian 11, 12, 14, 15, 16**, serta **FR-02 sampai FR-08** dan **FR-
    - Menggabungkan hasil Keyword Search dan Semantic Search menggunakan algoritma RRF:
      $$RRF(d) = \sum_{m \in \{\text{semantic}, \text{keyword}\}} \frac{w_m}{k + r_m(d)}$$
      dengan smoothing constant $k = 60$, bobot semantik $w_{sem} = 1.0$, dan bobot keyword $w_{kw} = 0.8$.
-8. **Search Explanation ("Why this result?") (FR-08)**:
+8. **Search Explanation ("Why this result?")**:
    - Menjelaskan alasan hasil ditemukan: relasi ontologi (`matchedRelationships`), jejak penelusuran graf RDF (`graphPath`), serta *provenance* data sumber.
-9. **Story Semantic Search (FR-23) (`POST /api/story/search`)**:
+9. **Story Semantic Search (`POST /api/story/search`)**:
    - Pencarian naratif dan kronologis peristiwa cerita berdasarkan timeline, tokoh yang terlibat, story arc, jenis peristiwa, dan penanganan spoiler.
 10. **Advanced Faceted Search (`POST /api/search/advanced`)**:
     - Pencarian berparameter multi-kriteria (tipe entitas, game, timeline, elemen, realm, faksi, kategori senjata, status verifikasi).
@@ -67,7 +67,7 @@ Sesuai **PRD Bagian 11, 12, 14, 15, 16**, serta **FR-02 sampai FR-08** dan **FR-
 | `POST` | `/api/search/hybrid` | Explicit Hybrid Search (RRF Ranking) |
 | `GET` | `/api/search/suggestions?q=` | Autocomplete / Search Suggestions |
 | `POST` | `/api/search/advanced` | Advanced Faceted Search |
-| `POST` | `/api/story/search` | Story Semantic Search (FR-23) |
+| `POST` | `/api/story/search` | Story Semantic Search |
 | `GET` | `/api/story/events` | Daftar peristiwa cerita |
 | `GET` | `/api/story/events/[id]` | Detail peristiwa cerita |
 | `GET` | `/api/story/timeline` | Garis waktu kronologis cerita |

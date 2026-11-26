@@ -1,5 +1,5 @@
 /**
- * Tipe data frontend — mengikuti PRD Bagian 17 (Data Model) & 29.4 (Image Asset).
+ * Tipe data frontend (Data Model & Image Asset).
  * Kontrak ini menjadi acuan integrasi dengan API (Anggota 2).
  */
 

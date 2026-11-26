@@ -72,7 +72,7 @@ export function InfoCard({
   );
 }
 
-/** Daftar link entitas terkait — setiap relasi dapat diklik (FR-09). */
+/** Daftar link entitas terkait — setiap relasi dapat diklik. */
 export function EntityLinks({ items, empty = "Belum ada data." }: { items?: EntityRef[]; empty?: string }) {
   if (!items?.length) return <p className="text-sm text-mk-muted">{empty}</p>;
   return (

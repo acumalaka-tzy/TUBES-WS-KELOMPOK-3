@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
 import { Container, PageHeader } from "@/components/ui/Layout";
 import { VerificationBadge } from "@/components/ui/Badge";
@@ -272,12 +273,17 @@ export default function AssistantPage() {
           {/* Header Bar */}
           <div className="flex flex-wrap items-center justify-between border-b border-mk-border bg-mk-bg p-4">
             <div className="flex items-center gap-3">
-              <span className="grid h-8 w-8 place-items-center rounded bg-mk-red/20 font-display text-sm text-mk-red border border-mk-red/40">
-                ⚡
+              <span className="grid h-8 w-8 place-items-center rounded bg-mk-red/20 border border-mk-red/40 overflow-hidden">
+                <Image
+                  src="/images/mk-logo.svg"
+                  alt="Mortal Kombat Logo"
+                  width={22}
+                  height={22}
+                  className="h-5.5 w-5.5 object-contain"
+                />
               </span>
               <div>
                 <p className="font-heading text-sm font-bold text-mk-text">Mortal Kombat Knowledge AI</p>
-                <p className="text-[11px] text-mk-muted">Pencarian Semantik &amp; RAG Terpadu</p>
               </div>
             </div>
             <div className="flex items-center gap-2">

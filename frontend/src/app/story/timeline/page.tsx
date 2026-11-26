@@ -74,7 +74,7 @@ function StoryTimelineContent() {
         ) : !events?.length ? (
           <p className="text-center text-sm text-mk-muted">Belum ada peristiwa pada timeline ini.</p>
         ) : (
-          /* Chronological Vertical Timeline (PRD 25.5 Story Timeline) */
+          /* Chronological Vertical Timeline */
           <div className="relative border-l-2 border-mk-border pl-6 sm:pl-8 ml-4 sm:ml-8 space-y-8">
             {events.map((ev, idx) => (
               <div key={ev.id} className="relative group">

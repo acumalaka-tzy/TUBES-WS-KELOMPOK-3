@@ -43,7 +43,7 @@ export default function WeaponsPage() {
       <PageHeader
         eyebrow="Encyclopedia"
         title="Daftar Senjata Mortal Kombat"
-        description="Eksplorasi senjata ikonik para pejuang Mortal Kombat seperti tombak kunai Scorpion, pedang es Sub-Zero, kipas baja Kitana, hingga topi Kung Lao (FR-12)."
+        description="Eksplorasi senjata ikonik para pejuang Mortal Kombat seperti tombak kunai Scorpion, pedang es Sub-Zero, kipas baja Kitana, hingga topi Kung Lao."
         crumbs={[{ label: "Weapons" }]}
       />
 

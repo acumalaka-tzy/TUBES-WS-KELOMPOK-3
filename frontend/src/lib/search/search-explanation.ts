@@ -9,7 +9,7 @@ export interface ExplanationPayload {
 }
 
 /**
- * Generate human-readable explanation for an individual search result (FR-08)
+ * Generate human-readable explanation for an individual search result
  */
 export function explainSearchResult(
   result: FusedSearchResult,
@@ -73,7 +73,7 @@ export function generateSearchExplanationSummary(
   intent?: ParsedQueryIntent
 ): string {
   if (totalResults === 0) {
-    return `Tidak ditemukan entitas yang cocok dengan kueri "${query}" pada mode ${mode}.`;
+    return "Tidak ditemukan entitas yang cocok.";
   }
 
   const modeText =

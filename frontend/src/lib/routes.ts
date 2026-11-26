@@ -39,7 +39,7 @@ export interface NavItem {
   href: string;
 }
 
-/** Navigasi utama — PRD 7.1 & 25.3 */
+/** Navigasi utama */
 export const MAIN_NAV: NavItem[] = [
   { label: "Home", href: "/" },
   { label: "Explore", href: "/explore" },

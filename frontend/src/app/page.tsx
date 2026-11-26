@@ -65,13 +65,6 @@ export default function Home() {
       <section className="hero-encyclopedia border-b border-mk-border py-12 sm:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mx-auto max-w-3xl text-center">
-            <div className="inline-flex items-center gap-2 rounded-full border border-mk-border bg-mk-card px-3 py-1 shadow-2xs mb-4">
-              <span className="h-2 w-2 rounded-full bg-mk-red animate-pulse" />
-              <span className="text-[11px] font-semibold uppercase tracking-widest text-mk-text/80">
-                Mortal Kombat Knowledge Nexus
-              </span>
-            </div>
-
             <h1 className="font-heading text-3xl font-extrabold tracking-tight text-mk-text sm:text-5xl lg:text-6xl leading-tight">
               Mortal Kombat <span className="text-mk-red">Encyclopedia</span>
             </h1>

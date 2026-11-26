@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import type { EntityRef, SourceRef } from "@/lib/types";
 
 interface Message {
@@ -329,15 +330,18 @@ export default function FloatingAssistant() {
         {/* Header Bar */}
         <div className="flex items-center justify-between border-b border-mk-border/70 bg-gradient-to-r from-mk-bg via-mk-card to-mk-bg px-4 py-3 rounded-t-2xl">
           <div className="flex items-center gap-2.5">
-            <span className="grid h-8 w-8 place-items-center rounded-lg border border-mk-red/50 bg-mk-red/20 font-display text-sm text-mk-gold shadow-sm">
-              ⚡
-            </span>
-            <div>
+            <div className="relative h-8 w-8 shrink-0 overflow-hidden rounded-full border border-mk-gold/50 shadow-sm">
+              <Image
+                src="/images/mk-logo.svg"
+                alt="Mortal Kombat Logo"
+                width={32}
+                height={32}
+                className="h-full w-full object-cover"
+              />
+            </div>
+            <div className="flex items-center gap-2">
               <p className="font-heading text-sm font-bold tracking-wide text-mk-text">MK Knowledge AI</p>
-              <div className="flex items-center gap-1.5">
-                <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                <p className="text-[10px] text-mk-muted">Pencarian Semantik &amp; RAG</p>
-              </div>
+              <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" title="Online" />
             </div>
           </div>
           <div className="flex items-center gap-1">

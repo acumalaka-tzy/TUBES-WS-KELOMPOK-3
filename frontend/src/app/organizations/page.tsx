@@ -40,7 +40,7 @@ export default function OrganizationsPage() {
       <PageHeader
         eyebrow="Encyclopedia"
         title="Klan, Organisasi, &amp; Faksi"
-        description="Faksi dan kelompok yang bersaing dalam dunia Mortal Kombat: klan ninja Lin Kuei dan Shirai Ryu, pasukan pelindung Special Forces, White Lotus Society, hingga Kekaisaran Outworld (FR-13)."
+        description="Faksi dan kelompok yang bersaing dalam dunia Mortal Kombat: klan ninja Lin Kuei dan Shirai Ryu, pasukan pelindung Special Forces, White Lotus Society, hingga Kekaisaran Outworld."
         crumbs={[{ label: "Organizations" }]}
       />
 

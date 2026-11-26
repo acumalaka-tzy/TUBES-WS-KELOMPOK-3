@@ -8,7 +8,7 @@ import type { GameEra } from "@/lib/types";
 import { EntityCard } from "@/components/ui/Cards";
 import { EmptyState, ErrorState, LoadingState } from "@/components/ui/States";
 
-/** Carousel roster karakter populer (FR-01). */
+/** Carousel roster karakter populer. */
 export function PopularCharacters() {
   const { data, error, loading, reload } = useAsync(getCharacters, []);
   const scroller = useRef<HTMLUListElement>(null);
@@ -52,7 +52,7 @@ export function PopularCharacters() {
 
 const ERA_ORDER: GameEra[] = ["Classic Era", "3D Era", "Reboot Era", "New Era", "Spin-off"];
 
-/** Timeline era game (FR-01: game yang tersedia). */
+/** Timeline era game. */
 export function GameEras() {
   const { data, error, loading, reload } = useAsync(getGames, []);
   if (loading) return <LoadingState variant="list" count={2} />;

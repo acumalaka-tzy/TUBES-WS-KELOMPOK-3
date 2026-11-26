@@ -169,8 +169,8 @@ async function runTests() {
     assert(fused[0].rrfScore > fused[1].rrfScore, "Fused RRF score is monotonically decreasing");
   }
 
-  // 6. Test Search Explanation (FR-08)
-  console.log("\n6. Search Explanation (FR-08):");
+  // 6. Test Search Explanation
+  console.log("\n6. Search Explanation:");
   {
     const searchRes = await executeSearch({ q: "Karakter api", mode: "hybrid" });
     assert(searchRes.results.length > 0, "Hybrid search returns results");
@@ -185,8 +185,8 @@ async function runTests() {
     assert(!!searchRes.message, "Response contains overall search explanation message");
   }
 
-  // 7. Test Story Semantic Search (FR-23)
-  console.log("\n7. Story Semantic Search (FR-23):");
+  // 7. Test Story Semantic Search
+  console.log("\n7. Story Semantic Search:");
   {
     const storyRes1 = searchStoryEvents({ query: "tournament" });
     assert(storyRes1.events.length > 0, "Finds story events matching 'tournament'");

@@ -6,7 +6,7 @@ export const maxDuration = 25; // 25 seconds execution limit for Vercel / server
 
 /**
  * POST /api/assistant
- * AI Knowledge Assistant RAG Endpoint (PRD Section 6)
+ * AI Knowledge Assistant RAG Endpoint
  * Accepts: { message: string, history?: AssistantMessage[] }
  * Returns: { answer, retrievedContext, generatedSparql, provider, usage, isFusekiLive }
  */

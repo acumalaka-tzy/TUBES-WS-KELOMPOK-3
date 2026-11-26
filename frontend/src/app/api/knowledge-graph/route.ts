@@ -3,8 +3,8 @@ import { fuseki } from '@/lib/fuseki';
 
 /**
  * GET /api/knowledge-graph
- * Supports FR-15 (Relationship Explorer), FR-16 (Knowledge Graph Visualization),
- * FR-20 (Ontology Management), and FR-21 (RDF Management) backed by live Apache Jena Fuseki.
+ * Supports Relationship Explorer, Knowledge Graph Visualization,
+ * Ontology Management, and RDF Management backed by live Apache Jena Fuseki.
  */
 export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);

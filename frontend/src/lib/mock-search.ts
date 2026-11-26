@@ -1,6 +1,6 @@
 /**
  * Pencarian lokal berbasis data mock — meniru perilaku Keyword / Semantic / Hybrid
- * (PRD FR-02..FR-05) agar UI bisa diuji sebelum API Anggota 2 tersedia.
+ * Mock search engine agar UI bisa diuji sebelum API backend tersedia.
  */
 import { abilities, characters, games, organizations, storyEvents, timelines, weapons } from "./mock-data";
 import { entityHref } from "./routes";

@@ -1,5 +1,5 @@
 /**
- * API client — integrasi frontend dengan API Anggota 2 (PRD Bagian 15).
+ * API client — integrasi frontend dengan backend API.
  *
  * Mode:
  *  - NEXT_PUBLIC_USE_MOCK=true  (default) → memakai data contoh lokal (lib/mock-data.ts)
