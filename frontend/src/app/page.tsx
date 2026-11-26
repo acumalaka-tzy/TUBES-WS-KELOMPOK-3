@@ -41,41 +41,6 @@ const REALMS_DATA = [
   },
 ];
 
-const RECENT_KNOWLEDGE = [
-  {
-    id: "rec-1",
-    type: "Karakter & Versi",
-    title: "Profil Karakter Kanonikal Standalone",
-    description: "Database 61 karakter kanonikal Mortal Kombat lengkap dengan versi game, afiliasi klan, senjata pusaka, dan jurus khas.",
-    href: "/characters",
-    date: "Edisi Terbaru",
-  },
-  {
-    id: "rec-2",
-    type: "Katalog Game",
-    title: "Kronologi 23 Rilis Game Mandiri",
-    description: "Dokumentasi komprehensif seri game dari era arcade 1992, era 3D, reboot kontinuitas 2011, hingga New Era 2023.",
-    href: "/games",
-    date: "Edisi Terbaru",
-  },
-  {
-    id: "rec-3",
-    type: "Arsip Jurus",
-    title: "101 Kemampuan, Special Moves & Finisher",
-    description: "Ensiklopedia jurus tempur magis, manipulasi elemen (Hellfire, Cryomancy, Lightning), Fatalities, dan Brutalities.",
-    href: "/abilities",
-    date: "Edisi Terbaru",
-  },
-  {
-    id: "rec-4",
-    type: "Kronologi Lore",
-    title: "25 Peristiwa Penentu Sejarah",
-    description: "Silsilah naratif perang antardimensi, turnamen Mortal Kombat ke-10, konvergensi Armageddon, dan restrukturisasi waktu.",
-    href: "/story",
-    date: "Edisi Terbaru",
-  },
-];
-
 export default function Home() {
   const [selectedEra, setSelectedEra] = useState<string>("all");
 
@@ -258,47 +223,6 @@ export default function Home() {
 
         <div className="rounded border border-mk-border bg-mk-card p-6 shadow-2xs">
           <TimelineComponent events={featuredEvents} />
-        </div>
-      </section>
-
-      {/* 6. RECENTLY ADDED KNOWLEDGE */}
-      <section className="mx-auto max-w-7xl px-4 sm:px-6">
-        <div className="border-b border-mk-border pb-4 mb-6">
-          <span className="text-xs font-bold uppercase tracking-widest text-mk-gold">
-            Eksplorasi Ensiklopedia
-          </span>
-          <h2 className="font-heading text-2xl font-bold text-mk-text mt-0.5">
-            Recently Added Knowledge
-          </h2>
-        </div>
-
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {RECENT_KNOWLEDGE.map((item) => (
-            <Link
-              key={item.id}
-              href={item.href}
-              className="group flex flex-col rounded border border-mk-border bg-mk-card p-5 hover:border-mk-gold/70 hover:shadow-md transition duration-200"
-            >
-              <div className="flex items-center justify-between text-[11px] mb-2.5">
-                <span className="font-bold uppercase tracking-wider text-mk-red">
-                  {item.type}
-                </span>
-                <span className="text-mk-muted">{item.date}</span>
-              </div>
-
-              <h3 className="font-heading text-base font-bold text-mk-text group-hover:text-mk-gold transition-colors">
-                {item.title}
-              </h3>
-
-              <p className="mt-2 text-xs text-mk-muted leading-relaxed line-clamp-3">
-                {item.description}
-              </p>
-
-              <span className="mt-auto pt-4 text-xs font-semibold text-mk-red group-hover:translate-x-0.5 transition-transform">
-                Eksplorasi Arsip →
-              </span>
-            </Link>
-          ))}
         </div>
       </section>
     </div>

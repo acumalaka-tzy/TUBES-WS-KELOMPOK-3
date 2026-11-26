@@ -59,7 +59,7 @@ export default function GamesPage() {
       <PageHeader
         eyebrow="Encyclopedia"
         title="Daftar Seri Game Mortal Kombat"
-        description="Eksplorasi seluruh rilis game Mortal Kombat dari era arcade klasik hingga New Era. Catatan: Konten DLC tidak termasuk dalam cakupan dataset proyek (PRD 6.1)."
+        description="Eksplorasi seluruh rilis game Mortal Kombat dari era arcade klasik hingga New Era. Catatan: Konten DLC tidak termasuk dalam cakupan dataset proyek."
         crumbs={[{ label: "Games" }]}
       />
 

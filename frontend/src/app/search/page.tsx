@@ -262,7 +262,6 @@ function SearchContent() {
                 Menemukan <strong className="text-mk-text">{filteredResults.length}</strong> entitas untuk &ldquo;
                 <span className="text-mk-gold">{rawQ}</span>&rdquo;
               </p>
-              <p className="hidden sm:block">Diurutkan berdasarkan relevansi (RRF ranking)</p>
             </div>
 
             <ul className="space-y-3">
