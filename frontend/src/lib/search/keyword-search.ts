@@ -12,6 +12,7 @@ import { entityHref } from "../routes";
 import type { EntityType } from "../types";
 import type { SearchCandidate } from "./types";
 import { damerauLevenshtein, normalizeText } from "./nlp/entity-recognizer";
+import { matchAbbreviationOrSubsequence } from "./fuzzy-matcher";
 
 const STOPWORDS = new Set([
   "yang", "dengan", "di", "pada", "dari", "ke", "ini", "itu", "dan", "adalah",
@@ -81,6 +82,11 @@ export function executeKeywordSearch(
       const dist = damerauLevenshtein(q, t);
       if (dist <= maxDist) return 0.90;
     }
+
+    // Singkatan (akronim / word-prefix) & Fuzzy Subsequence Matching
+    const fuzzy = matchAbbreviationOrSubsequence(target, queryStr);
+    if (fuzzy) return fuzzy.score;
+
     return 0;
   };
 
@@ -115,8 +121,16 @@ export function executeKeywordSearch(
       if (score === 1.0) {
         notes.push(`Cocok persis dengan nama karakter "${c.name}"`);
       } else if (score >= 0.90) {
-        notes.push(`Kecocokan fonetik/toleransi typo dengan nama karakter "${c.name}"`);
+        const fuzzyHit = matchAbbreviationOrSubsequence(c.name, normQ);
+        notes.push(
+          fuzzyHit
+            ? `Singkatan cocok dengan nama karakter "${c.name}"`
+            : `Kecocokan fonetik/toleransi typo dengan nama karakter "${c.name}"`,
+        );
       } else {
+        if (score > 0) {
+          notes.push(`Cocok dengan singkatan/subsequence nama karakter "${c.name}"`);
+        }
         // Check aliases
         for (const a of c.aliases) {
           const aScore = matchScore(a, normQ);
@@ -378,7 +392,7 @@ export function executeKeywordSearch(
   // 4. Search Realms / Locations
   if (type === "all" || type === "location") {
     for (const r of realms) {
-      let score = matchScore(r.name, normQ);
+      const score = matchScore(r.name, normQ);
       const notes: string[] = [];
 
       if (score === 1.0) {
