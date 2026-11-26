@@ -1,12 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { realms } from '@/lib/mock-data';
+import { getRealmsFromFuseki } from '@/lib/fuseki-sparql-services';
 
 export async function GET(req: NextRequest) {
   try {
     const { searchParams } = new URL(req.url);
     const q = searchParams.get('q')?.toLowerCase().trim();
 
-    let list = [...realms];
+    const { data, isFusekiLive } = await getRealmsFromFuseki();
+    let list = [...data];
     if (q) {
       list = list.filter(
         (r) => r.name.toLowerCase().includes(q) || r.description.toLowerCase().includes(q)
@@ -14,7 +15,10 @@ export async function GET(req: NextRequest) {
     }
 
     return NextResponse.json(list, {
-      headers: { 'x-total-count': String(list.length) },
+      headers: {
+        'x-total-count': String(list.length),
+        'x-data-source': isFusekiLive ? 'fuseki-live' : 'mock-fallback',
+      },
     });
   } catch (err: any) {
     return NextResponse.json(

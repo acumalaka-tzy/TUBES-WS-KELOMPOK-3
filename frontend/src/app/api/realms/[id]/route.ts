@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { realms } from '@/lib/mock-data';
+import { getRealmByIdFromFuseki } from '@/lib/fuseki-sparql-services';
 
 export async function GET(
   req: NextRequest,
@@ -7,7 +7,7 @@ export async function GET(
 ) {
   try {
     const { id } = await params;
-    const item = realms.find((r) => r.id === id || r.name.toLowerCase() === id.toLowerCase());
+    const { data: item, isFusekiLive } = await getRealmByIdFromFuseki(id);
 
     if (!item) {
       return NextResponse.json(
@@ -16,7 +16,11 @@ export async function GET(
       );
     }
 
-    return NextResponse.json(item);
+    return NextResponse.json(item, {
+      headers: {
+        'x-data-source': isFusekiLive ? 'fuseki-live' : 'mock-fallback',
+      },
+    });
   } catch (err: any) {
     return NextResponse.json(
       { error: err?.message || 'Gagal mengambil detail realm.' },
