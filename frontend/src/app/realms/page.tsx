@@ -7,16 +7,7 @@ import { useAsync } from "@/lib/hooks";
 import { Container, PageHeader } from "@/components/ui/Layout";
 import ListToolbar from "@/components/ui/ListToolbar";
 import { EmptyState, ErrorState, LoadingState } from "@/components/ui/States";
-
-const REALM_ICONS: Record<string, string> = {
-  earthrealm: "🌏",
-  outworld: "⚔️",
-  netherrealm: "🔥",
-  edenia: "🌸",
-  orderrealm: "⚖️",
-  chaosrealm: "🌀",
-  vaeternus: "🦇",
-};
+import RealmIcon from "@/components/ui/RealmIcon";
 
 export default function RealmsPage() {
   const { data: realmsData, error: realmsError, loading: realmsLoading, reload } = useAsync(getRealms, []);
@@ -35,7 +26,6 @@ export default function RealmsPage() {
       return {
         ...r,
         residents,
-        icon: REALM_ICONS[r.id] ?? "🌌",
       };
     });
   }, [realmsData, charsData]);
@@ -89,13 +79,13 @@ export default function RealmsPage() {
               >
                 <div>
                   <div className="flex items-start justify-between gap-3">
-                    <div className="flex items-center gap-2.5">
-                      <span className="text-2xl">{r.icon}</span>
-                      <h2 className="font-heading text-xl font-bold text-mk-text group-hover:text-mk-gold transition-colors">
+                    <div className="flex items-center gap-2.5 min-w-0">
+                      <RealmIcon realmId={r.id} className="h-6 w-6 shrink-0 text-mk-gold group-hover:text-mk-red transition-colors" />
+                      <h2 className="font-heading text-lg sm:text-xl font-bold text-mk-text group-hover:text-mk-gold transition-colors leading-snug">
                         {r.name}
                       </h2>
                     </div>
-                    <span className="rounded-full border border-mk-red/40 bg-mk-red/10 px-2.5 py-0.5 text-xs font-mono font-semibold text-mk-red">
+                    <span className="shrink-0 whitespace-nowrap inline-flex items-center rounded-full border border-mk-red/40 bg-mk-red/10 px-2.5 py-0.5 text-xs font-mono font-semibold text-mk-red">
                       {r.residents.length} Petarung
                     </span>
                   </div>

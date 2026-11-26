@@ -8,16 +8,7 @@ import { TypeBadge, VerificationBadge } from "@/components/ui/Badge";
 import EntityImage from "@/components/ui/EntityImage";
 import { Breadcrumbs, Container, InfoGrid, Section, SourceList } from "@/components/ui/Layout";
 import { ErrorState, LoadingState } from "@/components/ui/States";
-
-const REALM_ICONS: Record<string, string> = {
-  earthrealm: "🌏",
-  outworld: "⚔️",
-  netherrealm: "🔥",
-  edenia: "🌸",
-  orderrealm: "⚖️",
-  chaosrealm: "🌀",
-  vaeternus: "🦇",
-};
+import RealmIcon from "@/components/ui/RealmIcon";
 
 export default function RealmDetailPage({
   params,
@@ -55,8 +46,6 @@ export default function RealmDetailPage({
     );
   }
 
-  const icon = REALM_ICONS[realm.id] ?? "🌌";
-
   return (
     <>
       {/* Hero Banner Dimensi */}
@@ -79,7 +68,7 @@ export default function RealmDetailPage({
             </div>
 
             <div className="flex items-center gap-3">
-              <span className="text-4xl sm:text-5xl">{icon}</span>
+              <RealmIcon realmId={realm.id} className="h-10 w-10 sm:h-12 sm:w-12 shrink-0 text-mk-gold" />
               <h1 className="font-heading text-4xl font-extrabold sm:text-5xl text-glow text-mk-text">
                 {realm.name}
               </h1>
@@ -113,7 +102,7 @@ export default function RealmDetailPage({
         <Section
           title={`Petarung Asal ${realm.name}`}
           action={
-            <span className="text-xs font-mono text-mk-muted">
+            <span className="text-xs font-mono text-mk-muted shrink-0 whitespace-nowrap">
               Menampilkan {residentFighters.length} petarung
             </span>
           }
