@@ -13,6 +13,7 @@ import { fuseki } from "../fuseki";
 import type { EntityType } from "../types";
 import { processNaturalLanguageQuery } from "./nlp/entity-recognizer";
 import type { ParsedQueryIntent, SearchCandidate } from "./types";
+import { matchGamePlatforms } from "./platform-matcher";
 
 export interface SemanticSearchOptions {
   type?: EntityType | "all";
@@ -42,57 +43,99 @@ export async function executeSemanticSearch(
 
   // Try live SPARQL on Fuseki if SPARQL query was generated and Fuseki is available
   let fusekiSuccess = false;
-  if (intent.generatedSparql && process.env.NEXT_PUBLIC_USE_MOCK !== "true" && (!options.type || options.type === "all" || options.type === "character")) {
+  if (
+    intent.generatedSparql &&
+    process.env.NEXT_PUBLIC_USE_MOCK !== "true" &&
+    (!options.type || options.type === "all" || options.type === "character" || options.type === "game")
+  ) {
     try {
       const fusekiRes = await fuseki.query(intent.generatedSparql);
       if (fusekiRes?.results?.bindings?.length > 0) {
         fusekiSuccess = true;
         const bindings = fusekiRes.results.bindings;
-        const matchedCharNames = new Set(
-          bindings.map((b) => b.charName?.value || b.subjectName?.value || b.title?.value).filter(Boolean)
-        );
 
-        for (const c of characters) {
-          if (matchedCharNames.has(c.name)) {
-            const latest = c.versions[c.versions.length - 1];
-            candidates.push({
-              id: c.id,
-              type: "character",
-              name: c.name,
-              summary: c.summary,
-              href: entityHref({ id: c.id, type: "character", name: c.name }),
-              image: latest?.image,
-              attributes: [
-                { label: "Faksi", value: c.faction ?? "-" },
-                { label: "Realm", value: c.realm?.name ?? "-" },
-                { label: "Spesies", value: c.species?.name ?? "-" },
-              ],
-              timeline: Array.from(new Set(c.versions.map((v) => v.timelineName))).join(", "),
-              games: c.versions.map((v) => v.gameTitle),
-              provenance: c.sources,
-              semanticScore: 0.95,
-              matchedRelationships: [
-                intent.extractedAttributes.element
-                  ? `hasAbility → hasElement (${intent.extractedAttributes.element})`
-                  : intent.extractedAttributes.clan
-                  ? `memberOf → ${intent.extractedAttributes.clan}`
-                  : intent.extractedAttributes.relationshipType
-                  ? intent.extractedAttributes.relationshipType
-                  : "sparql_live_query_match",
-              ],
-              graphPath: [
-                c.name,
-                "mk:CharacterVersion",
-                intent.extractedAttributes.element
-                  ? `mk:hasElement: ${intent.extractedAttributes.element}`
-                  : intent.extractedAttributes.clan
-                  ? `mk:memberOf: ${intent.extractedAttributes.clan}`
-                  : "mk:KnowledgeGraph",
-              ],
-              explanationNotes: [
-                `Ditemukan melalui penelusuran relasi Knowledge Graph (${intent.intentType})`,
-              ],
-            });
+        if (intent.targetType === "game") {
+          const matchedTitles = new Set(
+            bindings.map((b) => b.title?.value || b.gameTitle?.value).filter(Boolean)
+          );
+          for (const g of games) {
+            if (matchedTitles.has(g.title)) {
+              candidates.push({
+                id: g.id,
+                type: "game",
+                name: g.title,
+                summary: g.summary,
+                href: `/games/${g.id}`,
+                image: g.image,
+                attributes: [
+                  { label: "Tahun", value: String(g.releaseYear) },
+                  { label: "Era", value: g.era },
+                  ...(g.platforms && g.platforms.length > 0
+                    ? [{ label: "Platform", value: g.platforms.join(", ") }]
+                    : []),
+                ],
+                timeline: g.timeline?.name,
+                provenance: g.sources,
+                semanticScore: 0.95,
+                matchedRelationships: intent.extractedAttributes.platform
+                  ? [`availableOnPlatform → ${intent.extractedAttributes.platform}`]
+                  : ["sparql_live_query_match"],
+                graphPath: intent.extractedAttributes.platform
+                  ? [g.title, "mk:supportedPlatform", intent.extractedAttributes.platform]
+                  : [g.title, "mk:Game"],
+                explanationNotes: [
+                  `Ditemukan melalui penelusuran relasi Knowledge Graph (${intent.intentType})`,
+                ],
+              });
+            }
+          }
+        } else {
+          const matchedCharNames = new Set(
+            bindings.map((b) => b.charName?.value || b.subjectName?.value || b.title?.value).filter(Boolean)
+          );
+
+          for (const c of characters) {
+            if (matchedCharNames.has(c.name)) {
+              const latest = c.versions[c.versions.length - 1];
+              candidates.push({
+                id: c.id,
+                type: "character",
+                name: c.name,
+                summary: c.summary,
+                href: entityHref({ id: c.id, type: "character", name: c.name }),
+                image: latest?.image,
+                attributes: [
+                  { label: "Faksi", value: c.faction ?? "-" },
+                  { label: "Realm", value: c.realm?.name ?? "-" },
+                  { label: "Spesies", value: c.species?.name ?? "-" },
+                ],
+                timeline: Array.from(new Set(c.versions.map((v) => v.timelineName))).join(", "),
+                games: c.versions.map((v) => v.gameTitle),
+                provenance: c.sources,
+                semanticScore: 0.95,
+                matchedRelationships: [
+                  intent.extractedAttributes.element
+                    ? `hasAbility → hasElement (${intent.extractedAttributes.element})`
+                    : intent.extractedAttributes.clan
+                    ? `memberOf → ${intent.extractedAttributes.clan}`
+                    : intent.extractedAttributes.relationshipType
+                    ? intent.extractedAttributes.relationshipType
+                    : "sparql_live_query_match",
+                ],
+                graphPath: [
+                  c.name,
+                  "mk:CharacterVersion",
+                  intent.extractedAttributes.element
+                    ? `mk:hasElement: ${intent.extractedAttributes.element}`
+                    : intent.extractedAttributes.clan
+                    ? `mk:memberOf: ${intent.extractedAttributes.clan}`
+                    : "mk:KnowledgeGraph",
+                ],
+                explanationNotes: [
+                  `Ditemukan melalui penelusuran relasi Knowledge Graph (${intent.intentType})`,
+                ],
+              });
+            }
           }
         }
       }
@@ -398,30 +441,55 @@ export async function executeSemanticSearch(
     if (allowType("game")) {
       const mainChar = recognized.find((e) => e.type === "character");
       const mainFull = mainChar ? characters.find((ch) => ch.id === mainChar.id) : undefined;
+      const targetPlatform = intent.extractedAttributes.platform?.toLowerCase();
+
       for (const g of games) {
         let semScore = 0;
         const notes: string[] = [];
         const matchedRels: string[] = [];
+        let path: string[] = [];
+
+        // Check platform matching
+        const platformHits = matchGamePlatforms(g, query);
+        if (platformHits.length > 0) {
+          const bestHit = platformHits.reduce((prev, curr) => (curr.score > prev.score ? curr : prev));
+          semScore = Math.max(semScore, bestHit.score);
+          notes.push(bestHit.label);
+          matchedRels.push(`availableOnPlatform → ${bestHit.platformName}`);
+          path = [g.title, "mk:supportedPlatform", bestHit.platformName];
+        } else if (targetPlatform && g.platforms) {
+          const matchedPlat = g.platforms.find((p) => p.toLowerCase().includes(targetPlatform));
+          if (matchedPlat) {
+            semScore = Math.max(semScore, 0.95);
+            notes.push(`Tersedia di platform ${matchedPlat}`);
+            matchedRels.push(`availableOnPlatform → ${matchedPlat}`);
+            path = [g.title, "mk:supportedPlatform", matchedPlat];
+          }
+        }
 
         // Exact Game Lookup
         if (recognized.some((e) => e.id === g.id)) {
-          semScore = intent.intentType === "character_by_game" ? 0.85 : 1.0;
+          semScore = Math.max(semScore, intent.intentType === "character_by_game" ? 0.85 : 1.0);
           notes.push(`Game "${g.title}" cocok sebagai entitas.`);
+          if (path.length === 0) path = [g.title, "mk:Game"];
         } else if (targetYear && String(g.releaseYear) === targetYear) {
-          semScore = 0.98;
+          semScore = Math.max(semScore, 0.98);
           notes.push(`Dirilis pada tahun ${g.releaseYear} sesuai dengan kueri.`);
+          if (path.length === 0) path = [g.title, "mk:releaseYear", String(g.releaseYear)];
         } else if (intent.intentType === "all_games_by_year") {
-          semScore = 1.0 - (g.releaseYear - 1992) * 0.005;
+          semScore = Math.max(semScore, 1.0 - (g.releaseYear - 1992) * 0.005);
           notes.push(`Urutan rilis tahun ${g.releaseYear} (${g.era}).`);
+          if (path.length === 0) path = [g.title, "mk:releaseYear", String(g.releaseYear)];
         } else if (
           mainFull &&
           mainFull.versions.some(
             (v) => v.gameId === g.id || v.gameTitle.toLowerCase() === g.title.toLowerCase()
           )
         ) {
-          semScore = 0.75;
+          semScore = Math.max(semScore, 0.75);
           notes.push(`Game tempat tampilnya "${mainFull.name}"`);
           matchedRels.push(`appearsIn ← ${mainFull.name}`);
+          if (path.length === 0) path = [mainChar!.name, "mk:appearsIn", g.title];
         }
 
         if (semScore > 0) {
@@ -435,16 +503,16 @@ export async function executeSemanticSearch(
             attributes: [
               { label: "Tahun", value: String(g.releaseYear) },
               { label: "Era", value: g.era },
+              ...(g.platforms && g.platforms.length > 0
+                ? [{ label: "Platform", value: g.platforms.join(", ") }]
+                : []),
             ],
             timeline: g.timeline?.name,
             provenance: g.sources,
-            semanticScore: semScore,
+            semanticScore: Math.round(semScore * 100) / 100,
             matchedRelationships:
-              matchedRels.length > 0 ? matchedRels : [`releaseYear → ${g.releaseYear}`],
-            graphPath:
-              mainChar && matchedRels.length > 0
-                ? [mainChar.name, "mk:appearsIn", g.title]
-                : [g.title, "mk:releaseYear", String(g.releaseYear)],
+              matchedRels.length > 0 ? Array.from(new Set(matchedRels)) : [`releaseYear → ${g.releaseYear}`],
+            graphPath: path.length > 0 ? path : [g.title, "mk:releaseYear", String(g.releaseYear)],
             explanationNotes: notes,
           });
         }

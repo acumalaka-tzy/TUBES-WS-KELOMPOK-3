@@ -11,11 +11,12 @@ import { sparqlRegexEscape } from "../../fuseki";
 import type { EntityType } from "../../types";
 import type { ParsedQueryIntent, QueryIntentType, RecognizedEntity } from "../types";
 import { matchAbbreviationOrSubsequence } from "../fuzzy-matcher";
+import { detectPlatformsFromQuery, PLATFORM_RULES } from "../platform-matcher";
 
 export interface EntityDictionaryEntry {
   id: string;
   name: string;
-  type: EntityType | "element" | "realm" | "species";
+  type: EntityType | "element" | "realm" | "species" | "platform";
   uri: string;
   synonyms: string[];
 }
@@ -355,7 +356,7 @@ function buildDictionary(): EntityDictionaryEntry[] {
       synonyms: el.synonyms,
     });
   }
-
+  
   // 6. Realms
   for (const r of realms) {
     const syns = [r.name.toLowerCase()];
@@ -431,6 +432,17 @@ function buildDictionary(): EntityDictionaryEntry[] {
       synonyms: ["palu", "hammer", "wrath hammer", "war hammer"],
     }
   );
+
+  // 8. Platforms & Consoles
+  for (const p of PLATFORM_RULES) {
+    dict.push({
+      id: `platform-${p.id}`,
+      name: p.displayName,
+      type: "platform",
+      uri: `https://example.org/mk/platform/${p.id}`,
+      synonyms: Array.from(new Set(p.aliases.map((a) => a.toLowerCase()))),
+    });
+  }
 
   return dict;
 }
@@ -936,6 +948,53 @@ export function processNaturalLanguageQuery(query: string): ParsedQueryIntent {
         OPTIONAL { ?game mk:gameEra ?era }
       }
       ORDER BY ?releaseYear
+    `.trim();
+  }
+  // Pattern 8.5: Game by Platform / Console (e.g. "ps4", "playstation 4", "switch", "xbox one", "pc", "arcade")
+  else if (
+    (() => {
+      const pDetection = detectPlatformsFromQuery(norm);
+      return (
+        pDetection.length > 0 &&
+        (pDetection[0].isExactQuery ||
+          /\b(game|games|permainan|rilis|release|daftar|list|konsol|console|platform)\b/i.test(norm) ||
+          norm.split(/\s+/).length <= 3)
+      );
+    })()
+  ) {
+    const pDetection = detectPlatformsFromQuery(norm);
+    const hit = pDetection[0];
+    const rule = hit.rule;
+    intentType = "game_by_platform";
+    targetType = "game";
+    attributes.platform = rule.canonicalName;
+    confidence = hit.isExactQuery ? 0.98 : 0.92;
+
+    const platEntity: RecognizedEntity = {
+      id: `platform-${rule.id}`,
+      name: rule.displayName,
+      type: "platform",
+      uri: `https://example.org/mk/platform/${rule.id}`,
+      confidence: confidence,
+      matchedTokens: [hit.matchedAlias],
+    };
+    if (!entities.some((e) => e.id === platEntity.id)) {
+      entities.push(platEntity);
+    }
+
+    const platFilters = rule.targetPlatforms
+      .map((tp) => `regex(?plat, "${sparqlRegexEscape(tp)}", "i")`)
+      .join(" || ");
+
+    generatedSparql = `
+      SELECT DISTINCT ?game ?title ?releaseYear ?plat
+      WHERE {
+        ?game a mk:Game ;
+              mk:name ?title ;
+              mk:supportedPlatform ?plat .
+        OPTIONAL { ?game mk:releaseYear ?releaseYear }
+        FILTER(${platFilters})
+      }
     `.trim();
   }
   // Pattern 9: Characters in Game (e.g. "Karakter Mortal Kombat 1 (2023)", "karakter di MK11")

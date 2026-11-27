@@ -10,6 +10,7 @@ import {
 import { entityHref } from "../routes";
 import type { Suggestion } from "../types";
 import { matchAbbreviationOrSubsequence } from "./fuzzy-matcher";
+import { detectPlatformsFromQuery } from "./platform-matcher";
 
 export function generateSearchSuggestions(query: string, maxResults: number = 8): Suggestion[] {
   const q = query.toLowerCase().trim();
@@ -201,6 +202,38 @@ export function generateSearchSuggestions(query: string, maxResults: number = 8)
             "substring"
           );
         }
+      }
+    }
+  }
+
+  // 8. Platforms & Games by Platform
+  const detectedPlatforms = detectPlatformsFromQuery(q);
+  for (const hit of detectedPlatforms) {
+    const rule = hit.rule;
+    // Suggest the platform category search
+    add(
+      `platform-${rule.id}`,
+      `${rule.displayName} (Platform Game)`,
+      "game",
+      `/search?q=${encodeURIComponent(rule.canonicalName)}`,
+      hit.isExactQuery ? "exact" : "prefix",
+      hit.isExactQuery ? 95 : 85
+    );
+
+    // Suggest games available on this platform
+    for (const g of games) {
+      const matchingPlatform = g.platforms?.find((gp) =>
+        rule.targetPlatforms.some((tp) => gp.toLowerCase() === tp.toLowerCase())
+      );
+      if (matchingPlatform) {
+        add(
+          `${g.id}-platform-${rule.id}`,
+          `${g.title} (Tersedia di platform ${matchingPlatform})`,
+          "game",
+          `/games/${g.id}`,
+          "prefix",
+          82
+        );
       }
     }
   }

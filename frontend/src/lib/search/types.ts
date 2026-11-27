@@ -19,7 +19,7 @@ import type {
 export interface RecognizedEntity {
   id: string;
   name: string;
-  type: EntityType | "element" | "realm" | "species";
+  type: EntityType | "element" | "realm" | "species" | "platform";
   uri: string;
   confidence: number;
   matchedTokens: string[];
@@ -41,6 +41,7 @@ export type QueryIntentType =
   | "character_weapon"
   | "entity_relationship"
   | "game_by_year"
+  | "game_by_platform"
   | "all_games_by_year"
   | "story_events"
   | "general_entity_lookup"
@@ -58,6 +59,7 @@ export interface ParsedQueryIntent {
     game?: string;
     timeline?: string;
     weapon?: string;
+    platform?: string;
     relationshipType?: string;
     year?: string;
     mentor?: string;

@@ -13,6 +13,7 @@ import type { EntityType } from "../types";
 import type { SearchCandidate } from "./types";
 import { damerauLevenshtein, normalizeText } from "./nlp/entity-recognizer";
 import { matchAbbreviationOrSubsequence } from "./fuzzy-matcher";
+import { matchGamePlatforms } from "./platform-matcher";
 
 const STOPWORDS = new Set([
   "yang", "dengan", "di", "pada", "dari", "ke", "ini", "itu", "dan", "adalah",
@@ -106,12 +107,18 @@ export function executeKeywordSearch(
       if (timeline && !timelineNames.some((t) => t.toLowerCase().includes(timeline.toLowerCase()))) {
         continue;
       }
-      if (faction && c.faction && !c.faction.toLowerCase().includes(faction.toLowerCase())) {
+      if (faction && (!c.faction || !c.faction.toLowerCase().includes(faction.toLowerCase()))) {
         continue;
       }
 
       let score = matchScore(c.name, normQ);
       const notes: string[] = [];
+      const matchedRelLabels: string[] = [];
+
+      if (!normQ && (faction || game || timeline || element)) {
+        score = 0.85;
+        notes.push("Sesuai kriteria filter");
+      }
 
       if (isRelQuery && (score >= 0.70 || c.aliases.some((a) => matchScore(a, normQ) >= 0.70))) {
         // The subject character should not be returned as an enemy/ally/mentor of themselves
@@ -161,7 +168,6 @@ export function executeKeywordSearch(
       }
 
       // Check relationship matches (enemyOf, alliedWith, mentorOf, familyOf, etc.)
-      const matchedRelLabels: string[] = [];
       for (const rel of c.relationships) {
         const targetNameNorm = normalizeText(rel.target.name);
         const targetTokens = targetNameNorm.split(" ").filter((t) => t.length > 2);
@@ -296,14 +302,25 @@ export function executeKeywordSearch(
 
       let score = Math.max(matchScore(g.title, normQ), matchScore(g.shortTitle, normQ));
       const notes: string[] = [];
+      const matchedRelLabels: string[] = [];
+
+      // Check platform matching (e.g. "ps4", "switch", "xbox one", "pc", "arcade")
+      const platformHits = matchGamePlatforms(g, normQ);
+      for (const ph of platformHits) {
+        if (ph.score > score) {
+          score = ph.score;
+        }
+        notes.push(ph.label);
+        matchedRelLabels.push(`availableOnPlatform → ${ph.platformName}`);
+      }
 
       if (score === 1.0) {
         notes.push(`Cocok persis dengan judul game "${g.title}"`);
-      } else if (score >= 0.90) {
+      } else if (score >= 0.90 && platformHits.length === 0) {
         notes.push(`Kecocokan fonetik/toleransi typo dengan judul game "${g.title}"`);
-      } else if (score > 0) {
+      } else if (score > 0 && platformHits.length === 0) {
         notes.push(`Judul game "${g.title}" mengandung kata kunci`);
-      } else if (qTokens.length > 0) {
+      } else if (qTokens.length > 0 && platformHits.length === 0) {
         let matched = 0;
         const normSummary = normalizeText(g.summary);
         for (const token of qTokens) {
@@ -346,10 +363,14 @@ export function executeKeywordSearch(
           attributes: [
             { label: "Tahun", value: String(g.releaseYear) },
             { label: "Era", value: g.era },
+            ...(g.platforms && g.platforms.length > 0
+              ? [{ label: "Platform", value: g.platforms.join(", ") }]
+              : []),
           ],
           timeline: g.timeline?.name,
           provenance: g.sources,
           keywordScore: Math.round(score * 100) / 100,
+          matchedRelationships: Array.from(new Set(matchedRelLabels)),
           explanationNotes: notes,
         });
       }
