@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
 import { Container, PageHeader } from "@/components/ui/Layout";
 import { VerificationBadge } from "@/components/ui/Badge";
@@ -30,6 +31,159 @@ const SAMPLE_PROMPTS = [
   "Peristiwa setelah turnamen Mortal Kombat pertama",
 ];
 
+function parseInlineMarkdown(text: string): React.ReactNode[] {
+  const tokens = text.split(/(\*\*\*.*?\*\*\*|\*\*.*?\*\*|\*[^*]+?\*|`[^`]+?`)/g);
+
+  return tokens.map((part, idx) => {
+    if (part.startsWith("***") && part.endsWith("***") && part.length >= 6) {
+      return (
+        <strong key={idx} className="font-semibold italic text-mk-text dark:text-zinc-100">
+          {part.slice(3, -3)}
+        </strong>
+      );
+    }
+    if (part.startsWith("**") && part.endsWith("**") && part.length >= 4) {
+      return (
+        <strong key={idx} className="font-semibold text-mk-text dark:text-zinc-100">
+          {part.slice(2, -2)}
+        </strong>
+      );
+    }
+    if (part.startsWith("*") && part.endsWith("*") && part.length >= 2) {
+      return (
+        <em key={idx} className="italic text-mk-text/90">
+          {part.slice(1, -1)}
+        </em>
+      );
+    }
+    if (part.startsWith("`") && part.endsWith("`") && part.length >= 2) {
+      return (
+        <code key={idx} className="rounded bg-mk-bg px-1 py-0.5 font-mono text-[11px] text-mk-gold">
+          {part.slice(1, -1)}
+        </code>
+      );
+    }
+    return part;
+  });
+}
+
+function FormattedMessage({ content, isUser }: { content: string; isUser: boolean }) {
+  if (isUser) {
+    return <p className="whitespace-pre-wrap">{content}</p>;
+  }
+
+  const lines = content.split("\n");
+  const nodes: React.ReactNode[] = [];
+  let currentList: { type: "ul" | "ol"; items: React.ReactNode[] } | null = null;
+
+  const flushList = () => {
+    if (currentList) {
+      if (currentList.type === "ul") {
+        nodes.push(
+          <ul key={`ul-${nodes.length}`} className="my-2 space-y-1">
+            {currentList.items.map((item, i) => (
+              <li key={i} className="flex items-start gap-2 leading-relaxed">
+                <span className="text-mk-gold select-none mt-0.5 shrink-0 text-xs">•</span>
+                <div className="flex-1">{item}</div>
+              </li>
+            ))}
+          </ul>
+        );
+      } else {
+        nodes.push(
+          <ol key={`ol-${nodes.length}`} className="my-2 space-y-1">
+            {currentList.items.map((item, i) => (
+              <li key={i} className="flex items-start gap-2 leading-relaxed">
+                <span className="text-mk-gold font-mono font-medium select-none shrink-0 text-xs">{i + 1}.</span>
+                <div className="flex-1">{item}</div>
+              </li>
+            ))}
+          </ol>
+        );
+      }
+      currentList = null;
+    }
+  };
+
+  for (let i = 0; i < lines.length; i++) {
+    const rawLine = lines[i];
+    const trimmed = rawLine.trim();
+
+    if (!trimmed) {
+      flushList();
+      nodes.push(<div key={`spacer-${i}`} className="h-2" />);
+      continue;
+    }
+
+    if (trimmed === "---" || trimmed === "***") {
+      flushList();
+      nodes.push(<hr key={`hr-${i}`} className="my-2.5 border-mk-border/50" />);
+      continue;
+    }
+
+    // Headings: ###, ##, #
+    const headingMatch = trimmed.match(/^(#{1,4})\s+(.+)$/);
+    if (headingMatch) {
+      flushList();
+      let headingText = headingMatch[2].trim();
+      if (headingText.startsWith("**") && headingText.endsWith("**")) {
+        headingText = headingText.slice(2, -2);
+      }
+      nodes.push(
+        <h4 key={`h-${i}`} className="font-heading font-bold text-mk-gold tracking-wide mt-3 mb-1 text-sm sm:text-base">
+          {parseInlineMarkdown(headingText)}
+        </h4>
+      );
+      continue;
+    }
+
+    // Standalone bold titles like **Profil Cyrax** or **Profil Cyrax:**
+    const boldTitleMatch = trimmed.match(/^\*\*([^*]+)\*\*[:]?$/);
+    if (boldTitleMatch) {
+      flushList();
+      nodes.push(
+        <h5 key={`bt-${i}`} className="font-heading font-bold text-mk-gold tracking-wide mt-2.5 mb-1 text-sm">
+          {boldTitleMatch[1]}
+        </h5>
+      );
+      continue;
+    }
+
+    // Bullet points: * or -
+    const bulletMatch = trimmed.match(/^[*•-]\s+(.+)$/);
+    if (bulletMatch) {
+      if (!currentList || currentList.type !== "ul") {
+        flushList();
+        currentList = { type: "ul", items: [] };
+      }
+      currentList.items.push(parseInlineMarkdown(bulletMatch[1]));
+      continue;
+    }
+
+    // Numbered lists: 1. or 1)
+    const numMatch = trimmed.match(/^\d+[\.\)]\s+(.+)$/);
+    if (numMatch) {
+      if (!currentList || currentList.type !== "ol") {
+        flushList();
+        currentList = { type: "ol", items: [] };
+      }
+      currentList.items.push(parseInlineMarkdown(numMatch[1]));
+      continue;
+    }
+
+    // Standard paragraph line
+    flushList();
+    nodes.push(
+      <p key={`p-${i}`} className="my-1 leading-relaxed">
+        {parseInlineMarkdown(trimmed)}
+      </p>
+    );
+  }
+
+  flushList();
+  return <div className="space-y-1 text-sm leading-relaxed">{nodes}</div>;
+}
+
 export default function AssistantPage() {
   const [messages, setMessages] = useState<Message[]>([
     {
@@ -42,7 +196,6 @@ export default function AssistantPage() {
   ]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
-  const [showSparql, setShowSparql] = useState<Record<string, boolean>>({});
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -106,16 +259,12 @@ export default function AssistantPage() {
     }
   };
 
-  const toggleSparql = (id: string) => {
-    setShowSparql((prev) => ({ ...prev, [id]: !prev[id] }));
-  };
-
   return (
     <>
       <PageHeader
-        eyebrow="Semantic RAG &amp; LLM"
+        eyebrow="Semantic RAG &amp; AI"
         title="AI Knowledge Assistant"
-        description="Tanya jawab interaktif berbasis Semantic Knowledge Graph dan ontologi Mortal Kombat (PRD v1.5 Bagian 6 &amp; 25.6)."
+        description="Tanya jawab interaktif berbasis kecerdasan semantik kanonikal Mortal Kombat."
         crumbs={[{ label: "AI Assistant" }]}
       />
 
@@ -124,17 +273,22 @@ export default function AssistantPage() {
           {/* Header Bar */}
           <div className="flex flex-wrap items-center justify-between border-b border-mk-border bg-mk-bg p-4">
             <div className="flex items-center gap-3">
-              <span className="grid h-8 w-8 place-items-center rounded bg-mk-red/20 font-display text-sm text-mk-red border border-mk-red/40">
-                ⚡
+              <span className="grid h-8 w-8 place-items-center rounded bg-mk-red/20 border border-mk-red/40 overflow-hidden">
+                <Image
+                  src="/images/mk-logo.svg"
+                  alt="Mortal Kombat Logo"
+                  width={22}
+                  height={22}
+                  className="h-5.5 w-5.5 object-contain"
+                />
               </span>
               <div>
                 <p className="font-heading text-sm font-bold text-mk-text">Mortal Kombat Knowledge AI</p>
-                <p className="text-[11px] text-mk-muted">Tergrounding pada Knowledge Graph &amp; RDF Ontology</p>
               </div>
             </div>
             <div className="flex items-center gap-2">
               <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
-              <span className="text-xs text-mk-muted">RAG Active</span>
+              <span className="text-xs text-mk-muted">Online</span>
             </div>
           </div>
 
@@ -152,7 +306,7 @@ export default function AssistantPage() {
                       : "bg-mk-bg border border-mk-border text-mk-text"
                   }`}
                 >
-                  <p className="whitespace-pre-wrap">{m.content}</p>
+                  <FormattedMessage content={m.content} isUser={m.role === "user"} />
 
                   {/* Retrieved Context & Provenance */}
                   {m.retrievedContext && (
@@ -183,24 +337,6 @@ export default function AssistantPage() {
                           ))}
                         </div>
                       )}
-
-                      {/* SPARQL inspection button */}
-                      {m.generatedSparql && (
-                        <div className="pt-1">
-                          <button
-                            type="button"
-                            onClick={() => toggleSparql(m.id)}
-                            className="text-[11px] text-mk-gold hover:underline"
-                          >
-                            {showSparql[m.id] ? "▲ Tutup SPARQL Query" : "🔍 Lihat Query SPARQL RAG"}
-                          </button>
-                          {showSparql[m.id] && (
-                            <pre className="mt-1.5 max-h-40 overflow-x-auto rounded bg-mk-bg2 p-2 font-mono text-[10px] text-mk-text/90 border border-mk-border">
-                              {m.generatedSparql}
-                            </pre>
-                          )}
-                        </div>
-                      )}
                     </div>
                   )}
                 </div>
@@ -211,7 +347,7 @@ export default function AssistantPage() {
             {loading && (
               <div className="flex items-center gap-2 rounded-sm border border-mk-border bg-mk-bg p-3 text-xs text-mk-muted max-w-[90%] sm:max-w-[70%] lg:max-w-[50%]">
                 <span className="inline-block h-3 w-3 animate-spin rounded-full border-2 border-mk-red border-t-transparent" />
-                <span>AI sedang menelusuri Knowledge Graph dan menyusun jawaban...</span>
+                <span>AI sedang menelusuri data kanonikal dan menyusun jawaban...</span>
               </div>
             )}
             <div ref={messagesEndRef} />

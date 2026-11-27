@@ -1,15 +1,17 @@
 "use client";
 
 import Link from "next/link";
-import { use, useEffect, useState } from "react";
-import { getCharacter } from "@/lib/api";
+import { use, useEffect, useMemo, useState } from "react";
+import { getAbilities, getCharacter, getCharacters, getGames } from "@/lib/api";
 import { useAsync } from "@/lib/hooks";
-import { entityHref } from "@/lib/routes";
-import { TypeBadge, VerificationBadge } from "@/components/ui/Badge";
-import { EntityLinks } from "@/components/ui/Cards";
-import EntityImage from "@/components/ui/EntityImage";
-import { Breadcrumbs, Container, InfoGrid, Section, SourceList } from "@/components/ui/Layout";
+import { getRecommendedCharacters } from "@/lib/character-recommendations";
+import BreadcrumbNavigation from "@/components/encyclopedia/BreadcrumbNavigation";
+import ArticleInfobox, { type InfoboxRow } from "@/components/encyclopedia/ArticleInfobox";
+import RelationshipPanel from "@/components/encyclopedia/RelationshipPanel";
+import SimilarCharactersSection from "@/components/encyclopedia/SimilarCharactersSection";
+import SourceReference from "@/components/encyclopedia/SourceReference";
 import { ErrorState, LoadingState } from "@/components/ui/States";
+import type { ImageAsset } from "@/lib/types";
 
 export default function CharacterDetailPage({
   params,
@@ -18,277 +20,549 @@ export default function CharacterDetailPage({
 }) {
   const { id } = use(params);
   const { data: character, error, loading, reload } = useAsync(() => getCharacter(id), [id]);
+  const { data: allGames } = useAsync(getGames, []);
+  const { data: allCharacters } = useAsync(getCharacters, []);
+  const { data: allAbilities } = useAsync(getAbilities, []);
 
-  // Selected game/timeline version (PRD FR-09 & 25.5 Character Detail)
   const [selectedVersionId, setSelectedVersionId] = useState<string>("");
+  const [selectedEra, setSelectedEra] = useState<string>("all");
 
   useEffect(() => {
     if (character?.versions?.length) {
-      // Default to latest version
       setSelectedVersionId(character.versions[character.versions.length - 1].id);
     }
   }, [character]);
 
+  // Kumpulkan seluruh data game yang memuat karakter ini
+  const appearedGames = useMemo(() => {
+    if (!character) return [];
+
+    const map = new Map<
+      string,
+      {
+        id: string;
+        title: string;
+        shortTitle?: string;
+        releaseYear?: number;
+        era?: string;
+        platforms?: string[];
+        image?: ImageAsset;
+        timelineName?: string;
+        isFirstAppearance?: boolean;
+      }
+    >();
+
+    // 1. Dari versions karakter (versi per game yang playable)
+    character.versions?.forEach((ver) => {
+      map.set(ver.gameId, {
+        id: ver.gameId,
+        title: ver.gameTitle,
+        timelineName: ver.timelineName,
+      });
+    });
+
+    // 2. Dari field firstAppearance karakter
+    if (character.firstAppearance) {
+      const existing = map.get(character.firstAppearance.id);
+      map.set(character.firstAppearance.id, {
+        id: character.firstAppearance.id,
+        title: character.firstAppearance.name,
+        timelineName: existing?.timelineName,
+        isFirstAppearance: true,
+      });
+    }
+
+    // 3. Sinkronkan dengan koleksi allGames (melalui characters array di game)
+    if (allGames) {
+      allGames.forEach((g) => {
+        const hasChar = g.characters?.some(
+          (c) =>
+            c.id === character.id ||
+            c.name.toLowerCase() === character.name.toLowerCase()
+        );
+        if (hasChar) {
+          const existing = map.get(g.id);
+          map.set(g.id, {
+            id: g.id,
+            title: g.title,
+            shortTitle: g.shortTitle,
+            releaseYear: g.releaseYear,
+            era: g.era,
+            platforms: g.platforms,
+            image: g.image,
+            timelineName: g.timeline?.name ?? existing?.timelineName,
+            isFirstAppearance:
+              existing?.isFirstAppearance ||
+              character.firstAppearance?.id === g.id,
+          });
+        } else if (map.has(g.id)) {
+          // Perkaya data game yang sudah masuk dari versions
+          const existing = map.get(g.id)!;
+          map.set(g.id, {
+            ...existing,
+            title: g.title,
+            shortTitle: g.shortTitle,
+            releaseYear: g.releaseYear,
+            era: g.era,
+            platforms: g.platforms,
+            image: g.image,
+            timelineName: g.timeline?.name ?? existing.timelineName,
+            isFirstAppearance:
+              existing.isFirstAppearance ||
+              character.firstAppearance?.id === g.id,
+          });
+        }
+      });
+    }
+
+    const list = Array.from(map.values());
+    // Urutkan kronologis berdasarkan tahun rilis
+    list.sort((a, b) => (a.releaseYear ?? 9999) - (b.releaseYear ?? 9999));
+
+    // Jika belum ada yang ditandai debut, tandai yang pertama secara rilis
+    if (list.length > 0 && !list.some((g) => g.isFirstAppearance)) {
+      list[0].isFirstAppearance = true;
+    }
+
+    return list;
+  }, [character, allGames]);
+
+  // Game kemunculan pertama (Debut)
+  const firstGame = useMemo(() => {
+    if (!character) return null;
+    if (character.firstAppearance) {
+      const fromAll = allGames?.find((g) => g.id === character.firstAppearance?.id);
+      if (fromAll) return fromAll;
+    }
+    const foundFirst = appearedGames.find((g) => g.isFirstAppearance);
+    if (foundFirst) {
+      const fromAll = allGames?.find((g) => g.id === foundFirst.id);
+      return fromAll ?? foundFirst;
+    }
+    return appearedGames[0] ?? null;
+  }, [character, allGames, appearedGames]);
+
+  // Ekstrak tahun rilis debut secara akurat (menghindari hardcode)
+  const debutYear = useMemo(() => {
+    if (firstGame?.releaseYear) return String(firstGame.releaseYear);
+    const title = firstGame?.title ?? character?.firstAppearance?.name ?? "";
+    const match = title.match(/\((\d{4})\)/);
+    if (match) return match[1];
+    return null;
+  }, [firstGame, character]);
+
+  // Daftar era kemunculan untuk filter kategori
+  const erasPresent = useMemo(() => {
+    const set = new Set<string>();
+    appearedGames.forEach((g) => {
+      if (g.era) set.add(g.era);
+    });
+    return Array.from(set);
+  }, [appearedGames]);
+
+  // Filter game kemunculan berdasarkan era
+  const filteredAppearedGames = useMemo(() => {
+    if (selectedEra === "all") return appearedGames;
+    return appearedGames.filter((g) => g.era === selectedEra);
+  }, [appearedGames, selectedEra]);
+
+  // Rekomendasi 4–6 karakter yang mirip & berkaitan (relasi ontologi, elemen, klan, realm)
+  const recommendedCharacters = useMemo(() => {
+    if (!character || !allCharacters?.length) return [];
+    return getRecommendedCharacters(character, allCharacters, allAbilities ?? [], 6);
+  }, [character, allCharacters, allAbilities]);
+
   if (loading) {
     return (
-      <Container className="py-12">
+      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6">
         <LoadingState variant="detail" />
-      </Container>
+      </div>
     );
   }
 
   if (error || !character) {
     return (
-      <Container className="py-12">
-        <ErrorState error={error} onRetry={reload} title="Karakter tidak ditemukan" />
-      </Container>
+      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6">
+        <ErrorState error={error} onRetry={reload} title="Karakter Tidak Ditemukan" />
+      </div>
     );
   }
 
   const currentVersion =
-    character.versions.find((v) => v.id === selectedVersionId) ?? character.versions[0];
+    character.versions?.find((v) => v.id === selectedVersionId) ?? character.versions?.[0];
+
+  const charImage = currentVersion?.image ?? character.image;
+
+  // Siapkan data baris untuk Infobox Ensiklopedia
+  const infoboxRows: InfoboxRow[] = [
+    {
+      label: "Nama Asli",
+      value: character.aliases?.[0] ? (
+        <span className="font-semibold text-mk-text">{character.aliases[0]}</span>
+      ) : (
+        character.name
+      ),
+    },
+    {
+      label: "Tempat / Realm Asal",
+      value: character.realm ? (
+        <Link
+          href={`/search?q=${encodeURIComponent(character.realm.name)}`}
+          className="font-medium text-mk-red hover:underline inline-flex items-center gap-1.5"
+        >
+          <span>🌍</span>
+          <span>{character.realm.name}</span>
+        </Link>
+      ) : (
+        "Tidak diketahui"
+      ),
+    },
+    {
+      label: "Spesies",
+      value: character.species?.name ?? "Human / Mortal",
+    },
+    {
+      label: "Afiliasi Klan",
+      value: character.faction ? (
+        <span className="font-medium text-mk-gold">{character.faction}</span>
+      ) : (
+        "Neutral"
+      ),
+    },
+    {
+      label: "Peran / Alignment",
+      value: (
+        <span className="inline-block rounded bg-mk-bg px-2 py-0.5 text-[10px] font-bold uppercase text-mk-text border border-mk-border/60">
+          {character.role ?? "Fighter"}
+        </span>
+      ),
+    },
+    {
+      label: "Kemunculan Pertama (Game)",
+      value: (
+        <Link
+          href={`/games/${firstGame?.id ?? character.firstAppearance?.id ?? "mk1-1992"}`}
+          className="font-semibold text-mk-red hover:underline inline-flex items-center gap-1.5"
+        >
+          <span>🎮</span>
+          <span>{firstGame?.title ?? character.firstAppearance?.name ?? "Mortal Kombat (1992)"}</span>
+        </Link>
+      ),
+    },
+    {
+      label: "Tahun Debut Rilis",
+      value: debutYear ? (
+        <span className="inline-flex items-center gap-1 font-mono text-mk-gold font-bold">
+          <span>📅</span>
+          <span>{debutYear}</span>
+        </span>
+      ) : (
+        <span className="text-mk-muted">-</span>
+      ),
+    },
+    {
+      label: "Total Game Kemunculan",
+      value: (
+        <span className="inline-flex items-center gap-1 font-semibold text-mk-gold">
+          <span>⚔️</span>
+          <span>{appearedGames.length} Seri Game</span>
+        </span>
+      ),
+    },
+    {
+      label: "Versi Game Aktif",
+      value: currentVersion?.gameTitle ?? "Standar",
+    },
+    {
+      label: "Timeline",
+      value: currentVersion?.timelineName ?? "Original Timeline",
+    },
+  ];
 
   return (
-    <>
-      {/* 1. Character Hero (Cinematic header — PRD 13.4 & 25.5) */}
-      <section className="hero-bg relative border-b border-mk-border">
-        <Container className="py-10">
-          <Breadcrumbs
-            items={[
-              { label: "Characters", href: "/characters" },
-              { label: character.name },
-            ]}
-          />
+    <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6">
+      {/* Breadcrumb Trail */}
+      <BreadcrumbNavigation
+        items={[
+          { label: "Characters", href: "/characters" },
+          { label: character.name },
+        ]}
+      />
 
-          <div className="mt-8 grid gap-8 md:grid-cols-12 lg:gap-12">
-            {/* Character Artwork / Context-based Image (PRD 25.5 & 29.6) */}
-            <div className="md:col-span-5 lg:col-span-4">
-              <div className="overflow-hidden rounded-sm border border-mk-border bg-mk-card shadow-2xl">
-                <EntityImage
-                  image={currentVersion?.image ?? character.image}
-                  name={character.name}
-                  contextLabel={currentVersion ? currentVersion.gameTitle : undefined}
-                  aspect="aspect-[3/4]"
-                  priority
-                  showNotice
-                />
-              </div>
-
-              {/* Version context tag under image */}
-              {currentVersion && (
-                <div className="mt-3 rounded-sm border border-mk-border bg-mk-bg2 p-3 text-xs text-mk-muted">
-                  <p className="font-semibold text-mk-gold">Tampilan Versi Game:</p>
-                  <p className="text-mk-text">{currentVersion.gameTitle}</p>
-                  <p className="text-[11px] text-mk-muted">{currentVersion.timelineName}</p>
-                </div>
-              )}
-            </div>
-
-            {/* Character Info summary */}
-            <div className="flex flex-col justify-center space-y-4 md:col-span-7 lg:col-span-8">
-              <div className="flex flex-wrap items-center gap-2">
-                <TypeBadge type="character" />
-                {character.role && (
-                  <span className="rounded-sm border border-mk-border bg-mk-card px-2 py-0.5 text-xs text-mk-gold uppercase tracking-wider">
-                    {character.role}
-                  </span>
-                )}
-                {character.faction && (
-                  <span className="rounded-sm border border-mk-border bg-mk-card px-2 py-0.5 text-xs text-mk-muted">
-                    {character.faction}
-                  </span>
-                )}
-              </div>
-
-              <h1 className="font-heading text-4xl font-extrabold tracking-wide sm:text-6xl text-glow">
-                {character.name}
-              </h1>
-
-              {character.aliases?.length > 0 && (
-                <p className="text-sm text-mk-muted">
-                  <strong className="text-mk-text">Alias / Identitas:</strong> {character.aliases.join(", ")}
-                </p>
-              )}
-
-              <p className="text-base leading-relaxed text-mk-text/90 sm:text-lg">
-                {character.summary}
-              </p>
-
-              {/* Game / Timeline Selector (PRD 25.5: game-specific context selector) */}
-              {character.versions.length > 0 && (
-                <div className="pt-4">
-                  <p className="text-xs font-semibold uppercase tracking-wider text-mk-gold">
-                    Pilih Versi Game &amp; Timeline:
-                  </p>
-                  <div className="mt-2 flex flex-wrap gap-2">
-                    {character.versions.map((ver) => (
-                      <button
-                        key={ver.id}
-                        type="button"
-                        onClick={() => setSelectedVersionId(ver.id)}
-                        className={`rounded-sm border px-3 py-1.5 text-xs font-medium transition ${
-                          selectedVersionId === ver.id
-                            ? "border-mk-red bg-mk-red/20 text-mk-text shadow glow-red"
-                            : "border-mk-border bg-mk-card text-mk-muted hover:border-mk-gold hover:text-mk-text"
-                        }`}
-                      >
-                        {ver.gameTitle}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      {/* Main Content Sections (PRD 13.4 Character Detail Layout) */}
-      <Container className="space-y-12 py-12">
-        {/* 2. Basic Information Grid */}
-        <Section title="Informasi Dasar">
-          <InfoGrid
-            items={[
-              {
-                label: "Kemunculan Pertama",
-                value: character.firstAppearance ? (
-                  <Link
-                    href={entityHref(character.firstAppearance)}
-                    className="text-mk-gold hover:underline"
-                  >
-                    {character.firstAppearance.name}
-                  </Link>
-                ) : (
-                  "-"
-                ),
-              },
-              { label: "Asal Realm", value: character.realm?.name ?? "-" },
-              { label: "Spesies", value: character.species?.name ?? "-" },
-              { label: "Faksi Utama", value: character.faction ?? "-" },
-              { label: "Peran Cerita", value: character.role ?? "-" },
-              {
-                label: "Versi Aktif",
-                value: currentVersion ? `${currentVersion.gameTitle} (${currentVersion.timelineName})` : "-",
-              },
-            ]}
-          />
-        </Section>
-
-        {/* 3. Biography (Franchise & Version specific) */}
-        <Section title="Biografi & Latar Belakang">
-          <div className="panel space-y-4 rounded-sm p-6 text-sm leading-relaxed sm:text-base">
-            <p className="text-mk-text/90">{character.biography}</p>
-            {currentVersion?.biography && (
-              <div className="border-t border-mk-border pt-4">
-                <p className="font-semibold text-mk-gold">
-                  Konteks pada {currentVersion.gameTitle}:
-                </p>
-                <p className="mt-1 text-mk-muted">{currentVersion.biography}</p>
-              </div>
-            )}
-          </div>
-        </Section>
-
-        {/* 4. Abilities & Special Moves (Context-based) */}
-        <Section
-          title={`Kemampuan & Jurus (${currentVersion?.gameTitle ?? "Semua"})`}
-          action={
-            <Link href="/abilities" className="text-xs uppercase tracking-wider text-mk-red hover:underline">
-              Semua Kemampuan →
-            </Link>
-          }
-        >
-          {currentVersion?.abilities?.length ? (
-            <EntityLinks items={currentVersion.abilities} />
-          ) : (
-            <p className="text-sm text-mk-muted">
-              Tidak ada data kemampuan khusus yang tercatat untuk versi game ini.
-            </p>
+      {/* Header Artikel & Judul */}
+      <div className="border-b border-mk-border pb-5 mb-8">
+        <div className="flex flex-wrap items-center gap-2 mb-1.5">
+          <span className="rounded bg-mk-navy px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white">
+            Karakter Kanonikal
+          </span>
+          {character.role && (
+            <span className="rounded bg-mk-bg px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-mk-gold border border-mk-border">
+              {character.role}
+            </span>
           )}
-        </Section>
-
-        {/* 5. Weapons */}
-        <Section title={`Senjata yang Digunakan (${currentVersion?.gameTitle ?? "Semua"})`}>
-          {currentVersion?.weapons?.length ? (
-            <EntityLinks items={currentVersion.weapons} />
-          ) : (
-            <p className="text-sm text-mk-muted">
-              Tidak ada senjata yang tercatat untuk versi game ini.
-            </p>
+          {character.realm && (
+            <span className="rounded bg-mk-bg px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-mk-muted border border-mk-border">
+              Asal: {character.realm.name}
+            </span>
           )}
-        </Section>
+          <span className="rounded bg-mk-red/15 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-mk-red border border-mk-red/30">
+            Debut: {firstGame?.title ?? character.firstAppearance?.name ?? "Mortal Kombat (1992)"}
+          </span>
+        </div>
 
-        {/* 6. Organizations & Clans */}
-        <Section title="Afiliasi Klan & Organisasi">
-          {currentVersion?.organizations?.length ? (
-            <EntityLinks items={currentVersion.organizations} />
-          ) : (
-            <p className="text-sm text-mk-muted">Belum ada afiliasi klan tercatat pada versi ini.</p>
-          )}
-        </Section>
+        <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-mk-text">
+          {character.name}
+        </h1>
 
-        {/* 7. Game Appearances */}
-        <Section title="Kemunculan di Seri Game">
-          <ul className="grid gap-3 sm:grid-cols-2 md:grid-cols-3">
-            {character.versions.map((v) => (
-              <li key={v.id}>
-                <Link
-                  href={`/games/${v.gameId}`}
-                  className="panel group block rounded-sm p-4 transition hover:border-mk-gold"
-                >
-                  <p className="font-heading font-bold text-mk-text group-hover:text-mk-gold">
-                    {v.gameTitle}
-                  </p>
-                  <p className="mt-1 text-xs text-mk-muted">{v.timelineName}</p>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </Section>
-
-        {/* 8. Relationships (Direct & context-sensitive) */}
-        <Section title="Hubungan Antar Karakter (Relationship Explorer)">
-          {character.relationships?.length ? (
-            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-              {character.relationships.map((rel, idx) => (
-                <div key={idx} className="panel rounded-sm p-4 space-y-2">
-                  <div className="flex items-center justify-between">
-                    <span className="rounded-sm border border-mk-red/40 bg-mk-red-deep/20 px-2 py-0.5 text-xs text-red-200">
-                      {rel.label} ({rel.type})
-                    </span>
-                    <VerificationBadge status={rel.verificationStatus} />
-                  </div>
-                  <p className="text-base font-bold">
-                    <Link
-                      href={entityHref(rel.target)}
-                      className="text-mk-text hover:text-mk-gold hover:underline"
-                    >
-                      {rel.target.name}
-                    </Link>
-                  </p>
-                  {rel.context && (
-                    <p className="text-xs text-mk-muted">Konteks: {rel.context}</p>
-                  )}
-                </div>
-              ))}
-            </div>
-          ) : (
-            <p className="text-sm text-mk-muted">Belum ada relasi tercatat.</p>
-          )}
-        </Section>
-
-        {/* 9. Related Characters */}
-        {character.relatedCharacters?.length > 0 && (
-          <Section title="Karakter Terkait Lainnya">
-            <EntityLinks items={character.relatedCharacters} />
-          </Section>
+        {character.aliases && character.aliases.length > 0 && (
+          <p className="mt-1 text-sm text-mk-muted italic">
+            Dikenal juga sebagai: {character.aliases.join(", ")}
+          </p>
         )}
 
-        {/* 10. Sources and Provenance (FR-09 & FR-22) */}
-        <Section title="Sumber Data & Provenance">
-          <SourceList sources={character.sources} />
-        </Section>
-      </Container>
-    </>
+        {/* Versi Game Selector (Tabs) */}
+        {character.versions && character.versions.length > 1 && (
+          <div className="mt-4 flex flex-wrap items-center gap-2">
+            <span className="text-xs font-semibold text-mk-muted mr-1">Versi Game:</span>
+            {character.versions.map((ver) => (
+              <button
+                key={ver.id}
+                type="button"
+                onClick={() => setSelectedVersionId(ver.id)}
+                className={`rounded px-2.5 py-1 text-xs font-medium transition ${
+                  selectedVersionId === ver.id
+                    ? "bg-mk-red text-white font-bold shadow-2xs"
+                    : "bg-mk-card border border-mk-border text-mk-muted hover:border-mk-gold hover:text-mk-text"
+                }`}
+              >
+                {ver.gameTitle}
+              </button>
+            ))}
+          </div>
+        )}
+      </div>
+
+      {/* Layout Artikel Ensiklopedia: Kolom Kiri (Artikel) + Kolom Kanan (Infobox) */}
+      <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
+        {/* KOLOM KIRI (Desktop Utama, Mobile Isi): Isi Artikel Lengkap */}
+        <article className="flex-1 min-w-0 space-y-10 order-2 lg:order-1">
+          {/* Ringkasan / Lead Paragraph */}
+          <div className="rounded border border-mk-border/70 bg-mk-card p-5 shadow-2xs">
+            <p className="text-sm sm:text-base leading-relaxed text-mk-text">
+              <strong className="text-mk-red font-bold">{character.name}</strong> — {character.summary}
+            </p>
+          </div>
+
+          {/* 1. Biografi & Sejarah */}
+          <section id="biography" className="scroll-mt-24 space-y-3">
+            <h2 className="font-heading text-xl sm:text-2xl font-bold text-mk-text border-b border-mk-border pb-2 flex items-center gap-2">
+              <span className="text-mk-red">§ 1.</span> Biografi &amp; Sejarah
+            </h2>
+            <div className="text-sm leading-relaxed text-mk-text/90 space-y-4">
+              <p className="whitespace-pre-line">
+                {character.biography || character.summary}
+              </p>
+            </div>
+          </section>
+
+          {/* 2. Kemampuan & Kekuatan */}
+          <section id="abilities" className="scroll-mt-24 space-y-3">
+            <h2 className="font-heading text-xl sm:text-2xl font-bold text-mk-text border-b border-mk-border pb-2 flex items-center gap-2">
+              <span className="text-mk-red">§ 2.</span> Kemampuan, Kekuatan &amp; Special Moves
+            </h2>
+            {currentVersion?.abilities && currentVersion.abilities.length > 0 ? (
+              <div className="grid gap-2.5 sm:grid-cols-2">
+                {currentVersion.abilities.map((ab) => (
+                  <Link
+                    key={ab.id}
+                    href={`/abilities/${ab.id}`}
+                    className="flex items-center justify-between p-3 rounded border border-mk-border bg-mk-card hover:border-mk-gold/70 transition shadow-2xs group"
+                  >
+                    <span className="font-semibold text-xs text-mk-text group-hover:text-mk-red transition-colors">
+                      {ab.name}
+                    </span>
+                    <span className="text-[10px] uppercase tracking-wider text-mk-muted">
+                      Lihat Jurus →
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            ) : (
+              <p className="text-xs text-mk-muted italic">
+                Data jurus khusus untuk versi game ini belum tercatat dalam arsip.
+              </p>
+            )}
+          </section>
+
+          {/* 3. Senjata */}
+          <section id="weapons" className="scroll-mt-24 space-y-3">
+            <h2 className="font-heading text-xl sm:text-2xl font-bold text-mk-text border-b border-mk-border pb-2 flex items-center gap-2">
+              <span className="text-mk-red">§ 3.</span> Senjata &amp; Perlengkapan
+            </h2>
+            {currentVersion?.weapons && currentVersion.weapons.length > 0 ? (
+              <div className="flex flex-wrap gap-2">
+                {currentVersion.weapons.map((wp) => (
+                  <Link
+                    key={wp.id}
+                    href={`/weapons/${wp.id}`}
+                    className="inline-flex items-center gap-1.5 rounded border border-mk-border bg-mk-card px-3 py-1.5 text-xs text-mk-text hover:border-mk-red transition shadow-2xs"
+                  >
+                    <span className="text-mk-gold font-bold">🗡</span>
+                    <span className="font-medium">{wp.name}</span>
+                  </Link>
+                ))}
+              </div>
+            ) : (
+              <p className="text-xs text-mk-muted italic">
+                Karakter bertarung dengan tangan kosong atau kekuatan magis murni pada versi ini.
+              </p>
+            )}
+          </section>
+
+          {/* 4. Relationships */}
+          <section id="relationships" className="scroll-mt-24 space-y-3">
+            <h2 className="font-heading text-xl sm:text-2xl font-bold text-mk-text border-b border-mk-border pb-2 flex items-center gap-2">
+              <span className="text-mk-red">§ 4.</span> Hubungan Karakter (Relationships)
+            </h2>
+            <RelationshipPanel relationships={character.relationships ?? []} />
+          </section>
+
+          {/* 5. Appearances (Daftar Game Kemunculan Lengkap) */}
+          <section id="appearances" className="scroll-mt-24 space-y-4">
+            <div className="border-b border-mk-border pb-2 flex flex-wrap items-center justify-between gap-3">
+              <h2 className="font-heading text-xl sm:text-2xl font-bold text-mk-text flex items-center gap-2">
+                <span className="text-mk-red">§ 5.</span> Daftar Kemunculan di Game Mortal Kombat
+                <span className="rounded-full bg-mk-red/10 border border-mk-red/30 px-2.5 py-0.5 text-xs font-mono font-bold text-mk-red">
+                  {appearedGames.length} Game
+                </span>
+              </h2>
+
+              {/* Filter Era */}
+              {erasPresent.length > 1 && (
+                <div className="flex flex-wrap items-center gap-1">
+                  <button
+                    type="button"
+                    onClick={() => setSelectedEra("all")}
+                    className={`rounded px-2.5 py-1 text-[11px] font-semibold transition ${
+                      selectedEra === "all"
+                        ? "bg-mk-red text-white"
+                        : "bg-mk-card border border-mk-border text-mk-muted hover:text-mk-text"
+                    }`}
+                  >
+                    Semua ({appearedGames.length})
+                  </button>
+                  {erasPresent.map((era) => (
+                    <button
+                      key={era}
+                      type="button"
+                      onClick={() => setSelectedEra(era)}
+                      className={`rounded px-2.5 py-1 text-[11px] font-semibold transition ${
+                        selectedEra === era
+                          ? "bg-mk-red text-white"
+                          : "bg-mk-card border border-mk-border text-mk-muted hover:text-mk-text"
+                      }`}
+                    >
+                      {era}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <p className="text-xs text-mk-muted">
+              Daftar seluruh judul game Mortal Kombat yang secara resmi memuat karakter{" "}
+              <strong className="text-mk-text">{character.name}</strong>, diurutkan secara kronologis berdasarkan tahun rilis:
+            </p>
+
+            <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+              {filteredAppearedGames.map((g) => (
+                <Link
+                  key={g.id}
+                  href={`/games/${g.id}`}
+                  className={`group relative flex flex-col justify-between overflow-hidden rounded border p-4 transition shadow-2xs hover:-translate-y-0.5 hover:shadow-md ${
+                    g.isFirstAppearance
+                      ? "border-mk-red/70 bg-gradient-to-br from-mk-red/10 via-mk-card to-mk-card hover:border-mk-red"
+                      : "border-mk-border bg-mk-card hover:border-mk-gold/70"
+                  }`}
+                >
+                  {/* Badge Kemunculan Pertama / Debut */}
+                  {g.isFirstAppearance && (
+                    <div className="mb-2 inline-flex items-center gap-1 self-start rounded bg-mk-red px-2 py-0.5 text-[9px] font-extrabold uppercase tracking-wider text-white shadow-2xs">
+                      <span>★</span>
+                      <span>Debut / Pertama Kali Muncul</span>
+                    </div>
+                  )}
+
+                  <div>
+                    <div className="flex items-start justify-between gap-2">
+                      <h3 className="font-heading text-sm sm:text-base font-bold text-mk-text group-hover:text-mk-red transition-colors line-clamp-2">
+                        {g.title}
+                      </h3>
+                      {g.releaseYear && (
+                        <span className="shrink-0 rounded bg-mk-bg px-2 py-0.5 font-mono text-xs font-bold text-mk-gold border border-mk-border/60">
+                          {g.releaseYear}
+                        </span>
+                      )}
+                    </div>
+
+                    <div className="mt-2 flex flex-wrap items-center gap-1.5 text-[10px]">
+                      {g.era && (
+                        <span className="rounded bg-mk-bg px-1.5 py-0.5 font-medium text-mk-muted border border-mk-border/50">
+                          {g.era}
+                        </span>
+                      )}
+                      {g.timelineName && (
+                        <span className="rounded bg-mk-bg px-1.5 py-0.5 text-mk-muted border border-mk-border/50">
+                          {g.timelineName}
+                        </span>
+                      )}
+                    </div>
+
+                    {g.platforms && g.platforms.length > 0 && (
+                      <p className="mt-2 text-[10px] text-mk-muted line-clamp-1">
+                        Platform: {g.platforms.slice(0, 3).join(", ")}
+                        {g.platforms.length > 3 ? "..." : ""}
+                      </p>
+                    )}
+                  </div>
+
+                  <div className="mt-4 pt-2 border-t border-mk-border/40 flex items-center justify-between text-[11px]">
+                    <span className="text-mk-muted group-hover:text-mk-text transition-colors">
+                      Lihat Detail Game
+                    </span>
+                    <span className="text-mk-red font-bold group-hover:translate-x-1 transition-transform">
+                      →
+                    </span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </section>
+
+          {/* 6. References & Provenance */}
+          <section id="references" className="scroll-mt-24 space-y-3">
+            <h2 className="font-heading text-xl sm:text-2xl font-bold text-mk-text border-b border-mk-border pb-2 flex items-center gap-2">
+              <span className="text-mk-red">§ 6.</span> Garis Waktu &amp; Sumber Referensi
+            </h2>
+            <SourceReference sources={character.sources ?? []} />
+          </section>
+        </article>
+
+        {/* KOLOM KANAN (Desktop Sticky, Mobile Top): Infobox Ensiklopedia Klasik */}
+        <div className="w-full max-w-md mx-auto lg:max-w-none lg:w-auto lg:sticky lg:top-24 order-1 lg:order-2">
+          <ArticleInfobox
+            title={character.name}
+            subtitle={character.faction ?? "Mortal Kombat"}
+            image={charImage}
+            imageAspect="aspect-[3/4]"
+            objectPosition="object-top"
+            rows={infoboxRows}
+          />
+        </div>
+      </div>
+
+      {/* Section Rekomendasi Paling Bawah: Karakter yang Mirip & Berkaitan */}
+      <SimilarCharactersSection recommendations={recommendedCharacters} />
+    </div>
   );
 }

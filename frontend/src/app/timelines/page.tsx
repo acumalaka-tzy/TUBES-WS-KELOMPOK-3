@@ -15,20 +15,11 @@ export default function TimelinesPage() {
       <PageHeader
         eyebrow="Encyclopedia"
         title="Timeline &amp; Kontinuitas Mortal Kombat"
-        description="Dunia Mortal Kombat terbagi ke dalam tiga timeline utama akibat perubahan sejarah dan manipulasi waktu. Ensiklopedia ini memisahkan identitas karakter per timeline agar fakta tidak bertentangan (FR-14 &amp; PRD 6.3)."
+        description="Dunia Mortal Kombat terbagi ke dalam tiga timeline utama akibat perubahan sejarah dan manipulasi waktu. Ensiklopedia ini memisahkan identitas karakter per timeline agar fakta tidak bertentangan."
         crumbs={[{ label: "Timelines" }]}
       />
 
       <Container className="py-10 space-y-8">
-        <div className="panel rounded-sm p-5 text-sm text-mk-muted">
-          <p className="font-semibold text-mk-gold">Mengapa Timeline Penting dalam Semantic Web MK?</p>
-          <p className="mt-1">
-            Karakter dapat memiliki identitas, relasi, dan afiliasi yang berbeda pada timeline berbeda. Sebagai contoh,
-            Scorpion di Timeline Original dan Reboot adalah Hanzo Hasashi (Shirai Ryu), sedangkan di New Era adalah anggota
-            Lin Kuei. Knowledge Nexus mempertahankan konteks timeline pada setiap fakta.
-          </p>
-        </div>
-
         {loading ? (
           <LoadingState count={3} />
         ) : error ? (

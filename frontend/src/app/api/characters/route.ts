@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { characters } from '@/lib/mock-data';
+import { getCharactersFromFuseki } from '@/lib/fuseki-sparql-services';
 
 /**
  * GET /api/characters
@@ -15,7 +15,8 @@ export async function GET(req: NextRequest) {
     const game = searchParams.get('game')?.toLowerCase().trim();
     const species = searchParams.get('species')?.toLowerCase().trim();
 
-    let list = [...characters];
+    const { data: charactersList, isFusekiLive } = await getCharactersFromFuseki();
+    let list = [...charactersList];
 
     if (q) {
       list = list.filter(
@@ -47,6 +48,7 @@ export async function GET(req: NextRequest) {
     return NextResponse.json(list, {
       headers: {
         'x-total-count': String(list.length),
+        'x-data-source': isFusekiLive ? 'fuseki-live' : 'mock-fallback',
       },
     });
   } catch (err: any) {

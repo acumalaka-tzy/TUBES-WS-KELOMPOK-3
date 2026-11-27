@@ -4,7 +4,7 @@ import { fuseRRFResults } from "./rrf-ranker";
 import { explainSearchResult, generateSearchExplanationSummary } from "./search-explanation";
 import { processNaturalLanguageQuery } from "./nlp/entity-recognizer";
 import { generateSearchSuggestions } from "./suggestions";
-import type { EntityType, SearchMode, SearchResponse, SearchResult } from "../types";
+import type { EntityType, SearchMode, SearchResponse } from "../types";
 import type { FusedSearchResult } from "./types";
 
 export interface GlobalSearchOptions {
@@ -21,7 +21,7 @@ export interface GlobalSearchOptions {
 
 /**
  * Main Hybrid Search Engine
- * Adheres to PRD Section 11, Section 15, FR-02 to FR-08
+ * Hybrid semantic search engine.
  */
 export async function executeSearch(options: GlobalSearchOptions): Promise<SearchResponse> {
   const rawQ = options.q ?? "";
@@ -45,6 +45,26 @@ export async function executeSearch(options: GlobalSearchOptions): Promise<Searc
 
   // 1. Process Natural Language Query and Extract Entities
   const intent = processNaturalLanguageQuery(query);
+
+  // If intent was classified as out-of-domain or no match, return 0 clean results without hallucinations
+  if (intent.intentType === "no_match") {
+    const suggestions = generateSearchSuggestions(query, 5).map((s) => s.label);
+    return {
+      query,
+      mode,
+      total: 0,
+      results: [],
+      status: "ok",
+      message: "Informasi tidak ditemukan dalam Knowledge Graph Mortal Kombat. Silakan coba kata kunci lain.",
+      suggestions: suggestions.length > 0 ? suggestions : ["Scorpion", "Sub-Zero", "Liu Kang", "Raiden"],
+      parsedIntent: {
+        intentType: "no_match",
+        targetType: "all",
+        extractedAttributes: {},
+        confidence: 1.0,
+      },
+    };
+  }
 
   let fusedResults: FusedSearchResult[] = [];
 
@@ -91,7 +111,17 @@ export async function executeSearch(options: GlobalSearchOptions): Promise<Searc
     fusedResults = fuseRRFResults(semCandidates, kwCandidates);
   }
 
-  // 3. Attach Explanation and provenance for each result (FR-08)
+  // Strict filter by requested entity type if not 'all'
+  if (type && type !== "all") {
+    fusedResults = fusedResults.filter((r) => r.type === type);
+  }
+
+  // Filter out low-confidence noise (< 0.25) if query was specific and no entities matched
+  if (intent.recognizedEntities.length === 0 && fusedResults.length > 0 && query.length > 5) {
+    fusedResults = fusedResults.filter((r) => r.relevance >= 0.35);
+  }
+
+  // 3. Attach Explanation and provenance for each result
   for (const item of fusedResults) {
     item.explanation = explainSearchResult(item, mode, intent);
   }

@@ -1,5 +1,5 @@
 /**
- * Tipe data frontend — mengikuti PRD Bagian 17 (Data Model) & 29.4 (Image Asset).
+ * Tipe data frontend (Data Model & Image Asset).
  * Kontrak ini menjadi acuan integrasi dengan API (Anggota 2).
  */
 
@@ -111,7 +111,7 @@ export interface Ability {
   id: string;
   name: string;
   category: AbilityCategory;
-  element?: string;
+  element?: string | null;
   description: string;
   characters: EntityRef[];
   games: EntityRef[];
@@ -126,6 +126,17 @@ export interface Weapon {
   characters: EntityRef[];
   games: EntityRef[];
   relatedAbilities: EntityRef[];
+  sources: SourceRef[];
+}
+
+export interface Realm {
+  id: string;
+  name: string;
+  type: "location";
+  description: string;
+  href: string;
+  ruler?: string;
+  inhabitants?: string;
   sources: SourceRef[];
 }
 

@@ -28,16 +28,9 @@ const STATUS: Record<VerificationStatus, { label: string; cls: string; icon: str
   unverified: { label: "Belum diverifikasi", cls: "border-zinc-500/50 text-zinc-400", icon: "?" },
 };
 
-/** Membedakan fakta terverifikasi vs belum (PRD 13.2 poin 6). */
+/** Membedakan fakta terverifikasi vs belum (disembunyikan pada tampilan produksi) */
 export function VerificationBadge({ status }: { status?: VerificationStatus }) {
-  if (!status) return null;
-  const s = STATUS[status];
-  return (
-    <span title={s.label} className={`inline-flex items-center gap-1 rounded-sm border px-2 py-0.5 text-[10px] font-medium uppercase tracking-wider ${s.cls}`}>
-      <span aria-hidden="true">{s.icon}</span>
-      {s.label}
-    </span>
-  );
+  return null;
 }
 
 export function Chip({ children, active, onClick }: { children: React.ReactNode; active?: boolean; onClick?: () => void }) {

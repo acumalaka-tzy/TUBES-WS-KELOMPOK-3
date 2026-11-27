@@ -8,7 +8,7 @@ import type { GameEra } from "@/lib/types";
 import { EntityCard } from "@/components/ui/Cards";
 import { EmptyState, ErrorState, LoadingState } from "@/components/ui/States";
 
-/** Carousel roster karakter populer (FR-01). */
+/** Carousel roster karakter populer. */
 export function PopularCharacters() {
   const { data, error, loading, reload } = useAsync(getCharacters, []);
   const scroller = useRef<HTMLUListElement>(null);
@@ -34,7 +34,14 @@ export function PopularCharacters() {
           const v = c.versions[c.versions.length - 1];
           return (
             <li key={c.id} className="w-44 shrink-0 snap-start sm:w-56">
-              <EntityCard href={`/characters/${c.id}`} name={c.name} subtitle={c.summary} image={v?.image} contextLabel={v ? v.gameTitle : undefined} />
+              <EntityCard
+                href={`/characters/${c.id}`}
+                name={c.name}
+                subtitle={c.summary}
+                type="character"
+                image={v?.image ?? c.image}
+                contextLabel={v ? v.gameTitle : undefined}
+              />
             </li>
           );
         })}
@@ -45,7 +52,7 @@ export function PopularCharacters() {
 
 const ERA_ORDER: GameEra[] = ["Classic Era", "3D Era", "Reboot Era", "New Era", "Spin-off"];
 
-/** Timeline era game (FR-01: game yang tersedia). */
+/** Timeline era game. */
 export function GameEras() {
   const { data, error, loading, reload } = useAsync(getGames, []);
   if (loading) return <LoadingState variant="list" count={2} />;

@@ -1,26 +1,8 @@
 @prefix mk: <https://example.org/mk/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-mk:ability-flame-aura a mk:Ability ;
-    mk:description "Surrounding the body in intense heat that incinerates nearby foes."^^xsd:string ;
-    mk:hasElement mk:element-fire ;
-    mk:moveCategory "Magic"^^xsd:string ;
-    mk:name "Flame Aura"^^xsd:string .
-
-mk:ability-ice-clone a mk:Ability ;
-    mk:description "Leaving behind a flash-frozen decoy that freezes whoever touches it."^^xsd:string ;
-    mk:hasElement mk:element-ice ;
-    mk:moveCategory "Defense"^^xsd:string ;
-    mk:name "Ice Clone"^^xsd:string .
-
-mk:character-scorpion-fetch-failed a mk:Character ;
-    mk:description "Official franchise profile for Scorpion (Fetch Failed)."^^xsd:string ;
-    mk:firstAppearanceYear "Unknown"^^xsd:gYear ;
-    mk:hasSpecies "Human"^^xsd:string ;
-    mk:name "Scorpion (Fetch Failed)"^^xsd:string ;
-    mk:originatesFrom mk:realm-earthrealm ;
-    mk:sourceURL "https://www.mortalkombat.com/en-us/roster/scorpion"^^xsd:anyURI ;
-    mk:verificationStatus "partially_verified"^^xsd:string .
+mk:character-jaxbriggs mk:enemyOf mk:character-kano ;
+    mk:familyOf mk:character-jacqui .
 
 mk:event-battle-for-the-hourglass a mk:Event ;
     mk:chronologicalOrder 22 ;
@@ -458,11 +440,10 @@ mk:location-the-pit a mk:Location ;
     mk:name "The Pit"^^xsd:string ;
     mk:sourceURL "https://mortalkombat.fandom.com/wiki/The_Pit"^^xsd:anyURI .
 
-mk:move-flying-kick a mk:Move ;
-    mk:description "Liu Kang's signature horizontal flight across the screen backed by flaming chi."^^xsd:string ;
-    mk:hasElement mk:element-fire ;
+mk:move-bowl-girl a mk:Move ;
+    mk:description "Torr melempar Ferra dengan tenaga luar biasa untuk mencakar dan menusuk mata musuh."^^xsd:string ;
     mk:moveCategory "Special Move"^^xsd:string ;
-    mk:name "Flying Dragon Kick"^^xsd:string .
+    mk:name "Bowl Girl (Ferra Toss)"^^xsd:string .
 
 mk:move-sonic-scream a mk:Move ;
     mk:description "High-decibel vocal resonance that stuns and strips the flesh from targets."^^xsd:string ;
@@ -470,15 +451,15 @@ mk:move-sonic-scream a mk:Move ;
     mk:moveCategory "Special Move"^^xsd:string ;
     mk:name "Banshee Sonic Scream"^^xsd:string .
 
-mk:weapon-dragon-blade a mk:Weapon ;
-    mk:description "Ancient ceremonial blade housing the cosmic essence of the realms."^^xsd:string ;
-    mk:name "Kamidogu Dragon Blade"^^xsd:string .
+mk:move-torr-charge a mk:Move ;
+    mk:description "Serudukan raksasa Torr yang tak terhentikan meluluhlantakkan garis pertahanan."^^xsd:string ;
+    mk:moveCategory "Special Move"^^xsd:string ;
+    mk:name "Brute Torr Charge"^^xsd:string .
 
-mk:ability-ice-slide a mk:Ability ;
-    mk:description "Coating the ground with ice to slide swiftly beneath enemy defenses."^^xsd:string ;
-    mk:hasElement mk:element-ice ;
-    mk:moveCategory "Mobility"^^xsd:string ;
-    mk:name "Ice Slide"^^xsd:string .
+mk:ability-temporal-manipulation a mk:Ability ;
+    mk:description "Pengendalian absolut terhadap aliran masa lalu, masa kini, dan masa depan."^^xsd:string ;
+    mk:moveCategory "Ability"^^xsd:string ;
+    mk:name "Chronokinesis (Time Mastery)"^^xsd:string .
 
 mk:character-ferratorr a mk:Character ;
     mk:alternateName "Symbiotic Duo"^^xsd:string ;
@@ -492,6 +473,7 @@ mk:character-ferratorr a mk:Character ;
     mk:verificationStatus "verified"^^xsd:string .
 
 mk:character-kintaro a mk:Character ;
+    mk:alliedWith mk:character-shaokahn ;
     mk:alternateName "Tigrar Shokan Champion"^^xsd:string ;
     mk:description "Fierce feline-striped Tigrar Shokan general serving as Shao Kahn's vanguard during the Outworld tournament."^^xsd:string ;
     mk:firstAppearanceYear "1993"^^xsd:gYear ;
@@ -513,30 +495,6 @@ mk:character-kollector a mk:Character ;
     mk:sourceURL "https://mortalkombat.fandom.com/wiki/Kollector"^^xsd:anyURI ;
     mk:verificationStatus "verified"^^xsd:string .
 
-mk:fatality-bow-before-me a mk:Move ;
-    mk:description "Jade vaults on her staff, driving both ends through the opponent's eye sockets."^^xsd:string ;
-    mk:hasElement mk:element-energy ;
-    mk:moveCategory "Fatality"^^xsd:string ;
-    mk:name "Fatality: Bow Before Me"^^xsd:string .
-
-mk:fatality-divine-purification a mk:Move ;
-    mk:description "Ashrah pierces the demon's heart with the Kriss, causing holy blue light to incinerate the body from within."^^xsd:string ;
-    mk:hasElement mk:element-energy ;
-    mk:moveCategory "Fatality"^^xsd:string ;
-    mk:name "Fatality: Heavenly Cleansing"^^xsd:string .
-
-mk:fatality-dragon-bite a mk:Move ;
-    mk:description "Morphing into a massive dragon that bites the opponent's torso in half."^^xsd:string ;
-    mk:hasElement mk:element-fire ;
-    mk:moveCategory "Fatality"^^xsd:string ;
-    mk:name "Fatality: Dragon Feast"^^xsd:string .
-
-mk:fatality-face-crusher a mk:Move ;
-    mk:description "Shujinko strikes vital meridian pressure points, causing the victim's body to cave in on itself."^^xsd:string ;
-    mk:hasElement mk:element-energy ;
-    mk:moveCategory "Fatality"^^xsd:string ;
-    mk:name "Fatality: Five Point Strike"^^xsd:string .
-
 mk:fatality-for-the-kollection a mk:Move ;
     mk:description "Kollector methodically carves out the opponent's heart, head, and organs, packing them neatly in his satchel."^^xsd:string ;
     mk:hasElement mk:element-energy ;
@@ -549,71 +507,11 @@ mk:fatality-good-and-evil a mk:Move ;
     mk:moveCategory "Fatality"^^xsd:string ;
     mk:name "Fatality: Good and Evil"^^xsd:string .
 
-mk:fatality-infestation a mk:Move ;
-    mk:description "D'Vorah fills the victim's torso with ravenous wasp larvae that burst out from the ribcage."^^xsd:string ;
-    mk:hasElement mk:element-energy ;
-    mk:moveCategory "Fatality"^^xsd:string ;
-    mk:name "Fatality: Bug Me"^^xsd:string .
-
-mk:fatality-road-rash a mk:Move ;
-    mk:description "Kabal drags the opponent at super-speed face first across the concrete, grinding their skull away."^^xsd:string ;
-    mk:hasElement mk:element-energy ;
-    mk:moveCategory "Fatality"^^xsd:string ;
-    mk:name "Fatality: Road Rash"^^xsd:string .
-
-mk:fatality-scream-queen a mk:Move ;
-    mk:description "Sindel screams directly into the victim's mouth, causing their eyes and entrails to explode outward."^^xsd:string ;
-    mk:hasElement mk:element-energy ;
-    mk:moveCategory "Fatality"^^xsd:string ;
-    mk:name "Fatality: Scream Queen"^^xsd:string .
-
-mk:fatality-shokan-tear a mk:Move ;
-    mk:description "Goro grabs both arms and legs, tearing the opponent into four separate pieces."^^xsd:string ;
-    mk:hasElement mk:element-energy ;
-    mk:moveCategory "Fatality"^^xsd:string ;
-    mk:name "Fatality: Limb Disassembly"^^xsd:string .
-
-mk:fatality-spider-mines a mk:Move ;
-    mk:description "Jacqui Briggs deploys spider mines that burrow into the opponent's joints and detonate simultaneously."^^xsd:string ;
-    mk:hasElement mk:element-energy ;
-    mk:moveCategory "Fatality"^^xsd:string ;
-    mk:name "Fatality: Spider Mines"^^xsd:string .
-
-mk:fatality-spine-rip a mk:Move ;
-    mk:description "Grabbing the victim's neck and cleanly ripping out their head and spine."^^xsd:string ;
-    mk:hasElement mk:element-ice ;
-    mk:moveCategory "Fatality"^^xsd:string ;
-    mk:name "Fatality: Spine Rip"^^xsd:string .
-
-mk:fatality-spine-ripper a mk:Move ;
-    mk:description "Sheeva grabs both sets of limbs and tears the flesh completely from the skeletal frame."^^xsd:string ;
-    mk:hasElement mk:element-energy ;
-    mk:moveCategory "Fatality"^^xsd:string ;
-    mk:name "Fatality: Lend a Hand"^^xsd:string .
-
 mk:fatality-target-practice a mk:Move ;
     mk:description "Kung Jin pins the target with three rapid arrows before piercing the forehead with a flaming shaft."^^xsd:string ;
     mk:hasElement mk:element-energy ;
     mk:moveCategory "Fatality"^^xsd:string ;
     mk:name "Fatality: Target Practice"^^xsd:string .
-
-mk:fatality-time-served a mk:Move ;
-    mk:description "Stryker plants a grenade in the target's chest, shoots them with a taser, and detonates the charge."^^xsd:string ;
-    mk:hasElement mk:element-energy ;
-    mk:moveCategory "Fatality"^^xsd:string ;
-    mk:name "Fatality: Time Served"^^xsd:string .
-
-mk:fatality-vaeternus-drain a mk:Move ;
-    mk:description "Nitara rips open the victim's carotid artery with fangs and claws, drinking them completely dry."^^xsd:string ;
-    mk:hasElement mk:element-blood ;
-    mk:moveCategory "Fatality"^^xsd:string ;
-    mk:name "Fatality: Blood Feast"^^xsd:string .
-
-mk:fatality-war-dance a mk:Move ;
-    mk:description "Nightwolf embeds his tomahawks into the victim's collarbones, summoning a massive lightning bolt to split them."^^xsd:string ;
-    mk:hasElement mk:element-energy ;
-    mk:moveCategory "Fatality"^^xsd:string ;
-    mk:name "Fatality: Kompshina Calling"^^xsd:string .
 
 mk:fatality-whip-it-good a mk:Move ;
     mk:description "Takeda loops his serrated whips around the target's neck and joints, yanking them into clean cubes."^^xsd:string ;
@@ -681,12 +579,6 @@ mk:game-umk3-1995 a mk:Game ;
         "Sega Saturn"^^xsd:string ;
     mk:verificationStatus "verified"^^xsd:string .
 
-mk:move-blood-tentacles a mk:Move ;
-    mk:description "Conjuring whipping tendrils of coagulated blood to lash opponents."^^xsd:string ;
-    mk:hasElement mk:element-blood ;
-    mk:moveCategory "Special Move"^^xsd:string ;
-    mk:name "Blood Tentacles"^^xsd:string .
-
 mk:move-boulder-bash a mk:Move ;
     mk:description "Elder Goddess Cetrion telekinetically hurls massive earthen boulders at the opponent."^^xsd:string ;
     mk:hasElement mk:element-energy ;
@@ -699,11 +591,16 @@ mk:move-demonic-mace a mk:Move ;
     mk:moveCategory "Special Move"^^xsd:string ;
     mk:name "Demonic Mace Toss"^^xsd:string .
 
-mk:move-dragon-slam a mk:Move ;
-    mk:description "Onaga flies into the air and crashes down with unyielding draconic mass."^^xsd:string ;
-    mk:hasElement mk:element-energy ;
+mk:move-drakes-breath a mk:Move ;
+    mk:description "Semburan api naga merah kuno yang dipelajari Daegon dari naga Caro."^^xsd:string ;
+    mk:hasElement mk:elem-fire ;
     mk:moveCategory "Special Move"^^xsd:string ;
-    mk:name "Titanic Dragon Slam"^^xsd:string .
+    mk:name "Drake's Breath Fireball"^^xsd:string .
+
+mk:move-drakes-shield a mk:Move ;
+    mk:description "Perisai energi naga merah yang menangkis serangan jarak jauh musuh."^^xsd:string ;
+    mk:moveCategory "Special Move"^^xsd:string ;
+    mk:name "Dragon Shield Reflector"^^xsd:string .
 
 mk:move-hells-wrath a mk:Move ;
     mk:description "Cetrion commands fiery roots to burst from subterranean depths, gripping the target."^^xsd:string ;
@@ -711,17 +608,22 @@ mk:move-hells-wrath a mk:Move ;
     mk:moveCategory "Special Move"^^xsd:string ;
     mk:name "Hell's Wrath Tendril"^^xsd:string .
 
+mk:move-hourglass-rewind a mk:Move ;
+    mk:description "Memanipulasi pasir Hourglass untuk mereset kontinuitas sejarah semesta."^^xsd:string ;
+    mk:moveCategory "Special Move"^^xsd:string ;
+    mk:name "Hourglass Epoch Rewind"^^xsd:string .
+
+mk:move-inner-fire a mk:Move ;
+    mk:description "Pancaran energi dewa api Edenian murni yang membakar tubuh Taven saat menyerang."^^xsd:string ;
+    mk:hasElement mk:elem-fire ;
+    mk:moveCategory "Special Move"^^xsd:string ;
+    mk:name "Inner Flame Surge"^^xsd:string .
+
 mk:move-lunge-kick a mk:Move ;
     mk:description "Kung Jin plants his combat bow as a pole vault, launching both feet into the enemy's chest."^^xsd:string ;
     mk:hasElement mk:element-energy ;
     mk:moveCategory "Special Move"^^xsd:string ;
     mk:name "Bo Vault Kick"^^xsd:string .
-
-mk:move-puke-puddle a mk:Move ;
-    mk:description "Bo' Rai Cho coats the arena floor causing approaching enemies to lose their balance."^^xsd:string ;
-    mk:hasElement mk:element-energy ;
-    mk:moveCategory "Special Move"^^xsd:string ;
-    mk:name "Hazardous Fluid Puddle"^^xsd:string .
 
 mk:move-shirai-ryu-phase a mk:Move ;
     mk:description "Takeda drops through a shadow smoke portal, reappearing behind the opponent with a kick."^^xsd:string ;
@@ -735,17 +637,10 @@ mk:move-shotel-strike a mk:Move ;
     mk:moveCategory "Special Move"^^xsd:string ;
     mk:name "Demonic Shotel Flurry"^^xsd:string .
 
-mk:move-soul-ball a mk:Move ;
-    mk:description "Harnessing stolen souls into an explosive sphere of spiritual energy."^^xsd:string ;
-    mk:hasElement mk:element-soul ;
+mk:move-speed-of-light a mk:Move ;
+    mk:description "Pergerakan secepat cahaya yang menempatkan Taven langsung di belakang punggung musuh."^^xsd:string ;
     mk:moveCategory "Special Move"^^xsd:string ;
-    mk:name "Green Soul Burst"^^xsd:string .
-
-mk:move-square-wave a mk:Move ;
-    mk:description "Mid-air dive propelled by acrobatic Edenian momentum."^^xsd:string ;
-    mk:hasElement mk:element-energy ;
-    mk:moveCategory "Special Move"^^xsd:string ;
-    mk:name "Square Wave Flight"^^xsd:string .
+    mk:name "Speed of Light Teleport"^^xsd:string .
 
 mk:move-straight-shot a mk:Move ;
     mk:description "Kung Jin notches and fires Shaolin arrows with pinpoint accuracy at high velocity."^^xsd:string ;
@@ -753,23 +648,11 @@ mk:move-straight-shot a mk:Move ;
     mk:moveCategory "Special Move"^^xsd:string ;
     mk:name "Straight Arrow Shot"^^xsd:string .
 
-mk:move-untranslatable-rage a mk:Move ;
-    mk:description "Sheeva grabs the opponent with all four arms, delivering thunderous headbutts and ground smashes."^^xsd:string ;
-    mk:hasElement mk:element-energy ;
-    mk:moveCategory "Special Move"^^xsd:string ;
-    mk:name "Untranslatable Rage"^^xsd:string .
-
 mk:move-whip-strike a mk:Move ;
     mk:description "Takeda Takahashi cracks his bladed plasma whips in acrobatic circles around the target."^^xsd:string ;
     mk:hasElement mk:element-energy ;
     mk:moveCategory "Special Move"^^xsd:string ;
     mk:name "Shirai Ryu Whip Flurry"^^xsd:string .
-
-mk:move-wind-kick a mk:Move ;
-    mk:description "Fujin spins horizontally on a cushion of wind, striking repeatedly."^^xsd:string ;
-    mk:hasElement mk:element-wind ;
-    mk:moveCategory "Special Move"^^xsd:string ;
-    mk:name "Tornado Gale Kick"^^xsd:string .
 
 mk:realm-vaeternus a mk:Realm ;
     mk:description "The shadowy realm of vampires, severed from Outworld through the efforts of the vampire warrior Nitara."^^xsd:string ;
@@ -778,8 +661,10 @@ mk:realm-vaeternus a mk:Realm ;
 mk:version-ashrah-mk-deception-2004 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk-deception-2004 ;
     mk:existsInTimeline mk:timeline-original ;
-    mk:hasAbility mk:fatality-divine-purification,
+    mk:hasAbility mk:ability-teleportation,
+        mk:fatality-divine-purification,
         mk:move-heavenly-light ;
+    mk:memberOf mk:org-brotherhood-of-shadow ;
     mk:name "Ashrah (mk-deception-2004)"^^xsd:string ;
     mk:usesWeapon mk:weapon-kriss-dagger ;
     mk:versionOf mk:character-ashrah .
@@ -787,7 +672,10 @@ mk:version-ashrah-mk-deception-2004 a mk:CharacterVersion ;
 mk:version-ashrah-mk1-2023 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk1-2023 ;
     mk:existsInTimeline mk:timeline-new-era ;
-    mk:hasAbility mk:move-heavenly-light ;
+    mk:hasAbility mk:ability-teleportation,
+        mk:fatality-divine-purification,
+        mk:move-heavenly-light ;
+    mk:memberOf mk:org-brotherhood-of-shadow ;
     mk:name "Ashrah (mk1-2023)"^^xsd:string ;
     mk:usesWeapon mk:weapon-kriss-dagger ;
     mk:versionOf mk:character-ashrah .
@@ -795,28 +683,36 @@ mk:version-ashrah-mk1-2023 a mk:CharacterVersion ;
 mk:version-baraka-mk11 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk11-2019 ;
     mk:existsInTimeline mk:timeline-reboot ;
-    mk:hasAbility mk:move-tarkatan-chop ;
+    mk:hasAbility mk:move-blade-spark,
+        mk:move-blade-spin,
+        mk:move-tarkatan-chop ;
     mk:name "Baraka (mk11-2019)"^^xsd:string ;
     mk:versionOf mk:character-baraka .
 
 mk:version-baraka-mk2 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk2-1993 ;
     mk:existsInTimeline mk:timeline-original ;
-    mk:hasAbility mk:move-tarkatan-chop ;
+    mk:hasAbility mk:move-blade-spark,
+        mk:move-blade-spin,
+        mk:move-tarkatan-chop ;
     mk:name "Baraka (mk2-1993)"^^xsd:string ;
     mk:versionOf mk:character-baraka .
 
 mk:version-blaze-mk-armageddon-2006 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk-armageddon-2006 ;
     mk:existsInTimeline mk:timeline-original ;
-    mk:hasAbility mk:move-fire-fist ;
+    mk:hasAbility mk:ability-flame-aura,
+        mk:ability-hellfire,
+        mk:move-fire-fist ;
     mk:name "Blaze (mk-armageddon-2006)"^^xsd:string ;
     mk:versionOf mk:character-blaze .
 
 mk:version-blaze-mk-deadly-alliance-2002 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk-deadly-alliance-2002 ;
     mk:existsInTimeline mk:timeline-original ;
-    mk:hasAbility mk:move-fire-fist ;
+    mk:hasAbility mk:ability-flame-aura,
+        mk:ability-hellfire,
+        mk:move-fire-fist ;
     mk:name "Blaze (mk-deadly-alliance-2002)"^^xsd:string ;
     mk:versionOf mk:character-blaze .
 
@@ -824,35 +720,44 @@ mk:version-boraicho-mk-deadly-alliance-2002 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk-deadly-alliance-2002 ;
     mk:existsInTimeline mk:timeline-original ;
     mk:hasAbility mk:move-drunken-fist,
+        mk:move-ground-pound,
         mk:move-puke-puddle ;
     mk:memberOf mk:org-white-lotus ;
     mk:name "Bo' Rai Cho (mk-deadly-alliance-2002)"^^xsd:string ;
+    mk:usesWeapon mk:weapon-bo-staff ;
     mk:versionOf mk:character-boraicho .
 
 mk:version-boraicho-mkx a mk:CharacterVersion ;
     mk:appearsIn mk:game-mkx-2015 ;
     mk:existsInTimeline mk:timeline-reboot ;
-    mk:hasAbility mk:move-drunken-fist ;
+    mk:hasAbility mk:move-drunken-fist,
+        mk:move-ground-pound,
+        mk:move-puke-puddle ;
     mk:memberOf mk:org-white-lotus ;
     mk:name "Bo' Rai Cho (mkx-2015)"^^xsd:string ;
+    mk:usesWeapon mk:weapon-bo-staff ;
     mk:versionOf mk:character-boraicho .
 
 mk:version-cassiecage-mk11 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk11-2019 ;
     mk:existsInTimeline mk:timeline-reboot ;
     mk:hasAbility mk:move-nut-punch,
+        mk:move-revolver-quickdraw,
         mk:move-shadow-kick ;
     mk:memberOf mk:org-special-forces ;
     mk:name "Cassie Cage (mk11-2019)"^^xsd:string ;
+    mk:usesWeapon mk:weapon-dual-revolvers ;
     mk:versionOf mk:character-cassiecage .
 
 mk:version-cassiecage-mkx a mk:CharacterVersion ;
     mk:appearsIn mk:game-mkx-2015 ;
     mk:existsInTimeline mk:timeline-reboot ;
     mk:hasAbility mk:move-nut-punch,
+        mk:move-revolver-quickdraw,
         mk:move-shadow-kick ;
     mk:memberOf mk:org-special-forces ;
     mk:name "Cassie Cage (mkx-2015)"^^xsd:string ;
+    mk:usesWeapon mk:weapon-dual-revolvers ;
     mk:versionOf mk:character-cassiecage .
 
 mk:version-cetrion-mk11 a mk:CharacterVersion ;
@@ -868,6 +773,8 @@ mk:version-cyrax-mk3 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk3-1995 ;
     mk:existsInTimeline mk:timeline-original ;
     mk:hasAbility mk:ability-teleportation,
+        mk:move-chest-saw,
+        mk:move-exploding-bomb,
         mk:move-net-tangle ;
     mk:memberOf mk:org-lin-kuei ;
     mk:name "Cyrax (mk3-1995)"^^xsd:string ;
@@ -877,6 +784,8 @@ mk:version-cyrax-mk9 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk9-2011 ;
     mk:existsInTimeline mk:timeline-reboot ;
     mk:hasAbility mk:ability-teleportation,
+        mk:move-chest-saw,
+        mk:move-exploding-bomb,
         mk:move-net-tangle ;
     mk:memberOf mk:org-lin-kuei ;
     mk:name "Cyrax (mk9-2011)"^^xsd:string ;
@@ -885,14 +794,19 @@ mk:version-cyrax-mk9 a mk:CharacterVersion ;
 mk:version-daegon-mk-armageddon-2006 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk-armageddon-2006 ;
     mk:existsInTimeline mk:timeline-original ;
+    mk:hasAbility mk:move-drakes-breath,
+        mk:move-drakes-shield,
+        mk:move-flying-kick ;
     mk:memberOf mk:org-red-dragon ;
     mk:name "Daegon (mk-armageddon-2006)"^^xsd:string ;
+    mk:usesWeapon mk:weapon-dragon-blade ;
     mk:versionOf mk:character-daegon .
 
 mk:version-dvorah-mk11 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk11-2019 ;
     mk:existsInTimeline mk:timeline-reboot ;
-    mk:hasAbility mk:move-bug-spray,
+    mk:hasAbility mk:fatality-infestation,
+        mk:move-bug-spray,
         mk:move-ovipositor-rush ;
     mk:name "D'Vorah (mk11-2019)"^^xsd:string ;
     mk:usesWeapon mk:weapon-ovipositors ;
@@ -911,7 +825,9 @@ mk:version-dvorah-mkx a mk:CharacterVersion ;
 mk:version-erronblack-mk11 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk11-2019 ;
     mk:existsInTimeline mk:timeline-reboot ;
-    mk:hasAbility mk:move-revolver-quickdraw ;
+    mk:hasAbility mk:move-acid-spit,
+        mk:move-grenade-toss,
+        mk:move-revolver-quickdraw ;
     mk:memberOf mk:org-black-dragon ;
     mk:name "Erron Black (mk11-2019)"^^xsd:string ;
     mk:usesWeapon mk:weapon-dual-revolvers ;
@@ -920,7 +836,9 @@ mk:version-erronblack-mk11 a mk:CharacterVersion ;
 mk:version-erronblack-mkx a mk:CharacterVersion ;
     mk:appearsIn mk:game-mkx-2015 ;
     mk:existsInTimeline mk:timeline-reboot ;
-    mk:hasAbility mk:move-revolver-quickdraw ;
+    mk:hasAbility mk:move-acid-spit,
+        mk:move-grenade-toss,
+        mk:move-revolver-quickdraw ;
     mk:memberOf mk:org-black-dragon ;
     mk:name "Erron Black (mkx-2015)"^^xsd:string ;
     mk:usesWeapon mk:weapon-dual-revolvers ;
@@ -937,7 +855,8 @@ mk:version-frost-mk-deadly-alliance-2002 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk-deadly-alliance-2002 ;
     mk:existsInTimeline mk:timeline-original ;
     mk:hasAbility mk:ability-cryomancy,
-        mk:move-cyber-trap ;
+        mk:move-cyber-trap,
+        mk:move-ice-freeze ;
     mk:memberOf mk:org-lin-kuei ;
     mk:name "Frost (mk-deadly-alliance-2002)"^^xsd:string ;
     mk:usesWeapon mk:weapon-kori-blade ;
@@ -947,39 +866,50 @@ mk:version-frost-mk11 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk11-2019 ;
     mk:existsInTimeline mk:timeline-reboot ;
     mk:hasAbility mk:ability-cryomancy,
-        mk:move-cyber-trap ;
+        mk:move-cyber-trap,
+        mk:move-ice-freeze ;
     mk:memberOf mk:org-lin-kuei ;
     mk:name "Frost (mk11-2019)"^^xsd:string ;
+    mk:usesWeapon mk:weapon-kori-blade ;
     mk:versionOf mk:character-frost .
 
 mk:version-fujin-mk-armageddon-2006 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk-armageddon-2006 ;
     mk:existsInTimeline mk:timeline-original ;
-    mk:hasAbility mk:move-wind-tornado ;
+    mk:hasAbility mk:ability-teleportation,
+        mk:move-wind-kick,
+        mk:move-wind-tornado ;
     mk:memberOf mk:org-white-lotus ;
     mk:name "Fujin (mk-armageddon-2006)"^^xsd:string ;
+    mk:usesWeapon mk:weapon-bo-staff ;
     mk:versionOf mk:character-fujin .
 
 mk:version-fujin-mk4 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk4-1997 ;
     mk:existsInTimeline mk:timeline-original ;
-    mk:hasAbility mk:move-wind-kick,
+    mk:hasAbility mk:ability-teleportation,
+        mk:move-wind-kick,
         mk:move-wind-tornado ;
     mk:memberOf mk:org-white-lotus ;
     mk:name "Fujin (mk4-1997)"^^xsd:string ;
+    mk:usesWeapon mk:weapon-bo-staff ;
     mk:versionOf mk:character-fujin .
 
 mk:version-geras-mk1-2023 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk1-2023 ;
     mk:existsInTimeline mk:timeline-new-era ;
-    mk:hasAbility mk:ability-teleportation ;
+    mk:hasAbility mk:ability-sand-manipulation,
+        mk:ability-teleportation,
+        mk:ability-temporal-reversal ;
     mk:name "Geras (mk1-2023)"^^xsd:string ;
     mk:versionOf mk:character-geras .
 
 mk:version-geras-mk11 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk11-2019 ;
     mk:existsInTimeline mk:timeline-reboot ;
-    mk:hasAbility mk:ability-teleportation ;
+    mk:hasAbility mk:ability-sand-manipulation,
+        mk:ability-teleportation,
+        mk:ability-temporal-reversal ;
     mk:name "Geras (mk11-2019)"^^xsd:string ;
     mk:versionOf mk:character-geras .
 
@@ -987,54 +917,73 @@ mk:version-goro-mk1 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk1-1992 ;
     mk:existsInTimeline mk:timeline-original ;
     mk:hasAbility mk:fatality-shokan-tear,
+        mk:move-dragon-slam,
         mk:move-shokan-stomp ;
     mk:name "Goro (mk1-1992)"^^xsd:string ;
+    mk:usesWeapon mk:weapon-shokan-cleavers ;
     mk:versionOf mk:character-goro .
 
 mk:version-goro-mkx a mk:CharacterVersion ;
     mk:appearsIn mk:game-mkx-2015 ;
     mk:existsInTimeline mk:timeline-reboot ;
-    mk:hasAbility mk:move-shokan-stomp ;
+    mk:hasAbility mk:fatality-shokan-tear,
+        mk:move-dragon-slam,
+        mk:move-shokan-stomp ;
     mk:name "Goro (mkx-2015)"^^xsd:string ;
+    mk:usesWeapon mk:weapon-shokan-cleavers ;
     mk:versionOf mk:character-goro .
 
 mk:version-havik-mk-deception-2004 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk-deception-2004 ;
     mk:existsInTimeline mk:timeline-original ;
-    mk:hasAbility mk:move-bone-twist ;
+    mk:hasAbility mk:move-blood-spit,
+        mk:move-bone-twist,
+        mk:move-ground-burst ;
     mk:name "Havik (mk-deception-2004)"^^xsd:string ;
+    mk:usesWeapon mk:weapon-spiked-club ;
     mk:versionOf mk:character-havik .
 
 mk:version-havik-mk1-2023 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk1-2023 ;
     mk:existsInTimeline mk:timeline-new-era ;
-    mk:hasAbility mk:move-bone-twist ;
+    mk:hasAbility mk:move-blood-spit,
+        mk:move-bone-twist,
+        mk:move-ground-burst ;
     mk:name "Havik (mk1-2023)"^^xsd:string ;
+    mk:usesWeapon mk:weapon-spiked-club ;
     mk:versionOf mk:character-havik .
 
 mk:version-hotaru-mk-armageddon-2006 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk-armageddon-2006 ;
     mk:existsInTimeline mk:timeline-original ;
-    mk:hasAbility mk:move-lava-burst ;
+    mk:hasAbility mk:move-lava-burst,
+        mk:move-sun-ray,
+        mk:move-wind-kick ;
     mk:memberOf mk:org-seidan-guard ;
     mk:name "Hotaru (mk-armageddon-2006)"^^xsd:string ;
+    mk:usesWeapon mk:weapon-bo-staff ;
     mk:versionOf mk:character-hotaru .
 
 mk:version-hotaru-mk-deception-2004 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk-deception-2004 ;
     mk:existsInTimeline mk:timeline-original ;
-    mk:hasAbility mk:move-lava-burst ;
+    mk:hasAbility mk:move-lava-burst,
+        mk:move-sun-ray,
+        mk:move-wind-kick ;
     mk:memberOf mk:org-seidan-guard ;
     mk:name "Hotaru (mk-deception-2004)"^^xsd:string ;
+    mk:usesWeapon mk:weapon-bo-staff ;
     mk:versionOf mk:character-hotaru .
 
 mk:version-jacqui-mk11 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk11-2019 ;
     mk:existsInTimeline mk:timeline-reboot ;
-    mk:hasAbility mk:move-bionic-dash,
+    mk:hasAbility mk:fatality-spider-mines,
+        mk:move-bionic-dash,
         mk:move-shotgun-blast ;
     mk:memberOf mk:org-special-forces ;
     mk:name "Jacqui Briggs (mk11-2019)"^^xsd:string ;
+    mk:usesWeapon mk:weapon-cybernetic-arms ;
     mk:versionOf mk:character-jacqui .
 
 mk:version-jacqui-mkx a mk:CharacterVersion ;
@@ -1045,12 +994,14 @@ mk:version-jacqui-mkx a mk:CharacterVersion ;
         mk:move-shotgun-blast ;
     mk:memberOf mk:org-special-forces ;
     mk:name "Jacqui Briggs (mkx-2015)"^^xsd:string ;
+    mk:usesWeapon mk:weapon-cybernetic-arms ;
     mk:versionOf mk:character-jacqui .
 
 mk:version-jade-mk11 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk11-2019 ;
     mk:existsInTimeline mk:timeline-reboot ;
-    mk:hasAbility mk:move-blazing-nitro-kick,
+    mk:hasAbility mk:fatality-bow-before-me,
+        mk:move-blazing-nitro-kick,
         mk:move-tribomerang ;
     mk:name "Jade (mk11-2019)"^^xsd:string ;
     mk:usesWeapon mk:weapon-bo-staff ;
@@ -1089,7 +1040,8 @@ mk:version-jax-mk2 a mk:CharacterVersion ;
 mk:version-johnnycage-mk1 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk1-1992 ;
     mk:existsInTimeline mk:timeline-original ;
-    mk:hasAbility mk:move-nut-punch,
+    mk:hasAbility mk:move-flying-kick,
+        mk:move-nut-punch,
         mk:move-shadow-kick ;
     mk:memberOf mk:org-special-forces ;
     mk:name "Johnny Cage (mk1-1992)"^^xsd:string ;
@@ -1098,7 +1050,8 @@ mk:version-johnnycage-mk1 a mk:CharacterVersion ;
 mk:version-johnnycage-mk11 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk11-2019 ;
     mk:existsInTimeline mk:timeline-reboot ;
-    mk:hasAbility mk:move-nut-punch,
+    mk:hasAbility mk:move-flying-kick,
+        mk:move-nut-punch,
         mk:move-shadow-kick ;
     mk:memberOf mk:org-special-forces ;
     mk:name "Johnny Cage (mk11-2019)"^^xsd:string ;
@@ -1107,7 +1060,8 @@ mk:version-johnnycage-mk11 a mk:CharacterVersion ;
 mk:version-kabal-mk11 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk11-2019 ;
     mk:existsInTimeline mk:timeline-reboot ;
-    mk:hasAbility mk:move-buzzsaw,
+    mk:hasAbility mk:fatality-road-rash,
+        mk:move-buzzsaw,
         mk:move-nomad-dash ;
     mk:memberOf mk:org-black-dragon ;
     mk:name "Kabal (mk11-2019)"^^xsd:string ;
@@ -1128,7 +1082,9 @@ mk:version-kabal-mk3 a mk:CharacterVersion ;
 mk:version-kano-mk1 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk1-1992 ;
     mk:existsInTimeline mk:timeline-original ;
-    mk:hasAbility mk:move-cannonball ;
+    mk:hasAbility mk:move-cannonball,
+        mk:move-eye-laser,
+        mk:move-knife-toss ;
     mk:memberOf mk:org-black-dragon ;
     mk:name "Kano (mk1-1992)"^^xsd:string ;
     mk:versionOf mk:character-kano .
@@ -1136,7 +1092,9 @@ mk:version-kano-mk1 a mk:CharacterVersion ;
 mk:version-kano-mk11 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk11-2019 ;
     mk:existsInTimeline mk:timeline-reboot ;
-    mk:hasAbility mk:move-cannonball ;
+    mk:hasAbility mk:move-cannonball,
+        mk:move-eye-laser,
+        mk:move-knife-toss ;
     mk:memberOf mk:org-black-dragon ;
     mk:name "Kano (mk11-2019)"^^xsd:string ;
     mk:versionOf mk:character-kano .
@@ -1144,7 +1102,8 @@ mk:version-kano-mk11 a mk:CharacterVersion ;
 mk:version-kenshi-mk-deadly-alliance-2002 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk-deadly-alliance-2002 ;
     mk:existsInTimeline mk:timeline-original ;
-    mk:hasAbility mk:move-tele-flurry,
+    mk:hasAbility mk:move-energy-spark,
+        mk:move-tele-flurry,
         mk:move-telekinesis-slam ;
     mk:memberOf mk:org-special-forces ;
     mk:name "Kenshi (mk-deadly-alliance-2002)"^^xsd:string ;
@@ -1154,8 +1113,10 @@ mk:version-kenshi-mk-deadly-alliance-2002 a mk:CharacterVersion ;
 mk:version-kenshi-mk1-2023 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk1-2023 ;
     mk:existsInTimeline mk:timeline-new-era ;
-    mk:hasAbility mk:move-tele-flurry ;
-    mk:memberOf mk:org-shirai-ryu ;
+    mk:hasAbility mk:move-energy-spark,
+        mk:move-tele-flurry,
+        mk:move-telekinesis-slam ;
+    mk:memberOf mk:org-special-forces ;
     mk:name "Kenshi (mk1-2023)"^^xsd:string ;
     mk:usesWeapon mk:weapon-sento ;
     mk:versionOf mk:character-kenshi .
@@ -1163,7 +1124,8 @@ mk:version-kenshi-mk1-2023 a mk:CharacterVersion ;
 mk:version-kenshi-mkx a mk:CharacterVersion ;
     mk:appearsIn mk:game-mkx-2015 ;
     mk:existsInTimeline mk:timeline-reboot ;
-    mk:hasAbility mk:move-tele-flurry,
+    mk:hasAbility mk:move-energy-spark,
+        mk:move-tele-flurry,
         mk:move-telekinesis-slam ;
     mk:memberOf mk:org-special-forces ;
     mk:name "Kenshi (mkx-2015)"^^xsd:string ;
@@ -1173,7 +1135,9 @@ mk:version-kenshi-mkx a mk:CharacterVersion ;
 mk:version-kintaro-mk2 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk2-1993 ;
     mk:existsInTimeline mk:timeline-original ;
-    mk:hasAbility mk:move-shokan-stomp ;
+    mk:hasAbility mk:fatality-shokan-tear,
+        mk:move-dragon-breath,
+        mk:move-shokan-stomp ;
     mk:name "Kintaro (mk2-1993)"^^xsd:string ;
     mk:versionOf mk:character-kintaro .
 
@@ -1181,7 +1145,8 @@ mk:version-kitana-mk11 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk11-2019 ;
     mk:existsInTimeline mk:timeline-reboot ;
     mk:hasAbility mk:fatality-fan-decapitation,
-        mk:move-fan-lift ;
+        mk:move-fan-lift,
+        mk:move-square-wave ;
     mk:name "Kitana (mk11-2019)"^^xsd:string ;
     mk:usesWeapon mk:weapon-steel-fans ;
     mk:versionOf mk:character-kitana .
@@ -1203,29 +1168,37 @@ mk:version-kollector-mk11 a mk:CharacterVersion ;
         mk:move-demonic-mace,
         mk:move-shotel-strike ;
     mk:name "Kollector (mk11-2019)"^^xsd:string ;
+    mk:usesWeapon mk:weapon-spiked-club ;
     mk:versionOf mk:character-kollector .
 
 mk:version-kotalkahn-mk11 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk11-2019 ;
     mk:existsInTimeline mk:timeline-reboot ;
-    mk:hasAbility mk:move-sun-ray ;
+    mk:hasAbility mk:move-blade-spark,
+        mk:move-blood-tentacles,
+        mk:move-sun-ray ;
     mk:memberOf mk:org-osh-tekk ;
     mk:name "Kotal Kahn (mk11-2019)"^^xsd:string ;
+    mk:usesWeapon mk:weapon-war-hammer ;
     mk:versionOf mk:character-kotalkahn .
 
 mk:version-kotalkahn-mkx a mk:CharacterVersion ;
     mk:appearsIn mk:game-mkx-2015 ;
     mk:existsInTimeline mk:timeline-reboot ;
-    mk:hasAbility mk:move-blood-tentacles,
+    mk:hasAbility mk:move-blade-spark,
+        mk:move-blood-tentacles,
         mk:move-sun-ray ;
     mk:memberOf mk:org-osh-tekk ;
     mk:name "Kotal Kahn (mkx-2015)"^^xsd:string ;
+    mk:usesWeapon mk:weapon-war-hammer ;
     mk:versionOf mk:character-kotalkahn .
 
 mk:version-kronika-mk11 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk11-2019 ;
     mk:existsInTimeline mk:timeline-reboot ;
-    mk:hasAbility mk:ability-teleportation ;
+    mk:hasAbility mk:ability-teleportation,
+        mk:ability-temporal-manipulation,
+        mk:move-hourglass-rewind ;
     mk:name "Kronika (mk11-2019)"^^xsd:string ;
     mk:versionOf mk:character-kronika .
 
@@ -1235,7 +1208,7 @@ mk:version-kungjin-mkx a mk:CharacterVersion ;
     mk:hasAbility mk:fatality-target-practice,
         mk:move-lunge-kick,
         mk:move-straight-shot ;
-    mk:memberOf mk:org-special-forces ;
+    mk:memberOf mk:org-white-lotus ;
     mk:name "Kung Jin (mkx-2015)"^^xsd:string ;
     mk:usesWeapon mk:weapon-combat-bow ;
     mk:versionOf mk:character-kungjin .
@@ -1243,7 +1216,8 @@ mk:version-kungjin-mkx a mk:CharacterVersion ;
 mk:version-kunglao-mk11 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk11-2019 ;
     mk:existsInTimeline mk:timeline-reboot ;
-    mk:hasAbility mk:move-hat-throw,
+    mk:hasAbility mk:ability-teleportation,
+        mk:move-hat-throw,
         mk:move-wind-tornado ;
     mk:memberOf mk:org-white-lotus ;
     mk:name "Kung Lao (mk11-2019)"^^xsd:string ;
@@ -1262,14 +1236,19 @@ mk:version-kunglao-mk2 a mk:CharacterVersion ;
 mk:version-limei-mk-deadly-alliance-2002 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk-deadly-alliance-2002 ;
     mk:existsInTimeline mk:timeline-original ;
-    mk:hasAbility mk:move-energy-spark ;
+    mk:hasAbility mk:move-energy-spark,
+        mk:move-flying-kick,
+        mk:move-wind-kick ;
+    mk:memberOf mk:org-umgadi ;
     mk:name "Li Mei (mk-deadly-alliance-2002)"^^xsd:string ;
     mk:versionOf mk:character-limei .
 
 mk:version-limei-mk1-2023 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk1-2023 ;
     mk:existsInTimeline mk:timeline-new-era ;
-    mk:hasAbility mk:move-energy-spark ;
+    mk:hasAbility mk:move-energy-spark,
+        mk:move-flying-kick,
+        mk:move-wind-kick ;
     mk:memberOf mk:org-umgadi ;
     mk:name "Li Mei (mk1-2023)"^^xsd:string ;
     mk:versionOf mk:character-limei .
@@ -1279,34 +1258,43 @@ mk:version-liukang-mk1 a mk:CharacterVersion ;
     mk:existsInTimeline mk:timeline-original ;
     mk:hasAbility mk:ability-fireball-dragon,
         mk:fatality-dragon-bite,
-        mk:move-bicycle-kick ;
+        mk:move-bicycle-kick,
+        mk:move-flying-kick ;
     mk:memberOf mk:org-white-lotus ;
     mk:name "Liu Kang (mk1-1992)"^^xsd:string ;
+    mk:usesWeapon mk:weapon-dragon-blade ;
     mk:versionOf mk:character-liukang .
 
 mk:version-liukang-mk1-2023 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk1-2023 ;
     mk:existsInTimeline mk:timeline-new-era ;
     mk:hasAbility mk:ability-fireball-dragon,
-        mk:ability-thunder-mastery ;
+        mk:fatality-dragon-bite,
+        mk:move-bicycle-kick,
+        mk:move-flying-kick ;
     mk:memberOf mk:org-white-lotus ;
     mk:name "Liu Kang (mk1-2023)"^^xsd:string ;
+    mk:usesWeapon mk:weapon-dragon-blade ;
     mk:versionOf mk:character-liukang .
 
 mk:version-liukang-mk11 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk11-2019 ;
     mk:existsInTimeline mk:timeline-reboot ;
     mk:hasAbility mk:ability-fireball-dragon,
-        mk:ability-thunder-mastery,
-        mk:move-bicycle-kick ;
+        mk:fatality-dragon-bite,
+        mk:move-bicycle-kick,
+        mk:move-flying-kick ;
     mk:memberOf mk:org-white-lotus ;
     mk:name "Liu Kang (mk11-2019)"^^xsd:string ;
+    mk:usesWeapon mk:weapon-dragon-blade ;
     mk:versionOf mk:character-liukang .
 
 mk:version-mavado-mk-deadly-alliance-2002 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk-deadly-alliance-2002 ;
     mk:existsInTimeline mk:timeline-original ;
-    mk:hasAbility mk:move-grapple-hook-kick ;
+    mk:hasAbility mk:move-grapple-hook-kick,
+        mk:move-hookswords,
+        mk:move-nomad-dash ;
     mk:memberOf mk:org-red-dragon ;
     mk:name "Mavado (mk-deadly-alliance-2002)"^^xsd:string ;
     mk:usesWeapon mk:weapon-hookswords ;
@@ -1315,7 +1303,9 @@ mk:version-mavado-mk-deadly-alliance-2002 a mk:CharacterVersion ;
 mk:version-mavado-mk-tournament-edition-2003 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk-tournament-edition-2003 ;
     mk:existsInTimeline mk:timeline-original ;
-    mk:hasAbility mk:move-grapple-hook-kick ;
+    mk:hasAbility mk:move-grapple-hook-kick,
+        mk:move-hookswords,
+        mk:move-nomad-dash ;
     mk:memberOf mk:org-red-dragon ;
     mk:name "Mavado (mk-tournament-edition-2003)"^^xsd:string ;
     mk:usesWeapon mk:weapon-hookswords ;
@@ -1324,7 +1314,10 @@ mk:version-mavado-mk-tournament-edition-2003 a mk:CharacterVersion ;
 mk:version-mileena-mk1-2023 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk1-2023 ;
     mk:existsInTimeline mk:timeline-new-era ;
-    mk:hasAbility mk:ability-teleportation ;
+    mk:hasAbility mk:ability-teleportation,
+        mk:move-ball-roll,
+        mk:move-leaping-neck-bite,
+        mk:move-sai-toss ;
     mk:name "Mileena (mk1-2023)"^^xsd:string ;
     mk:usesWeapon mk:weapon-sai-daggers ;
     mk:versionOf mk:character-mileena .
@@ -1332,7 +1325,10 @@ mk:version-mileena-mk1-2023 a mk:CharacterVersion ;
 mk:version-mileena-mk2 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk2-1993 ;
     mk:existsInTimeline mk:timeline-original ;
-    mk:hasAbility mk:ability-teleportation ;
+    mk:hasAbility mk:ability-teleportation,
+        mk:move-ball-roll,
+        mk:move-leaping-neck-bite,
+        mk:move-sai-toss ;
     mk:name "Mileena (mk2-1993)"^^xsd:string ;
     mk:usesWeapon mk:weapon-sai-daggers ;
     mk:versionOf mk:character-mileena .
@@ -1340,7 +1336,10 @@ mk:version-mileena-mk2 a mk:CharacterVersion ;
 mk:version-mileena-mkx a mk:CharacterVersion ;
     mk:appearsIn mk:game-mkx-2015 ;
     mk:existsInTimeline mk:timeline-reboot ;
-    mk:hasAbility mk:ability-teleportation ;
+    mk:hasAbility mk:ability-teleportation,
+        mk:move-ball-roll,
+        mk:move-leaping-neck-bite,
+        mk:move-sai-toss ;
     mk:name "Mileena (mkx-2015)"^^xsd:string ;
     mk:usesWeapon mk:weapon-sai-daggers ;
     mk:versionOf mk:character-mileena .
@@ -1348,14 +1347,18 @@ mk:version-mileena-mkx a mk:CharacterVersion ;
 mk:version-motaro-mk-armageddon-2006 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk-armageddon-2006 ;
     mk:existsInTimeline mk:timeline-original ;
-    mk:hasAbility mk:move-centaur-charge ;
+    mk:hasAbility mk:move-centaur-charge,
+        mk:move-energy-spark,
+        mk:move-teleport-stomp ;
     mk:name "Motaro (mk-armageddon-2006)"^^xsd:string ;
     mk:versionOf mk:character-motaro .
 
 mk:version-motaro-mk3 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk3-1995 ;
     mk:existsInTimeline mk:timeline-original ;
-    mk:hasAbility mk:move-centaur-charge ;
+    mk:hasAbility mk:move-centaur-charge,
+        mk:move-energy-spark,
+        mk:move-teleport-stomp ;
     mk:name "Motaro (mk3-1995)"^^xsd:string ;
     mk:versionOf mk:character-motaro .
 
@@ -1372,7 +1375,8 @@ mk:version-nightwolf-mk3 a mk:CharacterVersion ;
 mk:version-nightwolf-mk9 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk9-2011 ;
     mk:existsInTimeline mk:timeline-reboot ;
-    mk:hasAbility mk:move-rhino-charge,
+    mk:hasAbility mk:fatality-war-dance,
+        mk:move-rhino-charge,
         mk:move-spirit-arrow ;
     mk:name "Nightwolf (mk9-2011)"^^xsd:string ;
     mk:usesWeapon mk:weapon-spirit-tomahawks ;
@@ -1382,55 +1386,73 @@ mk:version-nitara-mk-deadly-alliance-2002 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk-deadly-alliance-2002 ;
     mk:existsInTimeline mk:timeline-original ;
     mk:hasAbility mk:fatality-vaeternus-drain,
-        mk:move-blood-spit ;
+        mk:move-blood-spit,
+        mk:move-blood-tentacles ;
     mk:name "Nitara (mk-deadly-alliance-2002)"^^xsd:string ;
+    mk:usesWeapon mk:weapon-kriss-dagger ;
     mk:versionOf mk:character-nitara .
 
 mk:version-nitara-mk1-2023 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk1-2023 ;
     mk:existsInTimeline mk:timeline-new-era ;
-    mk:hasAbility mk:move-blood-spit ;
+    mk:hasAbility mk:fatality-vaeternus-drain,
+        mk:move-blood-spit,
+        mk:move-blood-tentacles ;
     mk:name "Nitara (mk1-2023)"^^xsd:string ;
+    mk:usesWeapon mk:weapon-kriss-dagger ;
     mk:versionOf mk:character-nitara .
 
 mk:version-noobsaibot-mk11 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk11-2019 ;
     mk:existsInTimeline mk:timeline-reboot ;
     mk:hasAbility mk:ability-shadow-magic,
-        mk:move-shadow-slide ;
+        mk:move-black-hole,
+        mk:move-shadow-slide,
+        mk:move-shadow-tackle ;
     mk:memberOf mk:org-brotherhood-of-shadow ;
     mk:name "Noob Saibot (mk11-2019)"^^xsd:string ;
+    mk:usesWeapon mk:weapon-kriss-dagger ;
     mk:versionOf mk:character-noobsaibot .
 
 mk:version-noobsaibot-mk2 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk2-1993 ;
     mk:existsInTimeline mk:timeline-original ;
     mk:hasAbility mk:ability-shadow-magic,
-        mk:move-shadow-slide ;
+        mk:move-black-hole,
+        mk:move-shadow-slide,
+        mk:move-shadow-tackle ;
     mk:memberOf mk:org-brotherhood-of-shadow ;
     mk:name "Noob Saibot (mk2-1993)"^^xsd:string ;
+    mk:usesWeapon mk:weapon-kriss-dagger ;
     mk:versionOf mk:character-noobsaibot .
 
 mk:version-onaga-mk-armageddon-2006 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk-armageddon-2006 ;
     mk:existsInTimeline mk:timeline-original ;
-    mk:hasAbility mk:move-dragon-breath ;
+    mk:hasAbility mk:ability-necromancy,
+        mk:move-dragon-breath,
+        mk:move-dragon-slam ;
     mk:name "Onaga (mk-armageddon-2006)"^^xsd:string ;
+    mk:usesWeapon mk:weapon-dragon-blade ;
     mk:versionOf mk:character-onaga .
 
 mk:version-onaga-mk-deception-2004 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk-deception-2004 ;
     mk:existsInTimeline mk:timeline-original ;
-    mk:hasAbility mk:move-dragon-breath,
+    mk:hasAbility mk:ability-necromancy,
+        mk:move-dragon-breath,
         mk:move-dragon-slam ;
     mk:name "Onaga (mk-deception-2004)"^^xsd:string ;
+    mk:usesWeapon mk:weapon-dragon-blade ;
     mk:versionOf mk:character-onaga .
 
 mk:version-quanchi-mk4 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk4-1997 ;
     mk:existsInTimeline mk:timeline-original ;
     mk:hasAbility mk:ability-necromancy,
-        mk:ability-teleportation ;
+        mk:ability-teleportation,
+        mk:move-ground-burst,
+        mk:move-skeletal-boost ;
     mk:memberOf mk:org-brotherhood-of-shadow ;
     mk:name "Quan Chi (mk4-1997)"^^xsd:string ;
     mk:versionOf mk:character-quanchi .
@@ -1439,7 +1461,9 @@ mk:version-quanchi-mkx a mk:CharacterVersion ;
     mk:appearsIn mk:game-mkx-2015 ;
     mk:existsInTimeline mk:timeline-reboot ;
     mk:hasAbility mk:ability-necromancy,
-        mk:ability-teleportation ;
+        mk:ability-teleportation,
+        mk:move-ground-burst,
+        mk:move-skeletal-boost ;
     mk:memberOf mk:org-brotherhood-of-shadow ;
     mk:name "Quan Chi (mkx-2015)"^^xsd:string ;
     mk:versionOf mk:character-quanchi .
@@ -1452,90 +1476,118 @@ mk:version-raiden-mk1 a mk:CharacterVersion ;
         mk:ability-thunder-mastery ;
     mk:memberOf mk:org-white-lotus ;
     mk:name "Raiden (mk1-1992)"^^xsd:string ;
+    mk:usesWeapon mk:weapon-bo-staff ;
     mk:versionOf mk:character-raiden .
 
 mk:version-raiden-mk1-2023 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk1-2023 ;
     mk:existsInTimeline mk:timeline-new-era ;
-    mk:hasAbility mk:ability-thunder-mastery ;
+    mk:hasAbility mk:ability-electric-fly,
+        mk:ability-teleportation,
+        mk:ability-thunder-mastery ;
     mk:memberOf mk:org-white-lotus ;
     mk:name "Raiden (mk1-2023)"^^xsd:string ;
+    mk:usesWeapon mk:weapon-bo-staff ;
     mk:versionOf mk:character-raiden .
 
 mk:version-raiden-mk11 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk11-2019 ;
     mk:existsInTimeline mk:timeline-reboot ;
     mk:hasAbility mk:ability-electric-fly,
+        mk:ability-teleportation,
         mk:ability-thunder-mastery ;
     mk:memberOf mk:org-white-lotus ;
     mk:name "Raiden (mk11-2019)"^^xsd:string ;
+    mk:usesWeapon mk:weapon-bo-staff ;
     mk:versionOf mk:character-raiden .
 
 mk:version-reiko-mk-gold-1999 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk-gold-1999 ;
     mk:existsInTimeline mk:timeline-original ;
-    mk:hasAbility mk:move-charging-spear ;
+    mk:hasAbility mk:move-charging-spear,
+        mk:move-revolver-quickdraw,
+        mk:move-teleport-stomp ;
     mk:name "Reiko (mk-gold-1999)"^^xsd:string ;
-    mk:usesWeapon mk:weapon-spiked-club ;
+    mk:usesWeapon mk:weapon-bo-staff ;
     mk:versionOf mk:character-reiko .
 
 mk:version-reiko-mk1-2023 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk1-2023 ;
     mk:existsInTimeline mk:timeline-new-era ;
-    mk:hasAbility mk:move-charging-spear ;
+    mk:hasAbility mk:move-charging-spear,
+        mk:move-revolver-quickdraw,
+        mk:move-teleport-stomp ;
     mk:name "Reiko (mk1-2023)"^^xsd:string ;
-    mk:usesWeapon mk:weapon-spiked-club ;
+    mk:usesWeapon mk:weapon-bo-staff ;
     mk:versionOf mk:character-reiko .
 
 mk:version-reiko-mk4 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk4-1997 ;
     mk:existsInTimeline mk:timeline-original ;
-    mk:hasAbility mk:move-charging-spear ;
+    mk:hasAbility mk:move-charging-spear,
+        mk:move-revolver-quickdraw,
+        mk:move-teleport-stomp ;
     mk:name "Reiko (mk4-1997)"^^xsd:string ;
-    mk:usesWeapon mk:weapon-spiked-club ;
+    mk:usesWeapon mk:weapon-bo-staff ;
     mk:versionOf mk:character-reiko .
 
 mk:version-reptile-mk1 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk1-1992 ;
     mk:existsInTimeline mk:timeline-original ;
-    mk:hasAbility mk:move-acid-spit ;
+    mk:hasAbility mk:ability-invisibility,
+        mk:move-acid-spit,
+        mk:move-forceball,
+        mk:move-reptile-slide ;
     mk:name "Reptile (mk1-1992)"^^xsd:string ;
     mk:versionOf mk:character-reptile .
 
 mk:version-reptile-mk1-2023 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk1-2023 ;
     mk:existsInTimeline mk:timeline-new-era ;
-    mk:hasAbility mk:move-acid-spit ;
+    mk:hasAbility mk:ability-invisibility,
+        mk:move-acid-spit,
+        mk:move-forceball,
+        mk:move-reptile-slide ;
     mk:name "Reptile (mk1-2023)"^^xsd:string ;
     mk:versionOf mk:character-reptile .
 
 mk:version-reptile-mkx a mk:CharacterVersion ;
     mk:appearsIn mk:game-mkx-2015 ;
     mk:existsInTimeline mk:timeline-reboot ;
-    mk:hasAbility mk:move-acid-spit ;
+    mk:hasAbility mk:ability-invisibility,
+        mk:move-acid-spit,
+        mk:move-forceball,
+        mk:move-reptile-slide ;
     mk:name "Reptile (mkx-2015)"^^xsd:string ;
     mk:versionOf mk:character-reptile .
 
 mk:version-sareena-mk-mythologies-1997 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk-mythologies-1997 ;
     mk:existsInTimeline mk:timeline-original ;
-    mk:hasAbility mk:move-skull-daggers ;
+    mk:hasAbility mk:ability-shadow-magic,
+        mk:move-shadow-slide,
+        mk:move-skull-daggers ;
     mk:memberOf mk:org-brotherhood-of-shadow ;
     mk:name "Sareena (mk-mythologies-1997)"^^xsd:string ;
+    mk:usesWeapon mk:weapon-kriss-dagger ;
     mk:versionOf mk:character-sareena .
 
 mk:version-sareena-mk-tournament-edition-2003 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk-tournament-edition-2003 ;
     mk:existsInTimeline mk:timeline-original ;
-    mk:hasAbility mk:move-skull-daggers ;
-    mk:memberOf mk:org-lin-kuei ;
+    mk:hasAbility mk:ability-shadow-magic,
+        mk:move-shadow-slide,
+        mk:move-skull-daggers ;
+    mk:memberOf mk:org-brotherhood-of-shadow ;
     mk:name "Sareena (mk-tournament-edition-2003)"^^xsd:string ;
+    mk:usesWeapon mk:weapon-kriss-dagger ;
     mk:versionOf mk:character-sareena .
 
 mk:version-scorpion-mk1 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk1-1992 ;
     mk:existsInTimeline mk:timeline-original ;
-    mk:hasAbility mk:ability-hellfire,
+    mk:hasAbility mk:ability-flame-aura,
+        mk:ability-hellfire,
         mk:fatality-toasty,
         mk:move-spear ;
     mk:memberOf mk:org-shirai-ryu ;
@@ -1546,9 +1598,11 @@ mk:version-scorpion-mk1 a mk:CharacterVersion ;
 mk:version-scorpion-mk1-2023 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk1-2023 ;
     mk:existsInTimeline mk:timeline-new-era ;
-    mk:hasAbility mk:ability-hellfire,
+    mk:hasAbility mk:ability-flame-aura,
+        mk:ability-hellfire,
+        mk:fatality-toasty,
         mk:move-spear ;
-    mk:memberOf mk:org-lin-kuei ;
+    mk:memberOf mk:org-shirai-ryu ;
     mk:name "Scorpion (mk1-2023)"^^xsd:string ;
     mk:usesWeapon mk:weapon-kunai-spear ;
     mk:versionOf mk:character-scorpion .
@@ -1556,7 +1610,8 @@ mk:version-scorpion-mk1-2023 a mk:CharacterVersion ;
 mk:version-scorpion-mk11 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk11-2019 ;
     mk:existsInTimeline mk:timeline-reboot ;
-    mk:hasAbility mk:ability-hellfire,
+    mk:hasAbility mk:ability-flame-aura,
+        mk:ability-hellfire,
         mk:fatality-toasty,
         mk:move-spear ;
     mk:memberOf mk:org-shirai-ryu ;
@@ -1567,8 +1622,10 @@ mk:version-scorpion-mk11 a mk:CharacterVersion ;
 mk:version-sektor-mk3 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk3-1995 ;
     mk:existsInTimeline mk:timeline-original ;
-    mk:hasAbility mk:ability-teleportation,
-        mk:move-missile-salvo ;
+    mk:hasAbility mk:move-compactor,
+        mk:move-flamethrower,
+        mk:move-missile-salvo,
+        mk:move-teleport-uppercut ;
     mk:memberOf mk:org-lin-kuei ;
     mk:name "Sektor (mk3-1995)"^^xsd:string ;
     mk:versionOf mk:character-sektor .
@@ -1576,8 +1633,10 @@ mk:version-sektor-mk3 a mk:CharacterVersion ;
 mk:version-sektor-mk9 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk9-2011 ;
     mk:existsInTimeline mk:timeline-reboot ;
-    mk:hasAbility mk:ability-teleportation,
-        mk:move-missile-salvo ;
+    mk:hasAbility mk:move-compactor,
+        mk:move-flamethrower,
+        mk:move-missile-salvo,
+        mk:move-teleport-uppercut ;
     mk:memberOf mk:org-lin-kuei ;
     mk:name "Sektor (mk9-2011)"^^xsd:string ;
     mk:versionOf mk:character-sektor .
@@ -1585,7 +1644,9 @@ mk:version-sektor-mk9 a mk:CharacterVersion ;
 mk:version-shangtsung-mk-deadly-alliance-2002 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk-deadly-alliance-2002 ;
     mk:existsInTimeline mk:timeline-original ;
-    mk:hasAbility mk:ability-soul-stealing ;
+    mk:hasAbility mk:ability-soul-stealing,
+        mk:move-flaming-skulls,
+        mk:move-soul-ball ;
     mk:name "Shang Tsung (mk-deadly-alliance-2002)"^^xsd:string ;
     mk:versionOf mk:character-shangtsung .
 
@@ -1593,6 +1654,7 @@ mk:version-shangtsung-mk1 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk1-1992 ;
     mk:existsInTimeline mk:timeline-original ;
     mk:hasAbility mk:ability-soul-stealing,
+        mk:move-flaming-skulls,
         mk:move-soul-ball ;
     mk:name "Shang Tsung (mk1-1992)"^^xsd:string ;
     mk:versionOf mk:character-shangtsung .
@@ -1600,13 +1662,19 @@ mk:version-shangtsung-mk1 a mk:CharacterVersion ;
 mk:version-shangtsung-mk1-2023 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk1-2023 ;
     mk:existsInTimeline mk:timeline-new-era ;
-    mk:hasAbility mk:ability-soul-stealing ;
+    mk:hasAbility mk:ability-soul-stealing,
+        mk:move-flaming-skulls,
+        mk:move-soul-ball ;
     mk:name "Shang Tsung (mk1-2023)"^^xsd:string ;
     mk:versionOf mk:character-shangtsung .
 
 mk:version-shaokahn-mk11 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk11-2019 ;
     mk:existsInTimeline mk:timeline-reboot ;
+    mk:hasAbility mk:move-emperor-shield,
+        mk:move-light-spear,
+        mk:move-shoulder-charge,
+        mk:move-wrath-hammer ;
     mk:name "Shao Kahn (mk11-2019)"^^xsd:string ;
     mk:usesWeapon mk:weapon-war-hammer ;
     mk:versionOf mk:character-shaokahn .
@@ -1614,6 +1682,10 @@ mk:version-shaokahn-mk11 a mk:CharacterVersion ;
 mk:version-shaokahn-mk2 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk2-1993 ;
     mk:existsInTimeline mk:timeline-original ;
+    mk:hasAbility mk:move-emperor-shield,
+        mk:move-light-spear,
+        mk:move-shoulder-charge,
+        mk:move-wrath-hammer ;
     mk:name "Shao Kahn (mk2-1993)"^^xsd:string ;
     mk:usesWeapon mk:weapon-war-hammer ;
     mk:versionOf mk:character-shaokahn .
@@ -1631,7 +1703,9 @@ mk:version-sheeva-mk3 a mk:CharacterVersion ;
 mk:version-sheeva-mk9 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk9-2011 ;
     mk:existsInTimeline mk:timeline-reboot ;
-    mk:hasAbility mk:move-teleport-stomp ;
+    mk:hasAbility mk:fatality-spine-ripper,
+        mk:move-teleport-stomp,
+        mk:move-untranslatable-rage ;
     mk:name "Sheeva (mk9-2011)"^^xsd:string ;
     mk:usesWeapon mk:weapon-shokan-cleavers ;
     mk:versionOf mk:character-sheeva .
@@ -1640,41 +1714,55 @@ mk:version-shinnok-mk4 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk4-1997 ;
     mk:existsInTimeline mk:timeline-original ;
     mk:hasAbility mk:ability-necromancy,
-        mk:ability-teleportation ;
+        mk:ability-shadow-magic,
+        mk:ability-teleportation,
+        mk:move-skeletal-boost ;
     mk:memberOf mk:org-brotherhood-of-shadow ;
     mk:name "Shinnok (mk4-1997)"^^xsd:string ;
+    mk:usesWeapon mk:weapon-kriss-dagger ;
     mk:versionOf mk:character-shinnok .
 
 mk:version-shinnok-mkx a mk:CharacterVersion ;
     mk:appearsIn mk:game-mkx-2015 ;
     mk:existsInTimeline mk:timeline-reboot ;
     mk:hasAbility mk:ability-necromancy,
-        mk:ability-teleportation ;
+        mk:ability-shadow-magic,
+        mk:ability-teleportation,
+        mk:move-skeletal-boost ;
     mk:memberOf mk:org-brotherhood-of-shadow ;
     mk:name "Shinnok (mkx-2015)"^^xsd:string ;
+    mk:usesWeapon mk:weapon-kriss-dagger ;
     mk:versionOf mk:character-shinnok .
 
 mk:version-shujinko-mk-armageddon-2006 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk-armageddon-2006 ;
     mk:existsInTimeline mk:timeline-original ;
-    mk:hasAbility mk:move-mimic-mastery ;
+    mk:hasAbility mk:fatality-face-crusher,
+        mk:move-ice-freeze,
+        mk:move-mimic-mastery,
+        mk:move-spear ;
     mk:memberOf mk:org-white-lotus ;
     mk:name "Shujinko (mk-armageddon-2006)"^^xsd:string ;
+    mk:usesWeapon mk:weapon-dragon-blade ;
     mk:versionOf mk:character-shujinko .
 
 mk:version-shujinko-mk-deception-2004 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk-deception-2004 ;
     mk:existsInTimeline mk:timeline-original ;
     mk:hasAbility mk:fatality-face-crusher,
-        mk:move-mimic-mastery ;
+        mk:move-ice-freeze,
+        mk:move-mimic-mastery,
+        mk:move-spear ;
     mk:memberOf mk:org-white-lotus ;
     mk:name "Shujinko (mk-deception-2004)"^^xsd:string ;
+    mk:usesWeapon mk:weapon-dragon-blade ;
     mk:versionOf mk:character-shujinko .
 
 mk:version-sindel-mk1-2023 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk1-2023 ;
     mk:existsInTimeline mk:timeline-new-era ;
-    mk:hasAbility mk:move-banshee-scream,
+    mk:hasAbility mk:fatality-scream-queen,
+        mk:move-banshee-scream,
         mk:move-hair-whip ;
     mk:name "Sindel (mk1-2023)"^^xsd:string ;
     mk:versionOf mk:character-sindel .
@@ -1691,43 +1779,61 @@ mk:version-sindel-mk3 a mk:CharacterVersion ;
 mk:version-smoke-mk1-2023 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk1-2023 ;
     mk:existsInTimeline mk:timeline-new-era ;
-    mk:hasAbility mk:ability-teleportation ;
+    mk:hasAbility mk:ability-invisibility,
+        mk:ability-teleportation,
+        mk:move-smoke-bomb,
+        mk:move-smoke-cloud ;
     mk:memberOf mk:org-lin-kuei ;
     mk:name "Smoke (mk1-2023)"^^xsd:string ;
+    mk:usesWeapon mk:weapon-kriss-dagger ;
     mk:versionOf mk:character-smoke .
 
 mk:version-smoke-mk3 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk3-1995 ;
     mk:existsInTimeline mk:timeline-original ;
-    mk:hasAbility mk:ability-teleportation ;
+    mk:hasAbility mk:ability-invisibility,
+        mk:ability-teleportation,
+        mk:move-smoke-bomb,
+        mk:move-smoke-cloud ;
     mk:memberOf mk:org-lin-kuei ;
     mk:name "Smoke (mk3-1995)"^^xsd:string ;
+    mk:usesWeapon mk:weapon-kriss-dagger ;
     mk:versionOf mk:character-smoke .
 
 mk:version-smoke-mk9 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk9-2011 ;
     mk:existsInTimeline mk:timeline-reboot ;
-    mk:hasAbility mk:ability-teleportation ;
+    mk:hasAbility mk:ability-invisibility,
+        mk:ability-teleportation,
+        mk:move-smoke-bomb,
+        mk:move-smoke-cloud ;
     mk:memberOf mk:org-lin-kuei ;
     mk:name "Smoke (mk9-2011)"^^xsd:string ;
+    mk:usesWeapon mk:weapon-kriss-dagger ;
     mk:versionOf mk:character-smoke .
 
 mk:version-sonyablade-mk1 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk1-1992 ;
     mk:existsInTimeline mk:timeline-original ;
     mk:hasAbility mk:fatality-kiss-of-death,
+        mk:move-air-throw,
+        mk:move-grenade-toss,
         mk:move-ring-toss ;
     mk:memberOf mk:org-special-forces ;
     mk:name "Sonya Blade (mk1-1992)"^^xsd:string ;
+    mk:usesWeapon mk:weapon-nightsticks ;
     mk:versionOf mk:character-sonyablade .
 
 mk:version-sonyablade-mk11 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk11-2019 ;
     mk:existsInTimeline mk:timeline-reboot ;
     mk:hasAbility mk:fatality-kiss-of-death,
+        mk:move-air-throw,
+        mk:move-grenade-toss,
         mk:move-ring-toss ;
     mk:memberOf mk:org-special-forces ;
     mk:name "Sonya Blade (mk11-2019)"^^xsd:string ;
+    mk:usesWeapon mk:weapon-nightsticks ;
     mk:versionOf mk:character-sonyablade .
 
 mk:version-stryker-mk3 a mk:CharacterVersion ;
@@ -1744,7 +1850,8 @@ mk:version-stryker-mk3 a mk:CharacterVersion ;
 mk:version-stryker-mk9 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk9-2011 ;
     mk:existsInTimeline mk:timeline-reboot ;
-    mk:hasAbility mk:move-baton-trip,
+    mk:hasAbility mk:fatality-time-served,
+        mk:move-baton-trip,
         mk:move-grenade-toss ;
     mk:memberOf mk:org-special-forces ;
     mk:name "Kurtis Stryker (mk9-2011)"^^xsd:string ;
@@ -1755,6 +1862,8 @@ mk:version-subzero-mk1 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk1-1992 ;
     mk:existsInTimeline mk:timeline-original ;
     mk:hasAbility mk:ability-cryomancy,
+        mk:ability-ice-clone,
+        mk:ability-ice-slide,
         mk:fatality-spine-rip,
         mk:move-ice-freeze ;
     mk:memberOf mk:org-lin-kuei ;
@@ -1766,6 +1875,9 @@ mk:version-subzero-mk1-2023 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk1-2023 ;
     mk:existsInTimeline mk:timeline-new-era ;
     mk:hasAbility mk:ability-cryomancy,
+        mk:ability-ice-clone,
+        mk:ability-ice-slide,
+        mk:fatality-spine-rip,
         mk:move-ice-freeze ;
     mk:memberOf mk:org-lin-kuei ;
     mk:name "Sub-Zero (mk1-2023)"^^xsd:string ;
@@ -1776,7 +1888,9 @@ mk:version-subzero-mk11 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk11-2019 ;
     mk:existsInTimeline mk:timeline-reboot ;
     mk:hasAbility mk:ability-cryomancy,
+        mk:ability-ice-clone,
         mk:ability-ice-slide,
+        mk:fatality-spine-rip,
         mk:move-ice-freeze ;
     mk:memberOf mk:org-lin-kuei ;
     mk:name "Sub-Zero (mk11-2019)"^^xsd:string ;
@@ -1797,6 +1911,9 @@ mk:version-takeda-mkx a mk:CharacterVersion ;
 mk:version-tanya-mk1-2023 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk1-2023 ;
     mk:existsInTimeline mk:timeline-new-era ;
+    mk:hasAbility mk:move-split-flip-kick,
+        mk:move-surging-fire,
+        mk:move-tonfa-flurry ;
     mk:memberOf mk:org-umgadi ;
     mk:name "Tanya (mk1-2023)"^^xsd:string ;
     mk:usesWeapon mk:weapon-daggers-of-denial ;
@@ -1805,6 +1922,10 @@ mk:version-tanya-mk1-2023 a mk:CharacterVersion ;
 mk:version-tanya-mk4 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk4-1997 ;
     mk:existsInTimeline mk:timeline-original ;
+    mk:hasAbility mk:move-split-flip-kick,
+        mk:move-surging-fire,
+        mk:move-tonfa-flurry ;
+    mk:memberOf mk:org-umgadi ;
     mk:name "Tanya (mk4-1997)"^^xsd:string ;
     mk:usesWeapon mk:weapon-daggers-of-denial ;
     mk:versionOf mk:character-tanya .
@@ -1812,7 +1933,11 @@ mk:version-tanya-mk4 a mk:CharacterVersion ;
 mk:version-taven-mk-armageddon-2006 a mk:CharacterVersion ;
     mk:appearsIn mk:game-mk-armageddon-2006 ;
     mk:existsInTimeline mk:timeline-original ;
+    mk:hasAbility mk:ability-teleportation,
+        mk:move-inner-fire,
+        mk:move-speed-of-light ;
     mk:name "Taven (mk-armageddon-2006)"^^xsd:string ;
+    mk:usesWeapon mk:weapon-dragon-blade ;
     mk:versionOf mk:character-taven .
 
 mk:weapon-bladed-whips a mk:Weapon ;
@@ -1823,17 +1948,15 @@ mk:weapon-combat-bow a mk:Weapon ;
     mk:description "Kung Jin's collapsible recurve bow functioning as a bludgeon, bo staff, and trick arrow launcher."^^xsd:string ;
     mk:name "Shaolin Combat Bow"^^xsd:string .
 
-mk:ability-electric-fly a mk:Ability ;
-    mk:description "Propelling oneself horizontally through the air enveloped in electrical power."^^xsd:string ;
-    mk:hasElement mk:element-lightning ;
-    mk:moveCategory "Mobility"^^xsd:string ;
-    mk:name "Electric Fly (Superman)"^^xsd:string .
+mk:ability-sand-manipulation a mk:Ability ;
+    mk:description "Membentuk pasir waktu abadi menjadi palu, dinding pertahanan, atau jebakan temporal."^^xsd:string ;
+    mk:moveCategory "Ability"^^xsd:string ;
+    mk:name "Titan Sand Manipulation"^^xsd:string .
 
-mk:ability-shadow-magic a mk:Ability ;
-    mk:description "Summoning shadow wraiths, portals, and dark clones."^^xsd:string ;
-    mk:hasElement mk:element-shadow ;
-    mk:moveCategory "Dark Magic"^^xsd:string ;
-    mk:name "Shadow Magic"^^xsd:string .
+mk:ability-temporal-reversal a mk:Ability ;
+    mk:description "Memutar balik waktu tubuh sendiri beberapa detik untuk memulihkan kesehatan dan posisi."^^xsd:string ;
+    mk:moveCategory "Ability"^^xsd:string ;
+    mk:name "Temporal Reversal (Time Rewind)"^^xsd:string .
 
 mk:character-ashrah a mk:Character ;
     mk:alternateName "The Purified Demon"^^xsd:string ;
@@ -1846,41 +1969,6 @@ mk:character-ashrah a mk:Character ;
     mk:name "Ashrah"^^xsd:string ;
     mk:originatesFrom mk:realm-netherrealm ;
     mk:sourceURL "https://mortalkombat.fandom.com/wiki/Ashrah"^^xsd:anyURI ;
-    mk:verificationStatus "verified"^^xsd:string .
-
-mk:character-cetrion a mk:Character ;
-    mk:alliedWith mk:character-kronika ;
-    mk:alternateName "Elder Goddess of Virtue and Life"^^xsd:string ;
-    mk:description "Daughter of Kronika and sister to Shinnok, manipulating earth, water, fire, and air while torn between familial duty and universal righteousness."^^xsd:string ;
-    mk:firstAppearanceYear "2019"^^xsd:gYear ;
-    mk:hasSpecies "Elder Goddess"^^xsd:string ;
-    mk:hasVersion mk:version-cetrion-mk11 ;
-    mk:name "Cetrion"^^xsd:string ;
-    mk:originatesFrom mk:realm-earthrealm ;
-    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Cetrion"^^xsd:anyURI ;
-    mk:verificationStatus "verified"^^xsd:string .
-
-mk:character-daegon a mk:Character ;
-    mk:alternateName "Founder of the Red Dragon"^^xsd:string ;
-    mk:description "Edenian demigod son of Argus and Delia who awoke prematurely, slew his parents, and established the criminal Red Dragon syndicate."^^xsd:string ;
-    mk:firstAppearanceYear "2006"^^xsd:gYear ;
-    mk:hasSpecies "Edenian Demigod"^^xsd:string ;
-    mk:hasVersion mk:version-daegon-mk-armageddon-2006 ;
-    mk:name "Daegon"^^xsd:string ;
-    mk:originatesFrom mk:realm-edenia ;
-    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Daegon"^^xsd:anyURI ;
-    mk:verificationStatus "verified"^^xsd:string .
-
-mk:character-kungjin a mk:Character ;
-    mk:alliedWith mk:character-kunglao ;
-    mk:alternateName "Shaolin Archer"^^xsd:string ;
-    mk:description "Cousin of Kung Lao and reformed thief turned Shaolin archer recruited into Cassie Cage's Special Forces tactical unit."^^xsd:string ;
-    mk:firstAppearanceYear "2015"^^xsd:gYear ;
-    mk:hasSpecies "Human"^^xsd:string ;
-    mk:hasVersion mk:version-kungjin-mkx ;
-    mk:name "Kung Jin"^^xsd:string ;
-    mk:originatesFrom mk:realm-earthrealm ;
-    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Kung_Jin"^^xsd:anyURI ;
     mk:verificationStatus "verified"^^xsd:string .
 
 mk:character-limei a mk:Character ;
@@ -1932,18 +2020,6 @@ mk:character-nitara a mk:Character ;
     mk:sourceURL "https://mortalkombat.fandom.com/wiki/Nitara"^^xsd:anyURI ;
     mk:verificationStatus "verified"^^xsd:string .
 
-mk:character-noobsaibot a mk:Character ;
-    mk:alternateName "Bi-Han (Shadow Wraith)"^^xsd:string ;
-    mk:description "The resurrected wraith of the original Sub-Zero Bi-Han, corrupted by the dark necromancy of Quan Chi into living shadow."^^xsd:string ;
-    mk:firstAppearanceYear "1993"^^xsd:gYear ;
-    mk:hasSpecies "Wraith"^^xsd:string ;
-    mk:hasVersion mk:version-noobsaibot-mk11,
-        mk:version-noobsaibot-mk2 ;
-    mk:name "Noob Saibot"^^xsd:string ;
-    mk:originatesFrom mk:realm-netherrealm ;
-    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Noob_Saibot"^^xsd:anyURI ;
-    mk:verificationStatus "verified"^^xsd:string .
-
 mk:character-sheeva a mk:Character ;
     mk:alliedWith mk:character-sindel ;
     mk:alternateName "Queen of the Shokan"^^xsd:string ;
@@ -1957,26 +2033,16 @@ mk:character-sheeva a mk:Character ;
     mk:sourceURL "https://mortalkombat.fandom.com/wiki/Sheeva"^^xsd:anyURI ;
     mk:verificationStatus "verified"^^xsd:string .
 
-mk:character-takeda a mk:Character ;
-    mk:alliedWith mk:character-kenshi ;
-    mk:alternateName "Shirai Ryu Apprentice"^^xsd:string ;
-    mk:description "Son of Kenshi trained from boyhood by Grandmaster Hanzo Hasashi in Shirai Ryu martial arts and telepathic sensory control."^^xsd:string ;
-    mk:firstAppearanceYear "2015"^^xsd:gYear ;
-    mk:hasSpecies "Human"^^xsd:string ;
-    mk:hasVersion mk:version-takeda-mkx ;
-    mk:name "Takeda Takahashi"^^xsd:string ;
-    mk:originatesFrom mk:realm-earthrealm ;
-    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Takeda_Takahashi"^^xsd:anyURI ;
-    mk:verificationStatus "verified"^^xsd:string .
-
 mk:character-taven a mk:Character ;
     mk:alternateName "Son of Argus"^^xsd:string ;
     mk:description "Edenian demigod awoken during Armageddon to fulfill his father's quest by ascending the Pyramid of Argus and defeating Blaze."^^xsd:string ;
+    mk:familyOf mk:character-daegon ;
     mk:firstAppearanceYear "2006"^^xsd:gYear ;
     mk:hasSpecies "Edenian Demigod"^^xsd:string ;
     mk:hasVersion mk:version-taven-mk-armageddon-2006 ;
     mk:name "Taven"^^xsd:string ;
     mk:originatesFrom mk:realm-edenia ;
+    mk:rivalOf mk:character-daegon ;
     mk:sourceURL "https://mortalkombat.fandom.com/wiki/Taven"^^xsd:anyURI ;
     mk:verificationStatus "verified"^^xsd:string .
 
@@ -1984,11 +2050,35 @@ mk:element-lightning a mk:Element ;
     mk:description "Divine thunder, plasma arcs, and atmospheric electrical manipulation."^^xsd:string ;
     mk:name "Lightning"^^xsd:string .
 
+mk:fatality-bow-before-me a mk:Move ;
+    mk:description "Jade vaults on her staff, driving both ends through the opponent's eye sockets."^^xsd:string ;
+    mk:hasElement mk:element-energy ;
+    mk:moveCategory "Fatality"^^xsd:string ;
+    mk:name "Fatality: Bow Before Me"^^xsd:string .
+
+mk:fatality-divine-purification a mk:Move ;
+    mk:description "Ashrah pierces the demon's heart with the Kriss, causing holy blue light to incinerate the body from within."^^xsd:string ;
+    mk:hasElement mk:element-energy ;
+    mk:moveCategory "Fatality"^^xsd:string ;
+    mk:name "Fatality: Heavenly Cleansing"^^xsd:string .
+
+mk:fatality-face-crusher a mk:Move ;
+    mk:description "Shujinko strikes vital meridian pressure points, causing the victim's body to cave in on itself."^^xsd:string ;
+    mk:hasElement mk:element-energy ;
+    mk:moveCategory "Fatality"^^xsd:string ;
+    mk:name "Fatality: Five Point Strike"^^xsd:string .
+
 mk:fatality-fan-decapitation a mk:Move ;
     mk:description "Slicing off the opponent's head with a swift flick of dual steel war fans."^^xsd:string ;
     mk:hasElement mk:element-wind ;
     mk:moveCategory "Fatality"^^xsd:string ;
     mk:name "Fatality: Decapitating Fans"^^xsd:string .
+
+mk:fatality-infestation a mk:Move ;
+    mk:description "D'Vorah fills the victim's torso with ravenous wasp larvae that burst out from the ribcage."^^xsd:string ;
+    mk:hasElement mk:element-energy ;
+    mk:moveCategory "Fatality"^^xsd:string ;
+    mk:name "Fatality: Bug Me"^^xsd:string .
 
 mk:fatality-kiss-of-death a mk:Move ;
     mk:description "Blowing a glowing kiss of energy that causes the opponent to violently detonate."^^xsd:string ;
@@ -1996,11 +2086,47 @@ mk:fatality-kiss-of-death a mk:Move ;
     mk:moveCategory "Fatality"^^xsd:string ;
     mk:name "Fatality: Kiss of Death"^^xsd:string .
 
-mk:fatality-toasty a mk:Move ;
-    mk:description "Removing the mask to reveal a flaming skull and incinerating the opponent to ashes."^^xsd:string ;
-    mk:hasElement mk:element-fire ;
+mk:fatality-road-rash a mk:Move ;
+    mk:description "Kabal drags the opponent at super-speed face first across the concrete, grinding their skull away."^^xsd:string ;
+    mk:hasElement mk:element-energy ;
     mk:moveCategory "Fatality"^^xsd:string ;
-    mk:name "Fatality: Toasty!"^^xsd:string .
+    mk:name "Fatality: Road Rash"^^xsd:string .
+
+mk:fatality-scream-queen a mk:Move ;
+    mk:description "Sindel screams directly into the victim's mouth, causing their eyes and entrails to explode outward."^^xsd:string ;
+    mk:hasElement mk:element-energy ;
+    mk:moveCategory "Fatality"^^xsd:string ;
+    mk:name "Fatality: Scream Queen"^^xsd:string .
+
+mk:fatality-spider-mines a mk:Move ;
+    mk:description "Jacqui Briggs deploys spider mines that burrow into the opponent's joints and detonate simultaneously."^^xsd:string ;
+    mk:hasElement mk:element-energy ;
+    mk:moveCategory "Fatality"^^xsd:string ;
+    mk:name "Fatality: Spider Mines"^^xsd:string .
+
+mk:fatality-spine-ripper a mk:Move ;
+    mk:description "Sheeva grabs both sets of limbs and tears the flesh completely from the skeletal frame."^^xsd:string ;
+    mk:hasElement mk:element-energy ;
+    mk:moveCategory "Fatality"^^xsd:string ;
+    mk:name "Fatality: Lend a Hand"^^xsd:string .
+
+mk:fatality-time-served a mk:Move ;
+    mk:description "Stryker plants a grenade in the target's chest, shoots them with a taser, and detonates the charge."^^xsd:string ;
+    mk:hasElement mk:element-energy ;
+    mk:moveCategory "Fatality"^^xsd:string ;
+    mk:name "Fatality: Time Served"^^xsd:string .
+
+mk:fatality-vaeternus-drain a mk:Move ;
+    mk:description "Nitara rips open the victim's carotid artery with fangs and claws, drinking them completely dry."^^xsd:string ;
+    mk:hasElement mk:element-blood ;
+    mk:moveCategory "Fatality"^^xsd:string ;
+    mk:name "Fatality: Blood Feast"^^xsd:string .
+
+mk:fatality-war-dance a mk:Move ;
+    mk:description "Nightwolf embeds his tomahawks into the victim's collarbones, summoning a massive lightning bolt to split them."^^xsd:string ;
+    mk:hasElement mk:element-energy ;
+    mk:moveCategory "Fatality"^^xsd:string ;
+    mk:name "Fatality: Kompshina Calling"^^xsd:string .
 
 mk:game-mk-mythologies-1997 a mk:Game ;
     mk:description "Side-scrolling action-adventure prequel following Bi-Han retrieving Shinnok's sacred amulet across Earthrealm and the Netherrealm."^^xsd:string ;
@@ -2021,12 +2147,6 @@ mk:game-mk-tournament-edition-2003 a mk:Game ;
     mk:supportedPlatform "Game Boy Advance"^^xsd:string ;
     mk:verificationStatus "verified"^^xsd:string .
 
-mk:move-air-throw a mk:Move ;
-    mk:description "Jax grabs the opponent out of mid-air and violently slams them to the turf."^^xsd:string ;
-    mk:hasElement mk:element-energy ;
-    mk:moveCategory "Special Move"^^xsd:string ;
-    mk:name "Aerial Combat Throw"^^xsd:string .
-
 mk:move-banshee-scream a mk:Move ;
     mk:description "Sindel levitates and releases sonic shriek waves that paralyze the opponent's nervous system."^^xsd:string ;
     mk:hasElement mk:element-energy ;
@@ -2039,29 +2159,28 @@ mk:move-baton-trip a mk:Move ;
     mk:moveCategory "Special Move"^^xsd:string ;
     mk:name "Baton Sweep & Toss"^^xsd:string .
 
-mk:move-bicycle-kick a mk:Move ;
-    mk:description "Defying gravity with rapid aerial bicycle kicks propelled by chi."^^xsd:string ;
-    mk:hasElement mk:element-energy ;
-    mk:moveCategory "Special Move"^^xsd:string ;
-    mk:name "Bicycle Kick"^^xsd:string .
-
 mk:move-bionic-dash a mk:Move ;
     mk:description "Jacqui Briggs ignites rocket thrusters on her gauntlets, driving an explosive punch into the target."^^xsd:string ;
     mk:hasElement mk:element-energy ;
     mk:moveCategory "Special Move"^^xsd:string ;
     mk:name "Bionic Rocket Dash"^^xsd:string .
 
+mk:move-black-hole a mk:Move ;
+    mk:description "Membuka portal kegelapan di lantai yang menyedot lawan dan menjatuhkannya dari langit."^^xsd:string ;
+    mk:hasElement mk:elem-shadow ;
+    mk:moveCategory "Special Move"^^xsd:string ;
+    mk:name "Darkness Black Hole"^^xsd:string .
+
+mk:move-blade-spin a mk:Move ;
+    mk:description "Putaran tornado bilah lengan yang merobek siapa pun yang mendekat."^^xsd:string ;
+    mk:moveCategory "Special Move"^^xsd:string ;
+    mk:name "Tarkatan Blade Spin"^^xsd:string .
+
 mk:move-blazing-nitro-kick a mk:Move ;
     mk:description "Jade surrounds herself in an emerald glow, sliding or flying across the arena with a devastating strike."^^xsd:string ;
     mk:hasElement mk:element-energy ;
     mk:moveCategory "Special Move"^^xsd:string ;
     mk:name "Blazing Nitro Kick"^^xsd:string .
-
-mk:move-blood-spit a mk:Move ;
-    mk:description "Nitara expels a sphere of vampiric blood that drains opponent vitality."^^xsd:string ;
-    mk:hasElement mk:element-blood ;
-    mk:moveCategory "Special Move"^^xsd:string ;
-    mk:name "Hemomantic Blood Spit"^^xsd:string .
 
 mk:move-bone-twist a mk:Move ;
     mk:description "Havik twists his own torso a full 360 degrees to strike backward unpredictably."^^xsd:string ;
@@ -2093,17 +2212,21 @@ mk:move-centaur-charge a mk:Move ;
     mk:moveCategory "Special Move"^^xsd:string ;
     mk:name "Centaur Gallop Charge"^^xsd:string .
 
+mk:move-chest-saw a mk:Move ;
+    mk:description "Membuka plat dada sibernetik untuk meluncurkan bilah gergaji bundar berputar tinggi."^^xsd:string ;
+    mk:moveCategory "Special Move"^^xsd:string ;
+    mk:name "Chest Saw Cutter"^^xsd:string .
+
+mk:move-compactor a mk:Move ;
+    mk:description "Alat pres mekanik yang keluar dari dada untuk meremukkan tubuh lawan."^^xsd:string ;
+    mk:moveCategory "Special Move"^^xsd:string ;
+    mk:name "Chest Compactor Crush"^^xsd:string .
+
 mk:move-cyber-trap a mk:Move ;
     mk:description "Frost releases a cryogenic ground mine that flash-freezes unobservant opponents."^^xsd:string ;
     mk:hasElement mk:element-ice ;
     mk:moveCategory "Special Move"^^xsd:string ;
     mk:name "Cryo Floor Trap"^^xsd:string .
-
-mk:move-dragon-breath a mk:Move ;
-    mk:description "Onaga unleashes a devastating cone of primordial dragon fire capable of incinerating armies."^^xsd:string ;
-    mk:hasElement mk:element-fire ;
-    mk:moveCategory "Special Move"^^xsd:string ;
-    mk:name "Dragon King Fire Breath"^^xsd:string .
 
 mk:move-drunken-fist a mk:Move ;
     mk:description "Unpredictable tumbling footwork baffling enemy guard."^^xsd:string ;
@@ -2111,11 +2234,20 @@ mk:move-drunken-fist a mk:Move ;
     mk:moveCategory "Special Move"^^xsd:string ;
     mk:name "Drunken Fist Roll"^^xsd:string .
 
-mk:move-energy-spark a mk:Move ;
-    mk:description "Li Mei unleashes purple festive chi sparks that juggle airborne targets."^^xsd:string ;
-    mk:hasElement mk:element-energy ;
+mk:move-emperor-shield a mk:Move ;
+    mk:description "Perisai energi yang memantulkan proyektil lawan kembali ke penembaknya."^^xsd:string ;
     mk:moveCategory "Special Move"^^xsd:string ;
-    mk:name "Luminescent Spark Burst"^^xsd:string .
+    mk:name "Emperor's Repelling Shield"^^xsd:string .
+
+mk:move-exploding-bomb a mk:Move ;
+    mk:description "Menjatuhkan bom sibernetik dengan sensor jarak dekat yang meledakkan target ke udara."^^xsd:string ;
+    mk:moveCategory "Special Move"^^xsd:string ;
+    mk:name "Timed Cyber Bomb"^^xsd:string .
+
+mk:move-eye-laser a mk:Move ;
+    mk:description "Tembakan sinar laser merah berdaya bakar tinggi dari plat mata sibernetik Kano."^^xsd:string ;
+    mk:moveCategory "Special Move"^^xsd:string ;
+    mk:name "Cybernetic Eye Laser"^^xsd:string .
 
 mk:move-fan-lift a mk:Move ;
     mk:description "Waving bladed war fans to create an updraft that suspends opponents helplessly in mid-air."^^xsd:string ;
@@ -2129,23 +2261,17 @@ mk:move-fire-fist a mk:Move ;
     mk:moveCategory "Special Move"^^xsd:string ;
     mk:name "Elemental Conflagration"^^xsd:string .
 
+mk:move-flamethrower a mk:Move ;
+    mk:description "Semburan api membara dari kompartemen tangan sibernetik Sektor."^^xsd:string ;
+    mk:hasElement mk:elem-fire ;
+    mk:moveCategory "Special Move"^^xsd:string ;
+    mk:name "Cybernetic Flamethrower"^^xsd:string .
+
 mk:move-grapple-hook-kick a mk:Move ;
     mk:description "Mavado slingshots himself across the screen using high-tension bungee cables."^^xsd:string ;
     mk:hasElement mk:element-energy ;
     mk:moveCategory "Special Move"^^xsd:string ;
     mk:name "Elastic Grapple Kick"^^xsd:string .
-
-mk:move-grenade-toss a mk:Move ;
-    mk:description "Stryker launches tactical concussion grenades in high or low arcs."^^xsd:string ;
-    mk:hasElement mk:element-fire ;
-    mk:moveCategory "Special Move"^^xsd:string ;
-    mk:name "High/Low Grenade Toss"^^xsd:string .
-
-mk:move-ground-pound a mk:Move ;
-    mk:description "Striking the ground with cybernetic arms to cause localized seismic shockwaves."^^xsd:string ;
-    mk:hasElement mk:element-energy ;
-    mk:moveCategory "Special Move"^^xsd:string ;
-    mk:name "Ground Pound"^^xsd:string .
 
 mk:move-hair-whip a mk:Move ;
     mk:description "Sindel extends her magical hair like steel cords to grab, toss, and choke opponents."^^xsd:string ;
@@ -2165,11 +2291,21 @@ mk:move-heavenly-light a mk:Move ;
     mk:moveCategory "Special Move"^^xsd:string ;
     mk:name "Heavenly Cleansing Light"^^xsd:string .
 
+mk:move-knife-toss a mk:Move ;
+    mk:description "Lemparan pisau berburu bergerigi kembar yang menancap akurat ke titik vital lawan."^^xsd:string ;
+    mk:moveCategory "Special Move"^^xsd:string ;
+    mk:name "Heart-Seeker Knife Toss"^^xsd:string .
+
 mk:move-lava-burst a mk:Move ;
     mk:description "Hotaru summons molten magma jets from Seido's core to incinerate anarchists."^^xsd:string ;
     mk:hasElement mk:element-fire ;
     mk:moveCategory "Special Move"^^xsd:string ;
     mk:name "Order Lava Eruption"^^xsd:string .
+
+mk:move-light-spear a mk:Move ;
+    mk:description "Tombak energi mistis murni yang dilemparkan menembus pertahanan lawan."^^xsd:string ;
+    mk:moveCategory "Special Move"^^xsd:string ;
+    mk:name "Imperial Light Spear"^^xsd:string .
 
 mk:move-mimic-mastery a mk:Move ;
     mk:description "Shujinko draws upon the martial styles learned from masters across all realms."^^xsd:string ;
@@ -2189,23 +2325,17 @@ mk:move-net-tangle a mk:Move ;
     mk:moveCategory "Special Move"^^xsd:string ;
     mk:name "Energy Net"^^xsd:string .
 
-mk:move-nomad-dash a mk:Move ;
-    mk:description "Kabal dashes past the opponent at supersonic speed, leaving them spinning helplessly like a top."^^xsd:string ;
-    mk:hasElement mk:element-wind ;
-    mk:moveCategory "Special Move"^^xsd:string ;
-    mk:name "Nomad Dash"^^xsd:string .
-
 mk:move-ovipositor-rush a mk:Move ;
     mk:description "D'Vorah thrusts her razor-sharp insectoid back appendages forward in a rapid stabbing flurry."^^xsd:string ;
     mk:hasElement mk:element-energy ;
     mk:moveCategory "Special Move"^^xsd:string ;
     mk:name "Ovipositor Rush"^^xsd:string .
 
-mk:move-revolver-quickdraw a mk:Move ;
-    mk:description "Rapid six-shooter revolver barrage accompanied by blinding Netherrealm sand."^^xsd:string ;
+mk:move-puke-puddle a mk:Move ;
+    mk:description "Bo' Rai Cho coats the arena floor causing approaching enemies to lose their balance."^^xsd:string ;
     mk:hasElement mk:element-energy ;
     mk:moveCategory "Special Move"^^xsd:string ;
-    mk:name "Sand Slam & Quickdraw"^^xsd:string .
+    mk:name "Hazardous Fluid Puddle"^^xsd:string .
 
 mk:move-rhino-charge a mk:Move ;
     mk:description "Nightwolf charges forward enveloped in a mystical green aura, bowling over the target."^^xsd:string ;
@@ -2219,17 +2349,22 @@ mk:move-ring-toss a mk:Move ;
     mk:moveCategory "Special Move"^^xsd:string ;
     mk:name "Energy Ring Toss"^^xsd:string .
 
-mk:move-shadow-slide a mk:Move ;
-    mk:description "Noob Saibot dispatches his shadow clone sliding forward to trip the enemy."^^xsd:string ;
-    mk:hasElement mk:element-shadow ;
+mk:move-shadow-tackle a mk:Move ;
+    mk:description "Kloning bayangan Saibot berlari kencang menerjang dan membanting tubuh lawan."^^xsd:string ;
+    mk:hasElement mk:elem-shadow ;
     mk:moveCategory "Special Move"^^xsd:string ;
-    mk:name "Shadow Slide"^^xsd:string .
+    mk:name "Shadow Clone Tackle"^^xsd:string .
 
 mk:move-shotgun-blast a mk:Move ;
     mk:description "Jacqui fires concentrated kinetic buckshot directly from her wrist cannons."^^xsd:string ;
     mk:hasElement mk:element-energy ;
     mk:moveCategory "Special Move"^^xsd:string ;
     mk:name "Gauntlet Shotgun Blast"^^xsd:string .
+
+mk:move-shoulder-charge a mk:Move ;
+    mk:description "Terjangan bahu bertenaga dewa yang dilapisi aura hijau kekaisaran Outworld."^^xsd:string ;
+    mk:moveCategory "Special Move"^^xsd:string ;
+    mk:name "Shao Kahn Shoulder Charge"^^xsd:string .
 
 mk:move-skull-daggers a mk:Move ;
     mk:description "Sareena throws Netherrealm skull-engraved daggers with shadow trajectory."^^xsd:string ;
@@ -2243,11 +2378,22 @@ mk:move-spirit-arrow a mk:Move ;
     mk:moveCategory "Special Move"^^xsd:string ;
     mk:name "Spirit Arrow"^^xsd:string .
 
-mk:move-sun-ray a mk:Move ;
-    mk:description "Summoning a focused beam of sunlight that burns enemies while healing allies."^^xsd:string ;
-    mk:hasElement mk:element-fire ;
+mk:move-split-flip-kick a mk:Move ;
+    mk:description "Tendangan akrobatik salto mematikan yang memecah konsentrasi musuh."^^xsd:string ;
     mk:moveCategory "Special Move"^^xsd:string ;
-    mk:name "Sun God's Ray"^^xsd:string .
+    mk:name "Split-Flip Kick"^^xsd:string .
+
+mk:move-square-wave a mk:Move ;
+    mk:description "Mid-air dive propelled by acrobatic Edenian momentum."^^xsd:string ;
+    mk:hasElement mk:element-energy ;
+    mk:moveCategory "Special Move"^^xsd:string ;
+    mk:name "Square Wave Flight"^^xsd:string .
+
+mk:move-surging-fire a mk:Move ;
+    mk:description "Bola api Edenian mistis ungu yang diluncurkan dari udara atau tanah."^^xsd:string ;
+    mk:hasElement mk:elem-fire ;
+    mk:moveCategory "Special Move"^^xsd:string ;
+    mk:name "Surging Fireball"^^xsd:string .
 
 mk:move-tarkatan-chop a mk:Move ;
     mk:description "Rapid succession of vicious slashes from forearm arm blades."^^xsd:string ;
@@ -2255,17 +2401,15 @@ mk:move-tarkatan-chop a mk:Move ;
     mk:moveCategory "Special Move"^^xsd:string ;
     mk:name "Blade Fury"^^xsd:string .
 
-mk:move-telekinesis-slam a mk:Move ;
-    mk:description "Lifting enemies telepathically and slamming them forcefully against the arena floor."^^xsd:string ;
-    mk:hasElement mk:element-energy ;
+mk:move-teleport-uppercut a mk:Move ;
+    mk:description "Menghilang ke dalam tanah dan meluncur ke atas menghantam dagu lawan dengan roket pendorong."^^xsd:string ;
     mk:moveCategory "Special Move"^^xsd:string ;
-    mk:name "Telekinetic Slam"^^xsd:string .
+    mk:name "Teleport Rocket Uppercut"^^xsd:string .
 
-mk:move-teleport-stomp a mk:Move ;
-    mk:description "Sheeva leaps high into the sky and stomps violently downward onto her opponent."^^xsd:string ;
-    mk:hasElement mk:element-energy ;
+mk:move-tonfa-flurry a mk:Move ;
+    mk:description "Kombinasi serangan tongkat tonfa berbilah tajam dari Umgadi."^^xsd:string ;
     mk:moveCategory "Special Move"^^xsd:string ;
-    mk:name "Shokan Drop Stomp"^^xsd:string .
+    mk:name "Kobu Jutsu Tonfa Flurry"^^xsd:string .
 
 mk:move-tribomerang a mk:Move ;
     mk:description "Jade hurls a glowing three-pointed boomerang that can be curved upward or downward."^^xsd:string ;
@@ -2273,13 +2417,20 @@ mk:move-tribomerang a mk:Move ;
     mk:moveCategory "Special Move"^^xsd:string ;
     mk:name "Tribomerang Throw"^^xsd:string .
 
+mk:move-untranslatable-rage a mk:Move ;
+    mk:description "Sheeva grabs the opponent with all four arms, delivering thunderous headbutts and ground smashes."^^xsd:string ;
+    mk:hasElement mk:element-energy ;
+    mk:moveCategory "Special Move"^^xsd:string ;
+    mk:name "Untranslatable Rage"^^xsd:string .
+
+mk:move-wrath-hammer a mk:Move ;
+    mk:description "Hantaman palu raksasa Wrath Hammer yang mengguncang tanah dan mematahkan tulang musuh."^^xsd:string ;
+    mk:moveCategory "Special Move"^^xsd:string ;
+    mk:name "Wrath Hammer Slam"^^xsd:string .
+
 mk:org-seidan-guard a mk:Organization ;
     mk:description "The disciplined, authoritarian military defense force of Orderrealm commanded by Hotaru."^^xsd:string ;
     mk:name "Seidan Guard"^^xsd:string .
-
-mk:org-umgadi a mk:Organization ;
-    mk:description "Elite warrior priestesses selected from Outworld first-born daughters sworn to protect the royal family and emperor."^^xsd:string ;
-    mk:name "The Umgadi"^^xsd:string .
 
 mk:realm-chaosrealm a mk:Realm ;
     mk:description "An anarchic realm of shifting structures and freedom where chaos is worshiped as supreme truth, home to Cleric Havik."^^xsd:string ;
@@ -2289,37 +2440,13 @@ mk:realm-orderrealm a mk:Realm ;
     mk:description "A rigid geometric realm governed strictly by law, hierarchy, and absolute order, policed by Hotaru and the Seidan Guard."^^xsd:string ;
     mk:name "Orderrealm (Seido)"^^xsd:string .
 
-mk:weapon-bo-staff a mk:Weapon ;
-    mk:description "Jade's glowing triboluminescent steel bo staff delivering long-reach pole vault strikes."^^xsd:string ;
-    mk:name "Imperial Bo Staff"^^xsd:string .
-
-mk:weapon-cybernetic-arms a mk:Weapon ;
-    mk:description "Jax Briggs' titanium cybernetic prosthetics delivering earthquake punches."^^xsd:string ;
-    mk:name "Bionic Cyber Arms"^^xsd:string .
-
 mk:weapon-daggers-of-denial a mk:Weapon ;
     mk:description "Tanya's agile Kobu Jutsu batons and dual stiletto daggers."^^xsd:string ;
     mk:name "Kobu Jutsu Tonfa Daggers"^^xsd:string .
 
-mk:weapon-dual-revolvers a mk:Weapon ;
-    mk:description "Erron Black's custom Outworld six-shooter revolvers loaded with hollow-point lead."^^xsd:string ;
-    mk:name "Dual Revolvers"^^xsd:string .
-
-mk:weapon-kriss-dagger a mk:Weapon ;
-    mk:description "Ashrah's holy sword 'Datusha' that cleanses the demonic soul of its wielder with each demon slain."^^xsd:string ;
-    mk:name "Kriss Purification Dagger"^^xsd:string .
-
-mk:weapon-nightsticks a mk:Weapon ;
-    mk:description "Kurtis Stryker's reinforced side-handle PR-24 police batons for crowd control takedowns."^^xsd:string ;
-    mk:name "Police Nightsticks"^^xsd:string .
-
 mk:weapon-ovipositors a mk:Weapon ;
     mk:description "D'Vorah's four serrated insectoid appendages emerging from her back to impale prey."^^xsd:string ;
     mk:name "Kytinn Ovipositors"^^xsd:string .
-
-mk:weapon-shokan-cleavers a mk:Weapon ;
-    mk:description "Sheeva's twin broad cleaver blades forged from Outworld furnace steel."^^xsd:string ;
-    mk:name "Dual Shokan Cleavers"^^xsd:string .
 
 mk:weapon-spirit-tomahawks a mk:Weapon ;
     mk:description "Nightwolf's twin glowing spirit axes manifested through Matoka shamanic communion."^^xsd:string ;
@@ -2329,9 +2456,11 @@ mk:weapon-steel-fans a mk:Weapon ;
     mk:description "Princess Kitana's razor-edged folding steel fans used for slicing and air control."^^xsd:string ;
     mk:name "Steel War Fans"^^xsd:string .
 
-mk:weapon-war-hammer a mk:Weapon ;
-    mk:description "Shao Kahn's devastating monolithic maul that crushes armor and bone."^^xsd:string ;
-    mk:name "Wrath Hammer"^^xsd:string .
+mk:ability-electric-fly a mk:Ability ;
+    mk:description "Propelling oneself horizontally through the air enveloped in electrical power."^^xsd:string ;
+    mk:hasElement mk:element-lightning ;
+    mk:moveCategory "Mobility"^^xsd:string ;
+    mk:name "Electric Fly (Superman)"^^xsd:string .
 
 mk:ability-fireball-dragon a mk:Ability ;
     mk:description "Concentrated chi energy manifested as a searing dragon of flame."^^xsd:string ;
@@ -2339,11 +2468,17 @@ mk:ability-fireball-dragon a mk:Ability ;
     mk:moveCategory "Martial"^^xsd:string ;
     mk:name "Dragon Fireball"^^xsd:string .
 
-mk:ability-hellfire a mk:Ability ;
-    mk:description "Summoning and projecting demonic fire from the Netherrealm."^^xsd:string ;
-    mk:hasElement mk:element-fire ;
-    mk:moveCategory "Magic"^^xsd:string ;
-    mk:name "Hellfire Manipulation"^^xsd:string .
+mk:ability-ice-clone a mk:Ability ;
+    mk:description "Leaving behind a flash-frozen decoy that freezes whoever touches it."^^xsd:string ;
+    mk:hasElement mk:element-ice ;
+    mk:moveCategory "Defense"^^xsd:string ;
+    mk:name "Ice Clone"^^xsd:string .
+
+mk:ability-ice-slide a mk:Ability ;
+    mk:description "Coating the ground with ice to slide swiftly beneath enemy defenses."^^xsd:string ;
+    mk:hasElement mk:element-ice ;
+    mk:moveCategory "Mobility"^^xsd:string ;
+    mk:name "Ice Slide"^^xsd:string .
 
 mk:ability-soul-stealing a mk:Ability ;
     mk:description "Draining an opponent's soul to heal and assume their appearance and abilities."^^xsd:string ;
@@ -2351,17 +2486,11 @@ mk:ability-soul-stealing a mk:Ability ;
     mk:moveCategory "Sorcery"^^xsd:string ;
     mk:name "Soul Steal"^^xsd:string .
 
-mk:character-baraka a mk:Character ;
-    mk:alternateName "Tarkatan War Chief"^^xsd:string ;
-    mk:description "Ferocious warlord of the nomadic Tarkatan tribe with razor-sharp teeth and long, retractable bone blades extending from his forearms."^^xsd:string ;
-    mk:firstAppearanceYear "1993"^^xsd:gYear ;
-    mk:hasSpecies "Tarkatan"^^xsd:string ;
-    mk:hasVersion mk:version-baraka-mk11,
-        mk:version-baraka-mk2 ;
-    mk:name "Baraka"^^xsd:string ;
-    mk:originatesFrom mk:realm-outworld ;
-    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Baraka"^^xsd:anyURI ;
-    mk:verificationStatus "verified"^^xsd:string .
+mk:ability-thunder-mastery a mk:Ability ;
+    mk:description "Summoning divine lightning bolts from storm clouds."^^xsd:string ;
+    mk:hasElement mk:element-lightning ;
+    mk:moveCategory "Divine"^^xsd:string ;
+    mk:name "Thunder Mastery"^^xsd:string .
 
 mk:character-blaze a mk:Character ;
     mk:alternateName "The Elemental Catalyst"^^xsd:string ;
@@ -2376,53 +2505,17 @@ mk:character-blaze a mk:Character ;
     mk:verificationStatus "verified"^^xsd:string .
 
 mk:character-boraicho a mk:Character ;
-    mk:alliedWith mk:character-liukang ;
     mk:alternateName "The Drunken Master"^^xsd:string ;
     mk:description "Jovial martial arts master from Outworld who trained Liu Kang, Kung Lao, and Shujinko in the legendary Drunken Fist style."^^xsd:string ;
     mk:firstAppearanceYear "2002"^^xsd:gYear ;
     mk:hasSpecies "Outworlder"^^xsd:string ;
     mk:hasVersion mk:version-boraicho-mk-deadly-alliance-2002,
         mk:version-boraicho-mkx ;
+    mk:mentorOf mk:character-kunglao,
+        mk:character-liukang ;
     mk:name "Bo' Rai Cho"^^xsd:string ;
     mk:originatesFrom mk:realm-outworld ;
     mk:sourceURL "https://mortalkombat.fandom.com/wiki/Bo%27_Rai_Cho"^^xsd:anyURI ;
-    mk:verificationStatus "verified"^^xsd:string .
-
-mk:character-erronblack a mk:Character ;
-    mk:alternateName "The Outworld Gunslinger"^^xsd:string ;
-    mk:description "Earthrealm 19th-century mercenary cowboy granted slowed aging by Shang Tsung, working as an Outworld gunslinger for highest bidder."^^xsd:string ;
-    mk:firstAppearanceYear "2015"^^xsd:gYear ;
-    mk:hasSpecies "Human"^^xsd:string ;
-    mk:hasVersion mk:version-erronblack-mk11,
-        mk:version-erronblack-mkx ;
-    mk:name "Erron Black"^^xsd:string ;
-    mk:originatesFrom mk:realm-earthrealm ;
-    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Erron_Black"^^xsd:anyURI ;
-    mk:verificationStatus "verified"^^xsd:string .
-
-mk:character-frost a mk:Character ;
-    mk:alternateName "Grandmaster of the Cyber Lin Kuei"^^xsd:string ;
-    mk:description "Ambitious cryomancer apprentice of Sub-Zero whose hubris drove her to betray her master and convert herself into a cybernetic leader."^^xsd:string ;
-    mk:enemyOf mk:character-subzero ;
-    mk:firstAppearanceYear "2002"^^xsd:gYear ;
-    mk:hasSpecies "Cyborg / Cryomancer"^^xsd:string ;
-    mk:hasVersion mk:version-frost-mk-deadly-alliance-2002,
-        mk:version-frost-mk11 ;
-    mk:name "Frost"^^xsd:string ;
-    mk:originatesFrom mk:realm-earthrealm ;
-    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Frost"^^xsd:anyURI ;
-    mk:verificationStatus "verified"^^xsd:string .
-
-mk:character-fujin a mk:Character ;
-    mk:alternateName "God of Wind"^^xsd:string ;
-    mk:description "Benevolent God of Wind and brother to Raiden, utilizing gale force whirlwinds and levitation in Earthrealm's defense."^^xsd:string ;
-    mk:firstAppearanceYear "1997"^^xsd:gYear ;
-    mk:hasSpecies "God"^^xsd:string ;
-    mk:hasVersion mk:version-fujin-mk-armageddon-2006,
-        mk:version-fujin-mk4 ;
-    mk:name "Fujin"^^xsd:string ;
-    mk:originatesFrom mk:realm-earthrealm ;
-    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Fujin"^^xsd:anyURI ;
     mk:verificationStatus "verified"^^xsd:string .
 
 mk:character-hotaru a mk:Character ;
@@ -2436,19 +2529,6 @@ mk:character-hotaru a mk:Character ;
     mk:name "Hotaru"^^xsd:string ;
     mk:originatesFrom mk:realm-orderrealm ;
     mk:sourceURL "https://mortalkombat.fandom.com/wiki/Hotaru"^^xsd:anyURI ;
-    mk:verificationStatus "verified"^^xsd:string .
-
-mk:character-jacqui a mk:Character ;
-    mk:alliedWith mk:character-cassiecage ;
-    mk:alternateName "Specialist Jacqueline Briggs"^^xsd:string ;
-    mk:description "Junior Olympic kickboxer and Special Forces operative fighting in high-tech combat gauntlets alongside her father Jax."^^xsd:string ;
-    mk:firstAppearanceYear "2015"^^xsd:gYear ;
-    mk:hasSpecies "Human"^^xsd:string ;
-    mk:hasVersion mk:version-jacqui-mk11,
-        mk:version-jacqui-mkx ;
-    mk:name "Jacqui Briggs"^^xsd:string ;
-    mk:originatesFrom mk:realm-earthrealm ;
-    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Jacqui_Briggs"^^xsd:anyURI ;
     mk:verificationStatus "verified"^^xsd:string .
 
 mk:character-jade a mk:Character ;
@@ -2465,6 +2545,7 @@ mk:character-jade a mk:Character ;
     mk:verificationStatus "verified"^^xsd:string .
 
 mk:character-kotalkahn a mk:Character ;
+    mk:alliedWith mk:character-erronblack ;
     mk:alternateName "Ko'atal (Sun God)"^^xsd:string ;
     mk:description "Osh-Tekk warrior and Sun God who deposed Mileena during the Outworld Civil War to become a pragmatic Emperor of Outworld."^^xsd:string ;
     mk:enemyOf mk:character-mileena ;
@@ -2488,6 +2569,19 @@ mk:character-nightwolf a mk:Character ;
     mk:name "Nightwolf"^^xsd:string ;
     mk:originatesFrom mk:realm-earthrealm ;
     mk:sourceURL "https://mortalkombat.fandom.com/wiki/Nightwolf"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:character-noobsaibot a mk:Character ;
+    mk:alliedWith mk:character-quanchi ;
+    mk:alternateName "Bi-Han (Shadow Wraith)"^^xsd:string ;
+    mk:description "The resurrected wraith of the original Sub-Zero Bi-Han, corrupted by the dark necromancy of Quan Chi into living shadow."^^xsd:string ;
+    mk:firstAppearanceYear "1993"^^xsd:gYear ;
+    mk:hasSpecies "Wraith"^^xsd:string ;
+    mk:hasVersion mk:version-noobsaibot-mk11,
+        mk:version-noobsaibot-mk2 ;
+    mk:name "Noob Saibot"^^xsd:string ;
+    mk:originatesFrom mk:realm-netherrealm ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Noob_Saibot"^^xsd:anyURI ;
     mk:verificationStatus "verified"^^xsd:string .
 
 mk:character-reptile a mk:Character ;
@@ -2529,19 +2623,6 @@ mk:character-shujinko a mk:Character ;
     mk:sourceURL "https://mortalkombat.fandom.com/wiki/Shujinko"^^xsd:anyURI ;
     mk:verificationStatus "verified"^^xsd:string .
 
-mk:character-tanya a mk:Character ;
-    mk:alliedWith mk:character-mileena ;
-    mk:alternateName "Leader of the Umgadi"^^xsd:string ;
-    mk:description "Edenian diplomat whose allegiance shifted during Shinnok's war; reimagined in the New Era as the disciplined leader of the royal Umgadi guard."^^xsd:string ;
-    mk:firstAppearanceYear "1997"^^xsd:gYear ;
-    mk:hasSpecies "Edenian"^^xsd:string ;
-    mk:hasVersion mk:version-tanya-mk1-2023,
-        mk:version-tanya-mk4 ;
-    mk:name "Tanya"^^xsd:string ;
-    mk:originatesFrom mk:realm-edenia ;
-    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Tanya"^^xsd:anyURI ;
-    mk:verificationStatus "verified"^^xsd:string .
-
 mk:element-blood a mk:Element ;
     mk:description "Hekatean blood magic, hemomantic spikes, and lifeforce draining."^^xsd:string ;
     mk:name "Blood"^^xsd:string .
@@ -2550,11 +2631,40 @@ mk:element-soul a mk:Element ;
     mk:description "Necromancy, soul absorption, and ancestral spiritual manifestation."^^xsd:string ;
     mk:name "Soul / Spirit"^^xsd:string .
 
-mk:move-acid-spit a mk:Move ;
-    mk:description "Ejecting caustic digestive acid that melts armor and flesh on contact."^^xsd:string ;
+mk:fatality-dragon-bite a mk:Move ;
+    mk:description "Morphing into a massive dragon that bites the opponent's torso in half."^^xsd:string ;
+    mk:hasElement mk:element-fire ;
+    mk:moveCategory "Fatality"^^xsd:string ;
+    mk:name "Fatality: Dragon Feast"^^xsd:string .
+
+mk:fatality-shokan-tear a mk:Move ;
+    mk:description "Goro grabs both arms and legs, tearing the opponent into four separate pieces."^^xsd:string ;
+    mk:hasElement mk:element-energy ;
+    mk:moveCategory "Fatality"^^xsd:string ;
+    mk:name "Fatality: Limb Disassembly"^^xsd:string .
+
+mk:fatality-spine-rip a mk:Move ;
+    mk:description "Grabbing the victim's neck and cleanly ripping out their head and spine."^^xsd:string ;
+    mk:hasElement mk:element-ice ;
+    mk:moveCategory "Fatality"^^xsd:string ;
+    mk:name "Fatality: Spine Rip"^^xsd:string .
+
+mk:fatality-toasty a mk:Move ;
+    mk:description "Removing the mask to reveal a flaming skull and incinerating the opponent to ashes."^^xsd:string ;
+    mk:hasElement mk:element-fire ;
+    mk:moveCategory "Fatality"^^xsd:string ;
+    mk:name "Fatality: Toasty!"^^xsd:string .
+
+mk:move-ball-roll a mk:Move ;
+    mk:description "Menggulung tubuh menjadi bola maut dan menerjang kaki musuh dengan kecepatan tinggi."^^xsd:string ;
+    mk:moveCategory "Special Move"^^xsd:string ;
+    mk:name "Rolling Thunder (Ball Roll)"^^xsd:string .
+
+mk:move-bicycle-kick a mk:Move ;
+    mk:description "Defying gravity with rapid aerial bicycle kicks propelled by chi."^^xsd:string ;
     mk:hasElement mk:element-energy ;
     mk:moveCategory "Special Move"^^xsd:string ;
-    mk:name "Corrosive Acid Spit"^^xsd:string .
+    mk:name "Bicycle Kick"^^xsd:string .
 
 mk:move-charging-spear a mk:Move ;
     mk:description "Reiko charges across the battlefield thrusting a ceremonial war spear."^^xsd:string ;
@@ -2562,11 +2672,39 @@ mk:move-charging-spear a mk:Move ;
     mk:moveCategory "Special Move"^^xsd:string ;
     mk:name "Charging Spartan Spear"^^xsd:string .
 
-mk:move-ice-freeze a mk:Move ;
-    mk:description "Blasting a stream of liquid nitrogen vapor that freezes the target solid."^^xsd:string ;
-    mk:hasElement mk:element-ice ;
+mk:move-dragon-breath a mk:Move ;
+    mk:description "Onaga unleashes a devastating cone of primordial dragon fire capable of incinerating armies."^^xsd:string ;
+    mk:hasElement mk:element-fire ;
     mk:moveCategory "Special Move"^^xsd:string ;
-    mk:name "Deep Freeze"^^xsd:string .
+    mk:name "Dragon King Fire Breath"^^xsd:string .
+
+mk:move-flaming-skulls a mk:Move ;
+    mk:description "Rentetan tengkorak api berderak yang ditembakkan secara beruntun oleh Shang Tsung."^^xsd:string ;
+    mk:hasElement mk:elem-fire ;
+    mk:moveCategory "Special Move"^^xsd:string ;
+    mk:name "Flaming Skulls Volley"^^xsd:string .
+
+mk:move-forceball a mk:Move ;
+    mk:description "Bola lendir asam Zaterran melayang yang menarik dan menjatuhkan musuh."^^xsd:string ;
+    mk:hasElement mk:elem-acid ;
+    mk:moveCategory "Special Move"^^xsd:string ;
+    mk:name "Corrosive Forceball"^^xsd:string .
+
+mk:move-leaping-neck-bite a mk:Move ;
+    mk:description "Melompat ke pundak lawan dan merobek leher mereka dengan taring Tarkatan yang buas."^^xsd:string ;
+    mk:moveCategory "Special Move"^^xsd:string ;
+    mk:name "Leaping Lunch (Neck Bite)"^^xsd:string .
+
+mk:move-reptile-slide a mk:Move ;
+    mk:description "Seluncuran cepat di atas lapisan lendir asam yang menyapu kaki lawan."^^xsd:string ;
+    mk:hasElement mk:elem-acid ;
+    mk:moveCategory "Special Move"^^xsd:string ;
+    mk:name "Acidic Reptilian Slide"^^xsd:string .
+
+mk:move-sai-toss a mk:Move ;
+    mk:description "Melempar sepasang sai bermuatan energi magis ke arah lawan."^^xsd:string ;
+    mk:moveCategory "Special Move"^^xsd:string ;
+    mk:name "Soaring Sai Toss"^^xsd:string .
 
 mk:move-shokan-stomp a mk:Move ;
     mk:description "Leaping off-screen and crashing down with the immense weight of four arms."^^xsd:string ;
@@ -2574,17 +2712,33 @@ mk:move-shokan-stomp a mk:Move ;
     mk:moveCategory "Special Move"^^xsd:string ;
     mk:name "Telestomp"^^xsd:string .
 
-mk:move-spear a mk:Move ;
-    mk:description "Hurling a rope or chain spear into the enemy and pulling them in with extreme force."^^xsd:string ;
-    mk:hasElement mk:element-fire ;
+mk:move-smoke-bomb a mk:Move ;
+    mk:description "Melempar bom asap pekat yang melumpuhkan pandangan dan pergerakan lawan."^^xsd:string ;
     mk:moveCategory "Special Move"^^xsd:string ;
-    mk:name "Kunai Spear (Get Over Here!)"^^xsd:string .
+    mk:name "Smoke Bomb Stun"^^xsd:string .
+
+mk:move-smoke-cloud a mk:Move ;
+    mk:description "Menyelimuti diri dalam kabut asap pekat lalu muncul di belakang lawan."^^xsd:string ;
+    mk:moveCategory "Special Move"^^xsd:string ;
+    mk:name "Smoke Cloud Teleport"^^xsd:string .
+
+mk:move-soul-ball a mk:Move ;
+    mk:description "Harnessing stolen souls into an explosive sphere of spiritual energy."^^xsd:string ;
+    mk:hasElement mk:element-soul ;
+    mk:moveCategory "Special Move"^^xsd:string ;
+    mk:name "Green Soul Burst"^^xsd:string .
 
 mk:move-tele-flurry a mk:Move ;
     mk:description "Kenshi telepathically projects a warrior spirit to slash the opponent from afar."^^xsd:string ;
     mk:hasElement mk:element-energy ;
     mk:moveCategory "Special Move"^^xsd:string ;
     mk:name "Tele-Flurry"^^xsd:string .
+
+mk:move-telekinesis-slam a mk:Move ;
+    mk:description "Lifting enemies telepathically and slamming them forcefully against the arena floor."^^xsd:string ;
+    mk:hasElement mk:element-energy ;
+    mk:moveCategory "Special Move"^^xsd:string ;
+    mk:name "Telekinetic Slam"^^xsd:string .
 
 mk:org-osh-tekk a mk:Organization ;
     mk:description "Sun-worshipping warrior civilization of Outworld historically ruled by Kotal K'atz and Emperor Kotal Kahn."^^xsd:string ;
@@ -2610,28 +2764,33 @@ mk:weapon-spiked-club a mk:Weapon ;
     mk:description "General Reiko's heavy spiked Outworld bludgeon designed to crush skull helmets."^^xsd:string ;
     mk:name "Spiked War Mace"^^xsd:string .
 
-mk:ability-necromancy a mk:Ability ;
-    mk:description "Reanimating the dead as loyal Netherrealm revenants."^^xsd:string ;
-    mk:hasElement mk:element-soul ;
-    mk:moveCategory "Sorcery"^^xsd:string ;
-    mk:name "Necromancy"^^xsd:string .
-
-mk:character-cyrax a mk:Character ;
-    mk:alternateName "Unit LK-4D4"^^xsd:string ;
-    mk:description "Botswanan assassin mechanised into a lethal yellow cyborg unit equipped with an energy net and chest saw."^^xsd:string ;
-    mk:firstAppearanceYear "1995"^^xsd:gYear ;
-    mk:hasSpecies "Cyborg / Human"^^xsd:string ;
-    mk:hasVersion mk:version-cyrax-mk3,
-        mk:version-cyrax-mk9 ;
-    mk:name "Cyrax"^^xsd:string ;
+mk:character-cetrion a mk:Character ;
+    mk:alternateName "Elder Goddess of Virtue and Life"^^xsd:string ;
+    mk:description "Daughter of Kronika and sister to Shinnok, manipulating earth, water, fire, and air while torn between familial duty and universal righteousness."^^xsd:string ;
+    mk:firstAppearanceYear "2019"^^xsd:gYear ;
+    mk:hasSpecies "Elder Goddess"^^xsd:string ;
+    mk:hasVersion mk:version-cetrion-mk11 ;
+    mk:name "Cetrion"^^xsd:string ;
     mk:originatesFrom mk:realm-earthrealm ;
-    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Cyrax"^^xsd:anyURI ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Cetrion"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:character-daegon a mk:Character ;
+    mk:alternateName "Founder of the Red Dragon"^^xsd:string ;
+    mk:description "Edenian demigod son of Argus and Delia who awoke prematurely, slew his parents, and established the criminal Red Dragon syndicate."^^xsd:string ;
+    mk:firstAppearanceYear "2006"^^xsd:gYear ;
+    mk:hasSpecies "Edenian Demigod"^^xsd:string ;
+    mk:hasVersion mk:version-daegon-mk-armageddon-2006 ;
+    mk:name "Daegon"^^xsd:string ;
+    mk:originatesFrom mk:realm-edenia ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Daegon"^^xsd:anyURI ;
     mk:verificationStatus "verified"^^xsd:string .
 
 mk:character-dvorah a mk:Character ;
     mk:alternateName "The Kytinn Broodmother"^^xsd:string ;
     mk:description "Ruthless sentient insectoid swarm entity seeking solely the survival and propagation of the Kytinn species above all empire allegiances."^^xsd:string ;
-    mk:enemyOf mk:character-mileena,
+    mk:enemyOf mk:character-baraka,
+        mk:character-mileena,
         mk:character-scorpion ;
     mk:firstAppearanceYear "2015"^^xsd:gYear ;
     mk:hasSpecies "Kytinn"^^xsd:string ;
@@ -2642,7 +2801,45 @@ mk:character-dvorah a mk:Character ;
     mk:sourceURL "https://mortalkombat.fandom.com/wiki/D%27Vorah"^^xsd:anyURI ;
     mk:verificationStatus "verified"^^xsd:string .
 
+mk:character-erronblack a mk:Character ;
+    mk:alternateName "The Outworld Gunslinger"^^xsd:string ;
+    mk:description "Earthrealm 19th-century mercenary cowboy granted slowed aging by Shang Tsung, working as an Outworld gunslinger for highest bidder."^^xsd:string ;
+    mk:firstAppearanceYear "2015"^^xsd:gYear ;
+    mk:hasSpecies "Human"^^xsd:string ;
+    mk:hasVersion mk:version-erronblack-mk11,
+        mk:version-erronblack-mkx ;
+    mk:name "Erron Black"^^xsd:string ;
+    mk:originatesFrom mk:realm-earthrealm ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Erron_Black"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:character-frost a mk:Character ;
+    mk:alternateName "Grandmaster of the Cyber Lin Kuei"^^xsd:string ;
+    mk:description "Ambitious cryomancer apprentice of Sub-Zero whose hubris drove her to betray her master and convert herself into a cybernetic leader."^^xsd:string ;
+    mk:firstAppearanceYear "2002"^^xsd:gYear ;
+    mk:hasSpecies "Cyborg / Cryomancer"^^xsd:string ;
+    mk:hasVersion mk:version-frost-mk-deadly-alliance-2002,
+        mk:version-frost-mk11 ;
+    mk:name "Frost"^^xsd:string ;
+    mk:originatesFrom mk:realm-earthrealm ;
+    mk:rivalOf mk:character-subzero ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Frost"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:character-fujin a mk:Character ;
+    mk:alternateName "God of Wind"^^xsd:string ;
+    mk:description "Benevolent God of Wind and brother to Raiden, utilizing gale force whirlwinds and levitation in Earthrealm's defense."^^xsd:string ;
+    mk:firstAppearanceYear "1997"^^xsd:gYear ;
+    mk:hasSpecies "God"^^xsd:string ;
+    mk:hasVersion mk:version-fujin-mk-armageddon-2006,
+        mk:version-fujin-mk4 ;
+    mk:name "Fujin"^^xsd:string ;
+    mk:originatesFrom mk:realm-earthrealm ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Fujin"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
 mk:character-goro a mk:Character ;
+    mk:alliedWith mk:character-shangtsung ;
     mk:alternateName "Prince of the Shokan"^^xsd:string ;
     mk:description "Four-armed Shokan prince who held the title of Mortal Kombat Grand Champion for 500 years before being defeated by Liu Kang."^^xsd:string ;
     mk:firstAppearanceYear "1992"^^xsd:gYear ;
@@ -2667,8 +2864,10 @@ mk:character-havik a mk:Character ;
     mk:verificationStatus "verified"^^xsd:string .
 
 mk:character-johnnycage a mk:Character ;
+    mk:alliedWith mk:character-sonyablade ;
     mk:alternateName "John Carlton"^^xsd:string ;
     mk:description "Hollywood martial arts superstar possessing hereditary Mediterranean warrior heritage granting mystical green kinetic shields."^^xsd:string ;
+    mk:familyOf mk:character-cassiecage ;
     mk:firstAppearanceYear "1992"^^xsd:gYear ;
     mk:hasSpecies "Human"^^xsd:string ;
     mk:hasVersion mk:version-johnnycage-mk1,
@@ -2691,27 +2890,29 @@ mk:character-kabal a mk:Character ;
     mk:sourceURL "https://mortalkombat.fandom.com/wiki/Kabal"^^xsd:anyURI ;
     mk:verificationStatus "verified"^^xsd:string .
 
-mk:character-kronika a mk:Character ;
-    mk:alternateName "Keeper of Time"^^xsd:string ;
-    mk:description "Titan of Time and architect of universe cycles who sought to restart history when Raiden disrupted the balance between Good and Evil."^^xsd:string ;
-    mk:firstAppearanceYear "2019"^^xsd:gYear ;
-    mk:hasSpecies "Titan"^^xsd:string ;
-    mk:hasVersion mk:version-kronika-mk11 ;
-    mk:name "Kronika"^^xsd:string ;
+mk:character-kenshi a mk:Character ;
+    mk:alternateName "Kenshi Takahashi"^^xsd:string ;
+    mk:description "Blind telekinetic master swordsman guided by the spirits of his samurai ancestors housed within the ancestral blade Sento."^^xsd:string ;
+    mk:familyOf mk:character-takeda ;
+    mk:firstAppearanceYear "2002"^^xsd:gYear ;
+    mk:hasSpecies "Human"^^xsd:string ;
+    mk:hasVersion mk:version-kenshi-mk-deadly-alliance-2002,
+        mk:version-kenshi-mk1-2023,
+        mk:version-kenshi-mkx ;
+    mk:name "Kenshi"^^xsd:string ;
     mk:originatesFrom mk:realm-earthrealm ;
-    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Kronika"^^xsd:anyURI ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Kenshi"^^xsd:anyURI ;
     mk:verificationStatus "verified"^^xsd:string .
 
-mk:character-kunglao a mk:Character ;
-    mk:alternateName "The Razor-Hat Monk"^^xsd:string ;
-    mk:description "Shaolin pacifist warrior descendant of the Great Kung Lao, master of whirlwind kicks and a razor-brimmed throwing hat."^^xsd:string ;
-    mk:firstAppearanceYear "1993"^^xsd:gYear ;
+mk:character-kungjin a mk:Character ;
+    mk:alternateName "Shaolin Archer"^^xsd:string ;
+    mk:description "Cousin of Kung Lao and reformed thief turned Shaolin archer recruited into Cassie Cage's Special Forces tactical unit."^^xsd:string ;
+    mk:firstAppearanceYear "2015"^^xsd:gYear ;
     mk:hasSpecies "Human"^^xsd:string ;
-    mk:hasVersion mk:version-kunglao-mk11,
-        mk:version-kunglao-mk2 ;
-    mk:name "Kung Lao"^^xsd:string ;
+    mk:hasVersion mk:version-kungjin-mkx ;
+    mk:name "Kung Jin"^^xsd:string ;
     mk:originatesFrom mk:realm-earthrealm ;
-    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Kung_Lao"^^xsd:anyURI ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Kung_Jin"^^xsd:anyURI ;
     mk:verificationStatus "verified"^^xsd:string .
 
 mk:character-reiko a mk:Character ;
@@ -2727,35 +2928,11 @@ mk:character-reiko a mk:Character ;
     mk:sourceURL "https://mortalkombat.fandom.com/wiki/Reiko"^^xsd:anyURI ;
     mk:verificationStatus "verified"^^xsd:string .
 
-mk:character-sektor a mk:Character ;
-    mk:alternateName "Unit LK-9T9"^^xsd:string ;
-    mk:description "Ruthless grandmaster's son who willingly embraced cybernetization, armed with thermal rockets and dual flamethrowers."^^xsd:string ;
-    mk:firstAppearanceYear "1995"^^xsd:gYear ;
-    mk:hasSpecies "Cyborg / Human"^^xsd:string ;
-    mk:hasVersion mk:version-sektor-mk3,
-        mk:version-sektor-mk9 ;
-    mk:name "Sektor"^^xsd:string ;
-    mk:originatesFrom mk:realm-earthrealm ;
-    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Sektor"^^xsd:anyURI ;
-    mk:verificationStatus "verified"^^xsd:string .
-
-mk:character-smoke a mk:Character ;
-    mk:alternateName "Tomas Vrbada"^^xsd:string ;
-    mk:description "Lin Kuei warrior capable of dissolving his physical form into clouds of choking, defensive vapor."^^xsd:string ;
-    mk:firstAppearanceYear "1993"^^xsd:gYear ;
-    mk:hasSpecies "Enenra / Human"^^xsd:string ;
-    mk:hasVersion mk:version-smoke-mk1-2023,
-        mk:version-smoke-mk3,
-        mk:version-smoke-mk9 ;
-    mk:name "Smoke"^^xsd:string ;
-    mk:originatesFrom mk:realm-earthrealm ;
-    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Smoke"^^xsd:anyURI ;
-    mk:verificationStatus "verified"^^xsd:string .
-
 mk:character-sonyablade a mk:Character ;
     mk:alternateName "General Blade"^^xsd:string ;
     mk:description "Commanding General of Earthrealm Special Forces, relentlessly hunting Kano and the Black Dragon with high-tech military ordinance."^^xsd:string ;
     mk:enemyOf mk:character-kano ;
+    mk:familyOf mk:character-cassiecage ;
     mk:firstAppearanceYear "1992"^^xsd:gYear ;
     mk:hasSpecies "Human"^^xsd:string ;
     mk:hasVersion mk:version-sonyablade-mk1,
@@ -2765,9 +2942,67 @@ mk:character-sonyablade a mk:Character ;
     mk:sourceURL "https://mortalkombat.fandom.com/wiki/Sonya_Blade"^^xsd:anyURI ;
     mk:verificationStatus "verified"^^xsd:string .
 
+mk:character-tanya a mk:Character ;
+    mk:alternateName "Leader of the Umgadi"^^xsd:string ;
+    mk:description "Edenian diplomat whose allegiance shifted during Shinnok's war; reimagined in the New Era as the disciplined leader of the royal Umgadi guard."^^xsd:string ;
+    mk:firstAppearanceYear "1997"^^xsd:gYear ;
+    mk:hasSpecies "Edenian"^^xsd:string ;
+    mk:hasVersion mk:version-tanya-mk1-2023,
+        mk:version-tanya-mk4 ;
+    mk:name "Tanya"^^xsd:string ;
+    mk:originatesFrom mk:realm-edenia ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Tanya"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
 mk:element-shadow a mk:Element ;
     mk:description "Dark dimensional shadows, portals, and shadowy clone constructs."^^xsd:string ;
     mk:name "Shadow"^^xsd:string .
+
+mk:move-air-throw a mk:Move ;
+    mk:description "Jax grabs the opponent out of mid-air and violently slams them to the turf."^^xsd:string ;
+    mk:hasElement mk:element-energy ;
+    mk:moveCategory "Special Move"^^xsd:string ;
+    mk:name "Aerial Combat Throw"^^xsd:string .
+
+mk:move-blade-spark a mk:Move ;
+    mk:description "Gesekan cepat bilah lengan bertulang menghasilkan percikan api tajam ke arah lawan."^^xsd:string ;
+    mk:moveCategory "Special Move"^^xsd:string ;
+    mk:name "Tarkatan Blade Spark"^^xsd:string .
+
+mk:move-blood-spit a mk:Move ;
+    mk:description "Nitara expels a sphere of vampiric blood that drains opponent vitality."^^xsd:string ;
+    mk:hasElement mk:element-blood ;
+    mk:moveCategory "Special Move"^^xsd:string ;
+    mk:name "Hemomantic Blood Spit"^^xsd:string .
+
+mk:move-blood-tentacles a mk:Move ;
+    mk:description "Conjuring whipping tendrils of coagulated blood to lash opponents."^^xsd:string ;
+    mk:hasElement mk:element-blood ;
+    mk:moveCategory "Special Move"^^xsd:string ;
+    mk:name "Blood Tentacles"^^xsd:string .
+
+mk:move-dragon-slam a mk:Move ;
+    mk:description "Onaga flies into the air and crashes down with unyielding draconic mass."^^xsd:string ;
+    mk:hasElement mk:element-energy ;
+    mk:moveCategory "Special Move"^^xsd:string ;
+    mk:name "Titanic Dragon Slam"^^xsd:string .
+
+mk:move-ground-burst a mk:Move ;
+    mk:description "Retakan magis tanah Netherrealm yang meledakkan target ke udara."^^xsd:string ;
+    mk:moveCategory "Special Move"^^xsd:string ;
+    mk:name "Netherrealm Ground Eruption"^^xsd:string .
+
+mk:move-ground-pound a mk:Move ;
+    mk:description "Striking the ground with cybernetic arms to cause localized seismic shockwaves."^^xsd:string ;
+    mk:hasElement mk:element-energy ;
+    mk:moveCategory "Special Move"^^xsd:string ;
+    mk:name "Ground Pound"^^xsd:string .
+
+mk:move-nomad-dash a mk:Move ;
+    mk:description "Kabal dashes past the opponent at supersonic speed, leaving them spinning helplessly like a top."^^xsd:string ;
+    mk:hasElement mk:element-wind ;
+    mk:moveCategory "Special Move"^^xsd:string ;
+    mk:name "Nomad Dash"^^xsd:string .
 
 mk:move-nut-punch a mk:Move ;
     mk:description "Splits on the ground delivering an unexpected disabling low strike."^^xsd:string ;
@@ -2781,6 +3016,23 @@ mk:move-shadow-kick a mk:Move ;
     mk:moveCategory "Special Move"^^xsd:string ;
     mk:name "Shadow Kick"^^xsd:string .
 
+mk:move-shadow-slide a mk:Move ;
+    mk:description "Noob Saibot dispatches his shadow clone sliding forward to trip the enemy."^^xsd:string ;
+    mk:hasElement mk:element-shadow ;
+    mk:moveCategory "Special Move"^^xsd:string ;
+    mk:name "Shadow Slide"^^xsd:string .
+
+mk:move-skeletal-boost a mk:Move ;
+    mk:description "Sihir kutukan Quan Chi yang memperkuat daya rusak fisik prajurit mayat hidup."^^xsd:string ;
+    mk:moveCategory "Special Move"^^xsd:string ;
+    mk:name "Skeletal Strength Boost"^^xsd:string .
+
+mk:move-sun-ray a mk:Move ;
+    mk:description "Summoning a focused beam of sunlight that burns enemies while healing allies."^^xsd:string ;
+    mk:hasElement mk:element-fire ;
+    mk:moveCategory "Special Move"^^xsd:string ;
+    mk:name "Sun God's Ray"^^xsd:string .
+
 mk:move-wind-tornado a mk:Move ;
     mk:description "Spinning into a cyclone that lifts and disorients nearby foes."^^xsd:string ;
     mk:hasElement mk:element-wind ;
@@ -2791,13 +3043,33 @@ mk:org-shirai-ryu a mk:Clan ;
     mk:description "Renegade ninja clan of Japan founded by Takeda, historically led by Grandmaster Hanzo Hasashi."^^xsd:string ;
     mk:name "Shirai Ryu"^^xsd:string .
 
+mk:org-umgadi a mk:Organization ;
+    mk:description "Elite warrior priestesses selected from Outworld first-born daughters sworn to protect the royal family and emperor."^^xsd:string ;
+    mk:name "The Umgadi"^^xsd:string .
+
+mk:weapon-cybernetic-arms a mk:Weapon ;
+    mk:description "Jax Briggs' titanium cybernetic prosthetics delivering earthquake punches."^^xsd:string ;
+    mk:name "Bionic Cyber Arms"^^xsd:string .
+
+mk:weapon-dual-revolvers a mk:Weapon ;
+    mk:description "Erron Black's custom Outworld six-shooter revolvers loaded with hollow-point lead."^^xsd:string ;
+    mk:name "Dual Revolvers"^^xsd:string .
+
 mk:weapon-hookswords a mk:Weapon ;
     mk:description "Twin curved Chinese hook swords wielded with lethal acrobatics by Kabal and Mavado."^^xsd:string ;
     mk:name "Dual Hookswords"^^xsd:string .
 
-mk:weapon-kori-blade a mk:Weapon ;
-    mk:description "Sub-Zero's flash-frozen cryogenic sword forged from thin air."^^xsd:string ;
-    mk:name "Kōri Blade"^^xsd:string .
+mk:weapon-nightsticks a mk:Weapon ;
+    mk:description "Kurtis Stryker's reinforced side-handle PR-24 police batons for crowd control takedowns."^^xsd:string ;
+    mk:name "Police Nightsticks"^^xsd:string .
+
+mk:weapon-shokan-cleavers a mk:Weapon ;
+    mk:description "Sheeva's twin broad cleaver blades forged from Outworld furnace steel."^^xsd:string ;
+    mk:name "Dual Shokan Cleavers"^^xsd:string .
+
+mk:weapon-war-hammer a mk:Weapon ;
+    mk:description "Shao Kahn's devastating monolithic maul that crushes armor and bone."^^xsd:string ;
+    mk:name "Wrath Hammer"^^xsd:string .
 
 mk:ability-cryomancy a mk:Ability ;
     mk:description "Instant freezing of atmospheric moisture into ice shields, spikes, and weaponry."^^xsd:string ;
@@ -2805,28 +3077,46 @@ mk:ability-cryomancy a mk:Ability ;
     mk:moveCategory "Elemental"^^xsd:string ;
     mk:name "Cryomancy"^^xsd:string .
 
-mk:ability-thunder-mastery a mk:Ability ;
-    mk:description "Summoning divine lightning bolts from storm clouds."^^xsd:string ;
-    mk:hasElement mk:element-lightning ;
-    mk:moveCategory "Divine"^^xsd:string ;
-    mk:name "Thunder Mastery"^^xsd:string .
+mk:ability-flame-aura a mk:Ability ;
+    mk:description "Surrounding the body in intense heat that incinerates nearby foes."^^xsd:string ;
+    mk:hasElement mk:element-fire ;
+    mk:moveCategory "Magic"^^xsd:string ;
+    mk:name "Flame Aura"^^xsd:string .
 
-mk:character-cassiecage a mk:Character ;
-    mk:alliedWith mk:character-sonyablade ;
-    mk:alternateName "Commander Cassandra Cage"^^xsd:string ;
-    mk:description "Daughter of Johnny Cage and Sonya Blade, leading Earthrealm's new-generation strike team and inheriting her father's ancient green halo power."^^xsd:string ;
-    mk:enemyOf mk:character-shinnok ;
-    mk:firstAppearanceYear "2015"^^xsd:gYear ;
-    mk:hasSpecies "Human"^^xsd:string ;
-    mk:hasVersion mk:version-cassiecage-mk11,
-        mk:version-cassiecage-mkx ;
-    mk:name "Cassie Cage"^^xsd:string ;
+mk:ability-hellfire a mk:Ability ;
+    mk:description "Summoning and projecting demonic fire from the Netherrealm."^^xsd:string ;
+    mk:hasElement mk:element-fire ;
+    mk:moveCategory "Magic"^^xsd:string ;
+    mk:name "Hellfire Manipulation"^^xsd:string .
+
+mk:character-baraka a mk:Character ;
+    mk:alternateName "Tarkatan War Chief"^^xsd:string ;
+    mk:description "Ferocious warlord of the nomadic Tarkatan tribe with razor-sharp teeth and long, retractable bone blades extending from his forearms."^^xsd:string ;
+    mk:firstAppearanceYear "1993"^^xsd:gYear ;
+    mk:hasSpecies "Tarkatan"^^xsd:string ;
+    mk:hasVersion mk:version-baraka-mk11,
+        mk:version-baraka-mk2 ;
+    mk:name "Baraka"^^xsd:string ;
+    mk:originatesFrom mk:realm-outworld ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Baraka"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:character-cyrax a mk:Character ;
+    mk:alternateName "Unit LK-4D4"^^xsd:string ;
+    mk:description "Botswanan assassin mechanised into a lethal yellow cyborg unit equipped with an energy net and chest saw."^^xsd:string ;
+    mk:firstAppearanceYear "1995"^^xsd:gYear ;
+    mk:hasSpecies "Cyborg / Human"^^xsd:string ;
+    mk:hasVersion mk:version-cyrax-mk3,
+        mk:version-cyrax-mk9 ;
+    mk:name "Cyrax"^^xsd:string ;
     mk:originatesFrom mk:realm-earthrealm ;
-    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Cassie_Cage"^^xsd:anyURI ;
+    mk:rivalOf mk:character-sektor ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Cyrax"^^xsd:anyURI ;
     mk:verificationStatus "verified"^^xsd:string .
 
 mk:character-geras a mk:Character ;
-    mk:alliedWith mk:character-liukang ;
+    mk:alliedWith mk:character-kronika,
+        mk:character-liukang ;
     mk:alternateName "Guardian of the Hourglass"^^xsd:string ;
     mk:description "Immortal artificial construct created to manage temporal sand, resurrecting stronger and wiser after every death."^^xsd:string ;
     mk:firstAppearanceYear "2019"^^xsd:gYear ;
@@ -2836,6 +3126,18 @@ mk:character-geras a mk:Character ;
     mk:name "Geras"^^xsd:string ;
     mk:originatesFrom mk:realm-earthrealm ;
     mk:sourceURL "https://mortalkombat.fandom.com/wiki/Geras"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:character-jacqui a mk:Character ;
+    mk:alternateName "Specialist Jacqueline Briggs"^^xsd:string ;
+    mk:description "Junior Olympic kickboxer and Special Forces operative fighting in high-tech combat gauntlets alongside her father Jax."^^xsd:string ;
+    mk:firstAppearanceYear "2015"^^xsd:gYear ;
+    mk:hasSpecies "Human"^^xsd:string ;
+    mk:hasVersion mk:version-jacqui-mk11,
+        mk:version-jacqui-mkx ;
+    mk:name "Jacqui Briggs"^^xsd:string ;
+    mk:originatesFrom mk:realm-earthrealm ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Jacqui_Briggs"^^xsd:anyURI ;
     mk:verificationStatus "verified"^^xsd:string .
 
 mk:character-jax a mk:Character ;
@@ -2850,42 +3152,30 @@ mk:character-jax a mk:Character ;
     mk:sourceURL "https://mortalkombat.fandom.com/wiki/Jax_Briggs"^^xsd:anyURI ;
     mk:verificationStatus "verified"^^xsd:string .
 
-mk:character-kano a mk:Character ;
-    mk:alternateName "Black Dragon Leader"^^xsd:string ;
-    mk:description "Cybernetically modified Australian mercenary and ruthless boss of the Black Dragon, possessing an infrared laser cyber-eye."^^xsd:string ;
-    mk:firstAppearanceYear "1992"^^xsd:gYear ;
-    mk:hasSpecies "Human Cyborg"^^xsd:string ;
-    mk:hasVersion mk:version-kano-mk1,
-        mk:version-kano-mk11 ;
-    mk:name "Kano"^^xsd:string ;
+mk:character-kronika a mk:Character ;
+    mk:alternateName "Keeper of Time"^^xsd:string ;
+    mk:description "Titan of Time and architect of universe cycles who sought to restart history when Raiden disrupted the balance between Good and Evil."^^xsd:string ;
+    mk:familyOf mk:character-cetrion,
+        mk:character-shinnok ;
+    mk:firstAppearanceYear "2019"^^xsd:gYear ;
+    mk:hasSpecies "Titan"^^xsd:string ;
+    mk:hasVersion mk:version-kronika-mk11 ;
+    mk:name "Kronika"^^xsd:string ;
     mk:originatesFrom mk:realm-earthrealm ;
-    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Kano"^^xsd:anyURI ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Kronika"^^xsd:anyURI ;
     mk:verificationStatus "verified"^^xsd:string .
 
-mk:character-kenshi a mk:Character ;
-    mk:alternateName "Kenshi Takahashi"^^xsd:string ;
-    mk:description "Blind telekinetic master swordsman guided by the spirits of his samurai ancestors housed within the ancestral blade Sento."^^xsd:string ;
-    mk:firstAppearanceYear "2002"^^xsd:gYear ;
-    mk:hasSpecies "Human"^^xsd:string ;
-    mk:hasVersion mk:version-kenshi-mk-deadly-alliance-2002,
-        mk:version-kenshi-mk1-2023,
-        mk:version-kenshi-mkx ;
-    mk:name "Kenshi"^^xsd:string ;
-    mk:originatesFrom mk:realm-earthrealm ;
-    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Kenshi"^^xsd:anyURI ;
-    mk:verificationStatus "verified"^^xsd:string .
-
-mk:character-kitana a mk:Character ;
-    mk:alternateName "Kitana Kahn"^^xsd:string ;
-    mk:description "10,000-year-old royal princess of Edenia who broke free from Shao Kahn's control to lead Outworld as Kitana Kahn."^^xsd:string ;
-    mk:enemyOf mk:character-shaokahn ;
+mk:character-kunglao a mk:Character ;
+    mk:alternateName "The Razor-Hat Monk"^^xsd:string ;
+    mk:description "Shaolin pacifist warrior descendant of the Great Kung Lao, master of whirlwind kicks and a razor-brimmed throwing hat."^^xsd:string ;
+    mk:familyOf mk:character-kungjin ;
     mk:firstAppearanceYear "1993"^^xsd:gYear ;
-    mk:hasSpecies "Edenian"^^xsd:string ;
-    mk:hasVersion mk:version-kitana-mk11,
-        mk:version-kitana-mk2 ;
-    mk:name "Kitana"^^xsd:string ;
-    mk:originatesFrom mk:realm-edenia ;
-    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Kitana"^^xsd:anyURI ;
+    mk:hasSpecies "Human"^^xsd:string ;
+    mk:hasVersion mk:version-kunglao-mk11,
+        mk:version-kunglao-mk2 ;
+    mk:name "Kung Lao"^^xsd:string ;
+    mk:originatesFrom mk:realm-earthrealm ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Kung_Lao"^^xsd:anyURI ;
     mk:verificationStatus "verified"^^xsd:string .
 
 mk:character-onaga a mk:Character ;
@@ -2901,16 +3191,17 @@ mk:character-onaga a mk:Character ;
     mk:sourceURL "https://mortalkombat.fandom.com/wiki/Onaga"^^xsd:anyURI ;
     mk:verificationStatus "verified"^^xsd:string .
 
-mk:character-sindel a mk:Character ;
-    mk:alternateName "Empress Sindel"^^xsd:string ;
-    mk:description "Queen of Edenia and Empress of Outworld, commanding a devastating sonic banshee shriek and lethal prehensile hair."^^xsd:string ;
-    mk:firstAppearanceYear "1995"^^xsd:gYear ;
-    mk:hasSpecies "Edenian"^^xsd:string ;
-    mk:hasVersion mk:version-sindel-mk1-2023,
-        mk:version-sindel-mk3 ;
-    mk:name "Sindel"^^xsd:string ;
-    mk:originatesFrom mk:realm-edenia ;
-    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Sindel"^^xsd:anyURI ;
+mk:character-smoke a mk:Character ;
+    mk:alternateName "Tomas Vrbada"^^xsd:string ;
+    mk:description "Lin Kuei warrior capable of dissolving his physical form into clouds of choking, defensive vapor."^^xsd:string ;
+    mk:firstAppearanceYear "1993"^^xsd:gYear ;
+    mk:hasSpecies "Enenra / Human"^^xsd:string ;
+    mk:hasVersion mk:version-smoke-mk1-2023,
+        mk:version-smoke-mk3,
+        mk:version-smoke-mk9 ;
+    mk:name "Smoke"^^xsd:string ;
+    mk:originatesFrom mk:realm-earthrealm ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Smoke"^^xsd:anyURI ;
     mk:verificationStatus "verified"^^xsd:string .
 
 mk:character-stryker a mk:Character ;
@@ -2925,9 +3216,108 @@ mk:character-stryker a mk:Character ;
     mk:sourceURL "https://mortalkombat.fandom.com/wiki/Kurtis_Stryker"^^xsd:anyURI ;
     mk:verificationStatus "verified"^^xsd:string .
 
+mk:character-takeda a mk:Character ;
+    mk:alternateName "Shirai Ryu Apprentice"^^xsd:string ;
+    mk:description "Son of Kenshi trained from boyhood by Grandmaster Hanzo Hasashi in Shirai Ryu martial arts and telepathic sensory control."^^xsd:string ;
+    mk:firstAppearanceYear "2015"^^xsd:gYear ;
+    mk:hasSpecies "Human"^^xsd:string ;
+    mk:hasVersion mk:version-takeda-mkx ;
+    mk:name "Takeda Takahashi"^^xsd:string ;
+    mk:originatesFrom mk:realm-earthrealm ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Takeda_Takahashi"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
 mk:element-wind a mk:Element ;
     mk:description "Tornadoes, gale force blasts, atmospheric pressure, and levitation."^^xsd:string ;
     mk:name "Wind"^^xsd:string .
+
+mk:move-acid-spit a mk:Move ;
+    mk:description "Ejecting caustic digestive acid that melts armor and flesh on contact."^^xsd:string ;
+    mk:hasElement mk:element-energy ;
+    mk:moveCategory "Special Move"^^xsd:string ;
+    mk:name "Corrosive Acid Spit"^^xsd:string .
+
+mk:move-spear a mk:Move ;
+    mk:description "Hurling a rope or chain spear into the enemy and pulling them in with extreme force."^^xsd:string ;
+    mk:hasElement mk:element-fire ;
+    mk:moveCategory "Special Move"^^xsd:string ;
+    mk:name "Kunai Spear (Get Over Here!)"^^xsd:string .
+
+mk:weapon-kori-blade a mk:Weapon ;
+    mk:description "Sub-Zero's flash-frozen cryogenic sword forged from thin air."^^xsd:string ;
+    mk:name "Kōri Blade"^^xsd:string .
+
+mk:ability-invisibility a mk:Ability ;
+    mk:description "Kemampuan memanipulasi cahaya atau asap untuk menghilang tanpa jejak dari pandangan lawan."^^xsd:string ;
+    mk:moveCategory "Ability"^^xsd:string ;
+    mk:name "Chameleon Camouflage (Invisibility)"^^xsd:string .
+
+mk:ability-necromancy a mk:Ability ;
+    mk:description "Reanimating the dead as loyal Netherrealm revenants."^^xsd:string ;
+    mk:hasElement mk:element-soul ;
+    mk:moveCategory "Sorcery"^^xsd:string ;
+    mk:name "Necromancy"^^xsd:string .
+
+mk:ability-shadow-magic a mk:Ability ;
+    mk:description "Summoning shadow wraiths, portals, and dark clones."^^xsd:string ;
+    mk:hasElement mk:element-shadow ;
+    mk:moveCategory "Dark Magic"^^xsd:string ;
+    mk:name "Shadow Magic"^^xsd:string .
+
+mk:character-cassiecage a mk:Character ;
+    mk:alliedWith mk:character-jacqui,
+        mk:character-kungjin,
+        mk:character-takeda ;
+    mk:alternateName "Commander Cassandra Cage"^^xsd:string ;
+    mk:description "Daughter of Johnny Cage and Sonya Blade, leading Earthrealm's new-generation strike team and inheriting her father's ancient green halo power."^^xsd:string ;
+    mk:enemyOf mk:character-shinnok ;
+    mk:firstAppearanceYear "2015"^^xsd:gYear ;
+    mk:hasSpecies "Human"^^xsd:string ;
+    mk:hasVersion mk:version-cassiecage-mk11,
+        mk:version-cassiecage-mkx ;
+    mk:name "Cassie Cage"^^xsd:string ;
+    mk:originatesFrom mk:realm-earthrealm ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Cassie_Cage"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:character-kano a mk:Character ;
+    mk:alternateName "Black Dragon Leader"^^xsd:string ;
+    mk:description "Cybernetically modified Australian mercenary and ruthless boss of the Black Dragon, possessing an infrared laser cyber-eye."^^xsd:string ;
+    mk:firstAppearanceYear "1992"^^xsd:gYear ;
+    mk:hasSpecies "Human Cyborg"^^xsd:string ;
+    mk:hasVersion mk:version-kano-mk1,
+        mk:version-kano-mk11 ;
+    mk:name "Kano"^^xsd:string ;
+    mk:originatesFrom mk:realm-earthrealm ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Kano"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:character-kitana a mk:Character ;
+    mk:alternateName "Kitana Kahn"^^xsd:string ;
+    mk:description "10,000-year-old royal princess of Edenia who broke free from Shao Kahn's control to lead Outworld as Kitana Kahn."^^xsd:string ;
+    mk:enemyOf mk:character-shaokahn ;
+    mk:familyOf mk:character-sindel ;
+    mk:firstAppearanceYear "1993"^^xsd:gYear ;
+    mk:hasSpecies "Edenian"^^xsd:string ;
+    mk:hasVersion mk:version-kitana-mk11,
+        mk:version-kitana-mk2 ;
+    mk:name "Kitana"^^xsd:string ;
+    mk:originatesFrom mk:realm-edenia ;
+    mk:rivalOf mk:character-mileena ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Kitana"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:character-sektor a mk:Character ;
+    mk:alternateName "Unit LK-9T9"^^xsd:string ;
+    mk:description "Ruthless grandmaster's son who willingly embraced cybernetization, armed with thermal rockets and dual flamethrowers."^^xsd:string ;
+    mk:firstAppearanceYear "1995"^^xsd:gYear ;
+    mk:hasSpecies "Cyborg / Human"^^xsd:string ;
+    mk:hasVersion mk:version-sektor-mk3,
+        mk:version-sektor-mk9 ;
+    mk:name "Sektor"^^xsd:string ;
+    mk:originatesFrom mk:realm-earthrealm ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Sektor"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
 
 mk:element-ice a mk:Element ;
     mk:description "Sub-zero freezing, moisture condensation, and cryogenic weapon forging."^^xsd:string ;
@@ -2945,22 +3335,32 @@ mk:game-mk4-1997 a mk:Game ;
         "PlayStation"^^xsd:string ;
     mk:verificationStatus "verified"^^xsd:string .
 
+mk:move-grenade-toss a mk:Move ;
+    mk:description "Stryker launches tactical concussion grenades in high or low arcs."^^xsd:string ;
+    mk:hasElement mk:element-fire ;
+    mk:moveCategory "Special Move"^^xsd:string ;
+    mk:name "High/Low Grenade Toss"^^xsd:string .
+
+mk:move-wind-kick a mk:Move ;
+    mk:description "Fujin spins horizontally on a cushion of wind, striking repeatedly."^^xsd:string ;
+    mk:hasElement mk:element-wind ;
+    mk:moveCategory "Special Move"^^xsd:string ;
+    mk:name "Tornado Gale Kick"^^xsd:string .
+
 mk:org-black-dragon a mk:Organization ;
     mk:description "Ruthless international mercenary syndicate led by the criminal Kano dealing in illicit weapons and extortion."^^xsd:string ;
     mk:name "Black Dragon"^^xsd:string .
 
-mk:character-shangtsung a mk:Character ;
-    mk:alliedWith mk:character-quanchi ;
-    mk:alternateName "The Soul Stealer"^^xsd:string ;
-    mk:description "Treacherous shapeshifting sorcerer who consumes mortal souls to sustain his youth and mimic enemy abilities."^^xsd:string ;
-    mk:firstAppearanceYear "1992"^^xsd:gYear ;
-    mk:hasSpecies "Human Sorcerer"^^xsd:string ;
-    mk:hasVersion mk:version-shangtsung-mk-deadly-alliance-2002,
-        mk:version-shangtsung-mk1,
-        mk:version-shangtsung-mk1-2023 ;
-    mk:name "Shang Tsung"^^xsd:string ;
-    mk:originatesFrom mk:realm-earthrealm ;
-    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Shang_Tsung"^^xsd:anyURI ;
+mk:character-sindel a mk:Character ;
+    mk:alternateName "Empress Sindel"^^xsd:string ;
+    mk:description "Queen of Edenia and Empress of Outworld, commanding a devastating sonic banshee shriek and lethal prehensile hair."^^xsd:string ;
+    mk:firstAppearanceYear "1995"^^xsd:gYear ;
+    mk:hasSpecies "Edenian"^^xsd:string ;
+    mk:hasVersion mk:version-sindel-mk1-2023,
+        mk:version-sindel-mk3 ;
+    mk:name "Sindel"^^xsd:string ;
+    mk:originatesFrom mk:realm-edenia ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Sindel"^^xsd:anyURI ;
     mk:verificationStatus "verified"^^xsd:string .
 
 mk:game-mk-deception-2004 a mk:Game ;
@@ -2974,15 +3374,47 @@ mk:game-mk-deception-2004 a mk:Game ;
         "Xbox"^^xsd:string ;
     mk:verificationStatus "verified"^^xsd:string .
 
-mk:org-brotherhood-of-shadow a mk:Organization ;
-    mk:description "Fanatical Netherrealm religious cult serving the fallen Elder God Shinnok and sorcerer Quan Chi."^^xsd:string ;
-    mk:name "Brotherhood of Shadow"^^xsd:string .
+mk:move-energy-spark a mk:Move ;
+    mk:description "Li Mei unleashes purple festive chi sparks that juggle airborne targets."^^xsd:string ;
+    mk:hasElement mk:element-energy ;
+    mk:moveCategory "Special Move"^^xsd:string ;
+    mk:name "Luminescent Spark Burst"^^xsd:string .
+
+mk:move-ice-freeze a mk:Move ;
+    mk:description "Blasting a stream of liquid nitrogen vapor that freezes the target solid."^^xsd:string ;
+    mk:hasElement mk:element-ice ;
+    mk:moveCategory "Special Move"^^xsd:string ;
+    mk:name "Deep Freeze"^^xsd:string .
+
+mk:move-revolver-quickdraw a mk:Move ;
+    mk:description "Rapid six-shooter revolver barrage accompanied by blinding Netherrealm sand."^^xsd:string ;
+    mk:hasElement mk:element-energy ;
+    mk:moveCategory "Special Move"^^xsd:string ;
+    mk:name "Sand Slam & Quickdraw"^^xsd:string .
+
+mk:move-teleport-stomp a mk:Move ;
+    mk:description "Sheeva leaps high into the sky and stomps violently downward onto her opponent."^^xsd:string ;
+    mk:hasElement mk:element-energy ;
+    mk:moveCategory "Special Move"^^xsd:string ;
+    mk:name "Shokan Drop Stomp"^^xsd:string .
 
 mk:realm-netherrealm a mk:Realm ;
     mk:description "The fiery subterranean plane of eternal torment, demons, revenants, and dark necromancy, ruled by Shinnok and Quan Chi."^^xsd:string ;
     mk:name "Netherrealm"^^xsd:string .
 
+mk:move-flying-kick a mk:Move ;
+    mk:description "Liu Kang's signature horizontal flight across the screen backed by flaming chi."^^xsd:string ;
+    mk:hasElement mk:element-fire ;
+    mk:moveCategory "Special Move"^^xsd:string ;
+    mk:name "Flying Dragon Kick"^^xsd:string .
+
+mk:realm-edenia a mk:Realm ;
+    mk:description "A lush paradise realm of beauty, peace, and longevity, merged with Outworld for millennia before its restoration."^^xsd:string ;
+    mk:name "Edenia"^^xsd:string .
+
 mk:character-mileena a mk:Character ;
+    mk:alliedWith mk:character-baraka,
+        mk:character-tanya ;
     mk:alternateName "Empress Mileena"^^xsd:string ;
     mk:description "A savage genetic clone created in Shang Tsung's Flesh Pits combining Edenian royal DNA with ferocious Tarkatan physiology."^^xsd:string ;
     mk:firstAppearanceYear "1993"^^xsd:gYear ;
@@ -2995,32 +3427,18 @@ mk:character-mileena a mk:Character ;
     mk:sourceURL "https://mortalkombat.fandom.com/wiki/Mileena"^^xsd:anyURI ;
     mk:verificationStatus "verified"^^xsd:string .
 
-mk:realm-edenia a mk:Realm ;
-    mk:description "A lush paradise realm of beauty, peace, and longevity, merged with Outworld for millennia before its restoration."^^xsd:string ;
-    mk:name "Edenia"^^xsd:string .
-
-mk:character-shaokahn a mk:Character ;
-    mk:alternateName "Emperor of Outworld / General Shao"^^xsd:string ;
-    mk:description "Colossal tyrannical warlord who ruled Outworld for ten millennia, conquering realms by force and wielding the mighty Wrath Hammer."^^xsd:string ;
-    mk:firstAppearanceYear "1993"^^xsd:gYear ;
-    mk:hasSpecies "Outworlder / God"^^xsd:string ;
-    mk:hasVersion mk:version-shaokahn-mk11,
-        mk:version-shaokahn-mk2 ;
-    mk:name "Shao Kahn"^^xsd:string ;
-    mk:originatesFrom mk:realm-outworld ;
-    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Shao_Kahn"^^xsd:anyURI ;
-    mk:verificationStatus "verified"^^xsd:string .
-
-mk:character-shinnok a mk:Character ;
-    mk:alternateName "The Fallen Elder God"^^xsd:string ;
-    mk:description "Banished Elder God of Death and Darkness who plotted to conquer the realms using his powerful sacred amulet."^^xsd:string ;
-    mk:firstAppearanceYear "1997"^^xsd:gYear ;
-    mk:hasSpecies "Elder God (Fallen)"^^xsd:string ;
-    mk:hasVersion mk:version-shinnok-mk4,
-        mk:version-shinnok-mkx ;
-    mk:name "Shinnok"^^xsd:string ;
-    mk:originatesFrom mk:realm-netherrealm ;
-    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Shinnok"^^xsd:anyURI ;
+mk:character-shangtsung a mk:Character ;
+    mk:alliedWith mk:character-quanchi ;
+    mk:alternateName "The Soul Stealer"^^xsd:string ;
+    mk:description "Treacherous shapeshifting sorcerer who consumes mortal souls to sustain his youth and mimic enemy abilities."^^xsd:string ;
+    mk:firstAppearanceYear "1992"^^xsd:gYear ;
+    mk:hasSpecies "Human Sorcerer"^^xsd:string ;
+    mk:hasVersion mk:version-shangtsung-mk-deadly-alliance-2002,
+        mk:version-shangtsung-mk1,
+        mk:version-shangtsung-mk1-2023 ;
+    mk:name "Shang Tsung"^^xsd:string ;
+    mk:originatesFrom mk:realm-earthrealm ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Shang_Tsung"^^xsd:anyURI ;
     mk:verificationStatus "verified"^^xsd:string .
 
 mk:game-mk-armageddon-2006 a mk:Game ;
@@ -3068,16 +3486,21 @@ mk:game-mk9-2011 a mk:Game ;
         "Xbox 360"^^xsd:string ;
     mk:verificationStatus "verified"^^xsd:string .
 
-mk:character-quanchi a mk:Character ;
-    mk:alternateName "Arch-Sorcerer of the Netherrealm"^^xsd:string ;
-    mk:description "Scheming demonic necromancer from the Netherrealm who orchestrates proxy wars, resurrects revenants, and formed the Deadly Alliance."^^xsd:string ;
+mk:weapon-dragon-blade a mk:Weapon ;
+    mk:description "Ancient ceremonial blade housing the cosmic essence of the realms."^^xsd:string ;
+    mk:name "Kamidogu Dragon Blade"^^xsd:string .
+
+mk:character-shinnok a mk:Character ;
+    mk:alternateName "The Fallen Elder God"^^xsd:string ;
+    mk:description "Banished Elder God of Death and Darkness who plotted to conquer the realms using his powerful sacred amulet."^^xsd:string ;
+    mk:familyOf mk:character-cetrion ;
     mk:firstAppearanceYear "1997"^^xsd:gYear ;
-    mk:hasSpecies "Demon Sorcerer"^^xsd:string ;
-    mk:hasVersion mk:version-quanchi-mk4,
-        mk:version-quanchi-mkx ;
-    mk:name "Quan Chi"^^xsd:string ;
+    mk:hasSpecies "Elder God (Fallen)"^^xsd:string ;
+    mk:hasVersion mk:version-shinnok-mk4,
+        mk:version-shinnok-mkx ;
+    mk:name "Shinnok"^^xsd:string ;
     mk:originatesFrom mk:realm-netherrealm ;
-    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Quan_Chi"^^xsd:anyURI ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Shinnok"^^xsd:anyURI ;
     mk:verificationStatus "verified"^^xsd:string .
 
 mk:game-mk3-1995 a mk:Game ;
@@ -3092,6 +3515,22 @@ mk:game-mk3-1995 a mk:Game ;
         "Sega Genesis"^^xsd:string ;
     mk:verificationStatus "verified"^^xsd:string .
 
+mk:org-brotherhood-of-shadow a mk:Organization ;
+    mk:description "Fanatical Netherrealm religious cult serving the fallen Elder God Shinnok and sorcerer Quan Chi."^^xsd:string ;
+    mk:name "Brotherhood of Shadow"^^xsd:string .
+
+mk:character-quanchi a mk:Character ;
+    mk:alternateName "Arch-Sorcerer of the Netherrealm"^^xsd:string ;
+    mk:description "Scheming demonic necromancer from the Netherrealm who orchestrates proxy wars, resurrects revenants, and formed the Deadly Alliance."^^xsd:string ;
+    mk:firstAppearanceYear "1997"^^xsd:gYear ;
+    mk:hasSpecies "Demon Sorcerer"^^xsd:string ;
+    mk:hasVersion mk:version-quanchi-mk4,
+        mk:version-quanchi-mkx ;
+    mk:name "Quan Chi"^^xsd:string ;
+    mk:originatesFrom mk:realm-netherrealm ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Quan_Chi"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
 mk:character-scorpion a mk:Character ;
     mk:alliedWith mk:character-subzero ;
     mk:alternateName "Hanzo Hasashi"^^xsd:string ;
@@ -3103,9 +3542,24 @@ mk:character-scorpion a mk:Character ;
     mk:hasVersion mk:version-scorpion-mk1,
         mk:version-scorpion-mk1-2023,
         mk:version-scorpion-mk11 ;
+    mk:mentorOf mk:character-takeda ;
     mk:name "Scorpion"^^xsd:string ;
     mk:originatesFrom mk:realm-earthrealm ;
     mk:sourceURL "https://mortalkombat.fandom.com/wiki/Scorpion"^^xsd:anyURI ;
+    mk:verificationStatus "verified"^^xsd:string .
+
+mk:character-shaokahn a mk:Character ;
+    mk:alliedWith mk:character-sindel ;
+    mk:alternateName "Emperor of Outworld / General Shao"^^xsd:string ;
+    mk:description "Colossal tyrannical warlord who ruled Outworld for ten millennia, conquering realms by force and wielding the mighty Wrath Hammer."^^xsd:string ;
+    mk:familyOf mk:character-mileena ;
+    mk:firstAppearanceYear "1993"^^xsd:gYear ;
+    mk:hasSpecies "Outworlder / God"^^xsd:string ;
+    mk:hasVersion mk:version-shaokahn-mk11,
+        mk:version-shaokahn-mk2 ;
+    mk:name "Shao Kahn"^^xsd:string ;
+    mk:originatesFrom mk:realm-outworld ;
+    mk:sourceURL "https://mortalkombat.fandom.com/wiki/Shao_Kahn"^^xsd:anyURI ;
     mk:verificationStatus "verified"^^xsd:string .
 
 mk:game-mk1-1992 a mk:Game ;
@@ -3120,22 +3574,41 @@ mk:game-mk1-1992 a mk:Game ;
         "Sega Genesis"^^xsd:string ;
     mk:verificationStatus "verified"^^xsd:string .
 
+mk:org-lin-kuei a mk:Clan ;
+    mk:description "Ancient Chinese stealth clan of assassins and cryomancers, historically pledged to protect Earthrealm."^^xsd:string ;
+    mk:name "Lin Kuei"^^xsd:string .
+
 mk:character-subzero a mk:Character ;
+    mk:alliedWith mk:character-cyrax,
+        mk:character-smoke ;
     mk:alternateName "Kuai Liang / Bi-Han"^^xsd:string ;
     mk:description "Grandmaster of the Lin Kuei possessing lethal cryomantic powers to flash-freeze moisture into weapons and barriers."^^xsd:string ;
+    mk:enemyOf mk:character-sektor ;
+    mk:familyOf mk:character-noobsaibot ;
     mk:firstAppearanceYear "1992"^^xsd:gYear ;
     mk:hasSpecies "Cryomancer"^^xsd:string ;
     mk:hasVersion mk:version-subzero-mk1,
         mk:version-subzero-mk1-2023,
         mk:version-subzero-mk11 ;
+    mk:mentorOf mk:character-frost ;
     mk:name "Sub-Zero"^^xsd:string ;
     mk:originatesFrom mk:realm-earthrealm ;
     mk:sourceURL "https://mortalkombat.fandom.com/wiki/Sub-Zero"^^xsd:anyURI ;
     mk:verificationStatus "verified"^^xsd:string .
 
+mk:weapon-kriss-dagger a mk:Weapon ;
+    mk:description "Ashrah's holy sword 'Datusha' that cleanses the demonic soul of its wielder with each demon slain."^^xsd:string ;
+    mk:name "Kriss Purification Dagger"^^xsd:string .
+
 mk:character-liukang a mk:Character ;
+    mk:alliedWith mk:character-kitana,
+        mk:character-kunglao,
+        mk:character-raiden ;
     mk:alternateName "Fire God Liu Kang"^^xsd:string ;
     mk:description "Shaolin monk who won four consecutive Mortal Kombat tournaments, later ascending to become the Fire God and Architect of the New Era."^^xsd:string ;
+    mk:enemyOf mk:character-kronika,
+        mk:character-shangtsung,
+        mk:character-shaokahn ;
     mk:firstAppearanceYear "1992"^^xsd:gYear ;
     mk:hasSpecies "God / Human"^^xsd:string ;
     mk:hasVersion mk:version-liukang-mk1,
@@ -3150,28 +3623,29 @@ mk:element-fire a mk:Element ;
     mk:description "Netherrealm hellfire, spiritual chi flame, and supernatural combustion."^^xsd:string ;
     mk:name "Fire"^^xsd:string .
 
-mk:org-lin-kuei a mk:Clan ;
-    mk:description "Ancient Chinese stealth clan of assassins and cryomancers, historically pledged to protect Earthrealm."^^xsd:string ;
-    mk:name "Lin Kuei"^^xsd:string .
-
-mk:org-white-lotus a mk:Organization ;
-    mk:description "Secret society of martial artists founded by Raiden to defend Earthrealm in Mortal Kombat tournaments."^^xsd:string ;
-    mk:name "White Lotus Society"^^xsd:string .
+mk:weapon-bo-staff a mk:Weapon ;
+    mk:description "Jade's glowing triboluminescent steel bo staff delivering long-reach pole vault strikes."^^xsd:string ;
+    mk:name "Imperial Bo Staff"^^xsd:string .
 
 mk:org-special-forces a mk:Organization ;
     mk:description "Earthrealm military division led by Sonya Blade and Jax Briggs tasked with countering otherworldly threats."^^xsd:string ;
     mk:name "Special Forces"^^xsd:string .
 
+mk:org-white-lotus a mk:Organization ;
+    mk:description "Secret society of martial artists founded by Raiden to defend Earthrealm in Mortal Kombat tournaments."^^xsd:string ;
+    mk:name "White Lotus Society"^^xsd:string .
+
 mk:character-raiden a mk:Character ;
-    mk:alliedWith mk:character-liukang ;
     mk:alternateName "God of Thunder"^^xsd:string ;
     mk:description "Immortal God of Thunder and ancient Protector of Earthrealm, wielding crackling lightning and temporal visions."^^xsd:string ;
     mk:enemyOf mk:character-shinnok ;
+    mk:familyOf mk:character-fujin ;
     mk:firstAppearanceYear "1992"^^xsd:gYear ;
     mk:hasSpecies "God"^^xsd:string ;
     mk:hasVersion mk:version-raiden-mk1,
         mk:version-raiden-mk1-2023,
         mk:version-raiden-mk11 ;
+    mk:mentorOf mk:character-liukang ;
     mk:name "Raiden"^^xsd:string ;
     mk:originatesFrom mk:realm-earthrealm ;
     mk:sourceURL "https://mortalkombat.fandom.com/wiki/Raiden"^^xsd:anyURI ;
@@ -3180,12 +3654,6 @@ mk:character-raiden a mk:Character ;
 mk:realm-outworld a mk:Realm ;
     mk:description "A harsh, majestic imperial realm forged by conquering and merging neighboring worlds, formerly ruled by Shao Kahn and now Empress Sindel."^^xsd:string ;
     mk:name "Outworld"^^xsd:string .
-
-mk:ability-teleportation a mk:Ability ;
-    mk:description "Instant spatial traversal across short or long combat distances."^^xsd:string ;
-    mk:hasElement mk:element-energy ;
-    mk:moveCategory "Spatial"^^xsd:string ;
-    mk:name "Dimensional Teleportation"^^xsd:string .
 
 mk:game-mk1-2023 a mk:Game ;
     mk:description "A reborn Mortal Kombat universe crafted by Fire God Liu Kang featuring reimagined character origins and Kameo Fighter assist combat."^^xsd:string ;
@@ -3214,6 +3682,12 @@ mk:timeline-new-era a mk:Timeline ;
     mk:chronologicalPeriod "2023–present"^^xsd:string ;
     mk:description "The peace-focused universe engineered by Fire God Liu Kang using the Hourglass, where origins and rivalries were fundamentally rewritten."^^xsd:string ;
     mk:name "New Era"^^xsd:string .
+
+mk:ability-teleportation a mk:Ability ;
+    mk:description "Instant spatial traversal across short or long combat distances."^^xsd:string ;
+    mk:hasElement mk:element-energy ;
+    mk:moveCategory "Spatial"^^xsd:string ;
+    mk:name "Dimensional Teleportation"^^xsd:string .
 
 mk:game-mk11-2019 a mk:Game ;
     mk:description "Time-bending conflict against Keeper of Time Kronika, introducing Krushing Blows, Fatal Blows, and deep cosmetic gear customization."^^xsd:string ;

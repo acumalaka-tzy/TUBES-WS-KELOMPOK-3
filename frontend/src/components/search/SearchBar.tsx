@@ -24,7 +24,7 @@ export function pushHistory(q: string) {
 }
 
 /**
- * Global search bar — FR-02: input, autocomplete, riwayat pencarian lokal.
+ * Global search bar: input, autocomplete, riwayat pencarian lokal.
  */
 export default function SearchBar({
   initialQuery = "",

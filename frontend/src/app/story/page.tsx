@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Suspense, useMemo, useState } from "react";
 import { getStoryEvents, getTimelines } from "@/lib/api";
-import { useAsync, useLocalBoolean } from "@/lib/hooks";
+import { useAsync } from "@/lib/hooks";
 import { entityHref } from "@/lib/routes";
 import { STORY_ARCS } from "@/lib/mock-data";
 import { VerificationBadge } from "@/components/ui/Badge";
@@ -21,10 +21,6 @@ function StoryExplorerContent() {
   const [query, setQuery] = useState("");
   const [selectedTimeline, setSelectedTimeline] = useState(initialTimeline);
   const [selectedArc, setSelectedArc] = useState(initialArc);
-
-  // Spoiler toggle (PRD 25.5 & 26.2: user can hide/reveal spoiler details, stored locally)
-  const [hideSpoilers, setHideSpoilers] = useLocalBoolean("mkn:hide-spoilers", true);
-  const [revealedIds, setRevealedIds] = useState<Record<string, boolean>>({});
 
   const { data: timelines } = useAsync(getTimelines, []);
   const { data: events, error, loading, reload } = useAsync(
@@ -51,31 +47,18 @@ function StoryExplorerContent() {
     ];
   }, []);
 
-  const toggleReveal = (id: string) => {
-    setRevealedIds((prev) => ({ ...prev, [id]: !prev[id] }));
-  };
-
   return (
     <>
       <PageHeader
         eyebrow="Story Explorer"
         title="Eksplorasi Cerita &amp; Peristiwa"
-        description="Telusuri peristiwa kanonikal, asal-usul karakter, konflik antarklan, dan titik perubahan sejarah Mortal Kombat berdasarkan timeline (PRD FR-23 &amp; Bagian 26)."
+        description="Telusuri peristiwa kanonikal, asal-usul karakter, konflik antarklan, dan titik perubahan sejarah Mortal Kombat berdasarkan timeline."
         crumbs={[{ label: "Story" }]}
       >
         <div className="flex flex-wrap items-center gap-3 pt-2">
           <Link href="/story/timeline" className="btn-primary !py-2 !text-xs">
             🧭 Buka Story Timeline (Kronologis) →
           </Link>
-          <label className="flex cursor-pointer items-center gap-2 rounded-sm border border-mk-border bg-mk-bg2 px-3 py-2 text-xs text-mk-muted">
-            <input
-              type="checkbox"
-              checked={hideSpoilers}
-              onChange={(e) => setHideSpoilers(e.target.checked)}
-              className="accent-mk-red"
-            />
-            <span>Sembunyikan spoiler cerita</span>
-          </label>
         </div>
       </PageHeader>
 
@@ -137,7 +120,6 @@ function StoryExplorerContent() {
         ) : (
           <div className="space-y-4">
             {events.map((ev) => {
-              const isSpoiler = ev.spoiler && hideSpoilers && !revealedIds[ev.id];
               return (
                 <div
                   key={ev.id}
@@ -145,20 +127,8 @@ function StoryExplorerContent() {
                 >
                   <div className="flex flex-wrap items-center justify-between gap-2">
                     <div className="flex flex-wrap items-center gap-2">
-                      <span className="rounded-sm border border-mk-gold/40 bg-mk-bg px-2 py-0.5 text-[10px] uppercase tracking-wider text-mk-gold">
-                        {ev.eventType}
-                      </span>
-                      <span className="rounded-sm border border-mk-border bg-mk-bg px-2 py-0.5 text-[10px] text-mk-muted">
+                      <span className="rounded-sm border border-mk-gold/40 bg-mk-bg px-2.5 py-0.5 text-xs font-semibold text-mk-gold">
                         {ev.timeline.name}
-                      </span>
-                      {ev.arc && (
-                        <span className="rounded-sm border border-mk-red/40 bg-mk-red-deep/20 px-2 py-0.5 text-[10px] text-red-200">
-                          Arc: {ev.arc}
-                        </span>
-                      )}
-                      <span className="text-[10px] text-mk-muted">
-                        Kronologi: #{ev.chronology} (
-                        {ev.chronologyType === "confirmed" ? "Pasti" : "Perkiraan"})
                       </span>
                     </div>
                     <VerificationBadge status={ev.verificationStatus} />
@@ -170,21 +140,7 @@ function StoryExplorerContent() {
                     </Link>
                   </h2>
 
-                  {/* Summary with spoiler cover */}
-                  {isSpoiler ? (
-                    <div className="flex items-center justify-between rounded-sm border border-mk-border bg-mk-bg2 p-3 text-xs text-mk-muted">
-                      <span>⚠️ Bagian cerita ini mengandung spoiler.</span>
-                      <button
-                        type="button"
-                        onClick={() => toggleReveal(ev.id)}
-                        className="text-mk-gold hover:underline"
-                      >
-                        Tampilkan spoiler
-                      </button>
-                    </div>
-                  ) : (
-                    <p className="text-sm text-mk-text/90 leading-relaxed">{ev.summary}</p>
-                  )}
+                  <p className="text-sm text-mk-text/90 leading-relaxed">{ev.summary}</p>
 
                   {/* Participants & Location */}
                   <div className="flex flex-wrap items-center justify-between gap-3 border-t border-mk-border pt-3 text-xs">

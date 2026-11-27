@@ -52,7 +52,7 @@ export function isReadOnlySparql(sparql: string): boolean {
   if (forbidden.test(stripped)) {
     return false;
   }
-  const allowed = /^\s*(PREFIX[^\r\n]*[\r\n]+)*(SELECT|ASK|CONSTRUCT|DESCRIBE)\b/i;
+  const allowed = /^\s*(PREFIX[^\r\n]*[\r\n\s]+)*(SELECT|ASK|CONSTRUCT|DESCRIBE)\b/i;
   return allowed.test(stripped);
 }
 

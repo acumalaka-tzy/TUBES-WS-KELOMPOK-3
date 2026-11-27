@@ -41,7 +41,7 @@ function StoryTimelineContent() {
       <PageHeader
         eyebrow="Story Timeline"
         title="Garis Waktu Peristiwa Kronologis"
-        description="Visualisasi urutan kronologis kejadian dalam sejarah Mortal Kombat. Sistem membedakan secara tegas antara kronologi yang terkonfirmasi (confirmed) dan urutan hasil penafsiran (inferred) sesuai PRD 25.5."
+        description="Visualisasi urutan kronologis kejadian dan titik balik penting dalam sejarah Mortal Kombat."
         crumbs={[
           { label: "Story", href: "/story" },
           { label: "Timeline" },
@@ -74,7 +74,7 @@ function StoryTimelineContent() {
         ) : !events?.length ? (
           <p className="text-center text-sm text-mk-muted">Belum ada peristiwa pada timeline ini.</p>
         ) : (
-          /* Chronological Vertical Timeline (PRD 25.5 Story Timeline) */
+          /* Chronological Vertical Timeline */
           <div className="relative border-l-2 border-mk-border pl-6 sm:pl-8 ml-4 sm:ml-8 space-y-8">
             {events.map((ev, idx) => (
               <div key={ev.id} className="relative group">
@@ -89,15 +89,6 @@ function StoryTimelineContent() {
                     <div className="flex flex-wrap items-center gap-2">
                       <span className="font-mono text-xs font-bold text-mk-gold">
                         Langkah #{ev.chronology}
-                      </span>
-                      <span
-                        className={`rounded px-2 py-0.5 text-[10px] uppercase tracking-wider ${
-                          ev.chronologyType === "confirmed"
-                            ? "bg-emerald-500/10 text-emerald-300 border border-emerald-500/30"
-                            : "bg-amber-500/10 text-amber-300 border border-amber-500/30"
-                        }`}
-                      >
-                        Kronologi: {ev.chronologyType === "confirmed" ? "Terkonfirmasi" : "Hasil inferensi"}
                       </span>
                       <span className="text-xs text-mk-muted">
                         • {ev.timeline.name}

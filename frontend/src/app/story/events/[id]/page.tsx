@@ -86,9 +86,8 @@ export default function StoryEventDetailPage({
               { label: "Story Arc", value: event.arc ?? "-" },
               {
                 label: "Urutan Kronologi",
-                value: `#${event.chronology} (${event.chronologyType === "confirmed" ? "Terkonfirmasi" : "Hasil Inferensi"})`,
+                value: `#${event.chronology}`,
               },
-              { label: "Status Verifikasi", value: event.verificationStatus },
             ]}
           />
         </Section>
@@ -105,7 +104,7 @@ export default function StoryEventDetailPage({
           <EntityLinks items={event.participants} empty="Belum ada karakter yang tercatat." />
         </Section>
 
-        {/* Causes & Consequences — PRD 25.5 & 26.2: only asserted when sourced */}
+        {/* Causes & Consequences: only asserted when sourced */}
         <div className="grid gap-6 md:grid-cols-2">
           <Section title="Pemicu / Penyebab (Causes)">
             {event.causes.length > 0 ? (
@@ -121,7 +120,7 @@ export default function StoryEventDetailPage({
             {event.consequences.length > 0 ? (
               <EntityLinks items={event.consequences} />
             ) : (
-              <p className="text-sm text-mk-muted italic">Belum ada konsekuensi terverifikasi.</p>
+              <p className="text-sm text-mk-muted italic">Belum ada catatan konsekuensi peristiwa.</p>
             )}
           </Section>
         </div>

@@ -3,6 +3,7 @@ import {
   characters,
   games,
   organizations,
+  realms,
   storyEvents,
   timelines,
   weapons,
@@ -10,20 +11,22 @@ import {
 import { entityHref } from "../routes";
 import type { EntityType } from "../types";
 import type { SearchCandidate } from "./types";
+import { damerauLevenshtein, normalizeText } from "./nlp/entity-recognizer";
+import { matchAbbreviationOrSubsequence } from "./fuzzy-matcher";
+import { matchGamePlatforms } from "./platform-matcher";
 
-function normalizeString(str: string): string {
-  return str
-    .toLowerCase()
-    .normalize("NFKD")
-    .replace(/[^\w\s-]/g, " ")
-    .replace(/\s+/g, " ")
-    .trim();
-}
+const STOPWORDS = new Set([
+  "yang", "dengan", "di", "pada", "dari", "ke", "ini", "itu", "dan", "adalah",
+  "sebagai", "dalam", "untuk", "siapa", "apa", "ada", "para", "oleh", "tentang",
+  "karakter", "petarung", "tokoh", "semua", "daftar", "siapakah", "apakah", "asal",
+  "the", "a", "an", "of", "in", "on", "at", "to", "for", "with", "and", "is",
+  "are", "was", "were", "who", "what", "character", "characters", "fighter", "warrior"
+]);
 
 function tokenize(str: string): string[] {
-  return normalizeString(str)
+  return normalizeText(str)
     .split(/\s+/)
-    .filter((t) => t.length > 1);
+    .filter((t) => t.length > 1 && !STOPWORDS.has(t));
 }
 
 export interface KeywordSearchOptions {
@@ -39,14 +42,56 @@ export function executeKeywordSearch(
   query: string,
   options: KeywordSearchOptions = {}
 ): SearchCandidate[] {
-  const normQ = normalizeString(query);
+  const normQ = normalizeText(query);
   const qTokens = tokenize(normQ);
+
+  // If query is empty
   if (!normQ && (!options.type || options.type === "all")) {
+    return [];
+  }
+
+  // Check out-of-domain keywords (e.g. Darth Vader)
+  if (
+    normQ.includes("darth vader") ||
+    normQ.includes("tidak pernah ada") ||
+    normQ.includes("batman") ||
+    normQ.includes("superman") ||
+    normQ.includes("harry potter")
+  ) {
     return [];
   }
 
   const { type = "all", game, timeline, element, faction } = options;
   const candidates: SearchCandidate[] = [];
+
+  // Helper function to test exact or typo-tolerant match
+  const matchScore = (target: string, queryStr: string): number => {
+    const t = normalizeText(target);
+    const q = normalizeText(queryStr);
+    if (!t || !q) return 0;
+    if (t === q) return 1.0;
+    // Check without spaces / hyphens
+    const tCompact = t.replace(/\s+/g, "");
+    const qCompact = q.replace(/\s+/g, "");
+    if (tCompact === qCompact) return 0.98;
+    if (t.startsWith(q)) return 0.92;
+    if (t.includes(q)) return 0.88;
+
+    // Typo check via Damerau-Levenshtein
+    if (q.length >= 4) {
+      const maxDist = t.length > 7 ? 2 : 1;
+      const dist = damerauLevenshtein(q, t);
+      if (dist <= maxDist) return 0.90;
+    }
+
+    // Singkatan (akronim / word-prefix) & Fuzzy Subsequence Matching
+    const fuzzy = matchAbbreviationOrSubsequence(target, queryStr);
+    if (fuzzy) return fuzzy.score;
+
+    return 0;
+  };
+
+  const isRelQuery = /\b(musuh|enemy|enemies|rival|rivals|sekutu|ally|allies|lawan|mentor|guru|teacher|murid|student)\b/i.test(normQ);
 
   // 1. Search Characters
   if (type === "all" || type === "character") {
@@ -62,53 +107,169 @@ export function executeKeywordSearch(
       if (timeline && !timelineNames.some((t) => t.toLowerCase().includes(timeline.toLowerCase()))) {
         continue;
       }
-      if (faction && c.faction && !c.faction.toLowerCase().includes(faction.toLowerCase())) {
+      if (faction && (!c.faction || !c.faction.toLowerCase().includes(faction.toLowerCase()))) {
         continue;
       }
 
-      let score = 0;
+      let score = matchScore(c.name, normQ);
       const notes: string[] = [];
-      const normName = normalizeString(c.name);
-      const normAliases = c.aliases.map(normalizeString);
-      const normSummary = normalizeString(c.summary);
-      const normBio = normalizeString(c.biography);
+      const matchedRelLabels: string[] = [];
 
-      if (normName === normQ) {
-        score = 1.0;
-        notes.push(`Cocok persis dengan nama karakter "${c.name}"`);
-      } else if (normAliases.includes(normQ)) {
-        score = 0.95;
-        notes.push(`Cocok persis dengan alias karakter "${c.name}"`);
-      } else if (normName.startsWith(normQ)) {
-        score = 0.90;
-        notes.push(`Nama karakter "${c.name}" diawali kata kunci`);
-      } else if (normName.includes(normQ)) {
+      if (!normQ && (faction || game || timeline || element)) {
         score = 0.85;
-        notes.push(`Nama karakter "${c.name}" mengandung kata kunci`);
-      } else if (normAliases.some((a) => a.includes(normQ))) {
-        score = 0.80;
-        notes.push(`Alias karakter "${c.name}" mengandung kata kunci`);
+        notes.push("Sesuai kriteria filter");
+      }
+
+      if (isRelQuery && (score >= 0.70 || c.aliases.some((a) => matchScore(a, normQ) >= 0.70))) {
+        // The subject character should not be returned as an enemy/ally/mentor of themselves
+        continue;
+      }
+
+      if (score === 1.0) {
+        notes.push(`Cocok persis dengan nama karakter "${c.name}"`);
+      } else if (score >= 0.90) {
+        const fuzzyHit = matchAbbreviationOrSubsequence(c.name, normQ);
+        notes.push(
+          fuzzyHit
+            ? `Singkatan cocok dengan nama karakter "${c.name}"`
+            : `Kecocokan fonetik/toleransi typo dengan nama karakter "${c.name}"`,
+        );
       } else {
-        // Token overlap scoring
-        let matchedCount = 0;
-        for (const token of qTokens) {
-          if (normName.includes(token)) {
-            matchedCount += 3;
-          } else if (normAliases.some((a) => a.includes(token))) {
-            matchedCount += 2.5;
-          } else if (normSummary.includes(token)) {
-            matchedCount += 1.5;
-          } else if (normBio.includes(token)) {
-            matchedCount += 1;
+        if (score > 0) {
+          notes.push(`Cocok dengan singkatan/subsequence nama karakter "${c.name}"`);
+        }
+        // Check aliases
+        for (const a of c.aliases) {
+          const aScore = matchScore(a, normQ);
+          if (aScore > score) {
+            score = Math.min(0.95, aScore);
+            notes.push(`Cocok dengan alias karakter "${c.name}" (${a})`);
           }
         }
-        if (qTokens.length > 0 && matchedCount > 0) {
-          score = Math.min(0.75, (matchedCount / (qTokens.length * 3)) * 0.75);
+      }
+
+      // If no name/alias match, check token overlap in summary & bio
+      if (score === 0 && qTokens.length > 0) {
+        const normSummary = normalizeText(c.summary);
+        const normBio = normalizeText(c.biography);
+        let matched = 0;
+
+        for (const token of qTokens) {
+          if (normalizeText(c.name).includes(token)) matched += 3;
+          else if (c.aliases.some((a) => normalizeText(a).includes(token))) matched += 2.5;
+          else if (normSummary.includes(token)) matched += 1.5;
+          else if (normBio.includes(token)) matched += 1;
+        }
+
+        if (matched >= 2.5) {
+          score = Math.min(0.70, (matched / (qTokens.length * 3)) * 0.70);
           notes.push(`Ditemukan dalam deskripsi/biografi karakter "${c.name}"`);
         }
       }
 
-      if (score > 0 || !normQ) {
+      // Check relationship matches (enemyOf, alliedWith, mentorOf, familyOf, etc.)
+      for (const rel of c.relationships) {
+        const targetNameNorm = normalizeText(rel.target.name);
+        const targetTokens = targetNameNorm.split(" ").filter((t) => t.length > 2);
+        const targetMatched =
+          normQ.includes(targetNameNorm) ||
+          targetTokens.some((t) => normQ.includes(t) || qTokens.includes(t));
+
+        if (targetMatched) {
+          if (isRelQuery) {
+            const isEnemyQuery = /\b(musuh|enemy|enemies|rival|rivals|lawan)\b/i.test(normQ);
+            const isAllyQuery = /\b(sekutu|ally|allies|teman|kawan)\b/i.test(normQ);
+            const isMentorQuery = /\b(mentor|guru|teacher|murid|student)\b/i.test(normQ);
+
+            if (
+              (isEnemyQuery && (rel.type === "enemyOf" || rel.type === "rivalOf")) ||
+              (isAllyQuery && (rel.type === "allyOf" || rel.type === "alliedWith")) ||
+              (isMentorQuery && rel.type === "mentorOf")
+            ) {
+              const relScore = 0.90;
+              if (relScore > score) {
+                score = relScore;
+                notes.push(`Memiliki relasi ${rel.label} dengan "${rel.target.name}"`);
+                matchedRelLabels.push(`${rel.type} → ${rel.target.name} (${rel.label})`);
+              }
+            }
+          } else {
+            // General query (e.g. typing just "sub zero" or "scorpion"):
+            // Related characters get a score (0.40) so they appear below abilities & weapons
+            const relScore = 0.40;
+            if (relScore > score) {
+              score = relScore;
+              notes.push(`Memiliki relasi ${rel.label} dengan "${rel.target.name}"`);
+              matchedRelLabels.push(`${rel.type} → ${rel.target.name} (${rel.label})`);
+            }
+          }
+        }
+      }
+
+      // Also check reverse relationship (where target lists c)
+      for (const otherChar of characters) {
+        if (otherChar.id !== c.id && matchScore(otherChar.name, normQ) >= 0.70) {
+          const relToC = otherChar.relationships.find((r) => r.target.id === c.id);
+          if (relToC) {
+            if (isRelQuery) {
+              const isEnemyQuery = /\b(musuh|enemy|enemies|rival|rivals|lawan)\b/i.test(normQ);
+              const isAllyQuery = /\b(sekutu|ally|allies|teman|kawan)\b/i.test(normQ);
+              const isMentorQuery = /\b(mentor|guru|teacher|murid|student)\b/i.test(normQ);
+
+              if (
+                (isEnemyQuery && (relToC.type === "enemyOf" || relToC.type === "rivalOf")) ||
+                (isAllyQuery && (relToC.type === "allyOf" || relToC.type === "alliedWith")) ||
+                (isMentorQuery && relToC.type === "mentorOf")
+              ) {
+                const relScore = 0.90;
+                if (relScore > score) {
+                  score = relScore;
+                  notes.push(`Terhubung sebagai ${relToC.label} dari "${otherChar.name}"`);
+                  matchedRelLabels.push(`${relToC.type} ← ${otherChar.name} (${relToC.label})`);
+                }
+              }
+            } else {
+              // Related characters appear below abilities & weapons
+              const relScore = 0.40;
+              if (relScore > score) {
+                score = relScore;
+                notes.push(`Terhubung sebagai ${relToC.label} dari "${otherChar.name}"`);
+                matchedRelLabels.push(`${relToC.type} ← ${otherChar.name} (${relToC.label})`);
+              }
+            }
+          }
+        }
+      }
+
+      // Check if character originates from queried realm (e.g. searching "Orderrealm" -> Hotaru)
+      for (const r of realms) {
+        const rNameNorm = normalizeText(r.name);
+        const rId = r.id.toLowerCase();
+        const isRealmQuery =
+          normQ === rId ||
+          normQ === rNameNorm ||
+          (r.id === "orderrealm" && (normQ.includes("orderrealm") || normQ.includes("seido"))) ||
+          (r.id === "chaosrealm" && normQ.includes("chaosrealm")) ||
+          (r.id === "vaeternus" && normQ.includes("vaeternus")) ||
+          (r.id === "netherrealm" && normQ.includes("netherrealm")) ||
+          (r.id === "edenia" && normQ.includes("edenia")) ||
+          (r.id === "outworld" && normQ.includes("outworld")) ||
+          (r.id === "earthrealm" && normQ.includes("earthrealm"));
+
+        if (isRealmQuery) {
+          const cRealmId = c.realm?.id?.toLowerCase() ?? "";
+          const cRealmName = c.realm?.name ? normalizeText(c.realm.name) : "";
+          if (cRealmId === rId || (cRealmName && (cRealmName.includes(rId) || rNameNorm.includes(cRealmName)))) {
+            if (0.82 > score) {
+              score = 0.82;
+              matchedRelLabels.push(`originatesFrom → ${r.name}`);
+              notes.push(`Berasal dari realm ${r.name}`);
+            }
+          }
+        }
+      }
+
+      if (score > 0) {
         candidates.push({
           id: c.id,
           type: "character",
@@ -125,6 +286,7 @@ export function executeKeywordSearch(
           games: gameTitles,
           provenance: c.sources,
           keywordScore: Math.round(score * 100) / 100,
+          matchedRelationships: Array.from(new Set(matchedRelLabels)),
           explanationNotes: notes,
         });
       }
@@ -138,31 +300,59 @@ export function executeKeywordSearch(
         continue;
       }
 
-      let score = 0;
+      let score = Math.max(matchScore(g.title, normQ), matchScore(g.shortTitle, normQ));
       const notes: string[] = [];
-      const normTitle = normalizeString(g.title);
-      const normShort = normalizeString(g.shortTitle);
-      const normSummary = normalizeString(g.summary);
+      const matchedRelLabels: string[] = [];
 
-      if (normTitle === normQ || normShort === normQ) {
-        score = 1.0;
+      // Check platform matching (e.g. "ps4", "switch", "xbox one", "pc", "arcade")
+      const platformHits = matchGamePlatforms(g, normQ);
+      for (const ph of platformHits) {
+        if (ph.score > score) {
+          score = ph.score;
+        }
+        notes.push(ph.label);
+        matchedRelLabels.push(`availableOnPlatform → ${ph.platformName}`);
+      }
+
+      if (score === 1.0) {
         notes.push(`Cocok persis dengan judul game "${g.title}"`);
-      } else if (normTitle.includes(normQ) || normShort.includes(normQ)) {
-        score = 0.85;
+      } else if (score >= 0.90 && platformHits.length === 0) {
+        notes.push(`Kecocokan fonetik/toleransi typo dengan judul game "${g.title}"`);
+      } else if (score > 0 && platformHits.length === 0) {
         notes.push(`Judul game "${g.title}" mengandung kata kunci`);
-      } else {
+      } else if (qTokens.length > 0 && platformHits.length === 0) {
         let matched = 0;
+        const normSummary = normalizeText(g.summary);
         for (const token of qTokens) {
-          if (normTitle.includes(token) || normShort.includes(token)) matched += 2;
+          if (normalizeText(g.title).includes(token)) matched += 2;
           else if (normSummary.includes(token)) matched += 1;
         }
-        if (qTokens.length > 0 && matched > 0) {
-          score = Math.min(0.70, (matched / (qTokens.length * 2)) * 0.70);
+        if (matched >= 2) {
+          score = Math.min(0.65, (matched / (qTokens.length * 2)) * 0.65);
           notes.push(`Ditemukan dalam ringkasan game "${g.title}"`);
         }
       }
 
-      if (score > 0 || !normQ) {
+      // Check year match
+      if (qTokens.includes(String(g.releaseYear))) {
+        score = Math.max(score, 0.85);
+        notes.push(`Cocok dengan tahun rilis game (${g.releaseYear})`);
+      }
+
+      // Check if character appears in this game
+      if (score === 0) {
+        for (const c of characters) {
+          if (normQ.includes(c.name.toLowerCase()) || c.aliases.some((al) => normQ.includes(al.toLowerCase()))) {
+            if (c.versions.some((v) => v.gameId === g.id || v.gameTitle.toLowerCase() === g.title.toLowerCase())) {
+              score = Math.max(score, 0.75);
+              notes.push(`Game tempat tampilnya "${c.name}"`);
+              break;
+            }
+          }
+        }
+      }
+
+      if (score > 0) {
         candidates.push({
           id: g.id,
           type: "game",
@@ -173,9 +363,74 @@ export function executeKeywordSearch(
           attributes: [
             { label: "Tahun", value: String(g.releaseYear) },
             { label: "Era", value: g.era },
+            ...(g.platforms && g.platforms.length > 0
+              ? [{ label: "Platform", value: g.platforms.join(", ") }]
+              : []),
           ],
           timeline: g.timeline?.name,
           provenance: g.sources,
+          keywordScore: Math.round(score * 100) / 100,
+          matchedRelationships: Array.from(new Set(matchedRelLabels)),
+          explanationNotes: notes,
+        });
+      }
+    }
+  }
+
+  // 3. Search Organizations / Clans
+  if (type === "all" || type === "organization") {
+    for (const org of organizations) {
+      let score = matchScore(org.name, normQ);
+      const notes: string[] = [];
+
+      if (score === 1.0) {
+        notes.push(`Cocok persis dengan nama organisasi/klan "${org.name}"`);
+      } else if (score >= 0.90) {
+        notes.push(`Kecocokan toleransi typo dengan nama organisasi "${org.name}"`);
+      } else if (score > 0) {
+        notes.push(`Nama organisasi "${org.name}" mengandung kata kunci`);
+      } else if (qTokens.length > 0) {
+        let matched = 0;
+        const normDesc = normalizeText(org.description);
+        for (const token of qTokens) {
+          if (normalizeText(org.name).includes(token)) matched += 2;
+          else if (normDesc.includes(token)) matched += 1;
+        }
+        if (matched >= 2) {
+          score = Math.min(0.65, (matched / (qTokens.length * 2)) * 0.65);
+          notes.push(`Ditemukan dalam deskripsi klan "${org.name}"`);
+        }
+      }
+
+      // Check if queried character belongs to this organization
+      if (score === 0) {
+        for (const c of characters) {
+          if (normQ.includes(c.name.toLowerCase()) || c.aliases.some((al) => normQ.includes(al.toLowerCase()))) {
+            const isMember =
+              (c.faction && c.faction.toLowerCase() === org.name.toLowerCase()) ||
+              org.members.some(
+                (m) =>
+                  m.id === c.id ||
+                  m.name.toLowerCase() === c.name.toLowerCase()
+              );
+            if (isMember) {
+              score = Math.max(score, 0.80);
+              notes.push(`Klan/afiliasi dari "${c.name}"`);
+              break;
+            }
+          }
+        }
+      }
+
+      if (score > 0) {
+        candidates.push({
+          id: org.id,
+          type: "organization",
+          name: org.name,
+          summary: org.description,
+          href: `/organizations/${org.id}`,
+          attributes: [{ label: "Jenis", value: org.kind }],
+          provenance: org.sources,
           keywordScore: Math.round(score * 100) / 100,
           explanationNotes: notes,
         });
@@ -183,37 +438,82 @@ export function executeKeywordSearch(
     }
   }
 
-  // 3. Search Abilities
+  // 4. Search Realms / Locations
+  if (type === "all" || type === "location") {
+    for (const r of realms) {
+      const rNormName = normalizeText(r.name);
+      let score = matchScore(r.name, normQ);
+      const notes: string[] = [];
+
+      if (
+        normQ === r.id.toLowerCase() ||
+        normQ === rNormName ||
+        rNormName.startsWith(normQ) ||
+        (r.id === "orderrealm" && (normQ === "orderrealm" || normQ === "seido"))
+      ) {
+        score = 1.0;
+        notes.push(`Cocok persis dengan nama realm "${r.name}"`);
+      } else if (score === 1.0) {
+        notes.push(`Cocok persis dengan nama realm "${r.name}"`);
+      } else if (score >= 0.90) {
+        notes.push(`Kecocokan toleransi typo dengan nama realm "${r.name}"`);
+      } else if (score > 0) {
+        notes.push(`Nama realm "${r.name}" mengandung kata kunci`);
+      }
+
+      if (score > 0) {
+        candidates.push({
+          id: r.id,
+          type: "location",
+          name: r.name,
+          summary: r.description,
+          href: entityHref({ id: r.id, type: "location", name: r.name }),
+          attributes: [{ label: "Tipe", value: "Realm" }],
+          provenance: r.sources,
+          keywordScore: Math.round(score * 100) / 100,
+          explanationNotes: notes,
+        });
+      }
+    }
+  }
+
+  // 5. Search Abilities
   if (type === "all" || type === "ability") {
     for (const a of abilities) {
       if (element && a.element && !a.element.toLowerCase().includes(element.toLowerCase())) {
         continue;
       }
 
-      let score = 0;
+      let score = matchScore(a.name, normQ);
       const notes: string[] = [];
-      const normName = normalizeString(a.name);
-      const normDesc = normalizeString(a.description);
+      const matchedRelLabels: string[] = [];
 
-      if (normName === normQ) {
-        score = 1.0;
+      if (score === 1.0) {
         notes.push(`Cocok persis dengan kemampuan "${a.name}"`);
-      } else if (normName.includes(normQ)) {
-        score = 0.85;
+      } else if (score >= 0.90) {
+        notes.push(`Kecocokan toleransi typo dengan kemampuan "${a.name}"`);
+      } else if (score > 0) {
         notes.push(`Nama kemampuan "${a.name}" mengandung kata kunci`);
-      } else {
-        let matched = 0;
-        for (const token of qTokens) {
-          if (normName.includes(token)) matched += 2;
-          else if (normDesc.includes(token)) matched += 1;
-        }
-        if (qTokens.length > 0 && matched > 0) {
-          score = Math.min(0.70, (matched / (qTokens.length * 2)) * 0.70);
-          notes.push(`Ditemukan dalam deskripsi kemampuan "${a.name}"`);
+      }
+
+      // Check if this ability belongs to a character matching the query (e.g. Sub-Zero -> Cryomancy, Deep Freeze, Ice Clone)
+      if (!isRelQuery) {
+        for (const c of characters) {
+          if (matchScore(c.name, normQ) >= 0.70 || c.aliases.some((al) => matchScore(al, normQ) >= 0.70)) {
+            const hasThisAbility = c.versions.some((v) => v.abilities.some((abRef) => abRef.id === a.id));
+            if (hasThisAbility) {
+              const charAbilityScore = 0.85;
+              if (charAbilityScore > score) {
+                score = charAbilityScore;
+                notes.push(`Kemampuan/Jurus Spesial milik "${c.name}"`);
+                matchedRelLabels.push(`hasAbility ← ${c.name} (Jurus Spesial)`);
+              }
+            }
+          }
         }
       }
 
-      if (score > 0 || !normQ) {
+      if (score > 0) {
         candidates.push({
           id: a.id,
           type: "ability",
@@ -227,39 +527,46 @@ export function executeKeywordSearch(
           games: a.games.map((g) => g.name),
           provenance: a.sources,
           keywordScore: Math.round(score * 100) / 100,
+          matchedRelationships: Array.from(new Set(matchedRelLabels)),
           explanationNotes: notes,
         });
       }
     }
   }
 
-  // 4. Search Weapons
+  // 6. Search Weapons
   if (type === "all" || type === "weapon") {
     for (const w of weapons) {
-      let score = 0;
+      let score = matchScore(w.name, normQ);
       const notes: string[] = [];
-      const normName = normalizeString(w.name);
-      const normDesc = normalizeString(w.description);
+      const matchedRelLabels: string[] = [];
 
-      if (normName === normQ) {
-        score = 1.0;
+      if (score === 1.0) {
         notes.push(`Cocok persis dengan senjata "${w.name}"`);
-      } else if (normName.includes(normQ)) {
-        score = 0.85;
+      } else if (score >= 0.90) {
+        notes.push(`Kecocokan toleransi typo dengan senjata "${w.name}"`);
+      } else if (score > 0) {
         notes.push(`Nama senjata "${w.name}" mengandung kata kunci`);
-      } else {
-        let matched = 0;
-        for (const token of qTokens) {
-          if (normName.includes(token)) matched += 2;
-          else if (normDesc.includes(token)) matched += 1;
-        }
-        if (qTokens.length > 0 && matched > 0) {
-          score = Math.min(0.70, (matched / (qTokens.length * 2)) * 0.70);
-          notes.push(`Ditemukan dalam deskripsi senjata "${w.name}"`);
+      }
+
+      // Check if this weapon belongs to a character matching the query (e.g. Sub-Zero -> Kōri Blade, Scorpion -> Kunai Spear)
+      if (!isRelQuery) {
+        for (const c of characters) {
+          if (matchScore(c.name, normQ) >= 0.70 || c.aliases.some((al) => matchScore(al, normQ) >= 0.70)) {
+            const hasThisWeapon = c.versions.some((v) => v.weapons.some((wRef) => wRef.id === w.id));
+            if (hasThisWeapon) {
+              const charWeaponScore = 0.82;
+              if (charWeaponScore > score) {
+                score = charWeaponScore;
+                notes.push(`Senjata andalan milik "${c.name}"`);
+                matchedRelLabels.push(`usesWeapon ← ${c.name} (Senjata Khas)`);
+              }
+            }
+          }
         }
       }
 
-      if (score > 0 || !normQ) {
+      if (score > 0) {
         candidates.push({
           id: w.id,
           type: "weapon",
@@ -270,88 +577,50 @@ export function executeKeywordSearch(
           games: w.games.map((g) => g.name),
           provenance: w.sources,
           keywordScore: Math.round(score * 100) / 100,
+          matchedRelationships: Array.from(new Set(matchedRelLabels)),
           explanationNotes: notes,
         });
       }
     }
   }
 
-  // 5. Search Organizations
-  if (type === "all" || type === "organization") {
-    for (const o of organizations) {
-      let score = 0;
-      const notes: string[] = [];
-      const normName = normalizeString(o.name);
-      const normDesc = normalizeString(o.description);
-
-      if (normName === normQ) {
-        score = 1.0;
-        notes.push(`Cocok persis dengan organisasi/klan "${o.name}"`);
-      } else if (normName.includes(normQ)) {
-        score = 0.85;
-        notes.push(`Nama organisasi/klan "${o.name}" mengandung kata kunci`);
-      } else {
-        let matched = 0;
-        for (const token of qTokens) {
-          if (normName.includes(token)) matched += 2;
-          else if (normDesc.includes(token)) matched += 1;
-        }
-        if (qTokens.length > 0 && matched > 0) {
-          score = Math.min(0.70, (matched / (qTokens.length * 2)) * 0.70);
-          notes.push(`Ditemukan dalam deskripsi klan "${o.name}"`);
-        }
-      }
-
-      if (score > 0 || !normQ) {
-        candidates.push({
-          id: o.id,
-          type: "organization",
-          name: o.name,
-          summary: o.description,
-          href: `/organizations/${o.id}`,
-          attributes: [{ label: "Jenis", value: o.kind }],
-          provenance: o.sources,
-          keywordScore: Math.round(score * 100) / 100,
-          explanationNotes: notes,
-        });
-      }
-    }
-  }
-
-  // 6. Search Timelines
+  // 7. Search Timelines
   if (type === "all" || type === "timeline") {
     for (const t of timelines) {
-      let score = 0;
+      let score = matchScore(t.name, normQ);
       const notes: string[] = [];
-      const normName = normalizeString(t.name);
-      const normDesc = normalizeString(t.description);
 
-      if (normName === normQ) {
-        score = 1.0;
-        notes.push(`Cocok persis dengan timeline "${t.name}"`);
-      } else if (normName.includes(normQ)) {
-        score = 0.85;
+      if (score === 1.0) {
+        notes.push(`Cocok persis dengan nama timeline "${t.name}"`);
+      } else if (score > 0) {
         notes.push(`Nama timeline "${t.name}" mengandung kata kunci`);
       } else {
-        let matched = 0;
-        for (const token of qTokens) {
-          if (normName.includes(token)) matched += 2;
-          else if (normDesc.includes(token)) matched += 1;
-        }
-        if (qTokens.length > 0 && matched > 0) {
-          score = Math.min(0.70, (matched / (qTokens.length * 2)) * 0.70);
-          notes.push(`Ditemukan dalam ringkasan timeline "${t.name}"`);
+        // Check if character exists in this timeline
+        for (const c of characters) {
+          if (normQ.includes(c.name.toLowerCase()) || c.aliases.some((al) => normQ.includes(al.toLowerCase()))) {
+            if (
+              c.versions.some(
+                (v) =>
+                  v.timelineId === t.id ||
+                  v.timelineName.toLowerCase().includes(t.name.toLowerCase())
+              )
+            ) {
+              score = Math.max(score, 0.75);
+              notes.push(`Timeline di mana "${c.name}" hadir`);
+              break;
+            }
+          }
         }
       }
 
-      if (score > 0 || !normQ) {
+      if (score > 0) {
         candidates.push({
           id: t.id,
           type: "timeline",
           name: t.name,
           summary: t.description,
           href: `/timelines/${t.id}`,
-          attributes: [{ label: "Urutan Kronologi", value: `#${t.order}` }],
+          attributes: [{ label: "Urutan", value: String(t.order) }],
           provenance: t.sources,
           keywordScore: Math.round(score * 100) / 100,
           explanationNotes: notes,
@@ -360,49 +629,46 @@ export function executeKeywordSearch(
     }
   }
 
-  // 7. Search Story Events
+  // 8. Search Story Events
   if (type === "all" || type === "event") {
-    for (const e of storyEvents) {
-      if (timeline && e.timeline.name && !e.timeline.name.toLowerCase().includes(timeline.toLowerCase())) {
-        continue;
-      }
-
-      let score = 0;
+    for (const ev of storyEvents) {
+      let score = matchScore(ev.title, normQ);
       const notes: string[] = [];
-      const normTitle = normalizeString(e.title);
-      const normSummary = normalizeString(e.summary);
 
-      if (normTitle === normQ) {
-        score = 1.0;
-        notes.push(`Cocok persis dengan judul peristiwa "${e.title}"`);
-      } else if (normTitle.includes(normQ)) {
-        score = 0.85;
-        notes.push(`Judul peristiwa "${e.title}" mengandung kata kunci`);
+      if (score === 1.0) {
+        notes.push(`Cocok persis dengan judul peristiwa "${ev.title}"`);
+      } else if (score > 0) {
+        notes.push(`Judul peristiwa "${ev.title}" mengandung kata kunci`);
       } else {
-        let matched = 0;
-        for (const token of qTokens) {
-          if (normTitle.includes(token)) matched += 2;
-          else if (normSummary.includes(token)) matched += 1;
-        }
-        if (qTokens.length > 0 && matched > 0) {
-          score = Math.min(0.70, (matched / (qTokens.length * 2)) * 0.70);
-          notes.push(`Ditemukan dalam deskripsi peristiwa "${e.title}"`);
+        // Check if character is involved in this event
+        for (const c of characters) {
+          if (normQ.includes(c.name.toLowerCase()) || c.aliases.some((al) => normQ.includes(al.toLowerCase()))) {
+            if (
+              ev.participants?.some(
+                (p) => p.id === c.id || p.name.toLowerCase() === c.name.toLowerCase()
+              )
+            ) {
+              score = Math.max(score, 0.75);
+              notes.push(`Peristiwa yang melibatkan "${c.name}"`);
+              break;
+            }
+          }
         }
       }
 
-      if (score > 0 || !normQ) {
+      if (score > 0) {
         candidates.push({
-          id: e.id,
+          id: ev.id,
           type: "event",
-          name: e.title,
-          summary: e.summary,
-          href: `/story/events/${e.id}`,
+          name: ev.title,
+          summary: ev.summary,
+          href: `/story/events/${ev.id}`,
           attributes: [
-            { label: "Tipe", value: e.eventType },
-            { label: "Timeline", value: e.timeline.name },
+            { label: "Tipe", value: ev.eventType },
+            { label: "Timeline", value: ev.timeline.name },
           ],
-          timeline: e.timeline.name,
-          provenance: e.sources,
+          timeline: ev.timeline.name,
+          provenance: ev.sources,
           keywordScore: Math.round(score * 100) / 100,
           explanationNotes: notes,
         });
@@ -410,13 +676,19 @@ export function executeKeywordSearch(
     }
   }
 
+  // Filter candidates strictly if a specific type is requested
+  let filteredCandidates = candidates;
+  if (type && type !== "all") {
+    filteredCandidates = candidates.filter((c) => c.type === type);
+  }
+
   // Sort by keywordScore descending
-  candidates.sort((a, b) => (b.keywordScore ?? 0) - (a.keywordScore ?? 0));
+  filteredCandidates.sort((a, b) => (b.keywordScore ?? 0) - (a.keywordScore ?? 0));
 
   // Assign 1-based ranks
-  candidates.forEach((c, idx) => {
+  filteredCandidates.forEach((c, idx) => {
     c.keywordRank = idx + 1;
   });
 
-  return candidates;
+  return filteredCandidates;
 }

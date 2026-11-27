@@ -14,6 +14,7 @@ export function EntityCard({
   image,
   contextLabel,
   aspect,
+  objectPosition,
 }: {
   href: string;
   name: string;
@@ -22,13 +23,22 @@ export function EntityCard({
   image?: ImageAsset;
   contextLabel?: string;
   aspect?: string;
+  objectPosition?: string;
 }) {
+  const pos = objectPosition || (type === "character" ? "object-top" : undefined);
   return (
     <Link
       href={href}
       className="group block overflow-hidden rounded-sm border border-mk-border bg-mk-card transition hover:-translate-y-0.5 hover:border-mk-red/70 hover:glow-red"
     >
-      <EntityImage image={image} name={name} contextLabel={contextLabel} aspect={aspect} className="transition duration-500 group-hover:scale-[1.03]" />
+      <EntityImage
+        image={image}
+        name={name}
+        contextLabel={contextLabel}
+        aspect={aspect}
+        objectPosition={pos}
+        className="transition duration-500 group-hover:scale-[1.03]"
+      />
       <div className="relative -mt-12 space-y-1 p-3">
         {type && <TypeBadge type={type} />}
         <h3 className="font-heading text-base font-bold leading-tight group-hover:text-glow">{name}</h3>
@@ -62,7 +72,7 @@ export function InfoCard({
   );
 }
 
-/** Daftar link entitas terkait — setiap relasi dapat diklik (FR-09). */
+/** Daftar link entitas terkait — setiap relasi dapat diklik. */
 export function EntityLinks({ items, empty = "Belum ada data." }: { items?: EntityRef[]; empty?: string }) {
   if (!items?.length) return <p className="text-sm text-mk-muted">{empty}</p>;
   return (

@@ -1,219 +1,471 @@
 [
   {
+    "subjectId": "character-subzero",
+    "predicate": "familyOf",
+    "objectId": "character-noobsaibot",
+    "context": "Seluruh Timeline",
+    "evidence": "Bi-Han (Noob Saibot) adalah kakak kandung dari Kuai Liang (Sub-Zero)."
+  },
+  {
+    "subjectId": "character-johnnycage",
+    "predicate": "familyOf",
+    "objectId": "character-cassiecage",
+    "context": "Reboot Timeline",
+    "evidence": "Johnny Cage adalah ayah kandung dari Cassie Cage bersama Sonya Blade."
+  },
+  {
+    "subjectId": "character-sonyablade",
+    "predicate": "familyOf",
+    "objectId": "character-cassiecage",
+    "context": "Reboot Timeline",
+    "evidence": "Sonya Blade adalah ibu kandung dari Cassie Cage."
+  },
+  {
+    "subjectId": "character-jaxbriggs",
+    "predicate": "familyOf",
+    "objectId": "character-jacqui",
+    "context": "Reboot Timeline",
+    "evidence": "Jax Briggs adalah ayah kandung yang melatih Jacqui Briggs di Special Forces."
+  },
+  {
+    "subjectId": "character-kenshi",
+    "predicate": "familyOf",
+    "objectId": "character-takeda",
+    "context": "Reboot Timeline",
+    "evidence": "Kenshi adalah ayah dari Takeda Takahashi yang menitipkannya pada Hanzo Hasashi."
+  },
+  {
+    "subjectId": "character-kunglao",
+    "predicate": "familyOf",
+    "objectId": "character-kungjin",
+    "context": "Reboot Timeline",
+    "evidence": "Kung Lao adalah paman dari Kung Jin."
+  },
+  {
+    "subjectId": "character-kitana",
+    "predicate": "familyOf",
+    "objectId": "character-sindel",
+    "context": "Seluruh Timeline",
+    "evidence": "Kitana adalah putri kandung Ratu Sindel dari kerajaan Edenia."
+  },
+  {
+    "subjectId": "character-shaokahn",
+    "predicate": "familyOf",
+    "objectId": "character-mileena",
+    "context": "Original & Reboot Timeline",
+    "evidence": "Shao Kahn menganggap Mileena sebagai putri ciptaan yang sejati dibanding Kitana."
+  },
+  {
+    "subjectId": "character-taven",
+    "predicate": "familyOf",
+    "objectId": "character-daegon",
+    "context": "3D Era Timeline",
+    "evidence": "Taven dan Daegon adalah saudara kandung putra dewa pelindung Argus."
+  },
+  {
+    "subjectId": "character-kronika",
+    "predicate": "familyOf",
+    "objectId": "character-shinnok",
+    "context": "Reboot Timeline (MK11)",
+    "evidence": "Kronika adalah ibu dari Elder God Shinnok dan Cetrion."
+  },
+  {
+    "subjectId": "character-kronika",
+    "predicate": "familyOf",
+    "objectId": "character-cetrion",
+    "context": "Reboot Timeline (MK11)",
+    "evidence": "Kronika adalah ibu dari Dewi Kehidupan Cetrion."
+  },
+  {
+    "subjectId": "character-shinnok",
+    "predicate": "familyOf",
+    "objectId": "character-cetrion",
+    "context": "Reboot Timeline (MK11)",
+    "evidence": "Shinnok dan Cetrion adalah saudara kandung Elder Gods pembawa keseimbangan."
+  },
+  {
+    "subjectId": "character-raiden",
+    "predicate": "familyOf",
+    "objectId": "character-fujin",
+    "context": "Seluruh Timeline",
+    "evidence": "Raiden dan Fujin adalah dewa bersaudara penjaga Earthrealm."
+  },
+  {
+    "subjectId": "character-liukang",
+    "predicate": "alliedWith",
+    "objectId": "character-kitana",
+    "context": "Seluruh Timeline",
+    "evidence": "Liu Kang dan Kitana saling mencintai dan memerintah bersama di berbagai kontinuitas."
+  },
+  {
+    "subjectId": "character-johnnycage",
+    "predicate": "alliedWith",
+    "objectId": "character-sonyablade",
+    "context": "Reboot Timeline",
+    "evidence": "Johnny Cage dan Sonya Blade menikah dan berjuang bersama di Special Forces."
+  },
+  {
+    "subjectId": "character-mileena",
+    "predicate": "alliedWith",
+    "objectId": "character-tanya",
+    "context": "Reboot & New Era",
+    "evidence": "Mileena dan Tanya memiliki hubungan asmara dan kesetiaan politik yang mendalam."
+  },
+  {
+    "subjectId": "character-mileena",
+    "predicate": "alliedWith",
+    "objectId": "character-baraka",
+    "context": "Original Timeline",
+    "evidence": "Mileena dan Baraka bersekutu sebagai pasangan panglima Outworld."
+  },
+  {
+    "subjectId": "character-shaokahn",
+    "predicate": "alliedWith",
+    "objectId": "character-sindel",
+    "context": "Original & Reboot Timeline",
+    "evidence": "Shao Kahn menikahi Sindel setelah menaklukkan kerajaan Edenia."
+  },
+  {
     "subjectId": "character-scorpion",
     "predicate": "enemyOf",
     "objectId": "character-subzero",
-    "context": "Original Timeline & Early Reboot",
-    "evidence": "Scorpion blamed Sub-Zero for the demise of Shirai Ryu until truth was revealed."
+    "context": "Original & Early Reboot",
+    "evidence": "Scorpion memburu Sub-Zero (Bi-Han) atas fitnah pembantaian klan Shirai Ryu."
   },
   {
     "subjectId": "character-scorpion",
     "predicate": "enemyOf",
     "objectId": "character-quanchi",
-    "context": "All Timelines",
-    "evidence": "Quan Chi was unmasked as the true architect of the Shirai Ryu massacre."
+    "context": "Seluruh Timeline",
+    "evidence": "Quan Chi adalah dalang sesungguhnya di balik pembantaian klan Shirai Ryu dan keluarga Hanzo."
   },
   {
     "subjectId": "character-kitana",
     "predicate": "enemyOf",
     "objectId": "character-shaokahn",
-    "context": "Reboot Timeline",
-    "evidence": "Kitana led the Outworld rebellion and defeated Shao Kahn to become Kitana Kahn."
+    "context": "Original & Reboot Timeline",
+    "evidence": "Kitana memberontak melawan Shao Kahn yang membunuh ayah kandungnya Raja Jerrod."
+  },
+  {
+    "subjectId": "character-kitana",
+    "predicate": "rivalOf",
+    "objectId": "character-mileena",
+    "context": "Seluruh Timeline",
+    "evidence": "Mileena diciptakan sebagai klon mengerikan untuk menggantikan Kitana."
   },
   {
     "subjectId": "character-sonyablade",
     "predicate": "enemyOf",
     "objectId": "character-kano",
-    "context": "All Timelines",
-    "evidence": "Sonya relentlessly pursued Kano for the murder of her Special Forces partner."
+    "context": "Seluruh Timeline",
+    "evidence": "Kano membunuh rekan Sonya dan menjadi buronan nomor satu Special Forces."
   },
   {
-    "subjectId": "character-cassiecage",
+    "subjectId": "character-jaxbriggs",
+    "predicate": "enemyOf",
+    "objectId": "character-kano",
+    "context": "Seluruh Timeline",
+    "evidence": "Kano memicu luka parah yang mengharuskan Jax menggunakan lengan bionik."
+  },
+  {
+    "subjectId": "character-liukang",
+    "predicate": "enemyOf",
+    "objectId": "character-shangtsung",
+    "context": "Seluruh Timeline",
+    "evidence": "Liu Kang mengalahkan Shang Tsung pada turnamen Mortal Kombat pertama."
+  },
+  {
+    "subjectId": "character-liukang",
+    "predicate": "enemyOf",
+    "objectId": "character-shaokahn",
+    "context": "Original & Reboot Timeline",
+    "evidence": "Liu Kang mengalahkan invasi Shao Kahn ke Earthrealm."
+  },
+  {
+    "subjectId": "character-raiden",
     "predicate": "enemyOf",
     "objectId": "character-shinnok",
-    "context": "Reboot Timeline (MKX)",
-    "evidence": "Cassie defeated Corrupted Shinnok to save her father Johnny Cage."
+    "context": "Seluruh Timeline",
+    "evidence": "Raiden mengurung Shinnok ke Netherrealm demi melindungi Earthrealm."
   },
   {
     "subjectId": "character-frost",
-    "predicate": "enemyOf",
+    "predicate": "rivalOf",
     "objectId": "character-subzero",
-    "context": "Reboot Timeline",
-    "evidence": "Frost rebelled against Sub-Zero's leadership and allied with Kronika."
+    "context": "3D Era & Reboot Timeline",
+    "evidence": "Frost iri dan memberontak terhadap kepemimpinan Grandmaster Kuai Liang."
+  },
+  {
+    "subjectId": "character-subzero",
+    "predicate": "enemyOf",
+    "objectId": "character-sektor",
+    "context": "Reboot & 3D Era",
+    "evidence": "Sektor membunuh Grandmaster Lin Kuei demi Cyber Initiative yang ditentang Kuai Liang."
+  },
+  {
+    "subjectId": "character-cyrax",
+    "predicate": "rivalOf",
+    "objectId": "character-sektor",
+    "context": "Seluruh Timeline",
+    "evidence": "Cyrax ingin memulihkan kemanusiaannya sementara Sektor terobsesi dengan sibernetik."
   },
   {
     "subjectId": "character-kotalkahn",
     "predicate": "enemyOf",
     "objectId": "character-mileena",
-    "context": "Reboot Timeline (Outworld Civil War)",
-    "evidence": "Kotal Kahn led the coup d'\u00e9tat overthrowing Mileena from the Outworld throne."
+    "context": "Mortal Kombat X",
+    "evidence": "Kotal Kahn menggulingkan kekuasaan Mileena dalam perang saudara Outworld."
   },
   {
     "subjectId": "character-dvorah",
     "predicate": "enemyOf",
     "objectId": "character-mileena",
-    "context": "Reboot Timeline (MKX)",
-    "evidence": "D'Vorah executed Mileena via toxic flesh-eating parasite kiss on Kotal Kahn's order."
+    "context": "Mortal Kombat X",
+    "evidence": "D'Vorah mengeksekusi Mileena atas perintah Kotal Kahn dengan parasit Kytinn."
+  },
+  {
+    "subjectId": "character-dvorah",
+    "predicate": "enemyOf",
+    "objectId": "character-baraka",
+    "context": "Mortal Kombat X",
+    "evidence": "D'Vorah membunuh Baraka secara brutal dalam kudeta Outworld."
   },
   {
     "subjectId": "character-dvorah",
     "predicate": "enemyOf",
     "objectId": "character-scorpion",
-    "context": "Reboot Timeline (MK11)",
-    "evidence": "D'Vorah fatally stung Grandmaster Hanzo Hasashi at the Sea of Blood."
+    "context": "Mortal Kombat 11",
+    "evidence": "D'Vorah membunuh Hanzo Hasashi dengan racun mematikan sebelum diringkus."
+  },
+  {
+    "subjectId": "character-cassiecage",
+    "predicate": "enemyOf",
+    "objectId": "character-shinnok",
+    "context": "Mortal Kombat X",
+    "evidence": "Cassie Cage membangkitkan Shadow Energy warisan ayahnya untuk menaklukkan Corrupted Shinnok."
   },
   {
     "subjectId": "character-hotaru",
     "predicate": "enemyOf",
     "objectId": "character-havik",
-    "context": "Original Timeline (MK Deception)",
-    "evidence": "Commander Hotaru upholds strict Seidan order while Cleric Havik sows perpetual chaos."
+    "context": "3D Era & New Era",
+    "evidence": "Hotaru penegak Orderrealm bertempur abadi melawan agen kekacauan Chaosrealm Havik."
   },
   {
     "subjectId": "character-ashrah",
     "predicate": "enemyOf",
     "objectId": "character-quanchi",
-    "context": "Original & New Era Timelines",
-    "evidence": "Ashrah renounced Netherrealm evil and hunts Quan Chi's demons to cleanse her spirit."
+    "context": "3D Era & New Era",
+    "evidence": "Ashrah menyucikan jiwanya dari kutukan Netherrealm yang dipimpin Quan Chi."
   },
   {
     "subjectId": "character-mavado",
     "predicate": "enemyOf",
     "objectId": "character-kano",
-    "context": "Original Timeline",
-    "evidence": "Mavado's Red Dragon sought the systematic extermination of Kano's Black Dragon."
+    "context": "3D Era Timeline",
+    "evidence": "Mavado memimpin Red Dragon untuk memusnahkan faksi saingan Black Dragon."
   },
   {
     "subjectId": "character-onaga",
     "predicate": "enemyOf",
     "objectId": "character-shaokahn",
-    "context": "Original Timeline",
-    "evidence": "Shao Kahn was Onaga's trusted advisor who poisoned him to steal the throne of Outworld."
+    "context": "3D Era Timeline",
+    "evidence": "Shao Kahn meracuni Onaga si Raja Naga untuk merebut tahta kekaisaran Outworld."
   },
   {
     "subjectId": "character-shujinko",
     "predicate": "enemyOf",
     "objectId": "character-onaga",
-    "context": "Original Timeline (MK Deception)",
-    "evidence": "Shujinko shattered the Kamidogu to avenge being deceived by Onaga's avatar Damashi."
+    "context": "Mortal Kombat: Deception",
+    "evidence": "Shujinko membalas manipulasi Onaga dengan menghancurkan seluruh Kamidogu."
+  },
+  {
+    "subjectId": "character-taven",
+    "predicate": "rivalOf",
+    "objectId": "character-daegon",
+    "context": "Mortal Kombat: Armageddon",
+    "evidence": "Taven bertarung mati-matian melawan Daegon yang membunuh kedua orang tua mereka."
+  },
+  {
+    "subjectId": "character-liukang",
+    "predicate": "enemyOf",
+    "objectId": "character-kronika",
+    "context": "Mortal Kombat 11",
+    "evidence": "Liu Kang bersama Raiden mengalahkan Titan of Time Kronika untuk merebut Hourglass."
+  },
+  {
+    "subjectId": "character-scorpion",
+    "predicate": "mentorOf",
+    "objectId": "character-takeda",
+    "context": "Reboot Timeline",
+    "evidence": "Hanzo Hasashi mendidik Takeda menjadi master ninja Shirai Ryu sejati."
+  },
+  {
+    "subjectId": "character-subzero",
+    "predicate": "mentorOf",
+    "objectId": "character-frost",
+    "context": "Seluruh Timeline",
+    "evidence": "Kuai Liang melatih Frost sebagai murid berpotensi cryomancy tertinggi di Lin Kuei."
+  },
+  {
+    "subjectId": "character-boraicho",
+    "predicate": "mentorOf",
+    "objectId": "character-liukang",
+    "context": "Seluruh Timeline",
+    "evidence": "Master Bo' Rai Cho melatih seni bela diri legendaris Flying Kick kepada Liu Kang."
+  },
+  {
+    "subjectId": "character-boraicho",
+    "predicate": "mentorOf",
+    "objectId": "character-kunglao",
+    "context": "Seluruh Timeline",
+    "evidence": "Bo' Rai Cho mengajarkan disiplin Shaolin dan serangan pusaran angin kepada Kung Lao."
   },
   {
     "subjectId": "character-raiden",
-    "predicate": "enemyOf",
-    "objectId": "character-shinnok",
-    "context": "All Timelines",
-    "evidence": "Raiden stripped Shinnok of Elder God status and defended Earthrealm from his invasions."
+    "predicate": "mentorOf",
+    "objectId": "character-liukang",
+    "context": "Seluruh Timeline",
+    "evidence": "Raiden membimbing Liu Kang menjadi sang Juara Terpilih Earthrealm."
   },
   {
     "subjectId": "character-scorpion",
     "predicate": "alliedWith",
     "objectId": "character-subzero",
-    "context": "Reboot Timeline (MKX & MK11)",
-    "evidence": "Sub-Zero and Scorpion reconciled at the Shirai Ryu Fire Garden over tea."
+    "context": "Reboot (MKX/MK11) & New Era",
+    "evidence": "Hanzo Hasashi dan Kuai Liang berdamai minum teh bersama dan menjadi sekutu persaudaraan."
   },
   {
-    "subjectId": "character-raiden",
+    "subjectId": "character-liukang",
     "predicate": "alliedWith",
-    "objectId": "character-liukang",
-    "context": "Original & Reboot Timelines",
-    "evidence": "Raiden mentored Liu Kang as Earthrealm's supreme champion in the tournaments."
+    "objectId": "character-kunglao",
+    "context": "Seluruh Timeline",
+    "evidence": "Liu Kang dan Kung Lao adalah saudara seperguruan Shaolin yang saling melindungi."
+  },
+  {
+    "subjectId": "character-liukang",
+    "predicate": "alliedWith",
+    "objectId": "character-raiden",
+    "context": "Seluruh Timeline",
+    "evidence": "Liu Kang mengabdi sebagai prajurit utama dalam dewan pelindung Raiden."
+  },
+  {
+    "subjectId": "character-subzero",
+    "predicate": "alliedWith",
+    "objectId": "character-smoke",
+    "context": "Seluruh Timeline",
+    "evidence": "Kuai Liang dan Tomas Vrbada bersumpah saling membela dari inisiatif mekanisasi Lin Kuei."
+  },
+  {
+    "subjectId": "character-subzero",
+    "predicate": "alliedWith",
+    "objectId": "character-cyrax",
+    "context": "3D Era & Reboot",
+    "evidence": "Sub-Zero memprogram ulang dan memulihkan jiwa manusia Cyrax dari kendali budak Sektor."
   },
   {
     "subjectId": "character-shangtsung",
     "predicate": "alliedWith",
     "objectId": "character-quanchi",
-    "context": "Original Timeline (Deadly Alliance)",
-    "evidence": "United sorcerers formed the Deadly Alliance to overpower the Thunder God."
+    "context": "Deadly Alliance (2002)",
+    "evidence": "Deadly Alliance dibentuk oleh Shang Tsung dan Quan Chi untuk membunuh Liu Kang dan Shao Kahn."
   },
   {
     "subjectId": "character-cassiecage",
     "predicate": "alliedWith",
-    "objectId": "character-sonyablade",
+    "objectId": "character-jacqui",
     "context": "Reboot Timeline",
-    "evidence": "Mother and daughter serving together in Earthrealm's Special Forces command."
+    "evidence": "Cassie Cage dan Jacqui Briggs adalah sahabat karib dan rekan tempur garis depan Special Forces."
+  },
+  {
+    "subjectId": "character-cassiecage",
+    "predicate": "alliedWith",
+    "objectId": "character-takeda",
+    "context": "Reboot Timeline",
+    "evidence": "Takeda bertarung di bawah komando regu Kombat Kids pimpinan Cassie Cage."
+  },
+  {
+    "subjectId": "character-cassiecage",
+    "predicate": "alliedWith",
+    "objectId": "character-kungjin",
+    "context": "Reboot Timeline",
+    "evidence": "Kung Jin mengandalkan kepemimpinan Cassie Cage dalam misi infiltrasi Outworld."
   },
   {
     "subjectId": "character-jade",
     "predicate": "alliedWith",
     "objectId": "character-kitana",
-    "context": "All Timelines",
-    "evidence": "Jade served as Kitana's most loyal bodyguard and trusted confidante."
+    "context": "Seluruh Timeline",
+    "evidence": "Jade adalah pengawal setia dan sahabat masa kecil Putri Kitana yang tak tergoyahkan."
   },
   {
     "subjectId": "character-sheeva",
     "predicate": "alliedWith",
     "objectId": "character-sindel",
-    "context": "Classic & Reboot Timelines",
-    "evidence": "Sheeva was chosen by Shao Kahn to serve as Queen Sindel's personal protector."
+    "context": "Original & Reboot Timeline",
+    "evidence": "Ratu Sheeva memimpin bangsa Shokan membela tahta keluarga kerajaan Edenia."
   },
   {
     "subjectId": "character-nightwolf",
     "predicate": "alliedWith",
     "objectId": "character-raiden",
-    "context": "All Timelines",
-    "evidence": "Nightwolf joined Raiden's circle of chosen Earthrealm champions to ward off Outworld."
+    "context": "Seluruh Timeline",
+    "evidence": "Nightwolf memimpin upacara pemurnian roh dan pengorbanan suci demi visi Raiden."
   },
   {
     "subjectId": "character-kabal",
     "predicate": "alliedWith",
     "objectId": "character-stryker",
-    "context": "Reboot Timeline (MK9)",
-    "evidence": "Stryker and Kabal were NYPD partners defending New York City against Outworld forces."
+    "context": "Mortal Kombat (2011)",
+    "evidence": "Kabal dan Kurtis Stryker berjuang sebagai rekan polisi anti-huru-hara Earthrealm."
   },
   {
-    "subjectId": "character-jacqui",
+    "subjectId": "character-geras",
     "predicate": "alliedWith",
-    "objectId": "character-cassiecage",
-    "context": "Reboot Timeline",
-    "evidence": "Jacqui Briggs serves as Cassie Cage's second-in-command and closest friend."
-  },
-  {
-    "subjectId": "character-takeda",
-    "predicate": "alliedWith",
-    "objectId": "character-kenshi",
-    "context": "Reboot Timeline",
-    "evidence": "Takeda reconciles with his father Kenshi after training under Scorpion."
-  },
-  {
-    "subjectId": "character-kungjin",
-    "predicate": "alliedWith",
-    "objectId": "character-kunglao",
-    "context": "Reboot Timeline",
-    "evidence": "Kung Jin honors his cousin Kung Lao's legacy as a proud Shaolin warrior."
+    "objectId": "character-kronika",
+    "context": "Mortal Kombat 11",
+    "evidence": "Geras diciptakan sebagai pelindung abadi dan titik jangkar pasir waktu bagi Kronika."
   },
   {
     "subjectId": "character-geras",
     "predicate": "alliedWith",
     "objectId": "character-liukang",
-    "context": "New Era Timeline",
-    "evidence": "Geras serves Fire God Liu Kang as the eternal steward of the Hourglass."
+    "context": "Mortal Kombat 1 (2023)",
+    "evidence": "Geras setia mengabdi kepada Fire God Liu Kang sebagai penjaga Hourglass New Era."
   },
   {
-    "subjectId": "character-cetrion",
+    "subjectId": "character-noobsaibot",
     "predicate": "alliedWith",
-    "objectId": "character-kronika",
-    "context": "Reboot Timeline (MK11)",
-    "evidence": "Cetrion sacrificed her Elder God essence to empower her mother Kronika's Hourglass."
-  },
-  {
-    "subjectId": "character-tanya",
-    "predicate": "alliedWith",
-    "objectId": "character-mileena",
-    "context": "Reboot & New Era Timelines",
-    "evidence": "Tanya protected Mileena as lover and royal guard against Outworld conspirators."
+    "objectId": "character-quanchi",
+    "context": "Seluruh Timeline",
+    "evidence": "Quan Chi membangkitkan Bi-Han di Netherrealm sebagai jenderal bayangan Noob Saibot."
   },
   {
     "subjectId": "character-sareena",
     "predicate": "alliedWith",
     "objectId": "character-subzero",
-    "context": "Original Timeline",
-    "evidence": "Sareena turned against Quan Chi to help Sub-Zero escape the Netherrealm."
+    "context": "Mythologies & 3D Era",
+    "evidence": "Sareena membantu Bi-Han meloloskan diri dari Netherrealm dan kemudian bersumpah setia pada Lin Kuei."
   },
   {
-    "subjectId": "character-boraicho",
+    "subjectId": "character-kotalkahn",
     "predicate": "alliedWith",
-    "objectId": "character-liukang",
-    "context": "Original & Reboot Timelines",
-    "evidence": "Master Bo' Rai Cho instructed Liu Kang in the Flying Kick and Shaolin chi focus."
+    "objectId": "character-erronblack",
+    "context": "Mortal Kombat X",
+    "evidence": "Erron Black bertindak sebagai penembak jitu bayaran paling terpercaya bagi Kaisar Kotal Kahn."
+  },
+  {
+    "subjectId": "character-goro",
+    "predicate": "alliedWith",
+    "objectId": "character-shangtsung",
+    "context": "Mortal Kombat (1992)",
+    "evidence": "Pangeran Goro adalah juara bertahan 500 tahun turnamen di bawah naungan Shang Tsung."
+  },
+  {
+    "subjectId": "character-kintaro",
+    "predicate": "alliedWith",
+    "objectId": "character-shaokahn",
+    "context": "Mortal Kombat II",
+    "evidence": "Kintaro mengabdi sebagai pengawal pribadi dan panglima perang buas bagi Shao Kahn."
   }
 ]

@@ -1,18 +1,23 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import { getCharacters } from "@/lib/api";
 import { useAsync } from "@/lib/hooks";
-import { EntityCard } from "@/components/ui/Cards";
+import CharacterCard from "@/components/encyclopedia/CharacterCard";
+import BreadcrumbNavigation from "@/components/encyclopedia/BreadcrumbNavigation";
 import { Container, PageHeader } from "@/components/ui/Layout";
 import ListToolbar, { SelectFilter } from "@/components/ui/ListToolbar";
 import { EmptyState, ErrorState, LoadingState } from "@/components/ui/States";
+import Pagination from "@/components/ui/Pagination";
+
+const PAGE_SIZE = 16;
 
 export default function CharactersPage() {
   const { data, error, loading, reload } = useAsync(getCharacters, []);
   const [query, setQuery] = useState("");
   const [selectedRealm, setSelectedRealm] = useState("all");
   const [selectedRole, setSelectedRole] = useState("all");
+  const [currentPage, setCurrentPage] = useState(1);
 
   const realmOptions = useMemo(() => {
     const set = new Set<string>();
@@ -50,6 +55,16 @@ export default function CharactersPage() {
       return matchQ && matchRealm && matchRole;
     });
   }, [data, query, selectedRealm, selectedRole]);
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [query, selectedRealm, selectedRole]);
+
+  const totalPages = Math.ceil(filtered.length / PAGE_SIZE) || 1;
+  const paginated = useMemo(() => {
+    const start = (currentPage - 1) * PAGE_SIZE;
+    return filtered.slice(start, start + PAGE_SIZE);
+  }, [filtered, currentPage]);
 
   return (
     <>
@@ -104,22 +119,21 @@ export default function CharactersPage() {
             }
           />
         ) : (
-          <div className="grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-3 lg:grid-cols-4">
-            {filtered.map((c) => {
-              const latestVer = c.versions[c.versions.length - 1];
-              return (
-                <EntityCard
-                  key={c.id}
-                  href={`/characters/${c.id}`}
-                  name={c.name}
-                  subtitle={c.summary}
-                  type="character"
-                  image={latestVer?.image}
-                  contextLabel={latestVer?.gameTitle}
-                />
-              );
-            })}
-          </div>
+          <>
+            <div className="grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-3 lg:grid-cols-4">
+              {paginated.map((c) => (
+                <CharacterCard key={c.id} character={c} />
+              ))}
+            </div>
+            <Pagination
+              currentPage={currentPage}
+              totalPages={totalPages}
+              onPageChange={setCurrentPage}
+              totalItems={filtered.length}
+              pageSize={PAGE_SIZE}
+              itemName="karakter"
+            />
+          </>
         )}
       </Container>
     </>

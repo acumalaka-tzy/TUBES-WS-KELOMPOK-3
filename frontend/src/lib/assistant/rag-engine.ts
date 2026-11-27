@@ -1,5 +1,5 @@
-import { executeSearch } from "../search/hybrid-engine";
-import { processNaturalLanguageQuery } from "../search/nlp/entity-recognizer";
+import { generateWithGemini, type GeminiUsage } from "./gemini-client";
+import { retrieveKnowledgeGraphContext, type AssistantHistoryItem } from "./sparql-retriever";
 import type { EntityRef, SourceRef } from "../types";
 
 export interface AssistantMessage {
@@ -17,69 +17,85 @@ export interface AssistantResponse {
   };
   generatedSparql?: string;
   provider: "gemini" | "knowledge-base-rag";
+  usage?: GeminiUsage;
+  isFusekiLive?: boolean;
 }
 
 /**
- * Knowledge-based RAG Synthesizer
- * Formulates factually grounded responses strictly using Knowledge Graph context.
+ * System instruction enforcing strict RAG grounding, bilingual adaptation,
+ * and zero hallucination.
  */
-function synthesizeKnowledgeAnswer(
-  query: string,
-  searchResults: Awaited<ReturnType<typeof executeSearch>>
-): string {
-  if (searchResults.results.length === 0) {
-    return `Maaf, informasi mengenai "${query}" belum ditemukan dalam Knowledge Base Mortal Kombat Knowledge Nexus. Sistem hanya menyajikan fakta yang terverifikasi dalam Knowledge Graph.`;
+function buildSystemInstruction(contextText: string): string {
+  return `
+Anda adalah AI Knowledge Assistant resmi dari platform Mortal Kombat Knowledge Nexus.
+Tugas utama Anda adalah menjawab pertanyaan pengguna secara komprehensif, cerdas, dan akurat HANYA berdasarkan KONTEN KNOWLEDGE GRAPH yang disediakan di bawah ini.
+
+PANDUAN KETAT OPERASIONAL:
+1. SUMBER KEBENARAN TUNGGAL:
+   - Gunakan fakta yang terdapat di dalam [KONTEN KNOWLEDGE GRAPH] sebagai satu-satunya rujukan kebenaran.
+   - JANGAN mengarang, berasumsi, atau menambahkan fakta di luar data graf.
+   - Jika informasi atau entitas yang ditanyakan pengguna TIDAK ADA atau TIDAK CUKUP di dalam konteks, nyatakan secara eksplisit dan jujur bahwa informasi tersebut belum tercatat dalam Mortal Kombat Knowledge Nexus.
+
+2. BAHASA DAN NADA (BILINGUAL SUPPORT):
+   - Jika pertanyaan diajukan dalam Bahasa Indonesia, jawab dalam Bahasa Indonesia yang formal, berwibawa, dan informatif.
+   - If the query is in English, reply in fluent, authoritative, and encyclopedic English.
+
+3. PEMAHAMAN RELASI & KONTINUITAS:
+   - Jelaskan hubungan antarkarakter (rival, sekutu, klan, guru/murid) secara terperinci jika data relasi tersedia.
+   - Perhatikan kontinuitas timeline (Original Timeline, Reboot MK9-MK11, New Era MK1 2023) agar tidak tertukar.
+
+4. SUMBER REFERENSI:
+   - Sebutkan nama entitas kanonikal atau referensi sumber yang mendukung jawaban Anda jika relevan.
+
+5. FORMAT PENULISAN:
+   - Gunakan format yang rapi, elegan, dan mudah dibaca (misalnya poin-poin terstruktur atau paragraf teratur).
+   - Hindari simbol asterisk bertumpuk (seperti *** atau tanda bintang ganda di dalam judul heading). Tulis judul heading secara bersih.
+
+[KONTEN KNOWLEDGE GRAPH YANG BERHASIL DIAMBIL]:
+${contextText}
+`.trim();
+}
+
+/**
+ * Fallback synthesizer used when Gemini API key is not configured or in offline mode.
+ */
+function synthesizeFallbackAnswer(query: string, context: Awaited<ReturnType<typeof retrieveKnowledgeGraphContext>>): string {
+  if (context.entities.length === 0) {
+    return `Maaf, informasi mengenai "${query}" belum ditemukan dalam Knowledge Base Mortal Kombat Knowledge Nexus.`;
   }
 
-  const primary = searchResults.results[0];
-  const related = searchResults.results.slice(1, 4);
+  const primary = context.entities[0];
+  const related = context.entities.slice(1);
 
   const sentences: string[] = [];
-
-  // 1. Identity & summary
   sentences.push(
-    `Berdasarkan data Knowledge Base Mortal Kombat Knowledge Nexus, **${primary.name}** adalah entitas bertipe *${primary.type}*. ${primary.summary}`
+    `Berdasarkan data Knowledge Base Mortal Kombat Knowledge Nexus, **${primary.name}** adalah entitas bertipe *${primary.type}*.`
   );
 
-  // 2. Attributes
-  if (primary.attributes && primary.attributes.length > 0) {
-    const attrTexts = primary.attributes
-      .filter((a) => a.value && a.value !== "-")
-      .map((a) => `${a.label}: ${a.value}`);
-    if (attrTexts.length > 0) {
-      sentences.push(`Informasi atribut terkait meliputi: ${attrTexts.join(", ")}.`);
-    }
+  if (context.timeline) {
+    sentences.push(`Entitas ini tercatat dalam kontinuitas **${context.timeline}**.`);
   }
 
-  // 3. Timeline & Game context (PRD Section 6: Contextual Answer)
-  if (primary.timeline) {
-    sentences.push(`Entitas ini tercatat dalam kontinuitas **${primary.timeline}**.`);
-  }
-  if (primary.games && primary.games.length > 0) {
-    sentences.push(`Muncul dalam seri game: ${primary.games.join(", ")}.`);
+  if (context.matchedRelationships.length > 0) {
+    sentences.push(`Relasi ontologi terhubung: ${context.matchedRelationships.join("; ")}.`);
   }
 
-  // 4. Ontology relationships
-  if (primary.matchedRelationships && primary.matchedRelationships.length > 0) {
-    sentences.push(`Hubungan ontologi yang terhubung: ${primary.matchedRelationships.join("; ")}.`);
-  }
-
-  // 5. Related entities found in graph
   if (related.length > 0) {
     const relatedNames = related.map((r) => `**${r.name}** (*${r.type}*)`).join(", ");
-    sentences.push(`Entitas lain yang terhubung dalam pencarian ini: ${relatedNames}.`);
+    sentences.push(`Entitas terkait lainnya dalam graf: ${relatedNames}.`);
   }
 
-  // 6. Explanation reasoning
-  if (primary.explanation) {
-    sentences.push(`*Konteks relasi:* ${primary.explanation}`);
-  }
+  sentences.push(`(Jawaban ini dirumuskan langsung dari struktur graf pengetahuan kanonikal).`);
 
   return sentences.join(" ");
 }
 
 /**
- * Execute RAG Pipeline: Retrieval -> Context Assembly -> Synthesis
+ * Execute complete RAG pipeline:
+ * 1. Intent Recognition & SPARQL Generation
+ * 2. Retrieval via Fuseki / Knowledge Graph
+ * 3. Context Construction
+ * 4. LLM Generation via official Gemini SDK (@google/genai)
  */
 export async function generateAssistantAnswer(
   query: string,
@@ -87,124 +103,75 @@ export async function generateAssistantAnswer(
 ): Promise<AssistantResponse> {
   const q = query.trim();
 
-  // 1. Retrieval stage: Run Hybrid Search and NLQP
-  const intent = processNaturalLanguageQuery(q);
-  const searchResults = await executeSearch({
-    q,
-    mode: "hybrid",
-    limit: 5,
-  });
-
-  const retrievedEntities: EntityRef[] = searchResults.results.map((r) => ({
-    id: r.id,
-    name: r.name,
-    type: r.type,
+  // 1. Convert history to AssistantHistoryItem
+  const historyItems: AssistantHistoryItem[] = history.map((h) => ({
+    role: h.role,
+    content: h.content,
   }));
 
-  const matchedRelationships: string[] = Array.from(
-    new Set(searchResults.results.flatMap((r) => r.matchedRelationships ?? []))
-  );
+  // 2. Retrieval: Execute SPARQL on Fuseki or Graph Traversal
+  const knowledge = await retrieveKnowledgeGraphContext(q, historyItems);
 
-  const sources: SourceRef[] = [];
-  const seenSourceIds = new Set<string>();
-  for (const r of searchResults.results) {
-    for (const s of r.provenance ?? []) {
-      if (!seenSourceIds.has(s.id)) {
-        seenSourceIds.add(s.id);
-        sources.push(s);
-      }
-    }
-  }
-
-  const primaryTimeline = searchResults.results.find((r) => r.timeline)?.timeline;
-
-  // 2. Synthesis stage: Call Gemini API if GEMINI_API_KEY is available
+  // 3. Check for Gemini API Key
   const geminiApiKey = process.env.GEMINI_API_KEY;
-  if (geminiApiKey) {
+
+  if (geminiApiKey && geminiApiKey.trim()) {
     try {
-      const contextText = searchResults.results
-        .map(
-          (r, idx) => `
-[Entitas #${idx + 1}]
-Nama: ${r.name}
-Tipe: ${r.type}
-Deskripsi: ${r.summary}
-Atribut: ${r.attributes?.map((a) => `${a.label}: ${a.value}`).join(", ")}
-Timeline: ${r.timeline ?? "Semua Era"}
-Game: ${r.games?.join(", ") ?? "-"}
-Relasi Graf: ${r.matchedRelationships?.join(", ") ?? "-"}
-Alasan Pencarian: ${r.explanation ?? "-"}
-`
-        )
-        .join("\n");
+      const systemInstruction = buildSystemInstruction(knowledge.contextText);
 
-      const systemPrompt = `
-Anda adalah AI Knowledge Assistant resmi dari platform Mortal Kombat Knowledge Nexus.
-Tugas Anda adalah menjawab pertanyaan pengguna secara akurat berdasarkan KONTEN KNOWLEDGE GRAPH yang diberikan di bawah ini.
-ATURAN KETAT (PRD v1.5):
-1. Gunakan fakta dari Knowledge Graph yang disediakan sebagai sumber utama informasi.
-2. JANGAN mengarang fakta jika informasi tidak ditemukan. Nyatakan dengan jujur jika data belum tersedia di Knowledge Base.
-3. Pertahankan konteks kontinuitas game dan timeline secara konsisten.
-4. Gunakan bahasa Indonesia yang santun, informatif, dan sinematik khas Mortal Kombat.
-5. Sebutkan sumber atau entitas yang mendukung jawaban jika relevan.
+      // Manage conversation history: take last 6 messages for token efficiency
+      const recentHistory = history.slice(-6);
+      const contents: { role: "user" | "model"; parts: { text: string }[] }[] = [];
 
-KONTEN KNOWLEDGE GRAPH TERKAIT:
-${contextText}
-`.trim();
+      for (const msg of recentHistory) {
+        contents.push({
+          role: msg.role === "assistant" ? "model" : "user",
+          parts: [{ text: msg.content }],
+        });
+      }
 
-      const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${geminiApiKey}`;
-
-      const res = await fetch(apiUrl, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          contents: [
-            {
-              role: "user",
-              parts: [{ text: `${systemPrompt}\n\nPertanyaan Pengguna: ${q}` }],
-            },
-          ],
-          generationConfig: {
-            temperature: 0.2,
-            maxOutputTokens: 800,
-          },
-        }),
+      // Append current user message
+      contents.push({
+        role: "user",
+        parts: [{ text: q }],
       });
 
-      if (res.ok) {
-        const data = await res.json();
-        const generatedText = data?.candidates?.[0]?.content?.parts?.[0]?.text;
-        if (generatedText) {
-          return {
-            answer: generatedText.trim(),
-            retrievedContext: {
-              entities: retrievedEntities,
-              matchedRelationships,
-              timeline: primaryTimeline,
-              sources,
-            },
-            generatedSparql: intent.generatedSparql,
-            provider: "gemini",
-          };
-        }
-      }
-    } catch {
-      // Fallback to Knowledge Base RAG
+      const geminiResult = await generateWithGemini({
+        systemInstruction,
+        contents,
+      });
+
+      return {
+        answer: geminiResult.text.trim(),
+        retrievedContext: {
+          entities: knowledge.entities,
+          matchedRelationships: knowledge.matchedRelationships,
+          timeline: knowledge.timeline,
+          sources: knowledge.sources,
+        },
+        generatedSparql: knowledge.generatedSparql,
+        provider: "gemini",
+        usage: geminiResult.usage,
+        isFusekiLive: knowledge.isFusekiLive,
+      };
+    } catch (geminiError: any) {
+      console.warn("[Gemini RAG Engine] Warning during Gemini generation, utilizing Knowledge Graph fallback:", geminiError?.message);
     }
   }
 
-  // Local Knowledge Graph RAG fallback
-  const answer = synthesizeKnowledgeAnswer(q, searchResults);
+  // 4. Fallback Knowledge Graph Synthesis
+  const fallbackAnswer = synthesizeFallbackAnswer(q, knowledge);
 
   return {
-    answer,
+    answer: fallbackAnswer,
     retrievedContext: {
-      entities: retrievedEntities,
-      matchedRelationships,
-      timeline: primaryTimeline,
-      sources,
+      entities: knowledge.entities,
+      matchedRelationships: knowledge.matchedRelationships,
+      timeline: knowledge.timeline,
+      sources: knowledge.sources,
     },
-    generatedSparql: intent.generatedSparql,
+    generatedSparql: knowledge.generatedSparql,
     provider: "knowledge-base-rag",
+    isFusekiLive: knowledge.isFusekiLive,
   };
 }

@@ -1,5 +1,5 @@
 /**
- * API client — integrasi frontend dengan API Anggota 2 (PRD Bagian 15).
+ * API client — integrasi frontend dengan backend API.
  *
  * Mode:
  *  - NEXT_PUBLIC_USE_MOCK=true  (default) → memakai data contoh lokal (lib/mock-data.ts)
@@ -8,7 +8,7 @@
  * Respons API boleh berbentuk objek langsung, `{ data: ... }`, atau untuk list
  * `[...]`, `{ items: [...] }`, `{ data: [...] }`, `{ results: [...] }`.
  */
-import { abilities, characters, games, organizations, storyEvents, timelines, weapons } from "./mock-data";
+import { abilities, characters, games, organizations, realms, storyEvents, timelines, weapons } from "./mock-data";
 import { mockSearch, mockSuggestions } from "./mock-search";
 import type {
   Ability,
@@ -16,6 +16,7 @@ import type {
   EntityType,
   Game,
   Organization,
+  Realm,
   SearchMode,
   SearchResponse,
   StoryEvent,
@@ -100,18 +101,16 @@ function mockFind<T extends { id: string }>(list: T[], id: string, label: string
 // ---------------------------------------------------------------- Search
 export async function search(params: { q: string; mode?: SearchMode; type?: EntityType | "all" }): Promise<SearchResponse> {
   const mode = params.mode ?? "hybrid";
-  if (USE_MOCK) return delay(mockSearch(params.q, mode, params.type), 450);
-  if (mode === "keyword") {
-    return request<SearchResponse>("/api/search", { query: { q: params.q, type: params.type === "all" ? undefined : params.type } });
-  }
-  return request<SearchResponse>(`/api/search/${mode}`, {
-    method: "POST",
-    body: JSON.stringify({ query: params.q, type: params.type === "all" ? undefined : params.type }),
+  return request<SearchResponse>("/api/search", {
+    query: {
+      q: params.q,
+      mode,
+      type: params.type === "all" ? undefined : params.type,
+    },
   });
 }
 
 export async function getSuggestions(q: string): Promise<Suggestion[]> {
-  if (USE_MOCK) return delay(mockSuggestions(q), 120);
   return asList<Suggestion>(await request("/api/search/suggestions", { query: { q } }));
 }
 
@@ -168,6 +167,15 @@ export async function getTimelines(): Promise<Timeline[]> {
 export async function getTimeline(id: string): Promise<Timeline> {
   if (USE_MOCK) return mockFind(timelines, id, "Timeline");
   return request<Timeline>(`/api/timelines/${encodeURIComponent(id)}`);
+}
+
+export async function getRealms(): Promise<Realm[]> {
+  if (USE_MOCK) return delay(realms);
+  return asList<Realm>(await request("/api/realms"));
+}
+export async function getRealm(id: string): Promise<Realm> {
+  if (USE_MOCK) return mockFind(realms, id, "Realm");
+  return request<Realm>(`/api/realms/${encodeURIComponent(id)}`);
 }
 
 // ---------------------------------------------------------------- Story

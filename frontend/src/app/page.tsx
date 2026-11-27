@@ -1,210 +1,231 @@
-import Link from "next/link";
-import SearchBar from "@/components/search/SearchBar";
-import { GameEras, PopularCharacters } from "@/components/home/HomeSections";
-import { Container, Section } from "@/components/ui/Layout";
-import { CATEGORIES } from "@/lib/routes";
-import { SEARCH_PROMPTS, STORY_ARCS } from "@/lib/mock-data";
+"use client";
 
-const GRAPH_NODES = [
-  { x: 50, y: 50, label: "Scorpion", c: "#b51f2b" },
-  { x: 18, y: 22, label: "Hellfire", c: "#c6a15b" },
-  { x: 82, y: 20, label: "Sub-Zero", c: "#b51f2b" },
-  { x: 15, y: 78, label: "Shirai Ryu", c: "#3fae7a" },
-  { x: 85, y: 78, label: "Lin Kuei", c: "#3fae7a" },
-  { x: 50, y: 92, label: "MK11", c: "#4ba3d6" },
-];
-const GRAPH_EDGES: [number, number, string][] = [
-  [0, 1, "hasAbility"],
-  [0, 2, "rivalOf"],
-  [0, 3, "memberOf"],
-  [2, 4, "memberOf"],
-  [0, 5, "appearsIn"],
+import Link from "next/link";
+import { useState, useMemo } from "react";
+import SearchBar from "@/components/search/SearchBar";
+import CharacterCard from "@/components/encyclopedia/CharacterCard";
+import GameCard from "@/components/encyclopedia/GameCard";
+import RealmCard from "@/components/encyclopedia/RealmCard";
+import ClanCard from "@/components/encyclopedia/ClanCard";
+import TimelineComponent from "@/components/encyclopedia/TimelineComponent";
+import { characters, games, organizations, storyEvents, SEARCH_PROMPTS } from "@/lib/mock-data";
+
+const REALMS_DATA = [
+  {
+    id: "earthrealm",
+    name: "Earthrealm",
+    description: "Alam asal umat manusia fana, dilindungi secara turun-temurun oleh Dewa Petir Raiden dan Dewan Elder Gods.",
+    ruler: "Raiden / Fujin",
+    inhabitants: "Manusia, Dewa Pelindung",
+  },
+  {
+    id: "outworld",
+    name: "Outworld",
+    description: "Alam kekaisaran megah nan kejam yang memperluas wilayah kekuasaannya dengan menaklukkan dan menggabungkan dimensi lain.",
+    ruler: "Shao Kahn / Kotal Kahn / Mileena",
+    inhabitants: "Tarkatan, Shokan, Outworlders",
+  },
+  {
+    id: "netherrealm",
+    name: "Netherrealm",
+    description: "Dimensi bawah tanah berapi yang menjadi tempat siksaan jiwa-jiwa berdosa, sarang iblis purba dan necromancer Quan Chi.",
+    ruler: "Shinnok / Quan Chi",
+    inhabitants: "Demons, Revenants, Specters",
+  },
+  {
+    id: "edenia",
+    name: "Edenia",
+    description: "Alam firdaus yang subur, penuh keindahan, sihir kuno, dan umur panjang, pernah ditaklukkan dan dipaksa tunduk oleh Outworld.",
+    ruler: "Queen Sindel / Princess Kitana",
+    inhabitants: "Edenians",
+  },
 ];
 
 export default function Home() {
+  const [selectedEra, setSelectedEra] = useState<string>("all");
+
+  const featuredCharacters = useMemo(() => {
+    const popularIds = ["scorpion", "sub-zero", "raiden", "liu-kang", "kitana", "shao-kahn"];
+    const found = characters.filter((c) => popularIds.includes(c.id));
+    return found.length >= 6 ? found : characters.slice(0, 6);
+  }, []);
+
+  const filteredGames = useMemo(() => {
+    if (selectedEra === "all") return games.slice(0, 8);
+    return games.filter((g) => g.era.toLowerCase().includes(selectedEra.toLowerCase())).slice(0, 8);
+  }, [selectedEra]);
+
+  const featuredEvents = useMemo(() => {
+    return storyEvents.slice(0, 4);
+  }, []);
+
   return (
-    <>
-      {/* HERO — cinematic, search-first (PRD 25.5 Home) */}
-      <section className="hero-bg relative overflow-hidden border-b border-mk-border">
-        <div className="pointer-events-none absolute inset-0 opacity-[0.07] [background-image:linear-gradient(#f5f5f5_1px,transparent_1px),linear-gradient(90deg,#f5f5f5_1px,transparent_1px)] [background-size:48px_48px]" />
-        <Container className="relative flex min-h-[78vh] flex-col items-center justify-center py-20 text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.4em] text-mk-red">Semantic Knowledge Graph · Hybrid Search</p>
-          <h1 className="mt-5 font-heading text-4xl font-extrabold leading-tight tracking-wide sm:text-6xl lg:text-7xl">
-            Mortal Kombat
-            <span className="block text-mk-gold text-glow">Knowledge Nexus</span>
-          </h1>
-          <p className="mt-5 max-w-2xl text-sm text-mk-muted sm:text-lg">
-            Ensiklopedia dan mesin pencari lore Mortal Kombat — karakter, game, kemampuan, klan, timeline, dan cerita yang
-            saling terhubung dalam satu Knowledge Graph.
-          </p>
-          <div className="mt-10 w-full max-w-3xl">
-            <SearchBar autoFocus={false} />
+    <div className="space-y-14 sm:space-y-20 pb-16">
+      {/* 1. HERO SECTION (Modern Gaming Encyclopedia Hero) */}
+      <section className="hero-encyclopedia border-b border-mk-border py-12 sm:py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <div className="mx-auto max-w-3xl text-center">
+            <h1 className="font-heading text-3xl font-extrabold tracking-tight text-mk-text sm:text-5xl lg:text-6xl leading-tight">
+              Mortal Kombat <span className="text-mk-red">Encyclopedia</span>
+            </h1>
+
+            <p className="mt-4 text-sm sm:text-base text-mk-muted leading-relaxed">
+              Pusat ensiklopedia kanonikal Mortal Kombat. Jelajahi 61 petarung legendaris, 23 game mandiri, jurus magis, klan prajurit, dan kontinuitas alur cerita lintas era.
+            </p>
+
+            {/* Large Prominent Search Bar */}
+            <div className="mt-8 max-w-2xl mx-auto shadow-sm">
+              <SearchBar autoFocus={false} />
+            </div>
           </div>
-          <div className="mt-5 flex max-w-3xl flex-wrap justify-center gap-2" aria-label="Rekomendasi pencarian">
-            {SEARCH_PROMPTS.map((p) => (
-              <Link
-                key={p}
-                href={`/search?q=${encodeURIComponent(p)}`}
-                className="rounded-full border border-mk-border bg-mk-bg/60 px-3 py-1.5 text-xs text-mk-muted transition hover:border-mk-gold hover:text-mk-text"
-              >
-                {p}
-              </Link>
-            ))}
-          </div>
-        </Container>
+        </div>
       </section>
 
-      <Container className="space-y-20 py-16">
-        {/* Kategori informasi utama */}
-        <Section title="Kategori Informasi">
-          <ul className="grid grid-cols-2 gap-3 md:grid-cols-4">
-            {CATEGORIES.map((c) => (
-              <li key={c.href}>
-                <Link href={c.href} className="group panel flex h-full items-start gap-3 rounded-sm p-4 transition hover:border-mk-red/70">
-                  <span className="text-2xl" aria-hidden="true">
-                    {c.icon}
-                  </span>
-                  <span>
-                    <span className="block font-heading text-sm font-bold group-hover:text-mk-gold sm:text-base">{c.label}</span>
-                    <span className="mt-1 hidden text-xs text-mk-muted sm:block">{c.desc}</span>
-                  </span>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </Section>
-
-        {/* Karakter populer */}
-        <Section
-          title="Karakter Populer"
-          action={
-            <Link href="/characters" className="text-xs uppercase tracking-widest text-mk-red hover:text-mk-gold sm:hidden">
-              Semua →
-            </Link>
-          }
-        >
-          <PopularCharacters />
-          <div className="mt-2 hidden sm:block">
-            <Link href="/characters" className="text-xs uppercase tracking-widest text-mk-red hover:text-mk-gold">
-              Lihat semua karakter →
-            </Link>
+      {/* 2. FEATURED CHARACTERS */}
+      <section className="mx-auto max-w-7xl px-4 sm:px-6">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3 border-b border-mk-border pb-4 mb-6">
+          <div>
+            <span className="text-xs font-bold uppercase tracking-widest text-mk-gold">
+              Tokoh &amp; Petarung
+            </span>
+            <h2 className="font-heading text-2xl font-bold text-mk-text mt-0.5">
+              Featured Characters
+            </h2>
           </div>
-        </Section>
-
-        {/* Game per era */}
-        <Section
-          title="Game yang Tersedia"
-          action={
-            <Link href="/games" className="text-xs uppercase tracking-widest text-mk-red hover:text-mk-gold">
-              Semua game →
-            </Link>
-          }
-        >
-          <GameEras />
-        </Section>
-
-        {/* Story arcs */}
-        <Section
-          title="Alur Cerita Pilihan"
-          action={
-            <Link href="/story" className="text-xs uppercase tracking-widest text-mk-red hover:text-mk-gold">
-              Story Explorer →
-            </Link>
-          }
-        >
-          <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {STORY_ARCS.map((arc) => (
-              <li key={arc}>
-                <Link
-                  href={`/story?arc=${encodeURIComponent(arc)}`}
-                  className="group relative flex h-36 items-end overflow-hidden rounded-sm border border-mk-border bg-gradient-to-br from-mk-red-deep/50 via-mk-card to-mk-bg p-4 transition hover:border-mk-red"
-                >
-                  <span className="absolute right-3 top-2 font-display text-6xl text-mk-text/5" aria-hidden="true">
-                    ✦
-                  </span>
-                  <span className="font-heading text-lg font-bold group-hover:text-mk-gold">{arc}</span>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </Section>
-
-        {/* Knowledge Graph preview + Semantic Search info */}
-        <div className="grid gap-8 lg:grid-cols-2">
-          <Section title="Knowledge Graph">
-            <Link href="/knowledge-graph" className="group panel block rounded-sm p-4 transition hover:border-mk-red/70" aria-label="Buka Knowledge Graph">
-              <svg viewBox="0 0 100 100" className="h-64 w-full" role="img" aria-label="Pratinjau graph relasi Scorpion">
-                {GRAPH_EDGES.map(([a, b, l]) => {
-                  const A = GRAPH_NODES[a];
-                  const B = GRAPH_NODES[b];
-                  return (
-                    <g key={`${a}-${b}`}>
-                      <line x1={A.x} y1={A.y} x2={B.x} y2={B.y} stroke="#292b35" strokeWidth="0.6" />
-                      <text x={(A.x + B.x) / 2} y={(A.y + B.y) / 2 - 1} fontSize="2.6" fill="#a0a2aa" textAnchor="middle">
-                        {l}
-                      </text>
-                    </g>
-                  );
-                })}
-                {GRAPH_NODES.map((n) => (
-                  <g key={n.label}>
-                    <circle cx={n.x} cy={n.y} r="4.2" fill="#08090d" stroke={n.c} strokeWidth="1" />
-                    <text x={n.x} y={n.y + 8} fontSize="3.4" fill="#f5f5f5" textAnchor="middle">
-                      {n.label}
-                    </text>
-                  </g>
-                ))}
-              </svg>
-              <p className="mt-2 text-center text-xs uppercase tracking-widest text-mk-red group-hover:text-mk-gold">Jelajahi graph →</p>
-            </Link>
-          </Section>
-
-          <Section title="Tentang Semantic Search">
-            <div className="panel space-y-4 rounded-sm p-6 text-sm text-mk-muted">
-              <p>
-                Knowledge Nexus tidak hanya mencocokkan kata. Mesin pencari memahami <strong className="text-mk-text">entitas</strong>,{" "}
-                <strong className="text-mk-text">atribut</strong>, dan <strong className="text-mk-text">relasi</strong> yang didefinisikan dalam
-                ontology.
-              </p>
-              <ol className="space-y-3">
-                {[
-                  ["Keyword", "Pencocokan nama, alias, dan fuzzy matching."],
-                  ["Semantic", "Penelusuran relasi graph (SPARQL), mis. hasAbility → hasElement → Fire."],
-                  ["Hybrid", "Gabungan keduanya dengan ranking dan penjelasan \"Why this result?\"."],
-                ].map(([t, d], i) => (
-                  <li key={t} className="flex gap-3">
-                    <span className="grid h-6 w-6 shrink-0 place-items-center rounded-sm bg-mk-red text-xs font-bold text-mk-text">{i + 1}</span>
-                    <span>
-                      <strong className="text-mk-text">{t}</strong> — {d}
-                    </span>
-                  </li>
-                ))}
-              </ol>
-              <Link href="/search?q=Karakter%20yang%20menggunakan%20api&mode=semantic" className="btn-primary">
-                Coba semantic search
-              </Link>
-            </div>
-          </Section>
+          <Link
+            href="/characters"
+            className="text-xs font-semibold uppercase tracking-wider text-mk-red hover:underline inline-flex items-center gap-1"
+          >
+            Lihat Semua 61 Karakter →
+          </Link>
         </div>
 
-        {/* AI Knowledge Assistant Preview (PRD 25.4) */}
-        <Section title="AI Knowledge Assistant (RAG &amp; LLM)">
-          <div className="panel flex flex-col md:flex-row items-center justify-between gap-6 rounded-sm p-6 bg-gradient-to-r from-mk-bg2 via-mk-card to-mk-bg2 border border-mk-border hover:border-mk-red/70 transition">
-            <div className="space-y-2 max-w-2xl">
-              <div className="flex items-center gap-2 text-mk-gold">
-                <span className="text-xl">🤖</span>
-                <span className="font-heading font-bold text-lg text-mk-text">Tanya Jawab Berbasis Pengetahuan Terverifikasi</span>
-              </div>
-              <p className="text-sm text-mk-muted leading-relaxed">
-                Tanyakan pertanyaan bahasa alami seputar karakter, alur cerita, dan garis waktu Mortal Kombat. Jawaban dihasilkan melalui pipa Retrieval-Augmented Generation (RAG) yang tergrounding langsung pada relasi Knowledge Graph dan SPARQL tanpa halusinasi.
-              </p>
-            </div>
-            <Link href="/assistant" className="btn-primary whitespace-nowrap shrink-0 !py-3 !px-6">
-              Mulai Percakapan AI →
-            </Link>
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
+          {featuredCharacters.map((char) => (
+            <CharacterCard key={char.id} character={char} />
+          ))}
+        </div>
+      </section>
+
+      {/* 3. EXPLORE MORTAL KOMBAT GAMES */}
+      <section className="mx-auto max-w-7xl px-4 sm:px-6">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3 border-b border-mk-border pb-4 mb-6">
+          <div>
+            <span className="text-xs font-bold uppercase tracking-widest text-mk-gold">
+              Katalog Game Mandiri
+            </span>
+            <h2 className="font-heading text-2xl font-bold text-mk-text mt-0.5">
+              Explore Mortal Kombat Games
+            </h2>
           </div>
-        </Section>
-      </Container>
-    </>
+          <Link
+            href="/games"
+            className="text-xs font-semibold uppercase tracking-wider text-mk-red hover:underline inline-flex items-center gap-1"
+          >
+            Semua 23 Game Standalone →
+          </Link>
+        </div>
+
+        {/* Filter Era Tabs */}
+        <div className="flex flex-wrap gap-2 mb-6">
+          {[
+            { id: "all", label: "Semua Era" },
+            { id: "Classic", label: "Classic Era (1992–1996)" },
+            { id: "3D", label: "3D Era (1997–2006)" },
+            { id: "Reboot", label: "Reboot Era (2011–2019)" },
+            { id: "New Era", label: "New Era (2023+)" },
+          ].map((era) => (
+            <button
+              key={era.id}
+              type="button"
+              onClick={() => setSelectedEra(era.id)}
+              className={`rounded px-3 py-1.5 text-xs font-medium transition ${
+                selectedEra === era.id
+                  ? "bg-mk-navy text-white font-bold shadow-xs"
+                  : "bg-mk-card border border-mk-border text-mk-muted hover:border-mk-gold hover:text-mk-text"
+              }`}
+            >
+              {era.label}
+            </button>
+          ))}
+        </div>
+
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+          {filteredGames.map((game) => (
+            <GameCard key={game.id} game={game} />
+          ))}
+        </div>
+      </section>
+
+      {/* 4. REALMS AND CLANS */}
+      <section className="mx-auto max-w-7xl px-4 sm:px-6">
+        <div className="border-b border-mk-border pb-4 mb-6">
+          <span className="text-xs font-bold uppercase tracking-widest text-mk-gold">
+            Geografi &amp; Faksi Dunia
+          </span>
+          <h2 className="font-heading text-2xl font-bold text-mk-text mt-0.5">
+            Realms &amp; Clans
+          </h2>
+        </div>
+
+        <div className="grid gap-8 lg:grid-cols-2">
+          {/* Dimensi & Realm */}
+          <div className="space-y-4">
+            <div className="flex items-center justify-between">
+              <h3 className="font-heading text-lg font-bold text-mk-text flex items-center gap-2">
+                <span className="text-mk-red">✦</span> Dimensi Alam Semesta (Realms)
+              </h3>
+              <Link
+                href="/realms"
+                className="text-xs font-semibold text-mk-gold hover:text-mk-red transition-colors"
+              >
+                Lihat 7 Dimensi →
+              </Link>
+            </div>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {REALMS_DATA.map((realm) => (
+                <RealmCard key={realm.id} realm={realm} />
+              ))}
+            </div>
+          </div>
+
+          {/* Klan & Organisasi */}
+          <div className="space-y-4">
+            <h3 className="font-heading text-lg font-bold text-mk-text flex items-center gap-2">
+              <span className="text-mk-gold">✦</span> Klan &amp; Faksi Pejuang (Clans)
+            </h3>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {organizations.slice(0, 4).map((clan) => (
+                <ClanCard key={clan.id} clan={clan} />
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 5. STORY TIMELINE OVERVIEW */}
+      <section className="mx-auto max-w-7xl px-4 sm:px-6">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3 border-b border-mk-border pb-4 mb-6">
+          <div>
+            <span className="text-xs font-bold uppercase tracking-widest text-mk-gold">
+              Kronologi Narasi
+            </span>
+            <h2 className="font-heading text-2xl font-bold text-mk-text mt-0.5">
+              Story Timeline
+            </h2>
+          </div>
+          <Link
+            href="/story"
+            className="text-xs font-semibold uppercase tracking-wider text-mk-red hover:underline inline-flex items-center gap-1"
+          >
+            Buka Story Explorer Lengkap →
+          </Link>
+        </div>
+
+        <div className="rounded border border-mk-border bg-mk-card p-6 shadow-2xs">
+          <TimelineComponent events={featuredEvents} />
+        </div>
+      </section>
+    </div>
   );
 }

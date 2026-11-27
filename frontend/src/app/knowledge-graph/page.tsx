@@ -1,106 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Container, PageHeader, Section } from "@/components/ui/Layout";
-
-interface SparqlResponse {
-  head?: { vars: string[] };
-  results?: { bindings: Record<string, { value: string; type: string }>[] };
-  error?: string;
-}
-
-interface HealthResponse {
-  status: string;
-  services?: {
-    fuseki?: {
-      status: "connected" | "disconnected";
-      message: string;
-    };
-  };
-}
-
-const SAMPLE_QUERIES = [
-  {
-    label: "1. Karakter dan Versi Game (hasVersion & appearsIn)",
-    query: `PREFIX mk: <https://example.org/mk/>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-
-SELECT ?character ?name ?versionName ?gameTitle
-WHERE {
-  ?character a mk:Character ;
-             mk:name ?name ;
-             mk:hasVersion ?version .
-  ?version mk:name ?versionName ;
-           mk:appearsIn ?game .
-  ?game mk:name ?gameTitle .
-}
-ORDER BY ?name
-LIMIT 20`,
-  },
-  {
-    label: "2. Karakter dengan Kemampuan Elemen Api (hasAbility → hasElement)",
-    query: `PREFIX mk: <https://example.org/mk/>
-
-SELECT ?charName ?abilityName ?elementName
-WHERE {
-  ?version a mk:CharacterVersion ;
-           mk:name ?charName ;
-           mk:hasAbility ?ability .
-  ?ability mk:name ?abilityName ;
-           mk:hasElement ?element .
-  ?element mk:name ?elementName .
-  FILTER(regex(?elementName, "Fire", "i"))
-}
-LIMIT 20`,
-  },
-  {
-    label: "3. Anggota Klan Lin Kuei (memberOf)",
-    query: `PREFIX mk: <https://example.org/mk/>
-
-SELECT ?charName ?clanName
-WHERE {
-  ?version a mk:CharacterVersion ;
-           mk:name ?charName ;
-           mk:memberOf ?clan .
-  ?clan mk:name ?clanName .
-  FILTER(regex(?clanName, "Lin Kuei", "i"))
-}
-LIMIT 20`,
-  },
-  {
-    label: "4. Musuh & Rivalitas Scorpion (enemyOf / rivalOf)",
-    query: `PREFIX mk: <https://example.org/mk/>
-
-SELECT ?scorpionName ?enemyName
-WHERE {
-  ?scorpion a mk:CharacterVersion ;
-            mk:name ?scorpionName ;
-            mk:enemyOf ?enemy .
-  ?enemy mk:name ?enemyName .
-  FILTER(regex(?scorpionName, "Scorpion", "i"))
-}
-LIMIT 20`,
-  },
-  {
-    label: "5. Peristiwa Cerita Melibatkan Sub-Zero di Reboot Timeline",
-    query: `PREFIX mk: <https://example.org/mk/>
-
-SELECT ?title ?summary ?timelineName
-WHERE {
-  ?event a mk:Event ;
-         mk:eventTitle ?title ;
-         mk:eventSummary ?summary ;
-         mk:involvesCharacter ?version ;
-         mk:occursIn ?timeline .
-  ?version mk:name ?charName .
-  ?timeline mk:name ?timelineName .
-  FILTER(regex(?charName, "Sub-Zero", "i"))
-  FILTER(regex(?timelineName, "Reboot", "i"))
-}
-LIMIT 20`,
-  },
-];
 
 const NODES = [
   { id: "scorpion", label: "Scorpion", type: "character", x: 260, y: 160, color: "#b51f2b" },
@@ -127,42 +29,6 @@ const EDGES = [
 export default function KnowledgeGraphPage() {
   const [selectedNode, setSelectedNode] = useState<string>("scorpion");
   const [viewMode, setViewMode] = useState<"graph" | "table">("graph");
-  const [sparqlQuery, setSparqlQuery] = useState(SAMPLE_QUERIES[0].query);
-  const [fusekiStatus, setFusekiStatus] = useState<"checking" | "connected" | "disconnected">("checking");
-  const [sparqlLoading, setSparqlLoading] = useState(false);
-  const [sparqlResult, setSparqlResult] = useState<SparqlResponse | null>(null);
-
-  // Check health of Fuseki endpoint
-  useEffect(() => {
-    fetch("/api/health")
-      .then((res) => res.json())
-      .then((data: HealthResponse) => {
-        const fStatus = data?.services?.fuseki?.status;
-        setFusekiStatus(fStatus === "connected" ? "connected" : "disconnected");
-      })
-      .catch(() => {
-        setFusekiStatus("disconnected");
-      });
-  }, []);
-
-  const executeSparql = async () => {
-    setSparqlLoading(true);
-    setSparqlResult(null);
-    try {
-      const res = await fetch("/api/sparql", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ query: sparqlQuery }),
-      });
-      const data = await res.json();
-      setSparqlResult(data);
-    } catch (err: unknown) {
-      const msg = err instanceof Error ? err.message : "Gagal mengeksekusi SPARQL.";
-      setSparqlResult({ error: msg });
-    } finally {
-      setSparqlLoading(false);
-    }
-  };
 
   const activeNodeData = NODES.find((n) => n.id === selectedNode);
   const connectedEdges = EDGES.filter((e) => e.from === selectedNode || e.to === selectedNode);
@@ -172,12 +38,12 @@ export default function KnowledgeGraphPage() {
       <PageHeader
         eyebrow="Knowledge Graph &amp; SPARQL"
         title="Knowledge Graph &amp; SPARQL Explorer"
-        description="Visualisasi hubungan antar-entitas (FR-16) dan konsol eksekusi query SPARQL langsung terhadap Knowledge Base (FR-17)."
+        description="Visualisasi hubungan antar-entitas dan konsol eksekusi query SPARQL langsung terhadap Knowledge Base."
         crumbs={[{ label: "Knowledge Graph" }]}
       />
 
       <Container className="space-y-12 py-8 sm:py-10">
-        {/* SECTION 1: INTERACTIVE GRAPH EXPLORER (FR-16 & PRD 25.5 with mobile table alternative) */}
+        {/* SECTION 1: INTERACTIVE GRAPH EXPLORER (with mobile table alternative) */}
         <Section
           title="Interactive Knowledge Graph Preview"
           action={
@@ -355,7 +221,7 @@ export default function KnowledgeGraphPage() {
               </div>
             </div>
           ) : (
-            /* Table / List Alternative View (PRD 25.5 Mobile Alternative) */
+            /* Table / List Alternative View (Mobile Alternative) */
             <div className="panel rounded-sm p-4 sm:p-5 space-y-4">
               <p className="text-xs text-mk-muted">
                 Daftar entitas dan relasi Knowledge Graph dalam format tabel interaktif:
@@ -405,133 +271,6 @@ export default function KnowledgeGraphPage() {
               </div>
             </div>
           )}
-        </Section>
-
-        {/* SECTION 2: SPARQL EXPLORER (FR-17) */}
-        <Section
-          title="SPARQL Query Explorer"
-          action={
-            <div className="flex items-center gap-2 text-xs">
-              <span className="text-mk-muted">Status Fuseki:</span>
-              <span
-                className={`flex items-center gap-1 rounded-sm px-2 py-0.5 font-medium ${
-                  fusekiStatus === "connected"
-                    ? "bg-emerald-500/20 text-emerald-300 border border-emerald-500/40"
-                    : fusekiStatus === "checking"
-                    ? "bg-amber-500/20 text-amber-300 border border-amber-500/40"
-                    : "bg-red-500/20 text-red-300 border border-red-500/40"
-                }`}
-              >
-                <span>{fusekiStatus === "connected" ? "● Online" : fusekiStatus === "checking" ? "○ Checking…" : "✕ Offline"}</span>
-              </span>
-            </div>
-          }
-        >
-          <div className="panel rounded-sm p-4 sm:p-6 space-y-5">
-            {/* Status note if Fuseki is offline */}
-            {fusekiStatus === "disconnected" && (
-              <div className="rounded-sm border border-amber-500/40 bg-amber-500/10 p-3 text-xs text-amber-200 space-y-1">
-                <p className="font-semibold">⚠️ Fuseki SPARQL Endpoint Belum Aktif di localhost:3030</p>
-                <p className="text-amber-300/80">
-                  Untuk menjalankan Fuseki lokal: jalankan script <code className="text-mk-gold">fuseki/run-fuseki.bat</code> atau <code className="text-mk-gold">fuseki/setup-fuseki.ps1</code> yang telah disediakan tim.
-                </p>
-              </div>
-            )}
-
-            {/* Query Presets */}
-            <div className="space-y-1.5">
-              <label htmlFor="query-presets" className="text-xs font-semibold uppercase tracking-wider text-mk-gold">
-                Pilih Contoh Query SPARQL (Sample Queries):
-              </label>
-              <select
-                id="query-presets"
-                onChange={(e) => {
-                  const chosen = SAMPLE_QUERIES.find((q) => q.label === e.target.value);
-                  if (chosen) setSparqlQuery(chosen.query);
-                }}
-                className="w-full rounded-sm border border-mk-border bg-mk-bg px-3 py-2 text-xs sm:text-sm text-mk-text focus:border-mk-red focus:outline-none"
-              >
-                {SAMPLE_QUERIES.map((q) => (
-                  <option key={q.label} value={q.label}>
-                    {q.label}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            {/* Query Editor */}
-            <div className="space-y-1.5">
-              <label htmlFor="sparql-editor" className="text-xs font-semibold uppercase tracking-wider text-mk-muted">
-                SPARQL Query Editor:
-              </label>
-              <textarea
-                id="sparql-editor"
-                value={sparqlQuery}
-                onChange={(e) => setSparqlQuery(e.target.value)}
-                rows={9}
-                className="w-full font-mono text-[11px] sm:text-xs rounded-sm border border-mk-border bg-mk-bg p-3 text-mk-text focus:border-mk-red focus:outline-none"
-                spellCheck={false}
-              />
-            </div>
-
-            <div className="flex flex-wrap justify-between items-center gap-3">
-              <p className="text-xs text-mk-muted">Endpoint: <code className="text-mk-text">/api/sparql</code></p>
-              <button
-                type="button"
-                onClick={executeSparql}
-                disabled={sparqlLoading}
-                className="btn-primary !w-full sm:!w-auto justify-center"
-              >
-                {sparqlLoading ? "Mengeksekusi…" : "▶ Jalankan SPARQL"}
-              </button>
-            </div>
-
-            {/* SPARQL Query Results Table */}
-            {sparqlResult && (
-              <div className="border-t border-mk-border pt-4 space-y-3">
-                <p className="text-xs font-semibold uppercase tracking-wider text-mk-gold">Hasil Query SPARQL:</p>
-
-                {sparqlResult.error ? (
-                  <div className="rounded-sm border border-red-500/40 bg-red-500/10 p-4 text-xs text-red-200">
-                    <p className="font-semibold">Terjadi Kesalahan Eksekusi:</p>
-                    <p className="mt-1 font-mono break-words">{sparqlResult.error}</p>
-                    {fusekiStatus === "disconnected" && (
-                      <p className="mt-2 text-mk-muted">
-                        Pastikan Apache Jena Fuseki sedang berjalan di port 3030 dengan dataset <code className="text-mk-gold">/mk_nexus</code>.
-                      </p>
-                    )}
-                  </div>
-                ) : sparqlResult.results?.bindings?.length === 0 ? (
-                  <p className="text-sm text-mk-muted">Query berhasil dijalankan, tetapi tidak ada hasil (0 bindings).</p>
-                ) : sparqlResult.results?.bindings ? (
-                  <div className="overflow-x-auto scrollbar-thin rounded border border-mk-border">
-                    <table className="w-full text-left text-xs min-w-[500px]">
-                      <thead className="bg-mk-card border-b border-mk-border">
-                        <tr>
-                          {sparqlResult.head?.vars.map((v) => (
-                            <th key={v} className="px-4 py-2 font-mono font-semibold text-mk-gold uppercase whitespace-nowrap">
-                              ?{v}
-                            </th>
-                          ))}
-                        </tr>
-                      </thead>
-                      <tbody className="divide-y divide-mk-border bg-mk-bg">
-                        {sparqlResult.results.bindings.map((row, idx) => (
-                          <tr key={idx} className="hover:bg-mk-card/50">
-                            {sparqlResult.head?.vars.map((v) => (
-                              <td key={v} className="px-4 py-2 font-mono text-mk-text/90 truncate max-w-xs">
-                                {row[v]?.value ?? "-"}
-                              </td>
-                            ))}
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-                ) : null}
-              </div>
-            )}
-          </div>
         </Section>
       </Container>
     </>

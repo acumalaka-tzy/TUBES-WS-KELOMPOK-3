@@ -1,26 +1,70 @@
 @import "tailwindcss";
 
 /*
- * Design tokens — PRD Bagian 25.2 (Visual Identity)
+ * Modern Gaming Encyclopedia Design Tokens
+ * Mortal Kombat Knowledge Nexus
+ *
+ * Light Mode (Default):
+ * - Background: Warm off-white / light gray (#F5F5F3)
+ * - Surface / Card: Clean white (#FFFFFF)
+ * - Primary: Deep navy (#202B3C)
+ * - Secondary: Muted crimson (#963C45)
+ * - Accent: Antique gold (#B69A62)
+ * - Text Primary: Charcoal (#252A32)
+ * - Text Secondary: Muted gray (#737982)
+ * - Border: Subtle warm gray (#E2E2DE)
+ *
+ * Dark Mode:
+ * - Background: Charcoal / deep navy (#141923)
+ * - Surface / Card: Elevated navy (#1C2433)
+ * - Text Primary: Clean off-white (#EDEFEF)
+ * - Text Secondary: Muted cool gray (#9AA1AC)
+ * - Border: Subtle navy border (#2C3646)
  */
+
+:root {
+  color-scheme: light;
+  --bg-primary: #F5F5F3;
+  --bg-surface: #FFFFFF;
+  --bg-secondary: #EBEBE8;
+  --color-primary: #202B3C;
+  --color-secondary: #963C45;
+  --color-accent: #B69A62;
+  --color-text: #252A32;
+  --color-text-secondary: #737982;
+  --color-border: #E2E2DE;
+  --color-card-border: #E5E5E0;
+}
+
+html.dark {
+  color-scheme: dark;
+  --bg-primary: #141923;
+  --bg-surface: #1C2433;
+  --bg-secondary: #18202D;
+  --color-primary: #2D3A4F;
+  --color-secondary: #A84752;
+  --color-accent: #C4A972;
+  --color-text: #EDEFEF;
+  --color-text-secondary: #9AA1AC;
+  --color-border: #2C3646;
+  --color-card-border: #263140;
+}
+
 @theme {
-  --color-mk-bg: #08090d;
-  --color-mk-bg2: #11131a;
-  --color-mk-card: #191b24;
-  --color-mk-red: #b51f2b;
+  --color-mk-bg: var(--bg-primary);
+  --color-mk-bg2: var(--bg-secondary);
+  --color-mk-card: var(--bg-surface);
+  --color-mk-red: var(--color-secondary);
   --color-mk-red-deep: #741b27;
-  --color-mk-gold: #c6a15b;
-  --color-mk-text: #f5f5f5;
-  --color-mk-muted: #a0a2aa;
-  --color-mk-border: #292b35;
+  --color-mk-gold: var(--color-accent);
+  --color-mk-text: var(--color-text);
+  --color-mk-muted: var(--color-text-secondary);
+  --color-mk-border: var(--color-border);
+  --color-mk-navy: var(--color-primary);
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-heading: var(--font-cinzel), Georgia, serif;
   --font-display: var(--font-bebas), Impact, sans-serif;
-}
-
-:root {
-  color-scheme: dark;
 }
 
 html {
@@ -28,112 +72,140 @@ html {
 }
 
 body {
-  background: var(--color-mk-bg);
+  background-color: var(--color-mk-bg);
   color: var(--color-mk-text);
   font-family: var(--font-sans);
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 ::selection {
   background: var(--color-mk-red);
-  color: var(--color-mk-text);
+  color: #FFFFFF;
 }
 
-/* Visible focus state (aksesibilitas) */
+/* Aksesibilitas focus state */
 :focus-visible {
   outline: 2px solid var(--color-mk-gold);
   outline-offset: 2px;
 }
 
-/* Subtle red glow — dipakai seperlunya */
-@utility glow-red {
-  box-shadow: 0 0 24px -6px rgb(181 31 43 / 0.55);
-}
-
-@utility text-glow {
-  text-shadow: 0 0 18px rgb(181 31 43 / 0.45);
-}
-
+/* Tombol Editorial & Interaktif */
 .btn-primary {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
-  border-radius: 2px;
-  background: var(--color-mk-red);
-  padding: 0.6rem 1.1rem;
+  border-radius: 4px;
+  background-color: var(--color-mk-red);
+  padding: 0.55rem 1.1rem;
   font-size: 0.75rem;
   font-weight: 600;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--color-mk-text);
-  transition: background 0.2s, box-shadow 0.2s;
+  color: #FFFFFF;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 .btn-primary:hover {
-  background: #c9242f;
-  box-shadow: 0 0 24px -6px rgb(181 31 43 / 0.7);
+  background-color: #7e3038;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(150, 60, 69, 0.25);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 4px;
+  background-color: var(--color-mk-navy);
+  padding: 0.55rem 1.1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  transition: all 0.2s ease;
+}
+.btn-secondary:hover {
+  background-color: #2b394f;
+  transform: translateY(-1px);
 }
 
 .btn-ghost {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  border-radius: 2px;
+  border-radius: 4px;
   border: 1px solid var(--color-mk-border);
-  padding: 0.6rem 1.1rem;
+  background-color: var(--color-mk-card);
+  padding: 0.55rem 1rem;
   font-size: 0.75rem;
   font-weight: 600;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--color-mk-muted);
-  transition: border-color 0.2s, color 0.2s;
+  transition: all 0.2s ease;
 }
 .btn-ghost:hover {
   border-color: var(--color-mk-gold);
   color: var(--color-mk-text);
 }
 
-/* Cinematic hero background (original, tanpa aset berhak cipta) */
-.hero-bg {
-  background:
-    radial-gradient(ellipse 70% 60% at 50% 0%, rgb(181 31 43 / 0.35), transparent 70%),
-    radial-gradient(ellipse 50% 40% at 85% 80%, rgb(198 161 91 / 0.12), transparent 70%),
-    linear-gradient(180deg, #11131a 0%, #08090d 100%);
-}
-
+/* Panel & Card Bergaya Ensiklopedia */
 .panel {
-  background: rgb(25 27 36 / 0.75);
+  background-color: var(--color-mk-card);
   border: 1px solid var(--color-mk-border);
-  backdrop-filter: blur(6px);
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.panel:hover {
+  border-color: rgba(182, 154, 98, 0.5);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
+/* Hero Section Ringkas Berwibawa */
+.hero-encyclopedia {
+  background:
+    radial-gradient(ellipse 60% 50% at 50% 10%, rgba(150, 60, 69, 0.08), transparent 70%),
+    radial-gradient(ellipse 40% 40% at 85% 75%, rgba(182, 154, 98, 0.06), transparent 70%),
+    var(--color-mk-bg);
+}
+
+html.dark .hero-encyclopedia {
+  background:
+    radial-gradient(ellipse 60% 50% at 50% 10%, rgba(168, 71, 82, 0.15), transparent 70%),
+    radial-gradient(ellipse 40% 40% at 85% 75%, rgba(196, 169, 114, 0.08), transparent 70%),
+    var(--color-mk-bg);
+}
+
+/* Scrollbar Rapi */
 .scrollbar-thin {
   scrollbar-width: thin;
   scrollbar-color: var(--color-mk-border) transparent;
 }
 
-@keyframes shimmer {
-  0% {
-    background-position: -400px 0;
-  }
-  100% {
-    background-position: 400px 0;
-  }
-}
-
-.skeleton {
-  background: linear-gradient(90deg, #191b24 0px, #232532 80px, #191b24 160px);
-  background-size: 800px 100%;
-  animation: shimmer 1.4s infinite linear;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
+/* Sembunyikan indikator Next.js development overlay & Turbopack tools */
+nextjs-portal,
+script[data-nextjs-dev-overlay],
+[data-nextjs-dev-overlay],
+[data-nextjs-toast],
+div[data-nextjs-route-announcer],
+[data-nextjs-dev-tools-button],
+#next-logo,
+button[aria-label*="Next.js Dev Tools"],
+div[data-preferences],
+[data-next-mark] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  z-index: -9999 !important;
 }

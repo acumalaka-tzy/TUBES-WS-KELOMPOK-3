@@ -169,8 +169,8 @@ async function runTests() {
     assert(fused[0].rrfScore > fused[1].rrfScore, "Fused RRF score is monotonically decreasing");
   }
 
-  // 6. Test Search Explanation (FR-08)
-  console.log("\n6. Search Explanation (FR-08):");
+  // 6. Test Search Explanation
+  console.log("\n6. Search Explanation:");
   {
     const searchRes = await executeSearch({ q: "Karakter api", mode: "hybrid" });
     assert(searchRes.results.length > 0, "Hybrid search returns results");
@@ -185,8 +185,8 @@ async function runTests() {
     assert(!!searchRes.message, "Response contains overall search explanation message");
   }
 
-  // 7. Test Story Semantic Search (FR-23)
-  console.log("\n7. Story Semantic Search (FR-23):");
+  // 7. Test Story Semantic Search
+  console.log("\n7. Story Semantic Search:");
   {
     const storyRes1 = searchStoryEvents({ query: "tournament" });
     assert(storyRes1.events.length > 0, "Finds story events matching 'tournament'");
@@ -251,6 +251,62 @@ async function runTests() {
 
     const regexEscaped = sparqlRegexEscape("Scorpion (Classic)");
     assert(regexEscaped.includes("\\("), "Escapes regex parentheses");
+  }
+
+  // 11. Test Game Search by Console / Platform
+  console.log("\n11. Game Search by Console / Platform:");
+  {
+    // Search "ps4"
+    const ps4Res = await executeSearch({ q: "ps4", mode: "hybrid" });
+    assert(ps4Res.results.length > 0, "Finds games for query 'ps4'");
+    const ps4GameTitles = ps4Res.results.filter((r) => r.type === "game").map((r) => r.name);
+    assert(
+      ps4GameTitles.includes("Mortal Kombat 11") || ps4GameTitles.includes("Mortal Kombat X"),
+      "PS4 query returns MK11 or MKX"
+    );
+    const ps4Game = ps4Res.results.find((r) => r.type === "game" && r.name === "Mortal Kombat 11");
+    assert(
+      ps4Game !== undefined &&
+        (ps4Game.explanation?.includes("PlayStation 4") ||
+          ps4Game.matchedRelationships?.some((m: string) => m.includes("PlayStation 4"))),
+      "MK11 contains 'Tersedia di platform PlayStation 4' note or rel"
+    );
+
+    // Search "switch"
+    const switchRes = await executeSearch({ q: "switch", mode: "hybrid" });
+    assert(switchRes.results.length > 0, "Finds games for query 'switch'");
+    const switchGameTitles = switchRes.results.filter((r) => r.type === "game").map((r) => r.name);
+    assert(
+      switchGameTitles.includes("Mortal Kombat 11") || switchGameTitles.includes("Mortal Kombat 1 (2023)"),
+      "Switch query returns MK11 or MK1"
+    );
+
+    // Search "xbox one"
+    const xboxRes = await executeSearch({ q: "xbox one", mode: "hybrid" });
+    assert(xboxRes.results.length > 0, "Finds games for query 'xbox one'");
+    const xboxTitles = xboxRes.results.filter((r) => r.type === "game").map((r) => r.name);
+    assert(
+      xboxTitles.includes("Mortal Kombat X") || xboxTitles.includes("Mortal Kombat 11"),
+      "Xbox One query returns MKX or MK11"
+    );
+
+    // Search "arcade"
+    const arcadeRes = await executeSearch({ q: "arcade", mode: "hybrid" });
+    assert(arcadeRes.results.length > 0, "Finds games for query 'arcade'");
+    const arcadeTitles = arcadeRes.results.filter((r) => r.type === "game").map((r) => r.name);
+    assert(arcadeTitles.includes("Mortal Kombat (1992)"), "Arcade query returns Mortal Kombat (1992)");
+
+    // Search "pc"
+    const pcRes = await executeSearch({ q: "pc", mode: "hybrid" });
+    assert(pcRes.results.length > 0, "Finds games for query 'pc'");
+
+    // Test platform suggestions
+    const ps4Sugg = generateSearchSuggestions("ps4", 5);
+    assert(ps4Sugg.length > 0, "Generates autocomplete suggestions for 'ps4'");
+    assert(
+      ps4Sugg.some((s) => s.label.includes("PlayStation 4")),
+      "Suggestions for 'ps4' include PlayStation 4 label"
+    );
   }
 
   console.log(`\n========================================`);
